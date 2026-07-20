@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# CadQuery exports (generated artifacts — regenerate from scripts)
+**/exports/*.step
+**/exports/*.stp
+**/exports/*.stl
+**/exports/*.gltf
+**/exports/*.glb
+**/exports/*.amf
+**/exports/*.3mf
+**/exports/*.dxf
+**/exports/*.svg
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# pytest
+.pytest_cache/
+
+# ruff
+.ruff_cache/

@@ -1,0 +1,39 @@
+{
+    "part_name": "Example Mounting Plate",
+    "version": "v1",
+    "description": "A flat mounting plate with four corner bolt holes and a central clearance bore. Demonstrates the parametric workflow.",
+    "units": "mm",
+    "material": "6061-T6 Aluminum",
+    "process": "3-axis CNC mill from plate stock",
+
+    "dimensions": {
+        "length": 80.0,
+        "width": 60.0,
+        "thickness": 6.0
+    },
+
+    "features": {
+        "corner_holes": {
+            "description": "Four M5 clearance holes on a rectangular pattern, inset from edges",
+            "hole_diameter": 5.5,
+            "counterbore_diameter": 10.0,
+            "counterbore_depth": 3.5,
+            "inset_x": 10.0,
+            "inset_y": 10.0
+        },
+        "center_bore": {
+            "description": "Central through-hole for cable/shaft pass-through",
+            "diameter": 20.0
+        },
+        "edge_fillets": {
+            "description": "Fillets on all outside vertical edges",
+            "radius": 2.0
+        }
+    },
+
+    "notes": [
+        "Mating surface: bottom face (−Z) mounts flush to chassis top panel",
+        "Hole pattern matches the 60mm × 40mm bolt circle on the AM59 bracket",
+        "See datasheets/ for vendor drawing"
+    ]
+}

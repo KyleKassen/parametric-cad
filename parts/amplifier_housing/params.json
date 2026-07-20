@@ -1,0 +1,163 @@
+{
+    "part_name": "AM10-231A Amplifier Housing",
+    "version": "v3",
+    "description": "Two-piece mounting system for the AM10-231A GaN pulsed power amplifier. v3 addresses thermal, EMI, and mechanical issues identified in v2: thermal standoffs decouple amp from baseplate, louvers repositioned to heatsink zone, rain hood replaced with raised sun shade that doesn't trap heat, ground bonding provision, cable clamps close to connectors to prevent SMA flex fatigue, and baseplate pocketing for weight reduction.",
+    "units": "mm",
+    "material": "6061-T6 Aluminum",
+    "process": "3-axis CNC mill from plate stock",
+
+    "amplifier": {
+        "_comment": "Dimensions of the AM10-231A module itself (from datasheet)",
+        "length": 250.0,
+        "width": 120.0,
+        "height": 50.0,
+        "weight_g": 1500,
+
+        "mounting_holes": {
+            "_comment": "M4 assumed — not dimensioned on datasheet. VERIFY BEFORE PRODUCTION.",
+            "hole_diameter": 4.5,
+            "thread_size": "M4",
+            "bottom_row_y": 10.0,
+            "middle_row_y": 60.0,
+            "top_row_y": 110.0,
+            "x_positions_edge": [5.0, 65.0, 125.0, 185.0, 245.0],
+            "x_positions_middle": [65.0, 125.0, 185.0]
+        }
+    },
+
+    "housing": {
+        "_comment": "Housing design parameters — all tweakable",
+
+        "wall_thickness": 4.0,
+        "baseplate_thickness": 6.0,
+        "_comment_baseplate": "6mm baseplate — stiffer for vibration, pocketed from below for weight savings",
+
+        "overhang_x": 15.0,
+        "overhang_y": 8.0,
+
+        "heatsink_clearance": 20.0,
+        "_comment_heatsink": "Space above the 50mm amp body for heatsink fins — wall top = standoff_h + amp_h + this",
+
+        "thermal_standoffs": {
+            "_comment": "Cylindrical standoffs at each of 13 mounting holes — raises amp 6mm above baseplate for thermal decoupling from sun-heated rotator plate, and allows underside airflow",
+            "height": 6.0,
+            "diameter": 10.0
+        },
+
+        "side_walls": {
+            "_comment": "Side walls along the 250mm length with wind-scoop flare at top",
+            "gusset_count": 4,
+            "gusset_thickness": 3.0,
+            "gusset_height": 30.0,
+            "_comment_gussets": "Triangular stiffeners between wall and baseplate — taller than v2 to match taller walls",
+            "gusset_base_length": 20.0,
+            "flare_angle": 15.0,
+            "flare_height": 15.0
+        },
+
+        "airflow_louvers": {
+            "_comment": "3 rows of louver slots in upper wall zone — aligned with heatsink fin area (Z=42-67mm with standoffs). v2 had louvers at 35-60% height which missed the heatsink entirely.",
+            "slot_count_per_row": 8,
+            "slot_width": 22.0,
+            "slot_height": 3.5,
+            "slot_pitch": 28.0,
+            "slot_start_x": 16.0,
+            "row_z_ratios": [0.55, 0.72, 0.88],
+            "_comment_ratios": "Fraction of wall height for each row — places louvers at Z=42, 55, 67mm, spanning the heatsink zone",
+            "corner_radius": 1.5
+        },
+
+        "sun_shade": {
+            "_comment": "Raised flat plate 50mm above wall+flare top — blocks direct sun/rain while allowing hot air to escape freely upward from heatsink. v2 rain hood sat 8mm above and trapped heat. NOT a sealed enclosure.",
+            "overhang_width": 15.0,
+            "thickness": 2.5,
+            "height_above_wall": 50.0,
+            "post_width": 8.0,
+            "post_depth": 4.0,
+            "post_inset_x": 60.0,
+            "_comment_posts": "4 rectangular posts (2 per side) support the shade from the flare top"
+        },
+
+        "ground_bonding": {
+            "_comment": "M5 ground stud boss on baseplate near output end. At S-band, low-impedance RF ground to mounting structure is critical. Anodized aluminum is an RF insulator.",
+            "stud_diameter": 12.0,
+            "stud_height": 8.0,
+            "stud_hole_diameter": 5.0,
+            "_comment_anodize": "MANUFACTURING NOTE: No anodizing within amp footprint area. Use star washers on all amp mounting bolts for metal-to-metal RF ground contact."
+        },
+
+        "baseplate_pockets": {
+            "_comment": "Weight-reduction pockets milled into underside of baseplate. Leaves 3mm floor in pocketed areas (from 6mm stock). Saves ~150g — significant for rotator wind load budget.",
+            "pocket_depth": 3.0,
+            "edge_margin": 12.0,
+            "pocket_corner_radius": 4.0
+        },
+
+        "base_plate": {
+            "_comment": "Separate piece — bolts permanently to rotator head. Cradle slides on via dovetail rails.",
+            "thickness": 5.0,
+            "length_extra": 20.0,
+            "rail_height": 8.0,
+            "rail_width": 12.0,
+            "rail_top_width": 8.0,
+            "mounting_holes": {
+                "hole_diameter": 6.5,
+                "slot_length": 20.0,
+                "inset_x": 15.0,
+                "inset_y": 10.0,
+                "count_x": 2,
+                "count_y": 3
+            }
+        },
+
+        "cradle_mounting": {
+            "_comment": "How the cradle locks onto the base plate after sliding in",
+            "dovetail_angle": 60.0,
+            "slide_clearance": 0.2,
+            "lock_screw_diameter": 6.0,
+            "lock_screw_inset_x": 20.0
+        },
+
+        "cable_management": {
+            "_comment": "Cable clamp bosses on output end (+X), positioned 15mm from connector face to prevent SMA/N-type flex fatigue during rotator cycles. v2 had bosses 50mm away — too far for effective strain relief.",
+            "clamp_distance_from_end": 15.0,
+            "tiedown_boss_diameter": 8.0,
+            "tiedown_boss_hole": 4.0,
+            "tiedown_boss_height": 12.0,
+            "tiedown_boss_count": 4,
+            "tiedown_boss_spacing": 22.0,
+            "_comment_bosses": "4 bosses at 22mm spacing centered on connector zone — provides fixation points for cable ties close to each connector"
+        },
+
+        "stiffening_ribs": {
+            "_comment": "Ribs on underside of baseplate for anti-twist stiffness",
+            "rib_height": 6.0,
+            "rib_thickness": 3.0,
+            "count_across_width": 2
+        },
+
+        "drain_slots": {
+            "_comment": "Slots at base of side walls so pooled water drains out",
+            "width": 8.0,
+            "height": 3.0,
+            "count_per_side": 3,
+            "spacing": 70.0
+        },
+
+        "edge_fillets": {
+            "outer_radius": 2.0,
+            "inner_radius": 1.0,
+            "gusset_fillet": 3.0
+        }
+    },
+
+    "notes": [
+        "v3 thermal fix: standoffs decouple amp from hot rotator plate, sun shade replaces heat-trapping rain hood",
+        "v3 RF fix: louvers repositioned to heatsink zone (55-88% wall height), ground stud for EMI bonding",
+        "v3 mechanical fix: cable clamps 15mm from connectors (was 50mm), baseplate pocketed for weight savings",
+        "Two-piece design: base plate bolts to rotator, cradle slides on via dovetail rails",
+        "Cradle removable with 2x M6 thumb screws for field servicing",
+        "MANUFACTURING: No anodizing in amp contact zone. Star washers on all amp bolts.",
+        "M4 mounting holes are ASSUMED — verify against physical unit before production"
+    ]
+}
