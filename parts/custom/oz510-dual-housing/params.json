@@ -1,0 +1,112 @@
+{
+    "part_name": "OZ510 Dual-Module Housing",
+    "version": "v4",
+    "description": "Enclosure that holds one OZ510 Receiver and one OZ510 Transmitter side by side, I/O (SMA + pin header) on a common front panel. Behind the modules, a fiber plenum stores each module's SC/APC pigtail; the pigtails plug into panel-mounted SC/APC simplex adapters in the back wall, giving external SC/APC ports. Base tray + removable lid. Modules retained by screws through their existing baseplate mounting holes into standoff bosses.",
+    "units": "mm",
+    "material": "3D-printed (PETG/ABS) or CNC",
+    "process": "FDM/SLS print, or 3-axis mill",
+
+    "bays": [
+        { "label": "receiver",    "mirror_x": false, "adapter_x": -28.0,
+          "step": "zonu-oz510-receiver/OZ510 Receiver.STEP" },
+        { "label": "transmitter", "mirror_x": true,  "adapter_x": 28.0,
+          "step": "zonu-oz510-transmitter/OZ510 Transmitter.STEP" }
+    ],
+
+    "module": {
+        "_comment": "Geometry extracted from the OZ510 Receiver STEP (receiver-handed). Origin: plate centered in X, plate center in Z, plate BOTTOM at Y=0. Front (I/O) at +Z, can points +Y. The TRANSMITTER'S I/O is a MIRROR across X (SMA at +12.70, header on -X) — bays[].mirror_x flips each bay's cutouts accordingly. EXCEPTION: the fiber pigtail exit on the can's BACK is NOT mirrored — both RX and TX exit at module-local x=+7.37 (verified in both vendor STEP analyses), so fiber features use fiber_exit_x directly, never the mirror flag. MOUNTING: the four corner_hole_* holes are OCCUPIED by vendor press-fit PCB standoffs (posts rise ~5mm above the plate and the hardware protrudes 1.5mm BELOW it) — never screw there. The free holes are the three 3.175 (1/8in, M3-clearance) plate holes: a front pair (screw_hole_front is the INNER one; the outer at x=-5.715 sits over the SMA's under-plate body — no boss room) and screw_hole_back on centerline. The front pair IS mirrored on the TX (verified: +1.778/+5.715), so screw bosses are handed via mirror_x; the back hole is mirror-invariant.",
+        "plate_width_x": 38.10,
+        "plate_length_z": 63.50,
+        "plate_thickness": 1.57,
+        "can_height_y": 10.72,
+        "pin_drop_below_plate": 1.93,
+        "corner_hole_dx": 16.51,
+        "corner_hole_z": [-18.92, 17.91],
+        "corner_hole_dia": 2.26,
+        "screw_hole_front": { "x": -1.778, "z": 27.432 },
+        "screw_hole_back": { "x": 0.0, "z": -28.067 },
+        "screw_hole_dia": 3.175,
+        "sma_axis_x": -12.70,
+        "sma_axis_y": 2.03,
+        "sma_tip_z": 44.58,
+        "sma_barrel_dia": 5.4,
+        "sma_base_w": 9.52,
+        "sma_base_h": 7.92,
+        "sma_base_beyond_plate": 1.65,
+        "header_x_min": 5.70,
+        "header_x_max": 18.40,
+        "header_z_min": 25.5,
+        "header_z_max": 31.5,
+        "header_top_y": 10.0,
+        "fiber_exit_x": 7.37,
+        "fiber_exit_y": 5.64,
+        "fiber_nub_dia": 8.71
+    },
+
+    "housing": {
+        "wall": 3.0,
+        "floor": 3.0,
+        "lid_thickness": 3.0,
+        "standoff_height": 3.0,
+        "clearance_side": 1.5,
+        "clearance_end": 1.5,
+        "clearance_top": 3.0,
+        "bay_gap": 4.0,
+
+        "stud_dia": 6.0,
+        "stud_dx": 16.51,
+        "stud_z": [-12.5, 12.5],
+        "screw_boss_dia": 7.0,
+        "screw_boss_pilot_dia": 2.5,
+
+        "sma_hole_dia": 7.0,
+        "sma_relief_margin": 0.75,
+
+        "header_slot_margin": 1.5,
+        "header_slot_top_clear": 2.0,
+
+        "corner_post_dia": 6.0,
+        "corner_post_pilot_dia": 2.5,
+        "lid_screw_clear_dia": 3.4,
+        "lid_screw_head_dia": 6.0,
+
+        "outer_fillet": 2.0,
+        "explode_gap": 0.0
+    },
+
+    "fiber_bay": {
+        "_comment": "Full-width open-top plenum behind the module bays that stores each pigtail's slack and hosts the back-panel adapter ports. depth must exceed the adapter's inner protrusion + mated_connector_clear (checked in tests). The spool post at the plenum center coils the slack; its radius IS the enforced minimum bend radius (900um buffered fiber: keep >= 15).",
+        "depth": 48.0,
+        "pass_slot_width": 12.0,
+        "spool_dia": 30.0,
+        "min_bend_radius": 15.0
+    },
+
+    "sc_adapter": {
+        "_comment": "Flanged SC/APC simplex adapter/coupler, dims from the FS.com AD-SCA-SCA-SM-SX-FS datasheet (body 27.4 long, flange 22 x 11.8 x 3 mid-body, body section 12.8 x 9.3, two 2.3 dia screw holes at 18 spacing, M2 screws). The adapter itself is modeled in parts/vendor/sc-apc-simplex-adapter (fit_check mates it into this housing); the mated pigtail connector is parts/vendor/sc-apc-connector. Mounted long-axis HORIZONTAL through the back wall, flange proud on the outer face, inserted from outside. Verify against the ordered adapter's datasheet before printing.",
+        "body_len": 27.4,
+        "body_long": 12.8,
+        "body_short": 9.3,
+        "flange_len": 22.0,
+        "flange_wide": 11.8,
+        "flange_thickness": 3.0,
+        "screw_spacing": 18.0,
+        "screw_pilot_dia": 1.7,
+        "cutout_clearance": 0.3,
+        "mated_connector_clear": 30.0
+    },
+
+    "notes": [
+        "Module geometry auto-extracted from the vendor STEP assemblies (parts/vendor/zonu-oz510-*). Verify against a real unit before fabrication.",
+        "MOUNTING (v4): two M3x6 screws per module through the free 3.175mm plate holes (front inner + back center) into screw_boss pilots (2.5mm thread-forming, drilled to 0.5mm above the outer floor face for full engagement), plus four pilot-less support studs under bare plate at (±stud_dx, stud_z). The studs are pulled ~6mm inboard from the plate corners because the vendor corner hardware protrudes 1.5mm below the plate there — studs directly under the corners would rock the module. standoff_height (3.0) > pin/hardware drop (max 1.93) so everything under the plate clears the floor.",
+        "Both SMA connectors protrude through the front (-Y in the model) panel; each header has a front-panel wiring slot on the opposite side of its bay. With RX left / TX right, the SMAs land on the outboard edges and the headers inboard.",
+        "Lid access openings sit directly above each pin-header block so headers can be plugged/unplugged with the lid on.",
+        "Layout: side-by-side, I/O on one face. Left bay = Receiver, right bay = Transmitter. NOT interchangeable: the TX is a mirror image of the RX (its SMA/header swap sides), so each bay's cutouts are handed via bays[].mirror_x.",
+        "FIBER PATH (v3): each module's factory SC/APC pigtail exits the can's back through a top-open slot in the partition (top-open so a module drops in with its pigtail attached), coils its slack around the central spool, and plugs into the inner side of its bay's back-panel SC/APC adapter. The external fiber run plugs into the adapter from outside.",
+        "Adapter install: push the adapter through its cutout from outside and drive two M2 self-tappers through the flange holes into the 1.7mm pilots. The adapter's snap clips stay compressed inside the 3mm wall (they are sized for ~1.9mm panels) — retention comes from the flange screws.",
+        "v2 (2026-07-21): fixed the transmitter bay — v1 wrongly assumed the TX was identical to the RX, putting its SMA hole and wiring slot on the mirrored (wrong) side. Caught by visual inspection of the fit renders.",
+        "v3 (2026-07-21): added the fiber plenum, partition pass-slots, back-panel SC/APC adapter ports, slack spool, and two back-corner lid posts. The pass-slots are NOT mirrored: both modules' pigtails exit at module-local x=+7.37 (RX at -15.2, TX at +29.9 in housing X — verified per-file in the vendor analyses). Also fixed a v2 lid bug: the registration lip was a single full-interior box that overlapped the central rib and its screw posts, so the lid could not seat; the lip is now one pad per module bay.",
+        "v4 (2026-07-21): moved module mounting off the corner holes — they turned out to be OCCUPIED by vendor press-fit standoffs (with 1.5mm under-plate protrusion; v1-v3's screws could never have gone there). Now: two M3 screws per module through the free 1/8in plate holes (front pair is TX-mirrored, back hole on centerline) into 7mm pilot bosses, plus four pilot-less studs shifted inboard to bare plate. Note: an M3 head on the front inner hole slightly overhangs the unused outer hole (~0.4mm) — harmless, or fit a small washer.",
+        "v4 also fixed a latent v1-era fit bug the tightened checks exposed: the SMA's square base block extends 1.65mm past the plate front edge (> clearance_end 1.5), so it bore 0.15mm into the front wall — the residual ~5.6mm^3 interference every fit check had shrugged off under its old 25mm^3 threshold. The wall now gets a shallow handed relief pocket around each SMA hole, and the module-fit threshold is 2mm^3."
+    ]
+}

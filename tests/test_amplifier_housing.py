@@ -20,7 +20,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 def test_cradle_builds():
     """The cradle should build without errors and produce a valid solid."""
-    from parts.amplifier_housing.model import create_cradle
+    from parts.custom.amplifier_housing.model import create_cradle
 
     result = create_cradle()
     assert result is not None
@@ -30,7 +30,7 @@ def test_cradle_builds():
 
 def test_cradle_is_solid():
     """The cradle should be a valid solid with positive volume."""
-    from parts.amplifier_housing.model import create_cradle
+    from parts.custom.amplifier_housing.model import create_cradle
 
     result = create_cradle()
     volume = result.val().Volume()
@@ -42,7 +42,7 @@ def test_cradle_bounding_box():
     The cradle bounding box should match the expected envelope.
     v3 is taller than v2 due to thermal standoffs and raised sun shade.
     """
-    from parts.amplifier_housing.model import create_cradle, load_params
+    from parts.custom.amplifier_housing.model import create_cradle, load_params
 
     params = load_params()
     amp = params["amplifier"]
@@ -83,7 +83,7 @@ def test_cradle_bounding_box():
 
 def test_cradle_has_features():
     """Face count confirms holes, louvers, gussets, standoffs, etc."""
-    from parts.amplifier_housing.model import create_cradle
+    from parts.custom.amplifier_housing.model import create_cradle
 
     result = create_cradle()
     face_count = len(result.val().Faces())
@@ -97,7 +97,7 @@ def test_cradle_has_features():
 
 def test_cradle_volume_reasonable():
     """Volume sanity check for boolean operations."""
-    from parts.amplifier_housing.model import create_cradle
+    from parts.custom.amplifier_housing.model import create_cradle
 
     result = create_cradle()
     volume_mm3 = result.val().Volume()
@@ -115,7 +115,7 @@ def test_cradle_taller_than_v2():
     v3 cradle should be taller than a hypothetical v2 with same amp dims,
     because thermal standoffs add height and sun shade is raised.
     """
-    from parts.amplifier_housing.model import create_cradle, load_params
+    from parts.custom.amplifier_housing.model import create_cradle, load_params
 
     params = load_params()
     h = params["housing"]
@@ -139,7 +139,7 @@ def test_cradle_taller_than_v2():
 
 def test_base_plate_builds():
     """The base plate should build without errors."""
-    from parts.amplifier_housing.model import create_base_plate
+    from parts.custom.amplifier_housing.model import create_base_plate
 
     result = create_base_plate()
     assert result is not None
@@ -149,7 +149,7 @@ def test_base_plate_builds():
 
 def test_base_plate_is_solid():
     """The base plate should be a valid solid with positive volume."""
-    from parts.amplifier_housing.model import create_base_plate
+    from parts.custom.amplifier_housing.model import create_base_plate
 
     result = create_base_plate()
     volume = result.val().Volume()
@@ -158,7 +158,7 @@ def test_base_plate_is_solid():
 
 def test_base_plate_has_slots():
     """The base plate should have slotted mounting holes."""
-    from parts.amplifier_housing.model import create_base_plate
+    from parts.custom.amplifier_housing.model import create_base_plate
 
     result = create_base_plate()
     face_count = len(result.val().Faces())
@@ -174,7 +174,7 @@ def test_base_plate_has_slots():
 
 def test_parametric_wall_thickness():
     """Changing wall_thickness should change the cradle width."""
-    from parts.amplifier_housing.model import create_cradle, load_params
+    from parts.custom.amplifier_housing.model import create_cradle, load_params
 
     params = load_params()
     result_default = create_cradle(params)
@@ -193,7 +193,7 @@ def test_parametric_wall_thickness():
 
 def test_parametric_heatsink_clearance():
     """Changing heatsink_clearance should adjust the cradle height."""
-    from parts.amplifier_housing.model import create_cradle, load_params
+    from parts.custom.amplifier_housing.model import create_cradle, load_params
 
     params = load_params()
     result_default = create_cradle(params)
@@ -212,7 +212,7 @@ def test_parametric_heatsink_clearance():
 
 def test_parametric_standoff_height():
     """Changing standoff height should raise the amplifier ghost position."""
-    from parts.amplifier_housing.model import create_amplifier_ghost, load_params
+    from parts.custom.amplifier_housing.model import create_amplifier_ghost, load_params
 
     params = load_params()
     ghost_default = create_amplifier_ghost(params)
@@ -237,7 +237,7 @@ def test_parametric_standoff_height():
 
 def test_assembly_builds():
     """The full assembly (cradle + base plate + ghost) should build."""
-    from parts.amplifier_housing.model import create_assembly
+    from parts.custom.amplifier_housing.model import create_assembly
 
     assy = create_assembly()
     assert assy is not None
@@ -250,7 +250,7 @@ def test_assembly_builds():
 
 def test_housing_builds():
     """create_part() should return the cradle (backward compatibility)."""
-    from parts.amplifier_housing.model import create_part
+    from parts.custom.amplifier_housing.model import create_part
 
     result = create_part()
     assert result is not None

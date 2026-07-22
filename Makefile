@@ -1,4 +1,4 @@
-.PHONY: install export-all test lint clean new-part help
+.PHONY: install export-all test lint clean new-part analyze views compare help
 
 PYTHON = uv run python
 PYTEST = uv run pytest
@@ -20,6 +20,15 @@ export-stl: ## Export all parts to exports/ (STEP + STL)
 test: ## Run parametric validation tests
 	$(PYTEST) tests/ -v
 
+analyze: ## Exact STEP analysis -> references/ JSON (usage: make analyze FILE="parts/x/part.step")
+	$(PYTHON) -m lib.analyze_step "$(FILE)" --save
+
+views: ## Render 6-view + iso verification PNGs (usage: make views FILE="parts/x/part.step")
+	$(PYTHON) -m lib.render_step "$(FILE)"
+
+compare: ## Compare two STEP files for identity/mirror (usage: make compare A="a.step" B="b.step")
+	$(PYTHON) -m lib.analyze_step --compare "$(A)" "$(B)"
+
 lint: ## Lint and format all Python files
 	uv run ruff check --fix .
 	uv run ruff format .
@@ -28,14 +37,15 @@ clean: ## Remove all generated exports
 	find parts -type d -name exports -exec rm -rf {} + 2>/dev/null || true
 	@echo "  ✓ Part exports cleaned"
 
-new-part: ## Create a new part directory (usage: make new-part NAME=my_bracket)
+new-part: ## Create a new custom part (usage: make new-part NAME=my_bracket [GROUP=vendor])
 ifndef NAME
-	$(error NAME is required. Usage: make new-part NAME=my_bracket)
+	$(error NAME is required. Usage: make new-part NAME=my_bracket [GROUP=custom|vendor])
 endif
-	@mkdir -p parts/$(NAME)/datasheets
-	@mkdir -p parts/$(NAME)/references
-	@echo '{\n    "part_name": "$(NAME)",\n    "version": "v1",\n    "description": "",\n    "units": "mm",\n    "material": "",\n    "process": "",\n    "dimensions": {},\n    "features": {},\n    "notes": []\n}' > parts/$(NAME)/params.json
-	@cp parts/example_part/model.py parts/$(NAME)/model.py
-	@echo "  ✓ Created parts/$(NAME)/"
-	@echo "  → Edit parts/$(NAME)/params.json with your dimensions"
-	@echo "  → Edit parts/$(NAME)/model.py with your geometry"
+	$(eval GROUP ?= custom)
+	@mkdir -p parts/$(GROUP)/$(NAME)/datasheets
+	@mkdir -p parts/$(GROUP)/$(NAME)/references
+	@echo '{\n    "part_name": "$(NAME)",\n    "version": "v1",\n    "description": "",\n    "units": "mm",\n    "material": "",\n    "process": "",\n    "dimensions": {},\n    "features": {},\n    "notes": []\n}' > parts/$(GROUP)/$(NAME)/params.json
+	@cp parts/_template/model.py parts/$(GROUP)/$(NAME)/model.py
+	@echo "  ✓ Created parts/$(GROUP)/$(NAME)/"
+	@echo "  → Edit parts/$(GROUP)/$(NAME)/params.json with your dimensions"
+	@echo "  → Edit parts/$(GROUP)/$(NAME)/model.py with your geometry"

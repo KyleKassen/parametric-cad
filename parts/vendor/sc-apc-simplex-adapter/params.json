@@ -1,0 +1,33 @@
+{
+    "part_name": "SC/APC Simplex Adapter (flanged)",
+    "version": "v1",
+    "description": "Datasheet-derived stand-in for a flanged SC/APC simplex fiber adapter/coupler (the green plastic panel-mount type). Dimensions from the FS.com AD-SCA-SCA-SM-SX-FS datasheet drawing (datasheets/). This is a PURCHASED part — the model exists for fit checks, corridor/keep-out reasoning, and assembly renders, not fabrication. Replace the exported STEP with a true vendor CAD file if one is ever obtained (GrabCAD/TraceParts host some behind free accounts).",
+    "units": "mm",
+    "material": "vendor part (plastic, UL 94V-0), ceramic split sleeve",
+    "process": "purchased — do not fabricate",
+
+    "dimensions": {
+        "body_len": 27.4,
+        "body_long": 12.8,
+        "body_short": 9.3,
+        "body_wall": 1.2,
+        "flange_len": 22.0,
+        "flange_wide": 11.8,
+        "flange_thickness": 3.0,
+        "screw_spacing": 18.0,
+        "screw_hole_dia": 2.3,
+        "sleeve_od": 3.2,
+        "sleeve_id": 2.49,
+        "sleeve_len": 11.4,
+        "center_web_thickness": 3.0
+    },
+
+    "frame": "X = flange long axis, Y = mating axis, Z = short axis. Origin at the body/flange center (flange is centered along the body length).",
+
+    "notes": [
+        "Simplified: the stainless snap-in clips and internal keying/shutter details are omitted; outer body is a plain rectangular tube. The envelope, flange, screw holes, and ceramic split sleeve are dimensionally per the datasheet drawing.",
+        "Datasheet tolerances (e.g. 27.4 +/-0.3) are modeled at nominal.",
+        "Used by parts/custom/oz510-dual-housing/fit_check.py to verify the housing's back-panel port: the adapter body must pass the wall cutout and the flange must seat on the outer face.",
+        "Source: https://resource.fs.com/mall/doc/20230601164636w2xxca.pdf (FS.com #76106)."
+    ]
+}

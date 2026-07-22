@@ -1,0 +1,130 @@
+{
+    "part_name": "OZ51x Dual-RX Housing (RF + TTL receivers)",
+    "version": "v1",
+    "description": "Receive-side enclosure: one OZ51x RF receiver and one Zonu TTL (IRIG-B/1PPS) receiver side by side. Same architecture as the OZ510 dual housing (front SMAs, fiber plenum with slack spool, back-panel SC/APC adapter per bay) plus a rear DE-9 signal connector replacing the bare-wire front slots. Geometry built by the shared model in parts/custom/oz510-dual-housing/.",
+    "units": "mm",
+    "material": "3D-printed (PETG/ABS) or CNC",
+    "process": "FDM/SLS print, or 3-axis mill",
+    "bays": [
+        {
+            "label": "rf-receiver",
+            "mirror_x": false,
+            "adapter_x": -28.0,
+            "step": "zonu-oz510-receiver/OZ510 Receiver.STEP"
+        },
+        {
+            "label": "ttl-receiver",
+            "mirror_x": false,
+            "adapter_x": 28.0,
+            "step": "zonu-oz510-receiver/OZ510 Receiver.STEP"
+        }
+    ],
+    "module": {
+        "_comment": "Identical to parts/custom/oz510-dual-housing (receiver-handed reference geometry; see the full annotations there). Both bays here are receiver-handed (mirror_x false). The TTL receiver is ASSUMED mechanically identical to the RF OZ510 receiver per the Zonu TTL OEM datasheet photos (same can/plate/SMA/header/pigtail); its bay borrows the RF RX STEP for fit checks \u00e2\u20ac\u201d verify against a real TTL unit before fabrication.",
+        "plate_width_x": 38.1,
+        "plate_length_z": 63.5,
+        "plate_thickness": 1.57,
+        "can_height_y": 10.72,
+        "pin_drop_below_plate": 1.93,
+        "corner_hole_dx": 16.51,
+        "corner_hole_z": [
+            -18.92,
+            17.91
+        ],
+        "corner_hole_dia": 2.26,
+        "screw_hole_front": {
+            "x": -1.778,
+            "z": 27.432
+        },
+        "screw_hole_back": {
+            "x": 0.0,
+            "z": -28.067
+        },
+        "screw_hole_dia": 3.175,
+        "sma_axis_x": -12.7,
+        "sma_axis_y": 2.03,
+        "sma_tip_z": 44.58,
+        "sma_barrel_dia": 5.4,
+        "sma_base_w": 9.52,
+        "sma_base_h": 7.92,
+        "sma_base_beyond_plate": 1.65,
+        "header_x_min": 5.7,
+        "header_x_max": 18.4,
+        "header_z_min": 25.5,
+        "header_z_max": 31.5,
+        "header_top_y": 10.0,
+        "fiber_exit_x": 7.37,
+        "fiber_exit_y": 5.64,
+        "fiber_nub_dia": 8.71
+    },
+    "housing": {
+        "wall": 3.0,
+        "floor": 3.0,
+        "lid_thickness": 3.0,
+        "standoff_height": 3.0,
+        "clearance_side": 1.5,
+        "clearance_end": 1.5,
+        "clearance_top": 3.0,
+        "bay_gap": 4.0,
+        "stud_dia": 6.0,
+        "stud_dx": 16.51,
+        "stud_z": [
+            -12.5,
+            12.5
+        ],
+        "screw_boss_dia": 7.0,
+        "screw_boss_pilot_dia": 2.5,
+        "sma_hole_dia": 7.0,
+        "sma_relief_margin": 0.75,
+        "front_wiring_slots": false,
+        "header_slot_margin": 1.5,
+        "header_slot_top_clear": 2.0,
+        "corner_post_dia": 6.0,
+        "corner_post_pilot_dia": 2.5,
+        "lid_screw_clear_dia": 3.4,
+        "lid_screw_head_dia": 6.0,
+        "outer_fillet": 2.0,
+        "explode_gap": 0.0
+    },
+    "fiber_bay": {
+        "_comment": "Deeper than the RX+TX housing (58 vs 48) and spool front-biased (spool_setback) so the DE-9's rear shell and solder-cup wiring get clear depth at the back wall. pass_slot_width widened to 16 \u00e2\u20ac\u201d the header harness drops through the same top-open partition slot as the fiber.",
+        "depth": 58.0,
+        "pass_slot_width": 16.0,
+        "spool_dia": 30.0,
+        "min_bend_radius": 15.0,
+        "spool_setback": 2.0
+    },
+    "sc_adapter": {
+        "_comment": "Same flanged SC/APC simplex adapter as the OZ510 dual housing \u00e2\u20ac\u201d see parts/vendor/sc-apc-simplex-adapter for the part model and datasheet.",
+        "body_len": 27.4,
+        "body_long": 12.8,
+        "body_short": 9.3,
+        "flange_len": 22.0,
+        "flange_wide": 11.8,
+        "flange_thickness": 3.0,
+        "screw_spacing": 18.0,
+        "screw_pilot_dia": 1.7,
+        "cutout_clearance": 0.3,
+        "mated_connector_clear": 30.0
+    },
+    "panel_connector": {
+        "_comment": "Panel-mount DE-9 (DB9 shell size E), female, solder cup \u00e2\u20ac\u201d replaces the bare-wire pass-through. Rectangular cutout + two jackscrew holes, back panel center between the SC ports. Dims are the industry-standard DE-9 cutout (flange 30.8 x 12.55, holes at 25.0) with clearance included \u00e2\u20ac\u201d verify against the ordered connector before printing. rear_keepout_* reserves the shell + solder-cup + wire-bend volume inside the plenum (enforced in tests).",
+        "type": "DE-9 female, panel mount, solder cup",
+        "x": 0.0,
+        "z": 10.0,
+        "cutout_w": 19.8,
+        "cutout_h": 11.0,
+        "screw_spacing": 25.0,
+        "screw_hole_dia": 3.2,
+        "rear_keepout_depth": 16.0,
+        "rear_keepout_w": 24.0,
+        "rear_keepout_h": 14.0
+    },
+    "notes": [
+        "One housing = one RF receiver + one TTL receiver (never mixed TX/RX \u2014 see the companion oz51x-dual-tx-housing). Both bays are receiver-handed: SMA outboard-left of each bay, header on the bay's right.",
+        "SIGNALS: each module uses only pins 3/5/7/9 of its 10-pin header on the receive side (pin 1 enable is N/C on receivers, evens are N/C). Suggested DE-9 map, RX housing: 1 = +12V (both), 2 = GND (both), 3 = spare, 4 = RF Received Power Monitor, 5 = RF Received Power Alarm, 6 = spare, 7 = TTL Rx Monitor, 8 = TTL Rx Alarm, 9 = spare/second GND. Kept pin-compatible with the TX housing map so one cable/loom design serves both.",
+        "WIRING PATH: header plugs exit each module's header upward, run back over the can top (3mm clearance under the lid), drop through the bay's top-open partition slot (shared with the fiber, widened to 16), and route along the plenum wall to the DE-9 solder cups. No front-panel wiring slots on this variant.",
+        "The TTL receiver bay uses the RF OZ510 Receiver STEP as a mechanical stand-in (datasheet photos show identical mechanics). Verify a real TTL unit before committing hardware.",
+        "Fiber path, mounting scheme (2x M3 + 4 studs), SMA relief, and adapter install are identical to the OZ510 dual housing \u00e2\u20ac\u201d see its params notes for the full history and rationale."
+    ]
+}

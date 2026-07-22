@@ -32,7 +32,7 @@ import cadquery as cq
 # Resolve paths
 # ---------------------------------------------------------------------------
 PART_DIR = Path(__file__).parent
-PROJECT_ROOT = PART_DIR.parent.parent
+PROJECT_ROOT = PART_DIR.parent.parent.parent
 EXPORTS_DIR = PART_DIR / "exports"
 PARAMS_FILE = PART_DIR / "params.json"
 

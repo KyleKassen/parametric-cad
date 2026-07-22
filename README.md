@@ -12,19 +12,27 @@ Each part lives in its own directory alongside its datasheets and reference mate
 
 ```
 .
-├── parts/                          # One sub-directory per component
-│   └── example_part/
-│       ├── datasheets/             # PDFs, spec sheets, vendor drawings
-│       ├── references/             # Photos, notes, URLs
-│       ├── exports/                # Generated STEP/STL (git-ignored)
-│       ├── params.json             # Dimensions extracted from datasheet
-│       └── model.py                # CadQuery Python script
+├── parts/
+│   ├── _template/                  # Scaffold copied by `make new-part`
+│   ├── custom/                     # Parts WE design and fabricate
+│   │   └── some_bracket/
+│   │       ├── datasheets/         # PDFs, spec sheets, vendor drawings
+│   │       ├── references/         # Photos, notes, analysis JSON, renders
+│   │       ├── exports/            # Generated STEP/STL (git-ignored)
+│   │       ├── params.json         # Dimensions extracted from datasheet
+│   │       └── model.py            # CadQuery Python script
+│   └── vendor/                     # Parts we BUY: vendor STEPs as shipped,
+│       └── some_module/            # or datasheet-derived stand-in models
+│                                   # (same anatomy; process: "purchased")
 │
 ├── assemblies/                     # Scripts that combine parts via cq.Assembly
 │
 ├── lib/                            # Shared utilities
 │   ├── export.py                   # Bulk export (discovers all parts, exports STEP/STL)
-│   └── common.py                   # Reusable geometry helpers (bolt patterns, etc.)
+│   ├── common.py                   # Reusable geometry helpers (bolt patterns, etc.)
+│   ├── analyze_step.py             # Exact STEP analysis + identity/mirror compare
+│   ├── render_step.py              # Headless 6-view + iso verification renders
+│   └── housing.py                  # Silhouette / keep-out cavity primitives
 │
 ├── tests/                          # Parametric validation tests
 │
@@ -69,10 +77,11 @@ make test
 
 ```bash
 # 1. Scaffold the directory
-make new-part NAME=am59_bracket
+make new-part NAME=am59_bracket           # → parts/custom/am59_bracket
+# (make new-part NAME=x GROUP=vendor for a purchased-part stand-in)
 
 # 2. Drop your datasheets
-cp ~/Downloads/AM59_drawing.pdf parts/am59_bracket/datasheets/
+cp ~/Downloads/AM59_drawing.pdf parts/custom/am59_bracket/datasheets/
 
 # 3. Fill in params.json with dimensions from the datasheet
 #    (or ask Claude to do it — see PART_TEMPLATE.md)
@@ -81,7 +90,7 @@ cp ~/Downloads/AM59_drawing.pdf parts/am59_bracket/datasheets/
 #    See PART_TEMPLATE.md for the prompt template
 
 # 5. Test it
-python parts/am59_bracket/model.py
+python parts/custom/am59_bracket/model.py
 
 # 6. Export everything
 make export-all
@@ -91,16 +100,43 @@ make export-all
 
 See [`PART_TEMPLATE.md`](PART_TEMPLATE.md) for a structured prompt template. The key is treating AI prompts like engineering drawings — explicit dimensions, feature callouts, and mating surface definitions.
 
+### Designing Around Vendor STEP Files
+
+When a housing/bracket must fit an imported vendor part, don't measure by hand
+and don't trust two files to be "the same part":
+
+```bash
+# 1. MEASURE — exact kernel analysis (bbox, solids, holes/bosses with true axes)
+make analyze FILE="parts/vendor/zonu-oz510-receiver/OZ510 Receiver.STEP"
+
+# 2. COMPARE — every file individually; vendors ship mirrored L/R variants!
+#    (the OZ510 TX has mirrored I/O vs the RX — bboxes and radius histograms
+#    can't see that, feature positions can)
+make compare A="parts/.../RX.STEP" B="parts/.../TX.STEP"
+
+# 3. VERIFY BY LOOKING — orthographic 6-view + iso renders with an axis triad
+make views FILE="parts/vendor/zonu-oz510-receiver/OZ510 Receiver.STEP"
+```
+
+For cavity geometry, prefer deriving it from the part's own solid via
+`lib/housing.py` (`silhouette()` / `keepout_prism()`) — the imported B-rep
+drives the cutout, so handedness can't be modeled wrong. See
+`parts/custom/oz510-dual-housing/` for the full pattern, including `fit_check.py`,
+which drops the real vendor solids into the housing and renders/measures the fit,
+and its `REQUIREMENTS.md` — a dimension-free spec of the whole OZ51x housing
+family (design intent, constraints, traps, and verification obligations),
+written so the parts could be recreated from the vendor files alone.
+
 ### Exporting
 
 ```bash
-make export-all      # All parts → parts/<name>/exports/<name>_v1.step
+make export-all      # All parts → parts/<group>/<name>/exports/<name>_v1.step
 make export-stl      # All parts → STEP + STL
 
 # Single part
-python parts/amplifier_housing/model.py          # STEP only
-python parts/amplifier_housing/model.py --stl    # STEP + STL
-# Exports land in parts/amplifier_housing/exports/
+python parts/custom/amplifier_housing/model.py   # STEP only
+python parts/custom/amplifier_housing/model.py --stl   # STEP + STL
+# Exports land in parts/custom/amplifier_housing/exports/
 ```
 
 ### Versioning Convention
@@ -109,7 +145,7 @@ Every `params.json` has a `"version"` field (e.g., `"v1"`, `"v2"`). The version 
 appended to the export filename:
 
 ```
-parts/amplifier_housing/exports/
+parts/custom/amplifier_housing/exports/
 ├── amplifier_housing_v1.step        # Initial U-channel cradle
 ├── amplifier_housing_v1.stl
 ├── amplifier_housing_v2.step        # Redesigned with rain hood

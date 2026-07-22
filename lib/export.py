@@ -16,10 +16,16 @@ PARTS_DIR = PROJECT_ROOT / "parts"
 
 
 def discover_parts() -> list[Path]:
-    """Find all parts that have a model.py with a create_part() function."""
+    """
+    Find all parts that have a model.py with a create_part() function.
+
+    Layout: parts/custom/* are parts we design and fabricate; parts/vendor/*
+    are purchased parts (vendor STEPs, or datasheet-derived stand-in models).
+    parts/_template/ is the new-part scaffold and is deliberately excluded.
+    """
     parts = []
-    for model_file in sorted(PARTS_DIR.glob("*/model.py")):
-        parts.append(model_file)
+    for group in ("custom", "vendor"):
+        parts.extend(sorted((PARTS_DIR / group).glob("*/model.py")))
     return parts
 
 

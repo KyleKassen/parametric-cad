@@ -15,7 +15,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 def test_example_part_builds():
     """The example part should build without errors."""
-    from parts.example_part.model import create_part
+    from parts._template.model import create_part
 
     result = create_part()
     assert result is not None
@@ -27,7 +27,7 @@ def test_example_part_builds():
 
 def test_example_part_is_solid():
     """The result should be a proper solid (not a shell or wire)."""
-    from parts.example_part.model import create_part
+    from parts._template.model import create_part
 
     result = create_part()
     solid = result.val()
@@ -39,7 +39,7 @@ def test_example_part_is_solid():
 
 def test_example_part_dimensions():
     """The bounding box should match the declared dimensions (within tolerance)."""
-    from parts.example_part.model import create_part, load_params
+    from parts._template.model import create_part, load_params
 
     params = load_params()
     dims = params["dimensions"]
@@ -62,7 +62,7 @@ def test_example_part_dimensions():
 
 def test_example_part_custom_params():
     """Building with overridden parameters should work."""
-    from parts.example_part.model import create_part, load_params
+    from parts._template.model import create_part, load_params
 
     params = load_params()
 
@@ -83,7 +83,7 @@ def test_example_part_has_holes():
     The part should have fewer faces than a plain box (holes add faces).
     A plain box has 6 faces; holes and fillets add more.
     """
-    from parts.example_part.model import create_part
+    from parts._template.model import create_part
 
     result = create_part()
     solid = result.val()

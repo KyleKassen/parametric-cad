@@ -1,0 +1,32 @@
+{
+    "part_name": "SC/APC Connector, 0.9mm pigtail",
+    "version": "v1",
+    "description": "Datasheet-derived stand-in for the SC/APC connector on a 0.9mm-fiber pigtail — the connector pre-installed on the OZ510 modules' fiber and on any pigtail plugged into the housing's internal adapter ports. Overall lengths from the Leviton GD102431 SC connector drawing (datasheets/): 38mm overall with the 0.9mm boot (2-3mm cable versions are 56mm — those do NOT fit the OZ510 dual housing's plenum). Plug/grip cross-sections follow the FOCIS-3 SC envelope. A PURCHASED/pre-terminated part — the model exists for mated-corridor keep-out checks and renders, not fabrication.",
+    "units": "mm",
+    "material": "vendor part (plastic housing, zirconia ferrule)",
+    "process": "purchased / pre-terminated — do not fabricate",
+
+    "dimensions": {
+        "overall_len": 38.0,
+        "plug_w": 9.4,
+        "plug_h": 7.2,
+        "plug_len": 10.5,
+        "ferrule_dia": 2.5,
+        "ferrule_tip_y": 13.0,
+        "grip_w": 12.4,
+        "grip_h": 9.0,
+        "grip_len": 11.0,
+        "crimp_dia": 4.5,
+        "crimp_len": 6.0,
+        "boot_tip_dia": 2.8
+    },
+
+    "frame": "Plug axis = +Y. Origin at the grip's FRONT face — the plane that stops against the adapter body end when mated. Plug shroud and ferrule extend +Y (into the adapter); grip, crimp, and boot extend -Y. Mated placement: put the origin on the adapter's end face, coaxial.",
+
+    "notes": [
+        "Simplified: push-pull latch details, key, and boot curvature are approximated; the envelope (38mm overall, FOCIS-3 plug/grip cross-sections, 2.5mm ferrule) is what matters for corridor checks.",
+        "boot length is derived: overall_len - (ferrule_tip_y + grip_len + crimp_len).",
+        "When mated, the connector occupies ~overall_len - ferrule_tip_y = 25mm behind the adapter end — the OZ510 dual housing's mated_connector_clear (30mm) covers this with margin.",
+        "Source: https://leviton.com/content/dam/leviton/network-solutions/product_documents/product_specification/emea/Leviton-EMEA-Spec-SC-Fiber-Optic-Connectors-102431.pdf"
+    ]
+}
