@@ -19,8 +19,29 @@ fork of the model code:
 | `oz51x-dual-tx-housing` | RF transmitter | TTL transmitter | yes |
 | `oz51x-dual-rx-housing` | RF receiver | TTL receiver | yes |
 
+The TX and RX electrical variants also have narrow, vertically stacked layout
+options in `oz51x-dual-tx-housing-vertical` and
+`oz51x-dual-rx-housing-vertical`. They inherit their electrical variant's
+parameters and use the same shared builder. The canonical tray is turned onto
+its side so the two bays stack upward and the removable top becomes a side
+service cover; rear connector footprints are counter-rotated so SC/APC flange
+screws and the DE-9 long axis remain horizontal. The module screws provide
+positive retention because the module plates no longer rest in the gravity
+direction.
+
+Production-refined derivatives live in
+`oz51x-dual-tx-housing-vertical-gpt-5-6-sol` and
+`oz51x-dual-rx-housing-vertical-gpt-5-6-sol`. They use the same inherited
+interface data and builder, enabling an additive-manufacturing refinement mode
+for radiused shells, tapered boss roots, lightened/flanged fiber storage,
+cable saddles, baffled ventilation, gravity drains, assembly lead-ins, and a
+stiffened service cover. These additions must remain outside every original
+module, connector, fiber, screw, and harness keep-out.
+
 Each housing is a two-bay open-top base tray plus a removable screwed-down
-lid, holding two Zonu OZ51x-family modules side by side, plate-down. Per
+lid, holding two Zonu OZ51x-family modules side by side in the canonical
+layout, plate-down. A vertical-stack layout may turn that complete architecture
+onto its side as described above. Per
 module the housing must expose:
 
 - its **SMA connector** through the front panel,
@@ -133,7 +154,8 @@ thread-forming screws into printed pilot bores (no inserts assumed).
 
 ## 6. Lid
 
-- Flat lid over the full footprint, screwed to: posts along the central rib,
+- Flat lid over the full footprint (or full side service opening on a vertical
+  stack), screwed to: posts along the central rib,
   the fiber spool, and posts in the plenum's back corners. Screw heads
   counterbored flush.
 - **Registration lip constraints** (each earned by a real bug):

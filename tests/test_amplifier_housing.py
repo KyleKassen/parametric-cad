@@ -115,7 +115,7 @@ def test_cradle_taller_than_v2():
     v3 cradle should be taller than a hypothetical v2 with same amp dims,
     because thermal standoffs add height and sun shade is raised.
     """
-    from parts.custom.amplifier_housing.model import create_cradle, load_params
+    from parts.custom.amplifier_housing.model import load_params
 
     params = load_params()
     h = params["housing"]

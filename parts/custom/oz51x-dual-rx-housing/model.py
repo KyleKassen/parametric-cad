@@ -33,6 +33,7 @@ _builder = _load_builder()
 layout = _builder.layout
 create_base = _builder.create_base
 create_lid = _builder.create_lid
+orient_to_mounting = _builder.orient_to_mounting
 
 
 def load_params(path: Path = PARAMS_FILE) -> dict:
@@ -67,9 +68,11 @@ if __name__ == "__main__":
 
     L = layout(params)
     print(f"\n  Building: {params['part_name']} ({params.get('version', 'v1')})")
-    print(f"  Outer envelope: {2*L['outer_half_x']:.1f} (W) × "
-          f"{L['total_depth']:.1f} (D) × "
-          f"{L['base_height'] + params['housing']['lid_thickness']:.1f} (H) mm\n")
+    print(
+        f"  Outer envelope: {L['envelope_width']:.1f} (W) × "
+        f"{L['envelope_depth']:.1f} (D) × "
+        f"{L['envelope_height']:.1f} (H) mm\n"
+    )
 
     fmts = ["step"] + (["stl"] if "--stl" in sys.argv else [])
     export_part(part, version=params.get("version", "v1"), formats=fmts)

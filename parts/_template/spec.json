@@ -1,0 +1,26 @@
+{
+    "schema": "part-spec/1",
+    "part_name": "Example Mounting Plate",
+    "units": "mm",
+    "solid_count": 1,
+
+    "dimensions": [
+        { "id": "envelope_length_x", "kind": "bbox", "axis": "x", "expected": 80.0, "tol": 0.1 },
+        { "id": "envelope_width_y",  "kind": "bbox", "axis": "y", "expected": 60.0, "tol": 0.1 },
+        { "id": "envelope_thickness_z", "kind": "bbox", "axis": "z", "expected": 6.0, "tol": 0.1 },
+        { "id": "center_bore", "kind": "cylinder", "diameter": 20.0, "tol": 0.1,
+          "axis": "Z", "type": "hole", "count_min": 1 },
+        { "id": "corner_counterbores", "kind": "cylinder", "diameter": 10.0, "tol": 0.1,
+          "axis": "Z", "type": "hole", "count_min": 4 },
+        { "id": "corner_screw_holes", "kind": "cylinder", "diameter": 5.5, "tol": 0.1,
+          "axis": "Z", "type": "hole", "count_min": 4 },
+        { "id": "material_volume", "kind": "volume", "min": 20000, "max": 28800,
+          "severity": "soft" }
+    ],
+
+    "assumptions": [
+        "Dimensions mirror params.json — keep spec.json in sync when iterating.",
+        "The volume band is stock (80x60x6 = 28800 mm^3) minus holes; soft because it is a sanity band, not a drawing requirement."
+    ],
+    "unresolved": []
+}

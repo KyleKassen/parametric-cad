@@ -81,6 +81,100 @@ def test_keepout_contains_module():
     assert keepout.Volume() > module.Volume()
 
 
+def test_interference_measures_real_overlap():
+    """interference() reports true overlap and 0.0 only for genuine clearance."""
+    import cadquery as cq
+
+    from lib.housing import interference
+
+    a = cq.Workplane("XY").box(2, 2, 2)
+    apart = cq.Workplane("XY").box(2, 2, 2).translate((10, 0, 0))
+    overlapping = cq.Workplane("XY").box(2, 2, 2).translate((1, 0, 0))
+    assert interference(a, apart) == 0.0
+    assert abs(interference(a, overlapping) - 4.0) < 0.01  # 1 x 2 x 2 slab
+
+
+def test_clearance_measures_min_gap():
+    """clearance() gives the exact minimum distance; 0.0 only when touching."""
+    import cadquery as cq
+
+    from lib.housing import clearance
+
+    a = cq.Workplane("XY").box(2, 2, 2)
+    apart = cq.Workplane("XY").box(2, 2, 2).translate((5, 0, 0))
+    overlapping = cq.Workplane("XY").box(2, 2, 2).translate((1, 0, 0))
+    diagonal = cq.Workplane("XY").box(2, 2, 2).translate((5, 5, 0))
+    assert abs(clearance(a, apart) - 3.0) < 1e-6
+    assert clearance(a, overlapping) == 0.0
+    assert abs(clearance(a, diagonal) - 3.0 * 2**0.5) < 1e-6
+
+
+def test_interference_never_converts_errors_to_clearance():
+    """A failed boolean must raise — not return a passing 0.0 (audit fix)."""
+    import pytest
+
+    from lib.housing import interference
+
+    class ExplodingShape:
+        def intersect(self, other):
+            raise RuntimeError("kernel boolean failed")
+
+    with pytest.raises(RuntimeError, match="kernel boolean failed"):
+        interference(ExplodingShape(), ExplodingShape())
+
+
+def test_export_all_zero_matches_is_failure():
+    """Bulk export must not exit 0 when nothing was exported (audit fix)."""
+    from lib.export import export_all
+
+    assert export_all(part_filter="no-such-part-xyz") == 1
+
+
+def test_export_all_build_error_is_failure(monkeypatch, tmp_path):
+    """A part that raises during build must produce a failing exit code."""
+    import lib.export as ex
+
+    fake = tmp_path / "boom_part"
+    fake.mkdir()
+    (fake / "model.py").write_text("raise RuntimeError('build exploded')\n")
+    monkeypatch.setattr(ex, "discover_parts", lambda: [fake / "model.py"])
+    assert ex.export_all() == 1
+
+
+def test_section_cut_reveals_interior(tmp_path):
+    """section_cut removes the + side; bad stations raise instead of rendering lies."""
+    import cadquery as cq
+    import pytest
+
+    from lib.render_step import section_cut
+
+    hollow = (cq.Workplane("XY").box(20, 20, 10, centered=(True, True, False))
+              .faces(">Z").shell(-2))  # closed box, 2 mm walls... open shell downward
+    cut = section_cut(hollow.val(), "Z", 5.0)
+    bb = cut.BoundingBox()
+    assert bb.zmax <= 5.01, "material above the cut plane must be gone"
+    assert cut.Volume() < hollow.val().Volume()
+
+    with pytest.raises(ValueError, match="beyond the part"):
+        section_cut(hollow.val(), "Z", 99.0)
+    with pytest.raises(ValueError, match="axis must be"):
+        section_cut(hollow.val(), "Q", 5.0)
+
+
+def test_render_file_section_suffix(tmp_path):
+    """Section renders carry a _sec suffix so they never clobber whole views."""
+    import cadquery as cq
+
+    from lib.render_step import render_file
+
+    step = tmp_path / "box.step"
+    cq.exporters.export(cq.Workplane("XY").box(10, 10, 10), str(step))
+    written = render_file(step, out_dir=tmp_path, views=("iso",), size=200,
+                          section=("Z", 2.5))
+    assert [p.name for p in written] == ["box_secZ2p5_iso.png"]
+    assert written[0].stat().st_size > 500
+
+
 def test_render_smoke(tmp_path):
     """Offscreen rendering writes non-trivial PNGs for the requested views."""
     import cadquery as cq

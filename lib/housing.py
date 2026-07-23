@@ -132,10 +132,30 @@ def keepout_prism(
     return prism_from_silhouette(sil, axis, lo, hi)
 
 
-def interference(a, b) -> float:
-    """Boolean overlap volume between two shapes/workplanes, in mm^3."""
+def clearance(a, b) -> float:
+    """
+    Minimum distance between two shapes/workplanes, in mm (exact kernel
+    extrema, not sampling). 0.0 means touching or overlapping — pair it with
+    interference() to tell which. Raises if the computation fails; an error
+    must never read as "plenty of room".
+    """
+    from OCP.BRepExtrema import BRepExtrema_DistShapeShape
+
     a, b = _shape(a), _shape(b)
-    try:
-        return abs(a.intersect(b).Volume())
-    except Exception:
-        return 0.0
+    dss = BRepExtrema_DistShapeShape(a.wrapped, b.wrapped)
+    if not dss.IsDone():
+        raise RuntimeError("BRepExtrema_DistShapeShape failed — cannot measure clearance")
+    return max(0.0, dss.Value())
+
+
+def interference(a, b) -> float:
+    """
+    Boolean overlap volume between two shapes/workplanes, in mm^3.
+
+    A genuinely empty intersection returns 0.0; a failed boolean operation
+    RAISES. It must never be swallowed into a 0.0 "perfect clearance" — a
+    kernel error is not evidence of a fit.
+    """
+    a, b = _shape(a), _shape(b)
+    inter = a.intersect(b)
+    return sum(abs(s.Volume()) for s in inter.Solids())

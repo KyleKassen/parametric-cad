@@ -11,6 +11,10 @@ venv/
 env/
 
 # CadQuery exports (generated artifacts — regenerate from scripts)
+**/exports/attempts/
+**/exports/*_report.json
+**/exports/*_views/
+**/exports/*.tmp
 **/exports/*.step
 **/exports/*.stp
 **/exports/*.stl

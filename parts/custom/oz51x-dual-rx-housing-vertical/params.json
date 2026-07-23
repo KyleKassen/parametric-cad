@@ -1,0 +1,21 @@
+{
+    "_extends": "../oz51x-dual-rx-housing/params.json",
+    "part_name": "OZ51x Dual-RX Housing — Vertical Stack (RF + TTL receivers)",
+    "version": "v1",
+    "description": "Narrow vertical-stack variation of the dual-RX housing. The complete two-bay tray is mounted on its side so the RF and TTL receiver bays stack upward; the former top lid becomes a removable right-side service cover. Front SMA axes, rear fiber axes, SC/APC adapter flanges, and the DE-9 remain horizontal.",
+    "housing": {
+        "mounting_orientation": "vertical",
+        "clearance_top": 13.0
+    },
+    "panel_connector": {
+        "center_z": false,
+        "z": 15.5
+    },
+    "notes": [
+        "VERTICAL STACK: RF receiver is the upper bay and TTL receiver is the lower bay. Finished envelope is 32.7 mm wide x 133.5 mm deep x 92.2 mm high, versus 92.2 x 133.5 x 22.7 mm for the side-by-side variant.",
+        "SERVICE: the former top lid is the removable right-side cover. Both modules remain accessible from that side and are positively retained by two M3 screws each, so the vertical plate attitude does not rely on gravity or loose support studs.",
+        "REAR CONNECTORS: the SC/APC mounts and DE-9 footprint are counter-rotated in the canonical tray so their long axes and flange screws remain horizontal in the installed vertical housing. The extra cross-width clearance is driven by the DE-9 jackscrew span; its axis is offset 0.64 mm from the side-panel center so the 24 mm rear keep-out stays above the 3 mm structural wall.",
+        "FIBER: the plenum and spool turn with the housing. Fiber coils in the vertical Y-Z plane around the same 15 mm minimum-bend-radius spool; connector corridors remain straight along the enclosure depth.",
+        "All module, SMA, mounting, harness, fiber, and connector dimensions and assumptions are inherited from oz51x-dual-rx-housing v1 and the shared OZ51x requirements. Verify the real TTL module and ordered panel hardware before fabrication."
+    ]
+}

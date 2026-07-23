@@ -1,0 +1,81 @@
+{
+    "schema": "part-spec/1",
+    "part_name": "OZ51x Dual-RX Housing (RF + TTL receivers)",
+    "units": "mm",
+    "solid_count": 2,
+
+    "dimensions": [
+        { "id": "envelope_width_x",  "kind": "bbox", "axis": "x", "expected": 92.2,  "tol": 0.2 },
+        { "id": "envelope_depth_y",  "kind": "bbox", "axis": "y", "expected": 133.5, "tol": 0.2 },
+        { "id": "envelope_height_z", "kind": "bbox", "axis": "z", "expected": 22.72, "tol": 0.2 },
+        { "id": "sma_clearance_holes", "kind": "cylinder", "diameter": 7.0, "tol": 0.15,
+          "axis": "Y", "type": "hole", "count_min": 2 },
+        { "id": "sma_hole_rf_bay_position", "kind": "cylinder_at", "diameter": 7.0, "tol": 0.15,
+          "axis": "Y", "type": "hole", "at": [-35.25, -36.25, 8.03], "pos_tol": 0.5 },
+        { "id": "sma_hole_ttl_bay_position", "kind": "cylinder_at", "diameter": 7.0, "tol": 0.15,
+          "axis": "Y", "type": "hole", "at": [9.85, -36.25, 8.03], "pos_tol": 0.5 }
+    ],
+
+    "fit": {
+        "render": true,
+        "cases": [
+            {
+                "id": "rf_module_vs_base",
+                "a": { "source": "builder", "builder": "create_base" },
+                "b": { "source": "step",
+                       "path": "parts/vendor/zonu-oz510-receiver/OZ510 Receiver.STEP",
+                       "transform": [ { "rotate": { "axis": "X", "angle": 90 } },
+                                      { "translate": [-22.55, 0, 6.0] } ] },
+                "max_interference": 2.0
+            },
+            {
+                "id": "ttl_module_vs_base",
+                "a": { "source": "builder", "builder": "create_base" },
+                "b": { "source": "step",
+                       "path": "parts/vendor/zonu-oz510-receiver/OZ510 Receiver.STEP",
+                       "transform": [ { "rotate": { "axis": "X", "angle": 90 } },
+                                      { "translate": [22.55, 0, 6.0] } ] },
+                "max_interference": 2.0
+            },
+            {
+                "id": "rf_module_vs_lid",
+                "a": { "source": "builder", "builder": "create_lid" },
+                "b": { "source": "step",
+                       "path": "parts/vendor/zonu-oz510-receiver/OZ510 Receiver.STEP",
+                       "transform": [ { "rotate": { "axis": "X", "angle": 90 } },
+                                      { "translate": [-22.55, 0, 6.0] } ] },
+                "max_interference": 2.0
+            },
+            {
+                "id": "lid_seats_on_base",
+                "a": { "source": "builder", "builder": "create_base" },
+                "b": { "source": "builder", "builder": "create_lid" },
+                "max_interference": 0.5
+            },
+            {
+                "id": "module_to_module_gap",
+                "a": { "source": "step",
+                       "path": "parts/vendor/zonu-oz510-receiver/OZ510 Receiver.STEP",
+                       "transform": [ { "rotate": { "axis": "X", "angle": 90 } },
+                                      { "translate": [-22.55, 0, 6.0] } ] },
+                "b": { "source": "step",
+                       "path": "parts/vendor/zonu-oz510-receiver/OZ510 Receiver.STEP",
+                       "transform": [ { "rotate": { "axis": "X", "angle": 90 } },
+                                      { "translate": [22.55, 0, 6.0] } ] },
+                "min_clearance": 3.0
+            }
+        ]
+    },
+
+    "validators": [
+        { "id": "vendor_fit_check", "script": "fit_check.py", "timeout": 900 }
+    ],
+
+    "assumptions": [
+        "TTL receiver bay borrows the RF OZ510 Receiver STEP as a mechanical stand-in (datasheet photos only) — verify a real TTL unit before fabrication.",
+        "SC/APC adapter and connector are datasheet-derived stand-in models, not vendor CAD.",
+        "DE-9 cutout uses the industry-standard footprint — verify against the ordered connector.",
+        "Envelope, SMA-hole, and fit placement numbers derive from layout(params): bay_cx = [-22.55, 22.55], plate_bottom_z = 6.0, sma x = cx + sign*sma_axis_x, z = plate_bottom_z + sma_axis_y. Regenerate them if params.json dimensions change."
+    ],
+    "unresolved": []
+}

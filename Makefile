@@ -1,4 +1,5 @@
-.PHONY: install export-all test lint clean new-part analyze views compare help
+.PHONY: install export-all test lint clean new-part analyze views compare eval \
+        spec-init debug-build diff help
 
 PYTHON = uv run python
 PYTEST = uv run pytest
@@ -19,6 +20,18 @@ export-stl: ## Export all parts to exports/ (STEP + STL)
 
 test: ## Run parametric validation tests
 	$(PYTEST) tests/ -v
+
+eval: ## Build -> export -> re-import -> validate -> render -> report -> promote (usage: make eval PART="parts/custom/x")
+	$(PYTHON) -m lib.evaluate "$(PART)"
+
+spec-init: ## Draft a spec.json from measured geometry (usage: make spec-init PART="parts/custom/x")
+	$(PYTHON) -m lib.evaluate "$(PART)" --init-spec
+
+debug-build: ## Stage-by-stage build bisection (usage: make debug-build PART="parts/custom/x")
+	$(PYTHON) -m lib.debug_build "$(PART)"
+
+diff: ## Geometric diff old vs new STEP (usage: make diff A="old.step" B="new.step")
+	$(PYTHON) -m lib.diff_step "$(A)" "$(B)"
 
 analyze: ## Exact STEP analysis -> references/ JSON (usage: make analyze FILE="parts/x/part.step")
 	$(PYTHON) -m lib.analyze_step "$(FILE)" --save
@@ -49,3 +62,4 @@ endif
 	@echo "  ✓ Created parts/$(GROUP)/$(NAME)/"
 	@echo "  → Edit parts/$(GROUP)/$(NAME)/params.json with your dimensions"
 	@echo "  → Edit parts/$(GROUP)/$(NAME)/model.py with your geometry"
+	@echo "  → When it builds: make spec-init PART=parts/$(GROUP)/$(NAME) to draft its acceptance spec"

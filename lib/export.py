@@ -38,9 +38,15 @@ def load_part_module(model_path: Path):
     return module
 
 
-def export_all(formats: list[str] | None = None, part_filter: str | None = None):
+def export_all(formats: list[str] | None = None, part_filter: str | None = None) -> int:
     """
     Discover all parts, build them, and export to parts/<name>/exports/.
+
+    Returns an exit code: 0 only if at least one part was exported and none
+    failed. Any build/export error, a part producing no solids, or zero parts
+    exported is a failure — errors are reported, never silently absorbed.
+    Files are written via a temp name + atomic replace so a failed export can
+    never leave a corrupt file where an accepted artifact used to be.
 
     Parameters
     ----------
@@ -49,6 +55,8 @@ def export_all(formats: list[str] | None = None, part_filter: str | None = None)
     part_filter : str, optional
         If set, only export the part whose directory name matches.
     """
+    import os
+
     import cadquery as cq
 
     if formats is None:
@@ -57,14 +65,15 @@ def export_all(formats: list[str] | None = None, part_filter: str | None = None)
     parts = discover_parts()
     if not parts:
         print("No parts found in parts/*/model.py")
-        return
+        return 1
 
     print(f"\n{'='*60}")
-    print(f"  CadQuery Bulk Export")
+    print("  CadQuery Bulk Export")
     print(f"  Formats: {', '.join(f.upper() for f in formats)}")
     print(f"{'='*60}\n")
 
     exported_count = 0
+    failures: list[str] = []
     for model_path in parts:
         part_name = model_path.parent.name
 
@@ -77,7 +86,7 @@ def export_all(formats: list[str] | None = None, part_filter: str | None = None)
             module = load_part_module(model_path)
 
             if not hasattr(module, "create_part"):
-                print(f"    ⚠ No create_part() function found, skipping")
+                print("    ⚠ No create_part() function found, skipping")
                 continue
 
             # Read version from params.json
@@ -93,20 +102,37 @@ def export_all(formats: list[str] | None = None, part_filter: str | None = None)
 
             result = module.create_part()
 
+            if hasattr(result, "solids") and result.solids().size() == 0:
+                raise RuntimeError("create_part() produced no solids")
+
             part_exports = model_path.parent / "exports"
             part_exports.mkdir(parents=True, exist_ok=True)
 
             for fmt in formats:
                 out_path = part_exports / f"{part_name}_{version}.{fmt}"
-                cq.exporters.export(result, str(out_path))
+                tmp_path = part_exports / f"{part_name}_{version}.{fmt}.tmp"
+                cq.exporters.export(result, str(tmp_path))
+                os.replace(tmp_path, out_path)
                 print(f"    ✓ {out_path.relative_to(PROJECT_ROOT)}")
 
             exported_count += 1
 
         except Exception as e:
             print(f"    ✗ Error: {e}")
+            failures.append(part_name)
 
-    print(f"\n  Done — {exported_count} part(s) exported.\n")
+    print(f"\n  Done — {exported_count} part(s) exported"
+          + (f", {len(failures)} FAILED: {', '.join(failures)}" if failures else "")
+          + ".\n")
+
+    if failures:
+        return 1
+    if exported_count == 0:
+        print("  ✗ Nothing exported"
+              + (f" (no part matched {part_filter!r})" if part_filter else "")
+              + " — that is a failure, not a success.\n")
+        return 1
+    return 0
 
 
 if __name__ == "__main__":
@@ -120,4 +146,4 @@ if __name__ == "__main__":
         if idx + 1 < len(sys.argv):
             part_filter = sys.argv[idx + 1]
 
-    export_all(formats=formats, part_filter=part_filter)
+    sys.exit(export_all(formats=formats, part_filter=part_filter))

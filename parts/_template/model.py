@@ -99,6 +99,41 @@ def create_part(params: dict | None = None) -> cq.Workplane:
     return result
 
 
+def build_stages(params: dict | None = None):
+    """
+    The same build as create_part(), yielded one feature operation at a time
+    for `lib.debug_build` bisection: when a stage throws, the tool reports the
+    last stage that succeeded instead of an opaque kernel error. Keep the
+    final stage identical to create_part()'s result (drift is warned about).
+    """
+    if params is None:
+        params = load_params()
+    dims = params["dimensions"]
+    corners = params["features"]["corner_holes"]
+    center = params["features"]["center_bore"]
+    fillets = params["features"]["edge_fillets"]
+
+    result = cq.Workplane("XY").box(dims["length"], dims["width"], dims["thickness"])
+    yield "stock_plate", result
+
+    result = (
+        result.faces(">Z")
+        .workplane()
+        .rect(dims["length"] - 2 * corners["inset_x"],
+              dims["width"] - 2 * corners["inset_y"], forConstruction=True)
+        .vertices()
+        .cboreHole(corners["hole_diameter"], corners["counterbore_diameter"],
+                   corners["counterbore_depth"])
+    )
+    yield "corner_counterbores", result
+
+    result = result.faces(">Z").workplane().hole(center["diameter"])
+    yield "center_bore", result
+
+    result = result.edges("|Z").fillet(fillets["radius"])
+    yield "edge_fillets", result
+
+
 def export_part(
     result: cq.Workplane,
     name: str = "example_part",

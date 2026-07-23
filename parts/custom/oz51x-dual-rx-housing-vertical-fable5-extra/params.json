@@ -1,0 +1,76 @@
+{
+    "_extends": "../oz51x-dual-rx-housing-vertical/params.json",
+    "part_name": "OZ51x Dual-RX Housing — Vertical Stack, Fable 5 Extra Edition",
+    "version": "v1",
+    "description": "Production-refined redesign of the vertical dual-RX housing by Claude (Fable 5 extra). Same verified interfaces as oz51x-dual-rx-housing-vertical v1 (bays, studs, bosses, SMA, fiber, SC/APC, DE-9, corridors, keep-outs, lip ring) with an extruded-profile edge language, integral wall-mount flanges, bay ventilation/drainage louvers, recessed SC adapter pockets, harness tie-down anchors, entry chamfers on every pilot, a deterministic DE-9 jackscrew capture slot at the parting line, and engraved panel labels oriented for the vertical attitude. Geometry built by this directory's model.py (the redesigned family builder).",
+    "industrial": {
+        "corner_fillet": 2.5,
+        "mount_edge_fillet": 1.2,
+        "reveal_chamfer": 0.6,
+        "cover_chamfer": 1.2,
+        "pilot_entry_chamfer": 0.5,
+        "counterbore_entry_chamfer": 0.4,
+        "sma_face_chamfer": 0.6,
+        "stud_top_chamfer": 0.4,
+        "lip_lead_in": 0.8,
+        "spool_top_fillet": 1.5,
+        "mount_flanges": {
+            "enabled": true,
+            "protrusion": 11.0,
+            "thickness": 3.0,
+            "end_inset": 3.0,
+            "corner_radius": 4.0,
+            "embed": 2.0,
+            "gusset": 3.0,
+            "slot_width": 4.5,
+            "slot_length": 9.0,
+            "slot_from_ends": 16.0
+        },
+        "vents": {
+            "enabled": true,
+            "slot_width": 2.0,
+            "cover_slot_length": 30.0,
+            "cover_slot_y": -7.0,
+            "cover_slot_x": [31.5, 36.0],
+            "wall_slot_length": 28.0,
+            "wall_slot_y": -10.0,
+            "wall_slot_z": [9.0, 13.5, 18.0]
+        },
+        "connector_recess": {
+            "sc_depth": 0.8,
+            "clearance": 0.4,
+            "corner_radius": 1.5
+        },
+        "harness_anchors": {
+            "enabled": true,
+            "x": [-16.0, 16.0],
+            "y_from_back_wall": 8.0,
+            "post_dia": 3.0,
+            "post_gap": 4.0,
+            "height": 6.0
+        },
+        "labels": {
+            "enabled": true,
+            "depth": 0.5,
+            "font": "Arial",
+            "bay_size": 4.5,
+            "bay_z": 10.5,
+            "bay_offset_from_sma": 9.0,
+            "identity_size": 7.0,
+            "identity_z": 20.0,
+            "identity_text": "RX",
+            "maker_text": "FABLE-5X V1",
+            "maker_size": 3.2
+        }
+    },
+    "notes": [
+        "FABLE 5 EXTRA REDESIGN of oz51x-dual-rx-housing-vertical v1. All module, SMA, mounting, harness, fiber, DE-9, and corridor interfaces are inherited unchanged; only edge treatment, mounting, ventilation, serviceability, and finish features were added. See DESIGN.md in this directory for the full change list and assumptions.",
+        "MOUNTING: two integral flanges (top + bottom in the finished attitude), flush with the mount face, 4x slotted holes for M4/#8 pan-head screws. Slots run along the depth to absorb hole-position tolerance. Gusseted roots print support-free with the tray in its canonical (mount-face-down) print orientation.",
+        "EDGES: canonical vertical edges R2.5; mount-side long edges R1.2 (limited by the SC adapter flange sitting 0.24 mm above the floor plane on the back panel); cover perimeter chamfered 1.2; matched 0.6 reveal chamfers make the parting line an intentional V-groove.",
+        "VENTILATION/DRAINAGE: downward-facing slots in the bottom face (intake + weep, nothing can fall in), low intake + high exhaust louver groups in the service cover over the bays. Slots are 2.0 mm — probe-safe. The fiber plenum and top face are deliberately unvented.",
+        "DE-9 SEAM: the connector flange (30.8 mm) spans the lid parting line across the 32.7 mm finished width — it is surface-mounted (no recess possible), and the top jackscrew hole is opened into a deliberate capture slot closed by the cover edge. v1 left a 0.12 mm ligament there that would break unpredictably when printed.",
+        "SC ADAPTERS: flanges seat in 0.8 mm recessed pockets (locates the adapter, flush look); M2 pilots keep 2.2 mm engagement. Retention remains the flange screws, as documented in the family requirements.",
+        "LABELS: engraved RF / TTL beside each SMA, RX identity centered on the front face, maker mark on the cover — all oriented to read horizontally in the finished vertical attitude.",
+        "RF receiver is the upper bay, TTL receiver the lower bay. Verify the real TTL module and ordered panel hardware before fabrication (unchanged family assumption)."
+    ]
+}

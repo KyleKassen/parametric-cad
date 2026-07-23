@@ -37,10 +37,15 @@ Run fit_check.py after any change to re-verify against the real vendor STEPs.
 This model is the SHARED BUILDER for the whole OZ51x housing family — the
 dual-TX and dual-RX variants (parts/custom/oz51x-dual-tx-housing and
 oz51x-dual-rx-housing) are thin wrappers that call these functions with their
-own params.json. REQUIREMENTS.md in this directory is the family's
+own params.json. The vertical variants use the same geometry with
+housing.mounting_orientation = "vertical": the complete tray is turned onto
+its side so the bays stack upward and the lid becomes a removable side cover.
+Rear panel connector footprints are counter-rotated so their long axes remain
+horizontal. REQUIREMENTS.md in this directory is the family's
 dimension-free spec: design intent, constraints, discovered traps, and the
-verification obligations every variant must pass. Everything variant-specific is parametric: bays[] set each
-bay's handedness (mirror_x) and vendor STEP (step); housing.front_wiring_slots
+verification obligations every variant must pass. Everything variant-specific
+is parametric: bays[] set each bay's handedness (mirror_x) and vendor STEP
+(step); housing.front_wiring_slots
 gates the front slots; panel_connector (optional) adds a rear signal
 connector (e.g. DE-9); fiber_bay.spool_setback front-biases the spool.
 
@@ -68,9 +73,30 @@ EXPORTS_DIR = PART_DIR / "exports"
 PARAMS_FILE = PART_DIR / "params.json"
 
 
+def _deep_merge(base: dict, override: dict) -> dict:
+    """Recursively merge parameter dictionaries without mutating either input."""
+    merged = dict(base)
+    for key, value in override.items():
+        if isinstance(value, dict) and isinstance(merged.get(key), dict):
+            merged[key] = _deep_merge(merged[key], value)
+        else:
+            merged[key] = value
+    return merged
+
+
+def load_params_file(path: Path) -> dict:
+    """Load params, optionally inheriting another variant via ``_extends``."""
+    with open(path, encoding="utf-8") as f:
+        params = json.load(f)
+    parent = params.pop("_extends", None)
+    if parent:
+        parent_path = (path.parent / parent).resolve()
+        params = _deep_merge(load_params_file(parent_path), params)
+    return params
+
+
 def load_params(path: Path = PARAMS_FILE) -> dict:
-    with open(path) as f:
-        return json.load(f)
+    return load_params_file(path)
 
 
 # ---------------------------------------------------------------------------
@@ -81,15 +107,20 @@ def layout(params: dict) -> dict:
     h = params["housing"]
 
     # One entry per bay; mirror_x flags a mirrored (transmitter-handed) module
-    bays = params.get("bays", [{"label": "left", "mirror_x": False},
-                               {"label": "right", "mirror_x": False}])
+    bays = params.get(
+        "bays",
+        [
+            {"label": "left", "mirror_x": False},
+            {"label": "right", "mirror_x": False},
+        ],
+    )
     n = len(bays)
 
     plate_w = m["plate_width_x"]
     plate_l = m["plate_length_z"]
 
-    bay_w = plate_w + 2 * h["clearance_side"]          # interior width of one bay
-    bay_d = plate_l + 2 * h["clearance_end"]           # interior depth of one bay
+    bay_w = plate_w + 2 * h["clearance_side"]  # interior width of one bay
+    bay_d = plate_l + 2 * h["clearance_end"]  # interior depth of one bay
     bay_pitch = bay_w + h["bay_gap"]
     bay_cx = [(i - (n - 1) / 2.0) * bay_pitch for i in range(n)]
 
@@ -106,8 +137,8 @@ def layout(params: dict) -> dict:
     # to the new back wall. Modules stay centered on y=0, so the outer box
     # is asymmetric in Y: from -outer_half_y to +back_outer_y.
     fb = params["fiber_bay"]
-    plenum_y0 = outer_half_y                      # partition outer face
-    plenum_y1 = plenum_y0 + fb["depth"]           # back wall inner face
+    plenum_y0 = outer_half_y  # partition outer face
+    plenum_y1 = plenum_y0 + fb["depth"]  # back wall inner face
     back_outer_y = plenum_y1 + h["wall"]
 
     # Fiber exits: bay-local +fiber_exit_x on BOTH modules (NOT mirrored)
@@ -123,6 +154,22 @@ def layout(params: dict) -> dict:
         spool_y = (plenum_y0 + plenum_y1) / 2.0
     else:
         spool_y = plenum_y0 + setback + fb["spool_dia"] / 2.0
+
+    mounting_orientation = h.get("mounting_orientation", "horizontal")
+    lid_thickness = h["lid_thickness"]
+    if mounting_orientation == "vertical":
+        envelope_width = interior_top_z + lid_thickness
+        envelope_height = 2 * outer_half_x
+    elif mounting_orientation == "horizontal":
+        envelope_width = 2 * outer_half_x
+        envelope_height = interior_top_z + lid_thickness
+    else:
+        raise ValueError("housing.mounting_orientation must be 'horizontal' or 'vertical'")
+
+    pc = params.get("panel_connector")
+    panel_connector_z = None
+    if pc:
+        panel_connector_z = interior_top_z / 2.0 if pc.get("center_z") else pc["z"]
 
     return {
         "plate_w": plate_w,
@@ -147,7 +194,29 @@ def layout(params: dict) -> dict:
         "fiber_z": fiber_z,
         "adapter_x": [b["adapter_x"] for b in bays],
         "total_depth": outer_half_y + back_outer_y,
+        "mounting_orientation": mounting_orientation,
+        "envelope_width": envelope_width,
+        "envelope_depth": outer_half_y + back_outer_y,
+        "envelope_height": envelope_height,
+        "panel_connector_z": panel_connector_z,
     }
+
+
+def orient_to_mounting(part: cq.Workplane, params: dict) -> cq.Workplane:
+    """Transform canonical tray geometry into the requested mounting attitude.
+
+    Canonical geometry is the original horizontal, open-top tray.  The vertical
+    variant turns it +90 degrees about Y, stacks the former left/right bays in
+    Z, and translates the result to keep the finished envelope centered in X
+    with its bottom at Z=0.  This helper is also used by fit checks to transform
+    module and probe geometry exactly like the housing.
+    """
+    L = layout(params)
+    if L["mounting_orientation"] == "horizontal":
+        return part
+    x_shift = -L["envelope_width"] / 2.0
+    z_shift = L["outer_half_x"]
+    return part.rotate((0, 0, 0), (0, 1, 0), 90).translate((x_shift, 0, z_shift))
 
 
 def _y_cylinder(r: float, x: float, z: float, y_start: float, length: float) -> cq.Solid:
@@ -155,21 +224,75 @@ def _y_cylinder(r: float, x: float, z: float, y_start: float, length: float) -> 
     return cq.Solid.makeCylinder(r, length, cq.Vector(x, y_start, z), cq.Vector(0, 1, 0))
 
 
+def _x_cylinder(r: float, x_start: float, y: float, z: float, length: float) -> cq.Solid:
+    """A cylinder whose axis runs along +X (used for vertical-stack drains)."""
+    return cq.Solid.makeCylinder(r, length, cq.Vector(x_start, y, z), cq.Vector(1, 0, 0))
+
+
+def _rooted_post(
+    x: float, y: float, height: float, top_r: float, root_growth: float
+) -> cq.Workplane:
+    """Taper a post toward a wider, lower-stress root without changing its top."""
+    solid = cq.Solid.makeCone(
+        top_r + root_growth,
+        top_r,
+        height,
+        cq.Vector(x, y, 0),
+        cq.Vector(0, 0, 1),
+    )
+    return cq.Workplane("XY").newObject([solid])
+
+
+def _pilot_leadin(
+    x: float, y: float, top_z: float, pilot_r: float, depth: float, growth: float
+) -> cq.Workplane:
+    """Conical pilot entry that guides a screw without reducing engagement."""
+    solid = cq.Solid.makeCone(
+        pilot_r,
+        pilot_r + growth,
+        depth,
+        cq.Vector(x, y, top_z - depth),
+        cq.Vector(0, 0, 1),
+    )
+    return cq.Workplane("XY").newObject([solid])
+
+
+def _rounded_box(
+    width: float,
+    depth: float,
+    height: float,
+    radius: float,
+    center: tuple[float, float, float],
+) -> cq.Workplane:
+    """Axis-aligned box with radiused vertical edges, bottom at center[2]."""
+    result = (
+        cq.Workplane("XY").box(width, depth, height, centered=(True, True, False)).translate(center)
+    )
+    if radius > 0:
+        result = result.edges("|Z").fillet(radius)
+    return result
+
+
 # ---------------------------------------------------------------------------
 # Base tray
 # ---------------------------------------------------------------------------
-def create_base(params: dict) -> cq.Workplane:
+def _create_base_canonical(params: dict) -> cq.Workplane:
     m = params["module"]
     h = params["housing"]
     L = layout(params)
+    refine = params.get("refinement", {})
+    refined = bool(refine.get("enabled"))
 
     # --- Outer block, bottom on Z=0, asymmetric in Y (plenum at +Y) ---------
     base = (
         cq.Workplane("XY")
-        .box(2 * L["outer_half_x"], L["total_depth"], L["base_height"],
-             centered=(True, False, False))
+        .box(
+            2 * L["outer_half_x"], L["total_depth"], L["base_height"], centered=(True, False, False)
+        )
         .translate((0, -L["outer_half_y"], 0))
     )
+    if refined:
+        base = base.edges("|Z").fillet(refine["exterior_edge_radius"])
 
     # --- Hollow out the two module bays (open top), leaving the central rib --
     cav_h = L["base_height"] - h["floor"] + 1.0  # +1 so the cut clears the top
@@ -185,8 +308,7 @@ def create_base(params: dict) -> cq.Workplane:
     fb = params["fiber_bay"]
     plenum = (
         cq.Workplane("XY")
-        .box(2 * L["interior_half_x"], fb["depth"], cav_h,
-             centered=(True, False, False))
+        .box(2 * L["interior_half_x"], fb["depth"], cav_h, centered=(True, False, False))
         .translate((0, L["plenum_y0"], h["floor"]))
     )
     base = base.cut(plenum)
@@ -198,20 +320,55 @@ def create_base(params: dict) -> cq.Workplane:
     for fx in L["fiber_x"]:
         slot = (
             cq.Workplane("XY")
-            .box(fb["pass_slot_width"], h["wall"] + 2.0,
-                 L["base_height"] - slot_z0 + 1.0, centered=(True, False, False))
+            .box(
+                fb["pass_slot_width"],
+                h["wall"] + 2.0,
+                L["base_height"] - slot_z0 + 1.0,
+                centered=(True, False, False),
+            )
             .translate((fx, L["interior_half_y"] - 1.0, slot_z0))
         )
         base = base.cut(slot)
 
     # --- Slack spool: center of the plenum, radius = min fiber bend radius --
-    # Full height, so it also supports the lid; pilot makes it a screw post.
+    # The standard spool is solid. Production-refined variants use a stiff
+    # annular drum, screw hub, radial webs, and end flanges: substantially less
+    # material, positive wrap retention with the cover removed, and the same
+    # exact fiber-contact radius and lid-screw location.
     spool_r = fb["spool_dia"] / 2.0
-    spool = (
-        cq.Workplane("XY")
-        .circle(spool_r).extrude(L["base_height"])
-        .translate((0, L["spool_y"], 0))
-    )
+    if refined:
+        inner_r = refine["spool_inner_dia"] / 2.0
+        hub_r = refine["spool_hub_dia"] / 2.0
+        web_w = refine["spool_web_thickness"]
+        spool = cq.Workplane("XY").circle(spool_r).circle(inner_r).extrude(L["base_height"])
+        spool = spool.union(cq.Workplane("XY").circle(hub_r).extrude(L["base_height"]))
+        for i in range(refine["spool_web_count"]):
+            angle = i * 180.0 / refine["spool_web_count"]
+            web = (
+                cq.Workplane("XY")
+                .box(2 * inner_r, web_w, L["base_height"], centered=(True, True, False))
+                .rotate((0, 0, 0), (0, 0, 1), angle)
+            )
+            spool = spool.union(web)
+        flange_r = spool_r + refine["spool_flange_overhang"]
+        flange_t = refine["spool_flange_thickness"]
+        for flange_z in (h["floor"], L["base_height"] - flange_t):
+            flange = (
+                cq.Workplane("XY")
+                .circle(flange_r)
+                .circle(inner_r)
+                .extrude(flange_t)
+                .translate((0, 0, flange_z))
+            )
+            spool = spool.union(flange)
+        spool = spool.translate((0, L["spool_y"], 0))
+    else:
+        spool = (
+            cq.Workplane("XY")
+            .circle(spool_r)
+            .extrude(L["base_height"])
+            .translate((0, L["spool_y"], 0))
+        )
     base = base.union(spool)
     spool_pilot = (
         cq.Workplane("XY")
@@ -220,33 +377,57 @@ def create_base(params: dict) -> cq.Workplane:
         .translate((0, L["spool_y"], h["floor"]))
     )
     base = base.cut(spool_pilot)
+    if refined:
+        base = base.cut(
+            _pilot_leadin(
+                0,
+                L["spool_y"],
+                L["base_height"],
+                h["corner_post_pilot_dia"] / 2.0,
+                refine["pilot_leadin_depth"],
+                refine["pilot_leadin_growth"],
+            )
+        )
 
     # --- Back-corner lid posts (the lid spans much further now) -------------
     post_r = h["corner_post_dia"] / 2.0
     post_pilot_r = h["corner_post_pilot_dia"] / 2.0
     corner_y = L["plenum_y1"] - post_r - 1.0
-    for px in (-(L["interior_half_x"] - post_r - 1.0),
-               +(L["interior_half_x"] - post_r - 1.0)):
+    for px in (-(L["interior_half_x"] - post_r - 1.0), +(L["interior_half_x"] - post_r - 1.0)):
         post = (
-            cq.Workplane("XY")
-            .circle(post_r).extrude(L["base_height"])
-            .translate((px, corner_y, 0))
+            cq.Workplane("XY").circle(post_r).extrude(L["base_height"]).translate((px, corner_y, 0))
         )
         base = base.union(post)
         pilot = (
             cq.Workplane("XY")
-            .circle(post_pilot_r).extrude(L["base_height"] - h["floor"] + 0.5)
+            .circle(post_pilot_r)
+            .extrude(L["base_height"] - h["floor"] + 0.5)
             .translate((px, corner_y, h["floor"]))
         )
         base = base.cut(pilot)
+        if refined:
+            base = base.cut(
+                _pilot_leadin(
+                    px,
+                    corner_y,
+                    L["base_height"],
+                    post_pilot_r,
+                    refine["pilot_leadin_depth"],
+                    refine["pilot_leadin_growth"],
+                )
+            )
 
     # --- Back-panel SC/APC adapter mounts (one per bay) ---------------------
     # Rectangular cutout for the adapter body (long axis horizontal — the
     # 22mm flange would not fit vertically in the wall height) plus two M2
     # pilot holes for the flange screws. Adapter inserted from outside.
     ad = params["sc_adapter"]
-    cut_w = ad["body_long"] + 2 * ad["cutout_clearance"]
-    cut_h = ad["body_short"] + 2 * ad["cutout_clearance"]
+    vertical = L["mounting_orientation"] == "vertical"
+    # The canonical tray itself is rotated for a vertical housing. Counter-
+    # rotate each rear footprint here so the installed adapter's long axis and
+    # flange screws are horizontal in the finished enclosure.
+    cut_w = (ad["body_short"] if vertical else ad["body_long"]) + 2 * ad["cutout_clearance"]
+    cut_h = (ad["body_long"] if vertical else ad["body_short"]) + 2 * ad["cutout_clearance"]
     for ax in L["adapter_x"]:
         cutout = (
             cq.Workplane("XY")
@@ -254,9 +435,30 @@ def create_base(params: dict) -> cq.Workplane:
             .translate((ax, L["plenum_y1"] + h["wall"] / 2.0, L["fiber_z"]))
         )
         base = base.cut(cutout)
-        for sx in (-ad["screw_spacing"] / 2.0, +ad["screw_spacing"] / 2.0):
-            pilot = _y_cylinder(ad["screw_pilot_dia"] / 2.0, ax + sx, L["fiber_z"],
-                                y_start=L["plenum_y1"] - 1.0, length=h["wall"] + 2.0)
+        if refined:
+            lead = refine["connector_leadin"]
+            lead_depth = refine["connector_leadin_depth"]
+            entry = (
+                cq.Workplane("XY")
+                .box(
+                    cut_w + 2 * lead,
+                    lead_depth + 0.1,
+                    cut_h + 2 * lead,
+                    centered=(True, True, True),
+                )
+                .translate((ax, L["back_outer_y"] - lead_depth / 2.0, L["fiber_z"]))
+            )
+            base = base.cut(entry)
+        for offset in (-ad["screw_spacing"] / 2.0, +ad["screw_spacing"] / 2.0):
+            px = ax if vertical else ax + offset
+            pz = L["fiber_z"] + offset if vertical else L["fiber_z"]
+            pilot = _y_cylinder(
+                ad["screw_pilot_dia"] / 2.0,
+                px,
+                pz,
+                y_start=L["plenum_y1"] - 1.0,
+                length=h["wall"] + 2.0,
+            )
             base = base.cut(pilot)
 
     # --- Support studs: 4 per bay, pilot-less, under BARE plate -------------
@@ -269,11 +471,21 @@ def create_base(params: dict) -> cq.Workplane:
     for cx in L["bay_cx"]:
         for sx in (-h["stud_dx"], +h["stud_dx"]):
             for sz in h["stud_z"]:
-                stud = (
-                    cq.Workplane("XY")
-                    .circle(stud_r).extrude(boss_top)
-                    .translate((cx + sx, -sz, 0))
-                )
+                if refined:
+                    stud = _rooted_post(
+                        cx + sx,
+                        -sz,
+                        boss_top,
+                        stud_r,
+                        refine["boss_root_growth"],
+                    )
+                else:
+                    stud = (
+                        cq.Workplane("XY")
+                        .circle(stud_r)
+                        .extrude(boss_top)
+                        .translate((cx + sx, -sz, 0))
+                    )
                 base = base.union(stud)
 
     # --- Screw bosses: M3 through the module's two FREE 3.175mm holes -------
@@ -286,35 +498,121 @@ def create_base(params: dict) -> cq.Workplane:
         for hole in (m["screw_hole_front"], m["screw_hole_back"]):
             x = cx + sign * hole["x"]
             y = -hole["z"]  # module +Z -> housing -Y
-            boss = (
-                cq.Workplane("XY")
-                .circle(sb_r).extrude(boss_top)
-                .translate((x, y, 0))
-            )
+            if refined:
+                boss = _rooted_post(
+                    x,
+                    y,
+                    boss_top,
+                    sb_r,
+                    refine["boss_root_growth"],
+                )
+            else:
+                boss = cq.Workplane("XY").circle(sb_r).extrude(boss_top).translate((x, y, 0))
             base = base.union(boss)
             # thread-forming pilot, boss top down into the floor (0.5 web
             # left) — an M3x6 needs ~4.4mm of engagement below the plate
-            pilot = (
-                cq.Workplane("XY")
-                .circle(sb_pilot_r).extrude(boss_top)
-                .translate((x, y, 0.5))
-            )
+            pilot = cq.Workplane("XY").circle(sb_pilot_r).extrude(boss_top).translate((x, y, 0.5))
             base = base.cut(pilot)
+            if refined:
+                base = base.cut(
+                    _pilot_leadin(
+                        x,
+                        y,
+                        boss_top,
+                        sb_pilot_r,
+                        refine["pilot_leadin_depth"],
+                        refine["pilot_leadin_growth"],
+                    )
+                )
 
     # --- Lid-screw posts: three along the central rib -----------------------
     post_r = h["corner_post_dia"] / 2.0
     post_pilot_r = h["corner_post_pilot_dia"] / 2.0
-    post_ys = [-(L["interior_half_y"] - post_r - 1.0), 0.0,
-               +(L["interior_half_y"] - post_r - 1.0)]
+    post_ys = [-(L["interior_half_y"] - post_r - 1.0), 0.0, +(L["interior_half_y"] - post_r - 1.0)]
     for py in post_ys:
         post = cq.Workplane("XY").circle(post_r).extrude(L["base_height"]).translate((0, py, 0))
         base = base.union(post)
         pilot = (
             cq.Workplane("XY")
-            .circle(post_pilot_r).extrude(L["base_height"] - h["floor"] + 0.5)
+            .circle(post_pilot_r)
+            .extrude(L["base_height"] - h["floor"] + 0.5)
             .translate((0, py, h["floor"]))
         )
         base = base.cut(pilot)
+        if refined:
+            base = base.cut(
+                _pilot_leadin(
+                    0,
+                    py,
+                    L["base_height"],
+                    post_pilot_r,
+                    refine["pilot_leadin_depth"],
+                    refine["pilot_leadin_growth"],
+                )
+            )
+
+    # --- Production cable/fiber management ---------------------------------
+    # Four molded saddles keep the pigtails and DE-9 harness off connector
+    # corridors and let a technician secure them with narrow reusable ties.
+    # The tunnel opens along Y, so ties install from the removable-cover side
+    # without piercing the enclosure wall.
+    if refined:
+        saddle_w = refine["cable_saddle_width"]
+        saddle_d = refine["cable_saddle_depth"]
+        saddle_h = refine["cable_saddle_height"]
+        tunnel_w = refine["cable_saddle_tunnel_width"]
+        tunnel_h = refine["cable_saddle_tunnel_height"]
+        front_x = L["interior_half_x"] - saddle_w / 2.0 - 5.0
+        front_y = L["plenum_y0"] + 6.0
+        pc_keepout = params.get("panel_connector", {}).get("rear_keepout_depth", 0)
+        rear_y = L["plenum_y1"] - pc_keepout - saddle_d / 2.0 - 2.0
+        saddle_xy = [
+            (-front_x, front_y),
+            (+front_x, front_y),
+            (-14.0, rear_y),
+            (+14.0, rear_y),
+        ]
+        for sx, sy in saddle_xy:
+            outer = _rounded_box(
+                saddle_w,
+                saddle_d,
+                saddle_h,
+                min(1.0, saddle_d / 2.0 - 0.1),
+                (sx, sy, h["floor"]),
+            )
+            tunnel = (
+                cq.Workplane("XY")
+                .box(tunnel_w, saddle_d + 1.0, tunnel_h, centered=(True, True, False))
+                .translate((sx, sy, h["floor"] - 0.1))
+            )
+            base = base.union(outer.cut(tunnel))
+
+    # --- Gravity-aware drainage for the vertical mounting attitude ----------
+    # In the finished orientation +canonical-X points down. One cross-drain
+    # connects the upper module bay to the lower bay; downward outlets serve
+    # the lower bay and the uninterrupted fiber plenum. All sit below the
+    # module plates and away from occupied hardware.
+    if refined and vertical:
+        drain_r = refine["drain_dia"] / 2.0
+        drain_z = h["floor"] + drain_r + 0.25
+        module_drain_y = 20.0
+        rib_drain = _x_cylinder(
+            drain_r,
+            -h["bay_gap"] / 2.0 - 1.0,
+            module_drain_y,
+            drain_z,
+            h["bay_gap"] + 2.0,
+        )
+        base = base.cut(rib_drain)
+        for drain_y in (module_drain_y, L["plenum_y0"] + 8.0):
+            outlet = _x_cylinder(
+                drain_r,
+                L["interior_half_x"] - 1.0,
+                drain_y,
+                drain_z,
+                h["wall"] + 2.0,
+            )
+            base = base.cut(outlet)
 
     # --- Front-panel SMA clearance holes (one per bay, handed) ---------------
     # The round hole passes the barrel; the shallow relief pocket in the wall's
@@ -322,17 +620,26 @@ def create_base(params: dict) -> cq.Workplane:
     # sma_base_beyond_plate (1.65) past the plate edge — more than the bay's
     # clearance_end (1.5). Without the pocket the base bears on the wall.
     sma_r = h["sma_hole_dia"] / 2.0
-    relief_d = (m["sma_base_beyond_plate"] - h["clearance_end"]
-                + h["sma_relief_margin"])
+    relief_d = m["sma_base_beyond_plate"] - h["clearance_end"] + h["sma_relief_margin"]
     relief_w = m["sma_base_w"] + 2 * h["sma_relief_margin"]
     relief_h = m["sma_base_h"] + 2 * h["sma_relief_margin"]
     for bay, cx in zip(L["bays"], L["bay_cx"]):
         sign = -1.0 if bay.get("mirror_x") else 1.0
         x = cx + sign * m["sma_axis_x"]
         z = L["plate_bottom_z"] + m["sma_axis_y"]
-        hole = _y_cylinder(sma_r, x, z,
-                           y_start=-L["outer_half_y"] - 1.0, length=h["wall"] + 2.0)
+        hole = _y_cylinder(sma_r, x, z, y_start=-L["outer_half_y"] - 1.0, length=h["wall"] + 2.0)
         base = base.cut(hole)
+        if refined:
+            lead = refine["connector_leadin"]
+            lead_depth = refine["connector_leadin_depth"]
+            entry = _y_cylinder(
+                sma_r + lead,
+                x,
+                z,
+                y_start=-L["outer_half_y"] - 0.1,
+                length=lead_depth + 0.1,
+            )
+            base = base.cut(entry)
         if relief_d > 0:
             pocket = (
                 cq.Workplane("XY")
@@ -365,36 +672,77 @@ def create_base(params: dict) -> cq.Workplane:
     # rear shell / solder-cup keep-out behind it is verified in the tests.
     pc = params.get("panel_connector")
     if pc:
+        pc_z = L["panel_connector_z"]
+        cut_w = pc["cutout_h"] if vertical else pc["cutout_w"]
+        cut_h = pc["cutout_w"] if vertical else pc["cutout_h"]
         cutout = (
             cq.Workplane("XY")
-            .box(pc["cutout_w"], h["wall"] + 2.0, pc["cutout_h"],
-                 centered=(True, True, True))
-            .translate((pc["x"], L["plenum_y1"] + h["wall"] / 2.0, pc["z"]))
+            .box(
+                cut_w,
+                h["wall"] + 2.0,
+                cut_h,
+                centered=(True, True, True),
+            )
+            .translate((pc["x"], L["plenum_y1"] + h["wall"] / 2.0, pc_z))
         )
         base = base.cut(cutout)
-        for sx in (-pc["screw_spacing"] / 2.0, +pc["screw_spacing"] / 2.0):
-            hole = _y_cylinder(pc["screw_hole_dia"] / 2.0, pc["x"] + sx, pc["z"],
-                               y_start=L["plenum_y1"] - 1.0, length=h["wall"] + 2.0)
+        if refined:
+            lead = refine["connector_leadin"]
+            lead_depth = refine["connector_leadin_depth"]
+            entry = (
+                cq.Workplane("XY")
+                .box(
+                    cut_w + 2 * lead,
+                    lead_depth + 0.1,
+                    cut_h + 2 * lead,
+                    centered=(True, True, True),
+                )
+                .translate((pc["x"], L["back_outer_y"] - lead_depth / 2.0, pc_z))
+            )
+            base = base.cut(entry)
+        for offset in (-pc["screw_spacing"] / 2.0, +pc["screw_spacing"] / 2.0):
+            px = pc["x"] if vertical else pc["x"] + offset
+            pz = pc_z + offset if vertical else pc_z
+            hole = _y_cylinder(
+                pc["screw_hole_dia"] / 2.0,
+                px,
+                pz,
+                y_start=L["plenum_y1"] - 1.0,
+                length=h["wall"] + 2.0,
+            )
             base = base.cut(hole)
 
     return base
 
 
+def create_base(params: dict) -> cq.Workplane:
+    """Build the base tray in its requested horizontal or vertical attitude."""
+    return orient_to_mounting(_create_base_canonical(params), params)
+
+
 # ---------------------------------------------------------------------------
 # Lid
 # ---------------------------------------------------------------------------
-def create_lid(params: dict) -> cq.Workplane:
+def _create_lid_canonical(params: dict) -> cq.Workplane:
     m = params["housing"]
     mm = params["module"]
     L = layout(params)
+    refine = params.get("refinement", {})
+    refined = bool(refine.get("enabled"))
 
     z0 = L["base_height"]
     lid = (
         cq.Workplane("XY")
-        .box(2 * L["outer_half_x"], L["total_depth"], m["lid_thickness"],
-             centered=(True, False, False))
+        .box(
+            2 * L["outer_half_x"],
+            L["total_depth"],
+            m["lid_thickness"],
+            centered=(True, False, False),
+        )
         .translate((0, -L["outer_half_y"], z0))
     )
+    if refined:
+        lid = lid.edges("|Z").fillet(refine["exterior_edge_radius"])
 
     # Registration lip: one pad per module bay, nesting inside that bay's
     # cavity. (A single full-interior box — the v2 approach — overlapped the
@@ -408,34 +756,48 @@ def create_lid(params: dict) -> cq.Workplane:
     # would leave only ~1mm over the can top and pinch the wires — with a gap
     # in its rear segment over the partition pass-slot where the wires and
     # fiber climb into the plenum.
-    lip_depth = 2.0
-    lip_gap = 0.3
-    lip_ring_w = 3.0
+    lip_depth = refine.get("registration_lip_depth", 2.0)
+    lip_gap = refine.get("registration_clearance", 0.3)
+    lip_ring_w = refine.get("registration_ring_width", 3.0)
     internal_wiring = not m.get("front_wiring_slots", True)
     for bay, cx in zip(L["bays"], L["bay_cx"]):
         lip = (
             cq.Workplane("XY")
-            .box(L["bay_w"] - 2 * lip_gap, L["bay_d"] - 2 * lip_gap,
-                 lip_depth, centered=(True, True, False))
+            .box(
+                L["bay_w"] - 2 * lip_gap,
+                L["bay_d"] - 2 * lip_gap,
+                lip_depth,
+                centered=(True, True, False),
+            )
             .translate((cx, 0, z0 - lip_depth))
         )
         if internal_wiring:
             core = (
                 cq.Workplane("XY")
-                .box(L["bay_w"] - 2 * lip_gap - 2 * lip_ring_w,
-                     L["bay_d"] - 2 * lip_gap - 2 * lip_ring_w,
-                     lip_depth + 1.0, centered=(True, True, False))
+                .box(
+                    L["bay_w"] - 2 * lip_gap - 2 * lip_ring_w,
+                    L["bay_d"] - 2 * lip_gap - 2 * lip_ring_w,
+                    lip_depth + 1.0,
+                    centered=(True, True, False),
+                )
                 .translate((cx, 0, z0 - lip_depth - 0.5))
             )
             lip = lip.cut(core)
             slot_gap = (
                 cq.Workplane("XY")
-                .box(params["fiber_bay"]["pass_slot_width"],
-                     lip_ring_w + lip_gap + 1.0, lip_depth + 1.0,
-                     centered=(True, False, False))
-                .translate((cx + mm["fiber_exit_x"],
-                            L["bay_d"] / 2.0 - lip_gap - lip_ring_w - 0.5,
-                            z0 - lip_depth - 0.5))
+                .box(
+                    params["fiber_bay"]["pass_slot_width"],
+                    lip_ring_w + lip_gap + 1.0,
+                    lip_depth + 1.0,
+                    centered=(True, False, False),
+                )
+                .translate(
+                    (
+                        cx + mm["fiber_exit_x"],
+                        L["bay_d"] / 2.0 - lip_gap - lip_ring_w - 0.5,
+                        z0 - lip_depth - 0.5,
+                    )
+                )
             )
             lip = lip.cut(slot_gap)
         lid = lid.union(lip)
@@ -443,14 +805,88 @@ def create_lid(params: dict) -> cq.Workplane:
     # The rib screw posts bulge past the bay-cavity edge (post radius > half
     # the bay gap) — scallop the lip pads around them so the lid can seat
     post_r = m["corner_post_dia"] / 2.0
-    for py in [-(L["interior_half_y"] - post_r - 1.0), 0.0,
-               +(L["interior_half_y"] - post_r - 1.0)]:
+    for py in [-(L["interior_half_y"] - post_r - 1.0), 0.0, +(L["interior_half_y"] - post_r - 1.0)]:
         scallop = (
             cq.Workplane("XY")
-            .circle(post_r + lip_gap).extrude(lip_depth + 0.5)
+            .circle(post_r + lip_gap)
+            .extrude(lip_depth + 0.5)
             .translate((0, py, z0 - lip_depth - 0.5))
         )
         lid = lid.cut(scallop)
+
+    # Recessed cover fields leave a continuous perimeter flange and three
+    # transverse stiffening lands per module bay. The result is lighter and
+    # much less prone to oil-canning than a uniformly thin flat cover, while
+    # keeping the exterior within the original envelope.
+    if refined:
+        recess_depth = refine["cover_recess_depth"]
+        margin = refine["cover_recess_margin"]
+        panel_gap = refine["cover_recess_panel_gap"]
+        panel_count = refine["cover_recess_panel_count"]
+        field_w = L["bay_w"] - 2 * margin
+        field_d = L["bay_d"] - 2 * margin
+        panel_d = (field_d - (panel_count - 1) * panel_gap) / panel_count
+        for cx in L["bay_cx"]:
+            for i in range(panel_count):
+                panel_y = -field_d / 2.0 + panel_d / 2.0 + i * (panel_d + panel_gap)
+                pocket = _rounded_box(
+                    field_w,
+                    panel_d,
+                    recess_depth + 0.1,
+                    refine["cover_recess_radius"],
+                    (cx, panel_y, z0 + m["lid_thickness"] - recess_depth),
+                )
+                lid = lid.cut(pocket)
+
+        # Three horizontal rounded slots per module provide controlled passive
+        # ventilation. A stand-off splash baffle inside the cover blocks a
+        # direct water/debris path; the open baffle perimeter drains freely.
+        vent_count = refine["vent_count"]
+        vent_pitch = refine["vent_pitch"]
+        vent_y = refine["vent_y"]
+        baffle_t = refine["vent_baffle_thickness"]
+        baffle_gap = refine["vent_baffle_gap"]
+        for bay, cx in zip(L["bays"], L["bay_cx"]):
+            header_sign = -1.0 if bay.get("mirror_x") else 1.0
+            vent_x = cx - header_sign * refine["vent_opposite_header_offset"]
+            for i in range(vent_count):
+                slot_x = vent_x + (i - (vent_count - 1) / 2.0) * vent_pitch
+                vent = (
+                    cq.Workplane("XY")
+                    .center(slot_x, vent_y)
+                    .slot2D(refine["vent_length"], refine["vent_width"], 90)
+                    .extrude(m["lid_thickness"] + 2.0)
+                    .translate((0, 0, z0 - 1.0))
+                )
+                lid = lid.cut(vent)
+
+            baffle_w = (
+                (vent_count - 1) * vent_pitch
+                + refine["vent_width"]
+                + 2 * refine["vent_baffle_margin"]
+            )
+            baffle_d = refine["vent_length"] + 2 * refine["vent_baffle_margin"]
+            baffle_z = z0 - baffle_gap - baffle_t
+            baffle = _rounded_box(
+                baffle_w,
+                baffle_d,
+                baffle_t,
+                refine["vent_baffle_radius"],
+                (vent_x, vent_y, baffle_z),
+            )
+            lid = lid.union(baffle)
+            pin_r = refine["vent_baffle_pin_dia"] / 2.0
+            pin_dx = baffle_w / 2.0 - pin_r - 1.0
+            pin_dy = baffle_d / 2.0 - pin_r - 1.0
+            for px in (-pin_dx, +pin_dx):
+                for py in (-pin_dy, +pin_dy):
+                    pin = (
+                        cq.Workplane("XY")
+                        .circle(pin_r)
+                        .extrude(baffle_gap)
+                        .translate((vent_x + px, vent_y + py, z0 - baffle_gap))
+                    )
+                    lid = lid.union(pin)
 
     # Header access openings, directly above each pin-header block (handed)
     op_x0 = mm["header_x_min"] - m["header_slot_margin"]
@@ -472,27 +908,47 @@ def create_lid(params: dict) -> cq.Workplane:
     clr_r = m["lid_screw_clear_dia"] / 2.0
     head_r = m["lid_screw_head_dia"] / 2.0
     post_r = m["corner_post_dia"] / 2.0
-    screw_xy = [(0.0, -(L["interior_half_y"] - post_r - 1.0)),
-                (0.0, 0.0),
-                (0.0, +(L["interior_half_y"] - post_r - 1.0)),
-                (0.0, L["spool_y"]),
-                (-(L["interior_half_x"] - post_r - 1.0), L["plenum_y1"] - post_r - 1.0),
-                (+(L["interior_half_x"] - post_r - 1.0), L["plenum_y1"] - post_r - 1.0)]
+    screw_xy = [
+        (0.0, -(L["interior_half_y"] - post_r - 1.0)),
+        (0.0, 0.0),
+        (0.0, +(L["interior_half_y"] - post_r - 1.0)),
+        (0.0, L["spool_y"]),
+        (-(L["interior_half_x"] - post_r - 1.0), L["plenum_y1"] - post_r - 1.0),
+        (+(L["interior_half_x"] - post_r - 1.0), L["plenum_y1"] - post_r - 1.0),
+    ]
     for px, py in screw_xy:
         # counterbored so the screw head sits flush in the lid top
         cbore = (
             cq.Workplane("XY")
-            .circle(clr_r).extrude(m["lid_thickness"] + lip_depth + 1.0)
+            .circle(clr_r)
+            .extrude(m["lid_thickness"] + lip_depth + 1.0)
             .translate((px, py, z0 - lip_depth))
         )
         head = (
             cq.Workplane("XY")
-            .circle(head_r).extrude(1.6)
+            .circle(head_r)
+            .extrude(1.6)
             .translate((px, py, z0 + m["lid_thickness"] - 1.6))
         )
         lid = lid.cut(cbore).cut(head)
+        if refined:
+            lid = lid.cut(
+                _pilot_leadin(
+                    px,
+                    py,
+                    z0 + m["lid_thickness"],
+                    head_r,
+                    refine["cover_counterbore_chamfer"],
+                    refine["cover_counterbore_chamfer"],
+                )
+            )
 
     return lid
+
+
+def create_lid(params: dict) -> cq.Workplane:
+    """Build the lid/top or, for vertical variants, removable side cover."""
+    return orient_to_mounting(_create_lid_canonical(params), params)
 
 
 # ---------------------------------------------------------------------------
@@ -507,7 +963,10 @@ def create_part(params: dict | None = None) -> cq.Workplane:
 
     explode = params["housing"].get("explode_gap", 0.0)
     if explode:
-        lid = lid.translate((0, 0, explode))
+        if layout(params)["mounting_orientation"] == "vertical":
+            lid = lid.translate((explode, 0, 0))
+        else:
+            lid = lid.translate((0, 0, explode))
 
     compound = cq.Compound.makeCompound([base.val(), lid.val()])
     return cq.Workplane("XY").newObject([compound])
@@ -532,9 +991,11 @@ if __name__ == "__main__":
 
     L = layout(params)
     print(f"\n  Building: {params['part_name']} ({params.get('version', 'v1')})")
-    print(f"  Outer envelope: {2*L['outer_half_x']:.1f} (W) × "
-          f"{L['total_depth']:.1f} (D) × "
-          f"{L['base_height'] + params['housing']['lid_thickness']:.1f} (H) mm\n")
+    print(
+        f"  Outer envelope: {L['envelope_width']:.1f} (W) × "
+        f"{L['envelope_depth']:.1f} (D) × "
+        f"{L['envelope_height']:.1f} (H) mm\n"
+    )
 
     fmts = ["step"] + (["stl"] if "--stl" in sys.argv else [])
     export_part(part, version=params.get("version", "v1"), formats=fmts)
