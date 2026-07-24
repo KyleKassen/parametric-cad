@@ -1,0 +1,16 @@
+﻿"Symbol";"Value";"Unit";
+"REFERENCE";"TE121024010";"";
+"TraceParts.PartVersion";"1.0.9";"";
+"SUPPLIER";"nVent HOFFMAN";"";
+"Material";"Mild Steel";"";
+"TraceParts.PartStatus";"Published";"";
+"TraceParts.PartNumber";"90-10082018-044492";"";
+"TraceParts.PartLanguage";"en";"";
+"DESIGN";"Thermoelectric Coolers Indoor/Outdoor, 12.01x6.18x7.17, Lt Gray, Steel";"";
+"TraceParts.InstanceId";"90-10082018-044492DRCKBOYBWIJJGB1CWUX5Q3SLV";"";
+"TraceParts.PartTitle";"Thermoelectric Coolers Indoor/Outdoor";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartStatusId";"";"";
+"Part_Number_EShop_URL";"https://hoffman.nvent.com/en/hoffman/TE121024010";"";
+"Finish";"Powder Coated";"";
+"TraceParts.ClassPath";"NVENT_HOFFMAN:90-10082018-044492";"";

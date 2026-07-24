@@ -1,0 +1,19 @@
+item,qty,description_or_material,make_buy,mass_kg,cost_low_usd,cost_high_usd,status_and_gate
+AM59 amplifier reference,1,AM59-3S-64-64 exact supplied configuration,buy/vendor,2.500,,,Existing equipment; vendor approvals and calorimetry open
+Welded dry body,1,5052-H32 1.5 mm shell with 3 mm bulkhead and continuous welds,make,1.346,650,1050,Concept CAD complete; detail welds and machine seal lands
+Finned service door,1,5052-H32 2 mm plate with fifteen 1.2 x 30 x 240 mm vertical fins,make,0.985,250,450,Concept CAD complete; final gasket gland and captive fasteners open
+Wet rain hood,1,5052-H32 1 mm floodable drained labyrinth hood,make,0.847,175,325,Concept CAD complete; structural hems guards slopes and airflow test open
+Solar shield,1,5052-H32 1 mm white sloped ventilated shield,make,0.460,75,175,Concept CAD complete; supports deferred with mounting design
+AM59 dry clamp frame,1,6061-T6 4 mm hard-anodized or conversion-coated frame,make,0.264,300,600,Blind stud pattern torque and structural release open
+AM59 transition boot,1,One-piece molded 50 Shore A outdoor EPDM double-lip boot,buy/custom,0.116,300,700,Hard gate: case band gland tolerances compound tooling and IP66 test
+Service-door gasket,1,One-piece outdoor EPDM or silicone,buy/custom,0.016,50,100,Hard gate: compound gland compression set and IP66 test
+DIN carrier,1,5052-H32 2 mm removable internal carrier,make,0.149,50,100,Concept CAD complete
+DIN rails,2,EN 60715 35 mm x 300 mm steel rail,buy,0.238,50,100,Final corrosion finish and retention open
+Door and boundary fasteners,1 lot,A4/316 captive M5 hardware blind inserts and compression stops,buy,0.300,100,200,No through penetrations; pitch and torque require release
+Bonding isolation and labels,1 lot,Tinned-copper braids masked lands insulating washers and durable labels,buy,0.120,50,125,Lightning RF bond and galvanic details deferred
+Coating system,1 lot,Chromium-free conversion coat plus white UV-stable powder,service,0.120,100,175,Mask seal and bond lands; qualify UV corrosion and cleaners
+Wiring and sensors allowance,1 lot,Internal low-power monitoring wiring and thermal sensors,buy,0.180,0,0,Physical allowance only; no connectors or controls selected
+Prototype leak and thermal instrumentation,1 lot,Temporary calorimetry airflow pressure and leak-screen equipment,test,0.000,200,400,Not installed in production assembly
+TOTAL EXCLUDING AM59,1,Concept enclosure and test budget excluding future DIN ports vent and mounting,,5.141,2350,4500,Quantity-one ROM; supplier quotation controls
+TOTAL INCLUDING AM59 MASS,1,Complete empty concept with existing amplifier,,7.641,,,Cost excludes amplifier
+FUTURE DIN PAYLOAD ALLOWANCE,1,Power control and protection equipment located on lower rail,buy/unknown,1.500,,,Deferred selection; replace allowance with actual heat and mass

@@ -1,0 +1,148 @@
+{
+  "schema": "part-spec/1",
+  "part_name": "AM59 cold-wall outdoor enclosure V2 - welded tub",
+  "units": "mm",
+  "solid_count": 1,
+  "dimensions": [
+    {
+      "id": "tub_envelope_x",
+      "kind": "bbox",
+      "axis": "x",
+      "expected": 449.0,
+      "tol": 0.1
+    },
+    {
+      "id": "tub_envelope_y",
+      "kind": "bbox",
+      "axis": "y",
+      "expected": 359.0,
+      "tol": 0.1
+    },
+    {
+      "id": "tub_envelope_z_pad_to_rim",
+      "kind": "bbox",
+      "axis": "z",
+      "expected": 132.0,
+      "tol": 0.1
+    },
+    {
+      "id": "amp_clamp_bosses",
+      "kind": "cylinder",
+      "diameter": 12.0,
+      "tol": 0.15,
+      "axis": "Z",
+      "type": "boss",
+      "count_min": 6
+    }
+  ],
+  "fit": {
+    "render": true,
+    "cases": [
+      {
+        "id": "tub_vs_amp_chassis",
+        "a": { "source": "builder", "builder": "create_enclosure_tub" },
+        "b": {
+          "source": "builder",
+          "builder": "create_amplifier_chassis_reference"
+        },
+        "max_interference": 0.5,
+        "min_clearance": 0.9
+      },
+      {
+        "id": "tub_vs_relocated_heatsink",
+        "a": { "source": "builder", "builder": "create_enclosure_tub" },
+        "b": {
+          "source": "builder",
+          "builder": "create_relocated_heatsink_reference"
+        },
+        "max_interference": 0.5,
+        "min_clearance": 0.9
+      },
+      {
+        "id": "clamp_bars_vs_amp_chassis",
+        "a": { "source": "builder", "builder": "create_flange_clamp_bars" },
+        "b": {
+          "source": "builder",
+          "builder": "create_amplifier_chassis_reference"
+        },
+        "max_interference": 0.5
+      },
+      {
+        "id": "cradle_vs_relocated_heatsink",
+        "a": { "source": "builder", "builder": "create_heatsink_cradle" },
+        "b": {
+          "source": "builder",
+          "builder": "create_relocated_heatsink_reference"
+        },
+        "max_interference": 0.5
+      },
+      {
+        "id": "hood_vs_relocated_heatsink",
+        "a": { "source": "builder", "builder": "create_air_tunnel_hood" },
+        "b": {
+          "source": "builder",
+          "builder": "create_relocated_heatsink_reference"
+        },
+        "max_interference": 0.5,
+        "min_clearance": 20.0
+      },
+      {
+        "id": "din_provision_vs_amp_chassis",
+        "a": { "source": "builder", "builder": "create_din_provision" },
+        "b": {
+          "source": "builder",
+          "builder": "create_amplifier_chassis_reference"
+        },
+        "max_interference": 0.5,
+        "min_clearance": 10.0
+      },
+      {
+        "id": "lid_seats_on_tub",
+        "a": { "source": "builder", "builder": "create_enclosure_tub" },
+        "b": { "source": "builder", "builder": "create_lid" },
+        "max_interference": 0.5
+      },
+      {
+        "id": "din_keepout_vs_amp_chassis",
+        "a": {
+          "source": "builder",
+          "builder": "create_din_keepout_reference"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_amplifier_chassis_reference"
+        },
+        "max_interference": 0.5,
+        "min_clearance": 15.0
+      },
+      {
+        "id": "shield_standoffs_on_lid",
+        "a": { "source": "builder", "builder": "create_lid" },
+        "b": { "source": "builder", "builder": "create_solar_shield" },
+        "max_interference": 0.5
+      }
+    ]
+  },
+  "validators": [
+    {
+      "id": "cold_wall_geometry_thermal_mass_check",
+      "script": "fit_check.py",
+      "timeout": 900
+    }
+  ],
+  "assumptions": [
+    "The AM59 is procured in the modular (heatsink-less) configuration the datasheet offers for OEM integration; its conduction base is assumed flat at the native fin-root plane. The exact base flatness, screw pattern, and approved TIM are vendor gates.",
+    "The exact vendor STEP is split by native-Y solid grouping (threshold 235 mm) into a 29-solid chassis group placed inside the dry volume and a 51-solid fin/plate/fan group re-registered below the cold floor as the reference layout for a released OEM-equivalent heat sink.",
+    "The heat-sink-to-air resistance of 0.105 K/W is an engineering estimate from OEM fin geometry and installed-flow assumptions, consistent with the vendor's 70 C case rating; calorimetric confirmation is a release gate.",
+    "The internal heat budget is 65 W design / 90 W maximum-gate (25/50 W future DIN, 25 W net solar, 15 W amplifier leakage); the 125/200 W amplifier dissipation crosses the cold floor and never loads the cabin air.",
+    "A max_interference allowance of 0.5 mm3 tolerates coincident contact faces and CAD-kernel noise, not physical overlap.",
+    "Connector ports, RF feedthroughs, the pressure vent, mast adapter, and rotator mounting are deliberately absent from this revision."
+  ],
+  "unresolved": [
+    "Microwave Amps must confirm the modular variant interface (base flatness, fixing pattern, TIM, warranty) and approve flange-edge clamping and the mast vibration environment.",
+    "The relocated OEM-equivalent fin/fan stack must be released against vendor fan curves and verified by calorimetry; fan environmental rating in the hooded wet zone is unconfirmed.",
+    "A pressure-equalization vent (deferred by requirement) is mandatory before sealed IP66 qualification; sealed-volume breathing otherwise produces multi-kPa differentials.",
+    "Lid gasket gland, rim inserts, clamp preload, shear restraint, and bond/ground scheme require selected-hardware data and structural release.",
+    "Complete-assembly IP6X/IPX6, thermal, condensation, salt-fog, vibration, and EMC qualification remain open."
+  ]
+}

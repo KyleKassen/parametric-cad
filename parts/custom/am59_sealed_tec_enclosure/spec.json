@@ -1,0 +1,198 @@
+{
+  "schema": "part-spec/1",
+  "part_name": "AM59 Sealed Thermoelectric Enclosure V3 - Welded Pressure Body",
+  "units": "mm",
+  "solid_count": 1,
+  "dimensions": [
+    {
+      "id": "pressure_body_envelope_x",
+      "kind": "bbox",
+      "axis": "x",
+      "expected": 495.0,
+      "tol": 0.1
+    },
+    {
+      "id": "pressure_body_with_coamings_envelope_y",
+      "kind": "bbox",
+      "axis": "y",
+      "expected": 430.0,
+      "tol": 0.1
+    },
+    {
+      "id": "pressure_body_envelope_z",
+      "kind": "bbox",
+      "axis": "z",
+      "expected": 340.0,
+      "tol": 0.1
+    }
+  ],
+  "fit": {
+    "render": true,
+    "cases": [
+      {
+        "id": "amplifier_vs_pressure_body",
+        "a": {
+          "source": "builder",
+          "builder": "create_pressure_body"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_amplifier_reference"
+        },
+        "max_interference": 0.5,
+        "min_clearance": 5.0
+      },
+      {
+        "id": "amplifier_vs_four_exact_coolers",
+        "a": {
+          "source": "builder",
+          "builder": "create_amplifier_reference"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_seifert_cooler_bank"
+        },
+        "max_interference": 0.5,
+        "min_clearance": 35.0
+      },
+      {
+        "id": "amplifier_vs_cartridge_contact",
+        "a": {
+          "source": "builder",
+          "builder": "create_internal_cartridge"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_amplifier_reference"
+        },
+        "max_interference": 0.5
+      },
+      {
+        "id": "cartridge_vs_welded_support_contact",
+        "a": {
+          "source": "builder",
+          "builder": "create_internal_cartridge"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_cartridge_support_structure"
+        },
+        "max_interference": 0.5
+      },
+      {
+        "id": "amplifier_vs_welded_cartridge_support",
+        "a": {
+          "source": "builder",
+          "builder": "create_amplifier_reference"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_cartridge_support_structure"
+        },
+        "max_interference": 0.5,
+        "min_clearance": 5.0
+      },
+      {
+        "id": "amplifier_vs_air_baffles",
+        "a": {
+          "source": "builder",
+          "builder": "create_internal_air_management"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_amplifier_reference"
+        },
+        "max_interference": 0.5,
+        "min_clearance": 10.0
+      },
+      {
+        "id": "coolers_vs_air_baffles",
+        "a": {
+          "source": "builder",
+          "builder": "create_internal_air_management"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_seifert_cooler_bank"
+        },
+        "max_interference": 0.5,
+        "min_clearance": 5.0
+      },
+      {
+        "id": "service_lid_seats_on_pressure_body",
+        "a": {
+          "source": "builder",
+          "builder": "create_pressure_body"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_service_lid"
+        },
+        "max_interference": 0.5
+      },
+      {
+        "id": "immersion_caps_clear_cooler_solids",
+        "a": {
+          "source": "builder",
+          "builder": "create_immersion_caps"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_seifert_cooler_bank"
+        },
+        "max_interference": 0.5
+      },
+      {
+        "id": "immersion_caps_seat_outside_pressure_body",
+        "a": {
+          "source": "builder",
+          "builder": "create_immersion_caps"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_pressure_body"
+        },
+        "max_interference": 0.5,
+        "min_clearance": 0.75
+      },
+      {
+        "id": "controller_vs_air_baffles",
+        "a": {
+          "source": "builder",
+          "builder": "create_controller_reference"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_internal_air_management"
+        },
+        "max_interference": 0.5,
+        "min_clearance": 3.0
+      }
+    ]
+  },
+  "validators": [
+    {
+      "id": "tec_enclosure_geometry_and_thermal_check",
+      "script": "fit_check.py",
+      "timeout": 300
+    }
+  ],
+  "assumptions": [
+    "The exact supplied AM59 STEP is placed with its mounting plane at Z=52 mm, fan inlet toward -X, and RF output toward +X.",
+    "Four exact supplied Seifert 3050303 STEP references are recessed into the two long walls at X=-245 and -40 mm, two per side.",
+    "The main shell is 495 x 410 x 320 mm. The cooler coamings produce a 426 mm Y envelope, while the localized 430 x 340 mm welded service collar governs the accepted pressure-body Y/Z envelope.",
+    "The normal operating configuration has an IP66/IP6X/IPX6 target only. The unpowered IPX7 target applies only when both secondary cooler-bank immersion caps and all connector caps are installed.",
+    "The four-cooler thermal selection is based on approximately 91 W per unit at 45 C ambient and 55 C cabinet air, digitized from the supplied performance curve.",
+    "The 300 W dry-boundary heat basis is 200 W AM59 severe-condition heat plus one combined 100 W allocation for auxiliaries, residual solar ingress, and estimation uncertainty; the 15 percent cooler selection margin is applied once after that sum.",
+    "A max_interference allowance of 0.5 mm3 tolerates coincident contact faces and CAD-kernel noise, not physical component overlap."
+  ],
+  "unresolved": [
+    "The supplied cooler STEP/drawing envelope must be reconciled with the purchased serial-number-controlled Seifert dimensions and cutting template.",
+    "The AM59 case-to-air rise must prove a 65 C maximum case temperature at the 300 W enclosure heat basis; otherwise four coolers are insufficient.",
+    "Production baffles must establish stable fan operating points and pass correlated thermal/pressure/flow limits; the AM59 63 m3/h free-air sum is not an installed-flow requirement.",
+    "Final cooler mounting lands, lid, cap flanges, gasket glands, fasteners, welds, and compression stops require tolerance analysis and structural substantiation.",
+    "Final RF, power, control, vent, seal, and cap hardware require exact part selection and complete populated-enclosure qualification.",
+    "Complete mass/CG, lifting, cartridge retention, cooler cantilever, cap/lid pressure, vibration/shock, transport, lid-interlock, stored-energy, and EMC/EMI substantiation remain release gates.",
+    "The IPX7 target depends on both unpowered immersion caps; accidental powered immersion with the caps removed is not covered."
+  ]
+}

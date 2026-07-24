@@ -1,0 +1,138 @@
+{
+  "schema": "part-spec/1",
+  "part_name": "AM59 IP66 Low-CG Passive Enclosure V4 - Welded Dry Body",
+  "units": "mm",
+  "solid_count": 1,
+  "dimensions": [
+    {
+      "id": "pressure_body_envelope_x",
+      "kind": "bbox",
+      "axis": "x",
+      "expected": 416.0,
+      "tol": 0.1
+    },
+    {
+      "id": "pressure_body_envelope_y",
+      "kind": "bbox",
+      "axis": "y",
+      "expected": 128.0,
+      "tol": 0.1
+    },
+    {
+      "id": "pressure_body_envelope_z",
+      "kind": "bbox",
+      "axis": "z",
+      "expected": 286.0,
+      "tol": 0.1
+    },
+    {
+      "id": "pressure_body_material_volume",
+      "kind": "volume",
+      "min": 497000.0,
+      "max": 508000.0,
+      "severity": "soft"
+    }
+  ],
+  "fit": {
+    "render": true,
+    "cases": [
+      {
+        "id": "exact_am59_passes_welded_bulkhead",
+        "a": {
+          "source": "builder",
+          "builder": "create_pressure_body"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_amplifier_reference"
+        },
+        "max_interference": 0.5,
+        "min_clearance": 0.4
+      },
+      {
+        "id": "am59_clears_din_carrier",
+        "a": {
+          "source": "builder",
+          "builder": "create_amplifier_reference"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_din_carrier_and_rails"
+        },
+        "max_interference": 0.5,
+        "min_clearance": 4.99
+      },
+      {
+        "id": "am59_clears_future_din_reserve",
+        "a": {
+          "source": "builder",
+          "builder": "create_amplifier_reference"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_din_reserve_envelopes"
+        },
+        "max_interference": 0.5,
+        "min_clearance": 10.0
+      },
+      {
+        "id": "service_door_seats_on_collar",
+        "a": {
+          "source": "builder",
+          "builder": "create_pressure_body"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_service_door"
+        },
+        "max_interference": 0.5
+      },
+      {
+        "id": "rain_hood_clears_exact_am59",
+        "a": {
+          "source": "builder",
+          "builder": "create_rain_hood"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_amplifier_reference"
+        },
+        "max_interference": 0.5,
+        "min_clearance": 20.0
+      },
+      {
+        "id": "sun_shield_clears_service_door",
+        "a": {
+          "source": "builder",
+          "builder": "create_sun_shield"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_service_door"
+        },
+        "max_interference": 0.5,
+        "min_clearance": 12.0
+      }
+    ]
+  },
+  "validators": [
+    {
+      "id": "am59_ip66_geometry_thermal_mass_check",
+      "script": "fit_check.py",
+      "timeout": 300
+    }
+  ],
+  "assumptions": [
+    "The exact supplied AM59 STEP is vertical with airflow along +X, the heatsink transition near Y=0, and its envelope at X=-182.06..182.06, Y=-53..49, Z=30..230 mm.",
+    "The complete empty concept is positioned about a provisional rotator axis at X=0, Y=25 mm; no mounting hardware is included.",
+    "The amplifier gasket solid intentionally interferes radially with the AM59 by approximately 1 mm per side to represent elastomer squeeze.",
+    "The dry-body evaluation artifact excludes the removable door, gasket, exact AM59, DIN carrier, rain hood, and solar shield; those are validated by the part-local validator and assembly export."
+  ],
+  "unresolved": [
+    "Microwave Amps must approve the case seal band, clamp load, mounting orientation, wet-side fan arrangement, and warranty basis.",
+    "The 45 W dry load and 10 percent AM59 heat split require calorimetry.",
+    "The passive 2.75 W/K conductance requires zero-wind prototype correlation.",
+    "All final seal glands, fasteners, compression stops, welds, sheet stiffening, and corrosion/bonding details require tolerance and structural release.",
+    "Connector ports, RF feedthroughs, a pressure vent, mast adapters, rotator mounting hardware, and future DIN equipment are intentionally not designed."
+  ]
+}

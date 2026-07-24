@@ -1,0 +1,16 @@
+﻿"Symbol";"Value";"Unit";
+"REFERENCE";"TE162024020";"";
+"TraceParts.PartVersion";"1.0.9";"";
+"SUPPLIER";"nVent HOFFMAN";"";
+"Material";"Aluminum";"";
+"TraceParts.PartStatus";"Published";"";
+"TraceParts.PartNumber";"90-10082018-044492";"";
+"TraceParts.PartLanguage";"en";"";
+"DESIGN";"Thermoelectric Coolers Indoor/Outdoor, 15.75x6.02x7.01, Aluminum";"";
+"TraceParts.InstanceId";"90-10082018-0444922APSFAYRWLAK34C4GKRS04GRO";"";
+"TraceParts.PartTitle";"Thermoelectric Coolers Indoor/Outdoor";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartStatusId";"";"";
+"Part_Number_EShop_URL";"https://hoffman.nvent.com/en/hoffman/TE162024020";"";
+"Finish";"Anodized";"";
+"TraceParts.ClassPath";"NVENT_HOFFMAN:90-10082018-044492";"";
