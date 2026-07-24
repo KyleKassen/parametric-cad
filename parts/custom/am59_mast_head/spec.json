@@ -1,0 +1,157 @@
+{
+  "schema": "part-spec/1",
+  "part_name": "AM59 Centered Bridge Mast Head - Structural Frame",
+  "units": "mm",
+  "solid_count": 1,
+  "dimensions": [
+    {
+      "id": "frame_envelope_x",
+      "kind": "bbox",
+      "axis": "x",
+      "expected": 260.0,
+      "tol": 0.1
+    },
+    {
+      "id": "frame_envelope_y",
+      "kind": "bbox",
+      "axis": "y",
+      "expected": 320.0,
+      "tol": 0.1
+    },
+    {
+      "id": "frame_envelope_z",
+      "kind": "bbox",
+      "axis": "z",
+      "expected": 168.0,
+      "tol": 0.1
+    },
+    {
+      "id": "preliminary_frame_volume",
+      "kind": "volume",
+      "min": 1350000.0,
+      "max": 1600000.0,
+      "severity": "soft"
+    }
+  ],
+  "fit": {
+    "render": true,
+    "cases": [
+      {
+        "id": "amplifier_vs_load_bypass_frame",
+        "a": {
+          "source": "builder",
+          "builder": "create_structural_frame"
+        },
+        "b": {
+          "source": "step",
+          "path": "parts/vendor/microwave-amps/AM59-3S-64-64.STEP",
+          "transform": [
+            {
+              "rotate": {
+                "axis": "X",
+                "angle": -90.0
+              }
+            },
+            {
+              "translate": [-82.7187, -256.8877, 309.4144]
+            }
+          ]
+        },
+        "max_interference": 0.5,
+        "min_clearance": 5.0
+      },
+      {
+        "id": "amplifier_vs_cartridge_contact",
+        "a": {
+          "source": "builder",
+          "builder": "create_cartridge"
+        },
+        "b": {
+          "source": "step",
+          "path": "parts/vendor/microwave-amps/AM59-3S-64-64.STEP",
+          "transform": [
+            {
+              "rotate": {
+                "axis": "X",
+                "angle": -90.0
+              }
+            },
+            {
+              "translate": [-82.7187, -256.8877, 309.4144]
+            }
+          ]
+        },
+        "max_interference": 0.5
+      },
+      {
+        "id": "amplifier_vs_weather_shell",
+        "a": {
+          "source": "builder",
+          "builder": "create_weather_shell"
+        },
+        "b": {
+          "source": "step",
+          "path": "parts/vendor/microwave-amps/AM59-3S-64-64.STEP",
+          "transform": [
+            {
+              "rotate": {
+                "axis": "X",
+                "angle": -90.0
+              }
+            },
+            {
+              "translate": [-82.7187, -256.8877, 309.4144]
+            }
+          ]
+        },
+        "max_interference": 0.5,
+        "min_clearance": 25.0
+      },
+      {
+        "id": "amplifier_vs_connector_doghouse",
+        "a": {
+          "source": "builder",
+          "builder": "create_connector_doghouse"
+        },
+        "b": {
+          "source": "step",
+          "path": "parts/vendor/microwave-amps/AM59-3S-64-64.STEP",
+          "transform": [
+            {
+              "rotate": {
+                "axis": "X",
+                "angle": -90.0
+              }
+            },
+            {
+              "translate": [-82.7187, -256.8877, 309.4144]
+            }
+          ]
+        },
+        "max_interference": 0.5
+      },
+      {
+        "id": "cartridge_vs_connector_doghouse",
+        "a": {
+          "source": "builder",
+          "builder": "create_cartridge"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_connector_doghouse"
+        },
+        "max_interference": 0.5
+      }
+    ]
+  },
+  "assumptions": [
+    "The accepted primary body is only the preliminary structural frame; cartridge and sheet-metal pieces are exported separately.",
+    "A max_interference allowance of 0.5 mm^3 tolerates coincident contact faces and STEP kernel noise, not physical overlap.",
+    "The connector doghouse intentionally meets the amplifier output-panel plane for a closed-cell gasket; zero clearance with zero overlap is expected there.",
+    "No lower or rotator interface holes are modeled because those safety-critical patterns have not been surveyed.",
+    "The STEP transform is independently fixed from exact native AM59 geometry; update this spec if the vendor STEP revision changes."
+  ],
+  "unresolved": [
+    "Production interface holes and structural allowables remain unresolved by design."
+  ]
+}

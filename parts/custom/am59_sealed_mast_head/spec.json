@@ -1,0 +1,193 @@
+{
+  "schema": "part-spec/1",
+  "part_name": "AM59 Sealed Mast Head V2 - Structural Load-Bypass Frame",
+  "units": "mm",
+  "solid_count": 1,
+  "dimensions": [
+    {
+      "id": "frame_envelope_x",
+      "kind": "bbox",
+      "axis": "x",
+      "expected": 605.0,
+      "tol": 0.1
+    },
+    {
+      "id": "frame_envelope_y",
+      "kind": "bbox",
+      "axis": "y",
+      "expected": 380.0,
+      "tol": 0.1
+    },
+    {
+      "id": "frame_envelope_z",
+      "kind": "bbox",
+      "axis": "z",
+      "expected": 340.0,
+      "tol": 0.1
+    }
+  ],
+  "fit": {
+    "render": true,
+    "cases": [
+      {
+        "id": "amplifier_vs_load_bypass_frame",
+        "a": {
+          "source": "builder",
+          "builder": "create_structural_frame"
+        },
+        "b": {
+          "source": "step",
+          "path": "parts/vendor/microwave-amps/AM59-3S-64-64.STEP",
+          "transform": [
+            {
+              "rotate": {
+                "axis": "X",
+                "angle": -90.0
+              }
+            },
+            {
+              "translate": [-242.7187, -256.8877, 341.4144]
+            }
+          ]
+        },
+        "max_interference": 0.5,
+        "min_clearance": 10.0
+      },
+      {
+        "id": "amplifier_vs_dry_enclosure",
+        "a": {
+          "source": "builder",
+          "builder": "create_dry_enclosure"
+        },
+        "b": {
+          "source": "step",
+          "path": "parts/vendor/microwave-amps/AM59-3S-64-64.STEP",
+          "transform": [
+            {
+              "rotate": {
+                "axis": "X",
+                "angle": -90.0
+              }
+            },
+            {
+              "translate": [-242.7187, -256.8877, 341.4144]
+            }
+          ]
+        },
+        "max_interference": 0.5,
+        "min_clearance": 20.0
+      },
+      {
+        "id": "amplifier_vs_internal_cartridge_contact",
+        "a": {
+          "source": "builder",
+          "builder": "create_internal_cartridge"
+        },
+        "b": {
+          "source": "step",
+          "path": "parts/vendor/microwave-amps/AM59-3S-64-64.STEP",
+          "transform": [
+            {
+              "rotate": {
+                "axis": "X",
+                "angle": -90.0
+              }
+            },
+            {
+              "translate": [-242.7187, -256.8877, 341.4144]
+            }
+          ]
+        },
+        "max_interference": 0.5
+      },
+      {
+        "id": "amplifier_vs_internal_thermal_module",
+        "a": {
+          "source": "builder",
+          "builder": "create_internal_thermal_module"
+        },
+        "b": {
+          "source": "step",
+          "path": "parts/vendor/microwave-amps/AM59-3S-64-64.STEP",
+          "transform": [
+            {
+              "rotate": {
+                "axis": "X",
+                "angle": -90.0
+              }
+            },
+            {
+              "translate": [-242.7187, -256.8877, 341.4144]
+            }
+          ]
+        },
+        "max_interference": 0.5,
+        "min_clearance": 10.0
+      },
+      {
+        "id": "amplifier_vs_wet_cooling_module",
+        "a": {
+          "source": "builder",
+          "builder": "create_wet_cooling_module"
+        },
+        "b": {
+          "source": "step",
+          "path": "parts/vendor/microwave-amps/AM59-3S-64-64.STEP",
+          "transform": [
+            {
+              "rotate": {
+                "axis": "X",
+                "angle": -90.0
+              }
+            },
+            {
+              "translate": [-242.7187, -256.8877, 341.4144]
+            }
+          ]
+        },
+        "max_interference": 0.5,
+        "min_clearance": 20.0
+      },
+      {
+        "id": "service_lid_seats_on_dry_enclosure",
+        "a": {
+          "source": "builder",
+          "builder": "create_dry_enclosure"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_service_lid"
+        },
+        "max_interference": 0.5
+      },
+      {
+        "id": "wet_module_does_not_breach_dry_shell",
+        "a": {
+          "source": "builder",
+          "builder": "create_dry_enclosure"
+        },
+        "b": {
+          "source": "builder",
+          "builder": "create_wet_cooling_module"
+        },
+        "max_interference": 0.5
+      }
+    ]
+  },
+  "assumptions": [
+    "The primary release-gated body is the continuously connected structural frame, including its 605 mm asymmetric longitudinal cradle rails that reach beneath the external wet bay. Each upper/lower interface is a 250 mm central blank plate with connected post landing pads rather than a mass-heavy full rectangular sheet. The enclosure, lid, gasket, cartridge, heat exchangers, fans, and references are separately fabricated or procured assembly items.",
+    "The AM59 STEP is placed with its mounting plane at Z=52 mm, fan inlet toward -X, and RF output toward +X. The transform is fixed from the supplied vendor geometry.",
+    "The structural frame bypasses all antenna and rotator loads around the sealed electronics enclosure.",
+    "The dry enclosure is a continuously welded body with a single gasketed -X service opening. Its declared 600 x 270 x 260 mm envelope excludes removable exterior accessories.",
+    "The wet-side cooling module may flood during temporary immersion but no wet-side air or drain path crosses the continuous thermal bulkhead into the dry chamber.",
+    "IP66/IP67 and any NEMA claims describe qualification targets only until the fully assembled unit, with every connector mated or capped, passes the applicable third-party tests.",
+    "A max_interference allowance of 0.5 mm^3 tolerates coincident contact faces and STEP-kernel noise, not physical component overlap."
+  ],
+  "unresolved": [
+    "Existing lower plate and rotator interface patterns, materials, fasteners, datums, and allowable moments require physical survey and structural substantiation before fabrication.",
+    "The thermal module must demonstrate at least the project-specified dry-side-to-ambient conductance on the final system curve; its fin geometry is not released by this envelope model.",
+    "Final RF, power, and control bulkheads require documented mated and capped IP67 performance plus electrical, RF peak-power, creepage, and corrosion qualification.",
+    "Gasket compound, vent membrane, coatings, and galvanic isolation must be selected against the actual washdown chemicals, salt exposure, UV dose, and temperature range.",
+    "Combined enclosure, rotator, horn, cable, wind, transport-shock, and overturning loads remain to be checked against the BlueSky mast configuration and guying limits."
+  ]
+}
