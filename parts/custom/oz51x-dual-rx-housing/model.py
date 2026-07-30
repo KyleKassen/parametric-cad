@@ -22,8 +22,7 @@ BUILDER_FILE = PART_DIR.parent / "oz510-dual-housing" / "model.py"
 
 
 def _load_builder():
-    spec = importlib.util.spec_from_file_location("oz51x_housing_builder",
-                                                  BUILDER_FILE)
+    spec = importlib.util.spec_from_file_location("oz51x_housing_builder", BUILDER_FILE)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module

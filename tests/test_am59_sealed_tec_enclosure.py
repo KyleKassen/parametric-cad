@@ -12,13 +12,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 
 from lib.housing import clearance, interference  # noqa: E402
 
-MODEL_PATH = (
-    PROJECT_ROOT
-    / "parts"
-    / "custom"
-    / "am59_sealed_tec_enclosure"
-    / "model.py"
-)
+MODEL_PATH = PROJECT_ROOT / "parts" / "custom" / "am59_sealed_tec_enclosure" / "model.py"
 
 REQUIRED_BUILDERS = (
     "create_pressure_body",
@@ -100,9 +94,7 @@ def test_vendor_steps_are_exact_user_supplied_files(model):
     assert model.SEIFERT_STEP.is_file()
     assert params["amplifier"]["vendor_part"] == "AM59-3S-64-64"
     assert params["seifert_3050303"]["count"] == 4
-    assert params["seifert_3050303"]["step_file"].endswith(
-        "Seifert - 3050303.STEP"
-    )
+    assert params["seifert_3050303"]["step_file"].endswith("Seifert - 3050303.STEP")
 
 
 def test_pressure_body_has_standalone_enclosure_envelope(geometry):
@@ -209,53 +201,34 @@ def test_service_lid_gasket_and_fastener_pitch(model, geometry):
     locations = model.service_fastener_locations()
     assert len(locations) == 32
     assert len(set(locations)) == 32
-    assert max(
-        b - a
-        for a, b in zip(
-            lid_params["fastener_y_top_bottom"],
-            lid_params["fastener_y_top_bottom"][1:],
+    assert (
+        max(
+            b - a
+            for a, b in zip(
+                lid_params["fastener_y_top_bottom"],
+                lid_params["fastener_y_top_bottom"][1:],
+            )
         )
-    ) <= lid_params["maximum_fastener_pitch"]
+        <= lid_params["maximum_fastener_pitch"]
+    )
 
     enclosure = params["sealed_enclosure"]
-    gasket_inner_y = (
-        lid_params["seal_ring_outer_width_y"]
-        - 2 * lid_params["seal_ring_width"]
-    )
-    gasket_inner_z = (
-        lid_params["seal_ring_outer_height_z"]
-        - 2 * lid_params["seal_ring_width"]
-    )
-    assert (
-        gasket_inner_y - enclosure["flange_opening_width_y"]
-    ) / 2 >= 5.0
-    opening_z_min = (
-        enclosure["flange_opening_center_z"]
-        - enclosure["flange_opening_height_z"] / 2
-    )
-    opening_z_max = (
-        enclosure["flange_opening_center_z"]
-        + enclosure["flange_opening_height_z"] / 2
-    )
-    gasket_z_min = (
-        lid_params["seal_ring_center_z"] - gasket_inner_z / 2
-    )
-    gasket_z_max = (
-        lid_params["seal_ring_center_z"] + gasket_inner_z / 2
-    )
+    gasket_inner_y = lid_params["seal_ring_outer_width_y"] - 2 * lid_params["seal_ring_width"]
+    gasket_inner_z = lid_params["seal_ring_outer_height_z"] - 2 * lid_params["seal_ring_width"]
+    assert (gasket_inner_y - enclosure["flange_opening_width_y"]) / 2 >= 5.0
+    opening_z_min = enclosure["flange_opening_center_z"] - enclosure["flange_opening_height_z"] / 2
+    opening_z_max = enclosure["flange_opening_center_z"] + enclosure["flange_opening_height_z"] / 2
+    gasket_z_min = lid_params["seal_ring_center_z"] - gasket_inner_z / 2
+    gasket_z_max = lid_params["seal_ring_center_z"] + gasket_inner_z / 2
     assert opening_z_min - gasket_z_min >= 5.0
     assert gasket_z_max - opening_z_max >= 5.0
 
     fastener_radius = lid_params["fastener_diameter"] / 2
     side_outer_web = (
-        lid_params["outer_width_y"] / 2
-        - lid_params["fastener_edge_y"]
-        - fastener_radius
+        lid_params["outer_width_y"] / 2 - lid_params["fastener_edge_y"] - fastener_radius
     )
     side_gasket_web = (
-        lid_params["fastener_edge_y"]
-        - fastener_radius
-        - lid_params["seal_ring_outer_width_y"] / 2
+        lid_params["fastener_edge_y"] - fastener_radius - lid_params["seal_ring_outer_width_y"] / 2
     )
     bottom_outer_web = (
         lid_params["fastener_edge_z_bottom"]
@@ -268,19 +241,25 @@ def test_service_lid_gasket_and_fastener_pitch(model, geometry):
         - lid_params["fastener_edge_z_bottom"]
         - fastener_radius
     )
-    assert min(
-        side_outer_web,
-        side_gasket_web,
-        bottom_outer_web,
-        bottom_gasket_web,
-    ) >= 5.0
-    assert max(
-        b - a
-        for a, b in zip(
-            lid_params["fastener_z_sides"],
-            lid_params["fastener_z_sides"][1:],
+    assert (
+        min(
+            side_outer_web,
+            side_gasket_web,
+            bottom_outer_web,
+            bottom_gasket_web,
         )
-    ) <= lid_params["maximum_fastener_pitch"]
+        >= 5.0
+    )
+    assert (
+        max(
+            b - a
+            for a, b in zip(
+                lid_params["fastener_z_sides"],
+                lid_params["fastener_z_sides"][1:],
+            )
+        )
+        <= lid_params["maximum_fastener_pitch"]
+    )
 
 
 def test_cartridge_contacts_without_intersecting_amplifier(geometry):
@@ -316,9 +295,7 @@ def test_cartridge_has_supported_retained_serviceable_load_path(
     assert cartridge_params["support_rail_bottom_z"] == pytest.approx(
         enclosure["z_min"] + enclosure["wall_thickness"]
     )
-    assert cartridge_params["support_rail_top_z"] == pytest.approx(
-        cartridge_params["bottom_z"]
-    )
+    assert cartridge_params["support_rail_top_z"] == pytest.approx(cartridge_params["bottom_z"])
 
     # The cold-drop module is removed with the lid. All remaining fixed
     # baffles clear representative extraction positions.
@@ -408,17 +385,13 @@ def test_immersion_caps_clear_and_enclose_external_cooler_banks(
     params = model.load_params()
     cap_params = params["immersion_caps"]
     assert (
-        cap_params["cap_outer_width_x"]
-        - cap_params["cap_flange_inner_width_x"]
+        cap_params["cap_outer_width_x"] - cap_params["cap_flange_inner_width_x"]
     ) == pytest.approx(2 * cap_params["cap_wall_thickness"])
     assert (
-        cap_params["cap_outer_height_z"]
-        - cap_params["cap_flange_inner_height_z"]
+        cap_params["cap_outer_height_z"] - cap_params["cap_flange_inner_height_z"]
     ) == pytest.approx(2 * cap_params["cap_wall_thickness"])
     for cap in caps.values():
-        material_volume = sum(
-            abs(solid.Volume()) for solid in cap.solids().vals()
-        )
+        material_volume = sum(abs(solid.Volume()) for solid in cap.solids().vals())
         assert material_volume < 1.1e6
 
     fasteners = model.immersion_cap_fastener_locations()
@@ -426,20 +399,12 @@ def test_immersion_caps_clear_and_enclose_external_cooler_banks(
     assert len(set(fasteners)) == 64
     radius = cap_params["fastener_hole_diameter"] / 2
     edge_web = min(
-        cap_params["coaming_outer_width_x"] / 2
-        - cap_params["fastener_edge_abs_x"]
-        - radius,
-        cap_params["coaming_outer_height_z"] / 2
-        - cap_params["fastener_edge_abs_z"]
-        - radius,
+        cap_params["coaming_outer_width_x"] / 2 - cap_params["fastener_edge_abs_x"] - radius,
+        cap_params["coaming_outer_height_z"] / 2 - cap_params["fastener_edge_abs_z"] - radius,
     )
     gasket_web = min(
-        cap_params["fastener_edge_abs_x"]
-        - radius
-        - cap_params["gasket_outer_width_x"] / 2,
-        cap_params["fastener_edge_abs_z"]
-        - radius
-        - cap_params["gasket_outer_height_z"] / 2,
+        cap_params["fastener_edge_abs_x"] - radius - cap_params["gasket_outer_width_x"] / 2,
+        cap_params["fastener_edge_abs_z"] - radius - cap_params["gasket_outer_height_z"] / 2,
     )
     assert min(edge_web, gasket_web) >= 5.0
 
@@ -469,9 +434,7 @@ def test_thermal_modes_enforce_required_degradation(model):
     params = model.load_params()
     thermal = params["amplifier"]["electrical_and_thermal"]
     breakdown = thermal["enclosure_design_heat_breakdown_w"]
-    assert sum(breakdown.values()) == pytest.approx(
-        thermal["enclosure_design_heat_w"]
-    )
+    assert sum(breakdown.values()) == pytest.approx(thermal["enclosure_design_heat_w"])
     assert thermal["case_hardware_inhibit_c"] < thermal["case_target_c"]
     assert thermal["amplifier_power_remove_c"] < thermal["case_target_c"]
     airflow = params["internal_air_management"]
@@ -484,9 +447,7 @@ def test_preliminary_mass_report_flags_unknown_system_cg(model):
     assert mass["single_immersion_cap_mass_kg_approx"] < 3.0
     assert (
         mass["immersion_known_mass_excluding_am59_gaskets_fasteners_wiring_kg"]
-        > mass[
-            "operating_known_mass_excluding_am59_gaskets_fasteners_wiring_kg"
-        ]
+        > mass["operating_known_mass_excluding_am59_gaskets_fasteners_wiring_kg"]
     )
     assert "Not releasable" in mass["system_cg_status"]
 
@@ -498,12 +459,8 @@ def test_environmental_claim_is_configuration_specific(model):
     caps = params["immersion_caps"]
     assert "IP66" in cooler["rating"]
     assert "IPX7" in modes["temporary_immersion"]
-    assert "both cooler-bank immersion caps installed" in modes[
-        "temporary_immersion"
-    ]
-    assert "never installed while the enclosure is energized" in caps[
-        "use_limit"
-    ]
+    assert "both cooler-bank immersion caps installed" in modes["temporary_immersion"]
+    assert "never installed while the enclosure is energized" in caps["use_limit"]
 
 
 def test_operating_and_immersion_assemblies_build(model):

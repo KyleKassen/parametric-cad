@@ -75,8 +75,9 @@ def test_fallback_without_build_stages(tmp_path):
     assert result["ok"] is True
     assert result["stages"] == []
 
-    broken = plain.replace('cq.Workplane("XY").box(20, 20, 5)',
-                           '(_ for _ in ()).throw(RuntimeError("boom"))')
+    broken = plain.replace(
+        'cq.Workplane("XY").box(20, 20, 5)', '(_ for _ in ()).throw(RuntimeError("boom"))'
+    )
     result = debug_build(make_part(tmp_path, broken, name="broken"), quiet=True)
     assert result["ok"] is False
     assert "boom" in result["error"]
@@ -94,8 +95,7 @@ def test_stage_renders_written(tmp_path):
     from lib.debug_build import debug_build
 
     part = make_part(tmp_path, STAGED_MODEL)
-    result = debug_build(part, render=True, out_dir=tmp_path / "dbg",
-                         size=200, quiet=True)
+    result = debug_build(part, render=True, out_dir=tmp_path / "dbg", size=200, quiet=True)
     assert result["ok"] is True
     names = sorted(Path(p).name for p in result["renders"])
     assert names == ["01_stock_iso.png", "02_bore_iso.png"]

@@ -117,37 +117,26 @@ def main() -> int:
 
     lid = params["service_lid"]
     enclosure = params["sealed_enclosure"]
-    gasket_inner_y = (
-        lid["seal_ring_outer_width_y"] - 2 * lid["seal_ring_width"]
-    )
-    gasket_inner_z = (
-        lid["seal_ring_outer_height_z"] - 2 * lid["seal_ring_width"]
-    )
-    opening_z_min = (
-        enclosure["flange_opening_center_z"]
-        - enclosure["flange_opening_height_z"] / 2
-    )
-    opening_z_max = (
-        enclosure["flange_opening_center_z"]
-        + enclosure["flange_opening_height_z"] / 2
-    )
+    gasket_inner_y = lid["seal_ring_outer_width_y"] - 2 * lid["seal_ring_width"]
+    gasket_inner_z = lid["seal_ring_outer_height_z"] - 2 * lid["seal_ring_width"]
+    opening_z_min = enclosure["flange_opening_center_z"] - enclosure["flange_opening_height_z"] / 2
+    opening_z_max = enclosure["flange_opening_center_z"] + enclosure["flange_opening_height_z"] / 2
     gasket_z_min = lid["seal_ring_center_z"] - gasket_inner_z / 2
     gasket_z_max = lid["seal_ring_center_z"] + gasket_inner_z / 2
     if gasket_inner_y - enclosure["flange_opening_width_y"] < 10.0:
         failures.append("Service gasket has under 5 mm Y support per edge")
-    if min(
-        opening_z_min - gasket_z_min,
-        gasket_z_max - opening_z_max,
-    ) < 5.0:
+    if (
+        min(
+            opening_z_min - gasket_z_min,
+            gasket_z_max - opening_z_max,
+        )
+        < 5.0
+    ):
         failures.append("Service gasket has under 5 mm Z support")
     lid_fastener_radius = lid["fastener_diameter"] / 2
     service_fastener_web = min(
-        lid["outer_width_y"] / 2
-        - lid["fastener_edge_y"]
-        - lid_fastener_radius,
-        lid["fastener_edge_y"]
-        - lid_fastener_radius
-        - lid["seal_ring_outer_width_y"] / 2,
+        lid["outer_width_y"] / 2 - lid["fastener_edge_y"] - lid_fastener_radius,
+        lid["fastener_edge_y"] - lid_fastener_radius - lid["seal_ring_outer_width_y"] / 2,
         lid["fastener_edge_z_bottom"]
         - (lid["seal_ring_center_z"] - lid["outer_height_z"] / 2)
         - lid_fastener_radius,

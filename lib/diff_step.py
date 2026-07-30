@@ -52,8 +52,7 @@ def _volume(shape) -> float:
 
 
 def _feature_key(f: dict) -> str:
-    return (f"d={f['diameter']:g} {f['axis_label']}-axis {f['type']} "
-            f"p1={f['p1']} p2={f['p2']}")
+    return f"d={f['diameter']:g} {f['axis_label']}-axis {f['type']} p1={f['p1']} p2={f['p2']}"
 
 
 def _unmatched(fa: list[dict], fb: list[dict]) -> list[dict]:
@@ -67,8 +66,10 @@ def _unmatched(fa: list[dict], fb: list[dict]) -> list[dict]:
                 continue
             if abs(g["radius"] - f["radius"]) > MATCH_RADIUS:
                 continue
-            d = min(max(_dist(f["p1"], g["p1"]), _dist(f["p2"], g["p2"])),
-                    max(_dist(f["p1"], g["p2"]), _dist(f["p2"], g["p1"])))
+            d = min(
+                max(_dist(f["p1"], g["p1"]), _dist(f["p2"], g["p2"])),
+                max(_dist(f["p1"], g["p2"]), _dist(f["p2"], g["p1"])),
+            )
             if d <= MATCH_DIST:
                 used[i] = True
                 found = True
@@ -107,13 +108,17 @@ def diff(a_path: str | Path, b_path: str | Path) -> dict:
         "identical": added_vol == 0.0 and removed_vol == 0.0,
         "features_added": [_feature_key(f) for f in added_feats[:20]],
         "features_removed": [_feature_key(f) for f in removed_feats[:20]],
-        "_shapes": {"b": b, "added": added if added_vol else None,
-                    "removed": removed if removed_vol else None},
+        "_shapes": {
+            "b": b,
+            "added": added if added_vol else None,
+            "removed": removed if removed_vol else None,
+        },
     }
 
 
-def render_diff(result: dict, out_dir: str | Path,
-                views: tuple[str, ...] = ("iso", "top"), size: int = 900) -> list[Path]:
+def render_diff(
+    result: dict, out_dir: str | Path, views: tuple[str, ...] = ("iso", "top"), size: int = 900
+) -> list[Path]:
     """Render the overlay: B translucent, added green, removed red."""
     from lib.render_step import render_scene
 
@@ -123,8 +128,7 @@ def render_diff(result: dict, out_dir: str | Path,
         scene.append((shapes["added"], GREEN, 1.0))
     if shapes["removed"] is not None:
         scene.append((shapes["removed"], RED, 0.85))
-    prefix = (f"diff_{Path(result['a']).stem}_vs_{Path(result['b']).stem}"
-              .replace(" ", "_"))
+    prefix = f"diff_{Path(result['a']).stem}_vs_{Path(result['b']).stem}".replace(" ", "_")
     return render_scene(scene, out_dir, prefix, views=views, size=size)
 
 
