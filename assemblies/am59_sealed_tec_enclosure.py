@@ -5,13 +5,7 @@ import sys
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-MODEL_PATH = (
-    PROJECT_ROOT
-    / "parts"
-    / "custom"
-    / "am59_sealed_tec_enclosure"
-    / "model.py"
-)
+MODEL_PATH = PROJECT_ROOT / "parts" / "custom" / "am59_sealed_tec_enclosure" / "model.py"
 
 spec = importlib.util.spec_from_file_location(
     "am59_sealed_tec_enclosure_model",
@@ -43,10 +37,7 @@ if __name__ == "__main__":
         suffix += "_immersion_ready"
     if "--airflow-exploded" in sys.argv:
         suffix += "_airflow_exploded"
-    output_path = (
-        output_dir
-        / f"am59_sealed_tec_enclosure_v3_context{suffix}.step"
-    )
+    output_path = output_dir / f"am59_sealed_tec_enclosure_v3_context{suffix}.step"
     create_assembly(
         service_open="--open" in sys.argv,
         immersion_ready="--immersion" in sys.argv,

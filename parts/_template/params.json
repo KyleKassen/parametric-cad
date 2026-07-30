@@ -1,39 +1,54 @@
 {
-    "part_name": "Example Mounting Plate",
+    "part_name": "Example Sensor Enclosure",
     "version": "v1",
-    "description": "A flat mounting plate with four corner bolt holes and a central clearance bore. Demonstrates the parametric workflow.",
+    "description": "Sealed cast-aluminium enclosure body: a downward cavity closed by a bolt-on lid, recessed and ribbed panels on every large face, and one connector land on the +X end. A working demonstration of DESIGN_LANGUAGE.md, not a placeholder - replace the geometry, keep the shape of the file.",
     "units": "mm",
-    "material": "6061-T6 Aluminum",
-    "process": "3-axis CNC mill from plate stock",
+    "material": "A356-T6 cast aluminium",
+    "process": "cast-aluminium",
 
     "dimensions": {
-        "length": 80.0,
-        "width": 60.0,
-        "thickness": 6.0
+        "length": 150.0,
+        "width": 90.0,
+        "height": 34.0
     },
 
     "features": {
-        "corner_holes": {
-            "description": "Four M5 clearance holes on a rectangular pattern, inset from edges",
-            "hole_diameter": 5.5,
-            "counterbore_diameter": 10.0,
-            "counterbore_depth": 3.5,
-            "inset_x": 10.0,
-            "inset_y": 10.0
+        "cavity": {
+            "description": "Electronics cavity, opens downward to the lid. Wall thickness, plan radius and rim break all come from lib.features.STYLE - see notes.",
+            "rib_count": 7,
+            "rib_height": 2.5
         },
-        "center_bore": {
-            "description": "Central through-hole for cable/shaft pass-through",
-            "diameter": 20.0
+        "panels": {
+            "description": "Recessed panels sunk into every large exterior face (R3), ribbed where the span needs the stiffness back (R6). The +X end carries the connector land instead of a panel.",
+            "faces": ["+Z", "-X", "+Y", "-Y"],
+            "ribbed": ["+Z", "+Y", "-Y"],
+            "rib_count": 6
         },
-        "edge_fillets": {
-            "description": "Fillets on all outside vertical edges",
-            "radius": 2.0
+        "lid_screws": {
+            "description": "Full-height M4 columns from the roof down to the seal plane, tapped from below. inset and target_pitch drive lib.features.bolt_pattern.",
+            "fastener": "M4",
+            "inset": 8.0,
+            "target_pitch": 40.0,
+            "root_fillet": 3.0
+        },
+        "connector": {
+            "description": "Raised land with a bounded rectangular window into the cavity, four M3 blind taps. Land and window sizes are interface numbers - they belong to the connector datasheet, not to the style.",
+            "face": "+X",
+            "land_length": 46.0,
+            "land_width": 26.0,
+            "land_raised": 3.0,
+            "aperture_length": 30.0,
+            "aperture_width": 16.0,
+            "aperture_radius": 2.5,
+            "fastener": "M3"
         }
     },
 
     "notes": [
-        "Mating surface: bottom face (−Z) mounts flush to chassis top panel",
-        "Hole pattern matches the 60mm × 40mm bolt circle on the AM59 bracket",
-        "See datasheets/ for vendor drawing"
+        "Datum: the -Z seal face. The lid mounts to it and every column ends flush with it.",
+        "No radius, wall or chamfer is typed into model.py. STYLE.wall(process, span), STYLE.plan_radius(l, w) and STYLE.edge_break(span, wall) supply them, so a change to lib/features.py propagates here.",
+        "The only sizes written down are interface sizes (the connector land and its window) and counts. aperture_radius 2.5 is a rung of the Style break ladder on purpose - see DESIGN_LANGUAGE.md section 3.1.",
+        "process must name a lib.features.WALLS key: machined-aluminium, cast-aluminium, sheet-metal, printed-fdm, printed-sls.",
+        "Replace every value here with your own part, then rewrite spec.json to match."
     ]
 }

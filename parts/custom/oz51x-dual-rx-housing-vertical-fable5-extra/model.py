@@ -129,35 +129,35 @@ _INDUSTRIAL_DEFAULTS = {
     "spool_top_fillet": 1.5,
     "mount_flanges": {
         "enabled": True,
-        "protrusion": 11.0,      # beyond the finished top/bottom faces
-        "thickness": 3.0,        # flush with the mount face
-        "end_inset": 3.0,        # stay clear of the rounded body corners
+        "protrusion": 11.0,  # beyond the finished top/bottom faces
+        "thickness": 3.0,  # flush with the mount face
+        "end_inset": 3.0,  # stay clear of the rounded body corners
         "corner_radius": 4.0,
-        "embed": 2.0,            # overlap into the wall for a robust union
-        "gusset": 3.0,           # triangular root blend, support-free print
-        "slot_width": 4.5,       # M4 / #8 pan head clearance
+        "embed": 2.0,  # overlap into the wall for a robust union
+        "gusset": 3.0,  # triangular root blend, support-free print
+        "slot_width": 4.5,  # M4 / #8 pan head clearance
         "slot_length": 9.0,
         "slot_from_ends": 16.0,  # slot centers, measured from front/back faces
     },
     "vents": {
         "enabled": True,
-        "slot_width": 2.0,             # <=2 mm: finger/debris safe
+        "slot_width": 2.0,  # <=2 mm: finger/debris safe
         "cover_slot_length": 30.0,
-        "cover_slot_y": -7.0,          # clear of the header access openings
+        "cover_slot_y": -7.0,  # clear of the header access openings
         "cover_slot_x": [31.5, 36.0],  # |x| centers, inside the lip ring
         "wall_slot_length": 28.0,
         "wall_slot_y": -10.0,
         "wall_slot_z": [9.0, 13.5, 18.0],  # above the flange gusset (z=6)
     },
     "connector_recess": {
-        "sc_depth": 0.8,       # keeps >2 mm of M2 pilot engagement
+        "sc_depth": 0.8,  # keeps >2 mm of M2 pilot engagement
         "clearance": 0.4,
         "corner_radius": 1.5,
     },
     "harness_anchors": {
         "enabled": True,
-        "x": [-16.0, 16.0],        # clear of DE-9 keep-out (|x|<7) and SC
-        "y_from_back_wall": 8.0,   # corridors (|x| 23.4..32.7)
+        "x": [-16.0, 16.0],  # clear of DE-9 keep-out (|x|<7) and SC
+        "y_from_back_wall": 8.0,  # corridors (|x| 23.4..32.7)
         "post_dia": 3.0,
         "post_gap": 4.0,
         "height": 6.0,
@@ -168,7 +168,7 @@ _INDUSTRIAL_DEFAULTS = {
         "font": "Arial",
         "bay_size": 4.5,
         "bay_z": 10.5,
-        "bay_offset_from_sma": 9.0,   # toward the bay center, clear of the SMA
+        "bay_offset_from_sma": 9.0,  # toward the bay center, clear of the SMA
         "identity_size": 7.0,
         "identity_z": 20.0,
         "identity_text": "RX",
@@ -245,9 +245,7 @@ def layout(params: dict) -> dict:
         envelope_width = 2 * outer_half_x
         envelope_height = interior_top_z + lid_thickness
     else:
-        raise ValueError(
-            "housing.mounting_orientation must be 'horizontal' or 'vertical'"
-        )
+        raise ValueError("housing.mounting_orientation must be 'horizontal' or 'vertical'")
 
     pc = params.get("panel_connector")
     panel_connector_z = None
@@ -318,21 +316,26 @@ def _entry_cone_z(r: float, ch: float, x: float, y: float, z_top: float) -> cq.S
     Overshoots the surface by 0.5 so the boolean cuts cleanly through the face.
     """
     return cq.Solid.makeCone(
-        r, r + ch + 0.5, ch + 0.5,
-        cq.Vector(x, y, z_top - ch), cq.Vector(0, 0, 1),
+        r,
+        r + ch + 0.5,
+        ch + 0.5,
+        cq.Vector(x, y, z_top - ch),
+        cq.Vector(0, 0, 1),
     )
 
 
-def _face_cone_y(r: float, ch: float, x: float, z: float, y_face: float,
-                 inward: float) -> cq.Solid:
+def _face_cone_y(r: float, ch: float, x: float, z: float, y_face: float, inward: float) -> cq.Solid:
     """Cut solid: 45-degree cone chamfer on a Y-facing panel hole.
 
     ``inward`` is +1 for the front face (material toward +Y) and -1 for a
     back face. Starts 0.1 proud of the face for a clean boolean.
     """
     return cq.Solid.makeCone(
-        r + ch + 0.1, r, ch + 0.1,
-        cq.Vector(x, y_face - inward * 0.1, z), cq.Vector(0, inward, 0),
+        r + ch + 0.1,
+        r,
+        ch + 0.1,
+        cq.Vector(x, y_face - inward * 0.1, z),
+        cq.Vector(0, inward, 0),
     )
 
 
@@ -350,14 +353,20 @@ def _rounded_pocket(w: float, h_: float, depth: float, r: float) -> cq.Workplane
     return pocket.edges("|Y").fillet(r)
 
 
-def _panel_text_front(txt: str, size: float, depth: float, font: str,
-                      x: float, z: float, outer_half_y: float) -> cq.Workplane:
+def _panel_text_front(
+    txt: str, size: float, depth: float, font: str, x: float, z: float, outer_half_y: float
+) -> cq.Workplane:
     """Engraving solid for the FRONT (-Y) face, reading horizontally in the
     finished vertical attitude (glyph right = canonical +Z, up = canonical -X).
     """
     solid = cq.Workplane("XZ").text(
-        txt, size, depth, combine=False,
-        font=font, halign="center", valign="center",
+        txt,
+        size,
+        depth,
+        combine=False,
+        font=font,
+        halign="center",
+        valign="center",
     )
     # On XZ the text extrudes toward -Y (spans y in [-depth, 0]); rotate the
     # glyphs in-plane so they read correctly once the tray is stood vertical.
@@ -365,14 +374,20 @@ def _panel_text_front(txt: str, size: float, depth: float, font: str,
     return solid.translate((x, -outer_half_y + depth, z))
 
 
-def _panel_text_lid_top(txt: str, size: float, depth: float, font: str,
-                        x: float, y: float, z_top: float) -> cq.Workplane:
+def _panel_text_lid_top(
+    txt: str, size: float, depth: float, font: str, x: float, y: float, z_top: float
+) -> cq.Workplane:
     """Engraving solid for the lid's outer face (finished right/service face),
     reading horizontally in the finished attitude (right = +Y, up = -X).
     """
     solid = cq.Workplane("XY").text(
-        txt, size, depth, combine=False,
-        font=font, halign="center", valign="center",
+        txt,
+        size,
+        depth,
+        combine=False,
+        font=font,
+        halign="center",
+        valign="center",
     )
     solid = solid.rotate((0, 0, 0), (0, 0, 1), 90)
     return solid.translate((x, y, z_top - depth))
@@ -393,8 +408,9 @@ def _create_base_canonical(params: dict) -> cq.Workplane:
     # cuts below never touch the treated outer edges) ---------------------
     base = (
         cq.Workplane("XY")
-        .box(2 * L["outer_half_x"], L["total_depth"], L["base_height"],
-             centered=(True, False, False))
+        .box(
+            2 * L["outer_half_x"], L["total_depth"], L["base_height"], centered=(True, False, False)
+        )
         .translate((0, -L["outer_half_y"], 0))
     )
     base = base.edges("|Z").fillet(ind["corner_fillet"])
@@ -413,12 +429,15 @@ def _create_base_canonical(params: dict) -> cq.Workplane:
             plate = (
                 cq.Workplane("XY")
                 .box(f_w, f_depth, fl["thickness"], centered=(True, True, False))
-                .edges("|Z").fillet(fl["corner_radius"])
+                .edges("|Z")
+                .fillet(fl["corner_radius"])
                 .translate((s * (L["outer_half_x"] - fl["embed"] + f_w / 2.0), yc, 0))
             )
             slot_cx = s * (L["outer_half_x"] + fl["protrusion"] / 2.0)
-            for sy in (-L["outer_half_y"] + fl["slot_from_ends"],
-                       L["back_outer_y"] - fl["slot_from_ends"]):
+            for sy in (
+                -L["outer_half_y"] + fl["slot_from_ends"],
+                L["back_outer_y"] - fl["slot_from_ends"],
+            ):
                 slot = (
                     cq.Workplane("XY")
                     .slot2D(fl["slot_length"], fl["slot_width"], 90)
@@ -454,8 +473,7 @@ def _create_base_canonical(params: dict) -> cq.Workplane:
     fb = params["fiber_bay"]
     plenum = (
         cq.Workplane("XY")
-        .box(2 * L["interior_half_x"], fb["depth"], cav_h,
-             centered=(True, False, False))
+        .box(2 * L["interior_half_x"], fb["depth"], cav_h, centered=(True, False, False))
         .translate((0, L["plenum_y0"], h["floor"]))
     )
     base = base.cut(plenum)
@@ -465,8 +483,12 @@ def _create_base_canonical(params: dict) -> cq.Workplane:
     for fx in L["fiber_x"]:
         slot = (
             cq.Workplane("XY")
-            .box(fb["pass_slot_width"], h["wall"] + 2.0,
-                 L["base_height"] - slot_z0 + 1.0, centered=(True, False, False))
+            .box(
+                fb["pass_slot_width"],
+                h["wall"] + 2.0,
+                L["base_height"] - slot_z0 + 1.0,
+                centered=(True, False, False),
+            )
             .translate((fx, L["interior_half_y"] - 1.0, slot_z0))
         )
         base = base.cut(slot)
@@ -476,8 +498,10 @@ def _create_base_canonical(params: dict) -> cq.Workplane:
     spool_r = fb["spool_dia"] / 2.0
     spool = (
         cq.Workplane("XY")
-        .circle(spool_r).extrude(L["base_height"])
-        .edges(">Z").fillet(ind["spool_top_fillet"])
+        .circle(spool_r)
+        .extrude(L["base_height"])
+        .edges(">Z")
+        .fillet(ind["spool_top_fillet"])
         .translate((0, L["spool_y"], 0))
     )
     base = base.union(spool)
@@ -489,40 +513,44 @@ def _create_base_canonical(params: dict) -> cq.Workplane:
     )
     base = base.cut(spool_pilot)
     base = base.cut(
-        cq.Workplane("XY").newObject([
-            _entry_cone_z(h["corner_post_pilot_dia"] / 2.0,
-                          ind["pilot_entry_chamfer"],
-                          0, L["spool_y"], L["base_height"])
-        ])
+        cq.Workplane("XY").newObject(
+            [
+                _entry_cone_z(
+                    h["corner_post_pilot_dia"] / 2.0,
+                    ind["pilot_entry_chamfer"],
+                    0,
+                    L["spool_y"],
+                    L["base_height"],
+                )
+            ]
+        )
     )
 
     # --- Lid-screw posts: three along the central rib, two back corners ----
     post_r = h["corner_post_dia"] / 2.0
     post_pilot_r = h["corner_post_pilot_dia"] / 2.0
     corner_y = L["plenum_y1"] - post_r - 1.0
-    post_xy = [(0.0, -(L["interior_half_y"] - post_r - 1.0)),
-               (0.0, 0.0),
-               (0.0, +(L["interior_half_y"] - post_r - 1.0)),
-               (-(L["interior_half_x"] - post_r - 1.0), corner_y),
-               (+(L["interior_half_x"] - post_r - 1.0), corner_y)]
+    post_xy = [
+        (0.0, -(L["interior_half_y"] - post_r - 1.0)),
+        (0.0, 0.0),
+        (0.0, +(L["interior_half_y"] - post_r - 1.0)),
+        (-(L["interior_half_x"] - post_r - 1.0), corner_y),
+        (+(L["interior_half_x"] - post_r - 1.0), corner_y),
+    ]
     for px, py in post_xy:
-        post = (
-            cq.Workplane("XY")
-            .circle(post_r).extrude(L["base_height"])
-            .translate((px, py, 0))
-        )
+        post = cq.Workplane("XY").circle(post_r).extrude(L["base_height"]).translate((px, py, 0))
         base = base.union(post)
         pilot = (
             cq.Workplane("XY")
-            .circle(post_pilot_r).extrude(L["base_height"] - h["floor"] + 0.5)
+            .circle(post_pilot_r)
+            .extrude(L["base_height"] - h["floor"] + 0.5)
             .translate((px, py, h["floor"]))
         )
         base = base.cut(pilot)
         base = base.cut(
-            cq.Workplane("XY").newObject([
-                _entry_cone_z(post_pilot_r, ind["pilot_entry_chamfer"],
-                              px, py, L["base_height"])
-            ])
+            cq.Workplane("XY").newObject(
+                [_entry_cone_z(post_pilot_r, ind["pilot_entry_chamfer"], px, py, L["base_height"])]
+            )
         )
 
     # --- Back-panel SC/APC adapter mounts: recessed flange pocket, body
@@ -530,12 +558,8 @@ def _create_base_canonical(params: dict) -> cq.Workplane:
     # the installed adapter's long axis and screws are horizontal) ----------
     ad = params["sc_adapter"]
     rc = ind["connector_recess"]
-    cut_w = (ad["body_short"] if vertical else ad["body_long"]) + 2 * ad[
-        "cutout_clearance"
-    ]
-    cut_h = (ad["body_long"] if vertical else ad["body_short"]) + 2 * ad[
-        "cutout_clearance"
-    ]
+    cut_w = (ad["body_short"] if vertical else ad["body_long"]) + 2 * ad["cutout_clearance"]
+    cut_h = (ad["body_long"] if vertical else ad["body_short"]) + 2 * ad["cutout_clearance"]
     pocket_w = (ad["flange_wide"] if vertical else ad["flange_len"]) + 2 * rc["clearance"]
     pocket_h = (ad["flange_len"] if vertical else ad["flange_wide"]) + 2 * rc["clearance"]
     for ax in L["adapter_x"]:
@@ -545,9 +569,8 @@ def _create_base_canonical(params: dict) -> cq.Workplane:
             .translate((ax, L["plenum_y1"] + h["wall"] / 2.0, L["fiber_z"]))
         )
         base = base.cut(cutout)
-        pocket = (
-            _rounded_pocket(pocket_w, pocket_h, rc["sc_depth"], rc["corner_radius"])
-            .translate((ax, L["back_outer_y"], L["fiber_z"]))
+        pocket = _rounded_pocket(pocket_w, pocket_h, rc["sc_depth"], rc["corner_radius"]).translate(
+            (ax, L["back_outer_y"], L["fiber_z"])
         )
         base = base.cut(pocket)
         for offset in (-ad["screw_spacing"] / 2.0, +ad["screw_spacing"] / 2.0):
@@ -568,8 +591,10 @@ def _create_base_canonical(params: dict) -> cq.Workplane:
     boss_top = L["plate_bottom_z"]
     stud_proto = (
         cq.Workplane("XY")
-        .circle(stud_r).extrude(boss_top)
-        .edges(">Z").chamfer(ind["stud_top_chamfer"])
+        .circle(stud_r)
+        .extrude(boss_top)
+        .edges(">Z")
+        .chamfer(ind["stud_top_chamfer"])
     )
     for cx in L["bay_cx"]:
         for sx in (-h["stud_dx"], +h["stud_dx"]):
@@ -584,44 +609,32 @@ def _create_base_canonical(params: dict) -> cq.Workplane:
         for hole in (m["screw_hole_front"], m["screw_hole_back"]):
             x = cx + sign * hole["x"]
             y = -hole["z"]  # module +Z -> housing -Y
-            boss = (
-                cq.Workplane("XY")
-                .circle(sb_r).extrude(boss_top)
-                .translate((x, y, 0))
-            )
+            boss = cq.Workplane("XY").circle(sb_r).extrude(boss_top).translate((x, y, 0))
             base = base.union(boss)
-            pilot = (
-                cq.Workplane("XY")
-                .circle(sb_pilot_r).extrude(boss_top)
-                .translate((x, y, 0.5))
-            )
+            pilot = cq.Workplane("XY").circle(sb_pilot_r).extrude(boss_top).translate((x, y, 0.5))
             base = base.cut(pilot)
             base = base.cut(
-                cq.Workplane("XY").newObject([
-                    _entry_cone_z(sb_pilot_r, ind["pilot_entry_chamfer"],
-                                  x, y, boss_top)
-                ])
+                cq.Workplane("XY").newObject(
+                    [_entry_cone_z(sb_pilot_r, ind["pilot_entry_chamfer"], x, y, boss_top)]
+                )
             )
 
     # --- Front-panel SMA clearance holes: barrel hole + exterior cone
     # chamfer + interior relief pocket for the overhanging SMA base block ---
     sma_r = h["sma_hole_dia"] / 2.0
-    relief_d = (m["sma_base_beyond_plate"] - h["clearance_end"]
-                + h["sma_relief_margin"])
+    relief_d = m["sma_base_beyond_plate"] - h["clearance_end"] + h["sma_relief_margin"]
     relief_w = m["sma_base_w"] + 2 * h["sma_relief_margin"]
     relief_h = m["sma_base_h"] + 2 * h["sma_relief_margin"]
     for bay, cx in zip(L["bays"], L["bay_cx"]):
         sign = -1.0 if bay.get("mirror_x") else 1.0
         x = cx + sign * m["sma_axis_x"]
         z = L["plate_bottom_z"] + m["sma_axis_y"]
-        hole = _y_cylinder(sma_r, x, z,
-                           y_start=-L["outer_half_y"] - 1.0, length=h["wall"] + 2.0)
+        hole = _y_cylinder(sma_r, x, z, y_start=-L["outer_half_y"] - 1.0, length=h["wall"] + 2.0)
         base = base.cut(hole)
         base = base.cut(
-            cq.Workplane("XY").newObject([
-                _face_cone_y(sma_r, ind["sma_face_chamfer"], x, z,
-                             -L["outer_half_y"], inward=1.0)
-            ])
+            cq.Workplane("XY").newObject(
+                [_face_cone_y(sma_r, ind["sma_face_chamfer"], x, z, -L["outer_half_y"], inward=1.0)]
+            )
         )
         if relief_d > 0:
             pocket = (
@@ -642,8 +655,7 @@ def _create_base_canonical(params: dict) -> cq.Workplane:
             bx0 = -slot_x1 if bay.get("mirror_x") else slot_x0
             slot = (
                 cq.Workplane("XY")
-                .box(slot_w, h["wall"] + 2.0, wr_z1 - wr_z0,
-                     centered=(False, True, False))
+                .box(slot_w, h["wall"] + 2.0, wr_z1 - wr_z0, centered=(False, True, False))
                 .translate((cx + bx0, -L["outer_half_y"] + h["wall"] / 2.0, wr_z0))
             )
             base = base.cut(slot)
@@ -679,8 +691,12 @@ def _create_base_canonical(params: dict) -> cq.Workplane:
             if vertical and pz + pc["screw_hole_dia"] / 2.0 > L["base_height"] - 1.0:
                 capture = (
                     cq.Workplane("XY")
-                    .box(pc["screw_hole_dia"], h["wall"] + 2.0,
-                         L["base_height"] - pz + 1.0, centered=(True, True, False))
+                    .box(
+                        pc["screw_hole_dia"],
+                        h["wall"] + 2.0,
+                        L["base_height"] - pz + 1.0,
+                        centered=(True, True, False),
+                    )
                     .translate((px, L["plenum_y1"] + h["wall"] / 2.0, pz))
                 )
                 base = base.cut(capture)
@@ -693,10 +709,15 @@ def _create_base_canonical(params: dict) -> cq.Workplane:
         for zc in vents["wall_slot_z"]:
             slot = (
                 cq.Workplane("XY")
-                .box(h["wall"] + 2.0, vents["wall_slot_length"],
-                     vents["slot_width"], centered=(True, True, True))
-                .translate(((L["interior_half_x"] + L["outer_half_x"]) / 2.0,
-                            vents["wall_slot_y"], zc))
+                .box(
+                    h["wall"] + 2.0,
+                    vents["wall_slot_length"],
+                    vents["slot_width"],
+                    centered=(True, True, True),
+                )
+                .translate(
+                    ((L["interior_half_x"] + L["outer_half_x"]) / 2.0, vents["wall_slot_y"], zc)
+                )
             )
             base = base.cut(slot)
 
@@ -707,34 +728,43 @@ def _create_base_canonical(params: dict) -> cq.Workplane:
         anchor_y = L["plenum_y1"] - ha["y_from_back_wall"]
         post_r = ha["post_dia"] / 2.0
         pitch = ha["post_gap"] + ha["post_dia"]
-        proto = (
-            cq.Workplane("XY")
-            .circle(post_r).extrude(ha["height"])
-            .edges(">Z").chamfer(0.3)
-        )
+        proto = cq.Workplane("XY").circle(post_r).extrude(ha["height"]).edges(">Z").chamfer(0.3)
         for axc in ha["x"]:
             for dxp in (-pitch / 2.0, +pitch / 2.0):
-                base = base.union(
-                    proto.translate((axc + dxp, anchor_y, h["floor"]))
-                )
+                base = base.union(proto.translate((axc + dxp, anchor_y, h["floor"])))
 
     # --- Engraved panel text (reads horizontally in the finished attitude) -
     lab = ind["labels"]
     if lab["enabled"] and vertical:
         for bay, cx in zip(L["bays"], L["bay_cx"]):
             sign = -1.0 if bay.get("mirror_x") else 1.0
-            txt = bay.get("panel_label",
-                          bay.get("label", "").split("-")[0].upper() or None)
+            txt = bay.get("panel_label", bay.get("label", "").split("-")[0].upper() or None)
             if not txt:
                 continue
             label_x = cx + sign * (m["sma_axis_x"] + lab["bay_offset_from_sma"])
-            base = base.cut(_panel_text_front(
-                txt, lab["bay_size"], lab["depth"], lab["font"],
-                label_x, lab["bay_z"], L["outer_half_y"]))
+            base = base.cut(
+                _panel_text_front(
+                    txt,
+                    lab["bay_size"],
+                    lab["depth"],
+                    lab["font"],
+                    label_x,
+                    lab["bay_z"],
+                    L["outer_half_y"],
+                )
+            )
         if lab.get("identity_text"):
-            base = base.cut(_panel_text_front(
-                lab["identity_text"], lab["identity_size"], lab["depth"],
-                lab["font"], 0.0, lab["identity_z"], L["outer_half_y"]))
+            base = base.cut(
+                _panel_text_front(
+                    lab["identity_text"],
+                    lab["identity_size"],
+                    lab["depth"],
+                    lab["font"],
+                    0.0,
+                    lab["identity_z"],
+                    L["outer_half_y"],
+                )
+            )
 
     return base
 
@@ -757,8 +787,12 @@ def _create_lid_canonical(params: dict) -> cq.Workplane:
     z0 = L["base_height"]
     lid = (
         cq.Workplane("XY")
-        .box(2 * L["outer_half_x"], L["total_depth"], h["lid_thickness"],
-             centered=(True, False, False))
+        .box(
+            2 * L["outer_half_x"],
+            L["total_depth"],
+            h["lid_thickness"],
+            centered=(True, False, False),
+        )
         .translate((0, -L["outer_half_y"], z0))
     )
     # Plan profile matches the filleted base; outer perimeter chamfered like
@@ -778,39 +812,54 @@ def _create_lid_canonical(params: dict) -> cq.Workplane:
     for bay, cx in zip(L["bays"], L["bay_cx"]):
         lip = (
             cq.Workplane("XY")
-            .box(L["bay_w"] - 2 * lip_gap, L["bay_d"] - 2 * lip_gap,
-                 lip_depth, centered=(True, True, False))
-            .edges("<Z").chamfer(ind["lip_lead_in"])
+            .box(
+                L["bay_w"] - 2 * lip_gap,
+                L["bay_d"] - 2 * lip_gap,
+                lip_depth,
+                centered=(True, True, False),
+            )
+            .edges("<Z")
+            .chamfer(ind["lip_lead_in"])
             .translate((cx, 0, z0 - lip_depth))
         )
         if internal_wiring:
             core = (
                 cq.Workplane("XY")
-                .box(L["bay_w"] - 2 * lip_gap - 2 * lip_ring_w,
-                     L["bay_d"] - 2 * lip_gap - 2 * lip_ring_w,
-                     lip_depth + 1.0, centered=(True, True, False))
+                .box(
+                    L["bay_w"] - 2 * lip_gap - 2 * lip_ring_w,
+                    L["bay_d"] - 2 * lip_gap - 2 * lip_ring_w,
+                    lip_depth + 1.0,
+                    centered=(True, True, False),
+                )
                 .translate((cx, 0, z0 - lip_depth - 0.5))
             )
             lip = lip.cut(core)
             slot_gap = (
                 cq.Workplane("XY")
-                .box(params["fiber_bay"]["pass_slot_width"],
-                     lip_ring_w + lip_gap + 1.0, lip_depth + 1.0,
-                     centered=(True, False, False))
-                .translate((cx + m["fiber_exit_x"],
-                            L["bay_d"] / 2.0 - lip_gap - lip_ring_w - 0.5,
-                            z0 - lip_depth - 0.5))
+                .box(
+                    params["fiber_bay"]["pass_slot_width"],
+                    lip_ring_w + lip_gap + 1.0,
+                    lip_depth + 1.0,
+                    centered=(True, False, False),
+                )
+                .translate(
+                    (
+                        cx + m["fiber_exit_x"],
+                        L["bay_d"] / 2.0 - lip_gap - lip_ring_w - 0.5,
+                        z0 - lip_depth - 0.5,
+                    )
+                )
             )
             lip = lip.cut(slot_gap)
         lid = lid.union(lip)
 
     # Scallop the lip around the rib screw posts (they bulge past the bay edge)
     post_r = h["corner_post_dia"] / 2.0
-    for py in [-(L["interior_half_y"] - post_r - 1.0), 0.0,
-               +(L["interior_half_y"] - post_r - 1.0)]:
+    for py in [-(L["interior_half_y"] - post_r - 1.0), 0.0, +(L["interior_half_y"] - post_r - 1.0)]:
         scallop = (
             cq.Workplane("XY")
-            .circle(post_r + lip_gap).extrude(lip_depth + 0.5)
+            .circle(post_r + lip_gap)
+            .extrude(lip_depth + 0.5)
             .translate((0, py, z0 - lip_depth - 0.5))
         )
         lid = lid.cut(scallop)
@@ -826,8 +875,7 @@ def _create_lid_canonical(params: dict) -> cq.Workplane:
         bx0 = -op_x1 if bay.get("mirror_x") else op_x0
         opening = (
             cq.Workplane("XY")
-            .box(op_w, op_d, h["lid_thickness"] + lip_depth + 2.0,
-                 centered=(False, False, False))
+            .box(op_w, op_d, h["lid_thickness"] + lip_depth + 2.0, centered=(False, False, False))
             .translate((cx + bx0, op_y0, z0 - lip_depth - 1.0))
         )
         lid = lid.cut(opening)
@@ -841,47 +889,65 @@ def _create_lid_canonical(params: dict) -> cq.Workplane:
             for xc in vents["cover_slot_x"]:
                 slot = (
                     cq.Workplane("XY")
-                    .box(vents["slot_width"], vents["cover_slot_length"],
-                         h["lid_thickness"] + 2.0, centered=(True, True, True))
-                    .translate((s * xc, vents["cover_slot_y"],
-                                z0 + h["lid_thickness"] / 2.0))
+                    .box(
+                        vents["slot_width"],
+                        vents["cover_slot_length"],
+                        h["lid_thickness"] + 2.0,
+                        centered=(True, True, True),
+                    )
+                    .translate((s * xc, vents["cover_slot_y"], z0 + h["lid_thickness"] / 2.0))
                 )
                 lid = lid.cut(slot)
 
     # Lid screw clearance holes: three rib posts, the spool, two back corners
     clr_r = h["lid_screw_clear_dia"] / 2.0
     head_r = h["lid_screw_head_dia"] / 2.0
-    screw_xy = [(0.0, -(L["interior_half_y"] - post_r - 1.0)),
-                (0.0, 0.0),
-                (0.0, +(L["interior_half_y"] - post_r - 1.0)),
-                (0.0, L["spool_y"]),
-                (-(L["interior_half_x"] - post_r - 1.0), L["plenum_y1"] - post_r - 1.0),
-                (+(L["interior_half_x"] - post_r - 1.0), L["plenum_y1"] - post_r - 1.0)]
+    screw_xy = [
+        (0.0, -(L["interior_half_y"] - post_r - 1.0)),
+        (0.0, 0.0),
+        (0.0, +(L["interior_half_y"] - post_r - 1.0)),
+        (0.0, L["spool_y"]),
+        (-(L["interior_half_x"] - post_r - 1.0), L["plenum_y1"] - post_r - 1.0),
+        (+(L["interior_half_x"] - post_r - 1.0), L["plenum_y1"] - post_r - 1.0),
+    ]
     for px, py in screw_xy:
         cbore = (
             cq.Workplane("XY")
-            .circle(clr_r).extrude(h["lid_thickness"] + lip_depth + 1.0)
+            .circle(clr_r)
+            .extrude(h["lid_thickness"] + lip_depth + 1.0)
             .translate((px, py, z0 - lip_depth))
         )
         head = (
             cq.Workplane("XY")
-            .circle(head_r).extrude(1.6 + 0.5)
+            .circle(head_r)
+            .extrude(1.6 + 0.5)
             .translate((px, py, z0 + h["lid_thickness"] - 1.6))
         )
         lid = lid.cut(cbore).cut(head)
         lid = lid.cut(
-            cq.Workplane("XY").newObject([
-                _entry_cone_z(head_r, ind["counterbore_entry_chamfer"],
-                              px, py, z0 + h["lid_thickness"])
-            ])
+            cq.Workplane("XY").newObject(
+                [
+                    _entry_cone_z(
+                        head_r, ind["counterbore_entry_chamfer"], px, py, z0 + h["lid_thickness"]
+                    )
+                ]
+            )
         )
 
     # Maker / version mark, discreet, on the cover's outer face
     lab = ind["labels"]
     if lab["enabled"] and vertical and lab.get("maker_text"):
-        lid = lid.cut(_panel_text_lid_top(
-            lab["maker_text"], lab["maker_size"], min(lab["depth"], 0.4),
-            lab["font"], 40.0, 25.0, z0 + h["lid_thickness"]))
+        lid = lid.cut(
+            _panel_text_lid_top(
+                lab["maker_text"],
+                lab["maker_size"],
+                min(lab["depth"], 0.4),
+                lab["font"],
+                40.0,
+                25.0,
+                z0 + h["lid_thickness"],
+            )
+        )
 
     return lid
 

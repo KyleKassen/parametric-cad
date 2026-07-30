@@ -41,13 +41,11 @@ def create_part(params: dict | None = None) -> cq.Workplane:
     part = body.cut(cavity)
 
     # Mid-body mounting flange with the two screw holes
-    flange = (
-        cq.Workplane("XY")
-        .box(d["flange_len"], d["flange_thickness"], d["flange_wide"])
-    )
+    flange = cq.Workplane("XY").box(d["flange_len"], d["flange_thickness"], d["flange_wide"])
     for sx in (-d["screw_spacing"] / 2.0, +d["screw_spacing"] / 2.0):
         hole = cq.Solid.makeCylinder(
-            d["screw_hole_dia"] / 2.0, d["flange_thickness"] + 2.0,
+            d["screw_hole_dia"] / 2.0,
+            d["flange_thickness"] + 2.0,
             cq.Vector(sx, -d["flange_thickness"] / 2.0 - 1.0, 0),
             cq.Vector(0, 1, 0),
         )
@@ -57,10 +55,13 @@ def create_part(params: dict | None = None) -> cq.Workplane:
     # Center web that carries the ceramic split sleeve
     web = (
         cq.Workplane("XY")
-        .box(d["body_long"] - 2 * d["body_wall"] + 0.2,
-             d["center_web_thickness"],
-             d["body_short"] - 2 * d["body_wall"] + 0.2)
-        .faces(">Y").workplane()
+        .box(
+            d["body_long"] - 2 * d["body_wall"] + 0.2,
+            d["center_web_thickness"],
+            d["body_short"] - 2 * d["body_wall"] + 0.2,
+        )
+        .faces(">Y")
+        .workplane()
         .hole(d["sleeve_od"] + 0.01)
     )
     part = part.union(web)
@@ -68,7 +69,8 @@ def create_part(params: dict | None = None) -> cq.Workplane:
     # Ceramic split sleeve (modeled as a plain tube)
     sleeve = (
         cq.Workplane("XZ")
-        .circle(d["sleeve_od"] / 2.0).circle(d["sleeve_id"] / 2.0)
+        .circle(d["sleeve_od"] / 2.0)
+        .circle(d["sleeve_id"] / 2.0)
         .extrude(d["sleeve_len"] / 2.0, both=True)
     )
     part = part.union(sleeve)

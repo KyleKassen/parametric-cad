@@ -42,9 +42,17 @@ def test_added_and_removed_material_measured(tmp_path):
 
     old = cq.Workplane("XY").box(20, 20, 5)
     # new: gains a 5x5x5 boss on top, loses a 4 mm bore through the middle
-    new = (cq.Workplane("XY").box(20, 20, 5)
-           .faces(">Z").workplane().rect(5, 5).extrude(5)
-           .faces(">Z").workplane().hole(4.0))
+    new = (
+        cq.Workplane("XY")
+        .box(20, 20, 5)
+        .faces(">Z")
+        .workplane()
+        .rect(5, 5)
+        .extrude(5)
+        .faces(">Z")
+        .workplane()
+        .hole(4.0)
+    )
     a = _export(tmp_path, "old.step", old)
     b = _export(tmp_path, "new.step", new)
 

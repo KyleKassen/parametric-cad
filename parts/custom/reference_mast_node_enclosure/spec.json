@@ -1,0 +1,143 @@
+{
+    "schema": "part-spec/1",
+    "part_name": "Reference mast node enclosure",
+    "units": "mm",
+    "solid_count": 1,
+    "dimensions": [
+        {
+            "id": "envelope_x",
+            "kind": "bbox",
+            "axis": "x",
+            "min": 190.0,
+            "max": 200.0,
+            "note": "mast bracket clearance envelope - 200 mm is the limit, not the model value"
+        },
+        {
+            "id": "envelope_y",
+            "kind": "bbox",
+            "axis": "y",
+            "min": 140.0,
+            "max": 150.0,
+            "note": "fin tips to flange pad must clear the mast standoff at 150 mm"
+        },
+        {
+            "id": "envelope_z",
+            "kind": "bbox",
+            "axis": "z",
+            "min": 84.0,
+            "max": 90.0,
+            "note": "shipping case internal height"
+        },
+        {
+            "id": "body_mass",
+            "kind": "volume",
+            "min": 1120000.0,
+            "max": 1300000.0,
+            "note": "3.02-3.51 kg in 6061-T6. The bracket is rated 4.0 kg for body + lid + payload; the lid budget is 0.45 kg."
+        },
+        {
+            "id": "lid_screw_taps",
+            "kind": "cylinder",
+            "diameter": 3.3,
+            "tol": 0.1,
+            "axis": "Z",
+            "type": "hole",
+            "count_min": 16,
+            "note": "M4 tap drill - 16 places is the minimum for even gasket compression on this perimeter"
+        },
+        {
+            "id": "coldplate_payload_grid",
+            "kind": "cylinder",
+            "diameter": 4.2,
+            "tol": 0.1,
+            "axis": "Z",
+            "type": "hole",
+            "count_min": 15,
+            "note": "M5 tap drill on the published 30 mm payload grid"
+        },
+        {
+            "id": "mast_flange_taps",
+            "kind": "cylinder",
+            "diameter": 5.0,
+            "tol": 0.1,
+            "axis": "Y",
+            "type": "hole",
+            "count_min": 8,
+            "note": "M6 tap drill - the bracket interface"
+        },
+        {
+            "id": "vent_bore",
+            "kind": "cylinder",
+            "diameter": 10.5,
+            "tol": 0.1,
+            "axis": "Y",
+            "type": "hole",
+            "count_min": 1,
+            "note": "M12 x 1.5 tap drill for the pressure-equalisation vent"
+        },
+        {
+            "id": "circular_connector_on_port_side",
+            "kind": "cylinder_at",
+            "diameter": 26.0,
+            "tol": 0.2,
+            "axis": "Y",
+            "type": "hole",
+            "at": [
+                -54.0,
+                62.5,
+                34.0
+            ],
+            "pos_tol": 0.5,
+            "note": "handedness: the RF shell is to port. A mirrored build passes every other check."
+        },
+        {
+            "id": "rect_connector_on_starboard_side",
+            "kind": "cylinder_at",
+            "diameter": 2.5,
+            "tol": 0.1,
+            "axis": "Y",
+            "type": "hole",
+            "at": [
+                73.0,
+                67.5,
+                44.0
+            ],
+            "pos_tol": 0.5,
+            "note": "handedness: the power/data land is to starboard, upper outboard screw"
+        }
+    ],
+    "validators": [
+        {
+            "id": "seal_thermal_and_machinability",
+            "script": "fit_check.py",
+            "timeout": 600,
+            "note": "relationships between features - sealing land width, tap backing, 3-axis reachability, fin pitch"
+        }
+    ],
+    "design": {
+        "role": "enclosure",
+        "min_score": 80,
+        "severity": "hard",
+        "metric_severity": "hard",
+        "note": "80 against a measured 89.9 (2026-07-26) leaves 9.9 points of margin, and the bar is deliberately NOT re-cut to track the score. The same untouched geometry has read 86.6, then 83.1, then 89.9, every move a correction to the ruler rather than a change to the part - the 83 bar that preceded this one survived the 2026-07-25 rework by 0.12 points, so a 0.6-point move in edge_break_coverage would have hard-failed the one part the skill tells agents to copy. A bar re-cut after every recalibration is a bar that has never been tested. 9.9 points absorbs the total loss of any two light metrics or a 47-point collapse in the heaviest one (edge_break_coverage at weight 0.21), while still holding this part 10 points above the repo's advisory gate of 70. See DESIGN.md 'Design review'.",
+        "metrics": {
+            "edge_break_coverage": {
+                "min_score": 70
+            },
+            "face_composition": {
+                "min_score": 60
+            }
+        }
+    },
+    "assumptions": [
+        "The mast bracket is a separate part; its bolt pattern is taken as 8 x M6 on the flange pad and has not been released.",
+        "The circular connector is represented by its panel cutout and mounting pattern only - no vendor STEP has been analysed.",
+        "The convection coefficient used for the thermal case is 6 W/m2K over the finned and plain external area, still air, no solar load on the finned face."
+    ],
+    "unresolved": [
+        "Mast bracket drawing and bolt pattern release.",
+        "Vendor part numbers for the circular connector, the rectangular connector and the M12 x 1.5 vent.",
+        "Gasket compression set over the service life - the 26.3% squeeze is nominal at assembly.",
+        "Thermal correlation: the 18 W case is analytical, not measured."
+    ]
+}

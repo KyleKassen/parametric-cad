@@ -30,9 +30,7 @@ PART_DIR = Path(__file__).parent
 PROJECT_ROOT = PART_DIR.parent.parent.parent
 EXPORTS_DIR = PART_DIR / "exports"
 PARAMS_FILE = PART_DIR / "params.json"
-AMPLIFIER_STEP = (
-    PROJECT_ROOT / "parts" / "vendor" / "microwave-amps" / "AM59-3S-64-64.STEP"
-)
+AMPLIFIER_STEP = PROJECT_ROOT / "parts" / "vendor" / "microwave-amps" / "AM59-3S-64-64.STEP"
 
 
 def load_params(path: Path = PARAMS_FILE) -> dict:
@@ -53,11 +51,7 @@ def _box(
     height_z: float,
     center: tuple[float, float, float],
 ) -> cq.Workplane:
-    return (
-        cq.Workplane("XY")
-        .box(length_x, width_y, height_z)
-        .translate(center)
-    )
+    return cq.Workplane("XY").box(length_x, width_y, height_z).translate(center)
 
 
 def _tube_post(
@@ -96,14 +90,11 @@ def create_structural_frame(params: dict | None = None) -> cq.Workplane:
     upper_z = f["upper_plate_bottom_z"]
     upper_t = f["upper_plate_thickness"]
 
-    result = (
-        cq.Workplane("XY")
-        .box(
-            f["lower_plate_length_x"],
-            f["lower_plate_width_y"],
-            lower_t,
-            centered=(True, True, False),
-        )
+    result = cq.Workplane("XY").box(
+        f["lower_plate_length_x"],
+        f["lower_plate_width_y"],
+        lower_t,
+        centered=(True, True, False),
     )
 
     upper = (
@@ -230,14 +221,8 @@ def create_cartridge(params: dict | None = None) -> cq.Workplane:
                 .extrude(t + 2.0)
             )
             result = result.cut(cutter)
-            countersink_depth = (
-                c["mount_countersink_diameter"]
-                - c["mount_hole_diameter"]
-            ) / (
-                2
-                * math.tan(
-                    math.radians(c["mount_countersink_angle_deg"] / 2)
-                )
+            countersink_depth = (c["mount_countersink_diameter"] - c["mount_hole_diameter"]) / (
+                2 * math.tan(math.radians(c["mount_countersink_angle_deg"] / 2))
             )
             countersink = cq.Workplane(
                 obj=cq.Solid.makeCone(
@@ -316,10 +301,7 @@ def weather_components(params: dict | None = None) -> dict[str, cq.Workplane]:
                 )
             )
         )
-        win_len = (
-            s["side_exhaust_window_x_max"]
-            - s["side_exhaust_window_x_min"]
-        )
+        win_len = s["side_exhaust_window_x_max"] - s["side_exhaust_window_x_min"]
         window = (
             cq.Workplane("XY")
             .box(
@@ -330,11 +312,7 @@ def weather_components(params: dict | None = None) -> dict[str, cq.Workplane]:
             )
             .translate(
                 (
-                    (
-                        s["side_exhaust_window_x_min"]
-                        + s["side_exhaust_window_x_max"]
-                    )
-                    / 2,
+                    (s["side_exhaust_window_x_min"] + s["side_exhaust_window_x_max"]) / 2,
                     sign * (y_edge - t / 2),
                     s["side_exhaust_window_bottom_z"],
                 )
@@ -409,10 +387,7 @@ def weather_components(params: dict | None = None) -> dict[str, cq.Workplane]:
     blade_pitch = s["exhaust_window_height_z"] / blade_count
     for y_sign in (-1, 1):
         for index in range(blade_count):
-            z = (
-                s["exhaust_window_bottom_z"]
-                + (index + 0.65) * blade_pitch
-            )
+            z = s["exhaust_window_bottom_z"] + (index + 0.65) * blade_pitch
             blade = (
                 cq.Workplane("XY")
                 .box(
@@ -440,10 +415,7 @@ def weather_components(params: dict | None = None) -> dict[str, cq.Workplane]:
     inlet_blade_pitch = s["inlet_window_height_z"] / inlet_blade_count
     for center_y in s["inlet_window_centers_y"]:
         for index in range(inlet_blade_count):
-            z = (
-                s["inlet_window_bottom_z"]
-                + (index + 0.65) * inlet_blade_pitch
-            )
+            z = s["inlet_window_bottom_z"] + (index + 0.65) * inlet_blade_pitch
             blade = (
                 cq.Workplane("XY")
                 .box(
@@ -521,9 +493,7 @@ def doghouse_components(params: dict | None = None) -> dict[str, cq.Workplane]:
             )
         )
 
-    bulkhead_side_width = (
-        d["width_y"] - d["bulkhead_inner_width_y"]
-    ) / 2
+    bulkhead_side_width = (d["width_y"] - d["bulkhead_inner_width_y"]) / 2
     bulkhead_height = d["z_max"] - d["bulkhead_open_bottom_z"]
     bulkhead_parts: dict[str, cq.Workplane] = {}
     for name, sign in (
@@ -541,11 +511,7 @@ def doghouse_components(params: dict | None = None) -> dict[str, cq.Workplane]:
             .translate(
                 (
                     d["x_min"] + t / 2,
-                    sign
-                    * (
-                        d["bulkhead_inner_width_y"] / 2
-                        + bulkhead_side_width / 2
-                    ),
+                    sign * (d["bulkhead_inner_width_y"] / 2 + bulkhead_side_width / 2),
                     d["bulkhead_open_bottom_z"],
                 )
             )
