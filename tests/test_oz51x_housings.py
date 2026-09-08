@@ -31,6 +31,8 @@ PARTS = [
     "oz51x-dual-rx-housing-vertical-gpt-5-6-sol",
     "oz51x-dual-tx-housing-vertical-fable5-extra",
     "oz51x-dual-rx-housing-vertical-fable5-extra",
+    "oz51x-dual-tx-housing-vertical-opus-5",
+    "oz51x-dual-rx-housing-vertical-opus-5",
 ]
 
 _CACHE: dict = {}
@@ -73,6 +75,29 @@ def _overlap(a, b) -> float:
 def _orient(H, shape):
     """Apply the housing's final mounting attitude to canonical probe geometry."""
     return H["m"].orient_to_mounting(shape, H["params"])
+
+
+def _pc_footprint_swapped(L, pc) -> bool:
+    """
+    Whether the rear signal connector's footprint is counter-rotated in the
+    canonical tray.
+
+    A vertical housing turns the canonical tray on its side, so a footprint
+    counter-rotation is what keeps a feature's long axis horizontal in the
+    finished attitude. That is the right call for the SC/APC adapters, whose
+    22 mm flange is longer than the horizontal variant's back panel is tall.
+    It is not automatically right for the signal connector: on a vertical
+    variant the back panel is 92.2 mm tall and only 32.7 mm wide, so counter-
+    rotating a DE-9 squeezes its 25 mm jackscrew span across the narrow axis.
+    Variants may therefore declare panel_connector.footprint_axis = "height"
+    to run the connector's long axis along the enclosure height instead.
+
+    Absent the key the legacy counter-rotation applies, so every variant that
+    predates it is unaffected.
+    """
+    if L["mounting_orientation"] != "vertical":
+        return False
+    return pc.get("footprint_axis", "width") == "width"
 
 
 def test_base_is_solid(part):
@@ -432,15 +457,15 @@ def test_panel_connector_cutout_and_keepout(part):
         pytest.skip("variant has no panel connector")
     L, base = H["L"], H["base"]
     h = H["params"]["housing"]
-    vertical = L["mounting_orientation"] == "vertical"
+    swapped = _pc_footprint_swapped(L, pc)
     pc_z = L["panel_connector_z"]
 
     cutout = (
         cq.Workplane("XY")
         .box(
-            (pc["cutout_h"] if vertical else pc["cutout_w"]) - 0.2,
+            (pc["cutout_h"] if swapped else pc["cutout_w"]) - 0.2,
             h["wall"] + 1.0,
-            (pc["cutout_w"] if vertical else pc["cutout_h"]) - 0.2,
+            (pc["cutout_w"] if swapped else pc["cutout_h"]) - 0.2,
             centered=(True, True, True),
         )
         .translate((pc["x"], L["plenum_y1"] + h["wall"] / 2.0, pc_z))
@@ -449,8 +474,8 @@ def test_panel_connector_cutout_and_keepout(part):
     assert v < 0.5, f"panel connector cutout blocked by {v:.1f} mm^3"
 
     for offset in (-pc["screw_spacing"] / 2.0, +pc["screw_spacing"] / 2.0):
-        px = pc["x"] if vertical else pc["x"] + offset
-        pz = pc_z + offset if vertical else pc_z
+        px = pc["x"] if swapped else pc["x"] + offset
+        pz = pc_z + offset if swapped else pc_z
         hole = cq.Solid.makeCylinder(
             pc["screw_hole_dia"] / 2.0 - 0.1,
             h["wall"] + 1.0,
@@ -464,9 +489,9 @@ def test_panel_connector_cutout_and_keepout(part):
     keepout = (
         cq.Workplane("XY")
         .box(
-            pc["rear_keepout_h"] if vertical else pc["rear_keepout_w"],
+            pc["rear_keepout_h"] if swapped else pc["rear_keepout_w"],
             pc["rear_keepout_depth"],
-            pc["rear_keepout_w"] if vertical else pc["rear_keepout_h"],
+            pc["rear_keepout_w"] if swapped else pc["rear_keepout_h"],
             centered=(True, False, True),
         )
         .translate((pc["x"], L["plenum_y1"] - pc["rear_keepout_depth"], pc_z))

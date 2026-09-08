@@ -38,6 +38,32 @@ cable saddles, baffled ventilation, gravity drains, assembly lead-ins, and a
 stiffened service cover. These additions must remain outside every original
 module, connector, fiber, screw, and harness keep-out.
 
+A second pair of production-refined derivatives lives in
+`oz51x-dual-tx-housing-vertical-opus-5` and
+`oz51x-dual-rx-housing-vertical-opus-5`. They add a wall-mount interface, an
+edge language, gravity drainage that reaches all three interior volumes, a
+lightened spool, a composed cover fastener pattern, and MJF PA12 manufacturing
+fixes. Their geometry lives in `refine_opus5.py` in this directory: a
+refinement *layer* that calls this directory's `model.py` for the interface
+geometry and applies its additions as boolean operations on top, so the shared
+builder is neither modified nor forked and the two variants stay symmetric
+peers.
+
+Those variants also **re-datum the rear signal connector**. On a vertical
+housing the back panel is 92.2 mm tall and only 32.7 mm wide, and
+counter-rotating a DE-9 onto the narrow axis needs 28.20 mm of canonical Z
+against the 26.72 mm that exists between the floor and the parting face. It
+does not fit, and forcing it is the shared cause of four defects present in
+every earlier variant: a 0.12 mm ligament above the upper jackscrew, a lower
+jackscrew buried in the floor slab, a rear keep-out spanning neither jackscrew,
+and a connector flange 0.10 mm off the wall-mount plane. §4's "mount the
+adapter long-axis horizontal" rule is derived from the SC/APC flange being
+longer than the *horizontal* variant's back panel is tall; it does not transfer
+to the signal connector on a vertical variant, where the tall axis is the roomy
+one. `panel_connector.footprint_axis` (`"width"` = the legacy counter-rotation,
+`"height"` = along the enclosure height) selects the arrangement and defaults
+to legacy, so every earlier variant is unaffected.
+
 Each housing is a two-bay open-top base tray plus a removable screwed-down
 lid, holding two Zonu OZ51x-family modules side by side in the canonical
 layout, plate-down. A vertical-stack layout may turn that complete architecture
