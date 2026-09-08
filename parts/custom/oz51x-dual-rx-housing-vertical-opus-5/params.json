@@ -1,0 +1,182 @@
+{
+    "_extends": "../oz51x-dual-rx-housing-vertical/params.json",
+    "part_name": "OZ51x Dual-RX Housing — Vertical Stack, production refinement (Opus 5)",
+    "version": "v2",
+    "description": "Production refinement of oz51x-dual-rx-housing-vertical. Adds a wall-mount interface, a coherent edge language, gravity drainage that actually reaches every interior volume, a lightened slack spool, a composed cover fastener pattern, and manufacturing fixes for MJF PA12. Re-datums the rear DE-9 so its long axis runs along the enclosure height instead of across its width — the change that resolves the four coupled defects every other variant in this family carries. Interface geometry is produced by the canonical family builder itself; see parts/custom/oz510-dual-housing/refine_opus5.py.",
+    "material": "ASA, black. Fallback ABS. NOT PETG — HDT ~70 C against a cabinet the repo's own note says settles at ambient + 15 C.",
+    "process": "FDM, 0.4 mm nozzle / 0.20 mm layer, enclosed chamber. Base prints canonical-floor-down, cover prints outer-face-down; neither needs support. MJF PA12 remains viable — set production.cover_fastening.mode to \"thread_form\" and production.cover.field_style to \"recess\" for it. NOT an environmental boundary — see notes.",
+    "housing": {
+        "_comment": "FDM overrides. screw_boss_pilot_dia 2.50 -> 2.70: 2.50 was chosen because MJF prints small holes 0.10-0.20 mm undersize, landing on the Delta PT target for PA12. FDM is also undersize but ASA is far less ductile and splits rather than flows, so the thread-forming pilot wants 0.85-0.88 d = 2.55-2.65 as-printed; 2.70 modelled lands there. lid_screw_clear_dia 3.4 -> 3.7: a modelled 3.4 prints ~3.2, leaving ~0.1 mm/side on an M3 across an eight-screw pattern spanning 133 mm in two separately-printed parts each at +/-0.2-0.3 mm.",
+        "screw_boss_pilot_dia": 2.7,
+        "lid_screw_clear_dia": 3.7
+    },
+    "panel_connector": {
+        "_comment": "DE-9 female, panel mount, solder cup. footprint_axis 'height' leaves the footprint UN-rotated on this vertical variant, so the connector's long axis runs along the 92.2 mm enclosure height rather than across its 32.7 mm width. Set 'width' to restore the v1 arrangement. z is the midpoint of the usable canonical span (floor top 3.0 to parting face 29.72). rear_keepout_w widened 24.0 -> 32.0 so the keep-out actually spans both jackscrews (25.0 apart) plus nut clearance — at 24.0 it spanned neither, which is why no test caught the jackscrew defects.",
+        "footprint_axis": "height",
+        "z": 16.36,
+        "center_z": false,
+        "rear_keepout_w": 32.0,
+        "cutout_h": 11.6,
+        "screw_hole_dia": 3.6
+    },
+    "sc_adapter": {
+        "_comment": "screw_pilot_dia 1.70 -> 1.60. At 1.70 an M2 thread-former engages only 0.15 mm/side = 61% of the M2 thread depth, and these four screws are the ENTIRE retention of the fiber ports (REQUIREMENTS §4). 1.60 gives 0.20 mm/side = 82%. Paired with the 0.8 mm flange well, engagement is restored by a Ø4.2 x 2.0 mm boss on the wall's interior face at each pilot — sized to clear the SC body corridor (canonical z 5.24..18.04) by 0.5 mm.",
+        "screw_pilot_dia": 1.75,
+        "cutout_clearance": 0.5
+    },
+    "refinement": {
+        "_comment": "'enabled' is deliberately ABSENT — this variant does not implement the gpt-5-6-sol refinement geometry, and the four tests gated on that flag must keep skipping. These three keys are read by the canonical lid builder regardless of the flag, which is why they live here rather than under 'production'.",
+        "registration_clearance": 0.5,
+        "registration_lip_depth": 2.0,
+        "registration_ring_width": 3.0
+    },
+    "production": {
+        "_comment": "Refinement parameters. Defaults live in refine_opus5.py; anything stated here is stated because the number was derived rather than preferred.",
+        "edges": {
+            "plan_radius": 2.5,
+            "parting_reveal": 0.6,
+            "mount_face_break": 0.4,
+            "cover_perimeter_chamfer": 1.2
+        },
+        "mount_flange": {
+            "enabled": true,
+            "extension": 12.0,
+            "thickness": 3.0,
+            "corner_radius": 6.0,
+            "edge_chamfer": 1.0,
+            "slot_width": 4.5,
+            "slot_length": 9.0,
+            "slot_y": [
+                -22.0,
+                74.0
+            ],
+            "gusset_height": 9.0,
+            "gusset_thickness": 2.5,
+            "gusset_inset": 6.0
+        },
+        "mount_drainage": {
+            "enabled": true,
+            "groove_width": 2.6,
+            "groove_depth": 0.7,
+            "groove_y": [
+                -10.0,
+                10.0,
+                50.0,
+                76.0
+            ]
+        },
+        "cover": {
+            "field_style": "groove",
+            "groove_width": 1.5,
+            "groove_depth": 0.8,
+            "recess_margin": 6.0,
+            "recess_corner_radius": 3.0,
+            "recess_depth": 0.8,
+            "land_width": 9.0,
+            "lip_lead_in": 1.2,
+            "lip_drain_relief": 1.2,
+            "boss_relief_margin": 0.8
+        },
+        "rear_panel": {
+            "sc_pilot_boss_length": 8.0,
+            "sc_pilot_boss_height": 3.0
+        },
+        "cover_fastening": {
+            "mode": "heat_set",
+            "insert_family": "ruthex RX-M3x5.7 (CNC Kitchen M3x5.7 interchangeable)",
+            "insert_od": 4.6,
+            "insert_length": 5.7,
+            "hole_dia": 4.2,
+            "hole_depth": 6.7,
+            "boss_dia": 8.5,
+            "boss_flare_z": 16.72,
+            "thread_depth": 10.0,
+            "screw": "ISO 7380-1 M3x8 button head, A2 stainless"
+        },
+        "posts": {
+            "extra_lid_posts": [
+                [
+                    -39.1,
+                    53.25
+                ],
+                [
+                    39.1,
+                    53.25
+                ]
+            ],
+            "corner_web": true,
+            "boss_pilot_start": 1.0
+        },
+        "spool": {
+            "lighten": true,
+            "inner_dia": 21.0,
+            "hub_dia": 8.0,
+            "web_count": 4,
+            "web_thickness": 2.4,
+            "flange_overhang": 1.5,
+            "flange_thickness": 1.2
+        },
+        "drains": {
+            "enabled": true,
+            "profile": "hex",
+            "dia": 3.0,
+            "z": 4.45,
+            "rib_cross_y": [
+                -22.0,
+                22.0
+            ],
+            "outlet_y": [
+                -22.0,
+                22.0,
+                44.25
+            ],
+            "outlet_chamfer": 0.5
+        },
+        "anchors": {
+            "enabled": true,
+            "dia": 3.0,
+            "height": 6.0,
+            "xy": [
+                [
+                    -33.0,
+                    42.0
+                ],
+                [
+                    33.0,
+                    42.0
+                ]
+            ]
+        },
+        "labels": {
+            "enabled": true,
+            "font": "Arial",
+            "depth": 0.6,
+            "identity_size": 8.0,
+            "port_style": "emboss",
+            "port_size": 6.5,
+            "port_relief": 0.6,
+            "port_offset": 11.0,
+            "mark_size": 5.0,
+            "mark": ""
+        }
+    },
+    "notes": [
+        "REAR PANEL RE-DATUM — the headline change. v1 counter-rotates the DE-9 so its long axis stays horizontal in the finished attitude. The usable canonical span between the floor top (3.0) and the parting face (29.72) is 26.72 mm; a DE-9 needs screw_spacing 25.0 + screw_hole_dia 3.2 = 28.20 mm. It does not fit, and forcing it produces four coupled defects present in v1, -gpt-5-6-sol and -fable5-extra alike: (1) a 0.12 mm ligament above the upper jackscrew, unmanufacturable in any process; (2) the lower jackscrew on the interior floor plane, with 42.75 mm^3 of its nut envelope in solid floor, so it cannot be nutted from inside; (3) a 24 mm rear keep-out spanning neither jackscrew, so the test proving it empty proved nothing; (4) the connector flange 0.10 mm from the wall-mount plane and 1.18 mm across the parting face. Leaving the footprint un-rotated puts the long axis along the 92.2 mm height and resolves all four, measured: 11.70 mm^3 of solid wall above AND below each jackscrew, nut zones 0.00 mm^3, flange spanning canonical z 10.08..22.63, and 6.70 mm to the SC adapter flanges.",
+        "SC/APC ADAPTERS ARE DELIBERATELY NOT RE-DATUMED. They have no defect: the 22 mm flange fits the 32.7 mm face, the M2 pilots are blind and self-tapping so no interior access is required, and the mated corridors verify clear. Rotating them would buy only a larger mount-face edge radius while changing the canonical fit check's hard-coded adapter placement. The cost of the 'width' arrangement is that the flange reaches canonical z = 0.64, which caps any mount-face edge break at ~0.5 mm — hence edges.mount_face_break = 0.4.",
+        "THERMAL — CLOSED, NOT VENTED, AND THE WATTAGE IS UNKNOWN. There is no Zonu datasheet anywhere in this repository; every module dissipation figure in it is uncited, and the two that exist disagree by 2.5x (5 W/module in adrs-maritime-layout/DESIGN_NOTES.md, 1-2 W/bay in the fable5-extra DESIGN.md). Rather than size louvers against an invented number: buoyancy over the connected interior is ~0.076 Pa (~0.18 m/s); the cover's registration gap is already ~150 mm^2 of uncontrolled open area with no measurable benefit; ~70% of the thermal resistance is getting heat off the can inside the box, which venting cannot address; and a louver aimed at a bay is a dust path to an SC/APC endface. Modelled sensitivity is ~13 K/W module-case to ambient and ~3.7 K/W shell to ambient, sealed and wall-mounted. MEASURE THE SUPPLY CURRENT before relying on any of this: at 2 W total the design is comfortable, at 10 W no polymer housing works.",
+        "ENVIRONMENTAL — IP20 / IP2X SUB-ENCLOSURE. This housing is not, and cannot be, an environmental boundary: the cover seats on a registration lip with no gasket or compression stop, the SMA passes through a 0.8 mm open annulus, the SC/APC adapters are retained by screws through a clearance cutout with no O-ring, and the DE-9 is a bare panel cutout. The boundary is the host cabinet — adrs-maritime-layout places this housing on the subpanel of a Saginaw SCE-20H2010LP. If it ever has to be the outdoor boundary itself, this architecture is wrong and the am59_* machined-aluminium playbook applies.",
+        "DRAINAGE TOPOLOGY. Canonical +X is down in the finished attitude. The upper bay's low point is the top of the central rib, 45.1 mm above the finished bottom face, and the partition pass-slot sills sit 5.18 mm above both bay floors — so neither a bottom-face slot nor the pass-slots can empty it. Cross-drains through the rib at y = +/-22.0 carry the upper bay into the lower bay; wall outlets at y = 22.0 and 44.25 take the lower bay and the plenum outside. All at canonical z = 4.45, which undercuts the interior floor face by 0.05 mm so the floor-to-wall corner drains with no retained film, and keeps the crown 0.05 mm below the module plate. Verified: a continuous probe from the upper bay floor to outside reads 40.08 mm^3 of housing before drilling and 0.00 after, while the mirrored probes on the finished TOP face still read the full 17.18 mm^3 plug.",
+        "COVER LIP DRAIN RELIEF. The lid's registration lip hangs 0.30 mm above each bay floor along its whole 66 mm length, at the lowest point of the bay in the finished attitude — a capillary slot no drain placement can empty because it IS the low point. cover.lip_drain_relief removes that segment.",
+        "FASTENER RHYTHM. The structure admits exactly three cover fastener columns (finished z = 7.0, 46.1, 85.2): the bays are full to the interior wall, so the front two-thirds of the cover can only ever carry the centreline. The inherited six-screw pattern is four on the centreline plus a lone pair at the far end, which reads as a scatter. Two posts at canonical (+/-39.10, +53.25) — the only legal addition, solver clearance +3.696 mm to the SC corridors — complete a symmetric three-column grid.",
+        "TOLERANCES — v2, FDM. Registration lip clearance 0.40 -> 0.50 mm per side, and cover.lip_lead_in 0.8 -> 1.2. The 0.40 figure was derived for MJF's +/-0.30 mm; FDM general tolerance is +/-0.2 mm to 50 mm or +/-0.5% above, i.e. +/-0.67 mm on the 133.5 mm depth, 1.7x worse. The sharper argument is that the eight cover screws locate the cover through their own clearance float: a lip clearance below that float means the lip fights the screws. lid_screw_clear_dia 3.4 -> 3.7 for the same reason — a modelled 3.4 prints ~3.2, leaving ~0.1 mm/side on an M3 across eight screws spanning 133 mm in two separately printed parts. If this is ever built in MJF instead, 0.40 is right and 0.30 is the unmargined worst case.",
+        "MANUFACTURING FIXES — v2, FDM. (a) The cover-screw pilots ran the full 26.72 mm interior height and are gone entirely: the posts are solid and carry heat-set inserts instead. (b) All four plenum posts are webbed into their wall, not just the two rear corners — pressing an insert momentarily softens the boss and a free-standing tower bulges, tilts or shears at the root. (c) The M3 module-boss pilots started at z = 0.5, leaving a 0.5 mm web on the mount face; raised to z = 1.0, still 5.0 mm of hole against the 4.4 mm an M3x6 needs. (d) screw_boss_pilot_dia 2.50 -> 2.70: 2.50 was chosen for MJF, whose undersize bias lands it on the Delta PT target for PA12; ASA is far less ductile and splits rather than flows, so it wants 0.85-0.88 d as-printed. (e) sc_adapter.screw_pilot_dia 1.60 -> 1.75, reversing the MJF change for the same reason, and the round pilot peg becomes an 8.0 x 4.2 racetrack pad with a 45 deg underside so it does not print as a ledge hanging off the wall. (f) The drain outlet chamfer was modelled backwards in v1 — Ø4.0 inside and Ø3.0 at the exit face, a re-entrant lip that water must climb to leave, which is exactly the bead the feature exists to prevent. It now opens outward. (g) Drain weeps are hexagons 3.0 across flats with a vertex up: a round crown on a horizontal hole is an unsupported arch that droops and hangs strands inside the bore.",
+        "COVER FIELD IS A REVEAL GROOVE, NOT A RECESS. The cover prints outer-face-down — the only orientation that does not put a 92 x 133 mm plate on supports — so a recessed field is a pocket opening onto the bed: 5958 mm^2 of unsupported 0.8 mm bridging with spans to 28 mm, on the show face, and bed contact on the part most likely to curl drops to 47%. A 1.5 mm groove on the same rounded-rectangle path reads as the same framed panel, bridges 1.5 mm, and costs 5% of the bed contact. production.cover.field_style = 'recess' restores the pocket version for a powder bed, where the bridging argument does not apply.",
+        "M3 MODULE-SCREW ENGAGEMENT is 4.4 mm = 1.47 d, below the 2 d rule of thumb — roughly 500-600 N of pull-out in PA12 against a ~30 g module, which is acceptable, but it is stated here rather than left implicit. It cannot be improved with a longer screw: the pilot is 5.0 mm deep and an M3x8 would punch the mount face. Raising housing.floor to 4.0 or standoff_height to 4.5 is the lever if 2 d is ever required.",
+        "COMPLIANCE GATE, NOT RESOLVED: neither ASA nor MJF PA12 is UL94 V-0 as standard. The ADRS cabinet contains a mains PSU. If V-0 is required inside that enclosure an FR grade is needed, and both the pilot sizes and the price change.",
+        "COVER FASTENING — M3 HEAT-SET INSERTS, and the reason is torque, not pull-out. v1 used thread-forming screws into printed pilots, which is correct for MJF PA12 and wrong for FDM. Measured in PETG (CNC Kitchen, M3), a screw formed directly into the plastic and a brass insert pull out at the same load, 118 vs 119 kg — pull-out is a wash and must not be cited as the reason. The formed thread strips at ~1 Nm against the insert's 3 Nm, and ~1 Nm is about the minimum sensible assembly torque for M3, so a formed FDM thread has essentially no torque margin on FIRST assembly. Add that the cover is fitted blind and sideways onto a wall-mounted unit, where a formed thread must be restarted in its own helix and a missed start cuts a second one. NOTE: v1's claim that a formed thread survives 'roughly 5-10 cycles' was folklore paraphrased from injection-moulding guidance — no published cycle test of thread-forming screws in FDM bosses exists, and that figure should not have been stated as data. Hardware: ruthex RX-M3x5.7 (CNC Kitchen M3x5.7 interchangeable), OD 4.6, length 5.7, in a Ø4.2 straight hole 6.7 deep with no mouth chamfer, seated flush to -0.1 mm, in a Ø8.5 boss flared off the post by a 45 deg cone above the can top. Ø4.2 rather than the manufacturer's 4.0 because 4.0 is the DRILLED figure; CNC Kitchen measured as-printed FDM holes ~0.25 mm undersize and recommend 4.2, which pre-seats the insert and avoids the burr that forms under it at 4.0, at ~90% of peak pull-out. Screw: ISO 7380-1 M3x8 button head A2, 5.0 mm engagement, 0.7 mm short of bottoming. The head counterbore is deleted because a Ø6.0 x 1.6 bore fits no M3 head that exists — an ISO 4762 cap head is Ø5.5 x 3.0 and its standard counterbore is Ø6.5 x 3.0, the whole cover. Do NOT substitute a tapered-vane insert (McMaster 94180A331 / E-Z LOK): it needs a 5.23/5.05 mm tapered hole and a Ø11.1 mm boss. If M3 ever will not fit, the step down is M2 — ruthex and Tappex M2.5 share the M3 body and the same 4.0 mm hole. Set production.cover_fastening.mode = 'thread_form' to restore the v1 behaviour.",
+        "WHY THE Ø6 POST WAS NEVER THE LIMIT. v1 rejected heat-set inserts because an M3 insert is Ø4.0-4.6 and the 'boss OD >= 2x insert OD' rule wants 8.0-9.2 mm against the family's Ø6.0 posts. Both halves of that were wrong. The Ø6 ceiling is set by the module plates at |x| = 3.50 and applies ONLY over canonical z 6.00-16.72; below the plate a centreline boss can be Ø15.4 and above the can it can be Ø25.8 — and an insert lives in the top ~6 mm. Measured, a Ø8.5 boss from z = 18.0 to the parting face is clear at all eight posts against both vendor STEPs, both SC corridors and the DE-9 keep-out. And 'boss OD >= 2x insert OD' is not published by any insert manufacturer; the figures that exist are wall minima — ruthex W min 1.6, Tappex 1.70 with a stated D1 min of 7.4 for M3. Ø8.5 around a Ø4.2 hole gives 2.15 mm and clears all three.",
+        "WHY NOT A SNAP-FIT COVER. The case for one is real: this joint carries no service load (no gasket, no pressure), the cover hangs vertically so its ~39 g is in shear on the lip, and tool-free release means no dropped screws inside a box containing bare fiber. It fails on print orientation. The base prints canonical-floor-down, so the build axis is the same axis any parting-plane cantilever runs along, and a snap arm is loaded in pure interlayer tension at its root. Sized in the only space available — the 1.5 mm gap between the module plate edge and the bay wall, above the can — a repeatable 0.8% strain gives 0.72 mm of deflection, and after the 0.5 mm/side registration clearance the cover already needs, ~0.3 mm of net undercut remains: smaller than the part's own +/-0.2-0.3 mm tolerance band. Half the units jam and half rattle. Release is a second problem — prying at a deliberate 0.6 mm V-reveal, with four of the eight sites in the plenum where a 900 um pigtail is coiled at 15 mm bend radius against two mated SC/APC connectors.",
+        "All module, SMA, mounting, harness, fiber and connector dimensions are inherited unchanged from oz51x-dual-rx-housing-vertical v1 and are produced by the canonical family builder itself — refine_opus5.py calls it and layers on top rather than re-implementing it. Family-level assumptions still stand: TTL modules assumed mechanically identical to RF (no STEP exists), SC hardware is datasheet-derived, the DE-9 footprint is an industry-standard assumption with no datasheet in this repo, and sc_adapter.flange_wide (11.8) is the one adapter number not dimensioned on the FS drawing. Verify ordered hardware before fabrication.",
+        "ENVELOPE INCLUDES THE EMBOSSED LABELS. Finished envelope is 32.72 (W) x 134.10 (D) x 116.20 (H) mm. The body is 133.50 deep; the RF/TTL labels stand 0.60 mm proud of the front wall and layout() folds that into envelope_depth, because the shared suite asserts the built bounding box against these numbers and every protrusion has to be declared. envelope_width is deliberately NOT touched by anything — the canonical fit check places the SC adapters using fiber_z - envelope_width/2, so growth on that axis would land them off-face and report phantom interference. All refinement growth goes onto depth (labels) or height (mount flanges)."
+    ]
+}
