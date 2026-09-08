@@ -63,9 +63,13 @@ def _stat(obj) -> str:
         return "no solid geometry yet"
 
 
-def debug_build(part: str | Path, render: bool = False,
-                out_dir: str | Path | None = None, size: int = 700,
-                quiet: bool = False) -> dict:
+def debug_build(
+    part: str | Path,
+    render: bool = False,
+    out_dir: str | Path | None = None,
+    size: int = 700,
+    quiet: bool = False,
+) -> dict:
     """
     Run the staged build. Returns {"ok": bool, "stages": [...], "failed_after":
     str|None, "error": str|None, "renders": [paths]}.
@@ -79,26 +83,36 @@ def debug_build(part: str | Path, render: bool = False,
     module = load_part_module(part_dir)
     params = module.load_params() if hasattr(module, "load_params") else None
 
-    result: dict = {"part": part_dir.name, "stages": [], "failed_after": None,
-                    "error": None, "renders": [], "ok": False}
+    result: dict = {
+        "part": part_dir.name,
+        "stages": [],
+        "failed_after": None,
+        "error": None,
+        "renders": [],
+        "ok": False,
+    }
 
     if not hasattr(module, "build_stages"):
-        say(f"== debug-build: {part_dir.name} == (no build_stages() -- "
-            f"running create_part() whole)")
+        say(
+            f"== debug-build: {part_dir.name} == (no build_stages() -- running create_part() whole)"
+        )
         try:
             t0 = time.perf_counter()
             whole = module.create_part(params)
-            say(f"  [PASS ] create_part(): {_stat(whole)} "
-                f"in {time.perf_counter() - t0:.1f}s")
-            say("  hint: add a build_stages() generator to model.py to enable "
-                "stage-by-stage bisection")
+            say(f"  [PASS ] create_part(): {_stat(whole)} in {time.perf_counter() - t0:.1f}s")
+            say(
+                "  hint: add a build_stages() generator to model.py to enable "
+                "stage-by-stage bisection"
+            )
             result["ok"] = True
         except Exception as e:
             result["error"] = f"{type(e).__name__}: {e}"
             say(f"  [ERROR] create_part(): {result['error']}")
             say(traceback.format_exc(limit=8))
-            say("  hint: add a build_stages() generator to model.py so the "
-                "failing operation can be localized")
+            say(
+                "  hint: add a build_stages() generator to model.py so the "
+                "failing operation can be localized"
+            )
         return result
 
     say(f"== debug-build: {part_dir.name} ==")
@@ -115,14 +129,17 @@ def debug_build(part: str | Path, render: bool = False,
         except Exception as e:
             result["failed_after"] = last_good
             result["error"] = f"{type(e).__name__}: {e}"
-            say(f"  [ERROR] stage {n + 1} (after "
+            say(
+                f"  [ERROR] stage {n + 1} (after "
                 + (f"'{last_good}'" if last_good else "the start")
-                + f") -- {result['error']}")
+                + f") -- {result['error']}"
+            )
             say("".join(traceback.format_exception(e, limit=8)))
             if last_good is not None:
-                say(f"  last good stage: '{last_good}'"
-                    + (f" -- rendered in {out}" if render else
-                       " -- re-run with --render to see it"))
+                say(
+                    f"  last good stage: '{last_good}'"
+                    + (f" -- rendered in {out}" if render else " -- re-run with --render to see it")
+                )
             return result
 
         n += 1
@@ -136,8 +153,13 @@ def debug_build(part: str | Path, render: bool = False,
 
             shape = _shape_of(wp)
             try:
-                written = render_scene([(shape, (0.62, 0.66, 0.72), 1.0)], out,
-                                       f"{n:02d}_{name}", views=("iso",), size=size)
+                written = render_scene(
+                    [(shape, (0.62, 0.66, 0.72), 1.0)],
+                    out,
+                    f"{n:02d}_{name}",
+                    views=("iso",),
+                    size=size,
+                )
                 result["renders"] += [str(p) for p in written]
             except Exception as e:
                 say(f"       (stage render failed: {e})")
@@ -151,31 +173,35 @@ def debug_build(part: str | Path, render: bool = False,
             staged = _shape_of(wp)
             dv = abs(final.Volume() - staged.Volume())
             if dv > 1e-6 * max(1.0, abs(final.Volume())):
-                say(f"  [WARN ] create_part() volume differs from last stage "
-                    f"by {dv:.3f} mm^3 -- build_stages() has drifted")
+                say(
+                    f"  [WARN ] create_part() volume differs from last stage "
+                    f"by {dv:.3f} mm^3 -- build_stages() has drifted"
+                )
                 result["drift_mm3"] = round(dv, 3)
         except Exception:
             pass
 
-    say(f"  all {n} stage(s) built"
-        + (f", renders in {out}" if render and result["renders"] else ""))
+    say(
+        f"  all {n} stage(s) built"
+        + (f", renders in {out}" if render and result["renders"] else "")
+    )
     return result
 
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(
-        description="Build a part stage by stage; localize the first failure.")
+        description="Build a part stage by stage; localize the first failure."
+    )
     ap.add_argument("part", help="part directory, or a name under parts/custom|vendor")
-    ap.add_argument("--render", action="store_true",
-                    help="render an iso view of every completed stage")
-    ap.add_argument("-o", "--out", help="stage render directory "
-                                        "(default: <part>/exports/debug/)")
+    ap.add_argument(
+        "--render", action="store_true", help="render an iso view of every completed stage"
+    )
+    ap.add_argument("-o", "--out", help="stage render directory (default: <part>/exports/debug/)")
     ap.add_argument("--size", type=int, default=700, help="render size in px")
     args = ap.parse_args(argv)
 
     try:
-        result = debug_build(args.part, render=args.render, out_dir=args.out,
-                             size=args.size)
+        result = debug_build(args.part, render=args.render, out_dir=args.out, size=args.size)
     except ValueError as e:
         print(f"ERROR: {e}", file=sys.stderr)
         return 2

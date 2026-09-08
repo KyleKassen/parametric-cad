@@ -162,9 +162,7 @@ def test_base_plate_has_slots():
 
     result = create_base_plate()
     face_count = len(result.val().Faces())
-    assert face_count > 20, (
-        f"Expected many faces (rails + slots), got {face_count}"
-    )
+    assert face_count > 20, f"Expected many faces (rails + slots), got {face_count}"
 
 
 # ---------------------------------------------------------------------------
@@ -205,9 +203,7 @@ def test_parametric_heatsink_clearance():
     bb_tall = result_tall.val().BoundingBox()
 
     height_diff = bb_tall.zlen - bb_default.zlen
-    assert height_diff > 15, (
-        f"Expected ~20mm height increase, got {height_diff:.1f}mm"
-    )
+    assert height_diff > 15, f"Expected ~20mm height increase, got {height_diff:.1f}mm"
 
 
 def test_parametric_standoff_height():

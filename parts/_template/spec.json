@@ -1,26 +1,35 @@
 {
     "schema": "part-spec/1",
-    "part_name": "Example Mounting Plate",
+    "part_name": "Example Sensor Enclosure",
     "units": "mm",
     "solid_count": 1,
 
     "dimensions": [
-        { "id": "envelope_length_x", "kind": "bbox", "axis": "x", "expected": 80.0, "tol": 0.1 },
-        { "id": "envelope_width_y",  "kind": "bbox", "axis": "y", "expected": 60.0, "tol": 0.1 },
-        { "id": "envelope_thickness_z", "kind": "bbox", "axis": "z", "expected": 6.0, "tol": 0.1 },
-        { "id": "center_bore", "kind": "cylinder", "diameter": 20.0, "tol": 0.1,
-          "axis": "Z", "type": "hole", "count_min": 1 },
-        { "id": "corner_counterbores", "kind": "cylinder", "diameter": 10.0, "tol": 0.1,
-          "axis": "Z", "type": "hole", "count_min": 4 },
-        { "id": "corner_screw_holes", "kind": "cylinder", "diameter": 5.5, "tol": 0.1,
-          "axis": "Z", "type": "hole", "count_min": 4 },
-        { "id": "material_volume", "kind": "volume", "min": 20000, "max": 28800,
+        { "id": "envelope_length_x", "kind": "bbox", "axis": "x", "expected": 153.0, "tol": 0.2 },
+        { "id": "envelope_width_y", "kind": "bbox", "axis": "y", "expected": 90.0, "tol": 0.2 },
+        { "id": "envelope_height_z", "kind": "bbox", "axis": "z", "expected": 34.0, "tol": 0.2 },
+        { "id": "lid_screw_taps", "kind": "cylinder", "diameter": 3.3, "tol": 0.1,
+          "axis": "Z", "type": "hole", "count_min": 10 },
+        { "id": "connector_screw_taps", "kind": "cylinder", "diameter": 2.5, "tol": 0.1,
+          "axis": "X", "type": "hole", "count_min": 4 },
+        { "id": "material_volume", "kind": "volume", "min": 104000, "max": 128000,
           "severity": "soft" }
     ],
 
+    "design": {
+        "role": "enclosure",
+        "min_score": 70,
+        "severity": "hard",
+        "metrics": {
+            "edge_break_coverage": { "min_score": 70 }
+        }
+    },
+
     "assumptions": [
-        "Dimensions mirror params.json — keep spec.json in sync when iterating.",
-        "The volume band is stock (80x60x6 = 28800 mm^3) minus holes; soft because it is a sanity band, not a drawing requirement."
+        "envelope_length_x is 153.0, not the 150.0 in params.json: the connector land stands 3.0 mm proud of the +X face. Bounding boxes measure the artifact, not the intent.",
+        "The volume band is a sanity band, not a drawing requirement, so it is soft. Recompute it with `make spec-init` whenever the geometry changes.",
+        "design.role is `enclosure` because the part is a housing and every exterior face is a product surface. It is also the strictest rubric, which is why it is the safe thing to inherit: change it only when the part you build here genuinely is not a housing, and write the reason in DESIGN.md. See DESIGN_LANGUAGE.md section 2.1.",
+        "design.min_score 70 is the repo bar from DESIGN_LANGUAGE.md. Writing it is what makes the check HARD - delete it and the review still runs, but only warns."
     ],
     "unresolved": []
 }

@@ -153,20 +153,30 @@ def run_fit(fit_spec: dict, part_dir: Path) -> tuple[list[dict], list]:
     for case in fit_spec.get("cases", []):
         cid = case.get("id", "?")
         severity = case.get("severity", "hard")
-        constraints = [k for k in ("max_interference", "min_clearance", "max_outside")
-                       if k in case]
+        constraints = [k for k in ("max_interference", "min_clearance", "max_outside") if k in case]
         if not constraints:
-            checks.append({"id": f"fit:{cid}", "status": "ERROR", "severity": severity,
-                           "message": "case has no max_interference/min_clearance/max_outside"})
+            checks.append(
+                {
+                    "id": f"fit:{cid}",
+                    "status": "ERROR",
+                    "severity": severity,
+                    "message": "case has no max_interference/min_clearance/max_outside",
+                }
+            )
             continue
         try:
             a = build(case.get("a", {"source": "builder", "builder": "create_part"}), "a")
             b = build(case["b"], "b")
         except Exception as e:
             for key in constraints:
-                checks.append({"id": f"fit:{cid}:{key}", "status": "ERROR",
-                               "severity": severity,
-                               "message": f"could not build solids -- {type(e).__name__}: {e}"})
+                checks.append(
+                    {
+                        "id": f"fit:{cid}:{key}",
+                        "status": "ERROR",
+                        "severity": severity,
+                        "message": f"could not build solids -- {type(e).__name__}: {e}",
+                    }
+                )
             continue
 
         for key in constraints:
@@ -183,18 +193,30 @@ def run_fit(fit_spec: dict, part_dir: Path) -> tuple[list[dict], list]:
                     v = sum(abs(s.Volume()) for s in outside.Solids())
                     ok, unit, rel = v <= limit, "mm^3", "<="
             except Exception as e:
-                checks.append({"id": f"fit:{cid}:{key}", "status": "ERROR",
-                               "severity": severity,
-                               "message": f"{type(e).__name__}: {e}"})
+                checks.append(
+                    {
+                        "id": f"fit:{cid}:{key}",
+                        "status": "ERROR",
+                        "severity": severity,
+                        "message": f"{type(e).__name__}: {e}",
+                    }
+                )
                 continue
-            checks.append({"id": f"fit:{cid}:{key}", "status": "PASS" if ok else "FAIL",
-                           "severity": severity, "measured": round(v, 3),
-                           "message": f"{v:.3f} {unit} (require {rel} {limit})"})
+            checks.append(
+                {
+                    "id": f"fit:{cid}:{key}",
+                    "status": "PASS" if ok else "FAIL",
+                    "severity": severity,
+                    "measured": round(v, 3),
+                    "message": f"{v:.3f} {unit} (require {rel} {limit})",
+                }
+            )
     return checks, scene
 
 
-def render_fit_scene(scene: list, out_dir: Path,
-                     views: tuple[str, ...] = ("iso", "top"), size: int = 900) -> list[Path]:
+def render_fit_scene(
+    scene: list, out_dir: Path, views: tuple[str, ...] = ("iso", "top"), size: int = 900
+) -> list[Path]:
     """Render the assembled fit scene (reference solid translucent)."""
     from lib.render_step import render_scene
 

@@ -1,5 +1,5 @@
 """
-Tests for the example mounting plate.
+Tests for the example sensor enclosure - the `make new-part` scaffold.
 
 These validate that parametric changes produce geometrically valid parts.
 Run with: make test  (or: pytest tests/)
@@ -47,16 +47,20 @@ def test_example_part_dimensions():
     result = create_part(params)
     bb = result.val().BoundingBox()
 
-    # Bounding box should match declared dimensions (fillets shrink it slightly)
+    # X is longer than the declared envelope: the connector land stands proud
+    # of the +X face. Bounding boxes measure the artifact, not the intent -
+    # spec.json records the same 153.0 for the same reason.
+    expected_x = dims["length"] + params["features"]["connector"]["land_raised"]
+
     tolerance = 0.1  # mm
-    assert abs(bb.xlen - dims["length"]) < tolerance, (
-        f"X dimension: expected ~{dims['length']}, got {bb.xlen}"
+    assert abs(bb.xlen - expected_x) < tolerance, (
+        f"X dimension: expected ~{expected_x}, got {bb.xlen}"
     )
     assert abs(bb.ylen - dims["width"]) < tolerance, (
         f"Y dimension: expected ~{dims['width']}, got {bb.ylen}"
     )
-    assert abs(bb.zlen - dims["thickness"]) < tolerance, (
-        f"Z dimension: expected ~{dims['thickness']}, got {bb.zlen}"
+    assert abs(bb.zlen - dims["height"]) < tolerance, (
+        f"Z dimension: expected ~{dims['height']}, got {bb.zlen}"
     )
 
 
@@ -66,16 +70,15 @@ def test_example_part_custom_params():
 
     params = load_params()
 
-    # Double the thickness
-    params["dimensions"]["thickness"] = 12.0
+    # Raise the enclosure. Nothing dimensional is hardcoded in model.py, so a
+    # params-only change has to propagate all the way to the bounding box.
+    params["dimensions"]["height"] = 44.0
 
     result = create_part(params)
     bb = result.val().BoundingBox()
 
     tolerance = 0.1
-    assert abs(bb.zlen - 12.0) < tolerance, (
-        f"Z dimension: expected ~12.0, got {bb.zlen}"
-    )
+    assert abs(bb.zlen - 44.0) < tolerance, f"Z dimension: expected ~44.0, got {bb.zlen}"
 
 
 def test_example_part_has_holes():
@@ -90,6 +93,4 @@ def test_example_part_has_holes():
 
     face_count = len(solid.Faces())
     # A box has 6 faces. Our part has holes and fillets, so it should have more.
-    assert face_count > 6, (
-        f"Expected more than 6 faces (holes + fillets), got {face_count}"
-    )
+    assert face_count > 6, f"Expected more than 6 faces (holes + fillets), got {face_count}"

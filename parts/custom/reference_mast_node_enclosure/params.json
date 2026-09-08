@@ -1,0 +1,221 @@
+{
+    "part_name": "Reference mast node enclosure",
+    "version": "v1",
+    "description": "Sealed IP66 mast-mounted electronics body: 3-axis machined 6061-T6 tub with a bolted gasketed lid on the underside, an integral finned cold plate on the roof, a MIL-style circular connector plinth and a rectangular connector land under a drip hood, and a stepped rear mounting flange.",
+    "units": "mm",
+    "material": "6061-T6 aluminium",
+    "process": "machined-aluminium",
+    "finish": "hard anodise to MIL-A-8625 Type III class 2, matte black",
+    "orientation": {
+        "note": "Model frame = installed frame. +Z is up, +Y is outboard (away from the mast), -Z is the seal/lid face, the mast bracket bolts to the -Y flange.",
+        "datum_a": "-Z seal face (z = 0) - the lid gasket land and the machining datum",
+        "datum_b": "-Y flange pad - the mast interface",
+        "datum_c": "x = 0 part centreline"
+    },
+    "dimensions": {
+        "body_length": 198.0,
+        "body_depth": 125.0,
+        "body_height": 74.0,
+        "plan_radius": 16.0,
+        "rim_break": 2.5,
+        "cavity_length": 150.0,
+        "cavity_width": 78.0,
+        "cavity_depth": 60.0,
+        "cavity_radius": 16.0,
+        "cavity_mouth_break": 1.5,
+        "envelope_limit": [
+            200.0,
+            150.0,
+            90.0
+        ],
+        "envelope_note": "The envelope is 200 x 150 x 90; the part is designed 2.0 / 1.4 / 2.0 mm inside it so a tolerance stack cannot push it out."
+    },
+    "features": {
+        "lid_seal": {
+            "description": "Continuous face-seal O-ring in the -Z land, outboard of the cavity mouth and inboard of the lid screws. Both groove rims carry a 0.4 mm lead-in so the cord is not shaved on assembly; oring_groove() does not build that, so it is cut separately.",
+            "cord_diameter": 2.62,
+            "groove_length": 168.0,
+            "groove_width": 96.0,
+            "groove_radius": 24.0,
+            "rim_break": 0.4
+        },
+        "lid_fasteners": {
+            "description": "Blind tapped lid screws, perimeter rhythm solved by lib.features.bolt_pattern.",
+            "size": "M4",
+            "inset": 9.0,
+            "target_pitch": 34.5,
+            "tap_depth": 10.0
+        },
+        "cold_plate": {
+            "description": "Roof of the cavity: the dissipating modules bolt up to it and the fin bank stands on its far side. Thickness is body_height - cavity_depth.",
+            "thickness": 14.0,
+            "grid_pitch": 30.0,
+            "grid_size": [
+                120.0,
+                60.0
+            ],
+            "grid_fastener": "M5",
+            "grid_tap_depth": 10.0,
+            "standoff_fastener": "M3",
+            "standoff_height": 10.0,
+            "standoff_base_fillet": 1.0,
+            "standoff_positions": [
+                [
+                    66.0,
+                    26.0
+                ],
+                [
+                    66.0,
+                    -26.0
+                ],
+                [
+                    -66.0,
+                    26.0
+                ],
+                [
+                    -66.0,
+                    -26.0
+                ]
+            ]
+        },
+        "fin_bank": {
+            "description": "Vertical plate fins on the +Z roof; pitch chosen for natural convection, not for looks.",
+            "height": 14.0,
+            "blade_length": 114.0,
+            "span": 176.0,
+            "pitch": 9.0,
+            "thickness": 2.0
+        },
+        "side_panel": {
+            "description": "Layered flank: a shallow recessed panel with a proud perimeter frame, and inside it a deeper lightening pocket taking the 24 mm seal-band wall down to 9.5 mm, with four vertical ribs carrying the handling load that wall no longer can. Both mouths are broken.",
+            "panel_length": 80.0,
+            "panel_height": 56.0,
+            "panel_depth": 2.5,
+            "panel_radius": 12.0,
+            "pocket_length": 60.0,
+            "pocket_height": 38.0,
+            "pocket_depth": 12.0,
+            "pocket_radius": 8.0,
+            "centre_v": 37.0,
+            "mouth_break": 1.0,
+            "rib_pattern": "parallel",
+            "rib_thickness": 3.0,
+            "rib_count": 4
+        },
+        "circular_connector": {
+            "description": "MIL-style circular shell on a concentric step-ring plinth - never butted onto the wall.",
+            "centre": [
+                -54.0,
+                34.0
+            ],
+            "plinth_lower_dia": 52.0,
+            "plinth_upper_dia": 44.0,
+            "plinth_height": 6.0,
+            "plinth_steps": 2,
+            "plinth_break": 1.0,
+            "bore": 26.0,
+            "bolt_circle": 34.0,
+            "screw": "M3",
+            "screw_count": 4,
+            "screw_start_angle": 45.0,
+            "screw_depth": 8.0
+        },
+        "rect_connector": {
+            "description": "Rectangular multipin on its own raised, chamfered land with a 4-screw pattern.",
+            "centre": [
+                54.0,
+                34.0
+            ],
+            "length": 52.0,
+            "width": 34.0,
+            "raised": 5.0,
+            "land_break": 1.0,
+            "aperture": [
+                30.0,
+                18.0
+            ],
+            "aperture_radius": 3.0,
+            "screw": "M3",
+            "screw_inset": 7.0,
+            "screw_depth": 8.0
+        },
+        "vent": {
+            "description": "Pressure-equalisation vent at the lowest point of the outboard wall, on a faceted machined collar - never a bore punched straight through the wall.",
+            "centre": [
+                0.0,
+                18.0
+            ],
+            "lower_dia": 26.0,
+            "upper_dia": 23.0,
+            "height": 6.0,
+            "bore": 10.5,
+            "thread": "M12 x 1.5 - tapped at manufacture, thread not modelled",
+            "collar": "facet",
+            "facets": 8
+        },
+        "drip_hood": {
+            "description": "Overhang with a shed angle and an underside kerf so runoff lets go above the connectors. The kerf is cut as its own operation: drip_edge()'s built-in rim chamfer is silently skipped whenever kerf > 0.",
+            "height_z": 70.0,
+            "span": 164.0,
+            "projection": 12.0,
+            "embed": 0.4,
+            "thickness": 5.0,
+            "shed_deg": 8.0,
+            "edge_break": 1.0,
+            "kerf": 1.2,
+            "kerf_depth": 0.8,
+            "kerf_setback": 2.4
+        },
+        "base_flange": {
+            "description": "Stepped rectangular mast flange built as two chamfered levels: a relieved lower plate and a proud mating pad whose centre is relieved 1 mm so only the band carrying the bolt pattern has to be machined flat. base_flange(edge='step') leaves every rim of both levels knife-sharp, so the levels are built separately.",
+            "length": 160.0,
+            "width": 64.0,
+            "thickness": 8.0,
+            "radius": 12.0,
+            "edge": "chamfer",
+            "edge_break": 1.5,
+            "pad_length": 152.0,
+            "pad_width": 56.0,
+            "pad_thickness": 4.0,
+            "pad_radius": 8.0,
+            "screw": "M6",
+            "inset": 14.0,
+            "target_pitch": 50.5,
+            "tap_depth": 14.0,
+            "relief_length": 104.0,
+            "relief_width": 24.0,
+            "relief_depth": 1.0,
+            "relief_radius": 8.0,
+            "relief_break": 0.4
+        },
+        "emblem": {
+            "description": "The single identity mark on the part: engraved concentric rings, centred on the outboard face.",
+            "centre": [
+                0.0,
+                48.0
+            ],
+            "motif": "rings",
+            "diameter": 24.0,
+            "relief": -0.6,
+            "rings": 3,
+            "line_width": 0.9
+        }
+    },
+    "loads": {
+        "assembly_mass_kg": 4.6,
+        "design_wind_speed_ms": 45.0,
+        "handling_load_n": 900.0,
+        "shock_g": 15.0
+    },
+    "thermal": {
+        "dissipation_w": 18.0,
+        "ambient_max_c": 45.0,
+        "solar_flux_w_m2": 1000.0,
+        "internal_air_target_c": 85.0
+    },
+    "notes": [
+        "Every radius, chamfer, wall, fastener pitch and edge inset in model.py is taken from lib.features.STYLE or from this file; nothing dimensional is written inline.",
+        "The lid, the mast bracket and the connectors are separate parts and are not modelled here.",
+        "Vertical-wall interior features are deliberately absent: a top-opening 3-axis pocket cannot machine them."
+    ]
+}

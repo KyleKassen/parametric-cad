@@ -20,8 +20,10 @@ TX_STEP = PROJECT_ROOT / "parts" / "vendor" / "zonu-oz510-transmitter" / "OZ510 
 def _sma_x(analysis: dict) -> float:
     """X of the SMA connector axis: a Z-axis cylinder near the front tip."""
     candidates = [
-        f for f in analysis["features"]
-        if f["axis_label"] == "Z" and 2.0 <= f["radius"] <= 2.9
+        f
+        for f in analysis["features"]
+        if f["axis_label"] == "Z"
+        and 2.0 <= f["radius"] <= 2.9
         and max(f["p1"][2], f["p2"][2]) > 40.0
     ]
     assert candidates, "no SMA-like feature found near the front tip"
@@ -148,8 +150,9 @@ def test_section_cut_reveals_interior(tmp_path):
 
     from lib.render_step import section_cut
 
-    hollow = (cq.Workplane("XY").box(20, 20, 10, centered=(True, True, False))
-              .faces(">Z").shell(-2))  # closed box, 2 mm walls... open shell downward
+    hollow = (
+        cq.Workplane("XY").box(20, 20, 10, centered=(True, True, False)).faces(">Z").shell(-2)
+    )  # closed box, 2 mm walls... open shell downward
     cut = section_cut(hollow.val(), "Z", 5.0)
     bb = cut.BoundingBox()
     assert bb.zmax <= 5.01, "material above the cut plane must be gone"
@@ -169,8 +172,7 @@ def test_render_file_section_suffix(tmp_path):
 
     step = tmp_path / "box.step"
     cq.exporters.export(cq.Workplane("XY").box(10, 10, 10), str(step))
-    written = render_file(step, out_dir=tmp_path, views=("iso",), size=200,
-                          section=("Z", 2.5))
+    written = render_file(step, out_dir=tmp_path, views=("iso",), size=200, section=("Z", 2.5))
     assert [p.name for p in written] == ["box_secZ2p5_iso.png"]
     assert written[0].stat().st_size > 500
 
@@ -182,8 +184,9 @@ def test_render_smoke(tmp_path):
     from lib.render_step import render_scene
 
     box = cq.Workplane("XY").box(10, 20, 5).val()
-    written = render_scene([(box, (0.6, 0.6, 0.6), 1.0)], tmp_path, "smoke",
-                           views=("front", "top"), size=300)
+    written = render_scene(
+        [(box, (0.6, 0.6, 0.6), 1.0)], tmp_path, "smoke", views=("front", "top"), size=300
+    )
     assert [p.name for p in written] == ["smoke_front.png", "smoke_top.png"]
     for p in written:
         assert p.stat().st_size > 500

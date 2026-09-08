@@ -54,8 +54,9 @@ def make_fit_part(tmp_path, cases, name="tray"):
     part.mkdir()
     (part / "model.py").write_text(FIT_MODEL)
     (part / "params.json").write_text(json.dumps({"part_name": name, "version": "v1"}))
-    (part / "spec.json").write_text(json.dumps(
-        {"schema": "part-spec/1", "units": "mm", "fit": {"cases": cases}}))
+    (part / "spec.json").write_text(
+        json.dumps({"schema": "part-spec/1", "units": "mm", "fit": {"cases": cases}})
+    )
     return part
 
 
@@ -81,9 +82,12 @@ REGION = {"source": "builder", "builder": "create_region"}
 def test_interference_pass_and_fail(tmp_path):
     cases = [
         {"id": "clear", "a": TRAY, "b": PEG, "max_interference": 0.5},
-        {"id": "rammed", "a": TRAY,
-         "b": {**PEG, "transform": [{"translate": [8, 0, 0]}]},
-         "max_interference": 0.5},
+        {
+            "id": "rammed",
+            "a": TRAY,
+            "b": {**PEG, "transform": [{"translate": [8, 0, 0]}]},
+            "max_interference": 0.5,
+        },
     ]
     checks, _ = run_cases(tmp_path, cases)
     assert by_id(checks, "fit:clear:max_interference")["status"] == "PASS"
@@ -114,9 +118,12 @@ def test_min_clearance_pass_and_fail(tmp_path):
 def test_max_outside_containment(tmp_path):
     cases = [
         {"id": "inside", "a": REGION, "b": PEG, "max_outside": 0.5},
-        {"id": "sticking_out", "a": REGION,
-         "b": {**PEG, "transform": [{"translate": [7, 0, 0]}]},
-         "max_outside": 0.5},
+        {
+            "id": "sticking_out",
+            "a": REGION,
+            "b": {**PEG, "transform": [{"translate": [7, 0, 0]}]},
+            "max_outside": 0.5,
+        },
     ]
     checks, _ = run_cases(tmp_path, cases)
     assert by_id(checks, "fit:inside:max_outside")["status"] == "PASS"
@@ -131,8 +138,9 @@ def test_transforms_apply_in_order(tmp_path):
     from lib.fit import _apply_transform
 
     bar = cq.Workplane("XY").box(10, 2, 2)  # long in X
-    rotated = _apply_transform(bar, [{"rotate": {"axis": "Z", "angle": 90}},
-                                     {"translate": [0, 0, 5]}])
+    rotated = _apply_transform(
+        bar, [{"rotate": {"axis": "Z", "angle": 90}}, {"translate": [0, 0, 5]}]
+    )
     bb = rotated.val().BoundingBox()
     assert abs(bb.ylen - 10.0) < 0.01, "rotation about Z should move the long axis to Y"
     assert abs(bb.xlen - 2.0) < 0.01
@@ -142,14 +150,19 @@ def test_transforms_apply_in_order(tmp_path):
 def test_error_paths_never_pass(tmp_path):
     cases = [
         {"id": "no_constraint", "a": TRAY, "b": PEG},
-        {"id": "bad_source", "a": TRAY, "b": {"source": "hologram"},
-         "max_interference": 1.0},
-        {"id": "bad_builder", "a": TRAY,
-         "b": {"source": "builder", "builder": "create_unicorn"},
-         "max_interference": 1.0},
-        {"id": "missing_step", "a": TRAY,
-         "b": {"source": "step", "path": "parts/vendor/nope/missing.STEP"},
-         "max_interference": 1.0},
+        {"id": "bad_source", "a": TRAY, "b": {"source": "hologram"}, "max_interference": 1.0},
+        {
+            "id": "bad_builder",
+            "a": TRAY,
+            "b": {"source": "builder", "builder": "create_unicorn"},
+            "max_interference": 1.0,
+        },
+        {
+            "id": "missing_step",
+            "a": TRAY,
+            "b": {"source": "step", "path": "parts/vendor/nope/missing.STEP"},
+            "max_interference": 1.0,
+        },
     ]
     checks, _ = run_cases(tmp_path, cases)
     assert by_id(checks, "fit:no_constraint")["status"] == "ERROR"
@@ -168,22 +181,36 @@ def test_scene_contains_reference_and_placed_solids(tmp_path):
 def test_evaluate_gates_on_fit_block(tmp_path):
     from lib.evaluate import evaluate_part
 
-    bad = make_fit_part(tmp_path, [
-        {"id": "rammed", "a": TRAY,
-         "b": {**PEG, "transform": [{"translate": [8, 0, 0]}]},
-         "max_interference": 0.5},
-    ], name="bad_tray")
+    bad = make_fit_part(
+        tmp_path,
+        [
+            {
+                "id": "rammed",
+                "a": TRAY,
+                "b": {**PEG, "transform": [{"translate": [8, 0, 0]}]},
+                "max_interference": 0.5,
+            },
+        ],
+        name="bad_tray",
+    )
     report = evaluate_part(bad, render=False, quiet=True)
     assert report["overall"] == "FAIL"
     assert report["promoted"] is False
     assert not (bad / "exports" / "bad_tray_v1.step").exists()
 
-    good = make_fit_part(tmp_path, [
-        {"id": "clear", "a": TRAY, "b": PEG, "max_interference": 0.5},
-        {"id": "roomy", "a": TRAY,
-         "b": {**PEG, "transform": [{"translate": [0, 0, 3]}]},
-         "min_clearance": 2.5},
-    ], name="good_tray")
+    good = make_fit_part(
+        tmp_path,
+        [
+            {"id": "clear", "a": TRAY, "b": PEG, "max_interference": 0.5},
+            {
+                "id": "roomy",
+                "a": TRAY,
+                "b": {**PEG, "transform": [{"translate": [0, 0, 3]}]},
+                "min_clearance": 2.5,
+            },
+        ],
+        name="good_tray",
+    )
     report = evaluate_part(good, render=False, quiet=True)
     assert report["overall"] == "PASS"
     assert report["promoted"] is True

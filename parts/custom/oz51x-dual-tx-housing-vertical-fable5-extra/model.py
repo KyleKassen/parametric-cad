@@ -16,15 +16,11 @@ PART_DIR = Path(__file__).parent
 PROJECT_ROOT = PART_DIR.parent.parent.parent
 EXPORTS_DIR = PART_DIR / "exports"
 PARAMS_FILE = PART_DIR / "params.json"
-BUILDER_FILE = (
-    PART_DIR.parent / "oz51x-dual-rx-housing-vertical-fable5-extra" / "model.py"
-)
+BUILDER_FILE = PART_DIR.parent / "oz51x-dual-rx-housing-vertical-fable5-extra" / "model.py"
 
 
 def _load_builder():
-    spec = importlib.util.spec_from_file_location(
-        "oz51x_fable5_vertical_builder", BUILDER_FILE
-    )
+    spec = importlib.util.spec_from_file_location("oz51x_fable5_vertical_builder", BUILDER_FILE)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module

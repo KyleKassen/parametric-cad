@@ -1,12 +1,12 @@
 """
-Exact STEP analysis via the OpenCASCADE kernel — no text parsing, no pixels.
+Exact STEP analysis via the OpenCASCADE kernel - no text parsing, no pixels.
 
 The measurement layer of the part pipeline. A STEP file's thousands of lines
 are just serialization; the kernel loads them into an exact B-rep that we can
 query analytically: bounding boxes, volumes, and cylindrical features (holes,
 bosses, connector barrels) with their true axes, radii, and extents.
 
-Every part gets analyzed INDIVIDUALLY — never assume two vendor files are
+Every part gets analyzed INDIVIDUALLY - never assume two vendor files are
 identical or symmetric. `compare()` checks two files for identity or a mirror
 relationship (left-hand / right-hand vendor variants, e.g. the OZ510
 Transmitter's I/O is mirrored across X relative to the Receiver).
@@ -15,9 +15,17 @@ Usage:
     uv run python -m lib.analyze_step FILE.step [--save | -o out.json]
     uv run python -m lib.analyze_step --compare A.step B.step
 
---save writes JSON to parts/<part>/references/<stem>_analysis.json when the
-file lives under parts/, else next to the file. compare() assumes both files
-share a coordinate frame (true for same-vendor exports).
+--save writes JSON into a references/ directory BESIDE THE FILE BEING ANALYSED,
+never into the part directory: <step>/../references/<stem>_analysis.json,
+whenever any component of the path is named "parts", else next to the file as
+<stem>.analysis.json. Analysing a source STEP at parts/vendor/<v>/<v>.STEP
+therefore lands in parts/vendor/<v>/references/, while analysing a PROMOTED
+artifact at parts/<group>/<part>/exports/<part>_v1.step lands in
+parts/<group>/<part>/exports/references/ - which .gitignore covers, because
+that whole tree is derived. Pass -o to write somewhere else.
+
+compare() assumes both files share a coordinate frame (true for same-vendor
+exports).
 
 Units: mm (as imported by OpenCASCADE).
 """
@@ -26,6 +34,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 from datetime import date
 from pathlib import Path
 
@@ -34,8 +43,8 @@ from OCP.BRepAdaptor import BRepAdaptor_Surface
 from OCP.GeomAbs import GeomAbs_Cylinder
 from OCP.TopAbs import TopAbs_REVERSED
 
-MATCH_DIST = 0.6      # mm — max axis-endpoint distance for two features to match
-MATCH_RADIUS = 0.15   # mm — max radius difference for a match
+MATCH_DIST = 0.6  # mm — max axis-endpoint distance for two features to match
+MATCH_RADIUS = 0.15  # mm — max radius difference for a match
 
 # Feature-set transforms tried by compare(): point scale factors per axis
 _TRANSFORMS = {
@@ -49,9 +58,39 @@ _TRANSFORMS = {
 # ---------------------------------------------------------------------------
 # Feature extraction
 # ---------------------------------------------------------------------------
+#: How close two components must be before "which one is dominant" is treated as
+#: having no answer and the fold falls back to a fixed order. It has to be
+#: comfortably larger than every rounding a direction passes through before it is
+#: folded a SECOND time - `_cylinder_features` stores `dir` rounded to 4
+#: decimals, so 5e-5 - and comfortably smaller than any tilt a designer means.
+#: 1e-3 is 0.057 degrees off an exact tie: twenty times the rounding and far
+#: below anything modelled on purpose.
+DOMINANT_TIE = 1e-3
+
+
 def _canonical_dir(d: tuple) -> tuple:
-    """Flip an axis direction so its dominant component is positive."""
-    i = max(range(3), key=lambda k: abs(d[k]))
+    """
+    Flip an axis direction so its dominant component is positive.
+
+    THE TIE HAS TO BE DECIDED BY A RULE, NOT BY ROUND-OFF. "Dominant" has no
+    answer when two components are equal, and equal components are not an edge
+    case - an axis rotated 45 degrees in a plane is the ordinary way a part gets
+    held. `max()` over the raw magnitudes then breaks the tie on whichever of
+    them the last bit of the arithmetic made larger, and the same direction folds
+    one way from `_cylinder_features`'s 4-decimal `dir` and the other way from
+    the face's own full-precision axis. The two differ by a SIGN, so every
+    comparison of a feature against its own faces failed: on this repo's
+    reference enclosure, held at 45 degrees, `cylinder_wrap` summed no area for
+    any Y-axis feature, `_feature_centres` dropped 20 of 90 centres and
+    `_merge_fasteners` 19 of 54 screws, and the part scored 90.2 as modelled and
+    92.6 turned - a 2.4 point gift for holding the file differently.
+
+    Within DOMINANT_TIE the components are treated as equal and the LAST of them
+    fixes the sign, which is a property of the direction rather than of the
+    arithmetic that produced it. Outside it this is the rule it always was.
+    """
+    biggest = max(abs(c) for c in d)
+    i = max((k for k in range(3) if abs(d[k]) >= biggest - DOMINANT_TIE), default=0)
     return tuple(-c for c in d) if d[i] < 0 else tuple(d)
 
 
@@ -59,6 +98,61 @@ def _axis_label(d: tuple) -> str:
     ax = [abs(c) for c in d]
     i = ax.index(max(ax))
     return "XYZ"[i] if ax[i] > 0.98 else "oblique"
+
+
+#: mm. OCCT reports the natural (untrimmed) V bounds of a cylinder as
+#: Precision::Infinite(), which is 1e100 and therefore finite to Python. Any V
+#: span past this is that sentinel rather than a measurement.
+_UNTRIMMED_V = 1e12
+
+
+def _axial_extent(
+    face: cq.Face,
+    surf: BRepAdaptor_Surface,
+    surf_dir: tuple[float, float, float],
+    canon_dir: tuple[float, float, float],
+    base: float,
+) -> tuple[float, float]:
+    """
+    A cylindrical face's extent along its own axis, as (min, max) in mm.
+
+    Taken from the face's PARAMETRIC range, because a cylinder's V parameter is
+    by definition the signed distance along the axis from the surface placement,
+    measured in millimetres. That makes the extent a property of the face, so it
+    reads the same however the file happens to be oriented.
+
+    It used to be the span of the face's WORLD axis-aligned bounding box
+    projected onto the axis, which is exact only while the axis lies on a world
+    axis and inflates otherwise: a D6 hole through a 10 mm plate measured 10.000
+    as modelled and 18.303 after a 77 degree rotation. Everything divided by this
+    length inherited that error. `Topology.cylinder_wrap` in lib/design_review.py
+    divides by it, so an inflated length pushed a full through bore below
+    BORE_WRAP_MIN, emptied the fastener population, and left feature_composition
+    and pattern_discipline reporting a plate full of holes as a plate with none -
+    64.0/C as modelled against 34.5/F rotated 77 degrees, for the same solid.
+
+    The bounding-box projection survives only for a face with no wires, whose
+    natural V bounds are the infinite sentinel. No solid this repo builds
+    produces one; it is here so an exotic vendor import degrades to the old
+    approximation instead of returning a 1e100 length.
+    """
+    v0, v1 = surf.FirstVParameter(), surf.LastVParameter()
+    if math.isfinite(v0) and math.isfinite(v1) and abs(v1 - v0) < _UNTRIMMED_V:
+        # canon_dir is surf_dir flipped into canonical form, so the dot product
+        # is exactly +1 or -1 and is the sign V runs in along the canonical axis.
+        sign = 1.0 if sum(a * b for a, b in zip(surf_dir, canon_dir)) > 0 else -1.0
+        lo, hi = base + sign * v0, base + sign * v1
+        return (lo, hi) if lo <= hi else (hi, lo)
+
+    bb = face.BoundingBox()
+    corners = [
+        (x, y, z)
+        for x in (bb.xmin, bb.xmax)
+        for y in (bb.ymin, bb.ymax)
+        for z in (bb.zmin, bb.zmax)
+    ]
+    ts = [sum(c * dc for c, dc in zip(corner, canon_dir)) for corner in corners]
+    return min(ts), max(ts)
 
 
 def _cylinder_features(shape: cq.Shape) -> list[dict]:
@@ -83,45 +177,62 @@ def _cylinder_features(shape: cq.Shape) -> list[dict]:
         foot = tuple(pc - t * dc for pc, dc in zip(p, d))  # axis point ⊥ origin
         r = cyl.Radius()
 
-        # Extent along the axis, from the face bbox corners (exact for
-        # axis-aligned cylinders, approximate for oblique ones)
-        bb = f.BoundingBox()
-        corners = [(x, y, z)
-                   for x in (bb.xmin, bb.xmax)
-                   for y in (bb.ymin, bb.ymax)
-                   for z in (bb.zmin, bb.zmax)]
-        ts = [sum(c * dc for c, dc in zip(corner, d)) for corner in corners]
-        smin, smax = min(ts), max(ts)
+        smin, smax = _axial_extent(f, surf, (dd.X(), dd.Y(), dd.Z()), d, t)
         concave = f.wrapped.Orientation() == TopAbs_REVERSED
 
         for g in groups:  # merge coaxial same-radius faces
-            if (abs(g["radius"] - r) < 0.02
-                    and sum(a * b for a, b in zip(g["dir"], d)) > 0.999
-                    and sum((a - b) ** 2 for a, b in zip(g["foot"], foot)) < 0.05 ** 2):
-                g["smin"] = min(g["smin"], smin)
-                g["smax"] = max(g["smax"], smax)
+            # SIGN-BLIND, because whether two foldings of one axis agree is not
+            # a fact about the part - see _canonical_dir. The axial extents are
+            # measured ALONG the folded direction, so a group whose fold points
+            # the other way is merged with its extents reflected rather than
+            # left as a second feature.
+            dot = sum(a * b for a, b in zip(g["dir"], d))
+            if (
+                abs(g["radius"] - r) < 0.02
+                and abs(dot) > 0.999
+                and sum((a - b) ** 2 for a, b in zip(g["foot"], foot)) < 0.05**2
+            ):
+                lo, hi = (smin, smax) if dot > 0 else (-smax, -smin)
+                g["smin"] = min(g["smin"], lo)
+                g["smax"] = max(g["smax"], hi)
                 g["faces"] += 1
                 g["concave"] += 1 if concave else 0
                 break
         else:
-            groups.append({"radius": r, "dir": d, "foot": foot, "smin": smin,
-                           "smax": smax, "faces": 1, "concave": 1 if concave else 0})
+            groups.append(
+                {
+                    "radius": r,
+                    "dir": d,
+                    "foot": foot,
+                    "smin": smin,
+                    "smax": smax,
+                    "faces": 1,
+                    "concave": 1 if concave else 0,
+                }
+            )
 
     feats = []
     for g in groups:
         d, foot = g["dir"], g["foot"]
-        feats.append({
-            "radius": round(g["radius"], 3),
-            "diameter": round(2 * g["radius"], 3),
-            "axis_label": _axis_label(d),
-            "dir": [round(c, 4) for c in d],
-            "p1": [round(foot[i] + g["smin"] * d[i], 3) for i in range(3)],
-            "p2": [round(foot[i] + g["smax"] * d[i], 3) for i in range(3)],
-            "length": round(g["smax"] - g["smin"], 3),
-            "faces": g["faces"],
-            "type": ("hole" if g["concave"] == g["faces"]
-                     else "boss" if g["concave"] == 0 else "mixed"),
-        })
+        feats.append(
+            {
+                "radius": round(g["radius"], 3),
+                "diameter": round(2 * g["radius"], 3),
+                "axis_label": _axis_label(d),
+                "dir": [round(c, 4) for c in d],
+                "p1": [round(foot[i] + g["smin"] * d[i], 3) for i in range(3)],
+                "p2": [round(foot[i] + g["smax"] * d[i], 3) for i in range(3)],
+                "length": round(g["smax"] - g["smin"], 3),
+                "faces": g["faces"],
+                "type": (
+                    "hole"
+                    if g["concave"] == g["faces"]
+                    else "boss"
+                    if g["concave"] == 0
+                    else "mixed"
+                ),
+            }
+        )
     feats.sort(key=lambda f: -f["radius"])
     return feats
 
@@ -137,18 +248,22 @@ def analyze(path: str | Path) -> dict:
     for s in wp.solids().vals():
         sb = s.BoundingBox()
         c = s.Center()
-        solids.append({
-            "volume_mm3": round(s.Volume(), 1),
-            "bbox_min": [round(sb.xmin, 2), round(sb.ymin, 2), round(sb.zmin, 2)],
-            "bbox_max": [round(sb.xmax, 2), round(sb.ymax, 2), round(sb.zmax, 2)],
-            "center": [round(c.x, 2), round(c.y, 2), round(c.z, 2)],
-        })
+        solids.append(
+            {
+                "volume_mm3": round(s.Volume(), 1),
+                "bbox_min": [round(sb.xmin, 2), round(sb.ymin, 2), round(sb.zmin, 2)],
+                "bbox_max": [round(sb.xmax, 2), round(sb.ymax, 2), round(sb.zmax, 2)],
+                "center": [round(c.x, 2), round(c.y, 2), round(c.z, 2)],
+            }
+        )
     solids.sort(key=lambda s: -s["volume_mm3"])
 
     max_dim = max(bb.xlen, bb.ylen, bb.zlen)
-    units_note = (f"imported as mm; max dim {max_dim:.1f} mm"
-                  if max_dim >= 30
-                  else f"max dim {max_dim:.1f} — small; check source units (inches?)")
+    units_note = (
+        f"imported as mm; max dim {max_dim:.1f} mm"
+        if max_dim >= 30
+        else f"max dim {max_dim:.1f} — small; check source units (inches?)"
+    )
 
     feats = _cylinder_features(comp)
     return {
@@ -176,10 +291,14 @@ def _dist(a, b) -> float:
 
 def _match(fa: list[dict], fb: list[dict], scale: tuple) -> tuple[int, list[dict]]:
     """Greedy-match A's features against transformed B's. Returns (matches, unmatched_a)."""
-    tb = [(g,
-           tuple(c * s for c, s in zip(g["p1"], scale)),
-           tuple(c * s for c, s in zip(g["p2"], scale)))
-          for g in fb]
+    tb = [
+        (
+            g,
+            tuple(c * s for c, s in zip(g["p1"], scale)),
+            tuple(c * s for c, s in zip(g["p2"], scale)),
+        )
+        for g in fb
+    ]
     used = [False] * len(tb)
     matched, unmatched = 0, []
     for f in fa:
@@ -190,8 +309,7 @@ def _match(fa: list[dict], fb: list[dict], scale: tuple) -> tuple[int, list[dict
                 continue
             if abs(g["radius"] - f["radius"]) > MATCH_RADIUS:
                 continue
-            d = min(max(_dist(a1, q1), _dist(a2, q2)),
-                    max(_dist(a1, q2), _dist(a2, q1)))
+            d = min(max(_dist(a1, q1), _dist(a2, q2)), max(_dist(a1, q2), _dist(a2, q1)))
             if d < best_d:
                 best_d, best = d, i
         if best is not None:
@@ -222,13 +340,17 @@ def compare(a_path: str | Path, b_path: str | Path) -> dict:
     if scores["identity"] >= 0.98:
         verdict = "identical within tolerance"
     elif best != "identity" and scores[best] >= scores["identity"] + 0.05 and scores[best] >= 0.6:
-        verdict = (f"probably a {best} variant "
-                   f"({scores[best]:.0%} match vs identity {scores['identity']:.0%})")
+        verdict = (
+            f"probably a {best} variant "
+            f"({scores[best]:.0%} match vs identity {scores['identity']:.0%})"
+        )
     elif max(scores.values()) < 0.5:
         verdict = "different parts"
     else:
-        verdict = ("similar but NOT identical — mixed/partial symmetry; "
-                   "inspect the unmatched features under each transform")
+        verdict = (
+            "similar but NOT identical — mixed/partial symmetry; "
+            "inspect the unmatched features under each transform"
+        )
 
     return {
         "a": A["source"],
@@ -260,22 +382,26 @@ def _default_json_path(step_path: Path) -> Path:
 
 def _print_analysis(a: dict) -> None:
     print(f"\n===== {a['source']} =====")
-    print(f"  bbox: {a['bbox_size'][0]} x {a['bbox_size'][1]} x {a['bbox_size'][2]} mm"
-          f"   volume: {a['volume_mm3']:.0f} mm^3   ({a['units_note']})")
+    print(
+        f"  bbox: {a['bbox_size'][0]} x {a['bbox_size'][1]} x {a['bbox_size'][2]} mm"
+        f"   volume: {a['volume_mm3']:.0f} mm^3   ({a['units_note']})"
+    )
     print(f"  solids: {a['solid_count']}  (largest first)")
     for s in a["solids"][:6]:
-        print(f"    {s['volume_mm3']:>10.1f} mm^3  "
-              f"bbox {s['bbox_min']} .. {s['bbox_max']}")
+        print(f"    {s['volume_mm3']:>10.1f} mm^3  bbox {s['bbox_min']} .. {s['bbox_max']}")
     print(f"  cylindrical features: {a['feature_count']}  (largest radius first)")
     for f in a["features"][:12]:
-        print(f"    d={f['diameter']:>7.3f}  {f['axis_label']:>7}-axis {f['type']:<5} "
-              f"p1={f['p1']}  p2={f['p2']}")
+        print(
+            f"    d={f['diameter']:>7.3f}  {f['axis_label']:>7}-axis {f['type']:<5} "
+            f"p1={f['p1']}  p2={f['p2']}"
+        )
 
 
 def _print_compare(r: dict) -> None:
     print(f"\n===== compare =====\n  A: {r['a']}\n  B: {r['b']}")
-    print(f"  bbox A {r['bbox_size_a']}  B {r['bbox_size_b']}  "
-          f"volume ratio B/A: {r['volume_ratio']}")
+    print(
+        f"  bbox A {r['bbox_size_a']}  B {r['bbox_size_b']}  volume ratio B/A: {r['volume_ratio']}"
+    )
     print(f"  features: A={r['feature_counts'][0]}  B={r['feature_counts'][1]}")
     print("  match scores:")
     for name, s in sorted(r["scores"].items(), key=lambda kv: -kv[1]):
@@ -285,18 +411,21 @@ def _print_compare(r: dict) -> None:
     if r["unmatched_under_best"]:
         print(f"  unmatched under {r['best']} (first {len(r['unmatched_under_best'])}):")
         for f in r["unmatched_under_best"]:
-            print(f"    d={f['diameter']:>7.3f}  {f['axis_label']}-axis {f['type']:<5} "
-                  f"p1={f['p1']}")
+            print(
+                f"    d={f['diameter']:>7.3f}  {f['axis_label']}-axis {f['type']:<5} p1={f['p1']}"
+            )
 
 
 def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[1])
     ap.add_argument("files", nargs="+", help="STEP file(s)")
-    ap.add_argument("--compare", action="store_true",
-                    help="compare exactly two files for identity / mirror")
+    ap.add_argument(
+        "--compare", action="store_true", help="compare exactly two files for identity / mirror"
+    )
     ap.add_argument("-o", "--out", help="write analysis JSON to this path")
-    ap.add_argument("--save", action="store_true",
-                    help="write JSON to the part's references/ directory")
+    ap.add_argument(
+        "--save", action="store_true", help="write JSON to the part's references/ directory"
+    )
     args = ap.parse_args(argv)
 
     if args.compare:

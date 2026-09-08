@@ -67,10 +67,10 @@ def export_all(formats: list[str] | None = None, part_filter: str | None = None)
         print("No parts found in parts/*/model.py")
         return 1
 
-    print(f"\n{'='*60}")
+    print(f"\n{'=' * 60}")
     print("  CadQuery Bulk Export")
     print(f"  Formats: {', '.join(f.upper() for f in formats)}")
-    print(f"{'='*60}\n")
+    print(f"{'=' * 60}\n")
 
     exported_count = 0
     failures: list[str] = []
@@ -91,6 +91,7 @@ def export_all(formats: list[str] | None = None, part_filter: str | None = None)
 
             # Read version from params.json
             import json
+
             params_path = model_path.parent / "params.json"
             version = "v1"
             if params_path.exists():
@@ -121,16 +122,20 @@ def export_all(formats: list[str] | None = None, part_filter: str | None = None)
             print(f"    ✗ Error: {e}")
             failures.append(part_name)
 
-    print(f"\n  Done — {exported_count} part(s) exported"
-          + (f", {len(failures)} FAILED: {', '.join(failures)}" if failures else "")
-          + ".\n")
+    print(
+        f"\n  Done — {exported_count} part(s) exported"
+        + (f", {len(failures)} FAILED: {', '.join(failures)}" if failures else "")
+        + ".\n"
+    )
 
     if failures:
         return 1
     if exported_count == 0:
-        print("  ✗ Nothing exported"
-              + (f" (no part matched {part_filter!r})" if part_filter else "")
-              + " — that is a failure, not a success.\n")
+        print(
+            "  ✗ Nothing exported"
+            + (f" (no part matched {part_filter!r})" if part_filter else "")
+            + " — that is a failure, not a success.\n"
+        )
         return 1
     return 0
 

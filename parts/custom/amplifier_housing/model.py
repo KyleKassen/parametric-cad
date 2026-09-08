@@ -55,8 +55,7 @@ def create_amplifier_ghost(params: dict) -> cq.Workplane:
     standoff_h = params["housing"]["thermal_standoffs"]["height"]
     return (
         cq.Workplane("XY")
-        .box(amp["length"], amp["width"], amp["height"],
-             centered=(True, True, False))
+        .box(amp["length"], amp["width"], amp["height"], centered=(True, True, False))
         .translate((0, 0, standoff_h))
     )
 
@@ -188,8 +187,7 @@ def create_cradle(params: dict | None = None) -> cq.Workplane:
     # =========================================================================
     result = (
         cq.Workplane("XY")
-        .box(housing_length, housing_width, base_t,
-             centered=(True, True, False))
+        .box(housing_length, housing_width, base_t, centered=(True, True, False))
         .translate((0, 0, -base_t))
     )
 
@@ -200,8 +198,7 @@ def create_cradle(params: dict | None = None) -> cq.Workplane:
         wall_y = sign * (housing_width / 2 - wall_t / 2)
         wall = (
             cq.Workplane("XY")
-            .box(housing_length, wall_t, wall_height,
-                 centered=(True, True, False))
+            .box(housing_length, wall_t, wall_height, centered=(True, True, False))
             .translate((0, wall_y, 0))
         )
         result = result.union(wall)
@@ -220,12 +217,7 @@ def create_cradle(params: dict | None = None) -> cq.Workplane:
             (flare_outer_y, wall_height + flare_h),
             (wall_inner_y, wall_height + flare_h),
         ]
-        flare = (
-            cq.Workplane("YZ")
-            .polyline(pts)
-            .close()
-            .extrude(housing_length)
-        )
+        flare = cq.Workplane("YZ").polyline(pts).close().extrude(housing_length)
         flare = flare.translate((-housing_length / 2, 0, 0))
         result = result.union(flare)
 
@@ -292,8 +284,7 @@ def create_cradle(params: dict | None = None) -> cq.Workplane:
                 wall_y = sign * (housing_width / 2 - wall_t / 2)
                 slot_cut = (
                     cq.Workplane("XY")
-                    .box(louver_w, wall_t + 2, louver_h,
-                         centered=(True, True, True))
+                    .box(louver_w, wall_t + 2, louver_h, centered=(True, True, True))
                     .translate((slot_x, wall_y, louver_z))
                 )
                 result = result.cut(slot_cut)
@@ -309,8 +300,7 @@ def create_cradle(params: dict | None = None) -> cq.Workplane:
             wall_y = sign * (housing_width / 2 - wall_t / 2)
             drain_cut = (
                 cq.Workplane("XY")
-                .box(drain_w, wall_t + 2, drain_h,
-                     centered=(True, True, True))
+                .box(drain_w, wall_t + 2, drain_h, centered=(True, True, True))
                 .translate((dx, wall_y, drain_h / 2))
             )
             result = result.cut(drain_cut)
@@ -325,8 +315,7 @@ def create_cradle(params: dict | None = None) -> cq.Workplane:
     # Shade plate
     shade_plate = (
         cq.Workplane("XY")
-        .box(shade_length, shade_width, shade_t,
-             centered=(True, True, False))
+        .box(shade_length, shade_width, shade_t, centered=(True, True, False))
         .translate((0, 0, shade_z))
     )
     result = result.union(shade_plate)
@@ -340,8 +329,7 @@ def create_cradle(params: dict | None = None) -> cq.Workplane:
 
             post = (
                 cq.Workplane("XY")
-                .box(shade_post_w, shade_post_d, post_height,
-                     centered=(True, True, False))
+                .box(shade_post_w, shade_post_d, post_height, centered=(True, True, False))
                 .translate((px, py, total_wall_h))
             )
             result = result.union(post)
@@ -356,8 +344,12 @@ def create_cradle(params: dict | None = None) -> cq.Workplane:
         lip_x = sign_x * (housing_length / 2)
         lip = (
             cq.Workplane("XY")
-            .box(drip_lip_t, housing_width + 2 * flare_offset, drip_lip_depth,
-                 centered=(True, True, False))
+            .box(
+                drip_lip_t,
+                housing_width + 2 * flare_offset,
+                drip_lip_depth,
+                centered=(True, True, False),
+            )
             .translate((lip_x, 0, total_wall_h - drip_lip_depth))
         )
         result = result.union(lip)
@@ -454,8 +446,7 @@ def create_cradle(params: dict | None = None) -> cq.Workplane:
     for rx in rib_positions_x:
         rib_body = (
             cq.Workplane("XY")
-            .box(rib_t, housing_width - 2 * wall_t, rib_h,
-                 centered=(True, True, False))
+            .box(rib_t, housing_width - 2 * wall_t, rib_h, centered=(True, True, False))
             .translate((rx, 0, -base_t - rib_h))
         )
         result = result.union(rib_body)
@@ -470,25 +461,22 @@ def create_cradle(params: dict | None = None) -> cq.Workplane:
     # Define pocket zone boundaries along X
     pocket_zones_x = []
     # Zone 1: left edge to first rib
-    pocket_zones_x.append((
-        -housing_length / 2 + pocket_margin,
-        rib_positions_sorted[0] - rib_t / 2 - 2
-    ))
+    pocket_zones_x.append(
+        (-housing_length / 2 + pocket_margin, rib_positions_sorted[0] - rib_t / 2 - 2)
+    )
     # Zone 2: between ribs
     for j in range(len(rib_positions_sorted) - 1):
-        pocket_zones_x.append((
-            rib_positions_sorted[j] + rib_t / 2 + 2,
-            rib_positions_sorted[j + 1] - rib_t / 2 - 2
-        ))
+        pocket_zones_x.append(
+            (rib_positions_sorted[j] + rib_t / 2 + 2, rib_positions_sorted[j + 1] - rib_t / 2 - 2)
+        )
     # Zone 3: last rib to right edge
-    pocket_zones_x.append((
-        rib_positions_sorted[-1] + rib_t / 2 + 2,
-        housing_length / 2 - pocket_margin
-    ))
+    pocket_zones_x.append(
+        (rib_positions_sorted[-1] + rib_t / 2 + 2, housing_length / 2 - pocket_margin)
+    )
 
     pocket_y_extent = housing_width - 2 * (wall_t + pocket_margin)
 
-    for (px_start, px_end) in pocket_zones_x:
+    for px_start, px_end in pocket_zones_x:
         pocket_lx = px_end - px_start
         if pocket_lx < 20:
             continue  # Skip pockets that are too small
@@ -496,8 +484,7 @@ def create_cradle(params: dict | None = None) -> cq.Workplane:
         pocket_cx = (px_start + px_end) / 2
         pocket_cut = (
             cq.Workplane("XY")
-            .box(pocket_lx, pocket_y_extent, pocket_depth,
-                 centered=(True, True, False))
+            .box(pocket_lx, pocket_y_extent, pocket_depth, centered=(True, True, False))
             .translate((pocket_cx, 0, -base_t))
         )
         # Round pocket corners for machinability
@@ -602,15 +589,16 @@ def create_base_plate(params: dict | None = None) -> cq.Workplane:
     x_positions = []
     for i in range(bm_count_x):
         x_positions.append(
-            -bp_length / 2 + bp_extra / 2 + bm_inset_x
+            -bp_length / 2
+            + bp_extra / 2
+            + bm_inset_x
             + i * (bp_length - 2 * bm_inset_x) / max(bm_count_x - 1, 1)
         )
 
     y_positions = []
     for i in range(bm_count_y):
         y_positions.append(
-            -bp_width / 2 + bm_inset_y
-            + i * (bp_width - 2 * bm_inset_y) / max(bm_count_y - 1, 1)
+            -bp_width / 2 + bm_inset_y + i * (bp_width - 2 * bm_inset_y) / max(bm_count_y - 1, 1)
         )
 
     for mx in x_positions:
@@ -729,15 +717,19 @@ if __name__ == "__main__":
     print(f"\n  Building: {params['part_name']} ({version})")
     print(f"  Material: {params.get('material', 'N/A')}")
     print(f"  Process:  {params.get('process', 'N/A')}")
-    print(f"  Cradle envelope: {housing_length:.0f} × {housing_width:.0f} × "
-          f"{shade_top + h['baseplate_thickness']:.0f} mm")
+    print(
+        f"  Cradle envelope: {housing_length:.0f} × {housing_width:.0f} × "
+        f"{shade_top + h['baseplate_thickness']:.0f} mm"
+    )
     print(f"  Amplifier pocket: {amp['length']} × {amp['width']} × {amp['height']} mm")
     print(f"  Thermal standoffs: {standoff_h} mm (decouples amp from baseplate)")
     print(f"  Heatsink clearance: {h['heatsink_clearance']} mm")
     print(f"  Wall height: {wall_height:.0f} mm (incl. standoff)")
     print(f"  Sun shade gap: {h['sun_shade']['height_above_wall']} mm above flare top")
-    print(f"  Louver rows: {len(h['airflow_louvers']['row_z_ratios'])} rows at "
-          f"{h['airflow_louvers']['row_z_ratios']}")
+    print(
+        f"  Louver rows: {len(h['airflow_louvers']['row_z_ratios'])} rows at "
+        f"{h['airflow_louvers']['row_z_ratios']}"
+    )
     print(f"  Baseplate pocketing: {h['baseplate_pockets']['pocket_depth']} mm deep")
     print()
 
@@ -747,8 +739,7 @@ if __name__ == "__main__":
 
     print("  [1/3] Building cradle...")
     cradle = create_cradle(params)
-    export_part(cradle, name="amplifier_housing", version=version,
-                formats=export_formats)
+    export_part(cradle, name="amplifier_housing", version=version, formats=export_formats)
 
     print("\n  [2/3] Building base plate...")
     base_plate = create_base_plate(params)
@@ -770,6 +761,6 @@ if __name__ == "__main__":
         from ocp_vscode import show
 
         show(cradle)
-        print(f"\n  📐 Model displayed in OCP CAD Viewer")
+        print("\n  📐 Model displayed in OCP CAD Viewer")
     except ImportError:
         print("\n  ℹ  Install ocp-vscode to preview in VS Code")

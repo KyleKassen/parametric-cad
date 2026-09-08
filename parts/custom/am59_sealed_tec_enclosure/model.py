@@ -32,20 +32,8 @@ PART_DIR = Path(__file__).parent
 PROJECT_ROOT = PART_DIR.parent.parent.parent
 EXPORTS_DIR = PART_DIR / "exports"
 PARAMS_FILE = PART_DIR / "params.json"
-AMPLIFIER_STEP = (
-    PROJECT_ROOT
-    / "parts"
-    / "vendor"
-    / "microwave-amps"
-    / "AM59-3S-64-64.STEP"
-)
-SEIFERT_STEP = (
-    PROJECT_ROOT
-    / "parts"
-    / "vendor"
-    / "seifert"
-    / "Seifert - 3050303.STEP"
-)
+AMPLIFIER_STEP = PROJECT_ROOT / "parts" / "vendor" / "microwave-amps" / "AM59-3S-64-64.STEP"
+SEIFERT_STEP = PROJECT_ROOT / "parts" / "vendor" / "seifert" / "Seifert - 3050303.STEP"
 
 
 def load_params(path: Path = PARAMS_FILE) -> dict:
@@ -162,9 +150,7 @@ def cooler_mount_locations(
         params = load_params()
     s = params["seifert_3050303"]
     return [
-        (side_sign, center_x, s["center_z"])
-        for side_sign in (-1, 1)
-        for center_x in s["center_x"]
+        (side_sign, center_x, s["center_z"]) for side_sign in (-1, 1) for center_x in s["center_x"]
     ]
 
 
@@ -269,8 +255,7 @@ def create_immersion_coamings(
                 cap["coaming_inner_height_z"],
                 (
                     cap["center_x"],
-                    side_sign
-                    * (wall_y + cap["coaming_projection_y"] / 2),
+                    side_sign * (wall_y + cap["coaming_projection_y"] / 2),
                     cap["center_z"],
                 ),
             )
@@ -297,14 +282,9 @@ def create_cartridge_support_structure(
                 c["support_rail_width_y"],
                 rail_height,
                 (
-                    (c["support_rail_x_min"] + c["support_rail_x_max"])
-                    / 2,
+                    (c["support_rail_x_min"] + c["support_rail_x_max"]) / 2,
                     side_sign * c["support_rail_center_abs_y"],
-                    (
-                        c["support_rail_bottom_z"]
-                        + c["support_rail_top_z"]
-                    )
-                    / 2,
+                    (c["support_rail_bottom_z"] + c["support_rail_top_z"]) / 2,
                 ),
             )
         )
@@ -401,13 +381,7 @@ def create_pressure_body(params: dict | None = None) -> cq.Workplane:
                 wall + e["cooler_doubler_thickness_y"] + 6.0,
                 (
                     x,
-                    side_sign
-                    * (
-                        wall_y
-                        - wall
-                        - e["cooler_doubler_thickness_y"]
-                        - 2.0
-                    ),
+                    side_sign * (wall_y - wall - e["cooler_doubler_thickness_y"] - 2.0),
                     z,
                 ),
                 direction=side_sign,
@@ -585,10 +559,7 @@ def create_cartridge_service_sweep_reference(
     a = params["amplifier"]["placed_bbox_mm"]
     x_min = e["x_min"] - 20.0
     x_max = c["center_x"] - c["outer_length_x"] / 2
-    y_half = (
-        c["outer_width_y"] / 2
-        + c["service_sweep_clearance_y_each_side"]
-    )
+    y_half = c["outer_width_y"] / 2 + c["service_sweep_clearance_y_each_side"]
     z_min = c["bottom_z"] - c["service_sweep_clearance_z"]
     z_max = a["z"][1] + c["service_sweep_clearance_z"]
     return _box(
@@ -710,9 +681,7 @@ def air_management_components(
     }
 
     for side_sign in (-1, 1):
-        parts[
-            f"side_cold_supply_baffle_{'posY' if side_sign > 0 else 'negY'}"
-        ] = _box(
+        parts[f"side_cold_supply_baffle_{'posY' if side_sign > 0 else 'negY'}"] = _box(
             air["side_baffle_x_max"] - air["side_baffle_x_min"],
             t,
             air["side_baffle_z_max"] - air["side_baffle_z_min"],
@@ -958,18 +927,12 @@ def immersion_cap_components(
                     cap["cap_external_rib_height_z"],
                     (
                         cap["center_x"] + x_offset,
-                        side_sign
-                        * (
-                            pan_far
-                            + cap["cap_external_rib_depth_y"] / 2
-                        ),
+                        side_sign * (pan_far + cap["cap_external_rib_depth_y"] / 2),
                         cap["center_z"],
                     ),
                 )
             )
-        parts[
-            f"immersion_cap_{'posY' if side_sign > 0 else 'negY'}"
-        ] = ribbed_pan
+        parts[f"immersion_cap_{'posY' if side_sign > 0 else 'negY'}"] = ribbed_pan
     return parts
 
 
@@ -1001,9 +964,7 @@ def immersion_cap_gasket_components(
                 cap["center_z"],
             ),
         )
-        parts[
-            f"immersion_cap_gasket_{'posY' if side_sign > 0 else 'negY'}_REFERENCE"
-        ] = gasket
+        parts[f"immersion_cap_gasket_{'posY' if side_sign > 0 else 'negY'}_REFERENCE"] = gasket
     return parts
 
 
@@ -1036,9 +997,7 @@ def sun_shield_components(
     }
     bank_center_y = e["outer_width_y"] / 2 + shield["side_bank_width_y"] / 2
     for side_sign in (-1, 1):
-        parts[
-            f"cooler_bank_solar_shield_{'posY' if side_sign > 0 else 'negY'}"
-        ] = _box(
+        parts[f"cooler_bank_solar_shield_{'posY' if side_sign > 0 else 'negY'}"] = _box(
             shield["side_bank_length_x"],
             shield["side_bank_width_y"],
             shield["thickness"],
@@ -1115,9 +1074,7 @@ def thermal_assessment(params: dict | None = None) -> dict:
         "design_hot_side_rejection_w": (
             amp["enclosure_design_heat_w"] + 4 * cooler["maximum_input_w"]
         ),
-        "maximum_curve_point_hot_side_rejection_w": (
-            4 * per_unit + 4 * cooler["maximum_input_w"]
-        ),
+        "maximum_curve_point_hot_side_rejection_w": (4 * per_unit + 4 * cooler["maximum_input_w"]),
     }
 
 
@@ -1140,10 +1097,7 @@ def mass_assessment(params: dict | None = None) -> dict:
         name: sum(abs(solid.Volume()) for solid in part.solids().vals())
         for name, part in aluminum_parts.items()
     }
-    masses_kg = {
-        name: volume * aluminum_density_kg_per_mm3
-        for name, volume in volumes_mm3.items()
-    }
+    masses_kg = {name: volume * aluminum_density_kg_per_mm3 for name, volume in volumes_mm3.items()}
     cooler_mass = params["seifert_3050303"]["cooler_bank_mass_kg"]
     operating_aluminum_names = (
         "pressure_body_with_rails",
@@ -1154,24 +1108,17 @@ def mass_assessment(params: dict | None = None) -> dict:
         "condensate_trays",
         "solar_shields",
     )
-    operating_known = (
-        sum(masses_kg[name] for name in operating_aluminum_names)
-        + cooler_mass
-    )
+    operating_known = sum(masses_kg[name] for name in operating_aluminum_names) + cooler_mass
     return {
         "aluminum_density_kg_per_mm3": aluminum_density_kg_per_mm3,
         "volumes_mm3": volumes_mm3,
         "aluminum_masses_kg": masses_kg,
         "cooler_bank_mass_kg": cooler_mass,
-        "operating_known_mass_excluding_am59_gaskets_fasteners_wiring_kg": (
-            operating_known
-        ),
+        "operating_known_mass_excluding_am59_gaskets_fasteners_wiring_kg": (operating_known),
         "immersion_known_mass_excluding_am59_gaskets_fasteners_wiring_kg": (
             operating_known + masses_kg["immersion_caps"]
         ),
-        "single_immersion_cap_mass_kg_approx": (
-            masses_kg["immersion_caps"] / 2
-        ),
+        "single_immersion_cap_mass_kg_approx": (masses_kg["immersion_caps"] / 2),
         "system_cg_status": (
             "Not releasable until AM59 mass/CG, exact fasteners, connectors, "
             "wiring, controller, seals, and lifting hardware are known."
@@ -1210,11 +1157,7 @@ def create_assembly(
     lid_offset = (0, -470.0, 0) if service_open else (0, 0, 0)
     assembly.add(
         create_service_lid(params).translate(lid_offset),
-        name=(
-            "service_lid_OPEN_REFERENCE"
-            if service_open
-            else "bolted_service_lid"
-        ),
+        name=("service_lid_OPEN_REFERENCE" if service_open else "bolted_service_lid"),
         color=cq.Color(0.83, 0.85, 0.87, 1.0),
     )
     assembly.add(
@@ -1362,10 +1305,7 @@ def export_design(
         "immersion_ready": {"immersion_ready": True},
     }
     for name, options in assembly_variants.items():
-        path = (
-            EXPORTS_DIR
-            / f"am59_sealed_tec_enclosure_{version}_{name}.step"
-        )
+        path = EXPORTS_DIR / f"am59_sealed_tec_enclosure_{version}_{name}.step"
         create_assembly(params, **options).save(str(path))
         exported.append(path)
         print(f"  exported {path.relative_to(PROJECT_ROOT)}")

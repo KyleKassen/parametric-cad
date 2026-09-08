@@ -33,15 +33,16 @@ def create_part(params: dict | None = None) -> cq.Workplane:
     d = params["dimensions"]
 
     # Plug shroud: inserts into the adapter (+Y from the origin)
-    part = (
-        cq.Workplane("XY")
-        .box(d["plug_w"], d["plug_len"], d["plug_h"], centered=(True, False, True))
+    part = cq.Workplane("XY").box(
+        d["plug_w"], d["plug_len"], d["plug_h"], centered=(True, False, True)
     )
 
     # Ferrule, protruding from the shroud to its mated tip position
     ferrule = cq.Solid.makeCylinder(
-        d["ferrule_dia"] / 2.0, d["ferrule_tip_y"],
-        cq.Vector(0, 0, 0), cq.Vector(0, 1, 0),
+        d["ferrule_dia"] / 2.0,
+        d["ferrule_tip_y"],
+        cq.Vector(0, 0, 0),
+        cq.Vector(0, 1, 0),
     )
     part = part.union(cq.Workplane("XY").newObject([ferrule]))
 
@@ -55,16 +56,21 @@ def create_part(params: dict | None = None) -> cq.Workplane:
 
     # Crimp barrel
     crimp = cq.Solid.makeCylinder(
-        d["crimp_dia"] / 2.0, d["crimp_len"],
-        cq.Vector(0, -d["grip_len"] - d["crimp_len"], 0), cq.Vector(0, 1, 0),
+        d["crimp_dia"] / 2.0,
+        d["crimp_len"],
+        cq.Vector(0, -d["grip_len"] - d["crimp_len"], 0),
+        cq.Vector(0, 1, 0),
     )
     part = part.union(cq.Workplane("XY").newObject([crimp]))
 
     # Strain-relief boot: cone from the crimp down to the fiber
     boot_len = d["overall_len"] - d["ferrule_tip_y"] - d["grip_len"] - d["crimp_len"]
     boot = cq.Solid.makeCone(
-        d["crimp_dia"] / 2.0, d["boot_tip_dia"] / 2.0, boot_len,
-        cq.Vector(0, -d["grip_len"] - d["crimp_len"], 0), cq.Vector(0, -1, 0),
+        d["crimp_dia"] / 2.0,
+        d["boot_tip_dia"] / 2.0,
+        boot_len,
+        cq.Vector(0, -d["grip_len"] - d["crimp_len"], 0),
+        cq.Vector(0, -1, 0),
     )
     part = part.union(cq.Workplane("XY").newObject([boot]))
 

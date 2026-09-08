@@ -56,22 +56,11 @@ def test_cartridge_matches_all_twelve_am59_mounting_points(model):
     assert len(params["amplifier"]["mount_hole_y"]) == 2
 
     # Twelve 4.5-mm hole cylinders plus four larger retention holes.
-    cylinders = [
-        face
-        for face in cartridge.val().Faces()
-        if face.geomType() == "CYLINDER"
-    ]
-    radii = sorted(
-        round(face._geomAdaptor().Cylinder().Radius(), 3)
-        for face in cylinders
-    )
+    cylinders = [face for face in cartridge.val().Faces() if face.geomType() == "CYLINDER"]
+    radii = sorted(round(face._geomAdaptor().Cylinder().Radius(), 3) for face in cylinders)
     assert radii.count(2.25) >= 12
     assert radii.count(3.25) >= 4
-    conical_faces = [
-        face
-        for face in cartridge.val().Faces()
-        if face.geomType() == "CONE"
-    ]
+    conical_faces = [face for face in cartridge.val().Faces() if face.geomType() == "CONE"]
     assert len(conical_faces) >= 12
 
 
@@ -84,23 +73,11 @@ def test_cartridge_locks_align_with_tapped_support_bars(model):
     assert cartridge_params["end_lock_hole_x"] == pytest.approx(
         frame_params["support_bar_center_x"]
     )
-    assert (
-        cartridge_params["end_lock_hole_y"]
-        < frame_params["support_bar_length_y"] / 2
-    )
+    assert cartridge_params["end_lock_hole_y"] < frame_params["support_bar_length_y"] / 2
 
-    cylinders = [
-        face
-        for face in frame.val().Faces()
-        if face.geomType() == "CYLINDER"
-    ]
-    radii = [
-        round(face._geomAdaptor().Cylinder().Radius(), 3)
-        for face in cylinders
-    ]
-    assert radii.count(
-        frame_params["cartridge_lock_tap_diameter"] / 2
-    ) >= 4
+    cylinders = [face for face in frame.val().Faces() if face.geomType() == "CYLINDER"]
+    radii = [round(face._geomAdaptor().Cylinder().Radius(), 3) for face in cylinders]
+    assert radii.count(frame_params["cartridge_lock_tap_diameter"] / 2) >= 4
 
 
 def test_cartridge_lock_hardware_clears_amplifier(model):
@@ -135,9 +112,7 @@ def test_am59_mounting_screws_are_flush_and_clear_support_bars(model):
     params = model.load_params()
     frame = params["frame"]
     amplifier = params["amplifier"]
-    preliminary_m4_head_radius = (
-        params["cartridge"]["mount_countersink_diameter"] / 2
-    )
+    preliminary_m4_head_radius = params["cartridge"]["mount_countersink_diameter"] / 2
     support_half_width = frame["support_bar_width_x"] / 2
 
     for mount_x in amplifier["mount_hole_x"]:
@@ -145,10 +120,7 @@ def test_am59_mounting_screws_are_flush_and_clear_support_bars(model):
             abs(mount_x - frame["support_bar_center_x"]),
             abs(mount_x + frame["support_bar_center_x"]),
         )
-        assert (
-            distance_to_support_center
-            > support_half_width + preliminary_m4_head_radius
-        )
+        assert distance_to_support_center > support_half_width + preliminary_m4_head_radius
 
 
 def test_vendor_amplifier_clears_structural_frame(model):
@@ -183,22 +155,13 @@ def test_weather_openings_provision_minimum_gross_area(model):
         * shell["inlet_window_width_y"]
         * shell["inlet_window_height_z"]
     )
-    end_exhaust_area = (
-        2
-        * shell["exhaust_window_width_y"]
-        * shell["exhaust_window_height_z"]
-    )
+    end_exhaust_area = 2 * shell["exhaust_window_width_y"] * shell["exhaust_window_height_z"]
     side_exhaust_area = (
         2
-        * (
-            shell["side_exhaust_window_x_max"]
-            - shell["side_exhaust_window_x_min"]
-        )
+        * (shell["side_exhaust_window_x_max"] - shell["side_exhaust_window_x_min"])
         * shell["side_exhaust_window_height_z"]
     )
-    minimum_gross_area = (
-        params["amplifier"]["airflow"]["preferred_net_area"]
-    )
+    minimum_gross_area = params["amplifier"]["airflow"]["preferred_net_area"]
 
     assert inlet_area >= minimum_gross_area
     assert end_exhaust_area + side_exhaust_area >= minimum_gross_area

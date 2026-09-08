@@ -82,8 +82,10 @@ def silhouette(
     for a, b, c in tris:
         tri = tuple((pts[i][iu], pts[i][iv]) for i in (a, b, c))
         # cross-product area — skip edge-on (degenerate) triangles
-        area2 = abs((tri[1][0] - tri[0][0]) * (tri[2][1] - tri[0][1])
-                    - (tri[2][0] - tri[0][0]) * (tri[1][1] - tri[0][1]))
+        area2 = abs(
+            (tri[1][0] - tri[0][0]) * (tri[2][1] - tri[0][1])
+            - (tri[2][0] - tri[0][0]) * (tri[1][1] - tri[0][1])
+        )
         if area2 > 1e-9:
             polys.append(Polygon(tri))
 
@@ -95,8 +97,7 @@ def silhouette(
     return filled.simplify(simplify_tol)
 
 
-def prism_from_silhouette(sil, axis: str = "Z", start: float = 0.0,
-                          end: float = 10.0) -> cq.Shape:
+def prism_from_silhouette(sil, axis: str = "Z", start: float = 0.0, end: float = 10.0) -> cq.Shape:
     """Extrude a silhouette (from silhouette()) between two stations on the axis."""
     geoms = [sil] if sil.geom_type == "Polygon" else list(sil.geoms)
     height = end - start
@@ -105,8 +106,7 @@ def prism_from_silhouette(sil, axis: str = "Z", start: float = 0.0,
     solids = []
     for g in geoms:
         ring = list(g.exterior.coords)  # closed: first point == last point
-        wire = cq.Wire.makePolygon([cq.Vector(*_embed(u, v, axis, start))
-                                    for u, v in ring])
+        wire = cq.Wire.makePolygon([cq.Vector(*_embed(u, v, axis, start)) for u, v in ring])
         solids.append(cq.Solid.extrudeLinear(wire, [], direction))
     return reduce(lambda a, b: a.fuse(b), solids)
 

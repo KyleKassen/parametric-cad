@@ -36,9 +36,13 @@ def _housing(part: str):
         spec.loader.exec_module(m)
         params = m.load_params()
         L = m.layout(params)
-        _CACHE[part] = {"m": m, "params": params, "L": L,
-                        "base": m.create_base(params),
-                        "lid": m.create_lid(params)}
+        _CACHE[part] = {
+            "m": m,
+            "params": params,
+            "L": L,
+            "base": m.create_base(params),
+            "lid": m.create_lid(params),
+        }
     return _CACHE[part]
 
 
@@ -64,10 +68,11 @@ def _flange_slot_centers(H):
     """Canonical-frame (x, y) centers of the four mount-flange slots."""
     L = H["L"]
     fl = L["industrial"]["mount_flanges"]
-    xs = [-(L["outer_half_x"] + fl["protrusion"] / 2.0),
-          +(L["outer_half_x"] + fl["protrusion"] / 2.0)]
-    ys = [-L["outer_half_y"] + fl["slot_from_ends"],
-          L["back_outer_y"] - fl["slot_from_ends"]]
+    xs = [
+        -(L["outer_half_x"] + fl["protrusion"] / 2.0),
+        +(L["outer_half_x"] + fl["protrusion"] / 2.0),
+    ]
+    ys = [-L["outer_half_y"] + fl["slot_from_ends"], L["back_outer_y"] - fl["slot_from_ends"]]
     return [(x, y) for x in xs for y in ys]
 
 
@@ -86,8 +91,7 @@ def test_mount_flanges_present_with_open_slots(part):
         probe = (
             cq.Workplane("XY")
             .box(fl["protrusion"] - 2.0, 12.0, t - 0.4, centered=(True, True, True))
-            .translate((s * (L["outer_half_x"] + fl["protrusion"] / 2.0),
-                        0.0, t / 2.0))
+            .translate((s * (L["outer_half_x"] + fl["protrusion"] / 2.0), 0.0, t / 2.0))
         )
         v = _overlap(base, _orient(H, probe))
         assert v > 50.0, f"flange material missing on side {s:+.0f} ({v:.1f} mm^3)"
@@ -126,12 +130,15 @@ def test_bottom_face_vents_open_top_face_solid(part):
 
     for zc in vents["wall_slot_z"]:
         # slot ends must stay inside the bay (never breach the plenum)
-        assert (abs(vents["wall_slot_y"]) + vents["wall_slot_length"] / 2.0
-                < L["interior_half_y"])
+        assert abs(vents["wall_slot_y"]) + vents["wall_slot_length"] / 2.0 < L["interior_half_y"]
         probe = (
             cq.Workplane("XY")
-            .box(h["wall"] + 1.0, vents["wall_slot_length"] - 0.4,
-                 vents["slot_width"] - 0.4, centered=(True, True, True))
+            .box(
+                h["wall"] + 1.0,
+                vents["wall_slot_length"] - 0.4,
+                vents["slot_width"] - 0.4,
+                centered=(True, True, True),
+            )
             .translate((wall_mid, vents["wall_slot_y"], zc))
         )
         v = _overlap(base, _orient(H, probe))
@@ -157,11 +164,13 @@ def test_cover_louvers_open(part):
         for xc in vents["cover_slot_x"]:
             probe = (
                 cq.Workplane("XY")
-                .box(vents["slot_width"] - 0.4,
-                     vents["cover_slot_length"] - 0.4,
-                     h["lid_thickness"] + 1.0, centered=(True, True, True))
-                .translate((s * xc, vents["cover_slot_y"],
-                            z0 + h["lid_thickness"] / 2.0))
+                .box(
+                    vents["slot_width"] - 0.4,
+                    vents["cover_slot_length"] - 0.4,
+                    h["lid_thickness"] + 1.0,
+                    centered=(True, True, True),
+                )
+                .translate((s * xc, vents["cover_slot_y"], z0 + h["lid_thickness"] / 2.0))
             )
             v = _overlap(lid, _orient(H, probe))
             assert v < 0.05, f"cover louver at x={s * xc:.1f} blocked by {v:.2f} mm^3"
@@ -183,9 +192,9 @@ def test_sc_adapter_recess_pockets(part):
     for ax in L["adapter_x"]:
         pocket = (
             cq.Workplane("XY")
-            .box(pocket_w, rc["sc_depth"] - 0.1, pocket_h,
-                 centered=(True, False, True))
-            .edges("|Y").fillet(rc["corner_radius"])
+            .box(pocket_w, rc["sc_depth"] - 0.1, pocket_h, centered=(True, False, True))
+            .edges("|Y")
+            .fillet(rc["corner_radius"])
             .translate((ax, L["back_outer_y"] - rc["sc_depth"] + 0.05, L["fiber_z"]))
         )
         v = _overlap(base, _orient(H, pocket))
@@ -198,9 +207,7 @@ def test_sc_adapter_recess_pockets(part):
         behind = (
             cq.Workplane("XY")
             .box(1.0, 0.8, 2.0, centered=(True, True, True))
-            .translate((ax + sgn * 5.6,
-                        L["back_outer_y"] - rc["sc_depth"] - 0.6,
-                        L["fiber_z"]))
+            .translate((ax + sgn * 5.6, L["back_outer_y"] - rc["sc_depth"] - 0.6, L["fiber_z"]))
         )
         v = _overlap(base, _orient(H, behind))
         assert v > 1.2, f"no wall behind SC recess at x={ax} ({v:.2f} mm^3)"
@@ -222,8 +229,12 @@ def test_de9_top_jackscrew_capture_slot(part):
 
     slot = (
         cq.Workplane("XY")
-        .box(pc["screw_hole_dia"] - 0.4, h["wall"] + 1.0,
-             L["base_height"] - top_z + 0.4, centered=(True, True, False))
+        .box(
+            pc["screw_hole_dia"] - 0.4,
+            h["wall"] + 1.0,
+            L["base_height"] - top_z + 0.4,
+            centered=(True, True, False),
+        )
         .translate((pc["x"], L["plenum_y1"] + h["wall"] / 2.0, top_z - 0.2))
     )
     v = _overlap(base, _orient(H, slot))
@@ -284,7 +295,7 @@ def test_identity_label_engraved(part):
     L, base = H["L"], H["base"]
     lab = L["industrial"]["labels"]
 
-    w_z = lab["identity_size"] * 1.4   # text runs along canonical Z
+    w_z = lab["identity_size"] * 1.4  # text runs along canonical Z
     h_x = lab["identity_size"] * 1.1
     skin = 0.3
     probe = (
@@ -304,10 +315,10 @@ def test_flanges_extend_envelope_and_stay_flush(part):
     H = _housing(part)
     L = H["L"]
     fl = L["industrial"]["mount_flanges"]
-    assert abs(L["envelope_height"]
-               - (2 * L["outer_half_x"] + 2 * fl["protrusion"])) < 1e-6
+    assert abs(L["envelope_height"] - (2 * L["outer_half_x"] + 2 * fl["protrusion"])) < 1e-6
 
     bb = H["base"].val().BoundingBox()
     # finished frame: mount face at x = -envelope_width/2
-    assert abs(bb.xmin - (-L["envelope_width"] / 2.0)) < 0.01, \
+    assert abs(bb.xmin - (-L["envelope_width"] / 2.0)) < 0.01, (
         "flange must not protrude past the mount face"
+    )

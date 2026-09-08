@@ -43,8 +43,11 @@ def make_part(tmp_path, model_body=BOX_MODEL, dims=None, spec=None, name="widget
     part = tmp_path / name
     part.mkdir()
     (part / "model.py").write_text(model_body)
-    params = {"part_name": name, "version": "v1",
-              "dimensions": dims or {"length": 10.0, "width": 20.0, "thickness": 5.0}}
+    params = {
+        "part_name": name,
+        "version": "v1",
+        "dimensions": dims or {"length": 10.0, "width": 20.0, "thickness": 5.0},
+    }
     (part / "params.json").write_text(json.dumps(params))
     if spec is not None:
         (part / "spec.json").write_text(json.dumps(spec))
@@ -149,8 +152,7 @@ def test_step_roundtrip_failure_is_error(tmp_path, monkeypatch):
     import lib.evaluate as ev
 
     part = make_part(tmp_path, spec=box_spec())
-    monkeypatch.setattr(ev, "export_step",
-                        lambda shape, path: path.write_text("not a STEP file"))
+    monkeypatch.setattr(ev, "export_step", lambda shape, path: path.write_text("not a STEP file"))
     report = run(part)
 
     assert report["overall"] == "ERROR"
@@ -176,8 +178,7 @@ def test_empty_geometry_never_passes(tmp_path):
 
 
 def test_build_exception_is_error(tmp_path):
-    broken = BOX_MODEL.replace('d = params["dimensions"]',
-                               'raise RuntimeError("boom")')
+    broken = BOX_MODEL.replace('d = params["dimensions"]', 'raise RuntimeError("boom")')
     part = make_part(tmp_path, model_body=broken, spec=box_spec())
     report = run(part)
 
@@ -192,19 +193,20 @@ def test_build_exception_is_error(tmp_path):
 # Part-specific validators
 # ---------------------------------------------------------------------------
 def test_validator_pass_sees_exported_step(tmp_path):
-    part = make_part(tmp_path, spec=box_spec(
-        validators=[{"id": "sees_step", "script": "check.py"}]))
+    part = make_part(
+        tmp_path, spec=box_spec(validators=[{"id": "sees_step", "script": "check.py"}])
+    )
     (part / "check.py").write_text(
         "import os, sys\nfrom pathlib import Path\n"
-        "sys.exit(0 if Path(os.environ['EVAL_STEP_PATH']).is_file() else 1)\n")
+        "sys.exit(0 if Path(os.environ['EVAL_STEP_PATH']).is_file() else 1)\n"
+    )
     report = run(part)
     assert check_by_id(report, "validator:sees_step")["status"] == "PASS"
     assert report["overall"] == "PASS"
 
 
 def test_validator_nonzero_exit_fails(tmp_path):
-    part = make_part(tmp_path, spec=box_spec(
-        validators=[{"id": "angry", "script": "check.py"}]))
+    part = make_part(tmp_path, spec=box_spec(validators=[{"id": "angry", "script": "check.py"}]))
     (part / "check.py").write_text("import sys\nprint('clearance violated')\nsys.exit(3)\n")
     report = run(part)
 
@@ -216,8 +218,9 @@ def test_validator_nonzero_exit_fails(tmp_path):
 
 
 def test_validator_missing_script_is_error(tmp_path):
-    part = make_part(tmp_path, spec=box_spec(
-        validators=[{"id": "ghost", "script": "does_not_exist.py"}]))
+    part = make_part(
+        tmp_path, spec=box_spec(validators=[{"id": "ghost", "script": "does_not_exist.py"}])
+    )
     report = run(part)
     assert check_by_id(report, "validator:ghost")["status"] == "ERROR"
     assert report["overall"] == "ERROR"
@@ -237,8 +240,17 @@ HOLED_MODEL = BOX_MODEL.replace(
 def test_cylinder_at_accepts_correct_side(tmp_path):
     spec = box_spec()
     spec["dimensions"].append(
-        {"id": "offset_hole", "kind": "cylinder_at", "diameter": 4.0, "tol": 0.1,
-         "axis": "Z", "type": "hole", "at": [3.0, 0.0, 0.0], "pos_tol": 0.5})
+        {
+            "id": "offset_hole",
+            "kind": "cylinder_at",
+            "diameter": 4.0,
+            "tol": 0.1,
+            "axis": "Z",
+            "type": "hole",
+            "at": [3.0, 0.0, 0.0],
+            "pos_tol": 0.5,
+        }
+    )
     part = make_part(tmp_path, model_body=HOLED_MODEL, spec=spec)
     report = run(part)
     c = check_by_id(report, "dim:offset_hole")
@@ -250,8 +262,17 @@ def test_cylinder_at_rejects_mirrored_hole(tmp_path):
     """A hole of the right size on the WRONG side must fail — the v1 bug."""
     spec = box_spec()
     spec["dimensions"].append(
-        {"id": "mirrored_hole", "kind": "cylinder_at", "diameter": 4.0, "tol": 0.1,
-         "axis": "Z", "type": "hole", "at": [-3.0, 0.0, 0.0], "pos_tol": 0.5})
+        {
+            "id": "mirrored_hole",
+            "kind": "cylinder_at",
+            "diameter": 4.0,
+            "tol": 0.1,
+            "axis": "Z",
+            "type": "hole",
+            "at": [-3.0, 0.0, 0.0],
+            "pos_tol": 0.5,
+        }
+    )
     part = make_part(tmp_path, model_body=HOLED_MODEL, spec=spec)
     report = run(part)
     c = check_by_id(report, "dim:mirrored_hole")
@@ -264,8 +285,8 @@ def test_cylinder_at_rejects_mirrored_hole(tmp_path):
 def test_cylinder_at_no_candidate_fails(tmp_path):
     spec = box_spec()
     spec["dimensions"].append(
-        {"id": "phantom", "kind": "cylinder_at", "diameter": 9.0,
-         "at": [0.0, 0.0, 0.0]})
+        {"id": "phantom", "kind": "cylinder_at", "diameter": 9.0, "at": [0.0, 0.0, 0.0]}
+    )
     part = make_part(tmp_path, model_body=HOLED_MODEL, spec=spec)
     report = run(part)
     c = check_by_id(report, "dim:phantom")
@@ -279,7 +300,8 @@ def test_cylinder_at_no_candidate_fails(tmp_path):
 def test_unresolved_hard_dimension_blocks_acceptance(tmp_path):
     spec = box_spec()
     spec["dimensions"].append(
-        {"id": "mystery_bore", "kind": "cylinder", "diameter": 6.0, "unresolved": True})
+        {"id": "mystery_bore", "kind": "cylinder", "diameter": 6.0, "unresolved": True}
+    )
     part = make_part(tmp_path, spec=spec)
     report = run(part)
 
@@ -291,7 +313,8 @@ def test_unresolved_hard_dimension_blocks_acceptance(tmp_path):
 def test_unresolved_soft_dimension_warns_only(tmp_path):
     spec = box_spec()
     spec["dimensions"].append(
-        {"id": "nice_to_know", "kind": "volume", "unresolved": True, "severity": "soft"})
+        {"id": "nice_to_know", "kind": "volume", "unresolved": True, "severity": "soft"}
+    )
     part = make_part(tmp_path, spec=spec)
     report = run(part)
 
@@ -349,11 +372,11 @@ def test_init_spec_drafts_from_measured_geometry(tmp_path):
     spec = json.loads(spec_path.read_text())
 
     assert spec["solid_count"] == 1
-    bbox_x = next(d for d in spec["dimensions"]
-                  if d["kind"] == "bbox" and d["axis"] == "x")
+    bbox_x = next(d for d in spec["dimensions"] if d["kind"] == "bbox" and d["axis"] == "x")
     assert abs(bbox_x["expected"] - 10.0) < 0.01
     assert all(d.get("unresolved") for d in spec["dimensions"]), (
-        "every drafted value must demand review")
+        "every drafted value must demand review"
+    )
     cyl = [d for d in spec["dimensions"] if d["kind"] == "cylinder"]
     assert any(abs(d["diameter"] - 4.0) < 0.01 for d in cyl), "the bore must be drafted"
 
