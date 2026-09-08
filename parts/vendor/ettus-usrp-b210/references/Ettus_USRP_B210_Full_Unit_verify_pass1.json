@@ -1,0 +1,534 @@
+{
+ "source": "C:/Users/KyleKassen/Documents/Projects/ADRS/CAD/Ettus/Ettus_USRP_B210_Full_Unit.step",
+ "solid_count": 196,
+ "bbox": {
+  "xmin": -2.674,
+  "xmax": 119.674,
+  "ymin": -4.766,
+  "ymax": 32.49,
+  "zmin": -166.602,
+  "zmax": 11.046
+ },
+ "planes_of_interest": {
+  "bottom_pan_outer_Y_-1.210": {
+   "n_faces": 9,
+   "total_area": 18134.5,
+   "extent_x": [
+    -0.0,
+    117.0
+   ],
+   "extent_y": [
+    -1.21,
+    -1.21
+   ],
+   "extent_z": [
+    -153.126,
+    -2.42
+   ]
+  },
+  "top_cover_outer_Y_32.490": {
+   "n_faces": 1,
+   "total_area": 17198.1,
+   "extent_x": [
+    -0.254,
+    117.254
+   ],
+   "extent_y": [
+    32.49,
+    32.49
+   ],
+   "extent_z": [
+    -153.126,
+    -2.42
+   ]
+  },
+  "front_panel_outer_Z_0.914": {
+   "n_faces": 10,
+   "total_area": 6087.0,
+   "extent_x": [
+    -0.0,
+    117.0
+   ],
+   "extent_y": [
+    1.21,
+    30.07
+   ],
+   "extent_z": [
+    0.914,
+    0.914
+   ]
+  },
+  "rear_panel_outer_Z_-156.460": {
+   "n_faces": 9,
+   "total_area": 5614.0,
+   "extent_x": [
+    -0.0,
+    117.0
+   ],
+   "extent_y": [
+    1.21,
+    30.07
+   ],
+   "extent_z": [
+    -156.46,
+    -156.46
+   ]
+  },
+  "left_wall_X_-2.674": {
+   "n_faces": 1,
+   "total_area": 3314.9,
+   "extent_x": [
+    -2.674,
+    -2.674
+   ],
+   "extent_y": [
+    8.29,
+    30.07
+   ],
+   "extent_z": [
+    -154.336,
+    -1.21
+   ]
+  },
+  "right_wall_X_119.674": {
+   "n_faces": 1,
+   "total_area": 3314.9,
+   "extent_x": [
+    119.674,
+    119.674
+   ],
+   "extent_y": [
+    8.29,
+    30.07
+   ],
+   "extent_z": [
+    -154.336,
+    -1.21
+   ]
+  }
+ },
+ "minus_Y_facing_plane_levels": [
+  {
+   "y": -4.766,
+   "area": 220.1
+  },
+  {
+   "y": -1.21,
+   "area": 17627.8
+  },
+  {
+   "y": 1.21,
+   "area": 209.5
+  },
+  {
+   "y": 1.321,
+   "area": 38.1
+  },
+  {
+   "y": 1.328,
+   "area": 38.1
+  },
+  {
+   "y": 1.348,
+   "area": 38.1
+  },
+  {
+   "y": 5.513,
+   "area": 22.7
+  },
+  {
+   "y": 6.745,
+   "area": 39.5
+  },
+  {
+   "y": 6.783,
+   "area": 172.6
+  },
+  {
+   "y": 7.037,
+   "area": 70.5
+  },
+  {
+   "y": 7.04,
+   "area": 24.9
+  },
+  {
+   "y": 7.215,
+   "area": 40.9
+  }
+ ],
+ "bottom_M3_bores_dia3": [
+  {
+   "dia": 3.0,
+   "x": 11.701,
+   "z": -140.643,
+   "y_from": -1.21,
+   "y_to": 4.79
+  },
+  {
+   "dia": 3.0,
+   "x": 11.701,
+   "z": -140.643,
+   "y_from": -1.21,
+   "y_to": 4.79
+  },
+  {
+   "dia": 3.0,
+   "x": 105.3,
+   "z": -140.643,
+   "y_from": -1.21,
+   "y_to": 4.79
+  },
+  {
+   "dia": 3.0,
+   "x": 105.3,
+   "z": -140.643,
+   "y_from": -1.21,
+   "y_to": 4.79
+  },
+  {
+   "dia": 3.0,
+   "x": 11.701,
+   "z": -20.628,
+   "y_from": -1.21,
+   "y_to": 4.79
+  },
+  {
+   "dia": 3.0,
+   "x": 11.701,
+   "z": -20.628,
+   "y_from": -1.21,
+   "y_to": 4.79
+  },
+  {
+   "dia": 3.0,
+   "x": 105.3,
+   "z": -20.628,
+   "y_from": -1.21,
+   "y_to": 4.79
+  },
+  {
+   "dia": 3.0,
+   "x": 105.3,
+   "z": -20.628,
+   "y_from": -1.21,
+   "y_to": 4.79
+  }
+ ],
+ "bottom_bores_upper_dia3p2": [
+  {
+   "dia": 3.2,
+   "x": 11.701,
+   "z": -140.643,
+   "y_from": 4.79,
+   "y_to": 8.79
+  },
+  {
+   "dia": 3.2,
+   "x": 11.701,
+   "z": -140.643,
+   "y_from": 4.79,
+   "y_to": 8.79
+  },
+  {
+   "dia": 3.2,
+   "x": 105.3,
+   "z": -140.643,
+   "y_from": 4.79,
+   "y_to": 8.79
+  },
+  {
+   "dia": 3.2,
+   "x": 105.3,
+   "z": -140.643,
+   "y_from": 4.79,
+   "y_to": 8.79
+  },
+  {
+   "dia": 3.2,
+   "x": 11.701,
+   "z": -20.628,
+   "y_from": 4.79,
+   "y_to": 8.79
+  },
+  {
+   "dia": 3.2,
+   "x": 11.701,
+   "z": -20.628,
+   "y_from": 4.79,
+   "y_to": 8.79
+  },
+  {
+   "dia": 3.2,
+   "x": 105.3,
+   "z": -20.628,
+   "y_from": 4.79,
+   "y_to": 8.79
+  },
+  {
+   "dia": 3.2,
+   "x": 105.3,
+   "z": -20.628,
+   "y_from": 4.79,
+   "y_to": 8.79
+  }
+ ],
+ "bottom_sheet_openings": [
+  {
+   "dia": 4.191,
+   "x": 11.701,
+   "z": -140.643,
+   "y_from": -1.21,
+   "y_to": 0.0
+  },
+  {
+   "dia": 4.191,
+   "x": 11.701,
+   "z": -140.643,
+   "y_from": -1.21,
+   "y_to": 0.0
+  },
+  {
+   "dia": 4.2,
+   "x": 11.701,
+   "z": -140.643,
+   "y_from": -0.21,
+   "y_to": 8.79
+  },
+  {
+   "dia": 4.2,
+   "x": 11.701,
+   "z": -140.643,
+   "y_from": -0.21,
+   "y_to": 8.79
+  },
+  {
+   "dia": 4.191,
+   "x": 105.3,
+   "z": -140.643,
+   "y_from": -1.21,
+   "y_to": 0.0
+  },
+  {
+   "dia": 4.191,
+   "x": 105.3,
+   "z": -140.643,
+   "y_from": -1.21,
+   "y_to": 0.0
+  },
+  {
+   "dia": 4.2,
+   "x": 105.3,
+   "z": -140.643,
+   "y_from": -0.21,
+   "y_to": 8.79
+  },
+  {
+   "dia": 4.2,
+   "x": 105.3,
+   "z": -140.643,
+   "y_from": -0.21,
+   "y_to": 8.79
+  },
+  {
+   "dia": 4.191,
+   "x": 11.701,
+   "z": -20.628,
+   "y_from": -1.21,
+   "y_to": 0.0
+  },
+  {
+   "dia": 4.191,
+   "x": 11.701,
+   "z": -20.628,
+   "y_from": -1.21,
+   "y_to": 0.0
+  },
+  {
+   "dia": 4.2,
+   "x": 11.701,
+   "z": -20.628,
+   "y_from": -0.21,
+   "y_to": 8.79
+  },
+  {
+   "dia": 4.2,
+   "x": 11.701,
+   "z": -20.628,
+   "y_from": -0.21,
+   "y_to": 8.79
+  },
+  {
+   "dia": 4.191,
+   "x": 105.3,
+   "z": -20.628,
+   "y_from": -1.21,
+   "y_to": 0.0
+  },
+  {
+   "dia": 4.191,
+   "x": 105.3,
+   "z": -20.628,
+   "y_from": -1.21,
+   "y_to": 0.0
+  },
+  {
+   "dia": 4.2,
+   "x": 105.3,
+   "z": -20.628,
+   "y_from": -0.21,
+   "y_to": 8.79
+  },
+  {
+   "dia": 4.2,
+   "x": 105.3,
+   "z": -20.628,
+   "y_from": -0.21,
+   "y_to": 8.79
+  }
+ ],
+ "rubber_feet": [],
+ "screw_penetration_limits": [
+  {
+   "x": 11.701,
+   "z": -140.643,
+   "first_material_on_axis_y": 2.365,
+   "obstructing_solid_ybox": [
+    2.364,
+    11.965
+   ],
+   "obstructing_solid_volume": 81.6,
+   "free_depth_from_outer_face_mm": 3.575
+  },
+  {
+   "x": 11.701,
+   "z": -140.643,
+   "first_material_on_axis_y": 2.365,
+   "obstructing_solid_ybox": [
+    2.364,
+    11.965
+   ],
+   "obstructing_solid_volume": 81.6,
+   "free_depth_from_outer_face_mm": 3.575
+  },
+  {
+   "x": 105.3,
+   "z": -140.643,
+   "first_material_on_axis_y": 2.365,
+   "obstructing_solid_ybox": [
+    2.364,
+    11.965
+   ],
+   "obstructing_solid_volume": 81.6,
+   "free_depth_from_outer_face_mm": 3.575
+  },
+  {
+   "x": 105.3,
+   "z": -140.643,
+   "first_material_on_axis_y": 2.365,
+   "obstructing_solid_ybox": [
+    2.364,
+    11.965
+   ],
+   "obstructing_solid_volume": 81.6,
+   "free_depth_from_outer_face_mm": 3.575
+  },
+  {
+   "x": 11.701,
+   "z": -20.628,
+   "first_material_on_axis_y": 2.365,
+   "obstructing_solid_ybox": [
+    2.364,
+    11.965
+   ],
+   "obstructing_solid_volume": 81.6,
+   "free_depth_from_outer_face_mm": 3.575
+  },
+  {
+   "x": 11.701,
+   "z": -20.628,
+   "first_material_on_axis_y": 2.365,
+   "obstructing_solid_ybox": [
+    2.364,
+    11.965
+   ],
+   "obstructing_solid_volume": 81.6,
+   "free_depth_from_outer_face_mm": 3.575
+  },
+  {
+   "x": 105.3,
+   "z": -20.628,
+   "first_material_on_axis_y": 2.365,
+   "obstructing_solid_ybox": [
+    2.364,
+    11.965
+   ],
+   "obstructing_solid_volume": 81.6,
+   "free_depth_from_outer_face_mm": 3.575
+  },
+  {
+   "x": 105.3,
+   "z": -20.628,
+   "first_material_on_axis_y": 2.365,
+   "obstructing_solid_ybox": [
+    2.364,
+    11.965
+   ],
+   "obstructing_solid_volume": 81.6,
+   "free_depth_from_outer_face_mm": 3.575
+  }
+ ],
+ "wall_faces": {
+  "left_-X": [
+   {
+    "area": 3314.9,
+    "y": [
+     8.29,
+     30.07
+    ],
+    "z": [
+     -154.336,
+     -1.21
+    ]
+   }
+  ],
+  "right_+X": [
+   {
+    "area": 3314.9,
+    "y": [
+     8.29,
+     30.07
+    ],
+    "z": [
+     -154.336,
+     -1.21
+    ]
+   }
+  ]
+ },
+ "extremes": {
+  "most_negative_Z_solid": {
+   "zmin": -166.602,
+   "vol": 393.2
+  },
+  "most_positive_Z_solid": {
+   "zmax": 11.046,
+   "vol": 393.2
+  }
+ },
+ "envelope_excluding_feet": {
+  "x": [
+   -2.674,
+   119.674
+  ],
+  "y": [
+   -1.21,
+   32.49
+  ],
+  "z": [
+   -166.602,
+   11.046
+  ]
+ },
+ "total_modelled_volume_mm3": 115676.1
+}

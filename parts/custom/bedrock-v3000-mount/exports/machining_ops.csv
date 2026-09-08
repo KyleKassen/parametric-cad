@@ -1,0 +1,44 @@
+variant,op,face,at,tool_d,depth,thread,why
+upright_deck,spotface,"back-wall plate, OUTER face","(X 0, Z 50) on the +Y web",6.0,0.5,,sets the grip to 2.5 mm so an M3x5 engages 2.5 mm and stops short of the 3.000 mm hole bottom
+upright_deck,spotface,"back-wall plate, OUTER face","(X 0, Z 110) on the +Y web",6.0,0.5,,sets the grip to 2.5 mm so an M3x5 engages 2.5 mm and stops short of the 3.000 mm hole bottom
+upright_deck,countersink 90deg,underside of the -Z pad,"(6, 0)",8.4,1.95,,head must finish flush - it sits against the host
+upright_deck,countersink 90deg,host-side face,"HOST_1 (-28, -70)",10.4,2.45,,flush so the head may sit under the chassis footprint
+upright_deck,countersink 90deg,host-side face,"HOST_2 (28, -70)",10.4,2.45,,flush so the head may sit under the chassis footprint
+upright_deck,countersink 90deg,host-side face,"HOST_3 (-9, -40)",10.4,2.45,,flush so the head may sit under the chassis footprint
+upright_deck,countersink 90deg,host-side face,"HOST_4 (9, -40)",10.4,2.45,,flush so the head may sit under the chassis footprint
+upright_deck,countersink 90deg,host-side face,"HOST_5 (-9, 20)",10.4,2.45,,flush so the head may sit under the chassis footprint
+upright_deck,countersink 90deg,host-side face,"HOST_6 (9, 20)",10.4,2.45,,flush so the head may sit under the chassis footprint
+upright_deck,countersink 90deg,host-side face,"HOST_7 (-9, 50)",10.4,2.45,,flush so the head may sit under the chassis footprint
+upright_deck,countersink 90deg,host-side face,"HOST_8 (9, 50)",10.4,2.45,,flush so the head may sit under the chassis footprint
+upright_bulkhead,spotface,"back-wall plate, OUTER face","(X 0, Z 50) on the +Y web",6.0,0.5,,sets the grip to 2.5 mm so an M3x5 engages 2.5 mm and stops short of the 3.000 mm hole bottom
+upright_bulkhead,spotface,"back-wall plate, OUTER face","(X 0, Z 110) on the +Y web",6.0,0.5,,sets the grip to 2.5 mm so an M3x5 engages 2.5 mm and stops short of the 3.000 mm hole bottom
+upright_bulkhead,countersink 90deg,underside of the -Z pad,"(6, 0)",8.4,1.95,,head must finish flush - it sits against the host
+upright_bulkhead,countersink 90deg,host-side face,"HOST_1 (-61, 24)",10.4,2.45,,flush so the head may sit under the chassis footprint
+upright_bulkhead,countersink 90deg,host-side face,"HOST_2 (61, 24)",10.4,2.45,,flush so the head may sit under the chassis footprint
+upright_bulkhead,countersink 90deg,host-side face,"HOST_3 (-61, 76)",10.4,2.45,,flush so the head may sit under the chassis footprint
+upright_bulkhead,countersink 90deg,host-side face,"HOST_4 (61, 76)",10.4,2.45,,flush so the head may sit under the chassis footprint
+upright_bulkhead,countersink 90deg,host-side face,"HOST_5 (-61, 128)",10.4,2.45,,flush so the head may sit under the chassis footprint
+upright_bulkhead,countersink 90deg,host-side face,"HOST_6 (61, 128)",10.4,2.45,,flush so the head may sit under the chassis footprint
+low_profile_side,spotface,"back-wall plate, OUTER face","(X 0, Z 50) on the +Y web",6.0,0.5,,sets the grip to 2.5 mm so an M3x5 engages 2.5 mm and stops short of the 3.000 mm hole bottom
+low_profile_side,spotface,"back-wall plate, OUTER face","(X 0, Z 110) on the +Y web",6.0,0.5,,sets the grip to 2.5 mm so an M3x5 engages 2.5 mm and stops short of the 3.000 mm hole bottom
+low_profile_side,countersink 90deg,underside of the -Z pad,"(6, 0)",8.4,1.95,,head must finish flush - it sits against the host
+low_profile_side,countersink 90deg,host-side face,"HOST_1 (-62, 11)",10.4,2.45,,flush so the head may sit under the chassis footprint
+low_profile_side,countersink 90deg,host-side face,"HOST_2 (54, 11)",10.4,2.45,,flush so the head may sit under the chassis footprint
+low_profile_side,countersink 90deg,host-side face,"HOST_3 (-62, 80)",10.4,2.45,,flush so the head may sit under the chassis footprint
+low_profile_side,countersink 90deg,host-side face,"HOST_4 (54, 80)",10.4,2.45,,flush so the head may sit under the chassis footprint
+low_profile_side,countersink 90deg,host-side face,"HOST_5 (-62, 156)",10.4,2.45,,flush so the head may sit under the chassis footprint
+low_profile_side,countersink 90deg,host-side face,"HOST_6 (54, 156)",10.4,2.45,,flush so the head may sit under the chassis footprint
+hybrid_cold_plate,countersink 90deg,OUTER face (host side),"M4_1 (Y -60, Z 10)",8.4,1.95,,flush - this face is the one that beds against the host
+hybrid_cold_plate,countersink 90deg,OUTER face (host side),"M4_2 (Y 60, Z 10)",8.4,1.95,,flush - this face is the one that beds against the host
+hybrid_cold_plate,countersink 90deg,OUTER face (host side),"M4_3 (Y 0, Z 40)",8.4,1.95,,flush - this face is the one that beds against the host
+hybrid_cold_plate,countersink 90deg,OUTER face (host side),"M4_4 (Y 0, Z 110)",8.4,1.95,,flush - this face is the one that beds against the host
+hybrid_cold_plate,countersink 90deg,OUTER face (host side),"M4_5 (Y -50, Z 150)",8.4,1.95,,flush - this face is the one that beds against the host
+hybrid_cold_plate,countersink 90deg,OUTER face (host side),"M4_6 (Y 50, Z 150)",8.4,1.95,,flush - this face is the one that beds against the host
+hybrid_cold_plate,drill + tap BLIND,OUTER face (host side),"VESA75 (Y -37.5, Z 42.5)",3.3,4.0,"M4x0.7, 3.5 mm min full thread",must NOT break through - a long host screw would jack the plate off the chassis
+hybrid_cold_plate,drill + tap BLIND,OUTER face (host side),"VESA75 (Y -37.5, Z 117.5)",3.3,4.0,"M4x0.7, 3.5 mm min full thread",must NOT break through - a long host screw would jack the plate off the chassis
+hybrid_cold_plate,drill + tap BLIND,OUTER face (host side),"VESA75 (Y 37.5, Z 42.5)",3.3,4.0,"M4x0.7, 3.5 mm min full thread",must NOT break through - a long host screw would jack the plate off the chassis
+hybrid_cold_plate,drill + tap BLIND,OUTER face (host side),"VESA75 (Y 37.5, Z 117.5)",3.3,4.0,"M4x0.7, 3.5 mm min full thread",must NOT break through - a long host screw would jack the plate off the chassis
+hybrid_cold_plate,drill + tap BLIND,OUTER face (host side),"VESA100 (Y -50, Z 30)",3.3,4.0,"M4x0.7, 3.5 mm min full thread",must NOT break through - a long host screw would jack the plate off the chassis
+hybrid_cold_plate,drill + tap BLIND,OUTER face (host side),"VESA100 (Y -50, Z 130)",3.3,4.0,"M4x0.7, 3.5 mm min full thread",must NOT break through - a long host screw would jack the plate off the chassis
+hybrid_cold_plate,drill + tap BLIND,OUTER face (host side),"VESA100 (Y 50, Z 30)",3.3,4.0,"M4x0.7, 3.5 mm min full thread",must NOT break through - a long host screw would jack the plate off the chassis
+hybrid_cold_plate,drill + tap BLIND,OUTER face (host side),"VESA100 (Y 50, Z 130)",3.3,4.0,"M4x0.7, 3.5 mm min full thread",must NOT break through - a long host screw would jack the plate off the chassis

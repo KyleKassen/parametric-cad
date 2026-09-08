@@ -1,0 +1,397 @@
+{
+    "part_name": "SolidRun Bedrock V3000 mount family",
+    "version": "v3",
+    "description": "Five mounts for the SolidRun Bedrock V3000 across two interfaces. Three folded-sheet variants work the interface every chassis shares - the 20 mm wide back-wall land with its 2x M3x0.5 (3.000 mm deep, hard limit) and the bottom end cap with its one usable M4x0.7 - and are sized for the 60 W chassis (|X| = 36.5), the widest of the three superimposed in the vendor STEP. Two plates work the Tile core's 20410 mm2 flat side and its six M4x0.7: tile_side_plate for a bare Tile, hybrid_cold_plate for the hybrid (Tile core + one 60 W fin bank).",
+    "units": "mm",
+    "material": "5052-H32 aluminium sheet for the folded variants (316L stainless for a full marine spec - see notes); 6082-T6 plate for hybrid_cold_plate, which is a conduction path and wants the higher-conductivity alloy",
+    "process": "Laser cut + press brake for the three folded variants; laser only for tile_side_plate; laser/waterjet profile plus CNC drill, countersink and tap for hybrid_cold_plate",
+    "target_variant": "60w",
+    "design_mass_kg": 1.6,
+    "design_shock_g": 20,
+    "dimensions": {
+        "sheet_t": 3.0,
+        "bend_radius_inside": 3.0,
+        "k_factor": 0.42,
+        "corner_r": 4.0,
+        "edge_break": 0.5
+    },
+    "fasteners": {
+        "backwall_m3": {
+            "thread": "M3x0.5",
+            "screw": "M3x5 socket cap A4-70",
+            "clearance_d": 3.4,
+            "spotface_d": 6.0,
+            "grip": 2.5,
+            "engagement": 2.5,
+            "torque_nm": 0.5,
+            "note": "Spotface 0.5 deep in the 3.0 mm plate brings the grip to 2.5 so an M3x5 engages 2.5 mm, leaving 0.5 mm before the 3.000 mm hole bottom. M3x6 in the same plate penetrates 3.5 mm and JACKS THE BRACKET OFF THE FACE."
+        },
+        "bottom_m4": {
+            "thread": "M4x0.7",
+            "screw": "M4x8 countersunk 90deg A4-70",
+            "clearance_d": 4.5,
+            "csk_d": 8.4,
+            "csk_angle": 90,
+            "grip": 3.0,
+            "engagement": 5.0,
+            "torque_nm": 2.0,
+            "optional": true,
+            "note": "OPTIONAL by design. This tapping is very likely a vendor bottom-cover assembly screw (its mirror twin at X = -6 already has one fitted). Every variant here stands up without it; fitting it only improves the anti-prying reaction."
+        },
+        "tile_m4": {
+            "thread": "M4x0.7",
+            "screw": "M4x6 socket cap A4-70",
+            "clearance_d": 4.5,
+            "grip": 3.0,
+            "engagement": 3.0,
+            "torque_nm": 2.0,
+            "note": "3.5 mm is the hard limit per side on the Tile through-bores; M4x6 through 3.0 mm of plate engages exactly 3.0."
+        },
+        "host": {
+            "thread": "M5",
+            "screw": "M5 countersunk 90deg A4-70",
+            "clearance_d": 5.5,
+            "csk_d": 10.4,
+            "csk_angle": 90,
+            "note": "Countersunk so heads sit flush and can live under the unit's footprint. An M6 csk head will not fit in 3.0 mm plate; M5 sinks 2.6 mm and leaves 0.4 mm."
+        },
+        "hybrid_m4": {
+            "thread": "M4x0.7",
+            "screw": "M4x8 countersunk 90deg A4-70",
+            "clearance_d": 4.5,
+            "csk_d": 8.4,
+            "csk_angle": 90,
+            "grip": 5.0,
+            "engagement": 3.0,
+            "torque_nm": 2.5,
+            "note": "Into the Tile core's side bores through the 5 mm cold plate. 3.0 mm of the 3.5 mm per-side limit. The head must finish flush - this face is the one that sits against the host."
+        },
+        "hybrid_host": {
+            "thread": "M4 (VESA) / M5 (corners), tapped in the plate",
+            "m4_tap_drill": 3.3,
+            "m5_tap_drill": 4.2,
+            "tap_drill_depth": 4.0,
+            "min_thread_depth": 3.5,
+            "note": "BLIND, never through. Host screws come from the host's far side into the plate; a through-tapped hole lets an over-length one stand proud on the bearing face and jack the plate off the chassis."
+        },
+        "hybrid_border": {
+            "thread": "M6",
+            "screw": "M6 socket cap A4-70, length to suit the host",
+            "clearance_d": 6.6,
+            "head_d": 10.0,
+            "note": "Through the border, head on the UNIT side. The border stands 19.5 mm outboard of the chassis flat, so a 10 mm head at Y = +/-74 spans 69..79 and clears the unit's own edge at 64.49 by 4.5 mm - these are the bolts you can still reach once the Bedrock is on the plate. Not countersunk: an M6 csk head sinks 3.35 mm into 5.0 mm of plate and leaves 1.65."
+        }
+    },
+    "clearances": {
+        "fin_tip_gap": 2.0,
+        "land_inset": 0.5,
+        "relief_slot_x_inner": 9.5,
+        "relief_slot_outer_x": 22.0,
+        "side_plenum": 9.5,
+        "note": "relief_slot_x_inner keeps the bearing tongue 0.5 mm inside the 20 mm land on each side so its edges can never land on the back wall's blend ridges; relief_slot_outer_x is where the chassis has fallen at least 0.7 mm clear, so structure may resume. fin_tip_gap is the shock walls' inner face to the 60 W fin tips, and side_plenum is the low-profile base's standoff below them - both are non-contact clearances, and both stop being clearances if someone widens the fin bank."
+    },
+    "variants": {
+        "upright_deck": {
+            "description": "Unit upright (+Z up), full chimney. Bolts down to a horizontal deck or subpanel. One folded part: open pan under the unit, side walls as lateral shock stops, rear spine up the back wall.",
+            "pan_x": 38.5,
+            "pan_y_front": -78.0,
+            "pan_y_rear": 65.0,
+            "rear_ear_x": 45.0,
+            "land_x": 15.0,
+            "window_x": [
+                15.0,
+                35.0
+            ],
+            "window_y": [
+                -60.0,
+                50.0
+            ],
+            "window_r": 6.0,
+            "bend_relief_x": 30.0,
+            "spine_z_top": 136.0,
+            "spine_return_flange": 12.0,
+            "relief_slot_z": [
+                20.0,
+                124.0
+            ],
+            "wall_h": 16.0,
+            "wall_y": [
+                -70.0,
+                54.0
+            ],
+            "wall_slots": [
+                -60.0,
+                -34.0,
+                -8.0,
+                18.0,
+                44.0
+            ],
+            "host_holes": [
+                [
+                    -28.0,
+                    -70.0
+                ],
+                [
+                    28.0,
+                    -70.0
+                ],
+                [
+                    -9.0,
+                    -40.0
+                ],
+                [
+                    9.0,
+                    -40.0
+                ],
+                [
+                    -9.0,
+                    20.0
+                ],
+                [
+                    9.0,
+                    20.0
+                ],
+                [
+                    -9.0,
+                    50.0
+                ],
+                [
+                    9.0,
+                    50.0
+                ]
+            ],
+            "wall_slot_half": 8.0,
+            "ear_y_start": 55.0,
+            "wall_slot_z": [
+                6.0,
+                13.5
+            ]
+        },
+        "upright_bulkhead": {
+            "description": "Unit upright (+Z up), full chimney. Bolts back to a vertical bulkhead behind the back wall, standing the unit 30 mm off it so air reaches both fin banks. One folded top-hat part.",
+            "web_x": 45.0,
+            "web_z": [
+                0.0,
+                143.0
+            ],
+            "side_flange_depth": 30.0,
+            "side_flange_z": [
+                3.0,
+                137.0
+            ],
+            "return_flange_w": 26.0,
+            "relief_slot_z": [
+                20.0,
+                134.0
+            ],
+            "shelf_y_front": -22.0,
+            "shelf_lip_h": 15.0,
+            "land_x": 15.0,
+            "window_x": [
+                15.0,
+                35.0
+            ],
+            "window_y": [
+                -10.0,
+                56.0
+            ],
+            "bend_relief_x": 30.0,
+            "web_window_x": [
+                23.0,
+                36.0
+            ],
+            "web_windows": [
+                [
+                    24.0,
+                    62.0
+                ],
+                [
+                    72.0,
+                    110.0
+                ]
+            ],
+            "host_holes": [
+                [
+                    -61.0,
+                    24.0
+                ],
+                [
+                    61.0,
+                    24.0
+                ],
+                [
+                    -61.0,
+                    76.0
+                ],
+                [
+                    61.0,
+                    76.0
+                ],
+                [
+                    -61.0,
+                    128.0
+                ],
+                [
+                    61.0,
+                    128.0
+                ]
+            ],
+            "top_flange_w": 18.0,
+            "web_window_r": 5.0
+        },
+        "low_profile_side": {
+            "description": "Unit on its side, -X face down: 85 mm of stack instead of 173. Nothing touches a fin - the base is a 9.5 mm-standoff guard, and the load goes into the two fin-free faces through bolted joints. One folded part.",
+            "base_x": -46.0,
+            "base_y": [
+                -70.0,
+                68.0
+            ],
+            "base_z": [
+                -3.0,
+                168.0
+            ],
+            "end_wall_x": 40.0,
+            "end_wall_y": [
+                -66.0,
+                58.0
+            ],
+            "back_wall_x": 40.0,
+            "back_wall_z": [
+                3.0,
+                164.0
+            ],
+            "relief_slot_z": [
+                20.0,
+                140.0
+            ],
+            "base_window_y": [
+                -54.0,
+                46.0
+            ],
+            "base_windows": [
+                [
+                    20.0,
+                    72.0
+                ],
+                [
+                    88.0,
+                    144.0
+                ]
+            ],
+            "host_holes": [
+                [
+                    -62.0,
+                    11.0
+                ],
+                [
+                    54.0,
+                    11.0
+                ],
+                [
+                    -62.0,
+                    80.0
+                ],
+                [
+                    54.0,
+                    80.0
+                ],
+                [
+                    -62.0,
+                    156.0
+                ],
+                [
+                    54.0,
+                    156.0
+                ]
+            ]
+        },
+        "tile_side_plate": {
+            "description": "Tile chassis ONLY (|X| = 14.5). Flat plate on one of the two 20410 mm2 side flats, picking up all six M4x0.7 through-bores. Six fixings on a big flat beats two shallow M3 in every direction, and the full-contact plate is a real conduction path on a fanless unit.",
+            "plate_t": 3.0,
+            "plate_y": [
+                -66.0,
+                66.0
+            ],
+            "plate_z": [
+                -4.0,
+                164.0
+            ],
+            "plate_r": 8.0,
+            "vesa_pattern": [
+                75.0,
+                100.0
+            ],
+            "windows": [
+                [
+                    -44.0,
+                    44.0,
+                    52.0,
+                    76.0
+                ],
+                [
+                    -44.0,
+                    44.0,
+                    84.0,
+                    108.0
+                ]
+            ]
+        },
+        "hybrid_cold_plate": {
+            "description": "Hybrid chassis (Tile core + ONE 60 W fin bank). The flat 20410 mm2 side bolts to the plate on all six M4; the plate then bolts to a host plate through six M6 in a border that stands clear of the unit, so those bolts stay reachable with the unit fitted. Solid, no lightening - with half the fin area gone this is the replacement heat path, not just a bracket.",
+            "fin_side": "+X",
+            "plate_t": 5.0,
+            "plate_y": [
+                -84.0,
+                84.0
+            ],
+            "plate_z": [
+                -20.0,
+                180.0
+            ],
+            "plate_r": 12.0,
+            "vesa_pattern": [
+                75.0,
+                100.0
+            ],
+            "min_feature_gap": 1.0,
+            "vesa_centre_z": 80.0,
+            "border_holes": [
+                [
+                    -74.0,
+                    -10.0
+                ],
+                [
+                    74.0,
+                    -10.0
+                ],
+                [
+                    -74.0,
+                    80.0
+                ],
+                [
+                    74.0,
+                    80.0
+                ],
+                [
+                    -74.0,
+                    170.0
+                ],
+                [
+                    74.0,
+                    170.0
+                ]
+            ]
+        }
+    },
+    "notes": [
+        "Design target is the 60 W chassis (|X| = 36.5), the largest of the three variants superimposed in the vendor STEP. upright_deck, upright_bulkhead and low_profile_side use only the +Y back wall and the -Z bottom cap, so they fit the 30 W and Tile chassis unchanged - the fin clearance simply becomes generous.",
+        "tile_side_plate fits the Tile chassis ONLY. Its 6x M4 pattern does not exist on the 30 W or 60 W.",
+        "Fin channels run along Z and are open at both ends. +Z up is the only orientation in which the unit convects as designed; low_profile_side trades that away deliberately and says so.",
+        "Screw penetration is checked in code, not by eye: interface.check_backwall_screw() and check_bottom_screw() raise rather than let a bracket be drawn that bottoms out.",
+        "5052-H32 is the default: formable to 1t, weldable, and it is the standard marine sheet alloy. For a salt-spray-critical install use 316L at the same thickness and expect ~1.6x the mass; either way the fasteners are A4-70 and the aluminium variants want an isolating washer under stainless heads.",
+        "Host bolts are M5 countersunk so their heads sit flush and may pass under the unit's own footprint. M6 countersunk will not fit in 3.0 mm plate.",
+        "hybrid_cold_plate is for the hybrid chassis - a Tile core carrying one 60 W fin bank, flat on the other side. That configuration is not a body in the vendor STEP, but the file's own architecture is exactly it: the 60 W separates into a Tile core plus two identical 131921.4 mm3 banks at |X| = 14.5, and the core's six M4 are tapped from both ends so a bank goes on one side and a mount on the other.",
+        "v2 adds the hybrid unit and hybrid_cold_plate. The four v1 variants are unchanged - they only ever touch the +Y back wall and the -Z end cap, which every chassis shares.",
+        "v3 gives hybrid_cold_plate a mounting border. v2's plate ended 1.5 mm outboard of the chassis footprint, so its only host interface was twelve BLIND tapped holes - fine for a VESA arm, useless if you want to bolt it flat to another plate and cannot reach behind that plate. The border adds six M6 through holes on a 148 x 180 pattern that stay accessible with the unit fitted."
+    ]
+}

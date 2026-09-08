@@ -1,0 +1,315 @@
+{
+    "schema": "part-spec/1",
+    "part_name": "SolidRun Bedrock V3000 mount family v2 \u2014 upright_deck (primary)",
+    "units": "mm",
+    "solid_count": 1,
+    "dimensions": [
+        {
+            "id": "envelope_width_x",
+            "kind": "bbox",
+            "axis": "x",
+            "expected": 90.0,
+            "tol": 0.2
+        },
+        {
+            "id": "envelope_depth_y",
+            "kind": "bbox",
+            "axis": "y",
+            "expected": 161.0,
+            "tol": 0.2
+        },
+        {
+            "id": "envelope_height_z",
+            "kind": "bbox",
+            "axis": "z",
+            "expected": 139.0,
+            "tol": 0.2
+        },
+        {
+            "id": "backwall_m3_clearance",
+            "kind": "cylinder",
+            "diameter": 3.4,
+            "tol": 0.1,
+            "axis": "Y",
+            "count_min": 2
+        },
+        {
+            "id": "backwall_m3_spotface",
+            "kind": "cylinder",
+            "diameter": 6.0,
+            "tol": 0.1,
+            "axis": "Y",
+            "count_min": 2
+        },
+        {
+            "id": "backwall_m3_lower_position",
+            "kind": "cylinder_at",
+            "diameter": 3.4,
+            "tol": 0.1,
+            "axis": "Y",
+            "at": [
+                0.0,
+                66.5,
+                50.0
+            ],
+            "pos_tol": 0.3
+        },
+        {
+            "id": "backwall_m3_upper_position",
+            "kind": "cylinder_at",
+            "diameter": 3.4,
+            "tol": 0.1,
+            "axis": "Y",
+            "at": [
+                0.0,
+                66.5,
+                110.0
+            ],
+            "pos_tol": 0.3
+        },
+        {
+            "id": "bottom_m4_clearance",
+            "kind": "cylinder",
+            "diameter": 4.5,
+            "tol": 0.1,
+            "axis": "Z",
+            "count_min": 1
+        },
+        {
+            "id": "bottom_m4_position",
+            "kind": "cylinder_at",
+            "diameter": 4.5,
+            "tol": 0.1,
+            "axis": "Z",
+            "at": [
+                6.0,
+                0.0,
+                -1.5
+            ],
+            "pos_tol": 0.3
+        },
+        {
+            "id": "vendor_screw_clearance",
+            "kind": "cylinder_at",
+            "diameter": 8.0,
+            "tol": 0.1,
+            "axis": "Z",
+            "at": [
+                -6.0,
+                0.0,
+                -1.5
+            ],
+            "pos_tol": 0.3
+        },
+        {
+            "id": "host_bolt_clearance",
+            "kind": "cylinder",
+            "diameter": 5.5,
+            "tol": 0.1,
+            "axis": "Z",
+            "count_min": 8
+        },
+        {
+            "id": "material_volume",
+            "kind": "volume",
+            "min": 51000,
+            "max": 69000,
+            "severity": "soft"
+        }
+    ],
+    "fit": {
+        "render": true,
+        "cases": [
+            {
+                "id": "deck_vs_60w",
+                "a": {
+                    "source": "builder",
+                    "builder": "create_upright_deck"
+                },
+                "b": {
+                    "source": "builder",
+                    "builder": "bedrock_60w"
+                },
+                "max_interference": 0.5
+            },
+            {
+                "id": "deck_vs_30w",
+                "a": {
+                    "source": "builder",
+                    "builder": "create_upright_deck"
+                },
+                "b": {
+                    "source": "builder",
+                    "builder": "bedrock_30w"
+                },
+                "max_interference": 0.5
+            },
+            {
+                "id": "deck_vs_tile",
+                "a": {
+                    "source": "builder",
+                    "builder": "create_upright_deck"
+                },
+                "b": {
+                    "source": "builder",
+                    "builder": "bedrock_tile"
+                },
+                "max_interference": 0.5
+            },
+            {
+                "id": "deck_clears_io_cables",
+                "a": {
+                    "source": "builder",
+                    "builder": "create_upright_deck"
+                },
+                "b": {
+                    "source": "builder",
+                    "builder": "io_cable_envelope"
+                },
+                "max_interference": 0.5
+            },
+            {
+                "id": "deck_clears_sma_cables",
+                "a": {
+                    "source": "builder",
+                    "builder": "create_upright_deck"
+                },
+                "b": {
+                    "source": "builder",
+                    "builder": "sma_cable_envelope"
+                },
+                "max_interference": 0.5
+            },
+            {
+                "id": "deck_clears_pos_x_fin_bank",
+                "a": {
+                    "source": "builder",
+                    "builder": "create_upright_deck"
+                },
+                "b": {
+                    "source": "builder",
+                    "builder": "fin_bank_pos_x"
+                },
+                "max_interference": 0.5
+            },
+            {
+                "id": "deck_clears_neg_x_fin_bank",
+                "a": {
+                    "source": "builder",
+                    "builder": "create_upright_deck"
+                },
+                "b": {
+                    "source": "builder",
+                    "builder": "fin_bank_neg_x"
+                },
+                "max_interference": 0.5
+            },
+            {
+                "id": "bulkhead_vs_60w",
+                "a": {
+                    "source": "builder",
+                    "builder": "create_upright_bulkhead"
+                },
+                "b": {
+                    "source": "builder",
+                    "builder": "bedrock_60w"
+                },
+                "max_interference": 0.5
+            },
+            {
+                "id": "low_profile_vs_60w",
+                "a": {
+                    "source": "builder",
+                    "builder": "create_low_profile_side"
+                },
+                "b": {
+                    "source": "builder",
+                    "builder": "bedrock_60w"
+                },
+                "max_interference": 0.5
+            },
+            {
+                "id": "tile_plate_vs_tile",
+                "a": {
+                    "source": "builder",
+                    "builder": "create_tile_side_plate"
+                },
+                "b": {
+                    "source": "builder",
+                    "builder": "bedrock_tile"
+                },
+                "max_interference": 0.5
+            },
+            {
+                "id": "deck_vs_hybrid",
+                "a": {
+                    "source": "builder",
+                    "builder": "create_upright_deck"
+                },
+                "b": {
+                    "source": "builder",
+                    "builder": "bedrock_hybrid_posx"
+                },
+                "max_interference": 0.5
+            },
+            {
+                "id": "cold_plate_vs_hybrid",
+                "a": {
+                    "source": "builder",
+                    "builder": "create_hybrid_cold_plate"
+                },
+                "b": {
+                    "source": "builder",
+                    "builder": "bedrock_hybrid_posx"
+                },
+                "max_interference": 0.5
+            },
+            {
+                "id": "cold_plate_clears_the_fin_bank",
+                "a": {
+                    "source": "builder",
+                    "builder": "create_hybrid_cold_plate"
+                },
+                "b": {
+                    "source": "builder",
+                    "builder": "hybrid_fin_bank"
+                },
+                "max_interference": 0.5
+            },
+            {
+                "id": "cold_plate_also_takes_the_tile",
+                "a": {
+                    "source": "builder",
+                    "builder": "create_hybrid_cold_plate"
+                },
+                "b": {
+                    "source": "builder",
+                    "builder": "bedrock_tile"
+                },
+                "max_interference": 0.5
+            }
+        ]
+    },
+    "validators": [
+        {
+            "id": "vendor_fit_check",
+            "script": "fit_check.py",
+            "timeout": 1800
+        },
+        {
+            "id": "flat_pattern_development",
+            "script": "flat_patterns.py",
+            "timeout": 1800
+        }
+    ],
+    "assumptions": [
+        "The design target is the 60 W chassis. All three chassis variants are checked because the vendor STEP superimposes them; the upright and side mounts touch only the +Y back wall and the -Z end cap, which every variant shares, so all three must pass.",
+        "Envelope and hole values come from params.json via model.py, not from a drawing. Regenerate them if params.json changes: the numbers here are the acceptance contract for the CURRENT parameter set, and a parameter change that moves a hole is supposed to fail this gate until it is reviewed.",
+        "cylinder_at points sit on the feature's axis, not on its face: a Y-axis hole is checked by the axis line passing within pos_tol of the given point, which is what catches a correct hole on the wrong side.",
+        "The countersinks are cones, not cylinders, so they are not covered by the cylinder checks. Their arithmetic is asserted in code instead \u00e2\u20ac\u201d interface.check_backwall_screw() and check_bottom_screw() raise during the build.",
+        "The material_volume band is a 15% sanity range around the built volume, not a drawing requirement, hence soft.",
+        "K-factor 0.42 is assumed, not measured. It affects only the developed flat patterns, never the folded solid or any fit result; flat_patterns.py prints it and the bend table carries it so a shop can re-develop with their own.",
+        "The hybrid chassis - Tile core plus ONE 60 W fin bank - is not a body in the vendor STEP. It is built from the file's own geometry at the measured split plane |X| = 14.5, and split_variants.fin_bank() raises if that bank ever stops measuring 131921.4 mm3, so a changed vendor file cannot quietly redefine the configuration this plate mounts."
+    ],
+    "unresolved": []
+}

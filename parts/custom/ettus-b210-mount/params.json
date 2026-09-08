@@ -1,0 +1,474 @@
+{
+    "part_name": "Ettus USRP B210 mount family",
+    "version": "v1",
+    "description": "Three mounts for one Ettus USRP B210: a bolted flat conduction plate, a bolted on-edge folded bracket, and a no-drill clamp cradle that locates the unit on its own rubber feet and never touches the four M3 bores. All three are built in one shared mount frame whose origin is the centre of the unit's four-hole pattern, on the plane its bottom pan seats against.",
+    "units": "mm",
+    "material": "see variants[].material — 6061-T6 for the unbent plate, 5052-H32 for every folded part",
+    "process": "see variants[].process — laser or waterjet blank, drill/tap, press brake",
+    "b210_interface": {
+        "_comment": [
+            "EVERY number in this block was measured from the vendor STEP with the",
+            "OpenCASCADE kernel and re-verified independently of interfaces.json.",
+            "Provenance: parts/vendor/ettus-usrp-b210/references/*_verify_pass1.json",
+            "and *_verify_pass2.json, written by the two scripts beside them.",
+            "Do not hand-edit. Re-run those scripts if the vendor file ever changes."
+        ],
+        "source_step": "parts/vendor/ettus-usrp-b210/Ettus_USRP_B210_Full_Unit.step",
+        "verified_on": "2026-09-01",
+        "frame": {
+            "description": "The mount frame. Origin = centre of the four M3 bores, on the plane the unit's bottom pan seats against. +Y points at the RF FRONT panel. +Z points up out of the bottom pan, into the body. +X completes a right-handed set.",
+            "rotation_from_part_frame": [
+                {
+                    "rotate": {
+                        "axis": "X",
+                        "angle": 90
+                    }
+                },
+                {
+                    "rotate": {
+                        "axis": "Z",
+                        "angle": 180
+                    }
+                }
+            ],
+            "translation_from_part_frame": [
+                58.5005,
+                80.6355,
+                1.21
+            ],
+            "closed_form": {
+                "x": "58.5005 - part_x",
+                "y": "part_z + 80.6355",
+                "z": "part_y + 1.210"
+            },
+            "handedness_note": "This is a PROPER ROTATION (determinant +1), not a mirror. The obvious-looking map (x, z, y) that sends the pan normal to +Z while keeping +X is a reflection, and using it would have silently mirrored the vendor solid in every fit check. The X axis is flipped instead, which costs nothing because the hole pattern is symmetric in X — but it does swap which side wall carries which vent slot, so the slot keep-outs below are written in mount coordinates, not translated by eye.",
+            "why": "In this frame the four-hole pattern is symmetric about BOTH axes, and the only asymmetry left in the problem is where the body sits relative to it: 82.3115 mm of overhang toward the front, 76.2055 mm toward the rear. That is the whole trap, expressed once, in one place."
+        },
+        "mount_holes": {
+            "description": "Four M3 bores on the unit's bottom pan — the ONLY fixings anywhere on the unit. Ø3.000, 6.000 mm deep, in clinched PEM SOS-M3-10 standoffs whose end faces are flush with the pan.",
+            "positions_xy": [
+                [
+                    -46.7995,
+                    -60.0075
+                ],
+                [
+                    46.7995,
+                    -60.0075
+                ],
+                [
+                    -46.7995,
+                    60.0075
+                ],
+                [
+                    46.7995,
+                    60.0075
+                ]
+            ],
+            "pattern_x": 93.599,
+            "pattern_y": 120.015,
+            "bore_diameter": 3.0,
+            "thread": "M3x0.5 (inferred from the PEM part number and the Ø3.000 modelling convention — there is no thread helix in the STEP)",
+            "measured_free_depth": 3.575,
+            "max_screw_penetration": 3.5,
+            "penetration_note": "Measured, not quoted. Material first appears on each bore axis at part Y = +2.365 — the tip of the internal M3x8 PCB screw. 2.365 - (-1.210) = 3.575 mm of free travel from the outer face. Design to 3.5. A longer screw jacks the PCB off its standoffs."
+        },
+        "screw_grip": {
+            "description": "Material left under the screw head. Screw length = screw_grip + engagement, and engagement must never exceed max_screw_penetration. The bolted models counterbore the four M3 holes from the underside whenever the plate is thicker than this, so plate thickness and thread engagement stay independent of each other.",
+            "value": 3.0,
+            "screw": "M3x0.5 x 6, socket or button head, A4-70 stainless",
+            "engagement": 3.0,
+            "pad_note": "These figures are dry. With the 0.5 mm thermal pad fitted the screw crosses it too, so engagement falls to roughly 2.6 mm once the pad compresses — still five threads, and the error is in the safe direction: a pad can only move the screw tip further from the internal PCB screw, never closer."
+        },
+        "body": {
+            "description": "Bare sheet-metal envelope in the mount frame: no rubber feet, no protruding connector bodies. Includes the printed label overlays, which are the outermost material on both end faces.",
+            "x": [
+                -61.1735,
+                61.1745
+            ],
+            "y": [
+                -76.2055,
+                82.3115
+            ],
+            "z": [
+                0.0,
+                33.7
+            ]
+        },
+        "pan_flat": {
+            "description": "The flat, drilled, mountable region of the bottom pan — the bearing surface. 117.000 x 150.706 = 17632.6 mm2 gross.",
+            "x": [
+                -58.4995,
+                58.5005
+            ],
+            "y": [
+                -72.4905,
+                78.2155
+            ],
+            "area_mm2": 17632.6
+        },
+        "top_cover_z": 33.7,
+        "front_overhang_y": 82.3115,
+        "rear_overhang_y": 76.2055,
+        "feet": {
+            "description": "Four adhesive rubber feet, EXACTLY concentric with the four M3 bores. Ø12.700 at the base, tapering to a Ø8.37 flat contact face, standing 3.556 mm proud of the pan. They must be peeled off for the two bolted variants — unless the mount gives them somewhere to go, which is exactly what the clamp cradle does.",
+            "diameter": 12.7,
+            "height": 3.556,
+            "contact_diameter": 8.37,
+            "positions_xy": "identical to mount_holes.positions_xy"
+        },
+        "connector_keepouts": {
+            "_comment": [
+                "Prisms in the MOUNT frame that no mount solid may enter. Built by",
+                "create_keepouts() and asserted case-by-case in spec.json's fit block,",
+                "so a bracket that fouls a connector or a vent fails the gate instead of",
+                "failing on the bench. Cable allowances (40/45/55 mm) are engineering",
+                "judgement carried over from the measured interface file, not measured",
+                "geometry — tighten them once the real cable assemblies are chosen."
+            ],
+            "front_cables": {
+                "description": "4x SMA on the RF face. Bodies already reach y = +91.68; this allows plug body and cable bend beyond the panel.",
+                "x": [
+                    -38.2285,
+                    38.8345
+                ],
+                "y": [
+                    81.5495,
+                    121.5495
+                ],
+                "z": [
+                    6.408,
+                    17.464
+                ]
+            },
+            "rear_cables": {
+                "description": "3x SMA, the USB 3.0 Standard-B and the DC barrel jack on the I/O face, as one prism. The USB sets the depth at 55 mm — the deepest keep-out on the unit.",
+                "x": [
+                    -41.2235,
+                    44.8195
+                ],
+                "y": [
+                    -130.8245,
+                    -75.8245
+                ],
+                "z": [
+                    6.408,
+                    24.966
+                ]
+            },
+            "front_leds": {
+                "description": "Four status lightpipes that must stay VISIBLE, not merely uncontacted.",
+                "x": [
+                    -42.1785,
+                    27.5695
+                ],
+                "y": [
+                    81.5495,
+                    86.5495
+                ],
+                "z": [
+                    14.751,
+                    18.62
+                ]
+            },
+            "rear_leds": {
+                "description": "Two status lightpipes that must stay VISIBLE.",
+                "x": [
+                    -29.8825,
+                    30.4935
+                ],
+                "y": [
+                    -80.8245,
+                    -75.8245
+                ],
+                "z": [
+                    14.751,
+                    18.518
+                ]
+            },
+            "front_service": {
+                "description": "Driver swing for the four case screws that retain the RF panel. Undoing them opens the enclosure, so they are service access, never a mounting provision.",
+                "x": [
+                    -55.2045,
+                    55.2055
+                ],
+                "y": [
+                    81.5495,
+                    106.5495
+                ],
+                "z": [
+                    3.61,
+                    30.02
+                ]
+            },
+            "rear_service": {
+                "description": "Driver swing for the four case screws that retain the I/O panel.",
+                "x": [
+                    -55.2045,
+                    55.2055
+                ],
+                "y": [
+                    -100.8245,
+                    -75.8245
+                ],
+                "z": [
+                    3.61,
+                    30.02
+                ]
+            },
+            "front_end_slot": {
+                "description": "A 3.000 x 7.000 through-slot in the +X top-cover wall, near the FRONT. Nothing is modelled behind it anywhere in the vendor file; treated as a vent or service opening and given 10 mm.",
+                "x": [
+                    61.1745,
+                    71.1745
+                ],
+                "y": [
+                    65.2295,
+                    72.2295
+                ],
+                "z": [
+                    16.21,
+                    19.21
+                ]
+            },
+            "rear_end_slot": {
+                "description": "The matching slot in the -X wall — but near the REAR. The two slots are DIAGONALLY OPPOSITE, not mirrored. Any side-clamping scheme symmetric in Y fouls one of them, which is why nothing in this family clamps the side walls.",
+                "x": [
+                    -71.1735,
+                    -61.1735
+                ],
+                "y": [
+                    -66.3645,
+                    -59.3645
+                ],
+                "z": [
+                    16.21,
+                    19.21
+                ]
+            }
+        },
+        "mass_kg": 0.35,
+        "dissipation_w": 15,
+        "cg_proxy_xyz": [
+            0.007,
+            3.175,
+            15.306
+        ],
+        "cg_note": "Volume centroid of the three largest solids — the two case shells plus the PCB. A stand-in for the real centre of mass, which the STEP cannot give. Used only to size the shock load, where a few mm changes nothing.",
+        "connector_reach_y": {
+            "description": "How far the SMA bodies stand proud of each end panel, in the mount frame. This — not the sheet-metal body — is the outermost material once the feet are off, and it is what the fit check measures the placed vendor solid against.",
+            "value": [
+                -85.9665,
+                91.6815
+            ]
+        }
+    },
+    "shock": {
+        "design_g": 15,
+        "note": "Design shock for a masted maritime enclosure. 0.35 kg x 15 g = 51.5 N. Not a qualification figure — it is the number every strength statement in DESIGN_NOTES.md is worked against, stated openly so it can be argued with."
+    },
+    "variants": {
+        "flat_plate": {
+            "part_name": "B210 flat conduction plate",
+            "summary": "Unit lying flat, bolted down through its four M3 bores onto a plate that doubles as its heat spreader. The default.",
+            "material": "6061-T6 aluminium, 3 mm plate",
+            "process": "Laser or waterjet blank, drill, deburr. No bends, nothing tapped — one operation after the blank.",
+            "thickness": 3.0,
+            "half_width": 79.0,
+            "half_length": 84.5,
+            "corner_radius": 8.0,
+            "edge_break": 0.5,
+            "m3_clearance": 3.4,
+            "m3_counterbore_diameter": 6.5,
+            "panel_hole_diameter": 5.5,
+            "panel_hole_x": 70.0,
+            "panel_hole_y": [
+                -62.0,
+                0.0,
+                62.0
+            ],
+            "tie_slot": {
+                "description": "Cable-tie slots outboard of the unit at both ends, so the SMA pigtails and the USB lead are anchored to the plate before their connectors take any load.",
+                "length_x": 8.0,
+                "width_y": 3.0,
+                "x": 70.0,
+                "y": [
+                    -79.0,
+                    79.0
+                ]
+            },
+            "notes": [
+                "Symmetric about both axes on purpose. The hole pattern already is; only the body is offset. Sizing the plate to the LONGER overhang costs 6.1 mm of length and buys a plate that cannot be fitted backwards - rotate the radio 180 degrees and all four bores still line up, so the integrator picks which end meets the cable entry.",
+                "COUNTERSUNK M3, not socket head, and this is not a style choice. The four screws enter from the plate's underside, which is the face that mates to the panel; a 3.0 mm socket-cap head would stand proud of it and the plate could not sit flat. A DIN 7991 head sinks flush in a 1.30 mm countersink and leaves 1.70 mm of parallel material, and because the head is fully sunk the engagement is simply screw length minus plate thickness: 6 - 3 = 3.0 mm, inside the 3.5 mm limit.",
+                "117 x 150.7 mm of plate sits under the pan. Fit a thermal interface pad; that contact is the only heat path a mount can offer this unit.",
+                "Panel bolts sit outside the radio's footprint, so they stay reachable with the unit fitted."
+            ],
+            "m3_head": "countersunk",
+            "m3_countersink_diameter": 6.0,
+            "m3_countersink_angle": 90.0
+        },
+        "edge_bracket": {
+            "part_name": "B210 on-edge bracket",
+            "summary": "Unit standing on its long edge, bolted through its four M3 bores to a vertical web with one folded flange to the panel. Trades enclosure depth for panel area.",
+            "material": "5052-H32 aluminium, 4 mm sheet",
+            "process": "Laser blank, drill, one 90-degree press-brake bend, deburr.",
+            "thickness": 4.0,
+            "web_x": [
+                -72.0,
+                63.0
+            ],
+            "half_length": 103.0,
+            "corner_radius": 8.0,
+            "edge_break": 0.5,
+            "m3_clearance": 3.6,
+            "m3_counterbore_diameter": 6.5,
+            "bend_inside_radius": 4.0,
+            "flange_width": 33.0,
+            "flange_hole_diameter": 5.5,
+            "flange_hole_z": [
+                11.0,
+                22.0
+            ],
+            "flange_hole_y": [
+                -93.0,
+                0.0,
+                93.0
+            ],
+            "tie_slot": {
+                "description": "Cable-tie slots down the web's free edge, where the pigtails naturally fall.",
+                "length_y": 8.0,
+                "width_x": 3.0,
+                "x": 57.5,
+                "y": [
+                    -75.0,
+                    -25.0,
+                    25.0,
+                    75.0
+                ]
+            },
+            "notes": [
+                "The bend line sits at x = -72, not hard against the radio at -61.17. That 10.8 mm of standoff keeps the flange outside the 10 mm keep-out on the rear vent slot, which is why this part needs no relief notch and has no handedness.",
+                "The part runs 206 mm against a 158.5 mm radio. The extra length puts four flange bolts BEYOND both ends of the unit, where a driver reaches them along the door axis with the radio fitted. The pair at y = 0 is a build-time fastener and cannot be reached afterwards; that is deliberate and documented, not an oversight.",
+                "4 mm, not the repo's usual 3 mm, and this is the one dimension here chosen by arithmetic rather than by fit. This is the only cantilevered variant: the radio hangs off two bolt columns 25.2 and 118.8 mm from the bend line. At 3 mm the first bending mode lands between 93 Hz (only the bolt-pattern width participating) and 122 Hz (full web width) - above the 33-50 Hz IEC 60945 / IACS UR E10 sweep, but under 2x at the pessimistic end before any joint compliance. 4 mm moves that to 143-187 Hz for 90 g and one extra drill hit. The flat plate stays at 3 mm because it has no cantilever at all.",
+                "Going to 4 mm would normally eat the thread engagement, since the radio caps total screw travel at 3.575 mm. It does not, because the four M3 holes are counterbored 1.0 mm from the underside: 3.0 mm of material under the head, 3.0 mm of engagement, still an M3x6.",
+                "Two M3 holes round, two slotted along the bend direction. A press brake places the bend line to about +/-0.5 mm relative to the holes; the slots absorb that instead of arguing with it on the bench.",
+                "5052-H32, not 6061-T6, because this part is bent. 6061-T6 at this gauge wants a 2.5-3t inside radius before the outer fibre starts cracking; 5052-H32 forms at 1t and is the better alloy in salt air. The strength it gives up is irrelevant at 0.35 kg."
+            ],
+            "m3_slot_travel": 2.0,
+            "m3_head": "socket"
+        },
+        "clamp_cradle": {
+            "part_name": "B210 no-drill clamp cradle",
+            "summary": "Unit lying flat, located by its own four rubber feet dropping into pockets in the tray and held down by two folded bridges over the top cover. Touches none of the four M3 bores and does not modify the unit at all.",
+            "material": "5052-H32 aluminium — 4 mm tray, 3 mm bridges",
+            "process": "Laser blanks; drill and tap the tray M4; four 90-degree bends per bridge; deburr. Two elastomer strips bought in.",
+            "tray_thickness": 4.0,
+            "tray_half_width": 94.0,
+            "tray_half_length": 84.5,
+            "corner_radius": 8.0,
+            "edge_break": 0.5,
+            "foot_pocket_diameter": 13.5,
+            "panel_hole_diameter": 5.5,
+            "panel_hole_x": 85.0,
+            "panel_hole_y": [
+                -78.0,
+                0.0,
+                78.0
+            ],
+            "bridge_thickness": 3.0,
+            "bridge_width": 25.0,
+            "bridge_y": [
+                -52.0,
+                52.0
+            ],
+            "bridge_leg_x": 72.5,
+            "bridge_bolt_x": 85.0,
+            "bridge_hole_diameter": 4.5,
+            "bridge_tap_drill": 3.3,
+            "bend_inside_radius": 3.0,
+            "pad_thickness": 3.0,
+            "pad_material": "EPDM or silicone strip, 60 Shore A, 3 mm",
+            "notes": [
+                "Why it exists: PEM catalogues type SOS as a BLIND-threaded standoff. This vendor STEP shows the bore open clean through to the outer face, and every other line of evidence in the file says it is tapped M3 — but nobody has yet run a screw into a real unit. If production standoffs turn out to be blind, both bolted variants are scrap and this is the only mount that still works.",
+                "The rubber feet are the locating feature, not an obstruction. Ø13.5 pockets in a 4 mm tray swallow the Ø12.7 x 3.556 feet whole, the pan seats flat on the tray, and the unit is positively located in X and Y without a single hole being put in it.",
+                "Bridge legs stand at x = +/-72.5 — 11.33 mm clear of the side walls, so both vent slots keep their 10 mm even though a bridge passes right over one of them. That clearance is what lets the bridges sit anywhere along the unit, and it is checked in spec.json rather than trusted.",
+                "Fully reversible. Peel nothing, drill nothing, and the unit goes back in its box exactly as it came out."
+            ],
+            "bridge_foot_flat": 13.0,
+            "bridge_fastener": "M4x0.7 x 6, A4-70, into M4 tapped through-holes in the 4 mm tray",
+            "bridge_bolt_length": 6.0,
+            "bridge_bolt_torque_nm": 1.0
+        }
+    },
+    "default_variant": "flat_plate",
+    "notes": [
+        "Parametric CadQuery is the source of truth. The STEP, DXF and shop pack under exports/ are derived — regenerate them, never edit them.",
+        "The four rubber feet must come OFF for the two bolted variants and must stay ON for the cradle.",
+        "ASSEMBLY ORDER, bolted variants: bolt the radio to the mount ON THE BENCH, then bolt the mount to the panel. The four M3s enter from the mount's far side and are unreachable once the mount is on the panel; every panel fastener is placed outboard of the radio so it stays reachable with the unit fitted.",
+        "M3 screw length = material under the head + 3.5 mm MAXIMUM. With the default 3 mm plate that is an M3x6. Torque 0.6 N.m and reach for a thread locker rather than a longer screw.",
+        "The radio's serial-number and regulatory label is on the bottom pan and is not in the vendor STEP. Both bolted variants cover it. Photograph it before assembly; the cradle leaves it readable by lifting the unit.",
+        "Galvanic pairing: aluminium mount, A4-70 stainless fasteners, salt air. Stainless or nylon washers under the heads, keep the joint dry, do not substitute plain steel.",
+        "BEFORE CUTTING METAL FOR EITHER BOLTED VARIANT: run an M3x6 into one bottom bore of a real unit and confirm it engages. PEM catalogues type SOS as a BLIND-threaded standoff; this vendor STEP shows the bore open through. Five minutes with a screw retires the only risk that can scrap both bolted variants."
+    ],
+    "finish": {
+        "spec": "Black anodise to MIL-A-8625 Type II Class 2, with MASKED BARE LANDS around the four M3 holes (or the four foot pockets) and around one panel bolt.",
+        "why": [
+            "Emissivity is the cheapest watt on this part. Bare aluminium sits at about 0.09; black anodise takes it to ~0.85, which roughly doubles the radiative transfer off every square millimetre of mount. It is the highest return per dollar available here.",
+            "Anodise is an electrical insulator, so a fully anodised mount breaks the chassis bond between the radio's case and the subpanel. In an enclosure full of RF that matters. Masking a few small lands keeps the bond and costs nothing.",
+            "If the shop cannot mask, fall back to MIL-DTL-5541 Class 3 chromate conversion, which conducts but leaves emissivity near bare. That trade loses most of the radiative benefit — take it only if masking is genuinely unavailable."
+        ]
+    },
+    "fasteners": {
+        "radio_to_mount": {
+            "flat_plate": "4x M3x0.5 x 6 COUNTERSUNK, DIN 7991, A4-70 stainless",
+            "edge_bracket": "4x M3x0.5 x 6 socket or button head, A4-70 stainless, with a stainless flat washer",
+            "torque_nm": 0.6,
+            "note": "LENGTH IS THE SAFETY-CRITICAL DIMENSION, and it is computed differently for the two head styles. Countersunk (head fully sunk): engagement = length - plate thickness. Socket/button: engagement = length - material under the head, which the model holds at 3.0 mm by counterboring. Both land on 3.0 mm of engagement against a measured 3.575 mm of free travel. A longer screw meets the internal PCB screw tip and jacks the board off its standoffs, and it does so silently. Thread locker, never a longer screw.",
+            "used_by": [
+                "flat_plate",
+                "edge_bracket"
+            ]
+        },
+        "mount_to_panel": {
+            "spec": "M5 A4-70 stainless, socket head, with stainless washers; length to suit the panel",
+            "count": {
+                "flat_plate": 6,
+                "edge_bracket": 6,
+                "clamp_cradle": 6
+            }
+        },
+        "bridge_to_tray": {
+            "spec": "4x M4x0.7 x 6, A4-70 stainless, into M4 tapped through-holes in the 4 mm tray",
+            "torque_nm": 1.0,
+            "note": "6 mm, not 10: the foot is 3 mm and the tray is 4 mm, so a 10 mm screw would stand 3 mm proud of the tray's underside - the face that mates to the panel. 1.0 N.m rather than 1.5 because 3.0 mm of M4 thread in 5052 strips at about 2830 N and 1.0 N.m preloads to about 1250 N, a 2.3x margin; 1.5 N.m leaves only 1.5x. 1250 N per bolt is already 48x the 26 N of uplift each bridge has to resist at 15 g.",
+            "used_by": [
+                "clamp_cradle"
+            ]
+        },
+        "thermal_interface": {
+            "spec": "0.5 mm silicone-free thermal pad, 3 W/mK, cut to 117 x 151",
+            "note": "Deliberately the cheap pad. At 17,576 mm2 this interface is 0.0095 K/W — roughly 660x smaller than the internal air gap that feeds it. A 12 W/mK pad, phase-change material or thermal putty buys nothing measurable here and putty makes every removal a scrape-and-reapply job.",
+            "used_by": [
+                "flat_plate",
+                "edge_bracket",
+                "clamp_cradle"
+            ]
+        },
+        "clamp_pad": {
+            "spec": "2x EPDM or silicone strip, 60 Shore A, 3 mm x 25 x 145, bonded to the underside of each bridge beam",
+            "used_by": [
+                "clamp_cradle"
+            ]
+        }
+    },
+    "thermal": {
+        "headline": "A mount cannot fix this radio's thermal problem, and this family does not pretend to.",
+        "the_bottleneck": "The PCB stands 8.79 mm off the bottom pan on four standoffs. That gap is BELOW the critical Rayleigh number for a heated horizontal layer, so it does not convect — it is pure conduction plus a little radiation, about 6.3 K/W board-to-pan. Hold the pan at 40 C with an infinite heat sink and a 90 C board still pushes only ~8 W through it.",
+        "what_that_means": "Any bottom-pan mount is capped at roughly 6-8 W of the 15 W peak. Anyone promising more from the -Y face is selling something. The real fix is a gap filler under the PCB, which means opening the unit — out of scope here, and recorded in DESIGN_NOTES.md as the one change that would actually matter.",
+        "what_the_mount_can_do": [
+            "Add skin area at case temperature. That is why the plate deliberately overhangs the radio by ~25 mm a side rather than being cut to its footprint.",
+            "Raise emissivity. Black anodise roughly doubles radiative transfer per unit area — see finish.",
+            "Keep a clear convection channel. A bare, flush, radio-sized plate in a choked lane is a small net LOSS: it covers pan area that was already convecting and returns less than it takes. It only pays with the anodise AND the overhang AND >= 15 mm of clear channel on the faces expected to work."
+        ],
+        "the_premise_i_rejected": "That every watt conducted into the subpanel is a win. The subpanel is INSIDE the sealed enclosure and rejects to the same interior air the cooler must pump. Conduction into it is a lateral move, not an export. What counts is skin area at case temperature and putting the unit in colder, moving air."
+    }
+}

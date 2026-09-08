@@ -1,0 +1,302 @@
+{
+    "part_name": "MEAN WELL NSP-1600 mount family",
+    "version": "v2",
+    "description": "Mounts for the MEAN WELL NSP-1600 (Case No. 296A, 300 x 85 x 41 mm, 1.8 kg) in its one qualified attitude - horizontal, bottom face down. v2 is the tab kit: four small L-tabs on the side M4s for a deck (MEAN WELL's own bracket pattern, cut from our measured interface), two 45 mm shelf straps plus two of the same tabs for a vertical bulkhead, and a finger-safe terminal box over the busbars that needs no pan under it. v1's two folded channels, the open-bottom hood and the spacer ring are kept and still build. Everything shares one mount frame: origin on the unit's bottom face, centred on its width, at the terminal face; +Y along the blades; +Z up.",
+    "units": "mm",
+    "material": "see variants[].material - 5052-H32 3.0 mm sheet for every metal part, UL94 V-0 polycarbonate for the hood and box",
+    "process": "see variants[].process - laser cut + press brake (one bend per v2 part, two per v1 channel); FDM print (hood, box)",
+    "default_variant": "side_tab",
+    "design_mass_kg": 1.8,
+    "design_shock_g": 20,
+    "kits": {
+        "deck_tab_kit": {
+            "version": "v2",
+            "parts": {"side_tab": 4, "terminal_box": 1},
+            "host": "horizontal deck or subpanel: 4x M5 on 112 x 252 (slotted +/-2.25 across), 4x M3 for the box, unit bottom directly on the deck",
+            "summary": "The vendor's mounting pattern. About 30 g of aluminium."
+        },
+        "bulkhead_strap_kit": {
+            "version": "v2",
+            "parts": {"bulkhead_strap": 2, "side_tab": 2, "terminal_box": 1},
+            "host": "vertical bulkhead or subpanel: 4x M5 for the straps, 2x M5 for the box ears",
+            "summary": "The smallest shelf that can hold the unit horizontal off a wall. Two identical 1-bend straps, two of the deck tabs bolted to them."
+        },
+        "deck_tray_kit": {
+            "version": "v1",
+            "parts": {"deck_tray": 1, "spacer_ring": 4, "busbar_hood": 1},
+            "host": "horizontal deck: 4x M5 beyond the unit's ends"
+        },
+        "bulkhead_shelf_kit": {
+            "version": "v1",
+            "parts": {"bulkhead_shelf": 1, "spacer_ring": 2, "busbar_hood": 1},
+            "host": "vertical bulkhead: 7x M5, all above the unit or beyond its ends"
+        }
+    },
+    "dimensions": {
+        "sheet_t": 3.0,
+        "bend_radius_inside": 3.0,
+        "k_factor": 0.42,
+        "corner_r": 6.0,
+        "edge_break": 0.5,
+        "side_gap": 3.0,
+        "bend_relief_w": 3.0,
+        "pan_y": [-322.0, 90.0],
+        "hood_tap_xy": [[-35.5, 20.0], [-35.5, 62.0], [42.0, 20.0], [42.0, 62.0]],
+        "drain_slot": [3.5, 14.0],
+        "drain_slot_x": 31.75,
+        "drain_slot_y": [-230.0, -130.0, -40.0],
+        "tie_slot": [8.0, 3.0],
+        "tie_slots_xy": [[-12.0, 86.0], [12.0, 86.0]],
+        "note": "sheet_t, bend_radius_inside and k_factor are the whole family's. side_gap, bend_relief_w, pan_y and the slot tables belong to the v1 channels: side_gap is the unit's side to a channel wall, exactly one sheet thickness so the wall's inside bend lands its pan tangent at the unit's corner and the spacer ring is a ring from the same sheet. The v2 tabs bend their foot OUTWARD, so their bend is outside the unit's corner and they lie flush with no gap and no ring."
+    },
+    "fasteners": {
+        "side_m4_tab": {
+            "thread": "M4x0.7 into the unit's side wall",
+            "screw": "M4x8 socket cap A4-70",
+            "washer": "DIN 125 M4 A4, 0.8 mm",
+            "clearance_d": 4.5,
+            "grip": 3.8,
+            "engagement": 4.2,
+            "torque_nm": 0.8,
+            "used_by": ["deck_tab_kit", "bulkhead_strap_kit"],
+            "note": "grip = 0.8 washer + 3.0 tab, flush on the side wall. 4.2 mm penetration against the datasheet's 5.0 maximum (0.8 reserve) - the same arithmetic MEAN WELL's own 'M4*4 combination screw' relies on. Thread locker, never a longer screw. The fan-end pair is not modelled as a thread in the vendor STEP - verify on a unit."
+        },
+        "tab_to_host": {
+            "thread": "M5 into the deck; M5 + nut through a strap's shelf",
+            "screw": "M5x12 socket cap A4-70 + washer; add a nut on a strap",
+            "clearance_d": 5.5,
+            "slot_len": 10.0,
+            "torque_nm": 4.0,
+            "used_by": ["deck_tab_kit", "bulkhead_strap_kit"],
+            "note": "The slot runs across the unit (X): +/-2.25 mm absorbs the unit's +/-0.5 width tolerance, the tab's bend tolerance and the host's drilling, so the tab is tightened flush on the side wall FIRST and to the host second."
+        },
+        "strap_to_bulkhead": {
+            "thread": "M5 into the bulkhead",
+            "screw": "M5 socket cap A4-70 + DIN 125 washer",
+            "clearance_d": 5.5,
+            "torque_nm": 4.0,
+            "used_by": ["bulkhead_strap_kit"],
+            "note": "Two per strap, on the flange's inner face BELOW the shelf, so no bolt head is ever in the gap beside the unit and every one is reachable with the unit fitted."
+        },
+        "box_m3": {
+            "thread": "M3x0.5 tapped through the strap shelf (or the deck)",
+            "screw": "M3x6 pan head A4-70",
+            "tap_drill": 2.5,
+            "clearance_d": 3.4,
+            "used_by": ["deck_tab_kit", "bulkhead_strap_kit"],
+            "note": "Through the 2.5 mm printed floor into 3.0 mm of tapped strap; 0.5 mm proud on the strap's free underside. Into a deck, tap M3 or use clearance and a nut."
+        },
+        "box_ears": {
+            "thread": "M5 into the bulkhead",
+            "screw": "M5x10 socket cap A4-70 + washer",
+            "clearance_d": 5.5,
+            "used_by": ["bulkhead_strap_kit"],
+            "note": "Two ears past the box's far wall, heads reached from +X in free space."
+        },
+        "side_m4": {
+            "thread": "M4x0.7 into the unit's side wall",
+            "screw": "M4x10 socket cap A4-70",
+            "washer": "DIN 125 M4 A4, 0.8 mm",
+            "spacer": "spacer_ring, 3.0 mm (this family, laser cut)",
+            "clearance_d": 4.5,
+            "grip": 6.8,
+            "engagement": 3.2,
+            "torque_nm": 0.8,
+            "used_by": ["deck_tray_kit", "bulkhead_shelf_kit"],
+            "note": "v1 channels: grip = 0.8 washer + 3.0 wall + 3.0 spacer. 3.2 mm penetration, 1.8 mm reserve."
+        },
+        "bottom_m3": {
+            "thread": "M3x0.5 into the unit's bottom face (extruded holes)",
+            "screw": "M3x6 countersunk 90deg DIN 7991 A4-70",
+            "clearance_d": 3.4,
+            "csk_d": 6.0,
+            "csk_angle": 90,
+            "grip": 3.0,
+            "engagement": 3.0,
+            "torque_nm": 0.6,
+            "used_by": ["deck_tray_kit", "bulkhead_shelf_kit"],
+            "note": "v1 channels. Countersunk from the pan's underside. Penetration 6 - 3 = 3.0 mm against the 4.0 mm maximum. Optional on the deck tray. Not used by v2: the tab kits carry everything on the side M4s, as the vendor's kit does; drilling the deck for them is optional insurance."
+        },
+        "host_deck": {
+            "thread": "M5 into the deck / subpanel",
+            "screw": "M5 countersunk 90deg A4-70",
+            "clearance_d": 5.5,
+            "csk_d": 10.4,
+            "csk_angle": 90,
+            "used_by": ["deck_tray_kit"],
+            "note": "v1 deck tray: four, beyond the unit's ends, countersunk flush."
+        },
+        "host_bulkhead": {
+            "thread": "M5 into the bulkhead / subpanel",
+            "screw": "M5 socket cap A4-70 with DIN 125 washer",
+            "clearance_d": 5.5,
+            "keyhole_d": 9.5,
+            "keyhole_slot_w": 5.5,
+            "keyhole_slot_len": 8.0,
+            "used_by": ["bulkhead_shelf_kit"],
+            "note": "v1 bulkhead shelf: seven, above the unit or beyond its ends; two keyholes."
+        },
+        "hood_m3": {
+            "thread": "M3x0.5 tapped through the 3.0 mm pan",
+            "screw": "M3x6 pan head A4-70",
+            "tap_drill": 2.5,
+            "clearance_d": 3.4,
+            "used_by": ["deck_tray_kit", "bulkhead_shelf_kit"],
+            "note": "v1 hood onto a channel's pan extension."
+        },
+        "lug_bolts": {
+            "spec": "2x M6 A4-70 hex bolt + nut + spring washer, one per blade, through the blade's dia 6.5 hole",
+            "torque_nm": 4.0,
+            "used_by": ["deck_tab_kit", "bulkhead_strap_kit", "deck_tray_kit", "bulkhead_shelf_kit"],
+            "note": "Lugs on the +X face of each blade, barrels pointing +Y (in-line). That is the one arrangement in which neither lug's hardware reaches the LED / trim-pot column at X = 2..10 or the other blade's hardware."
+        }
+    },
+    "variants": {
+        "side_tab": {
+            "part_name": "NSP-1600 side tab",
+            "summary": "One small L-tab, four per unit on a deck (two per unit on the bulkhead straps). Flush on the side wall over one M4, foot bent OUTWARD with a slot for the host bolt. MEAN WELL's own bracket pattern (kit PGG2MHS013A) sized from our measured interface. One bend, one hole, one slot, no handedness.",
+            "material": "5052-H32 aluminium, 3.0 mm sheet",
+            "process": "Laser blank, one 90 deg press-brake bend (Ri 3.0), deburr, 0.5 mm edge break.",
+            "leg_h": 30.0,
+            "width": 20.0,
+            "foot_len": 20.0,
+            "top_r": 6.0,
+            "foot_r": 4.0,
+            "slot_x": 56.0,
+            "sides": {"deck_tab_kit": ["-X", "+X"], "bulkhead_strap_kit": ["+X"]},
+            "notes": [
+                "The foot goes OUTWARD. That puts the bend's fillet outside the unit's corner: the leg's inner face is flat from Z = 6 up, the unit's R1.3 bottom corner clears the tab's R6 outer arc by 2.5 mm, and the tab lies flush on the side wall with no gap and no spacer ring. This is why the vendor's tabs work and why the v1 channels needed the 3 mm gap.",
+                "20 wide by 30 tall with a 20 mm foot - the vendor's proportions. The M4 at 22.8 has 7 mm of material above it. The 24 mm flat leg bears on the wall over about 450 mm2 at the fan station and about 350 at the terminal station, where 4.2 mm of a tab centred on an M4 that is only 5.8 mm from the end must overhang the terminal plate; fit_check.py measures both.",
+                "Identical on both sides - an L is its own mirror image - and identical at both stations.",
+                "3.0 mm because the whole family nests on one sheet. 2.0 mm 5052 would do the job (the vendor's are thinner steel) and can be substituted by changing sheet_t; the model, the flat pattern and the screw arithmetic follow."
+            ]
+        },
+        "bulkhead_strap": {
+            "part_name": "NSP-1600 bulkhead strap",
+            "summary": "A 45 mm wide L: shelf under the unit, flange DOWN the bulkhead. Two per unit, identical, one at each M4 station. The +X side tab bolts onto the shelf tip through the tab's slot; the terminal-end strap also carries the box's two near screws. The smallest shelf that can hold 1.8 kg horizontal off a wall.",
+            "material": "5052-H32 aluminium, 3.0 mm sheet",
+            "process": "Laser blank, one 90 deg press-brake bend (Ri 3.0), tap 2x M3, deburr, 0.5 mm edge break. Alternatively saw from 3 mm 6061 unequal-leg angle and drill.",
+            "width": 45.0,
+            "flange_depth": 63.0,
+            "bolt_z": [-18.0, -50.0],
+            "shelf_x_tip": 66.0,
+            "tab_bolt_x": 56.0,
+            "station_offset_y": 5.8,
+            "box_tap_xy": [[-35.5, 14.0], [42.0, 14.0]],
+            "notes": [
+                "Flange DOWN, like a shelf bracket: the bolt heads sit below the shelf where nothing else is, the unit's gap to the wall stays empty, and the moment from the cantilevered unit goes into the lower bolt in tension and the bend line in compression - the classic shelf-bracket load path.",
+                "The shelf's flat starts at the unit's corner (the bend's outer arc is tangent to the shelf top at X = -42.5) so the unit bears on the full 45 x 85 of each strap - 7650 mm2 for the pair.",
+                "Each strap sits 5.8 mm +Y of its M4 station so its 45 mm covers the 20 mm tab (Y -15.8..4.2) and, on the terminal strap, the box's near screws at Y = +14. Same part both ends; the fan strap's box taps are simply unused. The terminal strap therefore has only 22.5 mm of its width under the unit - the pair bears about 5400 mm2, which is 4x what the Bedrock family accepted for a 1.6 kg unit.",
+                "Stiffness, honestly: two 45 x 3 strips cantilevered 48 mm to the unit's CG give roughly 370 N/mm and a first mode near 70 Hz with the 1.8 kg on them - above the 13-50 Hz maritime sweep but not by the margin the v1 shelf had (about 160 Hz). If a rig test finds it, a 12 mm down-turned lip along one edge (one more bend) makes each strap about 20x stiffer. Recorded here rather than pre-empted, because the point of v2 is to carry no more metal than the job needs."
+            ]
+        },
+        "terminal_box": {
+            "part_name": "NSP-1600 terminal box",
+            "summary": "The v1 hood with a floor and closed cable exits, so it is finger-safe with nothing under it. Open only toward the unit (8 mm gap, inside IP2X); grommet holes for the two DC cables and the AC lead, a slot for the signal harnesses, a window for the LED and trim pot, louvres for the intake. Four floor screws (deck, or the terminal strap) and two bulkhead ears.",
+            "material": "Polycarbonate, UL94 V-0 grade (e.g. Polymaker PolyMax PC-FR or Stratasys PC), 2.5 mm walls",
+            "process": "FDM print, 0.2 mm layers, printed floor-down, no supports; 1.5 mm polycarbonate sheet folded and glued is the non-printed alternative",
+            "x": [-42.0, 48.5],
+            "y": [8.0, 75.0],
+            "z_top": 47.0,
+            "wall_t": 2.5,
+            "top_t": 2.5,
+            "floor_t": 2.5,
+            "corner_r": 5.0,
+            "top_r": 2.0,
+            "floor_screws_xy": [[-35.5, 14.0], [42.0, 14.0], [-35.5, 62.0], [42.0, 62.0]],
+            "exits": {
+                "long_blade": {"xz": [17.0, 22.5], "d": 18.0},
+                "short_blade": {"xz": [36.0, 30.5], "d": 18.0},
+                "ac": {"xz": [-32.0, 14.0], "d": 12.0},
+                "signal": {"x": [-22.0, -1.0], "z": [3.5, 12.0]}
+            },
+            "led_window": {"x": [1.0, 7.0], "z": [4.0, 21.0]},
+            "top_louvres": {"x": [-32.0, -20.0, -8.0, 4.0, 16.0, 28.0, 40.0], "y": [12.0, 62.0], "w": 5.0},
+            "side_louvres": {"z": [12.0, 24.0, 36.0], "y": [14.0, 59.0], "w": 5.0},
+            "ears": {"y": [63.0, 87.0], "z": [[3.0, 15.0], [32.0, 44.0]], "hole_yz": [[81.0, 9.0], [81.0, 38.0]]},
+            "max_opening": 5.0,
+            "notes": [
+                "Why a floor: v1's hood sat on a pan that closed its bottom. With four tabs there is no pan, and on a bulkhead there is nothing under the terminal end at all. So the box carries its own floor and its cable exits are closed holes - thread the cables through, crimp the lugs, bolt them, slide the box back over. That is how terminal covers with grommets are always fitted, and it makes the box finger-safe on any host.",
+                "Starts 8 mm off the terminal plate instead of 0.5 because the terminal-end tab's foot reaches Y = +6.2. The 8 mm gap is inside IP2X's 12.5 mm probe and lets the whole box slide 8 mm toward the unit when the ears are loosened.",
+                "Cable exits: dia 18 clears a 2 AWG lead with a grommet; a 12 V / 125 A build with 1/0 per pole needs dia 22 - change the two numbers. The AC hole takes a 3-core up to dia 10. The signal slot passes the CN1 16-way and CN2 8-way DF11 housings.",
+                "Louvres are the v1 hood's: about 2850 mm2 of 5 mm slot against the unit's ~680 mm2 of intake.",
+                "Not a substitute for MEAN WELL's AC terminal cover if one ships with the unit - fit both."
+            ]
+        },
+        "bulkhead_shelf": {
+            "part_name": "NSP-1600 bulkhead shelf",
+            "summary": "v1. Unit horizontal on a shelf cantilevered from a VERTICAL bulkhead. One folded part, two bends: a tall flange on the bulkhead, the shelf, and a short far web that takes the two +X side M4s from the open side.",
+            "material": "5052-H32 aluminium, 3.0 mm sheet",
+            "process": "Laser blank, two 90 deg press-brake bends (Ri 3.0), tap 4x M3, deburr, 0.5 mm edge break.",
+            "flange_side": "-X",
+            "flange_h": 66.0,
+            "web_h": 30.0,
+            "web_y": [-305.0, -2.0],
+            "bulkhead_holes": [[-300.0, 50.0], [-100.0, 50.0], [80.0, 50.0], [-313.0, 15.0], [83.0, 15.0]],
+            "bulkhead_keyholes": [[-200.0, 50.0], [0.0, 50.0]],
+            "notes": [
+                "Only the +X pair of side M4s is used - the -X pair faces the bulkhead and a screw could never enter it. Two M4 + three M3 + full-footprint bearing on the shelf.",
+                "No standoff from the bulkhead: the unit's sides are blank steel (no vents, nothing proud), so the flange lies flat on the wall and the only gap is the 3 mm bend clearance.",
+                "Assembly: bracket to the bulkhead first (hang it on the two keyholes), lower the unit onto the shelf, fit the two M4 from +X, fit the three M3 from below."
+            ]
+        },
+        "deck_tray": {
+            "part_name": "NSP-1600 deck tray",
+            "summary": "v1. Unit horizontal on a HORIZONTAL deck. One folded part, two bends: a pan under the whole unit and two 30 mm walls that take all four side M4s through 3 mm spacer rings.",
+            "material": "5052-H32 aluminium, 3.0 mm sheet",
+            "process": "Laser blank, two 90 deg press-brake bends (Ri 3.0), tap 4x M3, deburr, 0.5 mm edge break.",
+            "wall_h": 30.0,
+            "wall_y": [-305.0, -2.0],
+            "host_holes": [[-30.0, -313.0], [30.0, -313.0], [-30.0, 83.0], [30.0, 83.0]],
+            "notes": [
+                "Four side M4 in shear plus the pan in bearing carry everything; the three bottom M3 are optional.",
+                "Superseded for most decks by the v2 tab kit, which does the same job with the vendor's pattern and a twelfth of the metal. Keep it where a bearing floor, drain slots or a flush countersunk deck interface are wanted."
+            ]
+        },
+        "busbar_hood": {
+            "part_name": "NSP-1600 terminal hood",
+            "summary": "v1. Open-bottom vented hood over the terminal face, screwed to a channel's pan extension which closes its bottom. Cable U-slots drop over terminated cables.",
+            "material": "Polycarbonate, UL94 V-0 grade (e.g. Polymaker PolyMax PC-FR or Stratasys PC), 2.5 mm walls",
+            "process": "FDM print, 0.2 mm layers, printed with the open bottom on the bed, no supports",
+            "x": [-42.0, 48.5],
+            "y": [0.5, 75.0],
+            "z_top": 47.0,
+            "wall_t": 2.5,
+            "top_t": 2.5,
+            "corner_r": 5.0,
+            "top_r": 2.0,
+            "foot_w": 8.0,
+            "foot_t": 3.0,
+            "foot_y": [8.0, 70.0],
+            "cable_slots": {
+                "long_blade": {"x": [9.5, 27.5], "z_top": 31.0},
+                "short_blade": {"x": [29.0, 45.5], "z_top": 39.0},
+                "ac": {"x": [-28.0, -12.0], "z_top": 24.0}
+            },
+            "led_window": {"x": [1.0, 7.0], "z": [4.0, 21.0]},
+            "top_louvres": {"x": [-32.0, -20.0, -8.0, 4.0, 16.0, 28.0, 40.0], "y": [12.0, 62.0], "w": 5.0},
+            "side_louvres": {"z": [12.0, 24.0, 36.0], "y": [14.0, 59.0], "w": 5.0},
+            "max_opening": 5.0,
+            "notes": [
+                "Only finger-safe with a pan under it and cables in its slots. That is why v2 has the terminal_box instead."
+            ]
+        },
+        "spacer_ring": {
+            "part_name": "NSP-1600 M4 spacer ring",
+            "summary": "v1. 3.0 mm ring, OD 10, bore 4.5, filling the 3 mm gap between the unit's side wall and a channel wall at each side M4. Not needed by the v2 tabs.",
+            "material": "5052-H32 aluminium, 3.0 mm sheet - nested on the same blank as the channel",
+            "process": "Laser cut, deburr",
+            "od": 10.0,
+            "id": 4.5,
+            "qty": {"deck_tray": 4, "bulkhead_shelf": 2}
+        }
+    },
+    "notes": [
+        "Parametric CadQuery is the source of truth. Every STEP, STL, DXF and CSV under exports/ is derived - regenerate them, never edit them.",
+        "HORIZONTAL is the only attitude MEAN WELL qualifies: the derating curve is labelled (HORIZONTAL) and no other curve is published; the enclosed-type installation manual says any other orientation needs a derating they have not given. Every kit here keeps the unit bottom-down with its fan axis horizontal.",
+        "Air enters through the louvres on the terminal face and leaves through the two fans. Nothing solid within 60 mm of the fan face; no metal within 60 mm of the terminal face; the box / hood in front of it is a vented plenum with 4x the unit's own louvre area.",
+        "The side M4s are the vendor's own load path (their kit uses nothing else) but the fan-end pair exists only in the datasheet - the vendor STEP shows a dia 5 clearance hole with nothing behind it. Run an M4 into one before trusting it.",
+        "Screw penetration is checked in code, not by eye: interface.check_side_screw() and check_bottom_screw() raise during the build.",
+        "5052-H32 because every metal part here is bent at 1t. A4-70 fasteners with isolating washers under stainless heads on aluminium, salt air."
+    ]
+}

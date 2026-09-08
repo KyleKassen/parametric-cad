@@ -1,0 +1,12 @@
+variant,angle_deg,inside_radius_mm,material_t_mm,k_factor,bend_allowance_mm,bend_deduction_mm,bend,line,direction,note
+upright_deck,90,3.0,3.0,0.42,6.692,5.308,B1 pan -> spine,Y = 65.0 (part frame),up (+Z),"the relief notch removes |X| <= 30 at this line, so only the two rear ears fold here"
+upright_deck,90,3.0,3.0,0.42,6.692,5.308,B2 spine -> top return flange,Z = 136.0,"back (+Y), reverse of B1",stiffens the spine top and removes the raw edge
+upright_deck,90,3.0,3.0,0.42,6.692,5.308,B3 pan -> +X shock wall,X = +38.5,up (+Z),"16.0 mm flange, 2.0 mm clear of the fin tips"
+upright_deck,90,3.0,3.0,0.42,6.692,5.308,B4 pan -> -X shock wall,X = -38.5,up (+Z),mirror of B3
+upright_bulkhead,90,3.0,3.0,0.42,6.692,5.308,B1 shelf -> web,Y = 65.0,up (+Z),relief notch at |X| <= 30
+upright_bulkhead,90,3.0,3.0,0.42,6.692,5.308,B2 shelf -> front lip,Y = -22.0,down (-Z),closes the shelf into a channel; doubles as the drip edge
+upright_bulkhead,90,3.0,3.0,0.42,6.692,5.308,B3 web -> top return flange,Z = 143.0,back (+Y),
+upright_bulkhead,90,3.0,3.0,0.42,6.692,5.308,B4/B5 web -> side flanges,X = +/-45.0,back (+Y),sets the 30.0 mm bulkhead standoff
+upright_bulkhead,90,3.0,3.0,0.42,6.692,5.308,B6/B7 side flange -> bulkhead return flange,Y = 98.0,outboard (+/-X),"the convex corner of this bend is on the flange's INBOARD face (|X| = 42), not its outboard face"
+low_profile_side,90,3.0,3.0,0.42,6.692,5.308,B1 base -> end wall,Z = 0.0,up (+X),bears on the -Z end cap; carries the optional M4
+low_profile_side,90,3.0,3.0,0.42,6.692,5.308,B2 base -> back wall,Y = 65.0,up (+X),bears on the +Y land; carries the 2x M3. Corner relief between B1 and B2.

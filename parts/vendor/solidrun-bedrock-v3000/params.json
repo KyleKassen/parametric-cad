@@ -1,0 +1,63 @@
+{
+    "part_name": "SolidRun Bedrock V3000",
+    "version": "v1",
+    "description": "Vendor STEP as shipped: 'Bedrock V3000 Basic 3D model.step'. NOTE - the file superimposes THREE chassis variants at a single origin plus one shared set of connector solids. Nothing here is fabricated by us; this directory exists so brackets can be designed against exact vendor geometry.",
+    "units": "mm",
+    "material": "Extruded / die-cast aluminium (vendor)",
+    "process": "purchased",
+
+    "dimensions": {
+        "envelope_60w": { "x": 73.0, "y": 132.957, "z": 170.0 },
+        "chassis_z": 160.0,
+        "chassis_y_min": -65.762,
+        "chassis_y_max": 65.0,
+        "io_face_y": -65.0,
+        "io_module_proud_y": -67.957,
+        "back_wall_y": 65.0,
+        "sma_top_z": 170.0
+    },
+
+    "features": {
+        "variants": {
+            "description": "Three chassis solids at one origin. Distinguish them by their X half-width; every other dimension is shared.",
+            "chassis_60w": {
+                "half_width_x": 36.5, "volume_mm3": 470740.8, "shell_mass_g_alu": 1271,
+                "cooling": "13 fins per side tapering to 7 at full height, 10.15 mm Y pitch, tips 0.395 mm wide over Z 7..153",
+                "side_fixings": "none"
+            },
+            "chassis_30w": {
+                "half_width_x": 22.5, "volume_mm3": 267462.8, "shell_mass_g_alu": 722,
+                "cooling": "11 fins per side tapering to 5 at full height, tips 0.200 mm wide over Z 4..156",
+                "side_fixings": "none"
+            },
+            "chassis_tile": {
+                "half_width_x": 14.5, "volume_mm3": 206452.5, "shell_mass_g_alu": 557,
+                "cooling": "fanless, no fins - 20410.1 mm2 clean flat on each of X = +/-14.5",
+                "side_fixings": "6x M4x0.7, tapped from both ends, 3.5 mm max penetration per side"
+            }
+        },
+        "external_fixings_all_variants": {
+            "M3_backwall_Z50":  { "x": 0.0, "y": 65.0, "z": 50.0,  "thread": "M3x0.5", "depth_mm": 3.0, "max_penetration_mm": 3.0 },
+            "M3_backwall_Z110": { "x": 0.0, "y": 65.0, "z": 110.0, "thread": "M3x0.5", "depth_mm": 3.0, "max_penetration_mm": 3.0 },
+            "M4_bottom_open":   { "x": 6.0, "y": 0.0,  "z": 0.0,   "thread": "M4x0.7", "depth_mm": 8.95, "thread_depth_mm": 8.09, "max_penetration_mm": 8.0 },
+            "M4_bottom_occupied": { "x": -6.0, "y": 0.0, "z": 0.0, "thread": "M4x0.7", "depth_mm": 0.0, "note": "vendor screw fitted - unusable" }
+        },
+        "tile_side_fixings": {
+            "thread": "M4x0.7", "axis": "X", "face_x": 14.5, "max_penetration_mm": 3.5,
+            "positions_yz": [[-60, 10], [60, 10], [0, 40], [0, 110], [-50, 150], [50, 150]]
+        },
+        "mountable_flats": {
+            "back_wall_plus_Y": { "plane_y": 65.0, "x_min": -10.0, "x_max": 10.0, "z_min": 1.0, "z_max": 159.0, "area_mm2": 3140.8 },
+            "bottom_cap_minus_Z": { "plane_z": 0.0, "x_min": -29.5, "x_max": 29.5, "y_min": -64.0, "y_max": 64.0, "area_mm2": 4617.2 }
+        }
+    },
+
+    "notes": [
+        "Source: C:/Users/KyleKassen/Documents/Projects/ADRS/CAD/Solidrun/Bedrock V3000 Basic 3D model.step (copied here as shipped, 2026-09-01).",
+        "22 solids: 3 chassis variants + 19 shared connector/antenna solids. Import the whole file and you get all three chassis nested inside one another.",
+        "Every number above was re-measured from this file with lib/analyze_step.py and point/ring probes; nothing is transcribed from a datasheet.",
+        "Fin channels run along Z and are open at BOTH ends - the unit is convection-cooled as a vertical chimney with +Z up.",
+        "Fin banks are on BOTH +X and -X and are mirror-identical (407.30 mm2 of tip flats each on the 60W). There is no finned-one-side / bare-other-side variant.",
+        "Set BEDROCK_V3000_STEP to point at a copy elsewhere if you do not want the 44 MB file in your checkout."
+    ]
+}

@@ -1,0 +1,116 @@
+{
+    "schema": "part-spec/1",
+    "part_name": "Ettus USRP B210 mount family — default variant (flat conduction plate)",
+    "units": "mm",
+    "solid_count": 1,
+
+    "dimensions": [
+        { "id": "plate_width_x", "kind": "bbox", "axis": "x", "expected": 158.0, "tol": 0.1 },
+        { "id": "plate_length_y", "kind": "bbox", "axis": "y", "expected": 169.0, "tol": 0.1 },
+        { "id": "plate_thickness_z", "kind": "bbox", "axis": "z", "expected": 3.0, "tol": 0.05 },
+
+        { "id": "m3_clearance_holes", "kind": "cylinder", "diameter": 3.4, "tol": 0.05,
+          "axis": "Z", "type": "hole", "count_min": 4 },
+
+        { "id": "m3_hole_rear_left", "kind": "cylinder_at", "diameter": 3.4, "tol": 0.05,
+          "axis": "Z", "type": "hole", "at": [-46.7995, -60.0075, -1.5], "pos_tol": 0.05 },
+        { "id": "m3_hole_rear_right", "kind": "cylinder_at", "diameter": 3.4, "tol": 0.05,
+          "axis": "Z", "type": "hole", "at": [46.7995, -60.0075, -1.5], "pos_tol": 0.05 },
+        { "id": "m3_hole_front_left", "kind": "cylinder_at", "diameter": 3.4, "tol": 0.05,
+          "axis": "Z", "type": "hole", "at": [-46.7995, 60.0075, -1.5], "pos_tol": 0.05 },
+        { "id": "m3_hole_front_right", "kind": "cylinder_at", "diameter": 3.4, "tol": 0.05,
+          "axis": "Z", "type": "hole", "at": [46.7995, 60.0075, -1.5], "pos_tol": 0.05 },
+
+        { "id": "panel_holes", "kind": "cylinder", "diameter": 5.5, "tol": 0.05,
+          "axis": "Z", "type": "hole", "count_min": 6 },
+        { "id": "panel_hole_outboard_of_radio", "kind": "cylinder_at", "diameter": 5.5,
+          "tol": 0.05, "axis": "Z", "type": "hole", "at": [70.0, 0.0, -1.5],
+          "pos_tol": 0.05 },
+
+        { "id": "corner_radii", "kind": "cylinder", "diameter": 16.0, "tol": 0.05,
+          "axis": "Z", "type": "boss", "count_min": 4 },
+
+        { "id": "material_volume", "kind": "volume", "min": 74000, "max": 81000,
+          "severity": "soft" }
+    ],
+
+    "fit": {
+        "render": true,
+        "cases": [
+            {
+                "id": "flat_plate_vs_radio",
+                "a": { "source": "builder", "builder": "create_flat_plate" },
+                "b": { "source": "step",
+                       "path": "parts/vendor/ettus-usrp-b210/Ettus_USRP_B210_Full_Unit.step",
+                       "transform": [ { "rotate": { "axis": "X", "angle": 90 } },
+                                      { "rotate": { "axis": "Z", "angle": 180 } },
+                                      { "translate": [58.5005, 80.6355, 1.210] } ] },
+                "max_interference": 1500.0
+            },
+            {
+                "id": "flat_plate_vs_keepouts",
+                "a": { "source": "builder", "builder": "create_flat_plate" },
+                "b": { "source": "builder", "builder": "create_keepouts" },
+                "max_interference": 1.0
+            },
+            {
+                "id": "edge_bracket_vs_radio",
+                "a": { "source": "builder", "builder": "create_edge_bracket" },
+                "b": { "source": "step",
+                       "path": "parts/vendor/ettus-usrp-b210/Ettus_USRP_B210_Full_Unit.step",
+                       "transform": [ { "rotate": { "axis": "X", "angle": 90 } },
+                                      { "rotate": { "axis": "Z", "angle": 180 } },
+                                      { "translate": [58.5005, 80.6355, 1.210] } ] },
+                "max_interference": 1500.0
+            },
+            {
+                "id": "edge_bracket_vs_keepouts",
+                "a": { "source": "builder", "builder": "create_edge_bracket" },
+                "b": { "source": "builder", "builder": "create_keepouts" },
+                "max_interference": 1.0
+            },
+            {
+                "id": "clamp_cradle_vs_radio",
+                "a": { "source": "builder", "builder": "create_clamp_cradle" },
+                "b": { "source": "step",
+                       "path": "parts/vendor/ettus-usrp-b210/Ettus_USRP_B210_Full_Unit.step",
+                       "transform": [ { "rotate": { "axis": "X", "angle": 90 } },
+                                      { "rotate": { "axis": "Z", "angle": 180 } },
+                                      { "translate": [58.5005, 80.6355, 1.210] } ] },
+                "max_interference": 1.0
+            },
+            {
+                "id": "clamp_cradle_vs_keepouts",
+                "a": { "source": "builder", "builder": "create_clamp_cradle" },
+                "b": { "source": "builder", "builder": "create_keepouts" },
+                "max_interference": 1.0
+            },
+            {
+                "id": "bridge_clears_top_cover_by_the_pad",
+                "a": { "source": "builder", "builder": "create_cradle_bridge" },
+                "b": { "source": "step",
+                       "path": "parts/vendor/ettus-usrp-b210/Ettus_USRP_B210_Full_Unit.step",
+                       "transform": [ { "rotate": { "axis": "X", "angle": 90 } },
+                                      { "rotate": { "axis": "Z", "angle": 180 } },
+                                      { "translate": [58.5005, 80.6355, 1.210] } ] },
+                "min_clearance": 2.9
+            }
+        ]
+    },
+
+    "validators": [
+        { "id": "vendor_fit_check", "script": "fit_check.py", "timeout": 1800 }
+    ],
+
+    "assumptions": [
+        "The four -Y bores are M3x0.5 TAPPED. That is an inference from the PEM SOS-M3-10 part name plus the file's Ø3.000-means-thread convention, not from a modelled thread — the STEP carries no helix and no AP242 PMI. PEM catalogues type SOS as a BLIND standoff while this model shows the bore open through, so the inference is not free. Run an M3x6 into one bore of a real unit before cutting metal for either bolted variant; the clamp cradle exists precisely because that check has not been done.",
+        "The 40 / 45 / 55 mm cable clear-outs in b210_interface.connector_keepouts are engineering allowances carried over from the measured interface file, not measured geometry. Tighten them once the real cable assemblies are chosen.",
+        "The two 3.000 x 7.000 side-wall slots have no identified function — nothing is modelled behind either of them. They are treated as vents or service openings and given 10 mm. If they turn out to be tooling features, the edge bracket could lose about 11 mm of depth and the cradle's bridges could move inboard.",
+        "flat_plate_vs_radio and edge_bracket_vs_radio allow 1500 mm^3 because the vendor STEP still carries its four adhesive rubber feet (4 x 362 mm^3), which are peeled off before either bolted mount seats. The cradle case allows 1.0 mm^3 — it keeps the feet, so any overlap there would be real. fit_check.py separates the two cases properly by filtering the feet out of the solid.",
+        "Design shock is 15 g on 0.35 kg, stated in params.shock. It is the number the strength arithmetic in DESIGN_NOTES.md is worked against, not a qualification result.",
+        "corner_radii checks the four R8 plan corners, which the kernel reports as Ø16 cylindrical bosses.",
+        "The four M3 holes on the flat plate are COUNTERSUNK, not counterbored: the screws enter from the face that mates to the panel, so a socket-cap head would hold the plate off it. The Ø6.0 x 90 deg cone appears in the exported STEP as a conical face, not as a cylinder, which is why the cylinder checks below look only for the Ø3.4 through-holes."
+    ],
+
+    "unresolved": []
+}

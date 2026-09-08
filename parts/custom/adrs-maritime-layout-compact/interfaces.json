@@ -1,0 +1,2662 @@
+{
+ "oz51x-dual-tx-housing-vertical-gpt-5-6-sol_v1": {
+  "key": "oz51x-dual-tx-housing-vertical-gpt-5-6-sol_v1",
+  "confidence": "medium",
+  "part_frame_bbox": {
+   "xmin": -16.36,
+   "xmax": 16.36,
+   "ymin": -36.25,
+   "ymax": 97.25,
+   "zmin": 0,
+   "zmax": 92.2
+  },
+  "hole_pattern_summary": "CONFIRMED: this housing has NO external mounting ears, flanges, feet, bosses or tabs anywhere. The STEP bbox (32.72 x 133.5 x 92.2) equals the stated finished envelope exactly; nothing protrudes. Two solids: solid0 = tray body x[-16.36,13.36] (97658 mm3), solid1 = removable +X service cover x[9.16,16.36] (36647 mm3). All walls are 3.0 mm (interior faces at x=-13.36, x=13.36, y=-33.25, y=94.25, z=3.0, z=89.2).\n\nThe ONLY fastener-capable holes in the entire part are the 6 LID SCREWS, all axis +X, entering the removable cover at x=16.36. Pattern (y, z): (-29.25, 46.1), (0.0, 46.1), (29.25, 46.1), (53.25, 46.1), (90.25, 7.0), (90.25, 85.2). Four of them sit on the horizontal centreline z=46.1 (the inter-bay rib, which spans z 44.1..48.1) and two at the rear plenum y=90.25. Each is: 6.6 dia chamfer mouth at x=16.36 -> 6.0 dia counterbore x[14.76,16.06] (head seat plane x=14.76) -> 3.4 dia clearance x[13.36,14.76] -> 2.5 dia BLIND pilot in a 6.0 dia post running x[12.76,-13.36], i.e. 26.72 mm of pilot ending exactly on the inner floor face with 3.0 mm of floor left. No thread is cut in the STEP; these are self-tapping M3 pilots (housing.corner_post_pilot_dia = 2.5, lid_screw_clear_dia = 3.4, lid_screw_head_dia = 6.0).\n\nThe three Z-axis dia-3.0 cylinders are DRAINS, not mounting features (model.py \"Gravity-aware drainage for the vertical mounting attitude\", refine.drain_dia = 3.0):\n * 2x downward outlets through the -Z bottom wall, z from 0.0 to 3.0, at (x=-11.61, y=20.0) and (x=-11.61, y=44.25). These are OPEN into the lower module bay and into the fiber plenum respectively. They must stay clear.\n * 1x internal cross-drain through the 4.0 mm inter-bay rib at (x=-11.61, y=20.0), z from 44.1 to 48.1, linking upper bay to lower bay. Fully internal, not on any exterior face.\n\nOther holes exist but are all connector fixings, already occupied: 4x dia 1.7 SC/APC flange pilots on +Y and 2x dia 3.2 DE-9 jackscrew holes on +Y.\n\nWHICH FACE IS AVAILABLE TO MOUNT ON: -X (x=-16.36). It is a single planar face, 12305.3 mm2, with ZERO inner wires (zero holes, zero bosses) - a plain 133.5 x 92.2 rectangle with 2.0 mm corner radii. It is entirely part of solid0 (the tray), so no tray/cover joint crosses it. It is the canonical tray floor turned onto its side. Its only defect as a mount face is that it has NO fixings at all. Second choice on flatness is +Z (top, z=92.2): also zero openings, 4237.2 mm2, but split at x=13.36 between the tray (3848.7 mm2) and the removable cover (388.5 mm2). -Z (bottom) is 4223.1 mm2, also split at x=13.36, and carries the two drain outlets.\n\nLID SCREWS AS BRACKET RETENTION: yes, mechanically there is room. Each pilot is 26.72 mm deep and only ~1.4 mm of cover plus a few mm of engagement is consumed today, so the same M3 screws could be lengthened to pick up a plate on +X up to roughly 15 mm thick and still leave >10 mm engagement (max total penetration 28.12 mm below the head seat before bottoming on the floor; 31.12 mm before piercing the -X exterior). BUT the plate would have to be relieved for the 6 vent slots and the 2 header service openings, and removing the cover for service would release the bracket - the load path would run through a 3.0 mm printed cover into 6.0 mm printed posts.",
+  "faces": [
+   {
+    "face": "-X",
+    "plane_coord": -16.36,
+    "contents": "COMPLETELY EMPTY. One single planar face, area 12305.3 mm2 (133.5 x 92.2 minus 3.4 mm2 of 2.0 mm corner radii), zero inner wires - no holes, no bosses, no text, no vents, no recesses. This is the canonical tray floor rotated onto its side. Wall thickness 3.0 mm (interior floor face at x=-13.36). Behind it sit the 6.0 mm dia screw posts and the bay/plenum ribs. Caution: the SC/APC adapter flanges on the +Y face reach to x=-15.72, only 0.64 mm inboard of this plane, so a bracket that wraps around the -X/+Y corner will foul the fiber adapter flange.",
+    "flat_area_mm2": 12305.3,
+    "is_flat_mountable": true
+   },
+   {
+    "face": "+X",
+    "plane_coord": 16.36,
+    "contents": "REMOVABLE SERVICE COVER (solid1, x 9.16..16.36; 3.0 mm plate x 13.36..16.36 plus a 4.2 mm registration lip and internal vent baffles). Largest single flat patch 8781.6 mm2 but it carries 9 openings: 6 lid-screw counterbore mouths (6.6 dia at the surface) at (y,z) = (-29.25,46.1),(0,46.1),(29.25,46.1),(53.25,46.1),(90.25,7.0),(90.25,85.2); 6 recessed stiffening panels 0.6 mm deep (field faces at x=15.76) at y[-28.25,-11.42], y[-8.42,8.42], y[11.42,28.25] crossed with z[8.00,39.10] and z[53.10,84.20]; 6 through vent slots 14.0 (Y) x 2.0 (Z), y[-2.0,12.0], centred at z = 10.55, 15.55, 20.55 (lower bay) and 55.65, 60.65, 65.65 (upper bay); and 2 through header-service access openings y[-31.50,-25.50] x z[27.75,43.45] and y[-31.50,-25.50] x z[72.85,88.55]. Also 4 tiny 9.0 mm2 flange islands at y[8.42,11.42].",
+    "flat_area_mm2": 8781.6,
+    "is_flat_mountable": false
+   },
+   {
+    "face": "-Y",
+    "plane_coord": -36.25,
+    "contents": "FRONT / RF FACE. Total planar area at this plane 2792.8 mm2 (tray patch 2528.2 spanning x[-16.36,13.36], cover patch 264.6 spanning x[13.36,16.36]; both z[2.00,90.20] because of the 2.0 mm edge fillets). Exactly TWO openings, both SMA bulkhead ports on the same axis x = -8.33: lower at z = 10.85, upper at z = 55.95. Each is a 7.7 dia counterbore 0.6 mm deep (y -36.25..-35.65) opening into a 7.0 dia through hole (y -35.65..-34.15) with a 0.9 mm deep rectangular relief pocket on the interior for the SMA square base. NOTE: the brief stated these were at z=7.3 and z=52.5 - that does not match; measured centres are z=10.85 and z=55.95. Nothing else on this face.",
+    "flat_area_mm2": 2792.8,
+    "is_flat_mountable": false
+   },
+   {
+    "face": "+Y",
+    "plane_coord": 97.25,
+    "contents": "REAR / OPTICAL + SIGNAL FACE. Total planar area 2322.0 mm2 (tray patch 2057.4 x[-16.36,13.36], cover patch 264.6 x[13.36,16.36]). NINE openings: (a) SC/APC simplex adapter cutout #1, x[-11.77,2.33] z[12.80,23.40] (14.1 x 10.6), axis (x=-4.72, z=18.1), with dia 1.7 flange pilots at (x=-13.72, z=18.1) and (x=4.28, z=18.1); (b) SC/APC adapter cutout #2, x[-11.77,2.33] z[68.80,79.40], axis (x=-4.72, z=74.1), pilots at (x=-13.72, z=74.1) and (x=4.28, z=74.1); flange pilot spacing 18.0 mm; (c) DE-9 rectangular cutout x[-11.11,9.39] z[40.25,51.95] (20.5 x 11.7), axis (x=-0.86, z=46.1), with dia 3.2 jackscrew holes at (x=-13.36, z=46.1) and (x=11.64, z=46.1), spacing 25.0 mm. Installed SC/APC adapter flanges (22.0 x 11.8 x 3.0 per params) stand ~3.0 mm proud of this plane and span x[-15.72,6.28].",
+    "flat_area_mm2": 2322,
+    "is_flat_mountable": false
+   },
+   {
+    "face": "-Z",
+    "plane_coord": 0,
+    "contents": "BOTTOM (the gravity-down face in the intended attitude). Two coplanar patches: tray 3834.6 mm2 x[-16.36,13.36] and cover 388.5 mm2 x[13.36,16.36], both y[-34.25,95.25] (2.0 mm edge fillets take 2 mm off each end in Y). Total 4223.1 mm2. Exactly TWO openings: the dia 3.0 drain outlets at (x=-11.61, y=20.0) and (x=-11.61, y=44.25), z 0.0 through 3.0, open into the lower module bay and the fiber plenum. Otherwise flat. Wall 3.0 mm (interior at z=3.0). The face is split by the tray/cover joint at x=13.36.",
+    "flat_area_mm2": 4223.1,
+    "is_flat_mountable": false
+   },
+   {
+    "face": "+Z",
+    "plane_coord": 92.2,
+    "contents": "TOP. Two coplanar patches with ZERO inner wires: tray 3848.7 mm2 x[-16.36,13.36] and cover 388.5 mm2 x[13.36,16.36], both y[-34.25,95.25]. Total 4237.2 mm2 = exactly 32.72 x 129.5, completely solid and featureless. Wall 3.0 mm (interior at z=89.2). No fixings. The face is split by the tray/cover joint at x=13.36, so a plate bearing here straddles the removable service cover.",
+    "flat_area_mm2": 4237.2,
+    "is_flat_mountable": true
+   }
+  ],
+  "mounting_holes": [
+   {
+    "id": "LID-1-rib-front",
+    "face": "+X",
+    "dia_mm": 3.4,
+    "kind": "blind_tapped",
+    "x": 16.36,
+    "y": -29.25,
+    "z": 46.1,
+    "axis": "X",
+    "thread": "none cut in STEP - 2.5 mm pilot for self-tapping M3 (housing.corner_post_pilot_dia = 2.5)",
+    "usable_depth_mm": 28.12,
+    "max_screw_penetration_mm": 28.12,
+    "note": "Inter-bay rib screw post (rib spans z 44.1..48.1; the 6.0 dia post bulges 1.0 mm into each bay, hence the scalloped cover lip). Stack from outside: 6.6 dia chamfer at x=16.36, 6.0 dia counterbore x[14.76,16.06], head seat plane x=14.76, 3.4 dia clearance x[13.36,14.76] through the 3.0 mm cover, then 2.5 dia blind pilot to x=-13.36. 28.12 mm max penetration below the head seat before bottoming on the inner floor face; 31.12 mm before piercing the -X exterior."
+   },
+   {
+    "id": "LID-2-rib-mid",
+    "face": "+X",
+    "dia_mm": 3.4,
+    "kind": "blind_tapped",
+    "x": 16.36,
+    "y": 0,
+    "z": 46.1,
+    "axis": "X",
+    "thread": "none cut in STEP - 2.5 mm pilot for self-tapping M3",
+    "usable_depth_mm": 28.12,
+    "max_screw_penetration_mm": 28.12,
+    "note": "Inter-bay rib screw post, mid-length. Same stack as LID-1. Counterbore mouth lands on the solid flange land between the upper and lower recessed panel groups."
+   },
+   {
+    "id": "LID-3-rib-rear",
+    "face": "+X",
+    "dia_mm": 3.4,
+    "kind": "blind_tapped",
+    "x": 16.36,
+    "y": 29.25,
+    "z": 46.1,
+    "axis": "X",
+    "thread": "none cut in STEP - 2.5 mm pilot for self-tapping M3",
+    "usable_depth_mm": 28.12,
+    "max_screw_penetration_mm": 28.12,
+    "note": "Inter-bay rib screw post at the rear end of the module bays, just forward of the plenum partition at y=33.25/36.25. Same stack as LID-1."
+   },
+   {
+    "id": "LID-4-spool-hub",
+    "face": "+X",
+    "dia_mm": 3.4,
+    "kind": "blind_tapped",
+    "x": 16.36,
+    "y": 53.25,
+    "z": 46.1,
+    "axis": "X",
+    "thread": "none cut in STEP - 2.5 mm pilot for self-tapping M3",
+    "usable_depth_mm": 28.12,
+    "max_screw_penetration_mm": 28.12,
+    "note": "USABLE, but this post is the FIBER SLACK SPOOL HUB: concentric with a dia 30.0 spool drum (x -12.16..12.16), dia 33.0 end flanges, dia 22.0 relief and dia 8.0 hub webs, all centred on (y=53.25, z=46.1). The 2.5 pilot runs straight down the spool axis, so the screw does not touch the coiled fiber, but the fiber wrap surrounds it."
+   },
+   {
+    "id": "LID-5-plenum-low",
+    "face": "+X",
+    "dia_mm": 3.4,
+    "kind": "blind_tapped",
+    "x": 16.36,
+    "y": 90.25,
+    "z": 7,
+    "axis": "X",
+    "thread": "none cut in STEP - 2.5 mm pilot for self-tapping M3",
+    "usable_depth_mm": 28.12,
+    "max_screw_penetration_mm": 28.12,
+    "note": "Rear plenum corner post, low side. Same stack as LID-1. Sits inside the fiber plenum near the +Y wall."
+   },
+   {
+    "id": "LID-6-plenum-high",
+    "face": "+X",
+    "dia_mm": 3.4,
+    "kind": "blind_tapped",
+    "x": 16.36,
+    "y": 90.25,
+    "z": 85.2,
+    "axis": "X",
+    "thread": "none cut in STEP - 2.5 mm pilot for self-tapping M3",
+    "usable_depth_mm": 28.12,
+    "max_screw_penetration_mm": 28.12,
+    "note": "Rear plenum corner post, high side. Same stack as LID-1."
+   },
+   {
+    "id": "DRAIN-OUTLET-bay",
+    "face": "-Z",
+    "dia_mm": 3,
+    "kind": "unusable",
+    "x": -11.61,
+    "y": 20,
+    "z": 0,
+    "axis": "Z",
+    "thread": "none - drain",
+    "usable_depth_mm": 3,
+    "max_screw_penetration_mm": 0,
+    "note": "UNUSABLE. Gravity drain outlet through the 3.0 mm bottom wall, OPEN into the lower module bay. Not a fastener feature. A bracket must not blank it and a screw must not enter it."
+   },
+   {
+    "id": "DRAIN-OUTLET-plenum",
+    "face": "-Z",
+    "dia_mm": 3,
+    "kind": "unusable",
+    "x": -11.61,
+    "y": 44.25,
+    "z": 0,
+    "axis": "Z",
+    "thread": "none - drain",
+    "usable_depth_mm": 3,
+    "max_screw_penetration_mm": 0,
+    "note": "UNUSABLE. Gravity drain outlet through the 3.0 mm bottom wall, OPEN into the fiber plenum. Not a fastener feature."
+   },
+   {
+    "id": "DRAIN-CROSS-rib",
+    "face": "internal",
+    "dia_mm": 3,
+    "kind": "unusable",
+    "x": -11.61,
+    "y": 20,
+    "z": 44.1,
+    "axis": "Z",
+    "thread": "none - drain",
+    "usable_depth_mm": 4,
+    "max_screw_penetration_mm": 0,
+    "note": "UNUSABLE and NOT on any exterior face. Internal cross-drain through the 4.0 mm inter-bay rib, z 44.1 to 48.1, linking the upper bay to the lower bay. Listed only to account for the third Z-axis dia-3.0 cylinder."
+   },
+   {
+    "id": "SC-PILOT-lo-A",
+    "face": "+Y",
+    "dia_mm": 1.7,
+    "kind": "unusable",
+    "x": -13.72,
+    "y": 97.25,
+    "z": 18.1,
+    "axis": "Y",
+    "thread": "none in STEP - M2 pilot (sc_adapter.screw_pilot_dia = 1.7)",
+    "usable_depth_mm": 4,
+    "max_screw_penetration_mm": 4,
+    "note": "UNUSABLE for mounting - occupied by the SC/APC simplex adapter flange screw of the lower (z=18.1) adapter."
+   },
+   {
+    "id": "SC-PILOT-lo-B",
+    "face": "+Y",
+    "dia_mm": 1.7,
+    "kind": "unusable",
+    "x": 4.28,
+    "y": 97.25,
+    "z": 18.1,
+    "axis": "Y",
+    "thread": "none in STEP - M2 pilot",
+    "usable_depth_mm": 3,
+    "max_screw_penetration_mm": 3,
+    "note": "UNUSABLE for mounting - second flange screw of the lower SC/APC adapter. Pilot spacing 18.0 mm in X."
+   },
+   {
+    "id": "SC-PILOT-hi-A",
+    "face": "+Y",
+    "dia_mm": 1.7,
+    "kind": "unusable",
+    "x": -13.72,
+    "y": 97.25,
+    "z": 74.1,
+    "axis": "Y",
+    "thread": "none in STEP - M2 pilot",
+    "usable_depth_mm": 4,
+    "max_screw_penetration_mm": 4,
+    "note": "UNUSABLE for mounting - flange screw of the upper (z=74.1) SC/APC adapter."
+   },
+   {
+    "id": "SC-PILOT-hi-B",
+    "face": "+Y",
+    "dia_mm": 1.7,
+    "kind": "unusable",
+    "x": 4.28,
+    "y": 97.25,
+    "z": 74.1,
+    "axis": "Y",
+    "thread": "none in STEP - M2 pilot",
+    "usable_depth_mm": 3,
+    "max_screw_penetration_mm": 3,
+    "note": "UNUSABLE for mounting - second flange screw of the upper SC/APC adapter."
+   },
+   {
+    "id": "DE9-JACK-A",
+    "face": "+Y",
+    "dia_mm": 3.2,
+    "kind": "unusable",
+    "x": -13.36,
+    "y": 97.25,
+    "z": 46.1,
+    "axis": "Y",
+    "thread": "none - clearance for the DE-9 jackscrew",
+    "usable_depth_mm": 4,
+    "max_screw_penetration_mm": 4,
+    "note": "UNUSABLE for mounting - DE-9 jackscrew clearance hole, occupied by the panel connector. 4.0 mm deep (1.0 mm local interior pocket beyond the 3.0 mm wall)."
+   },
+   {
+    "id": "DE9-JACK-B",
+    "face": "+Y",
+    "dia_mm": 3.2,
+    "kind": "unusable",
+    "x": 11.64,
+    "y": 97.25,
+    "z": 46.1,
+    "axis": "Y",
+    "thread": "none - clearance for the DE-9 jackscrew",
+    "usable_depth_mm": 3,
+    "max_screw_penetration_mm": 3,
+    "note": "UNUSABLE for mounting - second DE-9 jackscrew hole. Jackscrew span 25.0 mm in X, centred x=-0.86."
+   }
+  ],
+  "connector_keepouts": [
+   {
+    "name": "SMA bulkhead - lower (TTL bay)",
+    "face": "-Y",
+    "xmin": -13.33,
+    "xmax": -3.33,
+    "ymin": -36.25,
+    "ymax": -36.25,
+    "zmin": 5.85,
+    "zmax": 15.85,
+    "clear_out_mm": 30,
+    "reason": "Dia 7.7 counterbore / dia 7.0 through port, axis (x=-8.33, z=10.85). Patch given as a 10 x 10 mm square around the axis to allow the bulkhead nut and a wrench. clear_out_mm is an ESTIMATE (SMA plug body plus coax bend) - no SMA mating clearance value exists in params.json."
+   },
+   {
+    "name": "SMA bulkhead - upper (RF bay)",
+    "face": "-Y",
+    "xmin": -13.33,
+    "xmax": -3.33,
+    "ymin": -36.25,
+    "ymax": -36.25,
+    "zmin": 50.95,
+    "zmax": 60.95,
+    "clear_out_mm": 30,
+    "reason": "Dia 7.7 counterbore / dia 7.0 through port, axis (x=-8.33, z=55.95). Same estimated clearance as the lower SMA."
+   },
+   {
+    "name": "SC/APC simplex adapter - lower",
+    "face": "+Y",
+    "xmin": -15.72,
+    "xmax": 6.28,
+    "ymin": 97.25,
+    "ymax": 97.25,
+    "zmin": 12.2,
+    "zmax": 24,
+    "clear_out_mm": 45,
+    "reason": "Cutout x[-11.77,2.33] z[12.80,23.40] plus the 22.0 x 11.8 x 3.0 adapter flange footprint (params sc_adapter) centred on the axis (x=-4.72, z=18.1); flange pilots dia 1.7 at x=-13.72 and x=4.28. clear_out = sc_adapter.mated_connector_clear 30.0 + fiber_bay.min_bend_radius 15.0. The flange reaches x=-15.72, only 0.64 mm from the -X plane."
+   },
+   {
+    "name": "SC/APC simplex adapter - upper",
+    "face": "+Y",
+    "xmin": -15.72,
+    "xmax": 6.28,
+    "ymin": 97.25,
+    "ymax": 97.25,
+    "zmin": 68.2,
+    "zmax": 80,
+    "clear_out_mm": 45,
+    "reason": "Cutout x[-11.77,2.33] z[68.80,79.40] plus flange footprint centred on the axis (x=-4.72, z=74.1); flange pilots dia 1.7 at x=-13.72 and x=4.28. clear_out = 30.0 mated connector + 15.0 min bend radius."
+   },
+   {
+    "name": "DE-9 panel connector",
+    "face": "+Y",
+    "xmin": -15,
+    "xmax": 13.36,
+    "ymin": 97.25,
+    "ymax": 97.25,
+    "zmin": 39.5,
+    "zmax": 52.7,
+    "clear_out_mm": 40,
+    "reason": "Cutout x[-11.11,9.39] z[40.25,51.95] plus jackscrew hardware at x=-13.36 and x=11.64 (z=46.1, span 25.0). Patch widened to cover the connector flange. clear_out_mm is an ESTIMATE for a hooded mating plug plus cable bend - panel_connector.rear_keepout_depth 16.0 in params is the INTERNAL solder-cup volume, not an external figure."
+   },
+   {
+    "name": "Cover vent slots - lower bay",
+    "face": "+X",
+    "xmin": 16.36,
+    "xmax": 16.36,
+    "ymin": -2,
+    "ymax": 12,
+    "zmin": 9.55,
+    "zmax": 21.55,
+    "clear_out_mm": 10,
+    "reason": "Three through ventilation slots 14.0 (Y) x 2.0 (Z) centred at z = 10.55, 15.55, 20.55, pitch 5.0. Passive convection/drainage path with an internal splash baffle - must not be blanked by a bracket."
+   },
+   {
+    "name": "Cover vent slots - upper bay",
+    "face": "+X",
+    "xmin": 16.36,
+    "xmax": 16.36,
+    "ymin": -2,
+    "ymax": 12,
+    "zmin": 54.65,
+    "zmax": 66.65,
+    "clear_out_mm": 10,
+    "reason": "Three through ventilation slots 14.0 (Y) x 2.0 (Z) centred at z = 55.65, 60.65, 65.65, pitch 5.0. Must not be blanked."
+   },
+   {
+    "name": "Header service access opening - lower bay",
+    "face": "+X",
+    "xmin": 16.36,
+    "xmax": 16.36,
+    "ymin": -31.5,
+    "ymax": -25.5,
+    "zmin": 27.75,
+    "zmax": 43.45,
+    "clear_out_mm": 25,
+    "reason": "Through opening in the cover directly over the module pin-header block. Open straight into the module bay - a bracket landing here would foul the header plug and the harness."
+   },
+   {
+    "name": "Header service access opening - upper bay",
+    "face": "+X",
+    "xmin": 16.36,
+    "xmax": 16.36,
+    "ymin": -31.5,
+    "ymax": -25.5,
+    "zmin": 72.85,
+    "zmax": 88.55,
+    "clear_out_mm": 25,
+    "reason": "Through opening in the cover over the upper module pin-header block. Open into the bay."
+   },
+   {
+    "name": "Lid-screw counterbore pockets (6)",
+    "face": "+X",
+    "xmin": 16.36,
+    "xmax": 16.36,
+    "ymin": -32.55,
+    "ymax": 93.55,
+    "zmin": 3.7,
+    "zmax": 88.5,
+    "clear_out_mm": 60,
+    "reason": "Six 6.6 dia counterbore mouths at (y,z) = (-29.25,46.1), (0,46.1), (29.25,46.1), (53.25,46.1), (90.25,7.0), (90.25,85.2). Bounding box given spans all six. clear_out_mm covers driver access; the whole cover must also be able to lift off in +X (4.2 mm lip plus screw length) for service."
+   },
+   {
+    "name": "Drain outlets",
+    "face": "-Z",
+    "xmin": -13.11,
+    "xmax": -10.11,
+    "ymin": 18.5,
+    "ymax": 45.75,
+    "zmin": 0,
+    "zmax": 0,
+    "clear_out_mm": 5,
+    "reason": "Two dia 3.0 gravity drains at (x=-11.61, y=20.0) and (x=-11.61, y=44.25), open into the module bay and the fiber plenum. -Z is the intended down face; blanking these defeats the drainage design."
+   }
+  ],
+  "forbidden_mount_faces": [
+   {
+    "face": "+Y",
+    "why": "Carries both SC/APC fiber adapters and the DE-9. The adapter flanges span x[-15.72,6.28] (within 0.64 mm of the -X plane) at z 12.2-24.0 and 68.2-80.0, and the DE-9 flange spans the middle band z 39.5-52.7 across nearly the full width. Between them there is no usable flat land, and 45 mm of straight-out clearance is required for the mated SC/APC plus the 15 mm fiber bend radius."
+   },
+   {
+    "face": "-Y",
+    "why": "Carries both SMA bulkhead ports on the axis x=-8.33 at z=10.85 and z=55.95, with mating plugs and coax needing straight-out clearance. Bearing a plate here would also load the 3.0 mm front wall directly over the SMA relief pockets."
+   },
+   {
+    "face": "+X",
+    "why": "This is the REMOVABLE SERVICE COVER (solid1). Three reasons: (1) removing it for module service would release the bracket, so the unit is no longer captive; (2) it carries 6 through vent slots and 2 header service openings that a plate would blank; (3) the load path would run through a 3.0 mm printed cover plate into 6.0 mm printed posts rather than into the tray body."
+   },
+   {
+    "face": "-Z",
+    "why": "This is the gravity-DOWN face the drainage was designed around, and it carries both dia 3.0 drain outlets at (x=-11.61, y=20.0) and (x=-11.61, y=44.25). It is also split at x=13.36 by the tray/cover joint, so a plate here would clamp the removable cover."
+   },
+   {
+    "face": "+Z",
+    "why": "Not geometrically obstructed (zero openings, 4237.2 mm2) but weak as a mount face: it is split at x=13.36 by the tray/cover joint so a plate straddles and traps the removable service cover, it is only a 3.0 mm wall (interior at z=89.2), and it has no fixings at all."
+   }
+  ],
+  "preferred_mount_face": {
+   "face": "-X",
+   "bearing_area_mm2": 12305.3,
+   "why": "The only face that is large, perfectly flat, completely feature-free and entirely on the tray body. Measured as a SINGLE planar face at x=-16.36 with ZERO inner wires: a 133.5 x 92.2 rectangle with 2.0 mm corner radii, area 12305.3 mm2 - 100 percent of it flat and unobstructed. It is 2.9x the bearing area of the next-best face (+Z, 4237.2 mm2) and, unlike +Z and -Z, no tray/cover joint crosses it, so a bracket there never interferes with removing the +X service cover. Backed by a 3.0 mm floor (interior face x=-13.36) with the 6.0 mm dia screw posts and the bay/plenum ribs immediately behind it. THE CATCH: it has no fixings whatsoever - the part offers no threaded or clearance feature on this face - so attachment must be by clamping, strapping or bonding unless new holes are added. Two measured facts relevant to that: (a) all six 2.5 mm post pilots terminate exactly at the inner floor face x=-13.36, leaving only 3.0 mm of floor between each pilot bottom and this exterior surface, at (y,z) = (-29.25,46.1), (0,46.1), (29.25,46.1), (53.25,46.1), (90.25,7.0), (90.25,85.2); (b) the SC/APC adapter flanges on +Y reach x=-15.72, so any bracket wrapping the -X/+Y corner will collide with them."
+  },
+  "unknowns": [
+   "SMA mating-plug clearance: no SMA connector clearance figure exists anywhere in params.json. The 30.0 mm clear_out on the two -Y SMA keep-outs is my estimate (typical SMA plug body plus coax bend), NOT a sourced number. Confirm against the actual cable assembly before cutting a plate.",
+   "DE-9 external mating clearance: params.json only gives panel_connector.rear_keepout_depth = 16.0, which is the INTERNAL solder-cup / wire-bend volume inside the plenum. There is no external figure for a hooded plug plus cable bend. The 40.0 mm clear_out on the +Y DE-9 keep-out is my estimate.",
+   "SC/APC adapter flange footprint (22.0 x 11.8 x 3.0, flange_len/flange_wide/flange_thickness in params) is NOT modelled in this STEP - the STEP contains only the cutout and the dia 1.7 pilots. Whether the flange is recessed is not represented; I assumed it stands ~3.0 mm proud of y=97.25. Verify against the physical adapter.",
+   "No threads are cut anywhere in the STEP. The six 2.5 mm post bores are self-tapping pilots (housing.corner_post_pilot_dia = 2.5) for M3. Actual thread form, required engagement length and pull-out strength in printed PETG/ABS are not determinable from geometry - the 28.12 mm figure is available pilot depth, not rated engagement.",
+   "Cover-removal clearance in +X (how much straight-out space is needed to withdraw the 4.2 mm registration lip plus screwdriver access) is not modelled. I used 60.0 mm for the lid-screw keep-out as a working figure.",
+   "DISCREPANCY vs the brief: the -Y SMA holes were stated as z=7.3 and z=52.5. Measured centres are z=10.85 and z=55.95 (dia 7.7 counterbore 0.6 deep into a dia 7.0 through hole, axis x=-8.33). Reconcile which is authoritative before a plate is cut - I am reporting the geometry as imported.",
+   "Whether the two -Z drain outlets are intended to remain open in the final installed attitude is a design-intent question, not a geometry one. They are currently open straight into the lower module bay and the fiber plenum.",
+   "The four small 9.0 mm2 islands on the +X face at y[8.42,11.42], z[11.46,14.64] / [16.46,19.64] / [56.56,59.74] / [61.56,64.74] are leftover flange land between the vent slots and the recessed panels. Harmless, but they mean the +X surface is not a single continuous plane."
+  ]
+ },
+ "peplink_ubr_plus": {
+  "key": "peplink_ubr_plus",
+  "part_frame_bbox": {
+   "xmin": -70.763,
+   "xmax": 101.039,
+   "ymin": 7.239,
+   "ymax": 36.54,
+   "zmin": -125.401,
+   "zmax": 40.83
+  },
+  "faces": [
+   {
+    "face": "-Y",
+    "plane_coord": 7.239,
+    "contents": "MOUNT FACE. One single continuous plane, 22987.7 mm2 total (3 coplanar faces). Outline = the 2.5 mm cast flange: X -70.762..101.038 (171.800) by Z -113.970..32.030 (146.000), R5.000 corners (corner-arc centres x=+/-96.038/-65.762, z=27.030/-108.970). Plus two extra coplanar tabs 147.000 x 2.000 at X -58.362..88.638, one at Z 32.030..34.030 and one at Z -115.970..-113.970 (bottom edge of the two end walls) -> full -Y envelope is 171.800 (X) x 150.000 (Z). Interruptions: (a) 4x dia-4.500 through holes; (b) one 65.000 x 40.000 recess 0.200 mm deep, floor at y=7.439, spanning X -17.362..47.638, Z -60.970..-20.970, containing 4x dia-3.000 x 0.200 blind foot-locator divots at (x,z) = (-15.862,-22.470), (-15.862,-59.470), (46.138,-22.470), (46.138,-59.470). Nothing anywhere protrudes below y=7.239 (verified: model ymin = 7.239).",
+    "is_flat_mountable": true,
+    "flat_area_mm2": 22987.7
+   },
+   {
+    "face": "+Y",
+    "plane_coord": 36.54,
+    "contents": "Finned cast heatsink lid. Fin tips at y=36.539, only 1139.94 mm2 of tip land across 16 thin ridges, spanning X -34.097..64.372, Z -113.970..32.030. Fin roots / deck at y=33.351 (10806.7 mm2) with a second flat at y=30.871 (13497.83 mm2 = 99.274 x 136.000, X -34.499..64.775, Z -108.970..27.030). Fin pitch ~2.987 mm in X, fin thickness ~0.247 mm, fin height ~2.824 mm (y 33.533..36.357), fins run along Z. Outboard of x=64.984 the top steps down in 7 steps of ~0.512 mm to y=29.559 at x=86.468 (mirrored on -X). Non-planar, no fixings, thermal surface.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 1139.94
+   },
+   {
+    "face": "-Z",
+    "plane_coord": -115.97,
+    "contents": "PRIMARY CONNECTOR FACE. Body end wall plane at z=-115.970, X -59.862..90.138, Y 7.239..33.351, 3429.3 mm2 of remaining land. Carries: 5x SMA bulkhead (cellular/GPS) at (x,y) = (-11.362,23.739), (17.638,23.739), (32.138,15.739), (46.638,23.739), (75.638,23.739); hex nut across-corners 10.211 / across-flats 8.843, nut faces at z=-117.145 and -117.577; barrel dia 6.350 out to z=-124.130; threaded tip dia 5.334/4.623 out to z=-125.400 (model zmin -125.401). Total protrusion 9.431 mm. Anti-rotation D-flats in the wall at y=20.882 (four) / y=12.882 (the low one), flat width 3.300. Also: SIM door, outer patch X -50.212..-20.612 (29.600) x Y 10.289..18.789 (8.500), proud to z=-119.470 (3.500 mm out), covering two SIM apertures X -49.812..-37.512 and X -33.312..-21.012, both Y 12.239..16.839 (12.300 x 4.600 each). Also: recessed round feature dia 6.000 at (x=-35.387, y=23.889) in a 6.000 x 7.900 pocket X -38.387..-32.387, Y 18.989..26.889, 0.800 mm deep (floor z=-116.770), with a dia-3.000 bore running to z=-112.270 (reset/LED - function not identifiable). Also: 4x vendor end-cap service screws at (x,y) = (-56.362,10.739), (-56.362,25.646), (86.638,10.739), (86.638,25.646), recess ring plane at z=-115.870.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 3429.3
+   },
+   {
+    "face": "+Z",
+    "plane_coord": 34.03,
+    "contents": "SECOND CONNECTOR FACE. Body end wall plane at z=34.030, X -59.862..90.138, Y 7.239..33.351, 2788.0 mm2 of remaining land (wall thickness 2.000, inner plane z=32.030). Carries: 2x Wi-Fi SMA at (x,y) = (-46.362,21.739) and (76.638,21.739); wall bore dia 7.200; barrel dia 6.350 z 36.130..39.830; threaded tip dia 5.350/4.550 to z=40.630, cap plane z=40.730, model zmax 40.830. Protrusion 6.800 mm. Also: one large rectangular port-bank opening X -38.562..42.788 (81.350) x Y 15.039..28.839 (13.800), R0.200 internal corners, through the full 2.000 wall. Also: 4x dia-2.500 through indicator/light-pipe holes at x=49.538, y = 12.539 / 17.639 / 22.739 / 27.839. Also: a second opening X 56.906..66.769 x Y 15.189..23.009 with an upper lobe to y=26.819 (X 59.406..64.266). Also: 4x vendor end-cap service screws at (x,y) = (-56.362,10.739), (-56.362,25.646), (86.638,10.739), (86.638,25.646), dia-5.000 recess z 33.730..33.930, dia-3.200 clearance z 32.030..32.830 into a dia-3.000 boss to z=27.930. The plane at z=32.030 (3472.8 mm2, X -65.762..96.038) is the flange/step end, 2.000 mm inboard of the body face.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 2788
+   },
+   {
+    "face": "+X",
+    "plane_coord": 90.138,
+    "contents": "Plain side wall at x=90.138 (body), 2603.5 mm2 across 4 coplanar faces, Y 8.739..27.654, Z -113.970..34.030. NO connectors, NO vents, NO openings, NO fastener holes (verified: zero X-axis cylinders dia 2..9 anywhere near either side wall). Split by the top/bottom shell parting-line groove at y=18.839 into two panels: y 9.939..18.639 (1270.20 mm2) and y 19.039..27.654 (1257.67 mm2); groove recessed to x=88.138 with a further step at x=86.488 and a shoulder chamfer above y=27.654. CRITICAL: the -Y flange wing overhangs this wall by 10.900 mm, out to x=101.038, over the band y 7.239..9.739 (wing top plane y=9.739 starts at x=90.338). A flat plate cannot lie against x=90.138 without a notch for the wing.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 2603.5
+   },
+   {
+    "face": "-X",
+    "plane_coord": -59.862,
+    "contents": "Mirror of +X. Plain side wall at x=-59.862, 2603.5 mm2, Y 8.739..27.654, Z -113.970..34.030. No connectors, no openings, no fastener holes. Parting-line groove at y=18.839 recessed to x=-57.862, further step at x=-56.862. Flange wing overhangs to x=-70.762 (10.900 mm) over y 7.239..9.739; wing top plane y=9.739 runs x -70.762..-60.062.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 2603.5
+   }
+  ],
+  "mounting_holes": [
+   {
+    "id": "FLG-1",
+    "face": "-Y",
+    "dia_mm": 4.5,
+    "kind": "through_clearance",
+    "x": -65.762,
+    "y": 7.239,
+    "z": 0.38,
+    "axis": "Y",
+    "thread": "none - clearance (M4 clearance, 0.50 mm dia slop)",
+    "usable_depth_mm": 2.5,
+    "max_screw_penetration_mm": 999,
+    "note": "USABLE. Full-depth through hole in the 2.5 mm cast flange wing (y 7.239 -> 9.739). Grip length = 2.500 mm. Screw penetration past y=9.739 is UNCONSTRAINED - verified by exhaustive query that there is ZERO geometry outboard of the body walls (x < -59.95 or x > 90.20) above y=9.80, so the space above this wing is open air. Wing is 10.900 mm wide here (x -70.762..-59.862); hole centre is 5.000 mm from the outer flange edge and 5.900 mm from the body wall -> max washer/head OD that stays fully on the wing is 10.000 mm."
+   },
+   {
+    "id": "FLG-2",
+    "face": "-Y",
+    "dia_mm": 4.5,
+    "kind": "through_clearance",
+    "x": -65.762,
+    "y": 7.239,
+    "z": -82.32,
+    "axis": "Y",
+    "thread": "none - clearance (M4 clearance)",
+    "usable_depth_mm": 2.5,
+    "max_screw_penetration_mm": 999,
+    "note": "USABLE. Identical to FLG-1. 31.650 mm from the flange Z end (flange zmin -113.970)."
+   },
+   {
+    "id": "FLG-3",
+    "face": "-Y",
+    "dia_mm": 4.5,
+    "kind": "through_clearance",
+    "x": 96.038,
+    "y": 7.239,
+    "z": 0.38,
+    "axis": "Y",
+    "thread": "none - clearance (M4 clearance)",
+    "usable_depth_mm": 2.5,
+    "max_screw_penetration_mm": 999,
+    "note": "USABLE. Wing x 90.138..101.038; hole 4.998 mm from outer edge, 5.902 mm from body wall. 31.650 mm from flange zmax 32.030. Open air above."
+   },
+   {
+    "id": "FLG-4",
+    "face": "-Y",
+    "dia_mm": 4.5,
+    "kind": "through_clearance",
+    "x": 96.038,
+    "y": 7.239,
+    "z": -82.32,
+    "axis": "Y",
+    "thread": "none - clearance (M4 clearance)",
+    "usable_depth_mm": 2.5,
+    "max_screw_penetration_mm": 999,
+    "note": "USABLE. Identical to FLG-3."
+   },
+   {
+    "id": "INT-BOSS-1",
+    "face": "internal (opens at y=9.739, inward)",
+    "dia_mm": 5.5,
+    "kind": "unusable",
+    "x": -50.862,
+    "y": 9.739,
+    "z": 13.53,
+    "axis": "Y",
+    "thread": "unknown - vendor internal",
+    "usable_depth_mm": 0,
+    "max_screw_penetration_mm": 0,
+    "note": "NOT USABLE. Vendor internal PCB/case boss. Opens on the INNER surface of the bottom shell at y=9.739 and runs UP: dia 5.500 y 9.739..13.739, dia 4.500 y 13.739..14.739, dia 4.700 y 13.779..15.279, dia 7.000 y 13.739..15.339. Does NOT break through to the -Y face at y=7.239 (verified: the -Y plane area balance accounts for the 65x40 recess and the four dia-4.5 holes only). No external access."
+   },
+   {
+    "id": "INT-BOSS-2",
+    "face": "internal (opens at y=9.739, inward)",
+    "dia_mm": 5.5,
+    "kind": "unusable",
+    "x": -50.862,
+    "y": 9.739,
+    "z": -95.47,
+    "axis": "Y",
+    "thread": "unknown - vendor internal",
+    "usable_depth_mm": 0,
+    "max_screw_penetration_mm": 0,
+    "note": "NOT USABLE. Same as INT-BOSS-1."
+   },
+   {
+    "id": "INT-BOSS-3",
+    "face": "internal (opens at y=9.739, inward)",
+    "dia_mm": 5.5,
+    "kind": "unusable",
+    "x": 81.138,
+    "y": 9.739,
+    "z": 13.53,
+    "axis": "Y",
+    "thread": "unknown - vendor internal",
+    "usable_depth_mm": 0,
+    "max_screw_penetration_mm": 0,
+    "note": "NOT USABLE. Same as INT-BOSS-1."
+   },
+   {
+    "id": "INT-BOSS-4",
+    "face": "internal (opens at y=9.739, inward)",
+    "dia_mm": 5.5,
+    "kind": "unusable",
+    "x": 81.138,
+    "y": 9.739,
+    "z": -95.47,
+    "axis": "Y",
+    "thread": "unknown - vendor internal",
+    "usable_depth_mm": 0,
+    "max_screw_penetration_mm": 0,
+    "note": "NOT USABLE. Same as INT-BOSS-1."
+   },
+   {
+    "id": "FOOT-1",
+    "face": "-Y",
+    "dia_mm": 3,
+    "kind": "unusable",
+    "x": -15.862,
+    "y": 7.239,
+    "z": -22.47,
+    "axis": "Y",
+    "thread": "none",
+    "usable_depth_mm": 0.2,
+    "max_screw_penetration_mm": 0.2,
+    "note": "NOT USABLE. Rubber-foot / pad locator divot, only 0.200 mm deep (y 7.239..7.439), sunk inside the 0.2 mm label recess. Not a fastener feature."
+   },
+   {
+    "id": "FOOT-2",
+    "face": "-Y",
+    "dia_mm": 3,
+    "kind": "unusable",
+    "x": -15.862,
+    "y": 7.239,
+    "z": -59.47,
+    "axis": "Y",
+    "thread": "none",
+    "usable_depth_mm": 0.2,
+    "max_screw_penetration_mm": 0.2,
+    "note": "NOT USABLE. Foot locator divot, 0.200 mm deep."
+   },
+   {
+    "id": "FOOT-3",
+    "face": "-Y",
+    "dia_mm": 3,
+    "kind": "unusable",
+    "x": 46.138,
+    "y": 7.239,
+    "z": -22.47,
+    "axis": "Y",
+    "thread": "none",
+    "usable_depth_mm": 0.2,
+    "max_screw_penetration_mm": 0.2,
+    "note": "NOT USABLE. Foot locator divot, 0.200 mm deep."
+   },
+   {
+    "id": "FOOT-4",
+    "face": "-Y",
+    "dia_mm": 3,
+    "kind": "unusable",
+    "x": 46.138,
+    "y": 7.239,
+    "z": -59.47,
+    "axis": "Y",
+    "thread": "none",
+    "usable_depth_mm": 0.2,
+    "max_screw_penetration_mm": 0.2,
+    "note": "NOT USABLE. Foot locator divot, 0.200 mm deep."
+   },
+   {
+    "id": "CAP-PZ-1",
+    "face": "+Z",
+    "dia_mm": 3.2,
+    "kind": "unusable",
+    "x": -56.362,
+    "y": 10.739,
+    "z": 34.03,
+    "axis": "Z",
+    "thread": "none - clearance into a dia-3.000 boss (vendor self-tap)",
+    "usable_depth_mm": 6,
+    "max_screw_penetration_mm": 6,
+    "note": "NOT USABLE - occupied by the vendor's end-cap assembly screw and holds the enclosure shut. dia-5.000 head recess z 33.930..33.730, dia-3.200 clearance z 32.830..32.030, dia-3.000 boss to z=27.930. Must stay accessible for service."
+   },
+   {
+    "id": "CAP-PZ-2",
+    "face": "+Z",
+    "dia_mm": 3.2,
+    "kind": "unusable",
+    "x": -56.362,
+    "y": 25.646,
+    "z": 34.03,
+    "axis": "Z",
+    "thread": "none - vendor",
+    "usable_depth_mm": 6,
+    "max_screw_penetration_mm": 6,
+    "note": "NOT USABLE - vendor end-cap screw, same geometry as CAP-PZ-1."
+   },
+   {
+    "id": "CAP-PZ-3",
+    "face": "+Z",
+    "dia_mm": 3.2,
+    "kind": "unusable",
+    "x": 86.638,
+    "y": 10.739,
+    "z": 34.03,
+    "axis": "Z",
+    "thread": "none - vendor",
+    "usable_depth_mm": 6,
+    "max_screw_penetration_mm": 6,
+    "note": "NOT USABLE - vendor end-cap screw."
+   },
+   {
+    "id": "CAP-PZ-4",
+    "face": "+Z",
+    "dia_mm": 3.2,
+    "kind": "unusable",
+    "x": 86.638,
+    "y": 25.646,
+    "z": 34.03,
+    "axis": "Z",
+    "thread": "none - vendor",
+    "usable_depth_mm": 6,
+    "max_screw_penetration_mm": 6,
+    "note": "NOT USABLE - vendor end-cap screw."
+   },
+   {
+    "id": "CAP-NZ-1",
+    "face": "-Z",
+    "dia_mm": 3.2,
+    "kind": "unusable",
+    "x": -56.362,
+    "y": 10.739,
+    "z": -115.97,
+    "axis": "Z",
+    "thread": "none - vendor",
+    "usable_depth_mm": 6,
+    "max_screw_penetration_mm": 6,
+    "note": "NOT USABLE - vendor end-cap assembly screw, mirror of the +Z set. Confirmed by the 4 recess-ring faces on the plane z=-115.870 spanning X -58.862..89.138, Y 8.239..28.146 (dia 5.000 each). Bore depths not individually measured; assumed same as +Z."
+   },
+   {
+    "id": "CAP-NZ-2",
+    "face": "-Z",
+    "dia_mm": 3.2,
+    "kind": "unusable",
+    "x": -56.362,
+    "y": 25.646,
+    "z": -115.97,
+    "axis": "Z",
+    "thread": "none - vendor",
+    "usable_depth_mm": 6,
+    "max_screw_penetration_mm": 6,
+    "note": "NOT USABLE - vendor end-cap screw."
+   },
+   {
+    "id": "CAP-NZ-3",
+    "face": "-Z",
+    "dia_mm": 3.2,
+    "kind": "unusable",
+    "x": 86.638,
+    "y": 10.739,
+    "z": -115.97,
+    "axis": "Z",
+    "thread": "none - vendor",
+    "usable_depth_mm": 6,
+    "max_screw_penetration_mm": 6,
+    "note": "NOT USABLE - vendor end-cap screw."
+   },
+   {
+    "id": "CAP-NZ-4",
+    "face": "-Z",
+    "dia_mm": 3.2,
+    "kind": "unusable",
+    "x": 86.638,
+    "y": 25.646,
+    "z": -115.97,
+    "axis": "Z",
+    "thread": "none - vendor",
+    "usable_depth_mm": 6,
+    "max_screw_penetration_mm": 6,
+    "note": "NOT USABLE - vendor end-cap screw."
+   }
+  ],
+  "connector_keepouts": [
+   {
+    "name": "-Z SMA bank, 5x cellular/GPS bulkhead",
+    "face": "-Z",
+    "xmin": -16.468,
+    "xmax": 80.744,
+    "ymin": 10.633,
+    "ymax": 28.845,
+    "zmin": -125.401,
+    "zmax": -115.97,
+    "clear_out_mm": 55,
+    "reason": "Five SMA bulkheads on axes (x,y) = (-11.362,23.739), (17.638,23.739), (32.138,15.739), (46.638,23.739), (75.638,23.739). Patch is the hex-nut envelope (A/F 8.843, A/C 10.211). MEASURED protrusion from the face plane z=-115.970 to the threaded tip z=-125.400 is 9.431 mm. clear_out is 9.431 measured + allowance for a mating SMA plug body and coax bend radius (allowance, not measured - see unknowns)."
+   },
+   {
+    "name": "-Z SIM door / SIM card slots",
+    "face": "-Z",
+    "xmin": -50.212,
+    "xmax": -20.612,
+    "ymin": 10.289,
+    "ymax": 18.789,
+    "zmin": -119.47,
+    "zmax": -115.97,
+    "clear_out_mm": 30,
+    "reason": "Door outer patch 29.600 x 8.500, standing 3.500 mm proud of the face (outer plane z=-119.470, intermediate step z=-118.670). Behind it two SIM apertures, X -49.812..-37.512 and X -33.312..-21.012, both Y 12.239..16.839 (12.300 x 4.600 each). Must stay openable and the cards must be withdrawable along -Z; clear_out sized for finger/tool access plus card extraction, not measured."
+   },
+   {
+    "name": "-Z recessed round feature (reset / LED, dia 6.000)",
+    "face": "-Z",
+    "xmin": -38.387,
+    "xmax": -32.387,
+    "ymin": 18.989,
+    "ymax": 26.889,
+    "zmin": -116.77,
+    "zmax": -115.97,
+    "clear_out_mm": 15,
+    "reason": "0.800 mm deep pocket (floor z=-116.770) with a dia-6.000 circle centred at (x=-35.387, y=23.889) and a dia-3.000 bore running inward to z=-112.270. Function not identifiable from geometry (reset pinhole / LED / vent). Treated as service access."
+   },
+   {
+    "name": "-Z vendor end-cap service screws (4x)",
+    "face": "-Z",
+    "xmin": -58.862,
+    "xmax": 89.138,
+    "ymin": 8.239,
+    "ymax": 28.146,
+    "zmin": -115.97,
+    "zmax": -115.87,
+    "clear_out_mm": 25,
+    "reason": "Four dia-5.000 recess rings on plane z=-115.870 at (x,y) = (-56.362,10.739), (-56.362,25.646), (86.638,10.739), (86.638,25.646). These hold the enclosure shut; a driver must reach them. Patch given as the bounding box of the 4 - only the four ~7 mm circles are actually occupied."
+   },
+   {
+    "name": "+Z Wi-Fi SMA, -X unit",
+    "face": "+Z",
+    "xmin": -49.962,
+    "xmax": -42.762,
+    "ymin": 18.139,
+    "ymax": 25.339,
+    "zmin": 34.03,
+    "zmax": 40.83,
+    "clear_out_mm": 50,
+    "reason": "SMA bulkhead axis at (x=-46.362, y=21.739). Wall bore dia 7.200 (z 32.030..34.030); barrel dia 6.350 z 36.130..39.830; threaded tip dia 5.350/4.550 to z=40.630, model zmax 40.830. MEASURED protrusion from the face plane z=34.030 is 6.800 mm. clear_out adds a mating-plug + bend-radius allowance (not measured)."
+   },
+   {
+    "name": "+Z Wi-Fi SMA, +X unit",
+    "face": "+Z",
+    "xmin": 73.038,
+    "xmax": 80.238,
+    "ymin": 18.139,
+    "ymax": 25.339,
+    "zmin": 34.03,
+    "zmax": 40.83,
+    "clear_out_mm": 50,
+    "reason": "SMA bulkhead axis at (x=76.638, y=21.739). Same geometry as the -X unit; measured protrusion 6.800 mm."
+   },
+   {
+    "name": "+Z port-bank opening",
+    "face": "+Z",
+    "xmin": -38.562,
+    "xmax": 42.788,
+    "ymin": 15.039,
+    "ymax": 28.839,
+    "zmin": 32.03,
+    "zmax": 34.03,
+    "clear_out_mm": 60,
+    "reason": "Single rectangular through-opening 81.350 (X) x 13.800 (Y) in the 2.000 mm end wall, R0.200 internal corners, with a stepped sill (inner ledge at y=15.139, X -36.272..23.488). Ports/plugs sit inside it. clear_out sized for latched plugs plus cable bend; the individual apertures inside are not resolvable from this STEP (see unknowns)."
+   },
+   {
+    "name": "+Z indicator / light-pipe holes (4x dia-2.500)",
+    "face": "+Z",
+    "xmin": 48.288,
+    "xmax": 50.788,
+    "ymin": 11.289,
+    "ymax": 29.089,
+    "zmin": 32.03,
+    "zmax": 34.03,
+    "clear_out_mm": 5,
+    "reason": "Column of four dia-2.500 through holes at x=49.538, y = 12.539 / 17.639 / 22.739 / 27.839. Must remain visible; no mating hardware, so only line-of-sight clearance."
+   },
+   {
+    "name": "+Z secondary opening",
+    "face": "+Z",
+    "xmin": 56.906,
+    "xmax": 66.769,
+    "ymin": 15.189,
+    "ymax": 26.819,
+    "zmin": 32.03,
+    "zmax": 34.03,
+    "clear_out_mm": 20,
+    "reason": "Second through-opening in the +Z wall, main body X 56.906..66.769 x Y 15.189..23.009, with an upper lobe X 59.406..64.266 up to y=26.819. Contents not identifiable (button / small port / vent). Treated as keep-out."
+   },
+   {
+    "name": "+Z vendor end-cap service screws (4x)",
+    "face": "+Z",
+    "xmin": -58.862,
+    "xmax": 89.138,
+    "ymin": 8.239,
+    "ymax": 28.146,
+    "zmin": 33.73,
+    "zmax": 34.03,
+    "clear_out_mm": 25,
+    "reason": "Four dia-5.000 head recesses (z 33.930..33.730) into dia-3.200 clearance bores at (x,y) = (-56.362,10.739), (-56.362,25.646), (86.638,10.739), (86.638,25.646). Driver access required. Patch is the bounding box of the four."
+   },
+   {
+    "name": "+Y finned heatsink",
+    "face": "+Y",
+    "xmin": -34.56,
+    "xmax": 64.836,
+    "ymin": 30.871,
+    "ymax": 36.54,
+    "zmin": -113.97,
+    "zmax": 32.03,
+    "clear_out_mm": 20,
+    "reason": "Cast fin array, tips at y=36.539, roots at y=33.351, fins running along Z at ~2.987 mm pitch. This is the unit's heat-rejection surface - must not be covered or shrouded. clear_out is a convective allowance, not a measured value."
+   },
+   {
+    "name": "-Y label / foot-pad recess (informational, NOT an obstruction)",
+    "face": "-Y",
+    "xmin": -17.362,
+    "xmax": 47.638,
+    "ymin": 7.239,
+    "ymax": 7.439,
+    "zmin": -60.97,
+    "zmax": -20.97,
+    "clear_out_mm": 0,
+    "reason": "65.000 x 40.000 recess only 0.200 mm deep (floor y=7.439), with four dia-3.000 x 0.200 foot-locator divots. A bracket bridges it with no interference - it simply does not make contact there. Flagged only because it may carry the serial/regulatory label; if the label must stay readable, treat it as a keep-out with the recess dimensions above."
+   }
+  ],
+  "forbidden_mount_faces": [
+   {
+    "face": "-Z",
+    "why": "Densest connector face on the part. 5x SMA cellular/GPS bulkheads protruding 9.431 mm (measured, z=-115.970 -> -125.400) spanning X -16.468..80.744 and Y 10.633..28.845; the SIM door 3.500 mm proud spanning X -50.212..-20.612 and Y 10.289..18.789; a service pocket at (x=-35.387,y=23.889); and 4 vendor end-cap screws. The union of the keep-outs is X -50.212..80.744 x Y 10.289..28.845, leaving only a 9.650 mm strip at the -X end, a 9.394 mm strip at the +X end, 3.050 mm below and 4.506 mm above. Nothing bearable."
+   },
+   {
+    "face": "+Z",
+    "why": "Second connector face. 2x Wi-Fi SMA protruding 6.800 mm, an 81.350 x 13.800 port-bank opening, 4 indicator holes, a secondary opening, and 4 vendor end-cap screws. Keep-out union is roughly X -49.962..80.238 x Y 11.289..28.839, i.e. essentially the whole face."
+   },
+   {
+    "face": "+Y",
+    "why": "Finned heatsink. Not a plane at all - only 1139.94 mm2 of 0.247 mm wide fin-tip land at y=36.539, and the surface steps down 7 times outboard of x=64.984. Any plate bearing here would crush fins, sit unstably, and block the unit's only heat-rejection path. No fixings anywhere on this face."
+   },
+   {
+    "face": "+X",
+    "why": "Blocked by the part's own flange, not by connectors: the -Y flange wing overhangs the wall by 10.900 mm out to x=101.038 over the band y 7.239..9.739, so a flat plate cannot reach x=90.138 without a relief notch. The usable wall band is only 18.915 mm tall (y 8.739..27.654) and is split by the shell parting-line groove at y=18.839, so clamping here would load the case seam. Verified there are ZERO X-axis fastener holes on this face."
+   },
+   {
+    "face": "-X",
+    "why": "Same as +X, mirrored: flange wing overhangs to x=-70.762 over y 7.239..9.739; wall band y 8.739..27.654 split by the parting-line groove at y=18.839; zero fastener holes."
+   }
+  ],
+  "preferred_mount_face": {
+   "face": "-Y",
+   "bearing_area_mm2": 10780.86,
+   "why": "The only face that is flat, unobstructed and has fixings. It is a single continuous plane at y=7.239 covering 22987.7 mm2 with nothing on the part protruding below it (model ymin = 7.239). It carries the only usable fastener features on the whole unit: 4x dia-4.500 through-clearance holes on a 161.800 (X) x 82.700 (Z) rectangle. AVAILABLE FULL-CONTACT AREA BETWEEN THE 4 HOLES: the hole-centre rectangle is 161.800 x 82.700 = 13380.86 mm2; the only interruption inside it is the 0.200 mm deep 65.000 x 40.000 label/foot recess (X -17.362..47.638, Z -60.970..-20.970) which lies entirely inside that rectangle, so true metal-to-metal contact = 13380.86 - 2600.00 = 10780.86 mm2. The recess is not an obstruction, it is 0.200 mm below the bearing plane, so a bracket bridges it freely. Largest single UNBROKEN contact rectangle inside the hole pattern = 48.400 x 82.700 = 4002.68 mm2 (either the strip at X 47.638..96.038 or X -65.762..-17.362); the two transverse strips are 161.800 x 21.350 = 3454.43 mm2 each. Outside the hole pattern there is a further ~9.6 mm of flange all round plus the two 147.000 x 2.000 end tabs. Screw access on the far side of all 4 holes is completely open - verified zero geometry outboard of x=-59.95/90.20 above y=9.80 - so grip is 2.500 mm and screw length past the flange is unconstrained by the unit."
+  },
+  "hole_pattern_summary": "4x dia-4.500 through-clearance holes (M4 clearance), axis +Y, all entering the flat -Y face at y=7.239 and exiting the flange top at y=9.739 (2.500 mm grip). Centres, as authored: (x, z) = (-65.762, 0.380), (-65.762, -82.320), (96.038, 0.380), (96.038, -82.320). Pitch 161.800 in part X by 82.700 in part Z; pattern centre (x=15.138, z=-40.970). Holes sit in the two 10.900 mm wide flange wings, 5.000 / 4.998 mm from the outer flange edge and 5.900 / 5.902 mm from the body side wall, and 31.650 mm from each flange Z end. Max washer/head OD that stays fully on the wing: 10.000 mm. These are the ONLY externally accessible fastener holes on the part. Every other threaded/bored feature found is either a vendor internal boss opening at y=9.739 inward (4x dia-5.500), a 0.200 mm foot-locator divot (4x dia-3.000), or one of the 8 vendor end-cap assembly screws on the +Z and -Z faces at (x,y) = (-56.362 / 86.638) x (10.739 / 25.646). No fastener holes exist on the +X, -X or +Y faces at all.",
+  "unknowns": [
+   "clear_out_mm values are ENGINEERING ALLOWANCES, not measurements. The STEP contains only the bulkhead bodies, no mating plugs and no cable. What IS measured exactly: -Z SMA protrusion 9.431 mm (z -115.970 -> -125.400), +Z SMA protrusion 6.800 mm (z 34.030 -> 40.830), SIM door protrusion 3.500 mm (z -115.970 -> -119.470). Add your own plug-body + coax bend-radius numbers on top of these.",
+   "Contents of the 81.350 x 13.800 +Z port-bank opening are NOT resolvable. The vendor sub-solid behind it is modelled as a simplified block (bbox X -38.26..25.49, Y 11.66..28.54, Z 18.18..34.53), so individual port apertures (RJ45 / USB / power barrel), their pitch, and latch/boot clearance cannot be determined from this file. Note that sub-solid's zmax of 34.53 sits 0.500 mm proud of the +Z face plane - I could not confirm whether that is a real protrusion or modelling slop.",
+   "SIM door mechanism unknown - hinged, sliding, or captive rubber plug. Geometry only shows a 29.600 x 8.500 plate 3.500 mm proud with a 0.800 mm intermediate step. I assumed it opens outward along -Z; if it hinges sideways the swept keep-out is wider than the patch I gave.",
+   "Function of the dia-6.000 recessed feature at (x=-35.387, y=23.889) on -Z is unknown (reset pinhole, LED, or vent). It has a dia-3.000 bore running inward to z=-112.270. Treated as a keep-out on the safe side.",
+   "Function of the +Z secondary opening at X 56.906..66.769, Y 15.189..26.819 is unknown.",
+   "The -Z end-cap service screw bore depths were not individually measured - only the four dia-5.000 recess rings on the plane z=-115.870 were confirmed. I assumed the same 6.000 mm depth as the measured +Z set. Do not rely on that depth.",
+   "Airflow requirement for the +Y fin array is not derivable from geometry. The 20 mm clear_out I gave is a placeholder, not a vendor spec.",
+   "Whether the 0.200 mm deep 65.000 x 40.000 recess on the -Y face carries a serial/regulatory label that must remain readable. If it does, the -Y face is no longer fully free and the effective contact region drops to the four strips around it (largest 48.400 x 82.700).",
+   "Flange material thickness is 2.500 mm uniformly at the wings, but I did not measure whether the region between the wings (x -57.862..88.138) is solid 2.500 mm or ribbed internally - relevant if a bracket clamps in the middle rather than only at the 4 corners.",
+   "Part bbox extremes come from the OCC bounding box, which can carry a ~0.001 mm tolerance. Exact face-plane values measured: x -70.762 / 101.038, y 7.239 / 36.539, z -125.400 / 40.730 (a small non-planar tip reaches 40.830)."
+  ],
+  "confidence": "high"
+ },
+ "ettus_usrp_b210": {
+  "key": "ettus_usrp_b210",
+  "part_frame_bbox": {
+   "xmin": -2.674,
+   "xmax": 119.674,
+   "ymin": -4.766,
+   "ymax": 32.49,
+   "zmin": -166.602,
+   "zmax": 11.046
+  },
+  "faces": [
+   {
+    "face": "-Y",
+    "plane_coord": -1.21,
+    "contents": "CASE BOTTOM - the only drilled/mountable face. Flat sheet-metal pan, outer face at Y=-1.210, flat region X[0.000,117.000] Z[-153.126,-2.420] (117.000 x 150.706). Four dia-4.191 openings in the sheet at (X=11.701/105.300, Z=-20.628/-140.643), each filled flush by a clinched PEM SOS-M3-10 standoff whose M3 bore is open through the outer face. Four adhesive rubber feet (FOOT_RUBBER_ADHESIVE_745120-01), dia 12.700, protruding 3.556 mm to Y=-4.766, exactly concentric with the four standoffs. No connectors, no vents, no grilles, no label modelled. Sheet thickness 1.210 mm.",
+    "is_flat_mountable": true,
+    "flat_area_mm2": 17576.3
+   },
+   {
+    "face": "+Y",
+    "plane_coord": 32.49,
+    "contents": "TOP COVER, flat plate X[-0.254,117.254] Z[-153.126,-2.420]. Completely free of connectors, vents and holes. Carries four shallow drawn recesses 12.740 x 12.740 (rounded, flat floor 8.268 x 8.268) x 1.000 mm DEEP at X=11.700/105.300, Z=-20.620/-140.620 - exactly concentric with the rubber feet on the opposite face, i.e. stacking dimples. NO fixings of any kind on this face - zero holes.",
+    "is_flat_mountable": true,
+    "flat_area_mm2": 17198.1
+   },
+   {
+    "face": "-X",
+    "plane_coord": -2.674,
+    "contents": "LEFT SIDE WALL, two-step profile. Outer wall (top cover) at X=-2.674 spanning Y[8.290,30.070] Z[-154.336,-1.210], area 3314.9 mm2. Lower wall (bottom cover) is recessed 0.254 mm to X=-2.420, spanning Y[1.210,5.340] Z[-154.126,-1.420], area 630.7 mm2. ONE rectangular slot 3.000 (Y) x 7.000 (Z) at Y[15.000,18.000], Z[-15.406,-8.406] (centre Y=16.500, Z=-11.906) - near the FRONT end. No fixings on this face.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 3314.9
+   },
+   {
+    "face": "+X",
+    "plane_coord": 119.674,
+    "contents": "RIGHT SIDE WALL, mirror profile of -X. Outer wall (top cover) at X=119.674 spanning Y[8.290,30.070] Z[-154.336,-1.210], area 3314.9 mm2. Lower wall (bottom cover) recessed to X=119.420, Y[1.210,5.340] Z[-154.126,-1.420], area 630.7 mm2. ONE rectangular slot 3.000 (Y) x 7.000 (Z) at Y[15.000,18.000], Z[-147.000,-140.000] (centre Y=16.500, Z=-143.500) - near the REAR end. NOTE: the two side slots are NOT mirror-symmetric; -X slot is at the front, +X slot is at the rear. No fixings on this face.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 3314.9
+   },
+   {
+    "face": "+Z",
+    "plane_coord": 0.914,
+    "contents": "FRONT PANEL (RF face). Outer sheet face at Z=+0.914 (plate Z 0.000..0.914), covered by two printed label overlays out to Z=+1.676. Carries 4x SMA in 7.000 x 7.000 square panel cutouts at Y[7.230,14.230] (centre Y=10.730), X centres 25.200 / 45.500 / 71.000 / 91.200; SMA nut+washer stack to Z=+3.492, connector bodies protrude to Z=+11.046 (10.132 mm beyond the metal). 4x LED lightpipe windows 3.500 x 3.500 at Y[13.780,17.280] (centre Y=15.530), X centres 32.800 / 53.100 / 78.600 / 98.800; lightpipes protrude to Z=+2.235. 4x dia-3.200 case-screw clearance holes at X=4.895/112.105, Y=4.000/27.210, occupied by M3x8 button-head Torx screws whose heads stand proud to Z=+2.521. Net flat metal 3149.1 mm2, of which 2731.3 mm2 is under the label overlay.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 3149.1
+   },
+   {
+    "face": "-Z",
+    "plane_coord": -156.46,
+    "contents": "REAR PANEL (I/O face). Outer sheet face at Z=-156.460 (plate Z -156.460..-155.546), covered by printed label overlay OVERLAY_ETTUS-B2XX_REAR out to Z=-156.841. Carries 3x SMA in 7.000 x 7.000 cutouts at Y[7.230,14.230] (centre Y=10.730), X centres 37.500 / 74.200 / 94.200; bodies protrude to Z=-166.602 (10.142 mm beyond the metal). USB 3.0 Standard-B (Amphenol) in a 13.000 x 13.600 cutout X[50.200,63.200] Y[10.030,23.630]; shell protrudes to Z=-158.308. DC barrel jack (CUI PJ-002AH-SMT) in a 10.400 x 12.000 cutout X[13.800,24.200] Y[10.030,22.030]; body protrudes to Z=-158.272. 2x LED lightpipe windows 3.500 x 3.500 at Y[13.680,17.180] (centre Y=15.430), X centres 29.900 / 86.500; lightpipes to Z=-157.791. 4x dia-3.200 case-screw clearance holes at X=4.895/112.105, Y=4.000/27.210, screw heads proud to Z=-158.067. Net flat metal 2906.9 mm2.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 2906.9
+   }
+  ],
+  "mounting_holes": [
+   {
+    "id": "BOT-1",
+    "face": "-Y",
+    "dia_mm": 3,
+    "kind": "blind_tapped",
+    "thread": "M3x0.5 (see note - inferred, not modelled as a helix)",
+    "x": 11.701,
+    "y": -1.21,
+    "z": -20.628,
+    "axis": "Y",
+    "usable_depth_mm": 6,
+    "max_screw_penetration_mm": 3.574,
+    "note": "PEM SOS-M3-10 self-clinching standoff, clinched into the 1.210 mm bottom cover, bottom end face FLUSH with Y=-1.210. Bore: dia 3.000 from Y=-1.210 to Y=+4.790 (6.000 mm), then opens to dia 3.200 from Y=+4.790 to Y=+8.790 (standoff top / PCB seat). The tip of the existing M3x8 PCB screw sits at Y=+2.364, so a bracket screw entering from outside can travel only 3.574 mm. Design to 3.5 mm max. Concentric rubber foot must be removed first."
+   },
+   {
+    "id": "BOT-2",
+    "face": "-Y",
+    "dia_mm": 3,
+    "kind": "blind_tapped",
+    "thread": "M3x0.5 (inferred)",
+    "x": 105.3,
+    "y": -1.21,
+    "z": -20.628,
+    "axis": "Y",
+    "usable_depth_mm": 6,
+    "max_screw_penetration_mm": 3.574,
+    "note": "Identical to BOT-1. PEM SOS-M3-10, bore 3.000 for the first 6.000 mm then 3.200; PCB screw tip at Y=+2.364."
+   },
+   {
+    "id": "BOT-3",
+    "face": "-Y",
+    "dia_mm": 3,
+    "kind": "blind_tapped",
+    "thread": "M3x0.5 (inferred)",
+    "x": 11.701,
+    "y": -1.21,
+    "z": -140.643,
+    "axis": "Y",
+    "usable_depth_mm": 6,
+    "max_screw_penetration_mm": 3.574,
+    "note": "Identical to BOT-1. PEM SOS-M3-10, bore 3.000 for the first 6.000 mm then 3.200; PCB screw tip at Y=+2.364."
+   },
+   {
+    "id": "BOT-4",
+    "face": "-Y",
+    "dia_mm": 3,
+    "kind": "blind_tapped",
+    "thread": "M3x0.5 (inferred)",
+    "x": 105.3,
+    "y": -1.21,
+    "z": -140.643,
+    "axis": "Y",
+    "usable_depth_mm": 6,
+    "max_screw_penetration_mm": 3.574,
+    "note": "Identical to BOT-1. PEM SOS-M3-10, bore 3.000 for the first 6.000 mm then 3.200; PCB screw tip at Y=+2.364."
+   },
+   {
+    "id": "FRONT-CS-1",
+    "face": "+Z",
+    "dia_mm": 3.2,
+    "kind": "blind_tapped",
+    "thread": "M3x0.5 into PEM AETKS-M3-2 (minor dia modelled at 2.459 = exact M3x0.5 minor - unambiguous tapped hole)",
+    "x": 4.895,
+    "y": 4,
+    "z": 0.914,
+    "axis": "Z",
+    "usable_depth_mm": 10.964,
+    "max_screw_penetration_mm": 10.964,
+    "note": "CASE SCREW, not a mounting provision. dia-3.200 clearance through the 0.914 mm front panel into a corner standoff (Z 0.000 to -10.050): dia-3.600 unthreaded for the first 4.522 mm, then M3 thread (minor 2.459) for 5.528 mm. Thread starts 5.436 mm in from the outer face. Currently occupied by an M3x8 button-head Torx that RETAINS THE FRONT PANEL - removing it opens the case. On the connector face; unusable for a bracket in practice."
+   },
+   {
+    "id": "FRONT-CS-2",
+    "face": "+Z",
+    "dia_mm": 3.2,
+    "kind": "blind_tapped",
+    "thread": "M3x0.5 into PEM AETKS-M3-2",
+    "x": 112.105,
+    "y": 4,
+    "z": 0.914,
+    "axis": "Z",
+    "usable_depth_mm": 10.964,
+    "max_screw_penetration_mm": 10.964,
+    "note": "As FRONT-CS-1. Case screw on the RF connector face."
+   },
+   {
+    "id": "FRONT-CS-3",
+    "face": "+Z",
+    "dia_mm": 3.2,
+    "kind": "blind_tapped",
+    "thread": "M3x0.5 into PEM AETKS-M3-2",
+    "x": 4.895,
+    "y": 27.21,
+    "z": 0.914,
+    "axis": "Z",
+    "usable_depth_mm": 10.964,
+    "max_screw_penetration_mm": 10.964,
+    "note": "As FRONT-CS-1. Case screw on the RF connector face."
+   },
+   {
+    "id": "FRONT-CS-4",
+    "face": "+Z",
+    "dia_mm": 3.2,
+    "kind": "blind_tapped",
+    "thread": "M3x0.5 into PEM AETKS-M3-2",
+    "x": 112.105,
+    "y": 27.21,
+    "z": 0.914,
+    "axis": "Z",
+    "usable_depth_mm": 10.964,
+    "max_screw_penetration_mm": 10.964,
+    "note": "As FRONT-CS-1. Case screw on the RF connector face."
+   },
+   {
+    "id": "REAR-CS-1",
+    "face": "-Z",
+    "dia_mm": 3.2,
+    "kind": "blind_tapped",
+    "thread": "M3x0.5 into PEM AETKS-M3-2 (minor 2.459)",
+    "x": 4.895,
+    "y": 4,
+    "z": -156.46,
+    "axis": "Z",
+    "usable_depth_mm": 10.964,
+    "max_screw_penetration_mm": 10.964,
+    "note": "CASE SCREW. dia-3.200 clearance through the 0.914 mm rear panel into a corner standoff (Z -155.546 to -145.496): dia-3.600 unthreaded for 4.522 mm then M3 thread for 5.528 mm; thread starts 5.436 mm in from the outer face. Occupied by an M3x8 button-head Torx retaining the rear panel. On the I/O face; unusable for a bracket in practice."
+   },
+   {
+    "id": "REAR-CS-2",
+    "face": "-Z",
+    "dia_mm": 3.2,
+    "kind": "blind_tapped",
+    "thread": "M3x0.5 into PEM AETKS-M3-2",
+    "x": 112.105,
+    "y": 4,
+    "z": -156.46,
+    "axis": "Z",
+    "usable_depth_mm": 10.964,
+    "max_screw_penetration_mm": 10.964,
+    "note": "As REAR-CS-1. Case screw on the I/O face."
+   },
+   {
+    "id": "REAR-CS-3",
+    "face": "-Z",
+    "dia_mm": 3.2,
+    "kind": "blind_tapped",
+    "thread": "M3x0.5 into PEM AETKS-M3-2",
+    "x": 4.895,
+    "y": 27.21,
+    "z": -156.46,
+    "axis": "Z",
+    "usable_depth_mm": 10.964,
+    "max_screw_penetration_mm": 10.964,
+    "note": "As REAR-CS-1. Case screw on the I/O face."
+   },
+   {
+    "id": "REAR-CS-4",
+    "face": "-Z",
+    "dia_mm": 3.2,
+    "kind": "blind_tapped",
+    "thread": "M3x0.5 into PEM AETKS-M3-2",
+    "x": 112.105,
+    "y": 27.21,
+    "z": -156.46,
+    "axis": "Z",
+    "usable_depth_mm": 10.964,
+    "max_screw_penetration_mm": 10.964,
+    "note": "As REAR-CS-1. Case screw on the I/O face."
+   },
+   {
+    "id": "PCB-SCREW-x4",
+    "face": "+Y (internal)",
+    "dia_mm": 3.2,
+    "kind": "unusable",
+    "thread": "none - internal",
+    "x": 11.701,
+    "y": 11.972,
+    "z": -20.628,
+    "axis": "Y",
+    "usable_depth_mm": 0,
+    "max_screw_penetration_mm": 0,
+    "note": "NOT accessible. Four M3x8 button-head Torx screws hold the PCB down onto the SOS standoffs from inside, heads at Y=10.365..11.972, at (X 11.701/105.300, Z -20.628/-140.643). Fully enclosed by the top cover - listed only because their tips (Y=+2.364) are what limits BOT-1..4 penetration."
+   },
+   {
+    "id": "TOP-NONE",
+    "face": "+Y",
+    "dia_mm": 0,
+    "kind": "unusable",
+    "thread": "none",
+    "x": 58.5,
+    "y": 32.49,
+    "z": -77.773,
+    "axis": "Y",
+    "usable_depth_mm": 0,
+    "max_screw_penetration_mm": 0,
+    "note": "The top cover has ZERO holes. The four 12.740 x 12.740 features at the corners are 1.000 mm deep drawn recesses (stacking dimples for another unit's feet), not holes - nothing to fasten to."
+   }
+  ],
+  "connector_keepouts": [
+   {
+    "name": "FRONT_SMA_BANK (4x SMA)",
+    "face": "+Z",
+    "xmin": 19.666,
+    "xmax": 96.729,
+    "ymin": 5.198,
+    "ymax": 16.254,
+    "zmin": 0.914,
+    "zmax": 11.046,
+    "clear_out_mm": 40,
+    "reason": "Four SMA jacks in 7.000 x 7.000 panel cutouts, X centres 25.200 / 45.500 / 71.000 / 91.200, Y centre 10.730. Bodies already stand 10.132 mm proud of the metal (to Z=+11.046). Clearance = 10.13 protrusion + ~19 mm SMA plug body + ~12 mm RG-316 bend radius."
+   },
+   {
+    "name": "FRONT_LED_WINDOWS (4x lightpipe)",
+    "face": "+Z",
+    "xmin": 30.931,
+    "xmax": 100.679,
+    "ymin": 13.541,
+    "ymax": 17.41,
+    "zmin": 0.914,
+    "zmax": 2.235,
+    "clear_out_mm": 5,
+    "reason": "Four 3.500 x 3.500 status-LED windows, X centres 32.800 / 53.100 / 78.600 / 98.800, Y centre 15.530; lightpipe faces stand proud to Z=+2.235. Optical - must remain visible, not just uncontacted."
+   },
+   {
+    "name": "FRONT_LABEL_OVERLAY",
+    "face": "+Z",
+    "xmin": 0.523,
+    "xmax": 116.478,
+    "ymin": 1.321,
+    "ymax": 29.948,
+    "zmin": 0.914,
+    "zmax": 1.676,
+    "clear_out_mm": 2,
+    "reason": "Printed legend overlay covers essentially the entire front panel (0.762 mm thick, 2 layers). Any bracket landing here hides the port legend and would bear on adhesive film, not metal."
+   },
+   {
+    "name": "FRONT_CASE_SCREW_HEADS",
+    "face": "+Z",
+    "xmin": 3.295,
+    "xmax": 113.705,
+    "ymin": 2.4,
+    "ymax": 28.81,
+    "zmin": 0.914,
+    "zmax": 2.521,
+    "clear_out_mm": 25,
+    "reason": "Four M3x8 button heads at the corners (X 4.895/112.105, Y 4.000/27.210) stand 1.607 mm proud. Driver access needed for service (panel removal)."
+   },
+   {
+    "name": "REAR_SMA_BANK (3x SMA)",
+    "face": "-Z",
+    "xmin": 31.983,
+    "xmax": 99.724,
+    "ymin": 5.198,
+    "ymax": 16.254,
+    "zmin": -166.602,
+    "zmax": -156.46,
+    "clear_out_mm": 40,
+    "reason": "Three SMA jacks in 7.000 x 7.000 cutouts, X centres 37.500 / 74.200 / 94.200, Y centre 10.730. Bodies stand 10.142 mm proud (to Z=-166.602). Clearance = 10.14 + ~19 mm plug + ~12 mm bend radius."
+   },
+   {
+    "name": "REAR_USB3_B",
+    "face": "-Z",
+    "xmin": 50.079,
+    "xmax": 63.339,
+    "ymin": 9.886,
+    "ymax": 23.756,
+    "zmin": -158.308,
+    "zmax": -156.46,
+    "clear_out_mm": 55,
+    "reason": "USB 3.0 Standard-B receptacle, 13.000 x 13.600 panel cutout centred (X=56.700, Y=16.830); shell 1.848 mm proud. USB 3.0 B overmoulded plug body is ~28-30 mm long and the cable is stiff - allow ~30 mm plug + ~25 mm bend radius. This is the single largest keep-out on the unit."
+   },
+   {
+    "name": "REAR_DC_BARREL",
+    "face": "-Z",
+    "xmin": 13.681,
+    "xmax": 24.325,
+    "ymin": 9.882,
+    "ymax": 22.151,
+    "zmin": -158.272,
+    "zmax": -156.46,
+    "clear_out_mm": 45,
+    "reason": "CUI PJ-002AH-SMT 2.1 mm DC jack, 10.400 x 12.000 panel cutout centred (X=19.000, Y=16.030); body 1.812 mm proud. Allow ~20 mm plug body + ~25 mm cable bend."
+   },
+   {
+    "name": "REAR_LED_WINDOWS (2x lightpipe)",
+    "face": "-Z",
+    "xmin": 28.007,
+    "xmax": 88.383,
+    "ymin": 13.541,
+    "ymax": 17.308,
+    "zmin": -157.791,
+    "zmax": -156.46,
+    "clear_out_mm": 5,
+    "reason": "Two 3.500 x 3.500 status-LED windows, X centres 29.900 / 86.500, Y centre 15.430; lightpipes proud to Z=-157.791. Must remain visible."
+   },
+   {
+    "name": "REAR_LABEL_OVERLAY",
+    "face": "-Z",
+    "xmin": 0.523,
+    "xmax": 116.476,
+    "ymin": 1.321,
+    "ymax": 29.934,
+    "zmin": -156.841,
+    "zmax": -156.46,
+    "clear_out_mm": 2,
+    "reason": "Printed legend overlay covers essentially the entire rear panel (0.381 mm thick). Carries the port identification - must not be covered."
+   },
+   {
+    "name": "REAR_CASE_SCREW_HEADS",
+    "face": "-Z",
+    "xmin": 3.295,
+    "xmax": 113.705,
+    "ymin": 2.4,
+    "ymax": 28.81,
+    "zmin": -158.067,
+    "zmax": -156.46,
+    "clear_out_mm": 25,
+    "reason": "Four M3x8 button heads at the corners (X 4.895/112.105, Y 4.000/27.210), 1.607 mm proud. Driver access needed for service."
+   },
+   {
+    "name": "LEFT_SIDE_SLOT_3x7",
+    "face": "-X",
+    "xmin": -2.674,
+    "xmax": -2.674,
+    "ymin": 15,
+    "ymax": 18,
+    "zmin": -15.406,
+    "zmax": -8.406,
+    "clear_out_mm": 10,
+    "reason": "Rectangular 3.000 (Y) x 7.000 (Z) through-slot in the top-cover side wall, centre (Y=16.500, Z=-11.906), near the FRONT end. Function not identified in the STEP (nothing modelled behind it) - treat as vent/service opening and keep clear."
+   },
+   {
+    "name": "RIGHT_SIDE_SLOT_3x7",
+    "face": "+X",
+    "xmin": 119.674,
+    "xmax": 119.674,
+    "ymin": 15,
+    "ymax": 18,
+    "zmin": -147,
+    "zmax": -140,
+    "clear_out_mm": 10,
+    "reason": "Rectangular 3.000 (Y) x 7.000 (Z) through-slot in the top-cover side wall, centre (Y=16.500, Z=-143.500), near the REAR end. NOT mirrored from the -X slot - the two slots are diagonally opposite. Function not identified; keep clear."
+   },
+   {
+    "name": "FOOT_1_RUBBER",
+    "face": "-Y",
+    "xmin": 5.351,
+    "xmax": 18.051,
+    "ymin": -4.766,
+    "ymax": -1.21,
+    "zmin": -26.978,
+    "zmax": -14.278,
+    "clear_out_mm": 3.556,
+    "reason": "Adhesive rubber foot, dia 12.700, 3.556 mm proud, centred (X=11.701, Z=-20.628) - EXACTLY concentric with mounting hole BOT-1. Must be peeled off for a plate to seat on Y=-1.210; if left on, the plate stands off 3.556 mm and the bore is buried."
+   },
+   {
+    "name": "FOOT_2_RUBBER",
+    "face": "-Y",
+    "xmin": 98.95,
+    "xmax": 111.65,
+    "ymin": -4.766,
+    "ymax": -1.21,
+    "zmin": -26.978,
+    "zmax": -14.278,
+    "clear_out_mm": 3.556,
+    "reason": "Adhesive rubber foot, dia 12.700, 3.556 mm proud, centred (X=105.300, Z=-20.628) - concentric with BOT-2. Must be removed."
+   },
+   {
+    "name": "FOOT_3_RUBBER",
+    "face": "-Y",
+    "xmin": 5.351,
+    "xmax": 18.051,
+    "ymin": -4.766,
+    "ymax": -1.21,
+    "zmin": -146.993,
+    "zmax": -134.293,
+    "clear_out_mm": 3.556,
+    "reason": "Adhesive rubber foot, dia 12.700, 3.556 mm proud, centred (X=11.701, Z=-140.643) - concentric with BOT-3. Must be removed."
+   },
+   {
+    "name": "FOOT_4_RUBBER",
+    "face": "-Y",
+    "xmin": 98.95,
+    "xmax": 111.65,
+    "ymin": -4.766,
+    "ymax": -1.21,
+    "zmin": -146.993,
+    "zmax": -134.293,
+    "clear_out_mm": 3.556,
+    "reason": "Adhesive rubber foot, dia 12.700, 3.556 mm proud, centred (X=105.300, Z=-140.643) - concentric with BOT-4. Must be removed."
+   },
+   {
+    "name": "TOP_STACK_RECESSES (4x)",
+    "face": "+Y",
+    "xmin": 5.33,
+    "xmax": 111.67,
+    "ymin": 31.49,
+    "ymax": 32.49,
+    "zmin": -146.99,
+    "zmax": -14.25,
+    "clear_out_mm": 0,
+    "reason": "Four 12.740 x 12.740 drawn recesses, 1.000 mm deep (flat floor 8.268 x 8.268), at X=11.700/105.300, Z=-20.620/-140.620. Recesses, not protrusions - a flat plate bridges them - but they are non-bearing area and the top cover has no fixings, so a plate here can only be clamped or bonded."
+   }
+  ],
+  "forbidden_mount_faces": [
+   {
+    "face": "+Z",
+    "why": "RF connector face. Four SMA jacks protruding 10.132 mm plus mating plugs and cable bend (40 mm keep-out), four LED windows that must stay visible, and a full-face printed label. The only fixings are the four case screws that hold the panel on - unbolting them opens the enclosure. A bracket must never land here."
+   },
+   {
+    "face": "-Z",
+    "why": "I/O face. Three SMA (40 mm keep-out), USB 3.0 Standard-B (55 mm keep-out - the deepest on the unit), DC barrel jack (45 mm), two LED windows, full-face printed label, and the four panel-retaining case screws. Absolutely no bracket contact."
+   },
+   {
+    "face": "+X",
+    "why": "No fixings whatsoever (zero holes). Wall is stepped: 119.674 above Y=8.290 and 119.420 below Y=5.340, so a flat plate only touches the upper 3314.9 mm2 band. Carries the 3.000 x 7.000 through-slot at Y[15.000,18.000] Z[-147.000,-140.000]. Attachment would have to be clamp or adhesive on 1.210 mm sheet."
+   },
+   {
+    "face": "-X",
+    "why": "Same as +X: zero fixings, stepped wall (-2.674 above Y=8.290, -2.420 below Y=5.340), and a 3.000 x 7.000 through-slot at Y[15.000,18.000] Z[-15.406,-8.406]. Note the slot is at the opposite END from the +X slot, so a symmetric side clamp fouls one of them."
+   },
+   {
+    "face": "+Y",
+    "why": "Flat and unobstructed (17198.1 mm2) but has ZERO holes - no fixings at all. It is also the removable top cover, so any load path through it is only as good as the eight case screws. Usable for a clamp/strap, never for a bolted bracket."
+   }
+  ],
+  "preferred_mount_face": {
+   "face": "-Y",
+   "bearing_area_mm2": 17576.3,
+   "why": "The only face with fixings. Flat sheet at Y=-1.210 spanning X[0.000,117.000] Z[-153.126,-2.420] (117.000 x 150.706 = 17632.6 mm2 gross, 17576.3 mm2 net of the four dia-4.191 openings). Carries the four M3 standoff bores, has no connectors, no vents, no grilles and no modelled label. Two conditions: (1) the four adhesive rubber feet (dia 12.700, 3.556 mm proud) are concentric with the four bores and MUST be peeled off before a plate can seat; (2) screw penetration is limited to 3.574 mm by the tip of the internal M3x8 PCB screw, so bracket screw length = plate thickness + 3.5 mm max."
+  },
+  "hole_pattern_summary": "Four M3 bores on the -Y (bottom) face, axis +Y, entering at Y=-1.210. Exact positions: (11.701, -20.628), (105.300, -20.628), (11.701, -140.643), (105.300, -140.643) in (X, Z). Rectangular pattern 93.599 (X) x 120.015 (Z). Pattern centre X = 58.5005 - this IS centred on the bottom pan (flat spans X 0.000..117.000, centre 58.500), so the pattern is SYMMETRIC IN X. Pattern centre Z = -80.6355, which is offset toward the -Z (rear) end: 2.863 mm from the bottom-pan centre (Z=-77.773) and 3.053 mm from the overall enclosure centre including panels and overlays (Z=-77.5825). A bracket symmetric in Z will NOT fit; a bracket symmetric in X will. Each bore is the through-bore of a PEM SOS-M3-10 self-clinching standoff clinched into the 1.210 mm bottom cover through a dia-4.191 sheet hole; the standoff's end face is flush with Y=-1.210. Bore profile from outside: dia 3.000 from Y=-1.210 to Y=+4.790 (6.000 mm), then dia 3.200 from Y=+4.790 to Y=+8.790 (standoff top / PCB seat, PCB underside at Y=8.790, PCB 1.575 thick to Y=10.365). Obstruction: the tip of the internal M3x8 button-head PCB screw sits at Y=+2.364, giving 3.574 mm of free depth from the outer face. TAPPED-vs-CLEARANCE VERDICT: tapped M3x0.5, high confidence - see unknowns for the exact evidence chain and the one residual risk. Secondary pattern: 4+4 dia-3.200 case-screw clearance holes at X=4.895/112.105, Y=4.000/27.210 on the +Z and -Z panels, feeding M3-tapped PEM AETKS-M3-2 corner standoffs (10.964 mm total depth from the outer face, thread starting 5.436 mm in) - but both those faces are connector faces and the screws retain the panels, so they are not mounting provisions.",
+  "unknowns": [
+   "TAPPED VERDICT AND ITS EVIDENCE. The four -Y bores are M3x0.5 TAPPED, not clearance. Evidence, all from this STEP: (1) the vendor's own BOM name for the insert is PEM_AETKS... no - it is 'SOS_M3-10', i.e. PEM self-clinching standoff, thread code M3, length 10 mm; PEM designates UNTHREADED thru-hole standoffs by hole-size code (SOA-x.x-x), never by an 'M3' code. (2) The bore is modelled at exactly 3.000 mm = M3 nominal/major. The same file uses 3.200 mm for every genuine M3 clearance hole in it - the PCB holes, both panels' case-screw holes, and the upper 4.000 mm of this very standoff - so 3.000 is demonstrably not this author's clearance size. (3) An M3x8 button-head screw with a 3.000 mm shank is modelled engaged in that same 3.000 mm bore; a 3.000 bore cannot retain a 3.000 screw unless it is tapped. (4) The bore is open through the standoff's end face at Y=-1.210, i.e. reachable from outside.",
+   "WHAT IS NOT PROVEN: the STEP contains no thread helix and no AP242 semantic PMI, so 'tapped' is an inference from part identity plus diameter convention, not from modelled thread form. Note also that this file's OTHER tapped feature (PEM AETKS-M3-2 in the panel corners) is modelled at 2.459 mm = exact M3x0.5 MINOR diameter, a different convention from the 3.000 used here - the two PEM models simply came from different sources.",
+   "RESIDUAL RISK - PEM catalogues type 'SOS' as a BLIND-threaded standoff (closed at one end). This model shows the bore open clean through to the outer face at Y=-1.210. If the production part is genuinely blind-closed at the clinch end, all four bottom bores would be inaccessible from outside and the whole -Y mounting scheme collapses. VERIFY ON HARDWARE before cutting a plate: run an M3 screw into one bore from underneath, and confirm engagement depth with a depth gauge. This is the single check that would move confidence from high to certain.",
+   "Tapped length: the dia-3.000 section runs 6.000 mm (Y=-1.210 to +4.790). Whether the real tap runs that full 6.000 mm from the outer end, or only part of it, is not determinable from the geometry. Use 3.5 mm design penetration regardless, since the PCB screw tip at Y=+2.364 is the hard stop.",
+   "Clamp load / torque rating of a clinched PEM SOS in 1.210 mm sheet is not determinable from geometry. If this is a vibration/shock mount, get the PEM pushout and torque-out figures for SOS-M3 in 1.2 mm material.",
+   "Function of the two 3.000 x 7.000 side-wall slots is unidentified - nothing is modelled behind either of them. They may be vents, service slots or tooling features. Reported as must-stay-clear per the brief; confirm with the NI/Ettus mechanical drawing if a side bracket is ever considered.",
+   "The four 12.740 x 12.740 x 1.000 deep recesses on +Y are INFERRED to be foot-nesting stacking dimples - they are exactly concentric with the four rubber feet on the opposite face - but nothing in the STEP labels them.",
+   "Production units carry a serial-number / regulatory label on the bottom cover. It is NOT modelled in this STEP, so its footprint and thickness on the -Y face are unknown. A full-face bearing plate on -Y will cover it.",
+   "clear_out_mm values for the SMA / USB / DC keep-outs are engineering allowances I set: connector protrusion measured from the STEP, plus typical mating-plug body length and cable minimum bend radius. They are NOT measured from the file. Tighten them once the actual cable assemblies are chosen.",
+   "Only 2 of the 4 front SMA jacks and 2 of the 3 rear jacks are modelled as named CONN_SMA_JOHNSON_142-0701-871 bodies; the remaining three are represented within the PCB assembly. All seven share identical 7.000 x 7.000 panel cutouts and all reach the same protrusion planes (Z=+11.046 front, Z=-166.602 rear), so the keep-out banks are still valid.",
+   "Overall part bbox given (X -2.674..119.674, Y -4.766..32.490, Z -166.602..11.046) INCLUDES the rubber feet (-Y) and the protruding SMA bodies (both Z ends). The bare enclosure envelope is X -2.674..119.674, Y -1.210..32.490, Z -156.841..1.676."
+  ],
+  "confidence": "high"
+ },
+ "te121024010": {
+  "confidence": "high",
+  "key": "te121024010",
+  "part_frame_bbox": {
+   "xmin": -79.346,
+   "xmax": 80.105,
+   "ymin": -118.883,
+   "ymax": 63.441,
+   "zmin": -145.055,
+   "zmax": 159.62
+  },
+  "hole_pattern_summary": "6 x dia 5.000 through-clearance holes in the 3.000 mm flange plate. Axis = Y. Entry (wall-contact) plane Y = -25.927, exit Y = -22.927. Pattern is 2 columns x 3 rows: X = -70.642 and +71.358 (pitch 142.000, pattern centre X = +0.358); Z = -135.720, +7.278, +150.280 (pitch 143.000 + 143.000, overall 286.000, pattern centre Z = +7.280). Hole centre to flange edge: 5.495 (-X) / 5.505 (+X), 6.964 (-Z) / 6.960 (+Z). Hole centre to the nominal 125 x 232 cutout edge works out to exactly 8.500 mm in X and exactly 27.000 mm in Z, which proves the datasheet cutout is centred on the hole pattern at X = +0.358, Z = +7.280. No other fastener-sized holes exist anywhere on the part: a sweep of every cylindrical face with dia 2..12 found only fan-hub, wire-guard, side-panel-latch and drain-slot features, none of them usable fixings.",
+  "faces": [
+   {
+    "face": "+X",
+    "plane_coord": 80.105,
+    "contents": "Exterior (ambient-side) shroud side panel. Nominal sheet skin at X = +78.865, only 1.52 mm thick, spanning Y -22.630..+62.460, Z -143.530..+158.095. Four 7.24 x 6.00 x 6.00 tabs project outboard to X = +80.105, at Y 12.470..18.470 (Z -140.435..-134.435 and Z 149.000..155.000) and Y 52.830..58.830 (Z -75.093..-69.093 and Z 83.657..89.657). Panel also carries dia 11.125 / 6.000 / 5.080 latch-style cutouts at X = +78.103 and +79.115. No vents, no fixings, no flat land. Panel starts at Y = -22.630, i.e. entirely on the ambient side of the wall.",
+    "is_flat_mountable": false
+   },
+   {
+    "face": "-X",
+    "plane_coord": -79.346,
+    "contents": "Mirror of +X. Sheet skin at X = -78.107 (1.52 mm), four 7.24 x 6.00 x 6.00 tabs projecting to X = -79.346 at the same Y/Z stations, latch cutouts at X = -77.345 and -78.357. Nominal product width is the skin-to-skin span X -78.107..+78.865 = 156.972 mm (= 6.18 in datasheet); the tabs add 1.24 mm each side. No vents, no fixings.",
+    "is_flat_mountable": false
+   },
+   {
+    "face": "+Y",
+    "plane_coord": 63.441,
+    "contents": "Exterior ambient-fan discharge. Wire finger guard = 8 concentric rings dia 118 / 107 / 92 / 77 / 62 / 47 / 32 / 17, each 2.00 mm thick at Y 58.751..60.751, plus 2 spoke bars 6.00 mm thick at Y 56.751..62.751. Guard circle centred X = +0.379, Z = +7.282, dia 118.0. Shroud rim reaches Y = +63.441. Fan body behind it: X -59.621..+60.379, Y 18.576..56.576, Z -52.718..+67.282 (dia 140 impeller boss Y 23.326..51.826).",
+    "is_flat_mountable": false
+   },
+   {
+    "face": "-Y",
+    "plane_coord": -118.883,
+    "contents": "Interior (enclosure-side) fan INTAKE, the deepest interior surface. Wire finger guard = 8 concentric rings dia 118 / 107 / 92 / 77 / 62 / 47 / 32 / 17, each 2.00 mm thick at Y -116.883..-114.883, plus 2 spoke bars 6.00 mm thick at Y -118.883..-112.883. Guard circle centred X = -0.002, Z = +7.284, dia 118.0, set in a 120.00 x 120.00 shroud square X -60.002..+59.998, Z -52.716..+67.284 (Y -112.708..-80.958). Fan impeller X -58.023..+58.011, Y -112.958..-84.958, Z -50.736..+65.057. Also on this side: an unidentified 72.00 x 17.00 x 22.00 box (X -36.012..+35.988, Y -97.958..-80.958, Z -91.094..-69.094) carrying two 7.8 mm wide Y-axis slots at X -33.50..-28.53 and +28.51..+33.47. Raster shows the guard is ~40 percent open area. NOTE the true mounting interface is not this face but the flange plate wall-contact plane at Y = -25.927.",
+    "flat_area_mm2": 0,
+    "is_flat_mountable": false
+   },
+   {
+    "face": "+Z",
+    "plane_coord": 159.62,
+    "contents": "Two distinct planes. (1) Exterior shroud end cap at Z = +159.620, X -76.583..+77.341, carrying an ambient louver band at approximately Y -16..+28 (about 50 percent open); the strip Y -22.63..-17 is closed sheet, and there is no end-cap material above about Y = +29. (2) Set back at Z = +122.406 is the interior cold-module top end face (X -60.000..+59.888, Y -71.977..-22.927), which carries the TOP DISCHARGE louver band: 37 straight slots at exactly 3.000 mm pitch across X -58.5..+58.5, spanning Y -71.98..-52.0 (about 20 mm tall). Plus two small edge slots at X -56.5..-53.5 and +53.5..+56.5, Y -49.5..-44.0. Everything Y -51.5..-22.93 on this end face is solid metal.",
+    "is_flat_mountable": false
+   },
+   {
+    "face": "-Z",
+    "plane_coord": -145.055,
+    "contents": "Mirror of +Z. (1) Exterior shroud end cap at Z = -145.055, X -76.583..+77.341, ambient louver band approximately Y -16..+28. (2) Set back at Z = -107.718 is the interior cold-module bottom end face (X -60.000..+60.000, Y -71.977..-22.927) carrying the BOTTOM DISCHARGE louver band: 37 slots at 3.000 mm pitch across X -58.5..+58.5, Y -71.98..-52.0, identical to the top. Plus the same pair of small edge slots at X -56.5..-53.5 and +53.5..+56.5, Y -49.5..-44.0.",
+    "is_flat_mountable": false
+   }
+  ],
+  "mounting_holes": [
+   {
+    "id": "FL1",
+    "face": "-Y flange wall-contact plane Y=-25.927",
+    "dia_mm": 5,
+    "kind": "through_clearance",
+    "thread": "none - clearance",
+    "x": -70.642,
+    "y": -25.927,
+    "z": -135.72,
+    "axis": "Y",
+    "usable_depth_mm": 3,
+    "max_screw_penetration_mm": 11.991,
+    "note": "Bottom-left. Through the 3.000 mm flange plate (Y -25.927 to -22.927). Ray cast along +Y on the hole axis is clear from Y=-25.927 to Y=-13.936, where it strikes an internal sheet of the outer body: 11.991 mm maximum penetration measured from the wall-contact plane, i.e. 8.991 mm of free axial space above the flange top face. Modelled dia is 5.000; the nVent datasheet calls dia 6 - drill the plate to the datasheet, not to this model. Laterally the hole sits 3.995 mm inboard of the main body edge (X=-74.637) and 5.94 mm inboard of the shroud side panel inner face (X=-76.583)."
+   },
+   {
+    "id": "FL2",
+    "face": "-Y flange wall-contact plane Y=-25.927",
+    "dia_mm": 5,
+    "kind": "through_clearance",
+    "thread": "none - clearance",
+    "x": 71.358,
+    "y": -25.927,
+    "z": -135.72,
+    "axis": "Y",
+    "usable_depth_mm": 3,
+    "max_screw_penetration_mm": 11.991,
+    "note": "Bottom-right. Same as FL1. First obstruction along +Y at Y=-13.936. Laterally 4.005 mm inboard of the main body edge (X=+75.363) and 5.98 mm inboard of the shroud side panel inner face (X=+77.341)."
+   },
+   {
+    "id": "FL3",
+    "face": "-Y flange wall-contact plane Y=-25.927",
+    "dia_mm": 5,
+    "kind": "through_clearance",
+    "thread": "none - clearance",
+    "x": -70.642,
+    "y": -25.927,
+    "z": 7.278,
+    "axis": "Y",
+    "usable_depth_mm": 3,
+    "max_screw_penetration_mm": 11.989,
+    "note": "Middle-left. First obstruction along +Y is a thin 1.01 mm sheet at Y -13.938..-12.927 (part of the hot-side cover, solid spanning Z -92.718..+107.282); the bore is clear again from Y=-12.927 to Y=+17.052. Practical max penetration from the wall plane = 11.989 mm."
+   },
+   {
+    "id": "FL4",
+    "face": "-Y flange wall-contact plane Y=-25.927",
+    "dia_mm": 5,
+    "kind": "through_clearance",
+    "thread": "none - clearance",
+    "x": 71.358,
+    "y": -25.927,
+    "z": 7.278,
+    "axis": "Y",
+    "usable_depth_mm": 3,
+    "max_screw_penetration_mm": 11.989,
+    "note": "Middle-right. Same as FL3: 1.01 mm sheet at Y -13.938..-12.927, clear again to Y=+17.052."
+   },
+   {
+    "id": "FL5",
+    "face": "-Y flange wall-contact plane Y=-25.927",
+    "dia_mm": 5,
+    "kind": "through_clearance",
+    "thread": "none - clearance",
+    "x": -70.642,
+    "y": -25.927,
+    "z": 150.28,
+    "axis": "Y",
+    "usable_depth_mm": 3,
+    "max_screw_penetration_mm": 11.991,
+    "note": "Top-left. First obstruction along +Y at Y=-13.936."
+   },
+   {
+    "id": "FL6",
+    "face": "-Y flange wall-contact plane Y=-25.927",
+    "dia_mm": 5,
+    "kind": "through_clearance",
+    "thread": "none - clearance",
+    "x": 71.358,
+    "y": -25.927,
+    "z": 150.28,
+    "axis": "Y",
+    "usable_depth_mm": 3,
+    "max_screw_penetration_mm": 11.991,
+    "note": "Top-right. First obstruction along +Y at Y=-13.936."
+   }
+  ],
+  "connector_keepouts": [
+   {
+    "name": "interior_fan_intake_finger_guard",
+    "face": "-Y",
+    "xmin": -60.002,
+    "xmax": 59.998,
+    "ymin": -118.883,
+    "ymax": -112.883,
+    "zmin": -52.716,
+    "zmax": 67.284,
+    "clear_out_mm": 50,
+    "reason": "Interior axial fan intake behind a dia-118.0 wire finger guard centred X=-0.002, Z=+7.284. This is the deepest interior surface of the whole part. Nothing may be placed in front of it. The 50 mm clear_out is an engineering airflow allowance - it is NOT read from the STEP and NOT from the datasheet."
+   },
+   {
+    "name": "interior_top_discharge_louver_band",
+    "face": "+Z",
+    "xmin": -59,
+    "xmax": 59,
+    "ymin": -71.977,
+    "ymax": -51.98,
+    "zmin": 122.406,
+    "zmax": 122.406,
+    "clear_out_mm": 50,
+    "reason": "37 straight through-slots at exactly 3.000 mm pitch in the interior cold-module top end face at Z=+122.406, open X -58.5..+58.5 (raster at 0.5 mm; band edges good to +/-0.5 mm), band height about 20.0 mm from Y=-71.977 up to Y=-52.0. Discharge air path - equipment must not sit above it. clear_out is an airflow allowance, not measured."
+   },
+   {
+    "name": "interior_bottom_discharge_louver_band",
+    "face": "-Z",
+    "xmin": -59,
+    "xmax": 59,
+    "ymin": -71.977,
+    "ymax": -51.98,
+    "zmin": -107.718,
+    "zmax": -107.718,
+    "clear_out_mm": 50,
+    "reason": "Identical to the top band, in the interior cold-module bottom end face at Z=-107.718: 37 slots at 3.000 mm pitch, open X -58.5..+58.5, Y -71.977..-52.0. Discharge air path. clear_out is an airflow allowance, not measured."
+   },
+   {
+    "name": "interior_top_edge_slots",
+    "face": "+Z",
+    "xmin": -56.5,
+    "xmax": 56.5,
+    "ymin": -49.5,
+    "ymax": -44,
+    "zmin": 122.406,
+    "zmax": 122.406,
+    "clear_out_mm": 10,
+    "reason": "Two small openings near each X edge of the top end face, actually at X -56.5..-53.5 and X +53.5..+56.5 only (the centre of this band is solid). Bounding rectangle given is conservative. Purpose not determinable - possibly drain or assembly access."
+   },
+   {
+    "name": "interior_bottom_edge_slots",
+    "face": "-Z",
+    "xmin": -56.5,
+    "xmax": 56.5,
+    "ymin": -49.5,
+    "ymax": -44,
+    "zmin": -107.718,
+    "zmax": -107.718,
+    "clear_out_mm": 10,
+    "reason": "Mirror of the top edge slots, at X -56.5..-53.5 and X +53.5..+56.5 only. Bounding rectangle is conservative."
+   },
+   {
+    "name": "interior_unidentified_box_probable_electrical",
+    "face": "-Y",
+    "xmin": -36.012,
+    "xmax": 35.988,
+    "ymin": -97.958,
+    "ymax": -80.958,
+    "zmin": -91.094,
+    "zmax": -69.094,
+    "clear_out_mm": 25,
+    "reason": "72.00 x 17.00 x 22.00 box protruding in -Y from the interior fan shroud, below the fan. Carries two 7.8 mm wide Y-axis slots at X -33.50..-28.53 and X +28.51..+33.47 (Y -95.958..-85.958). Most likely the electrical/terminal or controller box, or a condensate drain, but the STEP carries no label - treat as a service keep-out. Already inside the interior envelope, so it does not enlarge the prism."
+   },
+   {
+    "name": "exterior_ambient_fan_guard",
+    "face": "+Y",
+    "xmin": -59.621,
+    "xmax": 60.379,
+    "ymin": 56.751,
+    "ymax": 63.441,
+    "zmin": -52.718,
+    "zmax": 67.282,
+    "clear_out_mm": 75,
+    "reason": "Ambient-side fan discharge behind a dia-118.0 wire finger guard centred X=+0.379, Z=+7.282. Outside the enclosure wall. clear_out is an airflow allowance, not measured."
+   },
+   {
+    "name": "exterior_top_ambient_louvers",
+    "face": "+Z",
+    "xmin": -76.583,
+    "xmax": 77.341,
+    "ymin": -16,
+    "ymax": 28,
+    "zmin": 159.62,
+    "zmax": 159.62,
+    "clear_out_mm": 50,
+    "reason": "Louvered band in the exterior shroud top end cap, about 50 percent open. Y bounds are from a 2 mm raster so are good only to about +/-2 mm; the strip Y -22.63..-17 is closed sheet and there is no end-cap material above about Y=+29. Outside the enclosure wall."
+   },
+   {
+    "name": "exterior_bottom_ambient_louvers",
+    "face": "-Z",
+    "xmin": -76.583,
+    "xmax": 77.341,
+    "ymin": -16,
+    "ymax": 28,
+    "zmin": -145.055,
+    "zmax": -145.055,
+    "clear_out_mm": 50,
+    "reason": "Mirror of the exterior top louvers, in the bottom end cap at Z=-145.055. Y bounds good to about +/-2 mm. Outside the enclosure wall."
+   }
+  ],
+  "forbidden_mount_faces": [
+   {
+    "face": "-Y (Y = -118.883)",
+    "why": "Interior fan INTAKE. The extreme -Y surface is only the 6 mm wire guard spokes over a dia-118 open intake; there is no structure and no flat land. Blocking it kills the cooler."
+   },
+   {
+    "face": "+Y (Y = +63.441)",
+    "why": "Exterior ambient fan discharge behind a dia-118 wire guard. No flat land, no fixings, and it is outside the enclosure anyway."
+   },
+   {
+    "face": "+Z (Z = +159.620 exterior cap / Z = +122.406 interior end)",
+    "why": "Both planes are air paths. The interior end face at Z=+122.406 carries the top discharge louver band (37 slots, Y -71.98..-52.0); the exterior cap at Z=+159.620 is a louvered ambient band. No fixings on either."
+   },
+   {
+    "face": "-Z (Z = -145.055 exterior cap / Z = -107.718 interior end)",
+    "why": "Mirror of +Z: bottom discharge louver band on the interior end face and louvered ambient band on the exterior cap. No fixings."
+   },
+   {
+    "face": "+X (X = +80.105 / skin +78.865)",
+    "why": "1.52 mm sheet-metal shroud side panel standing off the body, punched with latch cutouts and carrying four 6 x 6 x 7.24 tabs. Not load bearing, no fixings, and it lies entirely on the ambient side of the wall (panel starts at Y = -22.630)."
+   },
+   {
+    "face": "-X (X = -79.346 / skin -78.107)",
+    "why": "Mirror of +X. Same 1.52 mm panel, same latch cutouts and tabs, same reasons."
+   },
+   {
+    "face": "interior module sides X = +/-61.508 and +/-60.000",
+    "why": "These are closed sheet, but they sit inside the wall cutout with less than 1 mm of radial clearance, so nothing can be attached to them."
+   }
+  ],
+  "preferred_mount_face": {
+   "face": "-Y flange plate wall-contact plane, Y = -25.927",
+   "bearing_area_mm2": 25501.8,
+   "why": "It is the only mounting interface on the part and the only flat, unobstructed land with fixings. Outline is a sharp rectangle with no corner radii (four straight edges): X -76.137..+76.863 (153.000 mm) by Z -142.684..+157.240 (299.924 mm), centred X = +0.363, Z = +7.278. Flange plate is 3.000 mm thick (Y -25.927 to -22.927). Gross outline area 45,888.4 mm2; the modelled contact face carries 25,501.8 mm2 of metal after subtracting the flange plate's own 102.200 x 198.324 opening (X -50.737..+51.463, Z -91.884..+106.440, 20,268.8 mm2) and the six dia-5 holes (117.8 mm2). If the wall cutout is the datasheet 125 x 232 centred on the hole pattern (X -62.142..+62.858, Z -108.720..+123.280), the residual gasket bearing band is 16,770.6 mm2, 13.995 mm wide on -X, 14.005 mm on +X, 33.964 mm on -Z and 33.960 mm on +Z, and every hole keeps 6.0 mm of metal between the dia-5 hole edge and the cutout edge (5.5 mm if drilled dia 6). Six dia-5.000 through-clearance holes lie in this face."
+  },
+  "unknowns": [
+   "WALL CUTOUT CONFIRMED, WITH THE MARGIN: everything at Y < -25.927 that must pass through the wall projects onto XZ as the union of two sharp-cornered rectangles - the cold-module blocks at X -60.000..+60.000, Z -107.718..+122.406 (120.000 x 230.124) and the louvered cover at X -61.508..+61.508, Z -92.794..+107.358 (123.016 x 200.152). Union bounding rectangle = 123.016 (X) x 230.124 (Z), centred X = 0.000, Z = +7.344. All corners are square (all section outer wires are 4 straight lines, no fillets). Against the datasheet 125 x 232 cutout centred on the hole pattern (X -62.142..+62.858, Z -108.720..+123.280) the module clears by 0.634 mm on -X, 1.350 mm on +X, 1.002 mm on -Z and 0.874 mm on +Z. Total slack is only 1.984 mm in X and 1.876 mm in Z, so cut the plate on the hole pattern centre, not by eye.",
+   "MODEL ECCENTRICITY: the hole-pattern centre is X = +0.358, the flange outline centre is X = +0.363, but the through-wall module centre is X = 0.000 - a 0.358 mm offset baked into the vendor model. In Z the numbers are +7.280 (holes), +7.278 (flange) and +7.344 (module), a 0.064 mm offset. Worst-case single-side clearance is therefore 0.634 mm; if you would rather split it evenly, centre the cutout on the module (0.992 mm per side in X) and accept the hole pattern being 0.358 mm off-centre in the opening.",
+   "Modelled flange hole diameter is 5.000 mm; the nVent datasheet calls dia 6. Drill the plate to the datasheet, not to the STEP. All positions above are unaffected.",
+   "VENDOR MODEL ARTIFACT: the flange plate is modelled with a 102.200 x 198.324 central opening, but the 120 x 230.1 cold-module blocks interpenetrate that plate (solid 1 spans Y -41.977..-22.927, i.e. 3 mm above the flange contact plane). The model is a stack of overlapping simplified prisms, not a watertight assembly. Do NOT use 102.200 x 198.324 as the wall cutout.",
+   "All clear_out_mm values are engineering airflow/service allowances that I chose; they are not present in the STEP and I did not consult the datasheet. Get the real required clearances from nVent Spec-00580 (present at C:/Users/KyleKassen/Documents/Projects/ADRS/CAD/Hoffman/Spec-00580.pdf) before committing.",
+   "No power cord, cable gland, terminal block, condensate drain fitting or thermostat is modelled anywhere in the STEP. The 72 x 17 x 22 box at X -36.012..+35.988, Y -97.958..-80.958, Z -91.094..-69.094 (with two 7.8 mm Y-axis slots) is the only candidate and its function is not determinable from geometry. Whatever the real electrical entry is, it is not in this file, so the interior keep-out prism may need to grow for a cord.",
+   "No gasket body exists in the STEP. Whatever gasket nVent supplies will offset the flange contact plane in -Y by its compressed thickness; the Y = -25.927 plane is bare metal.",
+   "Enclosure wall thickness is unknown, so the length of the module that actually protrudes into the enclosure is 92.956 mm minus the wall thickness (interior envelope Y -118.883..-25.927).",
+   "Louver band edges are raster-derived. The +/-Z discharge bands are good to about +/-0.5 mm (0.5 mm raster) - I read the band as Y -71.977 to about -52.0, and the underlying block runs Y -71.977..-41.977, so the band is most likely exactly Y -71.977..-51.977 (20.000 mm). The exterior end-cap louver Y bounds came from a 2 mm raster and are good only to about +/-2 mm. Slot pitch on the discharge bands is exactly 3.000 mm; individual slot width was not resolved below the 0.5 mm sample.",
+   "Lateral (radial) room around the flange holes on the +Y side was bounded but not swept: the main body edge is at X = -74.637 / +75.363 and the shroud side-panel inner faces at X = -76.583 / +77.341, both starting at Y = -22.630. A nut or washer up to roughly dia 11 should fit in the 8.991 mm deep pocket above the flange, but I did not verify it with a swept solid.",
+   "The eight 7.24 x 6.00 x 6.00 side tabs (X -79.346..-72.107 and +72.865..+80.105) contain no holes. Whether they are latch features, shipping tabs or something else is unknown; they are not usable fixings."
+  ]
+ },
+ "solidrun_bedrock_v3000": {
+  "key": "solidrun_bedrock_v3000",
+  "part_frame_bbox": {
+   "xmin": -36.5,
+   "xmax": 36.5,
+   "ymin": -67.957,
+   "ymax": 65,
+   "zmin": 0,
+   "zmax": 170
+  },
+  "faces": [
+   {
+    "face": "+X",
+    "plane_coord": 36.5,
+    "contents": "60W FIN BANK. Not a face - 7 fin-tip flats only, each 0.39-0.40 mm wide x 146 mm long (z 7.0..153.0), at Y = 0.00, +/-10.15, +/-20.30, +/-30.52. Between and outboard of them are R0.9 rounded fin tips and open air channels. No holes, no fixings. Tile variant (|X|=14.5) is completely different - see mounting_holes.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 407.3
+   },
+   {
+    "face": "-X",
+    "plane_coord": -36.5,
+    "contents": "60W FIN BANK. Mirror-identical to +X: 7 fin-tip flats 0.39-0.40 mm wide x 146 mm (z 7.0..153.0) at Y = 0.00, +/-10.15, +/-20.30, +/-30.52. No holes, no fixings.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 407.3
+   },
+   {
+    "face": "+Y",
+    "plane_coord": 65,
+    "contents": "FLAT BACK WALL. Single continuous plane, X -10.00..+10.00, Z 1.00..159.00 (20 x 158 mm). Zero connectors, zero vents, zero labels. Only features are the 2x M3 blind tapped holes on the X=0 centreline at Z=50.0 and Z=110.0. Surface rolls away outboard of |X|=10 (edge blend, material still present to |X|~13 at Y=64.9).",
+    "is_flat_mountable": true,
+    "flat_area_mm2": 3140.8
+   },
+   {
+    "face": "-Y",
+    "plane_coord": -65,
+    "contents": "I/O PANEL. Nominal flat is X -10..+10, Z 1..159 (3160 mm2) but only 1486.9 mm2 is solid - the rest is connector windows spanning Z=4.4 to Z=153.3. Contains 4x stacked RJ45-class jacks, a 62 mm tall main I/O block, two recessed ports and one module that protrudes 2.957 mm PROUD of the face (to Y=-67.957). Plus 7 panel screw heads standing 0.292 mm proud at X=-8.0.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 1486.9
+   },
+   {
+    "face": "+Z",
+    "plane_coord": 160,
+    "contents": "TOP END CAP. Flat land X -29.5..+29.5, Y -64.0..+64.0 but occupied: 4x SMA antenna bulkheads OD 10.2 mm standing from Z=160 to Z=170 (X centre 0.85; Y centres 48.587, 23.587, -1.413, -26.413, exact 25.0 mm pitch); a recessed DC power/GPIO connector in a well (body X -6.079..4.571, Y -51.856..-33.846, top flush at Z=160.005, plate opening X -3.25..+4.75); an aux connector protruding 1.582 mm to Z=161.582 (X -8.853..-0.153, Y -19.146..-8.846); and 12x d2.0 x 2.0 mm deep connector-retention screw holes at Z 158..160.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 3718.8
+   },
+   {
+    "face": "-Z",
+    "plane_coord": 0,
+    "contents": "BOTTOM END CAP. Largest single flat on the part: coplanar material at Z=0 spanning X -29.5..+29.5, Y -64.0..+64.0 (fin roots and core all terminate flush). One open M4x0.7 blind tapped hole at (X=+6.0, Y=0.0) 8.090 mm deep. Its twin at (X=-6.0, Y=0.0) is occupied by an installed counterbored screw. Small recessed pocket group near X -8..0: d7.0 pocket at (0, 34.0) z 1.5..6.7, 4x d3.0 at (-5.0/-3.5, 8.3/20.33) z 1.5..4.0, 2x d3.0 at (-6.0, 11.3/17.33) z 0..1.5.",
+    "is_flat_mountable": true,
+    "flat_area_mm2": 4617.2
+   }
+  ],
+  "mounting_holes": [
+   {
+    "id": "M3_backwall_Z50",
+    "face": "+Y",
+    "dia_mm": 3,
+    "kind": "blind_tapped",
+    "thread": "M3x0.5 (inferred: modelled major 3.086 / minor 2.529)",
+    "x": 0,
+    "y": 65,
+    "z": 50,
+    "axis": "Y",
+    "usable_depth_mm": 3,
+    "max_screw_penetration_mm": 3,
+    "note": "CONFIRMED, but SHALLOWER than the 3.5-4 mm you assumed. Entry at Y=65.000. Plain lead-in Y=65.000..64.515 (0.485 mm), modelled thread Y=64.515..62.000 (2.515 mm of engagement), flat hole bottom at Y=62.000. Total depth from face = 3.000 mm. Only 1.0 mm of wall remains behind the bottom (solid Y 62.0..61.0, internal cavity begins at Y~60.9), so absolute limit even if re-drilled is 4.0 mm. A screw protruding >3.0 mm past the bracket will bottom out and jack the bracket off the face."
+   },
+   {
+    "id": "M3_backwall_Z110",
+    "face": "+Y",
+    "dia_mm": 3,
+    "kind": "blind_tapped",
+    "thread": "M3x0.5 (inferred: modelled major 3.086 / minor 2.529)",
+    "x": 0,
+    "y": 65,
+    "z": 110,
+    "axis": "Y",
+    "usable_depth_mm": 3,
+    "max_screw_penetration_mm": 3,
+    "note": "CONFIRMED. Geometrically identical to M3_backwall_Z50: entry Y=65.000, thread Y=64.515..62.000, bottom Y=62.000, 1.0 mm wall behind. Pair spacing along Z is exactly 60.000 mm, both on X=0."
+   },
+   {
+    "id": "M4_bottom_open",
+    "face": "-Z",
+    "dia_mm": 4,
+    "kind": "blind_tapped",
+    "thread": "M4x0.7 (inferred: modelled major 4.109 / minor 3.332)",
+    "x": 6,
+    "y": 0,
+    "z": 0,
+    "axis": "Z",
+    "usable_depth_mm": 8.09,
+    "max_screw_penetration_mm": 8.09,
+    "note": "NEW FIXING - not in your brief, and it is real. Full 360 deg thread faces from Z=0.000 to Z=8.090, verified fully enclosed by material (ring probe at r=2.6 solid all round at Z=0.3 and Z=4.0). Axial probe void 0..8.3, solid from 9.0. Present identically in all three chassis variants. Caveat: this is almost certainly a vendor assembly-screw location (its mirror twin at X=-6 already has a screw fitted) - confirm with SolidRun before commandeering it. On its own it is a single centreline point, not a pattern."
+   },
+   {
+    "id": "M4_bottom_occupied",
+    "face": "-Z",
+    "dia_mm": 4,
+    "kind": "unusable",
+    "thread": "M4 (occupied)",
+    "x": -6,
+    "y": 0,
+    "z": 0,
+    "axis": "Z",
+    "usable_depth_mm": 0,
+    "max_screw_penetration_mm": 0,
+    "note": "OCCUPIED. Counterbore (d5.8-6.0) Z=0..2.5 with an installed screw shank d3.11 modelled Z=1.246..5.943. Probe along the axis: void 0..0.5, solid 1.2..6.0 (the screw), void 7..8, solid 8.6+. Do not use."
+   },
+   {
+    "id": "TILE_M4_Y-60_Z10",
+    "face": "+X / -X (Tile chassis only, |X|=14.5)",
+    "dia_mm": 4,
+    "kind": "through_clearance",
+    "thread": "M4x0.7 tapped both ends (major 4.11 / minor 3.332)",
+    "x": 14.5,
+    "y": -60,
+    "z": 10,
+    "axis": "X",
+    "usable_depth_mm": 3.5,
+    "max_screw_penetration_mm": 3.5,
+    "note": "TILE VARIANT ONLY - does NOT exist on the 30W or 60W chassis. Tapped from BOTH side faces, so it is the same 6 bores seen from +X and from -X, not 6 per side. Verified true 360 deg bore (ring probe at r=2.6 fully enclosed at |X|=13, axis void from X=-14.49 to +14.49). Entry at |X|=14.500, 0.584 mm plain lead-in, M4 thread |X| 13.916..11.000 = 2.916 mm engagement per side, then the screw breaks into the open electronics bay. Do not exceed 3.5 mm penetration from either face."
+   },
+   {
+    "id": "TILE_M4_Y+60_Z10",
+    "face": "+X / -X (Tile chassis only, |X|=14.5)",
+    "dia_mm": 4,
+    "kind": "through_clearance",
+    "thread": "M4x0.7 tapped both ends",
+    "x": 14.5,
+    "y": 60,
+    "z": 10,
+    "axis": "X",
+    "usable_depth_mm": 3.5,
+    "max_screw_penetration_mm": 3.5,
+    "note": "Tile variant only. Same construction as TILE_M4_Y-60_Z10: entry |X|=14.500, thread |X| 13.916..11.000 (2.916 mm), open cavity beyond |X|=11.0."
+   },
+   {
+    "id": "TILE_M4_Y0_Z40",
+    "face": "+X / -X (Tile chassis only, |X|=14.5)",
+    "dia_mm": 4,
+    "kind": "through_clearance",
+    "thread": "M4x0.7 tapped both ends",
+    "x": 14.5,
+    "y": 0,
+    "z": 40,
+    "axis": "X",
+    "usable_depth_mm": 3.5,
+    "max_screw_penetration_mm": 3.5,
+    "note": "Tile variant only. Thread |X| 13.916..11.000 both sides."
+   },
+   {
+    "id": "TILE_M4_Y0_Z110",
+    "face": "+X / -X (Tile chassis only, |X|=14.5)",
+    "dia_mm": 4,
+    "kind": "through_clearance",
+    "thread": "M4x0.7 tapped both ends",
+    "x": 14.5,
+    "y": 0,
+    "z": 110,
+    "axis": "X",
+    "usable_depth_mm": 3.5,
+    "max_screw_penetration_mm": 3.5,
+    "note": "Tile variant only. Per-face thread spans measured directly on this hole: minor-dia faces run X -13.916..-11.000 and +11.000..+13.916; major-dia faces the same. 22 mm of open cavity in between."
+   },
+   {
+    "id": "TILE_M4_Y-50_Z150",
+    "face": "+X / -X (Tile chassis only, |X|=14.5)",
+    "dia_mm": 4,
+    "kind": "through_clearance",
+    "thread": "M4x0.7 tapped both ends",
+    "x": 14.5,
+    "y": -50,
+    "z": 150,
+    "axis": "X",
+    "usable_depth_mm": 3.5,
+    "max_screw_penetration_mm": 3.5,
+    "note": "Tile variant only. Thread |X| 13.916..11.000 both sides."
+   },
+   {
+    "id": "TILE_M4_Y+50_Z150",
+    "face": "+X / -X (Tile chassis only, |X|=14.5)",
+    "dia_mm": 4,
+    "kind": "through_clearance",
+    "thread": "M4x0.7 tapped both ends",
+    "x": 14.5,
+    "y": 50,
+    "z": 150,
+    "axis": "X",
+    "usable_depth_mm": 3.5,
+    "max_screw_penetration_mm": 3.5,
+    "note": "Tile variant only. Thread |X| 13.916..11.000 both sides. NOTE the Tile side faces are large clean flats: X=+/-14.5, Y -64.49..64.49, Z 0.5..159.5, 20410.1 mm2 each, no other features."
+   },
+   {
+    "id": "FINSCALLOP_1",
+    "face": "60W fin bank (internal to fin channel)",
+    "dia_mm": 4,
+    "kind": "unusable",
+    "thread": "none",
+    "x": 19.246,
+    "y": -59.373,
+    "z": 0,
+    "axis": "Z",
+    "usable_depth_mm": 0,
+    "max_screw_penetration_mm": 0,
+    "note": "NOT A BORE - this is the answer to your question. Single cylindrical face of only 64.6 deg angular sweep (a R2.0 concave fin-root fillet), Z=0.000..159.300. Ring probe at r=2.2, Z=80 finds material over only ~120 deg of the circle; ring probe at r=1.8 finds NO material at any angle, i.e. the 'hole' is continuous open air with the fin channel. A bolt cannot be captured. Same for all 8."
+   },
+   {
+    "id": "FINSCALLOP_2",
+    "face": "60W fin bank (internal to fin channel)",
+    "dia_mm": 4,
+    "kind": "unusable",
+    "thread": "none",
+    "x": -19.246,
+    "y": -59.373,
+    "z": 0,
+    "axis": "Z",
+    "usable_depth_mm": 0,
+    "max_screw_penetration_mm": 0,
+    "note": "Not a bore. 64.6 deg sweep concave fillet, Z=0.000..159.300, open to the fin channel."
+   },
+   {
+    "id": "FINSCALLOP_3",
+    "face": "60W fin bank (internal to fin channel)",
+    "dia_mm": 4,
+    "kind": "unusable",
+    "thread": "none",
+    "x": 19.246,
+    "y": 59.373,
+    "z": 0,
+    "axis": "Z",
+    "usable_depth_mm": 0,
+    "max_screw_penetration_mm": 0,
+    "note": "Not a bore. 64.6 deg sweep concave fillet, Z=0.000..159.300, open to the fin channel."
+   },
+   {
+    "id": "FINSCALLOP_4",
+    "face": "60W fin bank (internal to fin channel)",
+    "dia_mm": 4,
+    "kind": "unusable",
+    "thread": "none",
+    "x": -19.246,
+    "y": 59.373,
+    "z": 0,
+    "axis": "Z",
+    "usable_depth_mm": 0,
+    "max_screw_penetration_mm": 0,
+    "note": "Not a bore. 64.6 deg sweep concave fillet, Z=0.000..159.300, open to the fin channel."
+   },
+   {
+    "id": "FINSCALLOP_5",
+    "face": "60W fin bank (internal to fin channel)",
+    "dia_mm": 4,
+    "kind": "unusable",
+    "thread": "none",
+    "x": 16.5,
+    "y": -59.677,
+    "z": 0,
+    "axis": "Z",
+    "usable_depth_mm": 0,
+    "max_screw_penetration_mm": 0,
+    "note": "Not a bore. 95.3 deg sweep concave fillet, Z=0.000..159.300, open to the fin channel."
+   },
+   {
+    "id": "FINSCALLOP_6",
+    "face": "60W fin bank (internal to fin channel)",
+    "dia_mm": 4,
+    "kind": "unusable",
+    "thread": "none",
+    "x": -16.5,
+    "y": -59.677,
+    "z": 0,
+    "axis": "Z",
+    "usable_depth_mm": 0,
+    "max_screw_penetration_mm": 0,
+    "note": "Not a bore. 95.3 deg sweep concave fillet, Z=0.000..159.300, open to the fin channel."
+   },
+   {
+    "id": "FINSCALLOP_7",
+    "face": "60W fin bank (internal to fin channel)",
+    "dia_mm": 4,
+    "kind": "unusable",
+    "thread": "none",
+    "x": 16.5,
+    "y": 59.677,
+    "z": 0,
+    "axis": "Z",
+    "usable_depth_mm": 0,
+    "max_screw_penetration_mm": 0,
+    "note": "Not a bore. 95.3 deg sweep concave fillet, Z=0.000..159.300, open to the fin channel."
+   },
+   {
+    "id": "FINSCALLOP_8",
+    "face": "60W fin bank (internal to fin channel)",
+    "dia_mm": 4,
+    "kind": "unusable",
+    "thread": "none",
+    "x": -16.5,
+    "y": 59.677,
+    "z": 0,
+    "axis": "Z",
+    "usable_depth_mm": 0,
+    "max_screw_penetration_mm": 0,
+    "note": "Not a bore. 95.3 deg sweep concave fillet, Z=0.000..159.300, open to the fin channel."
+   },
+   {
+    "id": "IOPANEL_SCREWS_7x",
+    "face": "-Y",
+    "dia_mm": 3,
+    "kind": "unusable",
+    "thread": "none - vendor panel screws, fitted",
+    "x": -8,
+    "y": -65,
+    "z": 12.7,
+    "axis": "Y",
+    "usable_depth_mm": 2,
+    "max_screw_penetration_mm": 0,
+    "note": "Representative of 7 identical vendor screws, all at X=-8.0 on the -Y face, at Z = 12.70, 22.20, 31.70, 41.20, 116.30, 144.01, 149.44. Each is a d3.0 hole Y=-65.0..-63.0 (only 2.0 mm deep) with a fitted head d3.3 standing 0.292 mm PROUD of the face (to Y=-65.292). Occupied, too shallow, and inside the I/O keep-out. Unusable, but note the 0.292 mm proud heads if anything is ever placed near this face."
+   },
+   {
+    "id": "TOPPLATE_SCREWS_12x",
+    "face": "+Z",
+    "dia_mm": 2,
+    "kind": "unusable",
+    "thread": "none - connector retention",
+    "x": -2.09,
+    "y": -51.1,
+    "z": 160,
+    "axis": "Z",
+    "usable_depth_mm": 2,
+    "max_screw_penetration_mm": 0,
+    "note": "Representative of 12 d2.0 holes only 2.0 mm deep (Z 158.0..160.0) that retain the top connectors. Positions (X, Y): (-2.09,-51.10) (2.61,-51.10) (-2.09,-34.60) (2.61,-34.60) (3.51,-46.51) (3.51,-39.20) (-5.09,-18.45) (-0.76,-18.45) (-5.09,-9.55) (-0.76,-9.55) (-0.31,-16.41) (-0.31,-11.58). All occupied and inside the +Z keep-out."
+   },
+   {
+    "id": "INTERNAL_WALL_BORES_4x",
+    "face": "internal (not reachable from outside)",
+    "dia_mm": 4,
+    "kind": "unusable",
+    "thread": "unknown",
+    "x": -13,
+    "y": 22.7,
+    "z": 102.44,
+    "axis": "X",
+    "usable_depth_mm": 3.5,
+    "max_screw_penetration_mm": 0,
+    "note": "Four d4.0 bores 3.5 mm long inside the left side wall, X -13.0..-9.5, at (Y,Z) = (22.7, 102.44) (22.7, 129.04) (59.3, 102.44) (59.3, 129.04). They open into the internal cavity, not to the outside - the 60W fin bank fills |X| 14.5..36.5 above them. Not reachable by any external fastener."
+   }
+  ],
+  "connector_keepouts": [
+   {
+    "name": "-Y RJ45/Ethernet jack stack (4x)",
+    "face": "-Y",
+    "xmin": -9.253,
+    "xmax": 9.787,
+    "ymin": -65,
+    "ymax": -37.242,
+    "zmin": 4.439,
+    "zmax": 39.889,
+    "clear_out_mm": 55,
+    "reason": "Four identical connector blocks (vol 1206.2 mm3 each) at Z bands 4.439-11.389, 13.939-20.889, 23.439-30.389, 32.939-39.889, all flush at Y=-65.0. Wall windows measured X -5.25..+8.25. RJ45-class plug body with release latch is ~25 mm; add ~30 mm for Cat5e/Cat6 minimum bend radius (4x cable OD). Bracket must clear the whole patch."
+   },
+   {
+    "name": "-Y main I/O block (USB / video / USB-C)",
+    "face": "-Y",
+    "xmin": -9.253,
+    "xmax": 9.787,
+    "ymin": -65.005,
+    "ymax": -43.905,
+    "zmin": 41.229,
+    "zmax": 103.589,
+    "clear_out_mm": 50,
+    "reason": "Single 13092.5 mm3 connector block, the largest on the panel, flush at Y=-65.005 and 62.4 mm tall. Wall window measured X -5.75..+8.25 continuous over Z 41..104. USB-A plug ~20 mm, HDMI/DP plug 30-40 mm, plus cable bend. Non-negotiable keep-out."
+   },
+   {
+    "name": "-Y recessed port (Z 105-113)",
+    "face": "-Y",
+    "xmin": -8.725,
+    "xmax": -1.673,
+    "ymin": -64.4,
+    "ymax": -53.889,
+    "zmin": 105.073,
+    "zmax": 112.773,
+    "clear_out_mm": 30,
+    "reason": "Recessed connector, face of connector at Y=-62.889 (2.1 mm inside the panel plane). Panel window measured X -8.25..+1.25 over Z 104..113. Four d4.0 flange details at (X,Z) = (-6.19,105.36) (-1.19,105.36) (-6.19,112.36) (-1.19,112.36)."
+   },
+   {
+    "name": "-Y PROTRUDING module (Z 115-146)",
+    "face": "-Y",
+    "xmin": -7.453,
+    "xmax": 5.324,
+    "ymin": -67.957,
+    "ymax": -18.167,
+    "zmin": 114.755,
+    "zmax": 145.535,
+    "clear_out_mm": 40,
+    "reason": "CRITICAL - this module stands 2.957 mm PROUD of the -Y face (to Y=-67.957) and sets the part's true Y minimum. It also reaches 47 mm into the chassis (to Y=-18.167). Panel windows X -5.25..+5.25 (Z 116..144) narrowing to X -4.25..+4.25 at Z=145. Any bracket referencing Y=-65.0 as a datum will foul this by 3 mm."
+   },
+   {
+    "name": "-Y circular service port (Z 146-153)",
+    "face": "-Y",
+    "xmin": -5.679,
+    "xmax": 1.431,
+    "ymin": -64.512,
+    "ymax": -55.5,
+    "zmin": 145.576,
+    "zmax": 153.346,
+    "clear_out_mm": 30,
+    "reason": "Recessed 0.488 mm to Y=-64.512. Carries a d7.4 circular feature centred at (X=-2.50, Z=149.46) with two d3.95 details at Z=149.16 and 149.76 - reads as a circular/threaded connector or a service port. Panel window X -6.25..+1.25."
+   },
+   {
+    "name": "-Y panel screw heads (7x, proud 0.292)",
+    "face": "-Y",
+    "xmin": -9.65,
+    "xmax": -6.35,
+    "ymin": -65.292,
+    "ymax": -65,
+    "zmin": 11.05,
+    "zmax": 151.09,
+    "clear_out_mm": 1,
+    "reason": "Seven d3.3 heads standing 0.292 mm proud at X=-8.0, Z = 12.70, 22.20, 31.70, 41.20, 116.30, 144.01, 149.44. Even ignoring the connectors, nothing can bear flat on this column."
+   },
+   {
+    "name": "-Y ENVELOPE (use this one)",
+    "face": "-Y",
+    "xmin": -10,
+    "xmax": 10,
+    "ymin": -67.957,
+    "ymax": -65,
+    "zmin": 4.439,
+    "zmax": 153.346,
+    "clear_out_mm": 55,
+    "reason": "Union of everything above. The -Y flat is only 20 x 158 mm to begin with, and connectors occupy Z=4.4 to 153.3 of it - i.e. essentially the entire face. Treat the whole -Y face as forbidden. 55 mm covers the worst case (RJ45 plug + Cat6 bend radius); reduce only if the actual cable set is known."
+   },
+   {
+    "name": "+Z SMA antenna bulkhead #1 (Y=48.587)",
+    "face": "+Z",
+    "xmin": -4.248,
+    "xmax": 5.952,
+    "ymin": 43.487,
+    "ymax": 53.687,
+    "zmin": 160,
+    "zmax": 170,
+    "clear_out_mm": 45,
+    "reason": "Bulkhead OD 10.2 mm, axis at X=0.85, standing 10.0 mm above the +Z plate. Mating SMA plug body adds ~20 mm; RG316-class coax minimum bend radius adds ~12-15 mm. 45 mm measured from Z=160 (i.e. 35 mm above the barrel top)."
+   },
+   {
+    "name": "+Z SMA antenna bulkhead #2 (Y=23.587)",
+    "face": "+Z",
+    "xmin": -4.248,
+    "xmax": 5.952,
+    "ymin": 18.487,
+    "ymax": 28.687,
+    "zmin": 160,
+    "zmax": 170,
+    "clear_out_mm": 45,
+    "reason": "Identical bulkhead, OD 10.2, axis X=0.85, Z 160..170. Y pitch between the four is exactly 25.000 mm."
+   },
+   {
+    "name": "+Z SMA antenna bulkhead #3 (Y=-1.413)",
+    "face": "+Z",
+    "xmin": -4.248,
+    "xmax": 5.952,
+    "ymin": -6.513,
+    "ymax": 3.687,
+    "zmin": 160,
+    "zmax": 170,
+    "clear_out_mm": 45,
+    "reason": "Identical bulkhead, OD 10.2, axis X=0.85, Z 160..170."
+   },
+   {
+    "name": "+Z SMA antenna bulkhead #4 (Y=-26.413)",
+    "face": "+Z",
+    "xmin": -4.248,
+    "xmax": 5.952,
+    "ymin": -31.513,
+    "ymax": -21.313,
+    "zmin": 160,
+    "zmax": 170,
+    "clear_out_mm": 45,
+    "reason": "Identical bulkhead, OD 10.2, axis X=0.85, Z 160..170."
+   },
+   {
+    "name": "+Z DC power / GPIO connector (recessed)",
+    "face": "+Z",
+    "xmin": -6.079,
+    "xmax": 4.571,
+    "ymin": -51.856,
+    "ymax": -33.846,
+    "zmin": 150.705,
+    "zmax": 160.005,
+    "clear_out_mm": 40,
+    "reason": "Sits in a well, body Z 150.705..160.005 with its top flush to the +Z plane. Plate opening measured X -3.25..+4.75 over Y -52..-34. Internal detail: d3.0 pins at (X=-3.18, Y=-40.95) and (-3.18,-44.76), d2.5 at (0.32,-36.45) and (0.32,-49.26). Retained by four d2.0 x 2 mm screws plus two 2.5 mm blocks at Y=-35.196..-37.696 and -48.006..-50.506. Mating plug plus wire bend needs the space straight up."
+   },
+   {
+    "name": "+Z aux connector (PROTRUDING 1.582)",
+    "face": "+Z",
+    "xmin": -8.853,
+    "xmax": -0.153,
+    "ymin": -19.146,
+    "ymax": -8.846,
+    "zmin": 151.082,
+    "zmax": 161.582,
+    "clear_out_mm": 30,
+    "reason": "Stands 1.582 mm proud of the +Z plane (to Z=161.582). Plate opening measured X -6.25..+0.75 over Y -19.1..-8.8. Four d2.5/d1.5 contacts at X=-7.25, Y = -11.25, -13.25, -15.25, -17.25 - reads as a 4-way pin header. Any plate resting on Z=160 will foul it."
+   },
+   {
+    "name": "+Z ENVELOPE (use this one)",
+    "face": "+Z",
+    "xmin": -8.853,
+    "xmax": 5.952,
+    "ymin": -51.856,
+    "ymax": 53.687,
+    "zmin": 160,
+    "zmax": 170,
+    "clear_out_mm": 45,
+    "reason": "Union of the four SMA barrels, the DC/GPIO well and the aux header. It covers a 14.8 x 105.5 mm strip down the middle of a face whose flat land is only X -12..+12 wide. There is bare periphery outboard of |X|=12 but it is 1-2 mm wide fin-edge material with 45 mm of coax airspace required directly over the centre - functionally the whole +Z face is unusable."
+   }
+  ],
+  "forbidden_mount_faces": [
+   {
+    "face": "-Y",
+    "why": "Entire face is the I/O panel. Connector windows run Z=4.4 to 153.3 across the full 20 mm flat width; only 1486.9 mm2 of the 3160 mm2 nominal flat is solid, and that remainder is thin ribs between windows. One module protrudes 2.957 mm proud (to Y=-67.957) and 7 screw heads stand 0.292 mm proud. Nothing can bear on it and nothing may cover it."
+   },
+   {
+    "face": "+Z",
+    "why": "4x SMA bulkheads project 10.0 mm to Z=170, an aux header projects 1.582 mm to Z=161.582, and the DC power/GPIO well needs ~40 mm of straight-out access. A bracket landing here covers the antenna and power interfaces."
+   },
+   {
+    "face": "+X",
+    "why": "60W variant is a pure fin bank: only 407.3 mm2 of bearing material, and it is 7 separate strips 0.39-0.40 mm wide - no plate can bear on it, and clamping would just crush fin tips. There are no fixings of any kind. Covering it also kills half the convection area on a 60 W unit."
+   },
+   {
+    "face": "-X",
+    "why": "Mirror-identical to +X. 407.3 mm2 in 7 strips 0.39-0.40 mm wide, no fixings, thermally critical. Note: the Tile chassis (|X|=14.5) is the opposite case - there the side faces are the correct mount faces. Do not carry a 60W bracket across to the Tile or vice versa."
+   },
+   {
+    "face": "-Z (partial)",
+    "why": "Not forbidden, but qualified: the one open M4 at (X=+6, Y=0) is on the centreline with no second point, its twin at (X=-6, Y=0) is filled by a vendor screw, and both are almost certainly assembly screws for the bottom cover. Mounting here also blanks the bottom end of every fin channel, which will hurt convection on the 60 W variant."
+   }
+  ],
+  "preferred_mount_face": {
+   "face": "+Y",
+   "bearing_area_mm2": 3140.8,
+   "why": "The only face that is flat, completely free of connectors, and carries purpose-made fixings. One continuous plane at Y=65.000 spanning X -10.00..+10.00, Z 1.00..159.00 (20 x 158 mm), with exactly two features in it: the 2x M3x0.5 blind tapped holes at (0, 65, 50) and (0, 65, 110), 60.000 mm apart on the X=0 centreline. Two hard constraints on whatever lands here: (1) screw penetration must not exceed 3.0 mm - the hole bottoms at Y=62.000 with only 2.515 mm of thread, shallower than the 3.5-4 mm assumed; (2) the bearing strip is only 20 mm wide, so anything wider than X +/-10 must be relieved or it will ride on the edge blends rather than the flat. The pattern is two collinear points, so the bracket must also react roll about the Z axis some other way."
+  },
+  "hole_pattern_summary": "60W finned chassis (|X|=36.5), as-authored frame: the ONLY external fixings are 2x M3x0.5 blind tapped on the +Y back wall at (X=0, Y=65, Z=50) and (X=0, Y=65, Z=110) - 60.000 mm apart, 3.000 mm deep from the face, 2.515 mm of thread (Y 64.515 to 62.000), 1.0 mm of wall behind the bottom - plus 1x M4x0.7 blind tapped 8.090 mm deep on the -Z end cap at (X=+6.0, Y=0, Z=0), whose mirror twin at X=-6.0 is already occupied by a fitted screw. NOTHING else external exists: the -Y face is all I/O, the +Z face is all antenna/power, and the +/-X faces are bare fin tips with zero holes. The eight full-length dia-4.0 features through the fin bank are NOT bores - each is a single concave cylindrical face of only 64.6 deg or 95.3 deg angular sweep (R2.0 fin-root fillets) at (X,Y) = (+/-19.246, +/-59.373) [64.6 deg] and (+/-16.500, +/-59.677) [95.3 deg], Z 0.000..159.300; ring probes confirm they are open to the fin channels, so no bolt can pass through or be captured. Tile chassis (|X|=14.5) is a different animal: 6x M4x0.7 TRUE through-bores on the X axis, tapped from both ends (2.916 mm engagement per side, thread |X| 13.916 to 11.000, open cavity between), at (Y,Z) = (-60,10) (+60,10) (0,40) (0,110) (-50,150) (+50,150) - that is 6 bores total accessible from either side face, not 6 per side - in a clean 20410 mm2 flat spanning Y -64.49..64.49, Z 0.5..159.5.",
+  "unknowns": [
+   "All clear_out_mm values are engineering allowances, NOT measurements. This is SolidRun's 'Basic 3D model' - connector bodies are simplified blocks with no mating-plug geometry, so plug body lengths and cable minimum bend radii are not in the file. Verify against the actual harness before committing a plate.",
+   "Thread pitches are inferred, not modelled as pitch data. M3x0.5 inferred from modelled major 3.086 / minor 2.529; M4x0.7 inferred from major 4.109-4.11 / minor 3.332. Gauge a physical unit before cutting mating threads.",
+   "Connector identities on -Y are inferred from block size and stacking, not labelled in the STEP. I have called Z=4.4-39.9 'RJ45-class' (4 identical 1206 mm3 blocks) and Z=41.2-103.6 'main I/O block' but which window is USB vs USB-C vs video is not determinable from geometry.",
+   "The +Z plate has NO modelled holes under the four SMA bulkheads - the barrels simply sit on the Z=160 surface as separate solids. Whether they are bulkhead-nutted through the plate (and therefore whether the plate is drilled) cannot be determined from this file.",
+   "Whether the M4 at (X=+6, Y=0, Z=0) is available for customer use, or is a vendor bottom-cover assembly screw that must stay free for service, cannot be determined from geometry. Its twin at X=-6 has a screw fitted, which suggests the latter. Confirm with SolidRun.",
+   "Thermal consequence of covering any face is not a geometric question. The 60W variant is convection-cooled through the +/-X fin banks and both end caps; whether a bracket on -Z is thermally acceptable is out of scope here.",
+   "The 30 W variant (|X|=22.5, solid 1 in the file) was not characterised beyond confirming its fin tips sit at |X| 19.03-21.60 with 11 fins. If that chassis is a candidate, it needs its own pass - it does NOT share the Tile's 6x M4 pattern.",
+   "Small -Z features (d7.0 pocket at (0, 34.0) Z 1.5..6.7; 4x d3.0 at (-5.0/-3.5, 8.3/20.33) Z 1.5..4.0; 2x d3.0 at (-6.0, 11.3/17.33) Z 0..1.5) sit in a shallow recess and their function is not identifiable. I have classed them unusable on size, but if a bracket lands on -Z, do not blank them without checking what they are.",
+   "Exact Y-extent of the +Y and -Y flats outboard of |X|=10 was not measured to full precision - material is present at Y=64.9 out to about |X|=13, then the surface blends away. Treat X +/-10 as the hard bearing limit."
+  ],
+  "confidence": "high"
+ },
+ "brainboxes_es511": {
+  "key": "brainboxes_es511",
+  "confidence": "measured from 'Brainboxes - ES-511 Cased PCB 3D Model.step' with lib.analyze_step plus a planar-face sweep; the DIN geometry is derived from the clip jaws, not from a datasheet",
+  "part_frame_bbox": {
+   "xmin": -49.5,
+   "xmax": 49.5,
+   "ymin": -62.1,
+   "ymax": 52.325,
+   "zmin": -4.0,
+   "zmax": 18.6
+  },
+  "hole_pattern_summary": "NO bolted fixings anywhere on the part. It is a DIN-rail-only device: one fixed jaw and one spring-loaded sliding jaw on the -Y face.",
+  "din_rail_interface": {
+   "rail": "TS35 / EN 60715 35 x 7.5 mm top-hat",
+   "rail_axis_in_part_frame": "Z",
+   "rail_centreline_x": 0.0,
+   "lip_bearing_plane_y": -55.5,
+   "panel_plane_y": -63.0,
+   "engaged_rail_length_mm": 22.6,
+   "fixed_jaw": {
+    "x_min": 16.0,
+    "x_max": 38.84,
+    "hook_face_y": -59.5,
+    "note": "reaches 4.0 mm behind the bearing plane and 1.5 mm in under the +X rail lip"
+   },
+   "sliding_jaw": {
+    "x_min": -45.3,
+    "x_max": -15.3,
+    "y_min": -62.1,
+    "y_max": -55.5,
+    "z_min": -1.45,
+    "z_max": 16.05,
+    "note": "spring latch; reaches 6.6 mm behind the bearing plane and 2.2 mm in under the -X rail lip. Pull it toward -X to release."
+   },
+   "derivation": "Both jaws are consistent with, and only with, a 35 mm rail centred on part X = 0 whose lip faces lie in the plane Y = -55.5. That puts the panel the rail is screwed to at Y = -63.0, i.e. 0.9 mm clear of the deepest point of the part (Y = -62.1), and makes the projection from that panel 115.3 mm."
+  },
+  "faces": [
+   {
+    "face": "-Y",
+    "plane_coord": -55.5,
+    "contents": "DIN CLIP FACE. Flat back plane at Y=-55.5 (947.2 mm2, X -43.20..17.50) that lands on the rail lips, plus the fixed jaw (X 16.00..38.84, to Y=-59.5) and the sliding release jaw (X -45.30..-15.30, to Y=-62.1). No bolt holes.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 947.2
+   },
+   {
+    "face": "+Y",
+    "plane_coord": 52.325,
+    "contents": "I/O FACE. RJ45 jack X -2.90..12.70, Z -2.60..13.80, bezel to Y=51.39, plus two indicator windows. 5-way screw terminal blocks at both ends: X -38.46..-22.36 and X 22.36..38.46, front faces at Y=46.38, the +X housing reaching Y=51.25. Nothing here is a mounting feature.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 1129.6
+   },
+   {
+    "face": "-X",
+    "plane_coord": -42.55,
+    "contents": "SIDE LOUVRE BAND. Outer wall at X=-42.55 with only 381.2 mm2 of solid plane out of a 114.4 x 22.6 face; the rest is the louvre stack. The DIN-profile shoulders reach X=-49.5. No fixings.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 381.2
+   },
+   {
+    "face": "+X",
+    "plane_coord": 42.55,
+    "contents": "SIDE LOUVRE BAND, mirror of -X: 381.2 mm2 solid, louvres elsewhere, shoulders to X=+49.5. No fixings.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 381.2
+   },
+   {
+    "face": "+Z",
+    "plane_coord": 18.6,
+    "contents": "CASE SIDE (moulded 'brainboxes' logo), 99 x 114.4 nominal. This is the face an adjacent DIN module butts against - keep it free, never bolt to it.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 5202.8
+   },
+   {
+    "face": "-Z",
+    "plane_coord": -4.0,
+    "contents": "CASE SIDE, mirror of +Z, 5069.8 mm2 of moulded plastic. Same rule: it is a neighbour-module face, not a mount face.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 5069.8
+   }
+  ],
+  "mounting_holes": [],
+  "connector_keepouts": [
+   {
+    "name": "+Y RJ45 Ethernet jack (plug + strain-relief boot)",
+    "face": "+Y",
+    "xmin": -2.9,
+    "xmax": 12.7,
+    "ymin": 51.39,
+    "ymax": 51.39,
+    "zmin": -2.6,
+    "zmax": 13.8,
+    "clear_out_mm": 45.0
+   },
+   {
+    "name": "+Y screw terminal block, -X end",
+    "face": "+Y",
+    "xmin": -38.46,
+    "xmax": -22.36,
+    "ymin": 46.38,
+    "ymax": 46.38,
+    "zmin": -1.55,
+    "zmax": 16.15,
+    "clear_out_mm": 30.0
+   },
+   {
+    "name": "+Y screw terminal block, +X end",
+    "face": "+Y",
+    "xmin": 22.36,
+    "xmax": 38.8,
+    "ymin": 51.25,
+    "ymax": 51.25,
+    "zmin": -2.8,
+    "zmax": 17.2,
+    "clear_out_mm": 30.0
+   },
+   {
+    "name": "-X louvre band",
+    "face": "-X",
+    "xmin": -42.55,
+    "xmax": -42.55,
+    "ymin": -50.0,
+    "ymax": 40.0,
+    "zmin": -4.0,
+    "zmax": 18.6,
+    "clear_out_mm": 15.0
+   },
+   {
+    "name": "+X louvre band",
+    "face": "+X",
+    "xmin": 42.55,
+    "xmax": 42.55,
+    "ymin": -50.0,
+    "ymax": 40.0,
+    "zmin": -4.0,
+    "zmax": 18.6,
+    "clear_out_mm": 15.0
+   },
+   {
+    "name": "-X sliding-jaw release travel + tool access",
+    "face": "-X",
+    "xmin": -49.5,
+    "xmax": -49.5,
+    "ymin": -62.1,
+    "ymax": -55.5,
+    "zmin": -1.45,
+    "zmax": 16.05,
+    "clear_out_mm": 20.0
+   }
+  ],
+  "forbidden_mount_faces": [
+   {
+    "face": "every face",
+    "why": "The ES-511 has no bolt holes at all. It is retained ONLY by its DIN clip, so the design question is where the rail goes, not where the screws go."
+   }
+  ],
+  "preferred_mount_face": {
+   "face": "-Y (DIN clip)",
+   "bearing_area_mm2": 947.2,
+   "why": "The only mounting interface on the part. Clipped to a TS35 rail it consumes 22.6 mm of rail length, stands 99 mm across the rail (49.5 mm each side of the rail centreline) and projects 115.3 mm from the panel the rail is screwed to."
+  },
+  "unknowns": [
+   "Terminal-block wire gauge and hence the real bend-radius allowance. 30 mm is assumed; confirm against the loom.",
+   "Whether a vertical rail is acceptable. The louvres are on the +/-X faces, which are only up/down when the rail is horizontal."
+  ]
+ },
+ "advanced_navigation_certus_mini_d": {
+  "key": "advanced_navigation_certus_mini_d",
+  "confidence": "measured from 'Certus-Mini-D-Rugged-3D-model-v1.0.STEP' with lib.analyze_step plus a planar-face sweep",
+  "part_frame_bbox": {
+   "xmin": -15.0,
+   "xmax": 15.0,
+   "ymin": 0.0,
+   "ymax": 34.0,
+   "zmin": -20.5,
+   "zmax": 26.117
+  },
+  "hole_pattern_summary": "4x dia-2.200 through-holes (M2 clearance) on a 26.000 (X) x 37.000 (Z) rectangle through the 2.0 mm base flange, axis +Y. Screws drop in from the +Y side, so the mating plate must be tapped M2 or carry nuts.",
+  "faces": [
+   {
+    "face": "-Y",
+    "plane_coord": 0.0,
+    "contents": "MOUNTING BASE. Single flat plane, 30.0 x 41.0 outline, 1143.3 mm2 of metal. Carries the four dia-2.200 mounting holes at (+/-13.000, +/-18.500), four dia-4.000 pads concentric with them, and four dia-1.000 datum marks on the edge centres at (0, -20.5), (0, +20.5), (-15, 0), (+15, 0). This is the alignment datum of the INS.",
+    "is_flat_mountable": true,
+    "flat_area_mm2": 1143.3
+   },
+   {
+    "face": "+Y",
+    "plane_coord": 34.0,
+    "contents": "TOP. Flat, 954.5 mm2, no features and no fixings.",
+    "is_flat_mountable": true,
+    "flat_area_mm2": 954.5
+   },
+   {
+    "face": "+Z",
+    "plane_coord": 16.25,
+    "contents": "CONNECTOR FACE. 2x GNSS SMA bulkheads dia-6.350 on X=-7.000 at Y=16.400 and Y=27.600, standing from Z=15.085 to Z=26.117; 1x circular data/power connector dia-12.000 shell at (X=+6.000, Y=+22.000) from Z=14.550 to Z=23.150.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 450.2
+   },
+   {
+    "face": "-Z",
+    "plane_coord": -16.25,
+    "contents": "LABEL SIDE ('Made in Australia' / CE). Flat, 619.2 mm2, no features, no fixings.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 619.2
+   },
+   {
+    "face": "+X",
+    "plane_coord": 15.0,
+    "contents": "Plain case side, 912.9 mm2. No fixings.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 912.9
+   },
+   {
+    "face": "-X",
+    "plane_coord": -15.0,
+    "contents": "Plain case side, 912.9 mm2. No fixings.",
+    "is_flat_mountable": false,
+    "flat_area_mm2": 912.9
+   }
+  ],
+  "mounting_holes": [
+   {
+    "id": "IMU-1",
+    "face": "-Y",
+    "dia_mm": 2.2,
+    "kind": "through_clearance",
+    "thread": "M2 clearance",
+    "x": -13.0,
+    "y": 0.0,
+    "z": 18.5,
+    "axis": "Y",
+    "usable_depth_mm": 2.0,
+    "max_screw_penetration_mm": 99.0,
+    "note": "Through the 2.0 mm base flange. The corner above it is scalloped R4.0 at (-14.061, +19.940) so a driver reaches the head."
+   },
+   {
+    "id": "IMU-2",
+    "face": "-Y",
+    "dia_mm": 2.2,
+    "kind": "through_clearance",
+    "thread": "M2 clearance",
+    "x": 13.0,
+    "y": 0.0,
+    "z": 18.5,
+    "axis": "Y",
+    "usable_depth_mm": 2.0,
+    "max_screw_penetration_mm": 99.0,
+    "note": "R4.0 corner scallop at (+14.061, +19.940) gives driver access."
+   },
+   {
+    "id": "IMU-3",
+    "face": "-Y",
+    "dia_mm": 2.2,
+    "kind": "through_clearance",
+    "thread": "M2 clearance",
+    "x": 13.0,
+    "y": 0.0,
+    "z": -18.5,
+    "axis": "Y",
+    "usable_depth_mm": 2.0,
+    "max_screw_penetration_mm": 99.0,
+    "note": "R4.0 corner scallop at (+14.061, -19.940) gives driver access."
+   },
+   {
+    "id": "IMU-4",
+    "face": "-Y",
+    "dia_mm": 2.2,
+    "kind": "through_clearance",
+    "thread": "M2 clearance",
+    "x": -13.0,
+    "y": 0.0,
+    "z": -18.5,
+    "axis": "Y",
+    "usable_depth_mm": 2.0,
+    "max_screw_penetration_mm": 99.0,
+    "note": "R4.0 corner scallop at (-14.061, -19.940) gives driver access."
+   }
+  ],
+  "connector_keepouts": [
+   {
+    "name": "+Z GNSS SMA #1 (primary antenna)",
+    "face": "+Z",
+    "xmin": -10.18,
+    "xmax": -3.82,
+    "ymin": 13.22,
+    "ymax": 19.58,
+    "zmin": 16.25,
+    "zmax": 26.117,
+    "clear_out_mm": 40.0
+   },
+   {
+    "name": "+Z GNSS SMA #2 (secondary / heading antenna)",
+    "face": "+Z",
+    "xmin": -10.18,
+    "xmax": -3.82,
+    "ymin": 24.42,
+    "ymax": 30.78,
+    "zmin": 16.25,
+    "zmax": 26.117,
+    "clear_out_mm": 40.0
+   },
+   {
+    "name": "+Z circular data / power connector",
+    "face": "+Z",
+    "xmin": 0.0,
+    "xmax": 12.0,
+    "ymin": 16.0,
+    "ymax": 28.0,
+    "zmin": 16.25,
+    "zmax": 23.15,
+    "clear_out_mm": 45.0
+   }
+  ],
+  "forbidden_mount_faces": [
+   {
+    "face": "+Z",
+    "why": "Both GNSS SMA bulkheads and the circular data connector live here. Covering it blanks every interface on the unit."
+   },
+   {
+    "face": "+Y",
+    "why": "Flat and clear, but no fixings, and loading an INS through its lid is not an alignment-grade joint."
+   },
+   {
+    "face": "+X / -X / -Z",
+    "why": "Plain moulded sides with zero fixings. An INS must be located by its datum face, not clamped by its flanks."
+   }
+  ],
+  "preferred_mount_face": {
+   "face": "-Y",
+   "bearing_area_mm2": 1143.3,
+   "why": "Both the only face with fixings and the unit's alignment datum. Bolt it flat to a rigid plate on the 26 x 37 M2 pattern and the INS axes are defined by that plate."
+  },
+  "unknowns": [
+   "Confirm with Advanced Navigation that M2 is the intended screw size and get a torque figure before any vibration qualification.",
+   "Magnetic clearance from the NSP-1600 and the TEC. This is the dual-antenna 'D' variant so heading does not rely on a magnetometer, but the datasheet distance is not in hand."
+  ]
+ }
+}

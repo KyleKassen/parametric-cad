@@ -1,0 +1,42 @@
+variant,id,into,at_xyz,thread,screw,bracket_grip_mm,engagement_mm,max_penetration_mm,torque_nm,optional,note
+upright_deck / upright_bulkhead / low_profile_side,M3_backwall_Z50,Bedrock +Y back wall,"(0, 65, 50)",M3x0.5,M3x5 socket cap A4-70,2.5,2.5,3.0,0.5,no,the 0.5 mm spotface sets the grip; M3x6 here bottoms out and jacks the bracket off the land
+upright_deck / upright_bulkhead / low_profile_side,M3_backwall_Z110,Bedrock +Y back wall,"(0, 65, 110)",M3x0.5,M3x5 socket cap A4-70,2.5,2.5,3.0,0.5,no,the 0.5 mm spotface sets the grip; M3x6 here bottoms out and jacks the bracket off the land
+upright_deck / upright_bulkhead / low_profile_side,M4_bottom,Bedrock -Z end cap,"(6, 0, 0)",M4x0.7,M4x8 countersunk 90deg A4-70,3.0,5.0,8.0,2.0,YES,probably a vendor bottom-cover screw - confirm with SolidRun. Every mount stands up without it.
+tile_side_plate,TILE_M4_1,Bedrock Tile -X side flat,"(-14.5, -60, 10)",M4x0.7,M4x6 socket cap A4-70,3.0,3.0,3.5,2.0,no,Tile chassis only - this pattern does not exist on 30 W or 60 W
+tile_side_plate,TILE_M4_2,Bedrock Tile -X side flat,"(-14.5, 60, 10)",M4x0.7,M4x6 socket cap A4-70,3.0,3.0,3.5,2.0,no,Tile chassis only - this pattern does not exist on 30 W or 60 W
+tile_side_plate,TILE_M4_3,Bedrock Tile -X side flat,"(-14.5, 0, 40)",M4x0.7,M4x6 socket cap A4-70,3.0,3.0,3.5,2.0,no,Tile chassis only - this pattern does not exist on 30 W or 60 W
+tile_side_plate,TILE_M4_4,Bedrock Tile -X side flat,"(-14.5, 0, 110)",M4x0.7,M4x6 socket cap A4-70,3.0,3.0,3.5,2.0,no,Tile chassis only - this pattern does not exist on 30 W or 60 W
+tile_side_plate,TILE_M4_5,Bedrock Tile -X side flat,"(-14.5, -50, 150)",M4x0.7,M4x6 socket cap A4-70,3.0,3.0,3.5,2.0,no,Tile chassis only - this pattern does not exist on 30 W or 60 W
+tile_side_plate,TILE_M4_6,Bedrock Tile -X side flat,"(-14.5, 50, 150)",M4x0.7,M4x6 socket cap A4-70,3.0,3.0,3.5,2.0,no,Tile chassis only - this pattern does not exist on 30 W or 60 W
+hybrid_cold_plate,HYB_M4_1,Bedrock hybrid flat side (Tile core),"(-14.5, -60, 10)",M4x0.7,M4x8 countersunk 90deg A4-70,5.0,3.0,3.5,2.5,no,the core's bores are tapped from both ends - a fin-bank screw on the other side uses the same bore and never meets this one
+hybrid_cold_plate,HYB_M4_2,Bedrock hybrid flat side (Tile core),"(-14.5, 60, 10)",M4x0.7,M4x8 countersunk 90deg A4-70,5.0,3.0,3.5,2.5,no,the core's bores are tapped from both ends - a fin-bank screw on the other side uses the same bore and never meets this one
+hybrid_cold_plate,HYB_M4_3,Bedrock hybrid flat side (Tile core),"(-14.5, 0, 40)",M4x0.7,M4x8 countersunk 90deg A4-70,5.0,3.0,3.5,2.5,no,the core's bores are tapped from both ends - a fin-bank screw on the other side uses the same bore and never meets this one
+hybrid_cold_plate,HYB_M4_4,Bedrock hybrid flat side (Tile core),"(-14.5, 0, 110)",M4x0.7,M4x8 countersunk 90deg A4-70,5.0,3.0,3.5,2.5,no,the core's bores are tapped from both ends - a fin-bank screw on the other side uses the same bore and never meets this one
+hybrid_cold_plate,HYB_M4_5,Bedrock hybrid flat side (Tile core),"(-14.5, -50, 150)",M4x0.7,M4x8 countersunk 90deg A4-70,5.0,3.0,3.5,2.5,no,the core's bores are tapped from both ends - a fin-bank screw on the other side uses the same bore and never meets this one
+hybrid_cold_plate,HYB_M4_6,Bedrock hybrid flat side (Tile core),"(-14.5, 50, 150)",M4x0.7,M4x8 countersunk 90deg A4-70,5.0,3.0,3.5,2.5,no,the core's bores are tapped from both ends - a fin-bank screw on the other side uses the same bore and never meets this one
+hybrid_cold_plate,BORDER_M6_1,host plate,"(border, Y -74, Z -10)",M6,"M6 socket cap A4-70, length to suit the host",5.0,,,,no,"through the border, head on the UNIT side - the bolts you can still reach once the Bedrock is on the plate"
+hybrid_cold_plate,BORDER_M6_2,host plate,"(border, Y 74, Z -10)",M6,"M6 socket cap A4-70, length to suit the host",5.0,,,,no,"through the border, head on the UNIT side - the bolts you can still reach once the Bedrock is on the plate"
+hybrid_cold_plate,BORDER_M6_3,host plate,"(border, Y -74, Z 80)",M6,"M6 socket cap A4-70, length to suit the host",5.0,,,,no,"through the border, head on the UNIT side - the bolts you can still reach once the Bedrock is on the plate"
+hybrid_cold_plate,BORDER_M6_4,host plate,"(border, Y 74, Z 80)",M6,"M6 socket cap A4-70, length to suit the host",5.0,,,,no,"through the border, head on the UNIT side - the bolts you can still reach once the Bedrock is on the plate"
+hybrid_cold_plate,BORDER_M6_5,host plate,"(border, Y -74, Z 170)",M6,"M6 socket cap A4-70, length to suit the host",5.0,,,,no,"through the border, head on the UNIT side - the bolts you can still reach once the Bedrock is on the plate"
+hybrid_cold_plate,BORDER_M6_6,host plate,"(border, Y 74, Z 170)",M6,"M6 socket cap A4-70, length to suit the host",5.0,,,,no,"through the border, head on the UNIT side - the bolts you can still reach once the Bedrock is on the plate"
+upright_deck,HOST_1,host deck / bulkhead,"(-28.0, -70.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+upright_deck,HOST_2,host deck / bulkhead,"(28.0, -70.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+upright_deck,HOST_3,host deck / bulkhead,"(-9.0, -40.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+upright_deck,HOST_4,host deck / bulkhead,"(9.0, -40.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+upright_deck,HOST_5,host deck / bulkhead,"(-9.0, 20.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+upright_deck,HOST_6,host deck / bulkhead,"(9.0, 20.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+upright_deck,HOST_7,host deck / bulkhead,"(-9.0, 50.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+upright_deck,HOST_8,host deck / bulkhead,"(9.0, 50.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+upright_bulkhead,HOST_1,host deck / bulkhead,"(-61.0, 24.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+upright_bulkhead,HOST_2,host deck / bulkhead,"(61.0, 24.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+upright_bulkhead,HOST_3,host deck / bulkhead,"(-61.0, 76.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+upright_bulkhead,HOST_4,host deck / bulkhead,"(61.0, 76.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+upright_bulkhead,HOST_5,host deck / bulkhead,"(-61.0, 128.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+upright_bulkhead,HOST_6,host deck / bulkhead,"(61.0, 128.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+low_profile_side,HOST_1,host deck / bulkhead,"(-62.0, 11.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+low_profile_side,HOST_2,host deck / bulkhead,"(54.0, 11.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+low_profile_side,HOST_3,host deck / bulkhead,"(-62.0, 80.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+low_profile_side,HOST_4,host deck / bulkhead,"(54.0, 80.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+low_profile_side,HOST_5,host deck / bulkhead,"(-62.0, 156.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint
+low_profile_side,HOST_6,host deck / bulkhead,"(54.0, 156.0)",M5,M5 countersunk 90deg A4-70,3.0,,,,no,countersunk flush so the head may sit under the chassis footprint

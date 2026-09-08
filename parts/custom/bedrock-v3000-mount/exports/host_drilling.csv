@@ -1,0 +1,7 @@
+id,y_mm,z_mm,clearance_d_mm,or_tapped,pattern,note
+HOST_1,-74.0,-10.0,6.6,M6,"148 x 180 mm, 2 columns x 3 rows",outboard of the chassis flat (|Y| <= 64.49) - reachable with the unit fitted
+HOST_2,74.0,-10.0,6.6,M6,"148 x 180 mm, 2 columns x 3 rows",outboard of the chassis flat (|Y| <= 64.49) - reachable with the unit fitted
+HOST_3,-74.0,80.0,6.6,M6,"148 x 180 mm, 2 columns x 3 rows",outboard of the chassis flat (|Y| <= 64.49) - reachable with the unit fitted
+HOST_4,74.0,80.0,6.6,M6,"148 x 180 mm, 2 columns x 3 rows",outboard of the chassis flat (|Y| <= 64.49) - reachable with the unit fitted
+HOST_5,-74.0,170.0,6.6,M6,"148 x 180 mm, 2 columns x 3 rows",outboard of the chassis flat (|Y| <= 64.49) - reachable with the unit fitted
+HOST_6,74.0,170.0,6.6,M6,"148 x 180 mm, 2 columns x 3 rows",outboard of the chassis flat (|Y| <= 64.49) - reachable with the unit fitted

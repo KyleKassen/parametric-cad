@@ -1,0 +1,7 @@
+variant,angle_deg,inside_radius_mm,material_t_mm,k_factor,bend_allowance_mm,bend_deduction_mm,bend,line_part_frame,leg_length_mm,runs,direction,note
+side_tab,90,3.0,3.0,0.42,6.692,5.308,B1 foot -> leg,X = +48.5 (foot tangent); blank u = +41.81..+48.5,30.0,"full width, 20.0 mm","leg up (+Z), foot OUTWARD from the unit",the leg's unit-facing face is the convex skin; its flat starts at Z = 6.0
+bulkhead_strap,90,3.0,3.0,0.42,6.692,5.308,B1 shelf -> flange,X = -42.5 (shelf tangent); blank u = -49.19..-42.5,63.0,"full width, 45.0 mm","flange DOWN (-Z), on the bulkhead",the shelf top and the flange's bulkhead face are the convex skin
+bulkhead_shelf,90,3.0,3.0,0.42,6.692,5.308,B1 shelf -> bulkhead flange,X = -42.5 (pan tangent); blank u = -42.5..-49.19,66.0,Y -322.0..90.0,"up (+Z), wall outboard of the pan","full length, no slits"
+bulkhead_shelf,90,3.0,3.0,0.42,6.692,5.308,B2 shelf -> far web,X = +42.5 (pan tangent); blank u = +42.5..+49.19,30.0,Y -305.0..-2.0,"up (+Z), wall outboard of the pan",3.0 mm relief slits at both ends
+deck_tray,90,3.0,3.0,0.42,6.692,5.308,B1 pan -> -X wall,X = -42.5 (pan tangent); blank u = -42.5..-49.19,30.0,Y -305.0..-2.0,"up (+Z), wall outboard of the pan",3.0 mm relief slits at both ends
+deck_tray,90,3.0,3.0,0.42,6.692,5.308,B2 pan -> +X wall,X = +42.5 (pan tangent); blank u = +42.5..+49.19,30.0,Y -305.0..-2.0,"up (+Z), wall outboard of the pan",3.0 mm relief slits at both ends

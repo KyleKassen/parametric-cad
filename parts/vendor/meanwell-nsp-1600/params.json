@@ -1,0 +1,57 @@
+{
+    "part_name": "MEAN WELL NSP-1600",
+    "version": "v1",
+    "description": "Vendor STEP as shipped: 'NSP-1600_0417.stp'. 1600 W enclosed AC/DC supply, Case No. 296A, 300 x 85 x 41 mm, 1.8 kg, two 40 mm exhaust fans at one end, AC terminal block + two DC busbar blades + signal headers at the other. Nothing here is fabricated by us; this directory exists so mounts can be designed against exact vendor geometry.",
+    "units": "mm",
+    "material": "Steel sheet chassis (vendor)",
+    "process": "purchased",
+
+    "dimensions": {
+        "envelope_body": { "x": 85.0, "y": 300.598, "z": 41.0 },
+        "envelope_with_blades_y": 338.6,
+        "vendor_frame_bbox_min": [24.287, 53.552, 1.5],
+        "vendor_frame_bbox_max": [109.287, 392.152, 42.5],
+        "chassis_wall_t": 1.2,
+        "bottom_corner_outer_r": 1.3,
+        "fan": { "size": 40.0, "depth": 28.0, "count": 2, "centres_x_vendor": [45.087, 88.487], "centre_z_vendor": 21.5 }
+    },
+
+    "features": {
+        "fixings": {
+            "bottom_m3": {
+                "count": 3, "thread": "M3x0.5", "axis": "Z", "max_penetration_mm": 4.0,
+                "torque_kgf_cm": "6-8",
+                "positions_vendor_xy": [[31.787, 338.052], [101.787, 338.052], [66.787, 73.352]],
+                "measured": "extruded holes in the 1.2 mm bottom sheet, minor dia 2.65, ~1.6-2.1 mm of thread; PCB underside 4.5 mm above the outer face"
+            },
+            "side_m4": {
+                "count": 4, "thread": "M4x0.7", "axis": "X", "max_penetration_mm": 5.0,
+                "torque_kgf_cm": "7-10",
+                "positions_vendor_yz": [[348.352, 24.3], [96.352, 24.3]],
+                "faces_x": [24.287, 109.287],
+                "measured": "Y = 348.352: a dia 4.54 threaded cross-tube (minor 3.1) spanning the width - real. Y = 96.352: a dia 5.0 clearance opening in each wall with NOTHING behind it - the thread is not modelled. Verify on a unit."
+            },
+            "side_pins_do_not_use": {
+                "count": 4, "diameter": 2.8, "axis": "X",
+                "positions_vendor_yz": [[348.352, 18.3], [96.352, 18.3]],
+                "note": "Vendor assembly features (the terminal-end pair has the end plate's 0.8 mm flange behind it). Not fixings."
+            }
+        },
+        "faces": {
+            "bottom_minus_z": "flat, 21819 mm2 (shell) + 630 mm2 (fan bracket) at Z = 1.5; carries only the 3 M3 and two flush countersunk vendor screws",
+            "top_plus_z": "removable cover, 24462 mm2 at Z = 42.5, zero openings, no fixings",
+            "sides_plus_minus_x": "1.2 mm shell walls at X = 24.287 / 109.287; 14-16 flush countersunk vendor screw mouths each, the 2 M4 and 2 dia 2.8 per side; NO vents",
+            "fan_end_minus_y": "fan guard at Y = 53.552 over two 40 x 40 x 28 fans; EXHAUST",
+            "terminal_end_plus_y": "end plate at Y = 354.15: 14 intake louvres 8 x 5.5 + 5 slots 8 x 1.6, AC terminal block (M3.5, proud to 362.11), two 2 mm DC blades proud to 392.152 (38 mm) and 382.10 (28 mm) each with a dia 6.5 lug hole, CN1 16-way and CN2 8-way DF11 headers, LED, trim pot"
+        },
+        "airflow": "in at the terminal-face louvres, out through the fans (datasheet air-flow arrow)"
+    },
+
+    "notes": [
+        "Source: C:/Users/KyleKassen/Documents/Projects/ADRS/CAD/MeanWell/NSP-1600_0417.stp (copied here as shipped, 2026-09-02).",
+        "19 solids: shell, PCB, 2 fans, top cover, AC block, fan bracket, 2 blades, end plate, 9 terminal/connector solids. No threads, no PMI.",
+        "Every number above was measured from this file with lib/analyze_step.py and axial/ring probes and cross-checked against the Case No. 296A drawing (datasheets/NSP-1600-SPEC.pdf); every hole agrees to 0.002 mm.",
+        "Only the HORIZONTAL attitude is qualified - the derating curve carries no other label and the installation manual defers to the spec sheet for anything else.",
+        "Design mass 1.8 kg (datasheet). Vibration qualification 10-500 Hz, 2 G."
+    ]
+}

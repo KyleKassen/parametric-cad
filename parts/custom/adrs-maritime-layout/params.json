@@ -1,0 +1,51 @@
+{
+    "part_name": "ADRS Maritime Layout — SCE-20H2010LP interior",
+    "version": "v1",
+    "description": "Compact interior arrangement and mounting scaffold for the ADRS maritime enclosure: Bedrock V3000, NSP-1600, Peplink UBR Plus, Ettus B210 and one OZ51x dual-TX Zonu housing on the subpanel, with a TE121024010 thermoelectric cooler through the left wall. Placement data lives in placement.json; this file records the enclosure datums and the fabrication stock.",
+    "units": "mm",
+    "material": "6061-T6 aluminium plate (scaffold); enclosure and modules are purchased",
+    "process": "Saw, drill and press brake only — no machining required for any scaffold member",
+    "dimensions": {
+        "enclosure_interior_x": [-252.09, 252.09],
+        "enclosure_interior_y": [-252.10, 252.10],
+        "rear_wall_inner_z": -125.09,
+        "subpanel_mounting_face_z": -109.22,
+        "door_inner_clear_z": 131.10,
+        "subpanel_plate": [431.80, 431.80, 3.17],
+        "subpanel_half_extent": 215.90,
+        "corner_collar_pitch": 193.68,
+        "corner_collar_size": 18.92,
+        "corner_collar_proud_to_z": -100.69,
+        "stack_depth_available": 240.32,
+        "standoff_plane_z": -97.22,
+        "tec_plenum_boundary_x": -155.0
+    },
+    "features": {
+        "scaffold_plate_thickness": 3.0,
+        "equipment_standoff_height": 12.0,
+        "oz51x_rear_standoff_height": 30.0,
+        "tec_wall": "left",
+        "tec_vertical_offset": 40.0,
+        "tec_wall_cutout": [125.0, 232.0],
+        "tec_bolt_pattern": [142.0, 286.0],
+        "tec_bolt_dia": 6.0,
+        "tec_interior_intrusion": 91.04,
+        "tec_exterior_projection": 89.37
+    },
+    "results": {
+        "subpanel_bounding_footprint": [371.0, 261.0],
+        "subpanel_bounding_pct": 52,
+        "stack_depth_used": 189.0,
+        "interference": "none",
+        "heat_load_w": 150,
+        "tec_capacity_w_at_zero_dt": 94
+    },
+    "notes": [
+        "Coordinate frame is the Saginaw vendor STEP's own, so imported geometry needs no re-datuming and it matches the existing build-layout2.STEP.",
+        "The TE12 internal loop was measured from the model: Ø120 intake grille at mid-height, discharge through top and bottom bands hugging the mounting wall. That is why X < -155 is reserved as an air plenum.",
+        "THERMAL: total load ≈150 W against a TE12 rated 94 W at ΔT=0 / ~147 W at ΔT=+15 °C. The cabinet will settle near ambient +15 °C. The 200 W TE162024020 fits the same wall and is the recommended upgrade — see DESIGN_NOTES.md.",
+        "The Bedrock vendor STEP contains three mutually exclusive chassis variants at one origin (29 / 45 / 73 mm wide). This layout reserves the 73 mm 60 W worst case.",
+        "The OZ51x housing has no external mounting features of any kind — it needs the cradle plate plus side straps, or mounting ears added to its own model.",
+        "The Ettus B210's four bottom bores are offset 3.05 mm from the case centre; a symmetric bracket will not fit."
+    ]
+}

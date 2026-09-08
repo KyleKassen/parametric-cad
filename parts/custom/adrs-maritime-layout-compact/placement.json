@@ -1,0 +1,2185 @@
+{
+  "title": "ADRS maritime layout - SCE-20H2010LP interior (v3, compact + DIN rail)",
+  "frame": "Saginaw SCE-20H2010LP vendor STEP native frame: +X right, +Y up, +Z toward the door. Subpanel mounting face Z=-109.22, door clear Z=+131.10.",
+  "generated_by": "make_placement.py from interfaces.json - do not hand-edit",
+  "placements": [
+    {
+      "name": "tec_te121024010",
+      "step": "C:/Users/KyleKassen/Documents/Projects/ADRS/CAD/Hoffman/te121024010.stp",
+      "mounted_to": "left_wall",
+      "protrudes_wall": true,
+      "ignores_keepouts": true,
+      "rotate": [
+        {
+          "axis": "X",
+          "degrees": -90
+        },
+        {
+          "axis": "Y",
+          "degrees": 90
+        }
+      ],
+      "box": {
+        "xmin": -343.37,
+        "xmax": -161.05,
+        "ymin": -112.34,
+        "ymax": 192.34,
+        "zmin": -80.11,
+        "zmax": 79.35
+      },
+      "keepouts": [
+        {
+          "name": "interior_fan_intake_finger_guard",
+          "face": "-Y",
+          "xmin": -60.002,
+          "xmax": 59.998,
+          "ymin": -118.883,
+          "ymax": -112.883,
+          "zmin": -52.716,
+          "zmax": 67.284,
+          "clear_out_mm": 50
+        },
+        {
+          "name": "interior_top_discharge_louver_band",
+          "face": "+Z",
+          "xmin": -59,
+          "xmax": 59,
+          "ymin": -71.977,
+          "ymax": -51.98,
+          "zmin": 122.406,
+          "zmax": 122.406,
+          "clear_out_mm": 50
+        },
+        {
+          "name": "interior_bottom_discharge_louver_band",
+          "face": "-Z",
+          "xmin": -59,
+          "xmax": 59,
+          "ymin": -71.977,
+          "ymax": -51.98,
+          "zmin": -107.718,
+          "zmax": -107.718,
+          "clear_out_mm": 50
+        }
+      ],
+      "color": [
+        0.3,
+        0.62,
+        0.8,
+        1.0
+      ],
+      "note": "91.0 mm intrudes, 89.4 mm outboard. Wall cutout 125x232, 6x M6 on 142 x 286."
+    },
+    {
+      "name": "nsp1600_psu",
+      "step": "C:/Users/KyleKassen/Documents/Projects/ADRS/CAD/MeanWell/NSP-1600_0417.stp",
+      "mounted_to": "psu_shelf",
+      "rotate": [
+        {
+          "axis": "X",
+          "degrees": -90
+        },
+        {
+          "axis": "Y",
+          "degrees": -90
+        }
+      ],
+      "box": {
+        "xmin": -180.0,
+        "xmax": 158.6,
+        "ymin": -195.0,
+        "ymax": -154.0,
+        "zmin": -94.22,
+        "zmax": -9.22
+      },
+      "may_touch": [
+        "psu_shelf"
+      ],
+      "mount_holes": [
+        {
+          "id": "BOT-1",
+          "x": 31.787,
+          "y": 338.05,
+          "z": 1.5,
+          "axis": "Z",
+          "size": "M3",
+          "screw_len": 7.0
+        },
+        {
+          "id": "BOT-2",
+          "x": 101.787,
+          "y": 338.05,
+          "z": 1.5,
+          "axis": "Z",
+          "size": "M3",
+          "screw_len": 7.0
+        },
+        {
+          "id": "BOT-3",
+          "x": 66.787,
+          "y": 73.35,
+          "z": 1.5,
+          "axis": "Z",
+          "size": "M3",
+          "screw_len": 7.0
+        }
+      ],
+      "keepouts": [
+        {
+          "name": "PSU rear terminal panel + fan INTAKE louvres",
+          "face": "+Y",
+          "xmin": 24.287,
+          "xmax": 109.287,
+          "ymin": 354.15,
+          "ymax": 354.15,
+          "zmin": 1.5,
+          "zmax": 42.5,
+          "clear_out_mm": 60.0
+        },
+        {
+          "name": "PSU fan EXHAUST face",
+          "face": "-Y",
+          "xmin": 24.287,
+          "xmax": 109.287,
+          "ymin": 53.552,
+          "ymax": 53.552,
+          "zmin": 1.5,
+          "zmax": 42.5,
+          "clear_out_mm": 60.0
+        },
+        {
+          "name": "bare +/-Vo DC busbar blades",
+          "face": "+Y",
+          "xmin": 24.287,
+          "xmax": 109.287,
+          "ymin": 354.15,
+          "ymax": 392.152,
+          "zmin": 1.5,
+          "zmax": 42.5,
+          "clear_out_mm": 25.0
+        }
+      ],
+      "color": [
+        0.85,
+        0.7,
+        0.25,
+        1.0
+      ],
+      "note": "Horizontal — the only qualified attitude. Terminals and bare busbars at +X away from the cold wall; fan exhaust at -X. Hole positions DERIVED from the first-pass analysis, not yet re-measured — verify before drilling."
+    },
+    {
+      "name": "psu_shelf",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "subpanel",
+      "params": {
+        "dx": 306.0,
+        "dy": 3.0,
+        "dz": 95.0
+      },
+      "box": {
+        "xmin": -182.0,
+        "xmax": 124.0,
+        "ymin": -198.0,
+        "ymax": -195.0,
+        "zmin": -97.22,
+        "zmax": -2.22
+      },
+      "may_touch": [
+        "nsp1600_psu",
+        "psu_shelf_flange",
+        "psu_gusset_l",
+        "psu_gusset_r"
+      ],
+      "color": [
+        0.62,
+        0.64,
+        0.67,
+        1.0
+      ],
+      "note": "3 mm 6061, one folded part with the flange below."
+    },
+    {
+      "name": "psu_shelf_flange",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "subpanel",
+      "params": {
+        "dx": 306.0,
+        "dy": 17.9,
+        "dz": 3.0
+      },
+      "box": {
+        "xmin": -182.0,
+        "xmax": 124.0,
+        "ymin": -215.9,
+        "ymax": -198.0,
+        "zmin": -97.22,
+        "zmax": -94.22
+      },
+      "own_holes": [
+        {
+          "id": "PNL-00",
+          "x": -174.0,
+          "y": -206.95,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-10",
+          "x": -101.5,
+          "y": -206.95,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-20",
+          "x": -29.0,
+          "y": -206.95,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-30",
+          "x": 43.5,
+          "y": -206.95,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-40",
+          "x": 116.0,
+          "y": -206.95,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        }
+      ],
+      "may_touch": [
+        "psu_shelf",
+        "psu_gusset_l",
+        "psu_gusset_r"
+      ],
+      "color": [
+        0.62,
+        0.64,
+        0.67,
+        1.0
+      ]
+    },
+    {
+      "name": "psu_gusset_l",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "subpanel",
+      "params": {
+        "dx": 3.0,
+        "dy": 17.9,
+        "dz": 92.0
+      },
+      "box": {
+        "xmin": -179.5,
+        "xmax": -176.5,
+        "ymin": -215.9,
+        "ymax": -198.0,
+        "zmin": -97.22,
+        "zmax": -5.22
+      },
+      "may_touch": [
+        "psu_shelf",
+        "psu_shelf_flange"
+      ],
+      "color": [
+        0.62,
+        0.64,
+        0.67,
+        1.0
+      ],
+      "note": "Kept inboard of the PSU ends so it never sits in the fan tunnel."
+    },
+    {
+      "name": "psu_gusset_r",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "subpanel",
+      "params": {
+        "dx": 3.0,
+        "dy": 17.9,
+        "dz": 92.0
+      },
+      "box": {
+        "xmin": 118.5,
+        "xmax": 121.5,
+        "ymin": -215.9,
+        "ymax": -198.0,
+        "zmin": -97.22,
+        "zmax": -5.22
+      },
+      "may_touch": [
+        "psu_shelf",
+        "psu_shelf_flange"
+      ],
+      "color": [
+        0.62,
+        0.64,
+        0.67,
+        1.0
+      ],
+      "note": "Kept inboard of the PSU ends so it never sits in the fan tunnel."
+    },
+    {
+      "name": "bedrock_v3000",
+      "step": "C:/Users/KyleKassen/Documents/Projects/ADRS/CAD/Solidrun/Bedrock V3000 Basic 3D model.step",
+      "mounted_to": "bedrock_spine",
+      "rotate": [
+        {
+          "axis": "X",
+          "degrees": -90
+        }
+      ],
+      "box": {
+        "xmin": -108.0,
+        "xmax": -35.0,
+        "ymin": -150.0,
+        "ymax": 20.0,
+        "zmin": -94.22,
+        "zmax": 38.78
+      },
+      "may_touch": [
+        "bedrock_spine",
+        "bedrock_shelf"
+      ],
+      "mount_holes": [
+        {
+          "id": "M3_backwall_Z50",
+          "x": 0,
+          "y": 65,
+          "z": 50,
+          "axis": "Y",
+          "size": "M3",
+          "screw_len": 6.0
+        },
+        {
+          "id": "M3_backwall_Z110",
+          "x": 0,
+          "y": 65,
+          "z": 110,
+          "axis": "Y",
+          "size": "M3",
+          "screw_len": 6.0
+        }
+      ],
+      "keepouts": [
+        {
+          "name": "-Y ENVELOPE (use this one)",
+          "face": "-Y",
+          "xmin": -10,
+          "xmax": 10,
+          "ymin": -67.957,
+          "ymax": -65,
+          "zmin": 4.439,
+          "zmax": 153.346,
+          "clear_out_mm": 55
+        },
+        {
+          "name": "+Z ENVELOPE (use this one)",
+          "face": "+Z",
+          "xmin": -8.853,
+          "xmax": 5.952,
+          "ymin": -51.856,
+          "ymax": 53.687,
+          "zmin": 160,
+          "zmax": 170,
+          "clear_out_mm": 45
+        }
+      ],
+      "color": [
+        0.8,
+        0.3,
+        0.25,
+        1.0
+      ],
+      "note": "Fins vertical, left fin bank facing the TEC plenum. Back wall bearing strip is only 20 mm wide (X +/-10) and the 2x M3 take 3.0 mm MAX penetration."
+    },
+    {
+      "name": "bedrock_spine",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "subpanel",
+      "params": {
+        "dx": 20.0,
+        "dy": 164.0,
+        "dz": 3.0,
+        "corner_r": 4.0
+      },
+      "box": {
+        "xmin": -81.5,
+        "xmax": -61.5,
+        "ymin": -130.0,
+        "ymax": 34.0,
+        "zmin": -97.22,
+        "zmax": -94.22
+      },
+      "own_holes": [
+        {
+          "id": "PNL-00",
+          "x": -71.5,
+          "y": -122.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-01",
+          "x": -71.5,
+          "y": 26.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        }
+      ],
+      "may_touch": [
+        "bedrock_v3000",
+        "bedrock_shelf"
+      ],
+      "color": [
+        0.62,
+        0.64,
+        0.67,
+        1.0
+      ],
+      "note": "20 mm wide to match the Bedrock's flat back-wall land — a wider plate would ride on the fin-root blends instead of bearing."
+    },
+    {
+      "name": "bedrock_shelf",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "subpanel",
+      "params": {
+        "dx": 79.0,
+        "dy": 3.0,
+        "dz": 66.0,
+        "corner_r": 3.0
+      },
+      "box": {
+        "xmin": -109.5,
+        "xmax": -30.5,
+        "ymin": -153.0,
+        "ymax": -150.0,
+        "zmin": -94.22,
+        "zmax": -28.22
+      },
+      "may_touch": [
+        "bedrock_v3000",
+        "bedrock_spine",
+        "bedrock_shelf_flange"
+      ],
+      "color": [
+        0.62,
+        0.64,
+        0.67,
+        1.0
+      ],
+      "own_holes": [
+        {
+          "id": "BEDROCK-M4-FOOT",
+          "x": -65.5,
+          "y": -151.5,
+          "z": -60.0,
+          "axis": "Y",
+          "size": "M4",
+          "screw_len": 10.0,
+          "screw_dir": 1
+        }
+      ],
+      "note": "Carries the 1.6 kg in shear and picks up the M4x8 deep tapping in the Bedrock's bottom end cap, so the two shallow M3s only locate it."
+    },
+    {
+      "name": "bedrock_shelf_flange",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "subpanel",
+      "params": {
+        "dx": 79.0,
+        "dy": 18.0,
+        "dz": 3.0
+      },
+      "box": {
+        "xmin": -109.5,
+        "xmax": -30.5,
+        "ymin": -153.0,
+        "ymax": -135.0,
+        "zmin": -97.22,
+        "zmax": -94.22
+      },
+      "own_holes": [
+        {
+          "id": "PNL-00",
+          "x": -101.5,
+          "y": -144.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-10",
+          "x": -38.5,
+          "y": -144.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        }
+      ],
+      "may_touch": [
+        "bedrock_shelf",
+        "bedrock_spine"
+      ],
+      "color": [
+        0.62,
+        0.64,
+        0.67,
+        1.0
+      ],
+      "note": "The shelf and this flange are ONE folded 3 mm part: 66 mm horizontal leg, 18 mm vertical leg, bend line at Z=-94.22."
+    },
+    {
+      "name": "ubr_plus",
+      "step": "C:/Users/KyleKassen/Documents/Projects/ADRS/CAD/Peplink/UBR_Plus.stp",
+      "mounted_to": "ubr_bracket",
+      "rotate": [
+        {
+          "axis": "Z",
+          "degrees": -90
+        },
+        {
+          "axis": "X",
+          "degrees": -90
+        }
+      ],
+      "box": {
+        "xmin": -5.0,
+        "xmax": 24.3,
+        "ymin": -70.0,
+        "ymax": 96.2,
+        "zmin": -94.22,
+        "zmax": 77.58
+      },
+      "may_touch": [
+        "ubr_bracket"
+      ],
+      "mount_holes": [
+        {
+          "id": "FLG-1",
+          "x": -65.762,
+          "y": 7.239,
+          "z": 0.38,
+          "axis": "Y",
+          "size": "M4",
+          "screw_len": 14.0
+        },
+        {
+          "id": "FLG-2",
+          "x": -65.762,
+          "y": 7.239,
+          "z": -82.32,
+          "axis": "Y",
+          "size": "M4",
+          "screw_len": 14.0
+        },
+        {
+          "id": "FLG-3",
+          "x": 96.038,
+          "y": 7.239,
+          "z": 0.38,
+          "axis": "Y",
+          "size": "M4",
+          "screw_len": 14.0
+        },
+        {
+          "id": "FLG-4",
+          "x": 96.038,
+          "y": 7.239,
+          "z": -82.32,
+          "axis": "Y",
+          "size": "M4",
+          "screw_len": 14.0
+        }
+      ],
+      "keepouts": [
+        {
+          "name": "-Z SMA bank, 5x cellular/GPS bulkhead",
+          "face": "-Z",
+          "xmin": -16.468,
+          "xmax": 80.744,
+          "ymin": 10.633,
+          "ymax": 28.845,
+          "zmin": -125.401,
+          "zmax": -115.97,
+          "clear_out_mm": 55
+        },
+        {
+          "name": "-Z SIM door / SIM card slots",
+          "face": "-Z",
+          "xmin": -50.212,
+          "xmax": -20.612,
+          "ymin": 10.289,
+          "ymax": 18.789,
+          "zmin": -119.47,
+          "zmax": -115.97,
+          "clear_out_mm": 30
+        },
+        {
+          "name": "-Z recessed round feature (reset / LED, dia 6.000)",
+          "face": "-Z",
+          "xmin": -38.387,
+          "xmax": -32.387,
+          "ymin": 18.989,
+          "ymax": 26.889,
+          "zmin": -116.77,
+          "zmax": -115.97,
+          "clear_out_mm": 15
+        },
+        {
+          "name": "-Z vendor end-cap service screws (4x)",
+          "face": "-Z",
+          "xmin": -58.862,
+          "xmax": 89.138,
+          "ymin": 8.239,
+          "ymax": 28.146,
+          "zmin": -115.97,
+          "zmax": -115.87,
+          "clear_out_mm": 25
+        },
+        {
+          "name": "+Z Wi-Fi SMA, -X unit",
+          "face": "+Z",
+          "xmin": -49.962,
+          "xmax": -42.762,
+          "ymin": 18.139,
+          "ymax": 25.339,
+          "zmin": 34.03,
+          "zmax": 40.83,
+          "clear_out_mm": 50
+        },
+        {
+          "name": "+Z Wi-Fi SMA, +X unit",
+          "face": "+Z",
+          "xmin": 73.038,
+          "xmax": 80.238,
+          "ymin": 18.139,
+          "ymax": 25.339,
+          "zmin": 34.03,
+          "zmax": 40.83,
+          "clear_out_mm": 50
+        },
+        {
+          "name": "+Z port-bank opening",
+          "face": "+Z",
+          "xmin": -38.562,
+          "xmax": 42.788,
+          "ymin": 15.039,
+          "ymax": 28.839,
+          "zmin": 32.03,
+          "zmax": 34.03,
+          "clear_out_mm": 60
+        },
+        {
+          "name": "+Z indicator / light-pipe holes (4x dia-2.500)",
+          "face": "+Z",
+          "xmin": 48.288,
+          "xmax": 50.788,
+          "ymin": 11.289,
+          "ymax": 29.089,
+          "zmin": 32.03,
+          "zmax": 34.03,
+          "clear_out_mm": 5
+        },
+        {
+          "name": "+Z secondary opening",
+          "face": "+Z",
+          "xmin": 56.906,
+          "xmax": 66.769,
+          "ymin": 15.189,
+          "ymax": 26.819,
+          "zmin": 32.03,
+          "zmax": 34.03,
+          "clear_out_mm": 20
+        },
+        {
+          "name": "+Z vendor end-cap service screws (4x)",
+          "face": "+Z",
+          "xmin": -58.862,
+          "xmax": 89.138,
+          "ymin": 8.239,
+          "ymax": 28.146,
+          "zmin": 33.73,
+          "zmax": 34.03,
+          "clear_out_mm": 25
+        },
+        {
+          "name": "+Y finned heatsink",
+          "face": "+Y",
+          "xmin": -34.56,
+          "xmax": 64.836,
+          "ymin": 30.871,
+          "ymax": 36.54,
+          "zmin": -113.97,
+          "zmax": 32.03,
+          "clear_out_mm": 20
+        }
+      ],
+      "color": [
+        0.35,
+        0.7,
+        0.4,
+        1.0
+      ],
+      "note": "Flat cast flange bolts full-contact to the bracket — that face is its main heat path. Cellular SMA end DOWN (55 mm clear), port bank UP (60 mm)."
+    },
+    {
+      "name": "ubr_bracket",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "subpanel",
+      "params": {
+        "dx": 3.0,
+        "dy": 152.0,
+        "dz": 178.0,
+        "corner_r": 6.0
+      },
+      "box": {
+        "xmin": -8.0,
+        "xmax": -5.0,
+        "ymin": -63.0,
+        "ymax": 89.0,
+        "zmin": -94.22,
+        "zmax": 84.0
+      },
+      "may_touch": [
+        "ubr_plus",
+        "ubr_bracket_flange"
+      ],
+      "color": [
+        0.62,
+        0.64,
+        0.67,
+        1.0
+      ],
+      "note": "Full-contact spreader — 10,781 mm2 of real metal-to-metal inside the hole rectangle. Not four isolated standoffs."
+    },
+    {
+      "name": "ubr_bracket_flange",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "subpanel",
+      "params": {
+        "dx": 24.0,
+        "dy": 152.0,
+        "dz": 3.0
+      },
+      "box": {
+        "xmin": -32.0,
+        "xmax": -8.0,
+        "ymin": -63.0,
+        "ymax": 89.0,
+        "zmin": -97.22,
+        "zmax": -94.22
+      },
+      "own_holes": [
+        {
+          "id": "PNL-00",
+          "x": -25.0,
+          "y": -56.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-01",
+          "x": -25.0,
+          "y": 82.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-10",
+          "x": -15.0,
+          "y": -56.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-11",
+          "x": -15.0,
+          "y": 82.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        }
+      ],
+      "may_touch": [
+        "ubr_bracket"
+      ],
+      "color": [
+        0.62,
+        0.64,
+        0.67,
+        1.0
+      ],
+      "note": "Web plus flange is ONE folded 3 mm part: 178 mm web, 24 mm flange, bend line at Z=-94.22. Narrowed from v2's 34 mm so its bolt heads stay clear of the Bedrock, which now sits 3 mm to its left."
+    },
+    {
+      "name": "oz51x_dual_tx_housing",
+      "step": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\oz51x-dual-tx-housing-vertical-gpt-5-6-sol\\exports\\oz51x-dual-tx-housing-vertical-gpt-5-6-sol_v1.step",
+      "mounted_to": "oz51x_cradle",
+      "rotate": [
+        {
+          "axis": "Z",
+          "degrees": -90
+        },
+        {
+          "axis": "X",
+          "degrees": -90
+        }
+      ],
+      "box": {
+        "xmin": 45.0,
+        "xmax": 178.5,
+        "ymin": -134.0,
+        "ymax": -41.8,
+        "zmin": -94.22,
+        "zmax": -61.5
+      },
+      "may_touch": [
+        "oz51x_cradle",
+        "oz51x_clip_top_foot",
+        "oz51x_clip_top_lip",
+        "oz51x_clip_bot_foot",
+        "oz51x_clip_bot_lip_a",
+        "oz51x_clip_bot_lip_b"
+      ],
+      "keepouts": [
+        {
+          "name": "SMA bulkhead - lower (TTL bay)",
+          "face": "-Y",
+          "xmin": -13.33,
+          "xmax": -3.33,
+          "ymin": -36.25,
+          "ymax": -36.25,
+          "zmin": 5.85,
+          "zmax": 15.85,
+          "clear_out_mm": 30
+        },
+        {
+          "name": "SMA bulkhead - upper (RF bay)",
+          "face": "-Y",
+          "xmin": -13.33,
+          "xmax": -3.33,
+          "ymin": -36.25,
+          "ymax": -36.25,
+          "zmin": 50.95,
+          "zmax": 60.95,
+          "clear_out_mm": 30
+        },
+        {
+          "name": "SC/APC simplex adapter - lower",
+          "face": "+Y",
+          "xmin": -15.72,
+          "xmax": 6.28,
+          "ymin": 97.25,
+          "ymax": 97.25,
+          "zmin": 12.2,
+          "zmax": 24,
+          "clear_out_mm": 45
+        },
+        {
+          "name": "SC/APC simplex adapter - upper",
+          "face": "+Y",
+          "xmin": -15.72,
+          "xmax": 6.28,
+          "ymin": 97.25,
+          "ymax": 97.25,
+          "zmin": 68.2,
+          "zmax": 80,
+          "clear_out_mm": 45
+        },
+        {
+          "name": "DE-9 panel connector",
+          "face": "+Y",
+          "xmin": -15,
+          "xmax": 13.36,
+          "ymin": 97.25,
+          "ymax": 97.25,
+          "zmin": 39.5,
+          "zmax": 52.7,
+          "clear_out_mm": 40
+        },
+        {
+          "name": "Cover vent slots - lower bay",
+          "face": "+X",
+          "xmin": 16.36,
+          "xmax": 16.36,
+          "ymin": -2,
+          "ymax": 12,
+          "zmin": 9.55,
+          "zmax": 21.55,
+          "clear_out_mm": 10
+        },
+        {
+          "name": "Cover vent slots - upper bay",
+          "face": "+X",
+          "xmin": 16.36,
+          "xmax": 16.36,
+          "ymin": -2,
+          "ymax": 12,
+          "zmin": 54.65,
+          "zmax": 66.65,
+          "clear_out_mm": 10
+        },
+        {
+          "name": "Header service access opening - lower bay",
+          "face": "+X",
+          "xmin": 16.36,
+          "xmax": 16.36,
+          "ymin": -31.5,
+          "ymax": -25.5,
+          "zmin": 27.75,
+          "zmax": 43.45,
+          "clear_out_mm": 25
+        },
+        {
+          "name": "Header service access opening - upper bay",
+          "face": "+X",
+          "xmin": 16.36,
+          "xmax": 16.36,
+          "ymin": -31.5,
+          "ymax": -25.5,
+          "zmin": 72.85,
+          "zmax": 88.55,
+          "clear_out_mm": 25
+        },
+        {
+          "name": "Lid-screw counterbore pockets (6)",
+          "face": "+X",
+          "xmin": 16.36,
+          "xmax": 16.36,
+          "ymin": -32.55,
+          "ymax": 93.55,
+          "zmin": 3.7,
+          "zmax": 88.5,
+          "clear_out_mm": 60
+        },
+        {
+          "name": "Drain outlets",
+          "face": "-Z",
+          "xmin": -13.11,
+          "xmax": -10.11,
+          "ymin": 18.5,
+          "ymax": 45.75,
+          "zmin": 0,
+          "zmax": 0,
+          "clear_out_mm": 5
+        }
+      ],
+      "color": [
+        0.62,
+        0.35,
+        0.72,
+        1.0
+      ],
+      "note": "Mounted on its ONLY connector-free face (-X). Service cover faces the door, SC/APC + DE-9 face +X, SMA face -X, and local +Z maps to enclosure +Y so the two drain outlets actually point DOWN — the inverted rotation pair (Z+90,X+90) looks identical on an axis check but stands it on its head."
+    },
+    {
+      "name": "oz51x_cradle",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "subpanel",
+      "params": {
+        "dx": 137.5,
+        "dy": 96.0,
+        "dz": 3.0,
+        "corner_r": 4.0
+      },
+      "box": {
+        "xmin": 43.0,
+        "xmax": 180.5,
+        "ymin": -136.0,
+        "ymax": -40.0,
+        "zmin": -97.22,
+        "zmax": -94.22
+      },
+      "own_holes": [
+        {
+          "id": "PNL-00",
+          "x": 52.0,
+          "y": -127.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-01",
+          "x": 52.0,
+          "y": -49.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-10",
+          "x": 111.75,
+          "y": -127.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-11",
+          "x": 111.75,
+          "y": -49.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-20",
+          "x": 171.5,
+          "y": -127.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-21",
+          "x": 171.5,
+          "y": -49.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        }
+      ],
+      "may_touch": [
+        "oz51x_dual_tx_housing",
+        "oz51x_clip_top_foot",
+        "oz51x_clip_top_lip",
+        "oz51x_clip_bot_foot",
+        "oz51x_clip_bot_lip_a",
+        "oz51x_clip_bot_lip_b"
+      ],
+      "color": [
+        0.62,
+        0.64,
+        0.67,
+        1.0
+      ],
+      "note": "Bears on the housing's flat -X face (12,305 mm2, zero features). The part has NO fixings, so it is captured by the two clips rather than bolted."
+    },
+    {
+      "name": "oz51x_clip_top_foot",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "subpanel",
+      "params": {
+        "dx": 137.5,
+        "dy": 17.799999999999997,
+        "dz": 3.0,
+        "corner_r": 2.0
+      },
+      "box": {
+        "xmin": 43.0,
+        "xmax": 180.5,
+        "ymin": -41.8,
+        "ymax": -24.0,
+        "zmin": -97.22,
+        "zmax": -94.22
+      },
+      "may_touch": [
+        "oz51x_dual_tx_housing",
+        "oz51x_cradle",
+        "oz51x_clip_top_foot",
+        "oz51x_clip_top_lip",
+        "oz51x_clip_bot_foot",
+        "oz51x_clip_bot_lip_a",
+        "oz51x_clip_bot_lip_b"
+      ],
+      "color": [
+        0.62,
+        0.64,
+        0.67,
+        1.0
+      ],
+      "note": "Hold-down clip: foot bolts to the subpanel, lip laps the housing face. Foot and lip are one folded part.",
+      "own_holes": [
+        {
+          "id": "PNL-00",
+          "x": 53.0,
+          "y": -32.9,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-10",
+          "x": 111.75,
+          "y": -32.9,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-20",
+          "x": 170.5,
+          "y": -32.9,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        }
+      ]
+    },
+    {
+      "name": "oz51x_clip_top_lip",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "subpanel",
+      "params": {
+        "dx": 137.5,
+        "dy": 3.0,
+        "dz": 28.22,
+        "corner_r": 2.0
+      },
+      "box": {
+        "xmin": 43.0,
+        "xmax": 180.5,
+        "ymin": -41.8,
+        "ymax": -38.8,
+        "zmin": -94.22,
+        "zmax": -66.0
+      },
+      "may_touch": [
+        "oz51x_dual_tx_housing",
+        "oz51x_cradle",
+        "oz51x_clip_top_foot",
+        "oz51x_clip_top_lip",
+        "oz51x_clip_bot_foot",
+        "oz51x_clip_bot_lip_a",
+        "oz51x_clip_bot_lip_b"
+      ],
+      "color": [
+        0.62,
+        0.64,
+        0.67,
+        1.0
+      ],
+      "note": "Hold-down clip: foot bolts to the subpanel, lip laps the housing face. Foot and lip are one folded part."
+    },
+    {
+      "name": "oz51x_clip_bot_foot",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "subpanel",
+      "params": {
+        "dx": 137.5,
+        "dy": 18.0,
+        "dz": 3.0,
+        "corner_r": 2.0
+      },
+      "box": {
+        "xmin": 43.0,
+        "xmax": 180.5,
+        "ymin": -154.0,
+        "ymax": -136.0,
+        "zmin": -97.22,
+        "zmax": -94.22
+      },
+      "may_touch": [
+        "oz51x_dual_tx_housing",
+        "oz51x_cradle",
+        "oz51x_clip_top_foot",
+        "oz51x_clip_top_lip",
+        "oz51x_clip_bot_foot",
+        "oz51x_clip_bot_lip_a",
+        "oz51x_clip_bot_lip_b"
+      ],
+      "color": [
+        0.62,
+        0.64,
+        0.67,
+        1.0
+      ],
+      "note": "Hold-down clip: foot bolts to the subpanel, lip laps the housing face. Foot and lip are one folded part.",
+      "own_holes": [
+        {
+          "id": "PNL-00",
+          "x": 53.0,
+          "y": -145.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-10",
+          "x": 111.75,
+          "y": -145.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-20",
+          "x": 170.5,
+          "y": -145.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        }
+      ]
+    },
+    {
+      "name": "oz51x_clip_bot_lip_a",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "subpanel",
+      "params": {
+        "dx": 52.0,
+        "dy": 3.0,
+        "dz": 28.22,
+        "corner_r": 2.0
+      },
+      "box": {
+        "xmin": 43.0,
+        "xmax": 95.0,
+        "ymin": -137.0,
+        "ymax": -134.0,
+        "zmin": -94.22,
+        "zmax": -66.0
+      },
+      "may_touch": [
+        "oz51x_dual_tx_housing",
+        "oz51x_cradle",
+        "oz51x_clip_top_foot",
+        "oz51x_clip_top_lip",
+        "oz51x_clip_bot_foot",
+        "oz51x_clip_bot_lip_a",
+        "oz51x_clip_bot_lip_b"
+      ],
+      "color": [
+        0.62,
+        0.64,
+        0.67,
+        1.0
+      ],
+      "note": "Hold-down clip: foot bolts to the subpanel, lip laps the housing face. Foot and lip are one folded part."
+    },
+    {
+      "name": "oz51x_clip_bot_lip_b",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "subpanel",
+      "params": {
+        "dx": 47.5,
+        "dy": 3.0,
+        "dz": 28.22,
+        "corner_r": 2.0
+      },
+      "box": {
+        "xmin": 133.0,
+        "xmax": 180.5,
+        "ymin": -137.0,
+        "ymax": -134.0,
+        "zmin": -94.22,
+        "zmax": -66.0
+      },
+      "may_touch": [
+        "oz51x_dual_tx_housing",
+        "oz51x_cradle",
+        "oz51x_clip_top_foot",
+        "oz51x_clip_top_lip",
+        "oz51x_clip_bot_foot",
+        "oz51x_clip_bot_lip_a",
+        "oz51x_clip_bot_lip_b"
+      ],
+      "color": [
+        0.62,
+        0.64,
+        0.67,
+        1.0
+      ],
+      "note": "Hold-down clip: foot bolts to the subpanel, lip laps the housing face. Foot and lip are one folded part."
+    },
+    {
+      "name": "ettus_b210",
+      "step": "C:/Users/KyleKassen/Documents/Projects/ADRS/CAD/Ettus/Ettus_USRP_B210_Full_Unit.step",
+      "mounted_to": "b210_bracket",
+      "rotate": [
+        {
+          "axis": "X",
+          "degrees": -90
+        },
+        {
+          "axis": "Y",
+          "degrees": -90
+        }
+      ],
+      "box": {
+        "xmin": 81.3,
+        "xmax": 118.56,
+        "ymin": 20.0,
+        "ymax": 197.65,
+        "zmin": -94.22,
+        "zmax": 28.13
+      },
+      "may_touch": [
+        "b210_bracket"
+      ],
+      "mount_holes": [
+        {
+          "id": "BOT-1",
+          "x": 11.701,
+          "y": -1.21,
+          "z": -20.628,
+          "axis": "Y",
+          "size": "M3",
+          "screw_len": 6.0
+        },
+        {
+          "id": "BOT-2",
+          "x": 105.3,
+          "y": -1.21,
+          "z": -20.628,
+          "axis": "Y",
+          "size": "M3",
+          "screw_len": 6.0
+        },
+        {
+          "id": "BOT-3",
+          "x": 11.701,
+          "y": -1.21,
+          "z": -140.643,
+          "axis": "Y",
+          "size": "M3",
+          "screw_len": 6.0
+        },
+        {
+          "id": "BOT-4",
+          "x": 105.3,
+          "y": -1.21,
+          "z": -140.643,
+          "axis": "Y",
+          "size": "M3",
+          "screw_len": 6.0
+        }
+      ],
+      "keepouts": [
+        {
+          "name": "FRONT_SMA_BANK (4x SMA)",
+          "face": "+Z",
+          "xmin": 19.666,
+          "xmax": 96.729,
+          "ymin": 5.198,
+          "ymax": 16.254,
+          "zmin": 0.914,
+          "zmax": 11.046,
+          "clear_out_mm": 40
+        },
+        {
+          "name": "FRONT_LED_WINDOWS (4x lightpipe)",
+          "face": "+Z",
+          "xmin": 30.931,
+          "xmax": 100.679,
+          "ymin": 13.541,
+          "ymax": 17.41,
+          "zmin": 0.914,
+          "zmax": 2.235,
+          "clear_out_mm": 5
+        },
+        {
+          "name": "FRONT_CASE_SCREW_HEADS",
+          "face": "+Z",
+          "xmin": 3.295,
+          "xmax": 113.705,
+          "ymin": 2.4,
+          "ymax": 28.81,
+          "zmin": 0.914,
+          "zmax": 2.521,
+          "clear_out_mm": 25
+        },
+        {
+          "name": "REAR_SMA_BANK (3x SMA)",
+          "face": "-Z",
+          "xmin": 31.983,
+          "xmax": 99.724,
+          "ymin": 5.198,
+          "ymax": 16.254,
+          "zmin": -166.602,
+          "zmax": -156.46,
+          "clear_out_mm": 40
+        },
+        {
+          "name": "REAR_USB3_B",
+          "face": "-Z",
+          "xmin": 50.079,
+          "xmax": 63.339,
+          "ymin": 9.886,
+          "ymax": 23.756,
+          "zmin": -158.308,
+          "zmax": -156.46,
+          "clear_out_mm": 55
+        },
+        {
+          "name": "REAR_DC_BARREL",
+          "face": "-Z",
+          "xmin": 13.681,
+          "xmax": 24.325,
+          "ymin": 9.882,
+          "ymax": 22.151,
+          "zmin": -158.272,
+          "zmax": -156.46,
+          "clear_out_mm": 45
+        },
+        {
+          "name": "REAR_LED_WINDOWS (2x lightpipe)",
+          "face": "-Z",
+          "xmin": 28.007,
+          "xmax": 88.383,
+          "ymin": 13.541,
+          "ymax": 17.308,
+          "zmin": -157.791,
+          "zmax": -156.46,
+          "clear_out_mm": 5
+        },
+        {
+          "name": "REAR_CASE_SCREW_HEADS",
+          "face": "-Z",
+          "xmin": 3.295,
+          "xmax": 113.705,
+          "ymin": 2.4,
+          "ymax": 28.81,
+          "zmin": -158.067,
+          "zmax": -156.46,
+          "clear_out_mm": 25
+        },
+        {
+          "name": "LEFT_SIDE_SLOT_3x7",
+          "face": "-X",
+          "xmin": -2.674,
+          "xmax": -2.674,
+          "ymin": 15,
+          "ymax": 18,
+          "zmin": -15.406,
+          "zmax": -8.406,
+          "clear_out_mm": 10
+        },
+        {
+          "name": "RIGHT_SIDE_SLOT_3x7",
+          "face": "+X",
+          "xmin": 119.674,
+          "xmax": 119.674,
+          "ymin": 15,
+          "ymax": 18,
+          "zmin": -147,
+          "zmax": -140,
+          "clear_out_mm": 10
+        }
+      ],
+      "color": [
+        0.95,
+        0.55,
+        0.2,
+        1.0
+      ],
+      "note": "Hole pattern is symmetric in X but offset 3.05 mm in Z — a Z-symmetric bracket will NOT fit. Tapped M3x0.5, 3.574 mm MAX penetration. The four rubber feet must be peeled off so it seats flat. Its -X side slot faces the subpanel with 15 mm of air under it, which satisfies the 10 mm the slot asks for without a spacer."
+    },
+    {
+      "name": "b210_bracket",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "subpanel",
+      "params": {
+        "dx": 3.0,
+        "dy": 183.65,
+        "dz": 125.35,
+        "corner_r": 6.0
+      },
+      "box": {
+        "xmin": 78.3,
+        "xmax": 81.3,
+        "ymin": 17.0,
+        "ymax": 200.65,
+        "zmin": -94.22,
+        "zmax": 31.13
+      },
+      "may_touch": [
+        "ettus_b210",
+        "b210_bracket_flange"
+      ],
+      "color": [
+        0.62,
+        0.64,
+        0.67,
+        1.0
+      ],
+      "note": "Vertical web. The B210's four M3 land on it directly, so the pattern cannot drift — it is the same numbers the unit was measured with."
+    },
+    {
+      "name": "b210_bracket_flange",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "subpanel",
+      "params": {
+        "dx": 34.0,
+        "dy": 183.65,
+        "dz": 3.0
+      },
+      "box": {
+        "xmin": 44.3,
+        "xmax": 78.3,
+        "ymin": 17.0,
+        "ymax": 200.65,
+        "zmin": -97.22,
+        "zmax": -94.22
+      },
+      "own_holes": [
+        {
+          "id": "PNL-00",
+          "x": 53.3,
+          "y": 26.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-01",
+          "x": 53.3,
+          "y": 81.21666666666667,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-02",
+          "x": 53.3,
+          "y": 136.43333333333334,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-03",
+          "x": 53.3,
+          "y": 191.65,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-10",
+          "x": 69.3,
+          "y": 26.0,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-11",
+          "x": 69.3,
+          "y": 81.21666666666667,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-12",
+          "x": 69.3,
+          "y": 136.43333333333334,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-13",
+          "x": 69.3,
+          "y": 191.65,
+          "z": -95.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 18.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        }
+      ],
+      "may_touch": [
+        "b210_bracket"
+      ],
+      "color": [
+        0.62,
+        0.64,
+        0.67,
+        1.0
+      ],
+      "note": "Web plus flange is ONE folded 3 mm part: 125 mm web, 34 mm flange, bend line at Z=-94.22. Eight M5 into the subpanel because this one is a cantilever carrying 0.35 kg at 60 mm."
+    },
+    {
+      "name": "din_rail_ts35",
+      "source": "scaffold",
+      "kind": "din_rail",
+      "mounted_to": "subpanel",
+      "purchased": true,
+      "params": {
+        "length": 290.0,
+        "t": 1.0,
+        "width": 35.0,
+        "height": 7.5
+      },
+      "box": {
+        "xmin": -105.0,
+        "xmax": 185.0,
+        "ymin": 142.5,
+        "ymax": 177.5,
+        "zmin": -109.22,
+        "zmax": -101.72
+      },
+      "own_holes": [
+        {
+          "id": "RAIL-0",
+          "x": -95.0,
+          "y": 160.0,
+          "z": -108.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 14.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "RAIL-1",
+          "x": -50.0,
+          "y": 160.0,
+          "z": -108.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 14.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "RAIL-2",
+          "x": -5.0,
+          "y": 160.0,
+          "z": -108.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 14.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "RAIL-3",
+          "x": 40.0,
+          "y": 160.0,
+          "z": -108.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 14.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "RAIL-4",
+          "x": 85.0,
+          "y": 160.0,
+          "z": -108.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 14.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "RAIL-5",
+          "x": 130.0,
+          "y": 160.0,
+          "z": -108.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 14.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "RAIL-6",
+          "x": 165.0,
+          "y": 160.0,
+          "z": -108.72,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 14.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        }
+      ],
+      "may_touch": [
+        "brainboxes_es511",
+        "din_end_stop_l",
+        "din_end_stop_r"
+      ],
+      "color": [
+        0.72,
+        0.73,
+        0.75,
+        1.0
+      ],
+      "note": "290 mm of TS35, centreline Y = +160, bolted straight to the subpanel on 7 stations at 45 mm pitch. THE HEADS MUST BE PAN OR COUNTERSUNK, 3.5 mm MAX: a device clip reaches 3.5 mm into the channel and a socket head is 5 mm. Clear of all four corner collars, which are proud to Z = -100.69 at (+/-193.68, +/-193.68)."
+    },
+    {
+      "name": "din_end_stop_l",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "din_rail_ts35",
+      "purchased": true,
+      "params": {
+        "dx": 10.0,
+        "dy": 35.0,
+        "dz": 26.0,
+        "corner_r": 2.0
+      },
+      "box": {
+        "xmin": 139.0,
+        "xmax": 149.0,
+        "ymin": 142.5,
+        "ymax": 177.5,
+        "zmin": -109.22,
+        "zmax": -83.22
+      },
+      "may_touch": [
+        "din_rail_ts35",
+        "brainboxes_es511",
+        "din_end_stop_l",
+        "din_end_stop_r"
+      ],
+      "color": [
+        0.3,
+        0.32,
+        0.36,
+        1.0
+      ],
+      "note": "Screw-clamp rail end stop. Not optional here — a DIN clip alone is not a shock mount, and this module is 99 mm of cantilever."
+    },
+    {
+      "name": "din_end_stop_r",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "din_rail_ts35",
+      "purchased": true,
+      "params": {
+        "dx": 10.0,
+        "dy": 35.0,
+        "dz": 26.0,
+        "corner_r": 2.0
+      },
+      "box": {
+        "xmin": 172.6,
+        "xmax": 182.6,
+        "ymin": 142.5,
+        "ymax": 177.5,
+        "zmin": -109.22,
+        "zmax": -83.22
+      },
+      "may_touch": [
+        "din_rail_ts35",
+        "brainboxes_es511",
+        "din_end_stop_l",
+        "din_end_stop_r"
+      ],
+      "color": [
+        0.3,
+        0.32,
+        0.36,
+        1.0
+      ],
+      "note": "Screw-clamp rail end stop. Not optional here — a DIN clip alone is not a shock mount, and this module is 99 mm of cantilever."
+    },
+    {
+      "name": "brainboxes_es511",
+      "step": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\vendor\\Brainboxes - ES-511 Cased PCB 3D Model.step",
+      "mounted_to": "din_rail_ts35",
+      "rotate": [
+        {
+          "axis": "X",
+          "degrees": 90
+        },
+        {
+          "axis": "Z",
+          "degrees": 90
+        }
+      ],
+      "box": {
+        "xmin": 150.0,
+        "xmax": 172.6,
+        "ymin": 110.5,
+        "ymax": 209.5,
+        "zmin": -108.32,
+        "zmax": 6.105000000000004
+      },
+      "may_touch": [
+        "din_rail_ts35",
+        "din_end_stop_l",
+        "din_end_stop_r"
+      ],
+      "keepouts": [
+        {
+          "name": "+Y RJ45 Ethernet jack (plug + strain-relief boot)",
+          "face": "+Y",
+          "xmin": -2.9,
+          "xmax": 12.7,
+          "ymin": 51.39,
+          "ymax": 51.39,
+          "zmin": -2.6,
+          "zmax": 13.8,
+          "clear_out_mm": 45.0
+        },
+        {
+          "name": "+Y screw terminal block, -X end",
+          "face": "+Y",
+          "xmin": -38.46,
+          "xmax": -22.36,
+          "ymin": 46.38,
+          "ymax": 46.38,
+          "zmin": -1.55,
+          "zmax": 16.15,
+          "clear_out_mm": 30.0
+        },
+        {
+          "name": "+Y screw terminal block, +X end",
+          "face": "+Y",
+          "xmin": 22.36,
+          "xmax": 38.8,
+          "ymin": 51.25,
+          "ymax": 51.25,
+          "zmin": -2.8,
+          "zmax": 17.2,
+          "clear_out_mm": 30.0
+        },
+        {
+          "name": "-X louvre band",
+          "face": "-X",
+          "xmin": -42.55,
+          "xmax": -42.55,
+          "ymin": -50.0,
+          "ymax": 40.0,
+          "zmin": -4.0,
+          "zmax": 18.6,
+          "clear_out_mm": 15.0
+        },
+        {
+          "name": "+X louvre band",
+          "face": "+X",
+          "xmin": 42.55,
+          "xmax": 42.55,
+          "ymin": -50.0,
+          "ymax": 40.0,
+          "zmin": -4.0,
+          "zmax": 18.6,
+          "clear_out_mm": 15.0
+        },
+        {
+          "name": "-X sliding-jaw release travel + tool access",
+          "face": "-X",
+          "xmin": -49.5,
+          "xmax": -49.5,
+          "ymin": -62.1,
+          "ymax": -55.5,
+          "zmin": -1.45,
+          "zmax": 16.05,
+          "clear_out_mm": 20.0
+        }
+      ],
+      "color": [
+        0.25,
+        0.45,
+        0.75,
+        1.0
+      ],
+      "note": "Clipped, not bolted — it has no fastener features at all. Its back plane lands on the rail lips at Z = -101.72 and it projects 115.3 mm from the subpanel, so the RJ45 and both terminal blocks face the open door. Louvres end up on the +/-Y faces, which is the right way up for a horizontal rail."
+    },
+    {
+      "name": "certus_mini_d",
+      "step": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\vendor\\advanced-navigation-imu\\Certus-Mini-D-Rugged-3D-model-v1.0.STEP",
+      "mounted_to": "certus_pedestal",
+      "rotate": [
+        {
+          "axis": "X",
+          "degrees": 90
+        }
+      ],
+      "box": {
+        "xmin": 165.0,
+        "xmax": 195.0,
+        "ymin": 26.0,
+        "ymax": 72.617,
+        "zmin": -101.22,
+        "zmax": -67.22
+      },
+      "may_touch": [
+        "certus_pedestal"
+      ],
+      "mount_holes": [
+        {
+          "id": "IMU-1",
+          "x": -13.0,
+          "y": 0.0,
+          "z": 18.5,
+          "axis": "Y",
+          "size": "M2",
+          "screw_len": 6.0
+        },
+        {
+          "id": "IMU-2",
+          "x": 13.0,
+          "y": 0.0,
+          "z": 18.5,
+          "axis": "Y",
+          "size": "M2",
+          "screw_len": 6.0
+        },
+        {
+          "id": "IMU-3",
+          "x": 13.0,
+          "y": 0.0,
+          "z": -18.5,
+          "axis": "Y",
+          "size": "M2",
+          "screw_len": 6.0
+        },
+        {
+          "id": "IMU-4",
+          "x": -13.0,
+          "y": 0.0,
+          "z": -18.5,
+          "axis": "Y",
+          "size": "M2",
+          "screw_len": 6.0
+        }
+      ],
+      "keepouts": [
+        {
+          "name": "+Z GNSS SMA #1 (primary antenna)",
+          "face": "+Z",
+          "xmin": -10.18,
+          "xmax": -3.82,
+          "ymin": 13.22,
+          "ymax": 19.58,
+          "zmin": 16.25,
+          "zmax": 26.117,
+          "clear_out_mm": 40.0
+        },
+        {
+          "name": "+Z GNSS SMA #2 (secondary / heading antenna)",
+          "face": "+Z",
+          "xmin": -10.18,
+          "xmax": -3.82,
+          "ymin": 24.42,
+          "ymax": 30.78,
+          "zmin": 16.25,
+          "zmax": 26.117,
+          "clear_out_mm": 40.0
+        },
+        {
+          "name": "+Z circular data / power connector",
+          "face": "+Z",
+          "xmin": 0.0,
+          "xmax": 12.0,
+          "ymin": 16.0,
+          "ymax": 28.0,
+          "zmin": 16.25,
+          "zmax": 23.15,
+          "clear_out_mm": 45.0
+        }
+      ],
+      "color": [
+        0.2,
+        0.65,
+        0.72,
+        1.0
+      ],
+      "note": "Its base is BOTH the only fixing face and the alignment datum, so the pedestal face defines the INS axes. Sited clear of the TEC plenum and about 180 mm from the NSP-1600, in the one column of the panel with no tall neighbour. 4x M2 only — that is what the part offers."
+    },
+    {
+      "name": "certus_pedestal",
+      "source": "scaffold",
+      "kind": "box",
+      "mounted_to": "subpanel",
+      "params": {
+        "dx": 60.0,
+        "dy": 66.0,
+        "dz": 8.0,
+        "corner_r": 5.0
+      },
+      "box": {
+        "xmin": 150.0,
+        "xmax": 210.0,
+        "ymin": 19.1,
+        "ymax": 85.1,
+        "zmin": -109.22,
+        "zmax": -101.22
+      },
+      "own_holes": [
+        {
+          "id": "PNL-00",
+          "x": 160.0,
+          "y": 29.1,
+          "z": -105.22,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 16.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-01",
+          "x": 160.0,
+          "y": 75.1,
+          "z": -105.22,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 16.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-10",
+          "x": 200.0,
+          "y": 29.1,
+          "z": -105.22,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 16.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        },
+        {
+          "id": "PNL-11",
+          "x": 200.0,
+          "y": 75.1,
+          "z": -105.22,
+          "axis": "Z",
+          "size": "M5",
+          "screw_len": 16.0,
+          "screw_dir": -1,
+          "into_subpanel": true
+        }
+      ],
+      "may_touch": [
+        "certus_mini_d"
+      ],
+      "color": [
+        0.55,
+        0.57,
+        0.6,
+        1.0
+      ],
+      "note": "SOLID 8 mm 6061, bolted straight to the subpanel — not 3 mm plate on standoffs. An INS is only as good as its mount stiffness, and this one costs nothing because it fits inside the 12 mm gap everything else stands on. Tapped 4x M2 on 26 x 37; the 4x M5 corner bolts sit 8.3 mm from the nearest M2 centre, against the 6.2 mm the two head radii need. Its top edge stops 5.4 mm short of the ES-511's sliding-jaw release zone."
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+    "part_name": "ADRS Maritime Layout, compact — SCE-20H2010LP interior",
+    "version": "v3",
+    "description": "Space-optimised interior arrangement for the ADRS maritime enclosure. Same six components as v2 (Bedrock V3000, NSP-1600, Peplink UBR Plus, Ettus B210, one OZ51x dual-TX housing, TE121024010 cooler) plus a Brainboxes ES-511 on a 290 mm TS35 DIN rail and an Advanced Navigation Certus Mini D INS on a solid pedestal. The B210 is stood on edge as a blade, which is what frees the panel width the rail needs. Placement data lives in placement.json; this file records the enclosure datums and the fabrication stock.",
+    "units": "mm",
+    "material": "6061-T6 aluminium plate (scaffold); enclosure, rail and modules are purchased",
+    "process": "Saw, drill, tap and press brake only — no machining required for any scaffold member",
+    "dimensions": {
+        "enclosure_interior_x": [-252.09, 252.09],
+        "enclosure_interior_y": [-252.10, 252.10],
+        "rear_wall_inner_z": -125.09,
+        "subpanel_mounting_face_z": -109.22,
+        "door_inner_clear_z": 131.10,
+        "subpanel_plate": [431.80, 431.80, 3.17],
+        "subpanel_half_extent": 215.90,
+        "corner_collar_pitch": 193.68,
+        "corner_collar_size": 18.92,
+        "corner_collar_proud_to_z": -100.69,
+        "stack_depth_available": 240.32,
+        "standoff_plane_z": -97.22,
+        "equipment_plane_z": -94.22
+    },
+    "features": {
+        "scaffold_plate_thickness": 3.0,
+        "equipment_standoff_height": 12.0,
+        "certus_pedestal_thickness": 8.0,
+        "tec_wall": "left",
+        "tec_vertical_offset": 40.0,
+        "tec_wall_cutout": [125.0, 232.0],
+        "tec_bolt_pattern": [142.0, 286.0],
+        "tec_bolt_dia": 6.0,
+        "tec_interior_intrusion": 91.04,
+        "tec_exterior_projection": 89.37,
+        "tec_plenum_prism": {
+            "x": [-167.05, -111.05],
+            "y": [-20.0, 100.0],
+            "z": [-60.0, 60.0]
+        },
+        "din_rail": {
+            "profile": "TS35 / EN 60715, 35 x 7.5 x 1.0",
+            "axis": "X (horizontal)",
+            "centreline_y": 160.0,
+            "x_span": [-105.0, 185.0],
+            "length": 290.0,
+            "mounted_on": "subpanel face directly, Z -109.22 .. -101.72",
+            "panel_bolts": 7,
+            "bolt_head_limit_mm": 3.5
+        }
+    },
+    "results": {
+        "components_placed": 8,
+        "scaffold_members": 19,
+        "fastener_holes": 62,
+        "subpanel_drillings": 44,
+        "keepouts_checked": 49,
+        "interference": "none",
+        "blocked_connectors": "none",
+        "subpanel_hardware_area_cm2": 1069,
+        "subpanel_hardware_pct": 57,
+        "subpanel_committed_area_cm2": 1257,
+        "subpanel_committed_pct": 67,
+        "largest_free_rectangle_mm": [204, 38],
+        "stack_depth_used": 193,
+        "din_rail_module_widths": 12,
+        "din_rail_free_full_height_slots": 6,
+        "heat_load_w": 156,
+        "tec_capacity_w_at_zero_dt": 94,
+        "vs_v2": {
+            "note": "Same engine, same metric, run over both placements. v2 carries 6 components in 22 items; v3 carries 8 in 29.",
+            "v2_hardware_area_cm2": 1027,
+            "v2_hardware_pct": 55,
+            "v2_committed_area_cm2": 1250,
+            "v2_committed_pct": 67,
+            "v2_largest_free_rectangle_mm": [154, 96],
+            "v2_stack_depth_used": 193
+        }
+    },
+    "notes": [
+        "The DIN rail is bolted flat to the subpanel, not raised on the 12 mm standoff plane: it needs the depth back, it is nowhere near the four proud corner collars, and a rail on standoffs is a spring.",
+        "Rail mounting screws must be pan or countersunk head, 3.5 mm maximum. A device clip reaches 3.5 mm into the rail channel and an M5 socket head is 5.0 mm tall.",
+        "The ES-511 has no fastener features whatsoever. The rail is its only mount, so the two screw-clamp end stops are structural, not tidiness."
+    ]
+}
