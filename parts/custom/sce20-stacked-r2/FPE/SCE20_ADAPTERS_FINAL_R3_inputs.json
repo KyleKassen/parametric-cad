@@ -1,0 +1,1355 @@
+[
+  {
+    "name": "B210_R2",
+    "width": 150.0,
+    "height": 148.0,
+    "thickness": 4.0,
+    "material_id": 5,
+    "color_id": 1,
+    "radius": 8.0,
+    "bevel": 0.4,
+    "remark": "R1 FIT DESIGN. Bare aluminum; finished thickness +/-0.05 mm; deburr bores <=0.1 mm. Front=device; reverse=backplate seating face. M3x6 device screws seat 0.55 mm recessed; nominal penetration 2.55 mm.",
+    "elements": [
+      {
+        "id": "P1",
+        "kind": "hole",
+        "x": 7.0,
+        "y": 13.9925,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P2",
+        "kind": "hole",
+        "x": 7.0,
+        "y": 134.0075,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P3",
+        "kind": "hole",
+        "x": 143.0,
+        "y": 13.9925,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P4",
+        "kind": "hole",
+        "x": 143.0,
+        "y": 134.0075,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "D1",
+        "kind": "hole",
+        "x": 28.200499999999998,
+        "y": 13.9925,
+        "diameter": 3.4,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 7.1,
+          "depth": 1.8499999999999999
+        }
+      },
+      {
+        "id": "D2",
+        "kind": "hole",
+        "x": 28.200499999999998,
+        "y": 134.0075,
+        "diameter": 3.4,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 7.1,
+          "depth": 1.8499999999999999
+        }
+      },
+      {
+        "id": "D3",
+        "kind": "hole",
+        "x": 121.7995,
+        "y": 13.9925,
+        "diameter": 3.4,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 7.1,
+          "depth": 1.8499999999999999
+        }
+      },
+      {
+        "id": "D4",
+        "kind": "hole",
+        "x": 121.7995,
+        "y": 134.0075,
+        "diameter": 3.4,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 7.1,
+          "depth": 1.8499999999999999
+        }
+      }
+    ],
+    "save": "C:/Users/KyleKassen/Documents/FPE_SCE20_20260908_R1/B210_R2.fpd"
+  },
+  {
+    "name": "MeanWell_R2",
+    "width": 72.0,
+    "height": 316.8,
+    "thickness": 6.0,
+    "material_id": 5,
+    "color_id": 1,
+    "radius": 4.0,
+    "bevel": 0.4,
+    "remark": "R1 FIT DESIGN. Bare aluminum; finished thickness +/-0.05 mm; deburr bores <=0.1 mm. Front=device; reverse=backplate seating face. M4x10 device screws; nominal penetration4.05 mm, maximum5 mm. Source N2 side-tab geometry.",
+    "elements": [
+      {
+        "id": "P1",
+        "kind": "hole",
+        "x": 7.5,
+        "y": 42.80000000000001,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P2",
+        "kind": "hole",
+        "x": 7.5,
+        "y": 294.8,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P3",
+        "kind": "hole",
+        "x": 64.5,
+        "y": 42.80000000000001,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P4",
+        "kind": "hole",
+        "x": 64.5,
+        "y": 294.8,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "D1",
+        "kind": "hole",
+        "x": 38.3,
+        "y": 294.8,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 8.1,
+          "depth": 1.7999999999999998
+        }
+      },
+      {
+        "id": "D2",
+        "kind": "hole",
+        "x": 38.3,
+        "y": 42.80000000000001,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 8.1,
+          "depth": 1.7999999999999998
+        }
+      }
+    ],
+    "save": "C:/Users/KyleKassen/Documents/FPE_SCE20_20260908_R1/MeanWell_R2.fpd",
+    "outline_dxf": "C:/Users/KyleKassen/Documents/FPE_SCE20_20260908_R1/MeanWell_R2_outline.dxf"
+  },
+  {
+    "name": "Bedrock_R3",
+    "width": 166.0,
+    "height": 184.0,
+    "thickness": 6.0,
+    "material_id": 5,
+    "color_id": 1,
+    "radius": 8.0,
+    "bevel": 0.4,
+    "remark": "R1 FIT DESIGN. Bare aluminum; finished thickness +/-0.05 mm; deburr bores <=0.1 mm. Front=device; reverse=backplate seating face. SPECIAL PRECISION MACHINING: BOTH thermal pockets 0.050 +/-0.010 mm, Ra<=1.6um; retain front D8 and reverse D12 hard lands. Keep faces conductive/flat, assembled TIM gap<=0.10 mm. M4x8 heads recessed0.95; nominal penetration2.95. Supplier must confirm tolerances before production.",
+    "elements": [
+      {
+        "id": "P1",
+        "kind": "hole",
+        "x": 7.0,
+        "y": 10.0,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P2",
+        "kind": "hole",
+        "x": 7.0,
+        "y": 174.0,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P3",
+        "kind": "hole",
+        "x": 159.0,
+        "y": 10.0,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P4",
+        "kind": "hole",
+        "x": 159.0,
+        "y": 174.0,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "D1",
+        "kind": "hole",
+        "x": 23.0,
+        "y": 22.0,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 9.9,
+          "depth": 2.7
+        }
+      },
+      {
+        "id": "D2",
+        "kind": "hole",
+        "x": 143.0,
+        "y": 22.0,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 9.9,
+          "depth": 2.7
+        }
+      },
+      {
+        "id": "D3",
+        "kind": "hole",
+        "x": 83.0,
+        "y": 52.0,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 9.9,
+          "depth": 2.7
+        }
+      },
+      {
+        "id": "D4",
+        "kind": "hole",
+        "x": 83.0,
+        "y": 122.0,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 9.9,
+          "depth": 2.7
+        }
+      },
+      {
+        "id": "D5",
+        "kind": "hole",
+        "x": 33.0,
+        "y": 162.0,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 9.9,
+          "depth": 2.7
+        }
+      },
+      {
+        "id": "D6",
+        "kind": "hole",
+        "x": 133.0,
+        "y": 162.0,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 9.9,
+          "depth": 2.7
+        }
+      },
+      {
+        "id": "THERMAL_TOP_1",
+        "kind": "contour_cavity",
+        "x": 83.0,
+        "y": 92.0,
+        "side": "front",
+        "depth": 0.05,
+        "tool": 600,
+        "paths": [
+          {
+            "role": "single_outer_boundary_no_islands",
+            "start": [
+              -58.0,
+              -78.0
+            ],
+            "segments": [
+              {
+                "type": "LINE",
+                "end": [
+                  -50.0,
+                  -78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -50.0,
+                  66.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -50.0,
+                  74.0
+                ],
+                "center": [
+                  -50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -180.0
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -50.0,
+                  78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -58.0,
+                  78.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -63.0,
+                  73.0
+                ],
+                "center": [
+                  -58.0,
+                  73.0
+                ],
+                "dir": 1,
+                "radius_mm": 5.0,
+                "sweep_deg": 90.0
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -62.999999999997314,
+                  -67.35424868893237
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -63.0,
+                  -72.64575131106
+                ],
+                "center": [
+                  -60.000000000002274,
+                  -69.99999999999771
+                ],
+                "dir": -1,
+                "radius_mm": 3.9999999999967755,
+                "sweep_deg": -277.1807557814065
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -63.0,
+                  -73.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -58.0,
+                  -78.0
+                ],
+                "center": [
+                  -58.0,
+                  -73.0
+                ],
+                "dir": 1,
+                "radius_mm": 5.0,
+                "sweep_deg": 90.0
+              }
+            ],
+            "close_with_finish": true
+          }
+        ],
+        "bbox": [
+          19.99999999999971,
+          14.0,
+          33.0,
+          170.0
+        ]
+      },
+      {
+        "id": "THERMAL_TOP_2",
+        "kind": "contour_cavity",
+        "x": 83.0,
+        "y": 92.0,
+        "side": "front",
+        "depth": 0.05,
+        "tool": 600,
+        "paths": [
+          {
+            "role": "single_outer_boundary_no_islands",
+            "start": [
+              0.0,
+              -78.0
+            ],
+            "segments": [
+              {
+                "type": "LINE",
+                "end": [
+                  -7.347880794884119e-16,
+                  -44.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  0.0,
+                  -36.0
+                ],
+                "center": [
+                  7.669517010585678e-17,
+                  -40.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -180.0
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -7.347880794884119e-16,
+                  26.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  0.0,
+                  34.0
+                ],
+                "center": [
+                  7.669517010585678e-17,
+                  30.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -180.0
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  0.0,
+                  78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -50.0,
+                  78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -50.0,
+                  74.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -50.0,
+                  66.0
+                ],
+                "center": [
+                  -50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -180.0
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -50.0,
+                  -78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  0.0,
+                  -78.0
+                ]
+              }
+            ],
+            "close_with_finish": true
+          }
+        ],
+        "bbox": [
+          33.0,
+          14.0,
+          83.0,
+          170.0
+        ]
+      },
+      {
+        "id": "THERMAL_TOP_3",
+        "kind": "contour_cavity",
+        "x": 83.0,
+        "y": 92.0,
+        "side": "front",
+        "depth": 0.05,
+        "tool": 600,
+        "paths": [
+          {
+            "role": "single_outer_boundary_no_islands",
+            "start": [
+              50.0,
+              -78.0
+            ],
+            "segments": [
+              {
+                "type": "LINE",
+                "end": [
+                  50.0,
+                  66.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  50.0,
+                  74.0
+                ],
+                "center": [
+                  50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -180.0
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  50.0,
+                  78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  0.0,
+                  78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  1.133107779529596e-15,
+                  34.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  0.0,
+                  26.0
+                ],
+                "center": [
+                  1.2246467991473525e-16,
+                  30.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -180.0
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  1.133107779529596e-15,
+                  -36.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  0.0,
+                  -44.0
+                ],
+                "center": [
+                  1.2246467991473525e-16,
+                  -40.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -180.0
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  0.0,
+                  -78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  50.0,
+                  -78.0
+                ]
+              }
+            ],
+            "close_with_finish": true
+          }
+        ],
+        "bbox": [
+          83.0,
+          14.0,
+          133.0,
+          170.0
+        ]
+      },
+      {
+        "id": "THERMAL_TOP_4",
+        "kind": "contour_cavity",
+        "x": 83.0,
+        "y": 92.0,
+        "side": "front",
+        "depth": 0.05,
+        "tool": 600,
+        "paths": [
+          {
+            "role": "single_outer_boundary_no_islands",
+            "start": [
+              63.0,
+              -73.0
+            ],
+            "segments": [
+              {
+                "type": "LINE",
+                "end": [
+                  63.00000000000228,
+                  -72.64575131106201
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  63.0,
+                  -67.35424868893
+                ],
+                "center": [
+                  59.99999999999999,
+                  -69.9999999999973
+                ],
+                "dir": -1,
+                "radius_mm": 4.000000000001798,
+                "sweep_deg": -277.1807557814495
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  -20.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  82.65,
+                  -20.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  82.65,
+                  -19.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  -19.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  19.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  82.65,
+                  19.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  82.65,
+                  20.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  20.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  73.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  58.0,
+                  78.0
+                ],
+                "center": [
+                  58.0,
+                  73.0
+                ],
+                "dir": 1,
+                "radius_mm": 5.0,
+                "sweep_deg": 90.0
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  50.0,
+                  78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  50.0,
+                  74.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  50.0,
+                  66.0
+                ],
+                "center": [
+                  50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -180.0
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  50.0,
+                  -78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  58.0,
+                  -78.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  63.0,
+                  -73.0
+                ],
+                "center": [
+                  58.0,
+                  -73.0
+                ],
+                "dir": 1,
+                "radius_mm": 5.0,
+                "sweep_deg": 90.0
+              }
+            ],
+            "close_with_finish": true
+          }
+        ],
+        "bbox": [
+          133.0,
+          14.0,
+          165.65,
+          170.0
+        ]
+      },
+      {
+        "id": "THERMAL_BOTTOM_1",
+        "kind": "contour_cavity",
+        "x": 83.0,
+        "y": 92.0,
+        "side": "reverse",
+        "depth": 0.05,
+        "tool": 600,
+        "paths": [
+          {
+            "role": "single_outer_boundary_no_islands",
+            "start": [
+              -58.0,
+              -78.0
+            ],
+            "segments": [
+              {
+                "type": "LINE",
+                "end": [
+                  -50.0,
+                  -78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -50.0,
+                  64.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -50.0,
+                  76.0
+                ],
+                "center": [
+                  -50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -180.0
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -50.0,
+                  78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -58.0,
+                  78.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -63.0,
+                  73.0
+                ],
+                "center": [
+                  -58.0,
+                  73.0
+                ],
+                "dir": 1,
+                "radius_mm": 5.0,
+                "sweep_deg": 90.0
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -63.0,
+                  -64.80384757729
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -62.307692307692385,
+                  -75.5384615384614
+                ],
+                "center": [
+                  -59.99999999999936,
+                  -69.99999999999827
+                ],
+                "dir": -1,
+                "radius_mm": 6.0000000000017355,
+                "sweep_deg": -232.61986494803833
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -58.0,
+                  -78.0
+                ],
+                "center": [
+                  -57.99999999999999,
+                  -73.0
+                ],
+                "dir": 1,
+                "radius_mm": 5.000000000000004,
+                "sweep_deg": 59.48976259388621
+              }
+            ],
+            "close_with_finish": true
+          }
+        ],
+        "bbox": [
+          19.999999999998863,
+          14.0,
+          33.0,
+          170.0
+        ]
+      },
+      {
+        "id": "THERMAL_BOTTOM_2",
+        "kind": "contour_cavity",
+        "x": 83.0,
+        "y": 92.0,
+        "side": "reverse",
+        "depth": 0.05,
+        "tool": 600,
+        "paths": [
+          {
+            "role": "single_outer_boundary_no_islands",
+            "start": [
+              -50.0,
+              64.0
+            ],
+            "segments": [
+              {
+                "type": "LINE",
+                "end": [
+                  -50.0,
+                  -78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  0.0,
+                  -78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -1.102182119232618e-15,
+                  -46.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  0.0,
+                  -34.0
+                ],
+                "center": [
+                  1.1504275515878517e-16,
+                  -40.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -180.0
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -1.102182119232618e-15,
+                  24.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  0.0,
+                  36.0
+                ],
+                "center": [
+                  1.1504275515878517e-16,
+                  30.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -180.0
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  0.0,
+                  78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -50.0,
+                  78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -50.0,
+                  76.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -50.0,
+                  64.0
+                ],
+                "center": [
+                  -50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -180.0
+              }
+            ],
+            "close_with_finish": true
+          }
+        ],
+        "bbox": [
+          33.0,
+          14.0,
+          83.0,
+          170.0
+        ]
+      },
+      {
+        "id": "THERMAL_BOTTOM_3",
+        "kind": "contour_cavity",
+        "x": 83.0,
+        "y": 92.0,
+        "side": "reverse",
+        "depth": 0.05,
+        "tool": 600,
+        "paths": [
+          {
+            "role": "single_outer_boundary_no_islands",
+            "start": [
+              0.0,
+              24.0
+            ],
+            "segments": [
+              {
+                "type": "LINE",
+                "end": [
+                  1.6996616692943939e-15,
+                  -34.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  0.0,
+                  -46.0
+                ],
+                "center": [
+                  1.8369701987210282e-16,
+                  -40.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -180.0
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  0.0,
+                  -78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  50.0,
+                  -78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  50.0,
+                  64.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  50.0,
+                  76.0
+                ],
+                "center": [
+                  50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -180.0
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  50.0,
+                  78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  0.0,
+                  78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  1.6996616692943939e-15,
+                  36.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  0.0,
+                  24.0
+                ],
+                "center": [
+                  1.8369701987210282e-16,
+                  30.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -180.0
+              }
+            ],
+            "close_with_finish": true
+          }
+        ],
+        "bbox": [
+          83.0,
+          14.0,
+          133.0,
+          170.0
+        ]
+      },
+      {
+        "id": "THERMAL_BOTTOM_4",
+        "kind": "contour_cavity",
+        "x": 83.0,
+        "y": 92.0,
+        "side": "reverse",
+        "depth": 0.05,
+        "tool": 600,
+        "paths": [
+          {
+            "role": "single_outer_boundary_no_islands",
+            "start": [
+              50.0,
+              64.0
+            ],
+            "segments": [
+              {
+                "type": "LINE",
+                "end": [
+                  50.0,
+                  -78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  58.0,
+                  -78.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  62.30769230769259,
+                  -75.53846153846142
+                ],
+                "center": [
+                  58.000000000000625,
+                  -73.00000000000072
+                ],
+                "dir": 1,
+                "radius_mm": 4.999999999999275,
+                "sweep_deg": 59.48976259389789
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  63.0,
+                  -64.80384757729
+                ],
+                "center": [
+                  60.00000000000011,
+                  -69.99999999999838
+                ],
+                "dir": -1,
+                "radius_mm": 6.000000000001453,
+                "sweep_deg": -232.6198649480272
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  -20.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  82.65,
+                  -20.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  82.65,
+                  -19.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  -19.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  19.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  82.65,
+                  19.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  82.65,
+                  20.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  20.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  73.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  58.0,
+                  78.0
+                ],
+                "center": [
+                  58.0,
+                  73.0
+                ],
+                "dir": 1,
+                "radius_mm": 5.0,
+                "sweep_deg": 90.0
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  50.0,
+                  78.0
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  50.0,
+                  76.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  50.0,
+                  64.0
+                ],
+                "center": [
+                  50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -180.0
+              }
+            ],
+            "close_with_finish": true
+          }
+        ],
+        "bbox": [
+          133.0,
+          14.0,
+          165.65,
+          170.0
+        ]
+      }
+    ],
+    "save": "C:/Users/KyleKassen/Documents/FPE_SCE20_20260908_R1/Bedrock_R3.fpd"
+  }
+]

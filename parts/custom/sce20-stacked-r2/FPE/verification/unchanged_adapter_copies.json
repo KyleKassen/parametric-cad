@@ -1,0 +1,56 @@
+[
+  {
+    "file": "B210_R2.fpd",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\B210_R2.fpd",
+    "sha256": "F377E884647DBDA4A2EBB4C13EE9CC911E701D52F11B4AF63CB4C98F360BBEF7",
+    "bytes": 1113
+  },
+  {
+    "file": "Bedrock_R3.fpd",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\Bedrock_R3.fpd",
+    "sha256": "86749ED2DB93BD72CD32606F7123600C23D89FF7F3788C63EFAA19026E9834BD",
+    "bytes": 2213
+  },
+  {
+    "file": "MeanWell_R2.fpd",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\MeanWell_R2.fpd",
+    "sha256": "0F140305D7007147DAD72E2867F7C907CAB408CDFE8A721C3437156DCEC6DF7B",
+    "bytes": 1638
+  },
+  {
+    "file": "B210_R2.step",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\B210_R2.step",
+    "sha256": "2881E4088EEB24D1830222469C65D48B1A04F7A067FD15CB2EA6023CC5C4601B",
+    "bytes": 148753
+  },
+  {
+    "file": "Bedrock_R3.step",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\Bedrock_R3.step",
+    "sha256": "A20491E6BB0A150CFC6B69DFADDB1596B0F71C82680B6839FA71A8D79E2CFF2B",
+    "bytes": 338851
+  },
+  {
+    "file": "MeanWell_R2.step",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\MeanWell_R2.step",
+    "sha256": "7826936AF5D489426CD39502CC6F1F2DBD2BC2D703A5C1BDC4594EC76509BCB3",
+    "bytes": 354854
+  },
+  {
+    "file": "SCE20_ADAPTERS_FINAL_R3.fpjs",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\SCE20_ADAPTERS_FINAL_R3.fpjs",
+    "sha256": "CAA3F79D2CC3996481EC68F81FE760A850336D52FD85A5D5A7858EF2FB5E1D7B",
+    "bytes": 16443
+  },
+  {
+    "file": "SCE20_ADAPTERS_FINAL_R3_inputs.json",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\SCE20_ADAPTERS_FINAL_R3_inputs.json",
+    "sha256": "AF2E899D7195B60BE268FFD18C5645C3C24370AC31F7015C6DB725C2AD85BBE7",
+    "bytes": 33126
+  },
+  {
+    "file": "MeanWell_R2_outline.dxf",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\MeanWell_R2_outline.dxf",
+    "sha256": "2062BDBABC39175EAB310871D53E96B5470A23211A2DADD41F2FCC63EEB862E2",
+    "bytes": 19736
+  }
+]

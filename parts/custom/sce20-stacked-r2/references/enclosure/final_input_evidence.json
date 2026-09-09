@@ -1,0 +1,25 @@
+{
+  "schema": "sce20-stacked-r2-enclosure-input-evidence/1",
+  "status": "PASS",
+  "placements_match_current_params": true,
+  "backpanel_vs_evaluation_symmetric_difference_mm3": 0.0,
+  "independent_enclosure_status": "PASS",
+  "repository_evaluation_overall_status": "FAIL",
+  "repository_design_score": 48.7,
+  "repository_design_min_score": 70,
+  "repository_design_gate_status": "FAIL",
+  "sha256": {
+    "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-stacked-r2\\params.json": "79eb32ffdd7ab86abd8c7228f52932591f4fdcd7fc26c0868053a5acc415c9e8",
+    "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-stacked-r2\\spec.json": "fb28dc91221efc86c92e4b9c74b1b097e2eb4625e9252dfd80ca185b2a858638",
+    "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-stacked-r2\\exports\\Backpanel_R2.step": "28029dfe6ded586996a7b96ea5c8344060a320c5a49d8db0fd81cd40232e7051",
+    "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-stacked-r2\\exports\\attempts\\20260909-134140-ea63b1\\sce20-stacked-r2_v1.step": "563697568724e832b089a247bcf7ff169be25e7e985ebfa89375c59d51a70351",
+    "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-stacked-r2\\exports\\repository_full_evaluation.json": "7770a2974dbd8829ab76870abd87a1715ce7204926c3971d3f671e1ad72a51a3",
+    "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\enclosure\\source_enclosure.brep": "e05e6c97139d0dda99e12da7217d8838c278bef7908d7bd605ba5b8d96b12200",
+    "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\enclosure\\candidate_bedrock_fpe_source.brep": "827e57ef44164e9d740a79b680c8472dda75e48c09af2c1e3c7a8fbf498892c0",
+    "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\enclosure\\candidate_peplink_fpe_source.brep": "83afb158b8fb9adbfcb84aed1645423c86abd6affb6d1ba0dd6111905602ee60",
+    "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\enclosure\\candidate_b210_fpe_source.brep": "a3c336fbba7047d99b6c1e94fc69cb73ab8274907165bd0dbf9ef4c48477e12e",
+    "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\enclosure\\candidate_oz_fpe_source.brep": "8e3f02e9057f6021b8a9193cf63fdaa944672e7c2261cbe13d917d424a519062",
+    "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\enclosure\\candidate_meanwell_fpe_source.brep": "565c6ce63aaf2f3cd3cbb0f955e82355e69ea955216f1e3a54d5e34809ebc4f8",
+    "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-stacked-r2\\carrier\\exports\\Peplink_Carrier_R2_frame.step": "6c0d9ec839f12779e44d6c31fb6d5417c4a4c154f6f1aade2b545122fe1c6ad8"
+  }
+}

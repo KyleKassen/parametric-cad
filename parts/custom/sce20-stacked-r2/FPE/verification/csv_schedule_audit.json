@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "bom_rows": 23,
+  "coordinate_rows": 58,
+  "native_hardware": {
+    "WGU30": 12,
+    "WGO30": 8,
+    "WGO40": 4
+  },
+  "notes": "Schedule lists hole/hardware coordinates; window and thermal contours remain in native inputs.",
+  "scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}"
+}

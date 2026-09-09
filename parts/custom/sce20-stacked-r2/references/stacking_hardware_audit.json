@@ -12,7 +12,8 @@
     "extension": "4xWurth971300321 L30 M3 male/female",
     "upper_fastener": "4xM3x10 socket screw +D7 ID3.2 washer0.55",
     "upper_nominal_thread_insertion": 5.45,
-    "service": "Remove B210 and adapter as a unit before releasing OZ cover; 47 mm outward cover service sweep cannot fit atZ50."
+    "service": "Remove B210 and adapter as a unit before releasing OZ cover; 47 mm outward cover service sweep cannot fit atZ50.",
+    "upper_tool": "2.5mm hex key or longbit; four upper socket-cap screws replace the original studnuts."
   },
   "peplink_over_bedrock": {
     "carrier_underside_z": 70,
@@ -76,7 +77,8 @@
     "upper_fastener": "4xM3x10 socket screw +D7 ID3.2 washer0.55",
     "router_fastener": "M4x8 +washerID4.3 OD9 thickness1 +2.5mm ear =>4.5mm insertion into6mmnative female",
     "thermal": "Bedrock unchanged directly on main panel; both original thermal layers retained. Central carrier window opens146x160 throat abovefins, but overlyingrouter stillchangesairflow. Keep localY fins vertical and both channelendsunblocked; validate temperatures.",
-    "service": "Remove Peplink/carrier together before lower Bedrock service; carrier removal itself does not disturb lower TIM."
+    "service": "Remove Peplink/carrier together before lower Bedrock service; carrier removal itself does not disturb lower TIM.",
+    "upper_tool": "2.5mm hex key or longbit, shaft envelope<=8mm for first40mm above support screw; larger holder above router; do not use D10nut socket."
   },
   "extension_spec": {
     "material": "steel,gloss zinc",

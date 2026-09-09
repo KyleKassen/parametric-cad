@@ -1,7 +1,7 @@
 """Independent stacked-R2 enclosure audit with exact component B-reps, in mm.
 
-Factory enclosure hardware is measured source geometry. The new carrier and
-extension posts are conservative envelopes until their final export is supplied.
+Factory enclosure hardware is measured source geometry. The carrier uses its
+final STEP; post hexagonal extensions use conservative circumscribed cylinders.
 No original STEP or R1 model is modified by this audit.
 """
 
@@ -23,9 +23,9 @@ from check_candidate import collisions  # noqa: E402
 PLACEMENTS = {
     "bedrock": {"translation_mm": [122, 107, 0], "rotation_z_deg": 0},
     "peplink": {"translation_mm": [122, 90, 80], "rotation_z_deg": 0},
-    "b210": {"translation_mm": [282, 107, 50], "rotation_z_deg": 180},
+    "b210": {"translation_mm": [282, 106, 50], "rotation_z_deg": 180},
     "oz": {"translation_mm": [282, 107, 0], "rotation_z_deg": 0},
-    "meanwell": {"translation_mm": [391, 65.6, 0], "rotation_z_deg": 180},
+    "meanwell": {"translation_mm": [379.9, 65.6, 0], "rotation_z_deg": 180},
 }
 
 
@@ -58,20 +58,30 @@ def main() -> None:
         cache = R1 / "references/enclosure" / f"candidate_{name}_fpe_source.brep"
         source_paths[name] = str(cache)
         components[name] = placed(cq.Shape.importBrep(str(cache)), pl)
-    conservative = {
-        "peplink_carrier_outer_envelope": cq.Workplane("XY")
-        .box(180, 210, 4)
-        .translate((122, 107, 72))
-        .val(),
-    }
+    carrier_path = R2 / "carrier/exports/Peplink_Carrier_R2_frame.step"
+    source_paths["peplink_carrier"] = str(carrier_path)
+    components["peplink_carrier"] = (
+        cq.importers.importStep(str(carrier_path)).val().translate((122, 107, 70))
+    )
+    conservative = {}
     for x in [52, 192]:
         for y in [10, 204]:
-            name = f"Peplink_carrier_post_D8_{x}_{y}"
-            conservative[name] = cq.Solid.makeCylinder(4, 70, cq.Vector(x, y, 0))
+            name = f"Peplink_carrier_post_{x}_{y}"
+            conservative[name] = cq.Compound.makeCompound(
+                [
+                    cq.Solid.makeCylinder(2.5, 20, cq.Vector(x, y, 0)),
+                    cq.Solid.makeCylinder(3.176, 50, cq.Vector(x, y, 20)),
+                ]
+            )
     for x in [214, 350]:
-        for y in [46.992, 167.007]:
-            name = f"B210_post_D8_{x}_{y}"
-            conservative[name] = cq.Solid.makeCylinder(4, 50, cq.Vector(x, y, 0))
+        for y in [45.992, 166.007]:
+            name = f"B210_post_{x}_{y}"
+            conservative[name] = cq.Compound.makeCompound(
+                [
+                    cq.Solid.makeCylinder(2.5, 20, cq.Vector(x, y, 0)),
+                    cq.Solid.makeCylinder(3.176, 30, cq.Vector(x, y, 20)),
+                ]
+            )
     models = {**components, **conservative}
     component_results = {}
     for name, shape in models.items():
@@ -106,7 +116,7 @@ def main() -> None:
         prism = (
             cq.Workplane("XY")
             .box(41, high - low, 85)
-            .translate((391, (high + low) / 2, 48.5))
+            .translate((379.9, (high + low) / 2, 48.5))
             .val()
         )
         corridors.append(
@@ -118,6 +128,7 @@ def main() -> None:
                     prism, [(n, s) for n, s in models.items() if n != "meanwell"]
                 ),
                 "Y_inner_wall_margin_mm": min(low + 36.195, 467.995 - high),
+                "right_factory_nut_lateral_margin_mm": 401.47538719198343 - (379.9 + 20.5),
             }
         )
     report = {
@@ -136,10 +147,9 @@ def main() -> None:
         "nearest_door_pocket_above_main_panel_mm": 237.5352,
         "nominal_door_margin_mm": 237.5352 - max(s.BoundingBox().zmax for s in models.values()),
         "limitations": [
-            "New carrier checked as solid outer envelope; its window reduces occupancy.",
             (
-                "New extension posts conservatively represented by diameter 8 mm cylinders "
-                "to full height."
+                "WGO30 lower stems use diameter 5 mm at Z0..20; the 5.5 mm AF hex "
+                "extensions use conservative diameter 6.352 mm cylinders from Z20 upward."
             ),
             (
                 "This report checks enclosure/factory hardware/socket and PSU corridors, "

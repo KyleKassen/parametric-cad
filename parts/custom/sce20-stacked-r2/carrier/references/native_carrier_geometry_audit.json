@@ -1,0 +1,1488 @@
+{
+  "status": "PASS",
+  "native": "C:\\Users\\KyleKassen\\Desktop\\Peplink_Carrier_R2_verified.stp",
+  "native_sha256": "1103cf29c5737877254352dc97ea5cfe5b86474da6cf323f3c4e6f43d7504244",
+  "reference": "Q:\\parts\\custom\\sce20-stacked-r2\\exports\\Peplink_Carrier_R2.step",
+  "reference_sha256": "fda2c5a2a3239368ad8f269f68773adbf8f03bb30b6b475ef976f1e6427c0ce9",
+  "fpd_input_sha256": "a9abdcc96bf33078cdfe6a9596045705dbb87e1f750bbd31c56883b5103695a0",
+  "normalization_translation": [
+    -90.0,
+    -105.0,
+    4.0
+  ],
+  "checks": [
+    {
+      "check": "all native solids valid",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "one panel and four native hardware solids",
+      "passed": true,
+      "measured": 5,
+      "criterion": 5
+    },
+    {
+      "check": "native panel exact dimensions",
+      "passed": true,
+      "measured": {
+        "x": [
+          -90.0,
+          90.0
+        ],
+        "y": [
+          -105.0,
+          105.0
+        ],
+        "z": [
+          -4.440892098500626e-16,
+          4.0000000000000036
+        ]
+      },
+      "criterion": {
+        "x": [
+          -90,
+          90
+        ],
+        "y": [
+          -105,
+          105
+        ],
+        "z": [
+          0,
+          4
+        ]
+      }
+    },
+    {
+      "check": "complete plate geometry and both rim bevels",
+      "passed": true,
+      "measured": {
+        "native_extra_metal_mm3": 1.1500354445088306,
+        "native_missing_metal_mm3": 0.05565999913960695,
+        "boolean_retry_translation_mm": null,
+        "conservative_translation_error_bound_mm3": 0.0,
+        "nominal_symmetric_difference_upper_bound_mm3": 1.2056954436484375
+      },
+      "criterion": "<5 mm3 permits 0.001 mm native machining quantization, not a missed bevel or hole"
+    },
+    {
+      "check": "window throat R5 corner (-68, -75)",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            -68.0,
+            -75.0
+          ],
+          "radius": 5.0,
+          "bbox": {
+            "x": [
+              -73.0,
+              -68.0
+            ],
+            "y": [
+              -80.0,
+              -75.0
+            ],
+            "z": [
+              0.399,
+              3.601
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "window throat R5 corner (-68, 75)",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            -68.0,
+            75.0
+          ],
+          "radius": 5.0,
+          "bbox": {
+            "x": [
+              -73.0,
+              -68.0
+            ],
+            "y": [
+              75.0,
+              80.0
+            ],
+            "z": [
+              0.399,
+              3.601
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "window throat R5 corner (68, -75)",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            68.0,
+            -75.0
+          ],
+          "radius": 5.0,
+          "bbox": {
+            "x": [
+              68.0,
+              73.0
+            ],
+            "y": [
+              -80.0,
+              -75.0
+            ],
+            "z": [
+              0.399,
+              3.601
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "window throat R5 corner (68, 75)",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            68.0,
+            75.0
+          ],
+          "radius": 5.0,
+          "bbox": {
+            "x": [
+              68.0,
+              73.0
+            ],
+            "y": [
+              75.0,
+              80.0
+            ],
+            "z": [
+              0.399,
+              3.601
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "support through bore 1",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            -70.0,
+            -97.0
+          ],
+          "radius": 1.9,
+          "bbox": {
+            "x": [
+              -71.9,
+              -68.1
+            ],
+            "y": [
+              -98.9,
+              -95.1
+            ],
+            "z": [
+              0.0,
+              4.0
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "support through bore 2",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            -70.0,
+            97.0
+          ],
+          "radius": 1.9,
+          "bbox": {
+            "x": [
+              -71.9,
+              -68.1
+            ],
+            "y": [
+              95.1,
+              98.9
+            ],
+            "z": [
+              0.0,
+              4.0
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "support through bore 3",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            70.0,
+            -97.0
+          ],
+          "radius": 1.9,
+          "bbox": {
+            "x": [
+              68.1,
+              71.9
+            ],
+            "y": [
+              -98.9,
+              -95.1
+            ],
+            "z": [
+              0.0,
+              4.0
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "support through bore 4",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            70.0,
+            97.0
+          ],
+          "radius": 1.9,
+          "bbox": {
+            "x": [
+              68.1,
+              71.9
+            ],
+            "y": [
+              95.1,
+              98.9
+            ],
+            "z": [
+              0.0,
+              4.0
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "native anchor cavity 1",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            -80.901,
+            -58.35
+          ],
+          "radius": 6.05,
+          "bbox": {
+            "x": [
+              -86.951,
+              -74.851
+            ],
+            "y": [
+              -64.4,
+              -52.300000000000004
+            ],
+            "z": [
+              1.7000000000000002,
+              4.0
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "native anchor depth/backing 1",
+      "passed": true,
+      "measured": [
+        1.7000000000000002,
+        4.0
+      ],
+      "criterion": [
+        1.7,
+        4
+      ]
+    },
+    {
+      "check": "native anchor cavity 2",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            -80.901,
+            24.349999999999994
+          ],
+          "radius": 6.05,
+          "bbox": {
+            "x": [
+              -86.951,
+              -74.851
+            ],
+            "y": [
+              18.299999999999994,
+              30.399999999999995
+            ],
+            "z": [
+              1.7000000000000002,
+              4.0
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "native anchor depth/backing 2",
+      "passed": true,
+      "measured": [
+        1.7000000000000002,
+        4.0
+      ],
+      "criterion": [
+        1.7,
+        4
+      ]
+    },
+    {
+      "check": "native anchor cavity 3",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            80.9,
+            -58.35
+          ],
+          "radius": 6.05,
+          "bbox": {
+            "x": [
+              74.85000000000001,
+              86.95
+            ],
+            "y": [
+              -64.4,
+              -52.300000000000004
+            ],
+            "z": [
+              1.7000000000000002,
+              4.0
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "native anchor depth/backing 3",
+      "passed": true,
+      "measured": [
+        1.7000000000000002,
+        4.0
+      ],
+      "criterion": [
+        1.7,
+        4
+      ]
+    },
+    {
+      "check": "native anchor cavity 4",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            80.9,
+            24.349999999999994
+          ],
+          "radius": 6.05,
+          "bbox": {
+            "x": [
+              74.85000000000001,
+              86.95
+            ],
+            "y": [
+              18.299999999999994,
+              30.399999999999995
+            ],
+            "z": [
+              1.7000000000000002,
+              4.0
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "native anchor depth/backing 4",
+      "passed": true,
+      "measured": [
+        1.7000000000000002,
+        4.0
+      ],
+      "criterion": [
+        1.7,
+        4
+      ]
+    },
+    {
+      "check": "window through at (72.99, 0)",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "window through at (-72.99, 0)",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "window through at (0, 79.99)",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "window through at (0, -79.99)",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "window through at (0, 0)",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "window throat retains frame at (73.01, 0)",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "window throat retains frame at (-73.01, 0)",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "window throat retains frame at (0, 80.01)",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "window throat retains frame at (0, -80.01)",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "ROUTER_1 actual hardware axis",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            -80.901,
+            -58.35000000000001
+          ],
+          "bbox": {
+            "x": [
+              -86.951,
+              -74.851
+            ],
+            "y": [
+              -64.4,
+              -52.300000000000004
+            ],
+            "z": [
+              1.7000000000000002,
+              10.0
+            ]
+          },
+          "volume_mm3": 317.77445310511825,
+          "cylinders": [
+            {
+              "xy": [
+                -80.901,
+                -58.35
+              ],
+              "radius": 6.05,
+              "bbox": {
+                "x": [
+                  -86.951,
+                  -74.851
+                ],
+                "y": [
+                  -64.4,
+                  -52.300000000000004
+                ],
+                "z": [
+                  1.7000000000000002,
+                  4.0
+                ]
+              }
+            },
+            {
+              "xy": [
+                -80.901,
+                -58.35
+              ],
+              "radius": 2.5,
+              "bbox": {
+                "x": [
+                  -83.401,
+                  -78.401
+                ],
+                "y": [
+                  -60.85,
+                  -55.85
+                ],
+                "z": [
+                  4.0,
+                  10.0
+                ]
+              }
+            },
+            {
+              "xy": [
+                -80.901,
+                -58.35
+              ],
+              "radius": 1.85,
+              "bbox": {
+                "x": [
+                  -82.75099999999999,
+                  -79.051
+                ],
+                "y": [
+                  -60.2,
+                  -56.5
+                ],
+                "z": [
+                  4.0,
+                  10.0
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "ROUTER_1 native shoulder height6",
+      "passed": true,
+      "measured": [
+        1.7000000000000002,
+        10.0
+      ],
+      "criterion": "top Z10 above panel underside; shoulder6 above panelfrontZ4"
+    },
+    {
+      "check": "ROUTER_1 catalog outer bodyD5",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            -80.901,
+            -58.35
+          ],
+          "radius": 2.5,
+          "bbox": {
+            "x": [
+              -83.401,
+              -78.401
+            ],
+            "y": [
+              -60.85,
+              -55.85
+            ],
+            "z": [
+              4.0,
+              10.0
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "ROUTER_1 internal female opening spans6mm",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            -80.901,
+            -58.35
+          ],
+          "radius": 1.85,
+          "bbox": {
+            "x": [
+              -82.75099999999999,
+              -79.051
+            ],
+            "y": [
+              -60.2,
+              -56.5
+            ],
+            "z": [
+              4.0,
+              10.0
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "ROUTER_2 actual hardware axis",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            -80.901,
+            24.349999999999994
+          ],
+          "bbox": {
+            "x": [
+              -86.951,
+              -74.851
+            ],
+            "y": [
+              18.299999999999994,
+              30.399999999999995
+            ],
+            "z": [
+              1.7000000000000002,
+              10.0
+            ]
+          },
+          "volume_mm3": 317.77445310511837,
+          "cylinders": [
+            {
+              "xy": [
+                -80.901,
+                24.349999999999994
+              ],
+              "radius": 6.05,
+              "bbox": {
+                "x": [
+                  -86.951,
+                  -74.851
+                ],
+                "y": [
+                  18.299999999999994,
+                  30.399999999999995
+                ],
+                "z": [
+                  1.7000000000000002,
+                  4.0
+                ]
+              }
+            },
+            {
+              "xy": [
+                -80.901,
+                24.349999999999994
+              ],
+              "radius": 2.5,
+              "bbox": {
+                "x": [
+                  -83.401,
+                  -78.401
+                ],
+                "y": [
+                  21.849999999999994,
+                  26.849999999999994
+                ],
+                "z": [
+                  4.0,
+                  10.0
+                ]
+              }
+            },
+            {
+              "xy": [
+                -80.901,
+                24.349999999999994
+              ],
+              "radius": 1.85,
+              "bbox": {
+                "x": [
+                  -82.75099999999999,
+                  -79.051
+                ],
+                "y": [
+                  22.499999999999993,
+                  26.199999999999996
+                ],
+                "z": [
+                  4.0,
+                  10.0
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "ROUTER_2 native shoulder height6",
+      "passed": true,
+      "measured": [
+        1.7000000000000002,
+        10.0
+      ],
+      "criterion": "top Z10 above panel underside; shoulder6 above panelfrontZ4"
+    },
+    {
+      "check": "ROUTER_2 catalog outer bodyD5",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            -80.901,
+            24.349999999999994
+          ],
+          "radius": 2.5,
+          "bbox": {
+            "x": [
+              -83.401,
+              -78.401
+            ],
+            "y": [
+              21.849999999999994,
+              26.849999999999994
+            ],
+            "z": [
+              4.0,
+              10.0
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "ROUTER_2 internal female opening spans6mm",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            -80.901,
+            24.349999999999994
+          ],
+          "radius": 1.85,
+          "bbox": {
+            "x": [
+              -82.75099999999999,
+              -79.051
+            ],
+            "y": [
+              22.499999999999993,
+              26.199999999999996
+            ],
+            "z": [
+              4.0,
+              10.0
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "ROUTER_3 actual hardware axis",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            80.90000000000003,
+            -58.35000000000001
+          ],
+          "bbox": {
+            "x": [
+              74.85000000000004,
+              86.95000000000003
+            ],
+            "y": [
+              -64.4,
+              -52.300000000000004
+            ],
+            "z": [
+              1.7000000000000002,
+              10.0
+            ]
+          },
+          "volume_mm3": 317.77445310511825,
+          "cylinders": [
+            {
+              "xy": [
+                80.90000000000003,
+                -58.35
+              ],
+              "radius": 6.05,
+              "bbox": {
+                "x": [
+                  74.85000000000004,
+                  86.95000000000003
+                ],
+                "y": [
+                  -64.4,
+                  -52.300000000000004
+                ],
+                "z": [
+                  1.7000000000000002,
+                  4.0
+                ]
+              }
+            },
+            {
+              "xy": [
+                80.90000000000003,
+                -58.35
+              ],
+              "radius": 2.5,
+              "bbox": {
+                "x": [
+                  78.40000000000003,
+                  83.40000000000003
+                ],
+                "y": [
+                  -60.85,
+                  -55.85
+                ],
+                "z": [
+                  4.0,
+                  10.0
+                ]
+              }
+            },
+            {
+              "xy": [
+                80.90000000000003,
+                -58.35
+              ],
+              "radius": 1.85,
+              "bbox": {
+                "x": [
+                  79.05000000000004,
+                  82.75000000000003
+                ],
+                "y": [
+                  -60.2,
+                  -56.5
+                ],
+                "z": [
+                  4.0,
+                  10.0
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "ROUTER_3 native shoulder height6",
+      "passed": true,
+      "measured": [
+        1.7000000000000002,
+        10.0
+      ],
+      "criterion": "top Z10 above panel underside; shoulder6 above panelfrontZ4"
+    },
+    {
+      "check": "ROUTER_3 catalog outer bodyD5",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            80.90000000000003,
+            -58.35
+          ],
+          "radius": 2.5,
+          "bbox": {
+            "x": [
+              78.40000000000003,
+              83.40000000000003
+            ],
+            "y": [
+              -60.85,
+              -55.85
+            ],
+            "z": [
+              4.0,
+              10.0
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "ROUTER_3 internal female opening spans6mm",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            80.90000000000003,
+            -58.35
+          ],
+          "radius": 1.85,
+          "bbox": {
+            "x": [
+              79.05000000000004,
+              82.75000000000003
+            ],
+            "y": [
+              -60.2,
+              -56.5
+            ],
+            "z": [
+              4.0,
+              10.0
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "ROUTER_4 actual hardware axis",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            80.90000000000003,
+            24.349999999999994
+          ],
+          "bbox": {
+            "x": [
+              74.85000000000004,
+              86.95000000000003
+            ],
+            "y": [
+              18.299999999999994,
+              30.399999999999995
+            ],
+            "z": [
+              1.7000000000000002,
+              10.0
+            ]
+          },
+          "volume_mm3": 317.77445310511837,
+          "cylinders": [
+            {
+              "xy": [
+                80.90000000000003,
+                24.349999999999994
+              ],
+              "radius": 6.05,
+              "bbox": {
+                "x": [
+                  74.85000000000004,
+                  86.95000000000003
+                ],
+                "y": [
+                  18.299999999999994,
+                  30.399999999999995
+                ],
+                "z": [
+                  1.7000000000000002,
+                  4.0
+                ]
+              }
+            },
+            {
+              "xy": [
+                80.90000000000003,
+                24.349999999999994
+              ],
+              "radius": 2.5,
+              "bbox": {
+                "x": [
+                  78.40000000000003,
+                  83.40000000000003
+                ],
+                "y": [
+                  21.849999999999994,
+                  26.849999999999994
+                ],
+                "z": [
+                  4.0,
+                  10.0
+                ]
+              }
+            },
+            {
+              "xy": [
+                80.90000000000003,
+                24.349999999999994
+              ],
+              "radius": 1.85,
+              "bbox": {
+                "x": [
+                  79.05000000000004,
+                  82.75000000000003
+                ],
+                "y": [
+                  22.499999999999993,
+                  26.199999999999996
+                ],
+                "z": [
+                  4.0,
+                  10.0
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "ROUTER_4 native shoulder height6",
+      "passed": true,
+      "measured": [
+        1.7000000000000002,
+        10.0
+      ],
+      "criterion": "top Z10 above panel underside; shoulder6 above panelfrontZ4"
+    },
+    {
+      "check": "ROUTER_4 catalog outer bodyD5",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            80.90000000000003,
+            24.349999999999994
+          ],
+          "radius": 2.5,
+          "bbox": {
+            "x": [
+              78.40000000000003,
+              83.40000000000003
+            ],
+            "y": [
+              21.849999999999994,
+              26.849999999999994
+            ],
+            "z": [
+              4.0,
+              10.0
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    },
+    {
+      "check": "ROUTER_4 internal female opening spans6mm",
+      "passed": true,
+      "measured": [
+        {
+          "xy": [
+            80.90000000000003,
+            24.349999999999994
+          ],
+          "radius": 1.85,
+          "bbox": {
+            "x": [
+              79.05000000000004,
+              82.75000000000003
+            ],
+            "y": [
+              22.499999999999993,
+              26.199999999999996
+            ],
+            "z": [
+              4.0,
+              10.0
+            ]
+          }
+        }
+      ],
+      "criterion": null
+    }
+  ],
+  "native_hardware_inventory": [
+    {
+      "xy": [
+        -80.901,
+        24.349999999999994
+      ],
+      "bbox": {
+        "x": [
+          -86.951,
+          -74.851
+        ],
+        "y": [
+          18.299999999999994,
+          30.399999999999995
+        ],
+        "z": [
+          1.7000000000000002,
+          10.0
+        ]
+      },
+      "volume_mm3": 317.77445310511837,
+      "cylinders": [
+        {
+          "xy": [
+            -80.901,
+            24.349999999999994
+          ],
+          "radius": 6.05,
+          "bbox": {
+            "x": [
+              -86.951,
+              -74.851
+            ],
+            "y": [
+              18.299999999999994,
+              30.399999999999995
+            ],
+            "z": [
+              1.7000000000000002,
+              4.0
+            ]
+          }
+        },
+        {
+          "xy": [
+            -80.901,
+            24.349999999999994
+          ],
+          "radius": 2.5,
+          "bbox": {
+            "x": [
+              -83.401,
+              -78.401
+            ],
+            "y": [
+              21.849999999999994,
+              26.849999999999994
+            ],
+            "z": [
+              4.0,
+              10.0
+            ]
+          }
+        },
+        {
+          "xy": [
+            -80.901,
+            24.349999999999994
+          ],
+          "radius": 1.85,
+          "bbox": {
+            "x": [
+              -82.75099999999999,
+              -79.051
+            ],
+            "y": [
+              22.499999999999993,
+              26.199999999999996
+            ],
+            "z": [
+              4.0,
+              10.0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "xy": [
+        80.90000000000003,
+        24.349999999999994
+      ],
+      "bbox": {
+        "x": [
+          74.85000000000004,
+          86.95000000000003
+        ],
+        "y": [
+          18.299999999999994,
+          30.399999999999995
+        ],
+        "z": [
+          1.7000000000000002,
+          10.0
+        ]
+      },
+      "volume_mm3": 317.77445310511837,
+      "cylinders": [
+        {
+          "xy": [
+            80.90000000000003,
+            24.349999999999994
+          ],
+          "radius": 6.05,
+          "bbox": {
+            "x": [
+              74.85000000000004,
+              86.95000000000003
+            ],
+            "y": [
+              18.299999999999994,
+              30.399999999999995
+            ],
+            "z": [
+              1.7000000000000002,
+              4.0
+            ]
+          }
+        },
+        {
+          "xy": [
+            80.90000000000003,
+            24.349999999999994
+          ],
+          "radius": 2.5,
+          "bbox": {
+            "x": [
+              78.40000000000003,
+              83.40000000000003
+            ],
+            "y": [
+              21.849999999999994,
+              26.849999999999994
+            ],
+            "z": [
+              4.0,
+              10.0
+            ]
+          }
+        },
+        {
+          "xy": [
+            80.90000000000003,
+            24.349999999999994
+          ],
+          "radius": 1.85,
+          "bbox": {
+            "x": [
+              79.05000000000004,
+              82.75000000000003
+            ],
+            "y": [
+              22.499999999999993,
+              26.199999999999996
+            ],
+            "z": [
+              4.0,
+              10.0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "xy": [
+        -80.901,
+        -58.35000000000001
+      ],
+      "bbox": {
+        "x": [
+          -86.951,
+          -74.851
+        ],
+        "y": [
+          -64.4,
+          -52.300000000000004
+        ],
+        "z": [
+          1.7000000000000002,
+          10.0
+        ]
+      },
+      "volume_mm3": 317.77445310511825,
+      "cylinders": [
+        {
+          "xy": [
+            -80.901,
+            -58.35
+          ],
+          "radius": 6.05,
+          "bbox": {
+            "x": [
+              -86.951,
+              -74.851
+            ],
+            "y": [
+              -64.4,
+              -52.300000000000004
+            ],
+            "z": [
+              1.7000000000000002,
+              4.0
+            ]
+          }
+        },
+        {
+          "xy": [
+            -80.901,
+            -58.35
+          ],
+          "radius": 2.5,
+          "bbox": {
+            "x": [
+              -83.401,
+              -78.401
+            ],
+            "y": [
+              -60.85,
+              -55.85
+            ],
+            "z": [
+              4.0,
+              10.0
+            ]
+          }
+        },
+        {
+          "xy": [
+            -80.901,
+            -58.35
+          ],
+          "radius": 1.85,
+          "bbox": {
+            "x": [
+              -82.75099999999999,
+              -79.051
+            ],
+            "y": [
+              -60.2,
+              -56.5
+            ],
+            "z": [
+              4.0,
+              10.0
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "xy": [
+        80.90000000000003,
+        -58.35000000000001
+      ],
+      "bbox": {
+        "x": [
+          74.85000000000004,
+          86.95000000000003
+        ],
+        "y": [
+          -64.4,
+          -52.300000000000004
+        ],
+        "z": [
+          1.7000000000000002,
+          10.0
+        ]
+      },
+      "volume_mm3": 317.77445310511825,
+      "cylinders": [
+        {
+          "xy": [
+            80.90000000000003,
+            -58.35
+          ],
+          "radius": 6.05,
+          "bbox": {
+            "x": [
+              74.85000000000004,
+              86.95000000000003
+            ],
+            "y": [
+              -64.4,
+              -52.300000000000004
+            ],
+            "z": [
+              1.7000000000000002,
+              4.0
+            ]
+          }
+        },
+        {
+          "xy": [
+            80.90000000000003,
+            -58.35
+          ],
+          "radius": 2.5,
+          "bbox": {
+            "x": [
+              78.40000000000003,
+              83.40000000000003
+            ],
+            "y": [
+              -60.85,
+              -55.85
+            ],
+            "z": [
+              4.0,
+              10.0
+            ]
+          }
+        },
+        {
+          "xy": [
+            80.90000000000003,
+            -58.35
+          ],
+          "radius": 1.85,
+          "bbox": {
+            "x": [
+              79.05000000000004,
+              82.75000000000003
+            ],
+            "y": [
+              -60.2,
+              -56.5
+            ],
+            "z": [
+              4.0,
+              10.0
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "scope": "Actual exported native geometry only. Native FPD reload independently verifies WGO40 thread semantics, usable thread, side and depth offset. STEP cylinder diameter does not independently certify thread pitch or hardware strength."
+}

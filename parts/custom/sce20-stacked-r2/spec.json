@@ -1,0 +1,20 @@
+{
+  "schema": "part-spec/1",
+  "part_name": "SCE20 R2 aluminum mounting panel for stacked layout",
+  "units": "mm",
+  "solid_count": 1,
+  "dimensions": [
+    {"id": "width", "kind": "bbox", "axis": "x", "expected": 431.8, "tol": 0.01},
+    {"id": "height", "kind": "bbox", "axis": "y", "expected": 431.8, "tol": 0.01},
+    {"id": "thickness", "kind": "bbox", "axis": "z", "expected": 6, "tol": 0.01},
+    {"id": "factory_mounting_holes", "kind": "cylinder", "diameter": 12.7, "tol": 0.01, "axis": "Z", "type": "hole", "count_min": 4}
+  ],
+  "design": {"role": "plate", "min_score": 70, "severity": "hard"},
+  "assumptions": [
+    "Factory outline and holes are interfaces; preserve R6.35 even though not a style ladder radius.",
+    "Catalog mounting cavities represented in STEP; actual production cavities are defined solely by native FPD hardware objects.",
+    "The Bedrock adapter remains seated directly on the main aluminum panel; the independent removable carrier places the router above it.",
+    "The unused upper-left area is intentional; cosmetic features must not consume this reserved space."
+  ],
+  "unresolved": []
+}

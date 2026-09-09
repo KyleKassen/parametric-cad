@@ -1,5 +1,5 @@
 {
-  "status": "FAIL",
+  "status": "PASS",
   "checks": [
     {
       "check": "Backpanel exported/reopened valid single solid",
@@ -158,7 +158,7 @@
       "check": "All machining webs at least0.5mm",
       "pass_check": true,
       "measured": [
-        3.891599325896067,
+        3.5562207764198153,
         "B210_1",
         "OZ_1"
       ]
@@ -177,8 +177,8 @@
           357.0
         ],
         "y": [
-          15.318700000000007,
-          192.9663
+          14.318700000000007,
+          191.9663
         ],
         "z": [
           50.0,
@@ -209,8 +209,8 @@
       "pass_check": true,
       "measured": {
         "x": [
-          355.0,
-          427.00000000000006
+          343.9,
+          415.90000000000003
         ],
         "y": [
           27.600000536499998,
@@ -284,7 +284,7 @@
     {
       "check": "b210 / meanwell physical clearance",
       "pass_check": true,
-      "measured": 13.500000013490023
+      "measured": 2.4000000134900006
     },
     {
       "check": "b210 / peplink physical clearance",
@@ -304,7 +304,7 @@
     {
       "check": "bedrock / meanwell physical clearance",
       "pass_check": true,
-      "measured": 150.0
+      "measured": 138.89999999999998
     },
     {
       "check": "bedrock / peplink physical clearance",
@@ -324,17 +324,17 @@
     {
       "check": "meanwell / peplink physical clearance",
       "pass_check": true,
-      "measured": 162.60000001349002
+      "measured": 151.50000001349
     },
     {
       "check": "meanwell / oz physical clearance",
       "pass_check": true,
-      "measured": 14.899999999999977
+      "measured": 3.7999999999999545
     },
     {
       "check": "meanwell / carrier physical clearance",
       "pass_check": true,
-      "measured": 156.9969426453904
+      "measured": 146.95798719361937
     },
     {
       "check": "peplink / oz physical clearance",
@@ -352,23 +352,28 @@
       "measured": 44.83088667425618
     },
     {
-      "check": "CARRIER_1_WGO30_L20 unrelated bedrock interference",
-      "pass_check": false,
+      "check": "B210_2_WGO30_L20 recessed flange flush beneath meanwell edge",
+      "pass_check": true,
       "measured": 0.0
     },
     {
-      "check": "CARRIER_2_WGO30_L20 unrelated bedrock interference",
-      "pass_check": false,
+      "check": "CARRIER_1_WGO30_L20 recessed flange flush beneath bedrock edge",
+      "pass_check": true,
       "measured": 0.0
     },
     {
-      "check": "CARRIER_3_WGO30_L20 unrelated bedrock interference",
-      "pass_check": false,
+      "check": "CARRIER_2_WGO30_L20 recessed flange flush beneath bedrock edge",
+      "pass_check": true,
       "measured": 0.0
     },
     {
-      "check": "CARRIER_4_WGO30_L20 unrelated bedrock interference",
-      "pass_check": false,
+      "check": "CARRIER_3_WGO30_L20 recessed flange flush beneath bedrock edge",
+      "pass_check": true,
+      "measured": 0.0
+    },
+    {
+      "check": "CARRIER_4_WGO30_L20 recessed flange flush beneath bedrock edge",
+      "pass_check": true,
       "measured": 0.0
     },
     {

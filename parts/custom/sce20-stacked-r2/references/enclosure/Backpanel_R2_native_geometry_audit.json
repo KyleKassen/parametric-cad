@@ -1,0 +1,4254 @@
+{
+  "schema": "sce20-stacked-r2-native-backpanel-audit/1",
+  "status": "PASS",
+  "units": "mm",
+  "native_step": "C:\\Users\\KyleKassen\\Desktop\\Backpanel_R2_verified-1.stp",
+  "native_sha256": "67253cb9de26a0433015b06a253299b8029659622620500182177db08cbce323",
+  "reference_step": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-stacked-r2\\exports\\Backpanel_R2.step",
+  "reference_sha256": "28029dfe6ded586996a7b96ea5c8344060a320c5a49d8db0fd81cd40232e7051",
+  "raw_native_bbox_mm": {
+    "x": [
+      -6.217248937901e-15,
+      431.8
+    ],
+    "y": [
+      -5.551115123125783e-17,
+      431.8
+    ],
+    "z": [
+      -6.0000000000000036,
+      20.0
+    ]
+  },
+  "raw_plate_bbox_mm": {
+    "x": [
+      -6.217248937901e-15,
+      431.8
+    ],
+    "y": [
+      -5.551115123125783e-17,
+      431.8
+    ],
+    "z": [
+      -6.0000000000000036,
+      3.1086244689504383e-15
+    ]
+  },
+  "raw_plate_solid_index": 0,
+  "native_to_component_datum_translation_mm": [
+    6.217248937901e-15,
+    5.551115123125783e-17,
+    -3.1086244689504383e-15
+  ],
+  "native_plate_volume_mm3": 1109416.9330958168,
+  "reference_plate_volume_mm3": 1109415.374443257,
+  "native_extra_metal_mm3": 1.8398484736680984,
+  "native_missing_metal_mm3": 0.2811959139071405,
+  "plate_symmetric_difference_mm3": 2.121044387575239,
+  "maximum_feature_axis_error_mm": 0.0014142135623622628,
+  "maximum_feature_radius_error_mm": 0.000700000000000145,
+  "checks": [
+    {
+      "check": "native plate valid",
+      "pass": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "all native hardware valid",
+      "pass": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "one plate plus twenty hardware solids",
+      "pass": true,
+      "measured": 21,
+      "criterion": 21
+    },
+    {
+      "check": "native panel dimensions",
+      "pass": true,
+      "measured": {
+        "x": [
+          0.0,
+          431.8
+        ],
+        "y": [
+          0.0,
+          431.8
+        ],
+        "z": [
+          -6.000000000000005,
+          0.0
+        ]
+      },
+      "criterion": "431.8 x431.8 x6"
+    },
+    {
+      "check": "native R6.35 corner at 6.35,6.35",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            6.350000000000006,
+            6.35
+          ],
+          "radius_mm": 6.35,
+          "bbox_mm": {
+            "x": [
+              6.217248937900877e-15,
+              6.350000000000012
+            ],
+            "y": [
+              0.0,
+              6.35
+            ],
+            "z": [
+              -5.601000000000003,
+              -0.39900000000000313
+            ]
+          }
+        }
+      ],
+      "criterion": "one radius6.35 cylindrical outside wall"
+    },
+    {
+      "check": "native R6.35 corner at 6.35,425.45",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            6.350000000000006,
+            425.45
+          ],
+          "radius_mm": 6.35,
+          "bbox_mm": {
+            "x": [
+              8.881784196999998e-16,
+              6.350000000000006
+            ],
+            "y": [
+              425.45,
+              431.8
+            ],
+            "z": [
+              -5.601000000000003,
+              -0.39900000000000313
+            ]
+          }
+        }
+      ],
+      "criterion": "one radius6.35 cylindrical outside wall"
+    },
+    {
+      "check": "native R6.35 corner at 425.45,6.35",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            425.45,
+            6.35
+          ],
+          "radius_mm": 6.35,
+          "bbox_mm": {
+            "x": [
+              425.45,
+              431.8
+            ],
+            "y": [
+              0.0,
+              6.35
+            ],
+            "z": [
+              -5.601000000000003,
+              -0.39900000000000313
+            ]
+          }
+        }
+      ],
+      "criterion": "one radius6.35 cylindrical outside wall"
+    },
+    {
+      "check": "native R6.35 corner at 425.45,425.45",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            425.45,
+            425.45
+          ],
+          "radius_mm": 6.35,
+          "bbox_mm": {
+            "x": [
+              425.45,
+              431.8
+            ],
+            "y": [
+              425.45,
+              431.8
+            ],
+            "z": [
+              -5.601000000000003,
+              -0.39900000000000313
+            ]
+          }
+        }
+      ],
+      "criterion": "one radius6.35 cylindrical outside wall"
+    },
+    {
+      "check": "FACTORY_1 factory bore",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            22.224000000000007,
+            22.224
+          ],
+          "radius_mm": 6.35,
+          "bbox_mm": {
+            "x": [
+              15.874000000000008,
+              28.57400000000001
+            ],
+            "y": [
+              15.874,
+              28.573999999999998
+            ],
+            "z": [
+              -6.0000000000000036,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.35,
+        "Z_span_mm": [
+          -6,
+          0
+        ]
+      }
+    },
+    {
+      "check": "FACTORY_2 factory bore",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            22.224000000000007,
+            409.575
+          ],
+          "radius_mm": 6.35,
+          "bbox_mm": {
+            "x": [
+              15.874000000000008,
+              28.57400000000001
+            ],
+            "y": [
+              403.22499999999997,
+              415.925
+            ],
+            "z": [
+              -6.0000000000000036,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.35,
+        "Z_span_mm": [
+          -6,
+          0
+        ]
+      }
+    },
+    {
+      "check": "FACTORY_3 factory bore",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            409.575,
+            409.575
+          ],
+          "radius_mm": 6.35,
+          "bbox_mm": {
+            "x": [
+              403.22499999999997,
+              415.925
+            ],
+            "y": [
+              403.22499999999997,
+              415.925
+            ],
+            "z": [
+              -6.0000000000000036,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.35,
+        "Z_span_mm": [
+          -6,
+          0
+        ]
+      }
+    },
+    {
+      "check": "FACTORY_4 factory bore",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            409.575,
+            22.224
+          ],
+          "radius_mm": 6.35,
+          "bbox_mm": {
+            "x": [
+              403.22499999999997,
+              415.925
+            ],
+            "y": [
+              15.874,
+              28.573999999999998
+            ],
+            "z": [
+              -6.0000000000000036,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.35,
+        "Z_span_mm": [
+          -6,
+          0
+        ]
+      }
+    },
+    {
+      "check": "FACTORY_5 factory bore",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            22.224000000000007,
+            53.974
+          ],
+          "radius_mm": 3.568,
+          "bbox_mm": {
+            "x": [
+              18.656000000000006,
+              25.79200000000001
+            ],
+            "y": [
+              50.406,
+              57.541999999999994
+            ],
+            "z": [
+              -6.0000000000000036,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 3.5687,
+        "Z_span_mm": [
+          -6,
+          0
+        ]
+      }
+    },
+    {
+      "check": "FACTORY_6 factory bore",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            409.575,
+            377.825
+          ],
+          "radius_mm": 3.568,
+          "bbox_mm": {
+            "x": [
+              406.007,
+              413.143
+            ],
+            "y": [
+              374.257,
+              381.393
+            ],
+            "z": [
+              -6.0000000000000036,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 3.5687,
+        "Z_span_mm": [
+          -6,
+          0
+        ]
+      }
+    },
+    {
+      "check": "MEANWELL_1 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            408.4,
+            323.4
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              402.34999999999997,
+              414.45
+            ],
+            "y": [
+              317.34999999999997,
+              329.45
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "MEANWELL_2 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            408.4,
+            71.4
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              402.34999999999997,
+              414.45
+            ],
+            "y": [
+              65.35000000000001,
+              77.45
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "MEANWELL_3 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            351.4,
+            323.4
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              345.34999999999997,
+              357.45
+            ],
+            "y": [
+              317.34999999999997,
+              329.45
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "MEANWELL_4 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            351.4,
+            71.4
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              345.34999999999997,
+              357.45
+            ],
+            "y": [
+              65.35000000000001,
+              77.45
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "BEDROCK_1 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            46.00000000000001,
+            25.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              39.95000000000001,
+              52.050000000000004
+            ],
+            "y": [
+              18.95,
+              31.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "BEDROCK_2 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            46.00000000000001,
+            189.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              39.95000000000001,
+              52.050000000000004
+            ],
+            "y": [
+              182.95,
+              195.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "BEDROCK_3 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            198.0,
+            25.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              191.95,
+              204.05
+            ],
+            "y": [
+              18.95,
+              31.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "BEDROCK_4 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            198.0,
+            189.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              191.95,
+              204.05
+            ],
+            "y": [
+              182.95,
+              195.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "B210_1 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            350.0,
+            166.007
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              343.95,
+              356.05
+            ],
+            "y": [
+              159.957,
+              172.05700000000002
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "B210_2 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            350.0,
+            45.992
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              343.95,
+              356.05
+            ],
+            "y": [
+              39.942,
+              52.041999999999994
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "B210_3 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            214.0,
+            166.007
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              207.95,
+              220.05
+            ],
+            "y": [
+              159.957,
+              172.05700000000002
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "B210_4 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            214.0,
+            45.992
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              207.95,
+              220.05
+            ],
+            "y": [
+              39.942,
+              52.041999999999994
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "OZ_1 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            335.1,
+            161.2
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              329.05,
+              341.15000000000003
+            ],
+            "y": [
+              155.14999999999998,
+              167.25
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "OZ_2 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            335.1,
+            65.2
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              329.05,
+              341.15000000000003
+            ],
+            "y": [
+              59.150000000000006,
+              71.25
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "OZ_3 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            228.9,
+            161.2
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              222.85,
+              234.95000000000002
+            ],
+            "y": [
+              155.14999999999998,
+              167.25
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "OZ_4 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            228.9,
+            65.2
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              222.85,
+              234.95000000000002
+            ],
+            "y": [
+              59.150000000000006,
+              71.25
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "CARRIER_1 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            52.00000000000001,
+            10.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              45.95000000000001,
+              58.050000000000004
+            ],
+            "y": [
+              3.95,
+              16.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "CARRIER_2 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            52.00000000000001,
+            204.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              45.95000000000001,
+              58.050000000000004
+            ],
+            "y": [
+              197.95,
+              210.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "CARRIER_3 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            192.0,
+            10.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              185.95,
+              198.05
+            ],
+            "y": [
+              3.95,
+              16.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "CARRIER_4 native anchor cavity",
+      "pass": true,
+      "measured": [
+        {
+          "axis_xy_mm": [
+            192.0,
+            204.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              185.95,
+              198.05
+            ],
+            "y": [
+              197.95,
+              210.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "criterion": {
+        "radius_mm": 6.05,
+        "Z_span_mm": [
+          -2.3,
+          0
+        ]
+      }
+    },
+    {
+      "check": "MEANWELL_1 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          408.4,
+          323.4
+        ]
+      ],
+      "criterion": [
+        408.4,
+        323.4
+      ]
+    },
+    {
+      "check": "MEANWELL_1 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        11.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        12
+      ]
+    },
+    {
+      "check": "MEANWELL_1 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.100000000000023,
+        12.100000000000023
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "MEANWELL_1 exported open female/solid male end",
+      "pass": true,
+      "measured": 0.06361725123519224,
+      "criterion": "solid axial stud"
+    },
+    {
+      "check": "MEANWELL_2 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          408.4,
+          71.4
+        ]
+      ],
+      "criterion": [
+        408.4,
+        71.4
+      ]
+    },
+    {
+      "check": "MEANWELL_2 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        11.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        12
+      ]
+    },
+    {
+      "check": "MEANWELL_2 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.100000000000023,
+        12.099999999999994
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "MEANWELL_2 exported open female/solid male end",
+      "pass": true,
+      "measured": 0.06361725123519196,
+      "criterion": "solid axial stud"
+    },
+    {
+      "check": "MEANWELL_3 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          351.4,
+          323.4
+        ]
+      ],
+      "criterion": [
+        351.4,
+        323.4
+      ]
+    },
+    {
+      "check": "MEANWELL_3 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        11.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        12
+      ]
+    },
+    {
+      "check": "MEANWELL_3 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.100000000000023,
+        12.100000000000023
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "MEANWELL_3 exported open female/solid male end",
+      "pass": true,
+      "measured": 0.06361725123519224,
+      "criterion": "solid axial stud"
+    },
+    {
+      "check": "MEANWELL_4 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          351.4,
+          71.4
+        ]
+      ],
+      "criterion": [
+        351.4,
+        71.4
+      ]
+    },
+    {
+      "check": "MEANWELL_4 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        11.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        12
+      ]
+    },
+    {
+      "check": "MEANWELL_4 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.100000000000023,
+        12.099999999999994
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "MEANWELL_4 exported open female/solid male end",
+      "pass": true,
+      "measured": 0.06361725123519196,
+      "criterion": "solid axial stud"
+    },
+    {
+      "check": "BEDROCK_1 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          46.00000000000001,
+          25.0
+        ]
+      ],
+      "criterion": [
+        46.0,
+        25.0
+      ]
+    },
+    {
+      "check": "BEDROCK_1 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        11.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        12
+      ]
+    },
+    {
+      "check": "BEDROCK_1 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.099999999999994,
+        12.100000000000001
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "BEDROCK_1 exported open female/solid male end",
+      "pass": true,
+      "measured": 0.06361725123519331,
+      "criterion": "solid axial stud"
+    },
+    {
+      "check": "BEDROCK_2 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          46.00000000000001,
+          189.0
+        ]
+      ],
+      "criterion": [
+        46.0,
+        189.0
+      ]
+    },
+    {
+      "check": "BEDROCK_2 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        11.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        12
+      ]
+    },
+    {
+      "check": "BEDROCK_2 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.099999999999994,
+        12.100000000000023
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "BEDROCK_2 exported open female/solid male end",
+      "pass": true,
+      "measured": 0.06361725123519331,
+      "criterion": "solid axial stud"
+    },
+    {
+      "check": "BEDROCK_3 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          198.0,
+          25.0
+        ]
+      ],
+      "criterion": [
+        198.0,
+        25.0
+      ]
+    },
+    {
+      "check": "BEDROCK_3 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        11.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        12
+      ]
+    },
+    {
+      "check": "BEDROCK_3 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.100000000000023,
+        12.100000000000001
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "BEDROCK_3 exported open female/solid male end",
+      "pass": true,
+      "measured": 0.06361725123519342,
+      "criterion": "solid axial stud"
+    },
+    {
+      "check": "BEDROCK_4 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          198.0,
+          189.0
+        ]
+      ],
+      "criterion": [
+        198.0,
+        189.0
+      ]
+    },
+    {
+      "check": "BEDROCK_4 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        11.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        12
+      ]
+    },
+    {
+      "check": "BEDROCK_4 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.100000000000023,
+        12.100000000000023
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "BEDROCK_4 exported open female/solid male end",
+      "pass": true,
+      "measured": 0.06361725123519343,
+      "criterion": "solid axial stud"
+    },
+    {
+      "check": "B210_1 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          350.0,
+          166.007
+        ]
+      ],
+      "criterion": [
+        350.0,
+        166.007
+      ]
+    },
+    {
+      "check": "B210_1 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        19.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        20
+      ]
+    },
+    {
+      "check": "B210_1 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.100000000000023,
+        12.100000000000023
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "B210_1 exported open female/solid male end",
+      "pass": true,
+      "measured": 0,
+      "criterion": "open axial bore"
+    },
+    {
+      "check": "B210_2 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          350.0,
+          45.992
+        ]
+      ],
+      "criterion": [
+        350.0,
+        45.992
+      ]
+    },
+    {
+      "check": "B210_2 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        19.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        20
+      ]
+    },
+    {
+      "check": "B210_2 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.100000000000023,
+        12.099999999999994
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "B210_2 exported open female/solid male end",
+      "pass": true,
+      "measured": 0,
+      "criterion": "open axial bore"
+    },
+    {
+      "check": "B210_3 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          214.0,
+          166.007
+        ]
+      ],
+      "criterion": [
+        214.0,
+        166.007
+      ]
+    },
+    {
+      "check": "B210_3 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        19.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        20
+      ]
+    },
+    {
+      "check": "B210_3 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.100000000000023,
+        12.100000000000023
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "B210_3 exported open female/solid male end",
+      "pass": true,
+      "measured": 0,
+      "criterion": "open axial bore"
+    },
+    {
+      "check": "B210_4 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          214.0,
+          45.992
+        ]
+      ],
+      "criterion": [
+        214.0,
+        45.992
+      ]
+    },
+    {
+      "check": "B210_4 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        19.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        20
+      ]
+    },
+    {
+      "check": "B210_4 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.100000000000023,
+        12.099999999999994
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "B210_4 exported open female/solid male end",
+      "pass": true,
+      "measured": 0,
+      "criterion": "open axial bore"
+    },
+    {
+      "check": "OZ_1 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          335.1,
+          161.2
+        ]
+      ],
+      "criterion": [
+        335.1,
+        161.2
+      ]
+    },
+    {
+      "check": "OZ_1 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        11.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        12
+      ]
+    },
+    {
+      "check": "OZ_1 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.100000000000023,
+        12.100000000000023
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "OZ_1 exported open female/solid male end",
+      "pass": true,
+      "measured": 0.06361725123519252,
+      "criterion": "solid axial stud"
+    },
+    {
+      "check": "OZ_2 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          335.1,
+          65.2
+        ]
+      ],
+      "criterion": [
+        335.1,
+        65.2
+      ]
+    },
+    {
+      "check": "OZ_2 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        11.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        12
+      ]
+    },
+    {
+      "check": "OZ_2 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.100000000000023,
+        12.099999999999994
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "OZ_2 exported open female/solid male end",
+      "pass": true,
+      "measured": 0.06361725123519196,
+      "criterion": "solid axial stud"
+    },
+    {
+      "check": "OZ_3 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          228.9,
+          161.2
+        ]
+      ],
+      "criterion": [
+        228.9,
+        161.2
+      ]
+    },
+    {
+      "check": "OZ_3 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        11.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        12
+      ]
+    },
+    {
+      "check": "OZ_3 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.100000000000023,
+        12.100000000000023
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "OZ_3 exported open female/solid male end",
+      "pass": true,
+      "measured": 0.06361725123519343,
+      "criterion": "solid axial stud"
+    },
+    {
+      "check": "OZ_4 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          228.9,
+          65.2
+        ]
+      ],
+      "criterion": [
+        228.9,
+        65.2
+      ]
+    },
+    {
+      "check": "OZ_4 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        11.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        12
+      ]
+    },
+    {
+      "check": "OZ_4 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.100000000000023,
+        12.099999999999994
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "OZ_4 exported open female/solid male end",
+      "pass": true,
+      "measured": 0.06361725123519288,
+      "criterion": "solid axial stud"
+    },
+    {
+      "check": "CARRIER_1 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          52.00000000000001,
+          10.0
+        ]
+      ],
+      "criterion": [
+        52.0,
+        10.0
+      ]
+    },
+    {
+      "check": "CARRIER_1 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        19.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        20
+      ]
+    },
+    {
+      "check": "CARRIER_1 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.099999999999994,
+        12.100000000000001
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "CARRIER_1 exported open female/solid male end",
+      "pass": true,
+      "measured": 0,
+      "criterion": "open axial bore"
+    },
+    {
+      "check": "CARRIER_2 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          52.00000000000001,
+          204.0
+        ]
+      ],
+      "criterion": [
+        52.0,
+        204.0
+      ]
+    },
+    {
+      "check": "CARRIER_2 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        19.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        20
+      ]
+    },
+    {
+      "check": "CARRIER_2 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.099999999999994,
+        12.100000000000023
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "CARRIER_2 exported open female/solid male end",
+      "pass": true,
+      "measured": 0,
+      "criterion": "open axial bore"
+    },
+    {
+      "check": "CARRIER_3 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          192.0,
+          10.0
+        ]
+      ],
+      "criterion": [
+        192.0,
+        10.0
+      ]
+    },
+    {
+      "check": "CARRIER_3 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        19.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        20
+      ]
+    },
+    {
+      "check": "CARRIER_3 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.100000000000023,
+        12.100000000000001
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "CARRIER_3 exported open female/solid male end",
+      "pass": true,
+      "measured": 0,
+      "criterion": "open axial bore"
+    },
+    {
+      "check": "CARRIER_4 unique native hardware axis",
+      "pass": true,
+      "measured": [
+        [
+          192.0,
+          204.0
+        ]
+      ],
+      "criterion": [
+        192.0,
+        204.0
+      ]
+    },
+    {
+      "check": "CARRIER_4 native front height/recess",
+      "pass": true,
+      "measured": [
+        -2.300000000000003,
+        19.999999999999996
+      ],
+      "criterion": [
+        -2.3,
+        20
+      ]
+    },
+    {
+      "check": "CARRIER_4 native recessed flange diameter",
+      "pass": true,
+      "measured": [
+        12.100000000000023,
+        12.100000000000023
+      ],
+      "criterion": [
+        12.1,
+        12.1
+      ]
+    },
+    {
+      "check": "CARRIER_4 exported open female/solid male end",
+      "pass": true,
+      "measured": 0,
+      "criterion": "open axial bore"
+    },
+    {
+      "check": "every exported hardware solid matched once",
+      "pass": true,
+      "measured": 20,
+      "criterion": 20
+    },
+    {
+      "check": "whole native plate/reference geometry",
+      "pass": true,
+      "measured": 2.121044387575239,
+      "criterion": "<3 mm3 permits FPD0.001 mm coordinate quantization; feature coordinates/depths independently checked"
+    }
+  ],
+  "plate_features": [
+    {
+      "id": "FACTORY_1",
+      "kind": "factory",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            22.224000000000007,
+            22.224
+          ],
+          "radius_mm": 6.35,
+          "bbox_mm": {
+            "x": [
+              15.874000000000008,
+              28.57400000000001
+            ],
+            "y": [
+              15.874,
+              28.573999999999998
+            ],
+            "z": [
+              -6.0000000000000036,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0014142135623597504,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "FACTORY_2",
+      "kind": "factory",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            22.224000000000007,
+            409.575
+          ],
+          "radius_mm": 6.35,
+          "bbox_mm": {
+            "x": [
+              15.874000000000008,
+              28.57400000000001
+            ],
+            "y": [
+              403.22499999999997,
+              415.925
+            ],
+            "z": [
+              -6.0000000000000036,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0009999999999870113,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "FACTORY_3",
+      "kind": "factory",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            409.575,
+            409.575
+          ],
+          "radius_mm": 6.35,
+          "bbox_mm": {
+            "x": [
+              403.22499999999997,
+              415.925
+            ],
+            "y": [
+              403.22499999999997,
+              415.925
+            ],
+            "z": [
+              -6.0000000000000036,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 8.038873388460929e-14,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "FACTORY_4",
+      "kind": "factory",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            409.575,
+            22.224
+          ],
+          "radius_mm": 6.35,
+          "bbox_mm": {
+            "x": [
+              403.22499999999997,
+              415.925
+            ],
+            "y": [
+              15.874,
+              28.573999999999998
+            ],
+            "z": [
+              -6.0000000000000036,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0009999999999941167,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "FACTORY_5",
+      "kind": "factory",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            22.224000000000007,
+            53.974
+          ],
+          "radius_mm": 3.568,
+          "bbox_mm": {
+            "x": [
+              18.656000000000006,
+              25.79200000000001
+            ],
+            "y": [
+              50.406,
+              57.541999999999994
+            ],
+            "z": [
+              -6.0000000000000036,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0014142135623622628,
+      "radius_error_mm": 0.000700000000000145
+    },
+    {
+      "id": "FACTORY_6",
+      "kind": "factory",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            409.575,
+            377.825
+          ],
+          "radius_mm": 3.568,
+          "bbox_mm": {
+            "x": [
+              406.007,
+              413.143
+            ],
+            "y": [
+              374.257,
+              381.393
+            ],
+            "z": [
+              -6.0000000000000036,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 8.038873388460929e-14,
+      "radius_error_mm": 0.000700000000000145
+    },
+    {
+      "id": "MEANWELL_1",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            408.4,
+            323.4
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              402.34999999999997,
+              414.45
+            ],
+            "y": [
+              317.34999999999997,
+              329.45
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "MEANWELL_2",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            408.4,
+            71.4
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              402.34999999999997,
+              414.45
+            ],
+            "y": [
+              65.35000000000001,
+              77.45
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "MEANWELL_3",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            351.4,
+            323.4
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              345.34999999999997,
+              357.45
+            ],
+            "y": [
+              317.34999999999997,
+              329.45
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "MEANWELL_4",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            351.4,
+            71.4
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              345.34999999999997,
+              357.45
+            ],
+            "y": [
+              65.35000000000001,
+              77.45
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "BEDROCK_1",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            46.00000000000001,
+            25.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              39.95000000000001,
+              52.050000000000004
+            ],
+            "y": [
+              18.95,
+              31.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 7.105427357601002e-15,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "BEDROCK_2",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            46.00000000000001,
+            189.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              39.95000000000001,
+              52.050000000000004
+            ],
+            "y": [
+              182.95,
+              195.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 7.105427357601002e-15,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "BEDROCK_3",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            198.0,
+            25.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              191.95,
+              204.05
+            ],
+            "y": [
+              18.95,
+              31.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "BEDROCK_4",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            198.0,
+            189.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              191.95,
+              204.05
+            ],
+            "y": [
+              182.95,
+              195.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "B210_1",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            350.0,
+            166.007
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              343.95,
+              356.05
+            ],
+            "y": [
+              159.957,
+              172.05700000000002
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "B210_2",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            350.0,
+            45.992
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              343.95,
+              356.05
+            ],
+            "y": [
+              39.942,
+              52.041999999999994
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "B210_3",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            214.0,
+            166.007
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              207.95,
+              220.05
+            ],
+            "y": [
+              159.957,
+              172.05700000000002
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "B210_4",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            214.0,
+            45.992
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              207.95,
+              220.05
+            ],
+            "y": [
+              39.942,
+              52.041999999999994
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "OZ_1",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            335.1,
+            161.2
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              329.05,
+              341.15000000000003
+            ],
+            "y": [
+              155.14999999999998,
+              167.25
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "OZ_2",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            335.1,
+            65.2
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              329.05,
+              341.15000000000003
+            ],
+            "y": [
+              59.150000000000006,
+              71.25
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "OZ_3",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            228.9,
+            161.2
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              222.85,
+              234.95000000000002
+            ],
+            "y": [
+              155.14999999999998,
+              167.25
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "OZ_4",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            228.9,
+            65.2
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              222.85,
+              234.95000000000002
+            ],
+            "y": [
+              59.150000000000006,
+              71.25
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "CARRIER_1",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            52.00000000000001,
+            10.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              45.95000000000001,
+              58.050000000000004
+            ],
+            "y": [
+              3.95,
+              16.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 7.105427357601002e-15,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "CARRIER_2",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            52.00000000000001,
+            204.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              45.95000000000001,
+              58.050000000000004
+            ],
+            "y": [
+              197.95,
+              210.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 7.105427357601002e-15,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "CARRIER_3",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            192.0,
+            10.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              185.95,
+              198.05
+            ],
+            "y": [
+              3.95,
+              16.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0,
+      "radius_error_mm": 0.0
+    },
+    {
+      "id": "CARRIER_4",
+      "kind": "anchor",
+      "matches": [
+        {
+          "axis_xy_mm": [
+            192.0,
+            204.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              185.95,
+              198.05
+            ],
+            "y": [
+              197.95,
+              210.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        }
+      ],
+      "axis_error_mm": 0.0,
+      "radius_error_mm": 0.0
+    }
+  ],
+  "hardware_geometry": [
+    {
+      "id": "MEANWELL_1",
+      "native_solid_index_excluding_plate": 19,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGU30",
+      "bbox_mm": {
+        "x": [
+          402.34999999999997,
+          414.45
+        ],
+        "y": [
+          317.34999999999997,
+          329.45
+        ],
+        "z": [
+          -2.300000000000003,
+          11.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        408.4,
+        323.4
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            408.4,
+            323.4
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              402.34999999999997,
+              414.45
+            ],
+            "y": [
+              317.34999999999997,
+              329.45
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            408.4,
+            323.4
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              407.04999999999995,
+              409.75
+            ],
+            "y": [
+              322.04999999999995,
+              324.75
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              11.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "MEANWELL_2",
+      "native_solid_index_excluding_plate": 18,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGU30",
+      "bbox_mm": {
+        "x": [
+          402.34999999999997,
+          414.45
+        ],
+        "y": [
+          65.35000000000001,
+          77.45
+        ],
+        "z": [
+          -2.300000000000003,
+          11.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        408.4,
+        71.4
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            408.4,
+            71.4
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              402.34999999999997,
+              414.45
+            ],
+            "y": [
+              65.35000000000001,
+              77.45
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            408.4,
+            71.4
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              407.04999999999995,
+              409.75
+            ],
+            "y": [
+              70.05000000000001,
+              72.75
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              11.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "MEANWELL_3",
+      "native_solid_index_excluding_plate": 17,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGU30",
+      "bbox_mm": {
+        "x": [
+          345.34999999999997,
+          357.45
+        ],
+        "y": [
+          317.34999999999997,
+          329.45
+        ],
+        "z": [
+          -2.300000000000003,
+          11.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        351.4,
+        323.4
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            351.4,
+            323.4
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              345.34999999999997,
+              357.45
+            ],
+            "y": [
+              317.34999999999997,
+              329.45
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            351.4,
+            323.4
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              350.04999999999995,
+              352.75
+            ],
+            "y": [
+              322.04999999999995,
+              324.75
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              11.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "MEANWELL_4",
+      "native_solid_index_excluding_plate": 16,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGU30",
+      "bbox_mm": {
+        "x": [
+          345.34999999999997,
+          357.45
+        ],
+        "y": [
+          65.35000000000001,
+          77.45
+        ],
+        "z": [
+          -2.300000000000003,
+          11.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        351.4,
+        71.4
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            351.4,
+            71.4
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              345.34999999999997,
+              357.45
+            ],
+            "y": [
+              65.35000000000001,
+              77.45
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            351.4,
+            71.4
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              350.04999999999995,
+              352.75
+            ],
+            "y": [
+              70.05000000000001,
+              72.75
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              11.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "BEDROCK_1",
+      "native_solid_index_excluding_plate": 15,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGU30",
+      "bbox_mm": {
+        "x": [
+          39.95000000000001,
+          52.050000000000004
+        ],
+        "y": [
+          18.95,
+          31.05
+        ],
+        "z": [
+          -2.300000000000003,
+          11.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        46.00000000000001,
+        25.0
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            46.00000000000001,
+            25.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              39.95000000000001,
+              52.050000000000004
+            ],
+            "y": [
+              18.95,
+              31.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            46.00000000000001,
+            25.0
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              44.650000000000006,
+              47.35000000000001
+            ],
+            "y": [
+              23.65,
+              26.35
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              11.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "BEDROCK_2",
+      "native_solid_index_excluding_plate": 14,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGU30",
+      "bbox_mm": {
+        "x": [
+          39.95000000000001,
+          52.050000000000004
+        ],
+        "y": [
+          182.95,
+          195.05
+        ],
+        "z": [
+          -2.300000000000003,
+          11.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        46.00000000000001,
+        189.0
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            46.00000000000001,
+            189.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              39.95000000000001,
+              52.050000000000004
+            ],
+            "y": [
+              182.95,
+              195.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            46.00000000000001,
+            189.0
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              44.650000000000006,
+              47.35000000000001
+            ],
+            "y": [
+              187.65,
+              190.35
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              11.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "BEDROCK_3",
+      "native_solid_index_excluding_plate": 13,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGU30",
+      "bbox_mm": {
+        "x": [
+          191.95,
+          204.05
+        ],
+        "y": [
+          18.95,
+          31.05
+        ],
+        "z": [
+          -2.300000000000003,
+          11.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        198.0,
+        25.0
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            198.0,
+            25.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              191.95,
+              204.05
+            ],
+            "y": [
+              18.95,
+              31.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            198.0,
+            25.0
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              196.65,
+              199.35
+            ],
+            "y": [
+              23.65,
+              26.35
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              11.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "BEDROCK_4",
+      "native_solid_index_excluding_plate": 12,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGU30",
+      "bbox_mm": {
+        "x": [
+          191.95,
+          204.05
+        ],
+        "y": [
+          182.95,
+          195.05
+        ],
+        "z": [
+          -2.300000000000003,
+          11.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        198.0,
+        189.0
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            198.0,
+            189.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              191.95,
+              204.05
+            ],
+            "y": [
+              182.95,
+              195.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            198.0,
+            189.0
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              196.65,
+              199.35
+            ],
+            "y": [
+              187.65,
+              190.35
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              11.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "B210_1",
+      "native_solid_index_excluding_plate": 11,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGO30",
+      "bbox_mm": {
+        "x": [
+          343.95,
+          356.05
+        ],
+        "y": [
+          159.957,
+          172.05700000000002
+        ],
+        "z": [
+          -2.300000000000003,
+          19.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        350.0,
+        166.007
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            350.0,
+            166.007
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              343.95,
+              356.05
+            ],
+            "y": [
+              159.957,
+              172.05700000000002
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            350.0,
+            166.007
+          ],
+          "radius_mm": 2.5,
+          "bbox_mm": {
+            "x": [
+              347.5,
+              352.5
+            ],
+            "y": [
+              163.507,
+              168.507
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              19.999999999999996
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            350.0,
+            166.007
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              348.65,
+              351.35
+            ],
+            "y": [
+              164.657,
+              167.357
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              19.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "B210_2",
+      "native_solid_index_excluding_plate": 10,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGO30",
+      "bbox_mm": {
+        "x": [
+          343.95,
+          356.05
+        ],
+        "y": [
+          39.942,
+          52.041999999999994
+        ],
+        "z": [
+          -2.300000000000003,
+          19.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        350.0,
+        45.992
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            350.0,
+            45.992
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              343.95,
+              356.05
+            ],
+            "y": [
+              39.942,
+              52.041999999999994
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            350.0,
+            45.992
+          ],
+          "radius_mm": 2.5,
+          "bbox_mm": {
+            "x": [
+              347.5,
+              352.5
+            ],
+            "y": [
+              43.492,
+              48.492
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              19.999999999999996
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            350.0,
+            45.992
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              348.65,
+              351.35
+            ],
+            "y": [
+              44.641999999999996,
+              47.342
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              19.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "B210_3",
+      "native_solid_index_excluding_plate": 9,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGO30",
+      "bbox_mm": {
+        "x": [
+          207.95,
+          220.05
+        ],
+        "y": [
+          159.957,
+          172.05700000000002
+        ],
+        "z": [
+          -2.300000000000003,
+          19.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        214.0,
+        166.007
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            214.0,
+            166.007
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              207.95,
+              220.05
+            ],
+            "y": [
+              159.957,
+              172.05700000000002
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            214.0,
+            166.007
+          ],
+          "radius_mm": 2.5,
+          "bbox_mm": {
+            "x": [
+              211.5,
+              216.5
+            ],
+            "y": [
+              163.507,
+              168.507
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              19.999999999999996
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            214.0,
+            166.007
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              212.65,
+              215.35
+            ],
+            "y": [
+              164.657,
+              167.357
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              19.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "B210_4",
+      "native_solid_index_excluding_plate": 8,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGO30",
+      "bbox_mm": {
+        "x": [
+          207.95,
+          220.05
+        ],
+        "y": [
+          39.942,
+          52.041999999999994
+        ],
+        "z": [
+          -2.300000000000003,
+          19.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        214.0,
+        45.992
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            214.0,
+            45.992
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              207.95,
+              220.05
+            ],
+            "y": [
+              39.942,
+              52.041999999999994
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            214.0,
+            45.992
+          ],
+          "radius_mm": 2.5,
+          "bbox_mm": {
+            "x": [
+              211.5,
+              216.5
+            ],
+            "y": [
+              43.492,
+              48.492
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              19.999999999999996
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            214.0,
+            45.992
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              212.65,
+              215.35
+            ],
+            "y": [
+              44.641999999999996,
+              47.342
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              19.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "OZ_1",
+      "native_solid_index_excluding_plate": 7,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGU30",
+      "bbox_mm": {
+        "x": [
+          329.05,
+          341.15000000000003
+        ],
+        "y": [
+          155.14999999999998,
+          167.25
+        ],
+        "z": [
+          -2.300000000000003,
+          11.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        335.1,
+        161.2
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            335.1,
+            161.2
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              329.05,
+              341.15000000000003
+            ],
+            "y": [
+              155.14999999999998,
+              167.25
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            335.1,
+            161.2
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              333.75,
+              336.45000000000005
+            ],
+            "y": [
+              159.85,
+              162.54999999999998
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              11.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "OZ_2",
+      "native_solid_index_excluding_plate": 6,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGU30",
+      "bbox_mm": {
+        "x": [
+          329.05,
+          341.15000000000003
+        ],
+        "y": [
+          59.150000000000006,
+          71.25
+        ],
+        "z": [
+          -2.300000000000003,
+          11.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        335.1,
+        65.2
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            335.1,
+            65.2
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              329.05,
+              341.15000000000003
+            ],
+            "y": [
+              59.150000000000006,
+              71.25
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            335.1,
+            65.2
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              333.75,
+              336.45000000000005
+            ],
+            "y": [
+              63.85,
+              66.55
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              11.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "OZ_3",
+      "native_solid_index_excluding_plate": 5,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGU30",
+      "bbox_mm": {
+        "x": [
+          222.85,
+          234.95000000000002
+        ],
+        "y": [
+          155.14999999999998,
+          167.25
+        ],
+        "z": [
+          -2.300000000000003,
+          11.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        228.9,
+        161.2
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            228.9,
+            161.2
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              222.85,
+              234.95000000000002
+            ],
+            "y": [
+              155.14999999999998,
+              167.25
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            228.9,
+            161.2
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              227.55,
+              230.25
+            ],
+            "y": [
+              159.85,
+              162.54999999999998
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              11.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "OZ_4",
+      "native_solid_index_excluding_plate": 4,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGU30",
+      "bbox_mm": {
+        "x": [
+          222.85,
+          234.95000000000002
+        ],
+        "y": [
+          59.150000000000006,
+          71.25
+        ],
+        "z": [
+          -2.300000000000003,
+          11.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        228.9,
+        65.2
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            228.9,
+            65.2
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              222.85,
+              234.95000000000002
+            ],
+            "y": [
+              59.150000000000006,
+              71.25
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            228.9,
+            65.2
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              227.55,
+              230.25
+            ],
+            "y": [
+              63.85,
+              66.55
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              11.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "CARRIER_1",
+      "native_solid_index_excluding_plate": 3,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGO30",
+      "bbox_mm": {
+        "x": [
+          45.95000000000001,
+          58.050000000000004
+        ],
+        "y": [
+          3.95,
+          16.05
+        ],
+        "z": [
+          -2.300000000000003,
+          19.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        52.00000000000001,
+        10.0
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            52.00000000000001,
+            10.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              45.95000000000001,
+              58.050000000000004
+            ],
+            "y": [
+              3.95,
+              16.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            52.00000000000001,
+            10.0
+          ],
+          "radius_mm": 2.5,
+          "bbox_mm": {
+            "x": [
+              49.50000000000001,
+              54.50000000000001
+            ],
+            "y": [
+              7.5,
+              12.5
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              19.999999999999996
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            52.00000000000001,
+            10.0
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              50.650000000000006,
+              53.35000000000001
+            ],
+            "y": [
+              8.65,
+              11.35
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              19.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "CARRIER_2",
+      "native_solid_index_excluding_plate": 2,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGO30",
+      "bbox_mm": {
+        "x": [
+          45.95000000000001,
+          58.050000000000004
+        ],
+        "y": [
+          197.95,
+          210.05
+        ],
+        "z": [
+          -2.300000000000003,
+          19.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        52.00000000000001,
+        204.0
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            52.00000000000001,
+            204.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              45.95000000000001,
+              58.050000000000004
+            ],
+            "y": [
+              197.95,
+              210.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            52.00000000000001,
+            204.0
+          ],
+          "radius_mm": 2.5,
+          "bbox_mm": {
+            "x": [
+              49.50000000000001,
+              54.50000000000001
+            ],
+            "y": [
+              201.5,
+              206.5
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              19.999999999999996
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            52.00000000000001,
+            204.0
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              50.650000000000006,
+              53.35000000000001
+            ],
+            "y": [
+              202.65,
+              205.35
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              19.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "CARRIER_3",
+      "native_solid_index_excluding_plate": 1,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGO30",
+      "bbox_mm": {
+        "x": [
+          185.95,
+          198.05
+        ],
+        "y": [
+          3.95,
+          16.05
+        ],
+        "z": [
+          -2.300000000000003,
+          19.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        192.0,
+        10.0
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            192.0,
+            10.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              185.95,
+              198.05
+            ],
+            "y": [
+              3.95,
+              16.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            192.0,
+            10.0
+          ],
+          "radius_mm": 2.5,
+          "bbox_mm": {
+            "x": [
+              189.5,
+              194.5
+            ],
+            "y": [
+              7.5,
+              12.5
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              19.999999999999996
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            192.0,
+            10.0
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              190.65,
+              193.35
+            ],
+            "y": [
+              8.65,
+              11.35
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              19.999999999999996
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "CARRIER_4",
+      "native_solid_index_excluding_plate": 0,
+      "expected_catalog_from_params_not_inferred_from_STEP": "WGO30",
+      "bbox_mm": {
+        "x": [
+          185.95,
+          198.05
+        ],
+        "y": [
+          197.95,
+          210.05
+        ],
+        "z": [
+          -2.300000000000003,
+          19.999999999999996
+        ]
+      },
+      "axis_xy_mm": [
+        192.0,
+        204.0
+      ],
+      "vertical_cylinder_surfaces": [
+        {
+          "axis_xy_mm": [
+            192.0,
+            204.0
+          ],
+          "radius_mm": 6.05,
+          "bbox_mm": {
+            "x": [
+              185.95,
+              198.05
+            ],
+            "y": [
+              197.95,
+              210.05
+            ],
+            "z": [
+              -2.300000000000003,
+              -3.1086244689504383e-15
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            192.0,
+            204.0
+          ],
+          "radius_mm": 2.5,
+          "bbox_mm": {
+            "x": [
+              189.5,
+              194.5
+            ],
+            "y": [
+              201.5,
+              206.5
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              19.999999999999996
+            ]
+          }
+        },
+        {
+          "axis_xy_mm": [
+            192.0,
+            204.0
+          ],
+          "radius_mm": 1.35,
+          "bbox_mm": {
+            "x": [
+              190.65,
+              193.35
+            ],
+            "y": [
+              202.65,
+              205.35
+            ],
+            "z": [
+              -3.1086244689504383e-15,
+              19.999999999999996
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "hardware_catalog_counts_from_matched_params": {
+    "WGU30": 12,
+    "WGO30": 8
+  },
+  "limitations": [
+    "Native SAVE/RELOAD metadata, catalog and dialogs establish thread/catalog identity; this STEP only corroborates geometry.",
+    "Female cylindrical bore diameters are simplified exported geometry and are not a thread gauge or usable engagement depth.",
+    "The M3 catalog hardware exports diameter2.7 mm simplified male shafts and female bores. These measured diameters do not redefine the catalog thread.",
+    "Hardware flange export fills the diameter12.1 x2.3 cavity; the integration catalog body uses diameter11.9 x2.2.",
+    "Nominal geometric verification does not establish supplier tolerances, received thread fit, bond strength or load qualification."
+  ]
+}

@@ -1,6 +1,6 @@
 # Peplink removable upper carrier - R2
 
-Status: preliminary CAD interface design; native FPD creation and independent native export validation belong to the enclosing layout task.
+Status: preliminary mechanical design with exported reference CAD and actual native FPD geometry verified; physical load and thermal qualification remain open.
 The declared role is `plate`: a thin removable interface between four carrier supports and the router's measured mounting ears.
 
 ## Function and interfaces
@@ -69,3 +69,15 @@ No high finding remains.
 The exported hero, top and isometric images were inspected: the frame has continuous inner and outer rim breaks, uniform side rails, symmetric support holes and no hole breakout or unintended geometry.
 The empty center is functional airflow clearance; no blank slab or decorative texture was added.
 These images and this score describe the bare frame, not the final native hardware or structural/thermal qualification.
+
+## Actual native FPD export
+
+The enclosing task saved and reloaded the native panel, verifying nine elements including four WGO40 M4 female load standoffs on the front at length6 and zero offset.
+The resulting actual native file `C:/Users/KyleKassen/Desktop/Peplink_Carrier_R2_verified.stp` passed 45 independent geometry checks.
+Its plate has a 146 x 160 R5 throat with corner-cylinder axes (+/-68,+/-75), and the correct 0.4 mm bevels on both window mouths.
+FPD's width/height getters return the widened 146.8 x 160.8 mm bevel-mouth dimensions while its corner-radius getter remains5; this API convention did not change the exported throat.
+The full native/reference plate symmetric difference is 1.205695 mm3 (1.150035 extra native metal and0.055660 missing), consistent with native 0.001 mm parameter quantization.
+All four support bores, four anchor cavities and backing depths, four standoff axes, diameter-5 body envelopes and6 mm shoulders pass.
+The native STEP represents each female thread as a 3.7 mm internal cylinder extending6 mm; native WGO40 identity governs actual M4 thread semantics, which cannot be certified by that simplified cylinder.
+The actual-native hero render was inspected and shows the intended four posts, continuous frame/window bevels and no hole breakout.
+The complete native audit, source SHA-256 hashes and actual-native views are retained under `references/`.

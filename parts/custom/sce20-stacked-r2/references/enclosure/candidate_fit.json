@@ -21,7 +21,7 @@
     "b210": {
       "translation_mm": [
         282,
-        107,
+        106,
         50
       ],
       "rotation_z_deg": 180
@@ -36,7 +36,7 @@
     },
     "meanwell": {
       "translation_mm": [
-        391,
+        379.9,
         65.6,
         0
       ],
@@ -48,7 +48,8 @@
     "peplink": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\enclosure\\candidate_peplink_fpe_source.brep",
     "b210": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\enclosure\\candidate_b210_fpe_source.brep",
     "oz": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\enclosure\\candidate_oz_fpe_source.brep",
-    "meanwell": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\enclosure\\candidate_meanwell_fpe_source.brep"
+    "meanwell": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\enclosure\\candidate_meanwell_fpe_source.brep",
+    "peplink_carrier": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-stacked-r2\\carrier\\exports\\Peplink_Carrier_R2_frame.step"
   },
   "main_panel_thickness_mm": 6,
   "component_face_source_z_mm": -106.395,
@@ -114,8 +115,8 @@
           357.0
         ],
         "y": [
-          15.3187,
-          192.9663
+          14.3187,
+          191.9663
         ],
         "z": [
           50.0,
@@ -146,8 +147,8 @@
     "meanwell": {
       "bbox_mm": {
         "x": [
-          355.0,
-          427.0
+          343.9,
+          415.9
         ],
         "y": [
           27.6000005,
@@ -161,7 +162,7 @@
       "factory_and_case_hardware_hits": [],
       "conservative_envelope": false
     },
-    "peplink_carrier_outer_envelope": {
+    "peplink_carrier": {
       "bbox_mm": {
         "x": [
           32.0,
@@ -177,17 +178,17 @@
         ]
       },
       "factory_and_case_hardware_hits": [],
-      "conservative_envelope": true
+      "conservative_envelope": false
     },
-    "Peplink_carrier_post_D8_52_10": {
+    "Peplink_carrier_post_52_10": {
       "bbox_mm": {
         "x": [
-          48.0,
-          56.0
+          48.824,
+          55.176
         ],
         "y": [
-          6.0,
-          14.0
+          6.824,
+          13.176
         ],
         "z": [
           0.0,
@@ -197,15 +198,15 @@
       "factory_and_case_hardware_hits": [],
       "conservative_envelope": true
     },
-    "Peplink_carrier_post_D8_52_204": {
+    "Peplink_carrier_post_52_204": {
       "bbox_mm": {
         "x": [
-          48.0,
-          56.0
+          48.824,
+          55.176
         ],
         "y": [
-          200.0,
-          208.0
+          200.824,
+          207.176
         ],
         "z": [
           0.0,
@@ -215,15 +216,15 @@
       "factory_and_case_hardware_hits": [],
       "conservative_envelope": true
     },
-    "Peplink_carrier_post_D8_192_10": {
+    "Peplink_carrier_post_192_10": {
       "bbox_mm": {
         "x": [
-          188.0,
-          196.0
+          188.824,
+          195.176
         ],
         "y": [
-          6.0,
-          14.0
+          6.824,
+          13.176
         ],
         "z": [
           0.0,
@@ -233,15 +234,15 @@
       "factory_and_case_hardware_hits": [],
       "conservative_envelope": true
     },
-    "Peplink_carrier_post_D8_192_204": {
+    "Peplink_carrier_post_192_204": {
       "bbox_mm": {
         "x": [
-          188.0,
-          196.0
+          188.824,
+          195.176
         ],
         "y": [
-          200.0,
-          208.0
+          200.824,
+          207.176
         ],
         "z": [
           0.0,
@@ -251,15 +252,15 @@
       "factory_and_case_hardware_hits": [],
       "conservative_envelope": true
     },
-    "B210_post_D8_214_46.992": {
+    "B210_post_214_45.992": {
       "bbox_mm": {
         "x": [
-          210.0,
-          218.0
+          210.824,
+          217.176
         ],
         "y": [
-          42.992,
-          50.992
+          42.816,
+          49.168
         ],
         "z": [
           0.0,
@@ -269,15 +270,15 @@
       "factory_and_case_hardware_hits": [],
       "conservative_envelope": true
     },
-    "B210_post_D8_214_167.007": {
+    "B210_post_214_166.007": {
       "bbox_mm": {
         "x": [
-          210.0,
-          218.0
+          210.824,
+          217.176
         ],
         "y": [
-          163.007,
-          171.007
+          162.831,
+          169.183
         ],
         "z": [
           0.0,
@@ -287,15 +288,15 @@
       "factory_and_case_hardware_hits": [],
       "conservative_envelope": true
     },
-    "B210_post_D8_350_46.992": {
+    "B210_post_350_45.992": {
       "bbox_mm": {
         "x": [
-          346.0,
-          354.0
+          346.824,
+          353.176
         ],
         "y": [
-          42.992,
-          50.992
+          42.816,
+          49.168
         ],
         "z": [
           0.0,
@@ -305,15 +306,15 @@
       "factory_and_case_hardware_hits": [],
       "conservative_envelope": true
     },
-    "B210_post_D8_350_167.007": {
+    "B210_post_350_166.007": {
       "bbox_mm": {
         "x": [
-          346.0,
-          354.0
+          346.824,
+          353.176
         ],
         "y": [
-          163.007,
-          171.007
+          162.831,
+          169.183
         ],
         "z": [
           0.0,
@@ -367,8 +368,8 @@
       "name": "PSU_terminal_intake_100mm",
       "bbox_mm": {
         "x": [
-          370.5,
-          411.5
+          359.4,
+          400.4
         ],
         "y": [
           -34.4,
@@ -379,57 +380,17 @@
           91.0
         ]
       },
-      "factory_and_case_hardware_hits": [
-        {
-          "other": "source_solid_47",
-          "probe_solid_index": 0,
-          "other_solid_index": 0,
-          "volume_mm3": 204.83064269123776,
-          "bbox_mm": {
-            "x": [
-              404.8124999,
-              411.5000001
-            ],
-            "y": [
-              17.4624999,
-              26.9875001
-            ],
-            "z": [
-              5.9999999,
-              9.8750001
-            ]
-          }
-        },
-        {
-          "other": "source_solid_61",
-          "probe_solid_index": 0,
-          "other_solid_index": 0,
-          "volume_mm3": 152.30144455413551,
-          "bbox_mm": {
-            "x": [
-              401.4753872,
-              411.5000001
-            ],
-            "y": [
-              15.1764999,
-              29.2735001
-            ],
-            "z": [
-              5.9999999,
-              8.5344001
-            ]
-          }
-        }
-      ],
+      "factory_and_case_hardware_hits": [],
       "other_equipment_hits": [],
-      "Y_inner_wall_margin_mm": 1.7950000000000017
+      "Y_inner_wall_margin_mm": 1.7950000000000017,
+      "right_factory_nut_lateral_margin_mm": 1.0753871919834523
     },
     {
       "name": "PSU_fan_exhaust_100mm",
       "bbox_mm": {
         "x": [
-          370.5,
-          411.5
+          359.4,
+          400.4
         ],
         "y": [
           366.2,
@@ -440,61 +401,20 @@
           91.0
         ]
       },
-      "factory_and_case_hardware_hits": [
-        {
-          "other": "source_solid_45",
-          "probe_solid_index": 0,
-          "other_solid_index": 0,
-          "volume_mm3": 204.83064269129818,
-          "bbox_mm": {
-            "x": [
-              404.8124999,
-              411.5000001
-            ],
-            "y": [
-              404.8124999,
-              414.3375001
-            ],
-            "z": [
-              5.9999999,
-              9.8750001
-            ]
-          }
-        },
-        {
-          "other": "source_solid_64",
-          "probe_solid_index": 0,
-          "other_solid_index": 0,
-          "volume_mm3": 152.3014445542516,
-          "bbox_mm": {
-            "x": [
-              401.4753872,
-              411.5000001
-            ],
-            "y": [
-              402.5264999,
-              416.6235001
-            ],
-            "z": [
-              5.9999999,
-              8.5344001
-            ]
-          }
-        }
-      ],
+      "factory_and_case_hardware_hits": [],
       "other_equipment_hits": [],
-      "Y_inner_wall_margin_mm": 1.795000000000016
+      "Y_inner_wall_margin_mm": 1.795000000000016,
+      "right_factory_nut_lateral_margin_mm": 1.0753871919834523
     }
   ],
   "max_modeled_component_height_mm": 109.30000010000002,
   "nearest_door_pocket_above_main_panel_mm": 237.5352,
   "nominal_door_margin_mm": 128.2351999,
   "limitations": [
-    "New carrier checked as solid outer envelope; its window reduces occupancy.",
-    "New extension posts conservatively represented by diameter8mm cylinders to full height.",
-    "This report checks enclosure/factory-hardware/socket and PSU corridors, not every inter-component or mounting interface.",
-    "With B210 undersideZ50, upper B210 must be removed before the documented OZ outward cover motion to79.72mm.",
+    "WGO30 lower stems use diameter 5 mm at Z0..20; the 5.5 mm AF hex extensions use conservative diameter 6.352 mm cylinders from Z20 upward.",
+    "This report checks enclosure/factory hardware/socket and PSU corridors, not every inter-component or mounting interface.",
+    "With B210 underside Z50, upper B210 must be removed before the documented OZ outward cover motion to 79.72 mm.",
     "PSU corridors establish nominal geometry only, not closed-case heat rejection or side-orientation output rating."
   ],
-  "status": "FAIL"
+  "status": "PASS"
 }

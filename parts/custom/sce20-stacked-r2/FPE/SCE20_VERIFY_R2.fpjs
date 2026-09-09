@@ -1,0 +1,103 @@
+
+function near(a,b,label) { if(Math.abs(a-b)>0.0011) Error(label+": "+a+" != "+b); }
+function verifyPanel(p,s,isReloaded) {
+  near(p.Width(),s.width,"width"); near(p.Height(),s.height,"height");
+  near(p.Thickness(),s.thickness,"thickness");
+  if(p.Material()!=s.material_id || p.MaterialColor()!=s.color_id) Error("material/color");
+  if(p.Elements().length!=s.elements.length) Error("element count "+p.Elements().length);
+  for(var i=0;i<s.elements.length;i++) {
+    var a=s.elements[i],e=p.FindElement(a.id);
+    if(!e) Error("missing "+a.id);
+    near(e.X(),a.x,a.id+" X"); near(e.Y(),a.y,a.id+" Y");
+    if(e.IsReverseSide() != (a.side=="reverse")) Error("side "+a.id);
+    if(a.kind=="bolt") {
+      if(e.Type()!=a.catalog) Error("catalog "+a.id);
+      near(e.Length(),a.length,a.id+" length");
+    } else if(a.kind=="hole") {
+      if(!e.IsDrillHole() || e.IsBlindHole()) Error("through hole "+a.id);
+      near(e.Diameter(),a.diameter,a.id+" diameter");
+      if(a.countersink) {
+        if(!e.HasCountersink()) Error("missing countersink "+a.id);
+        near(e.ConeDiameter(),a.countersink.diameter,a.id+" cone mouth");
+        near(e.DrillHoleDiameter(),a.diameter,a.id+" cone throat");
+        near(e.SinkDepth(),a.countersink.recess||0,a.id+" cylindrical recess before cone");
+        near(e.ConeAngle(),90,a.id+" cone angle");
+      }
+    } else if(a.kind=="rect_hole") {
+      if(!e.IsRectHole()) Error("not rectangular through cutout "+a.id);
+      var cb=isReloaded?a.bevel_front:0;
+      near(e.Width(),a.width+2*cb,a.id+" native width"); near(e.Height(),a.height+2*cb,a.id+" native height");
+      near(e.CornerRadius(),a.radius+cb,a.id+" native radius");
+    } else if(a.kind=="contour_cavity") {
+      if(!e.AsCavity()) Error("not cavity "+a.id);
+      near(e.Depth(),a.depth,a.id+" cavity depth");
+      var b=e.BoundingBox();
+      for(var j=0;j<4;j++) near(b[j],a.bbox[j],a.id+" bbox "+j);
+    }
+  }
+  if(s.name=="Backpanel_R2") {
+    var a=p.FindElement("B210_1"),b=p.FindElement("B210_2");
+    if(Math.abs(Math.abs(a.Y()-b.Y())-120.015)>0.00001) Error("B210 critical120.015 pitch");
+  }
+}
+function createPanel(s) {
+  var p=new Frontpanel(s.name,s.thickness,s.width,s.height,s.material_id,s.color_id);
+  p.SetCornerRadii(s.radius,s.radius,s.radius,s.radius);
+  p.SetEdgeMachining(bevel_45,s.bevel,bevel_45,s.bevel);
+  p.SetRemark(s.remark);
+  if(s.outline_dxf) {
+    var outline=new DxfContour("OUTLINE",s.outline_dxf,refpoint_file,100,false);
+    p.SetBorderContour(outline);
+    p.SetEdgeMachining(bevel_45,s.bevel,bevel_45,s.bevel);
+  }
+  for(var i=0;i<s.elements.length;i++) {
+    var a=s.elements[i],e;
+    if(a.kind=="bolt") e=new Bolt(a.id,a.catalog,a.length);
+    else if(a.kind=="hole") e=new DrillHole(a.id,a.diameter);
+    else if(a.kind=="rect_hole") e=new RectHole(a.id,a.width,a.height,a.radius);
+    else if(a.kind=="contour_cavity") {
+      if(a.paths) {
+        if(a.paths.length!=1) Error("Each cavity requires exactly one closed path: "+a.id);
+        e=new DxfContour(a.id,"",refpoint_file);
+        e.SetTool(a.tool);
+        for(var pi=0;pi<a.paths.length;pi++) {
+          var path=a.paths[pi];e.Start(path.start[0],path.start[1]);
+          for(var si=0;si<path.segments.length;si++) {
+            var sg=path.segments[si];
+            if(sg.type=="LINE")e.LineTo(sg.end[0],sg.end[1]);
+            else e.ArcToMP(sg.end[0],sg.end[1],sg.center[0],sg.center[1],sg.dir);
+          }
+          e.Finish();
+        }
+        e.SetAsCavity(true);
+      } else e=new DxfContour(a.id,a.dxf,refpoint_file,100,true);
+    } else Error("unsupported kind "+a.kind);
+    if(a.side=="reverse") e.PutOnReverseSide(); else e.PutOnFrontSide();
+    p.AddElement(e,a.x,a.y);
+    if(a.kind=="rect_hole") e.SetEdgeMachining(bevel_45,a.bevel_front,bevel_45,a.bevel_reverse);
+    if(a.kind=="contour_cavity") {
+      Print("Attached "+a.id+"\n");
+      e.SetTool(a.tool);
+      Print("Tool selected "+a.id+"\n");
+      e.SetDepth(a.depth);
+      Print("Depth selected "+a.id+"\n");
+    }
+    if(a.kind=="bolt") e.SetDepthOffset(0);
+    // SinkDepth is additional cylindrical recess; cone height follows diameters/angle.
+    if(a.countersink) e.SetCountersinkWithParameters(a.countersink.diameter,a.diameter,a.countersink.recess||0,90);
+  }
+  verifyPanel(p,s);
+  AddFrontpanel(p);
+  SaveFrontpanel(p,s.save,false);
+  var reloaded=LoadFrontpanel(s.save,s.name+"_readback");
+  verifyPanel(reloaded,s,true);
+  Print("PASS SAVED+RELOADED "+s.name+" | "+s.width+" x "+s.height+" x "+s.thickness+" mm | "+s.elements.length+" native elements\n");
+  for(var i=0;i<s.elements.length;i++) {
+    var a=s.elements[i];
+    if(a.kind=="bolt") {var e=reloaded.FindElement(a.id);Print(a.id+" "+e.Type()+" L"+e.Length()+" FRONT ("+e.X()+", "+e.Y()+")\n");}
+  }
+}
+
+var s={"name": "Backpanel_R2", "width": 431.8, "height": 431.8, "thickness": 6, "radius": 6.35, "bevel": 0.4, "material_id": 5, "color_id": 1, "elements": [{"kind": "hole", "id": "FACTORY_1", "x": 22.224999999999994, "y": 22.224999999999994, "diameter": 12.7, "side": "front"}, {"kind": "hole", "id": "FACTORY_2", "x": 22.224999999999994, "y": 409.57500000000005, "diameter": 12.7, "side": "front"}, {"kind": "hole", "id": "FACTORY_3", "x": 409.57500000000005, "y": 409.57500000000005, "diameter": 12.7, "side": "front"}, {"kind": "hole", "id": "FACTORY_4", "x": 409.57500000000005, "y": 22.224999999999994, "diameter": 12.7, "side": "front"}, {"kind": "hole", "id": "FACTORY_5", "x": 22.224999999999994, "y": 53.974999999999994, "diameter": 7.1374, "side": "front"}, {"kind": "hole", "id": "FACTORY_6", "x": 409.57500000000005, "y": 377.82500000000005, "diameter": 7.1374, "side": "front"}, {"kind": "bolt", "id": "MEANWELL_1", "x": 408.4, "y": 323.4, "catalog": "WGU30", "length": 12, "side": "front"}, {"kind": "bolt", "id": "MEANWELL_2", "x": 408.4, "y": 71.4, "catalog": "WGU30", "length": 12, "side": "front"}, {"kind": "bolt", "id": "MEANWELL_3", "x": 351.4, "y": 323.4, "catalog": "WGU30", "length": 12, "side": "front"}, {"kind": "bolt", "id": "MEANWELL_4", "x": 351.4, "y": 71.4, "catalog": "WGU30", "length": 12, "side": "front"}, {"kind": "bolt", "id": "BEDROCK_1", "x": 46.0, "y": 25.0, "catalog": "WGU30", "length": 12, "side": "front"}, {"kind": "bolt", "id": "BEDROCK_2", "x": 46.0, "y": 189.0, "catalog": "WGU30", "length": 12, "side": "front"}, {"kind": "bolt", "id": "BEDROCK_3", "x": 198.0, "y": 25.0, "catalog": "WGU30", "length": 12, "side": "front"}, {"kind": "bolt", "id": "BEDROCK_4", "x": 198.0, "y": 189.0, "catalog": "WGU30", "length": 12, "side": "front"}, {"kind": "bolt", "id": "B210_1", "x": 350.0, "y": 166.007, "catalog": "WGO30", "length": 20, "side": "front"}, {"kind": "bolt", "id": "B210_2", "x": 350.0, "y": 45.992, "catalog": "WGO30", "length": 20, "side": "front"}, {"kind": "bolt", "id": "B210_3", "x": 214.0, "y": 166.007, "catalog": "WGO30", "length": 20, "side": "front"}, {"kind": "bolt", "id": "B210_4", "x": 214.0, "y": 45.992, "catalog": "WGO30", "length": 20, "side": "front"}, {"kind": "bolt", "id": "OZ_1", "x": 335.1, "y": 161.2, "catalog": "WGU30", "length": 12, "side": "front"}, {"kind": "bolt", "id": "OZ_2", "x": 335.1, "y": 65.2, "catalog": "WGU30", "length": 12, "side": "front"}, {"kind": "bolt", "id": "OZ_3", "x": 228.9, "y": 161.2, "catalog": "WGU30", "length": 12, "side": "front"}, {"kind": "bolt", "id": "OZ_4", "x": 228.9, "y": 65.2, "catalog": "WGU30", "length": 12, "side": "front"}, {"kind": "bolt", "id": "CARRIER_1", "x": 52.0, "y": 10.0, "catalog": "WGO30", "length": 20, "side": "front"}, {"kind": "bolt", "id": "CARRIER_2", "x": 52.0, "y": 204.0, "catalog": "WGO30", "length": 20, "side": "front"}, {"kind": "bolt", "id": "CARRIER_3", "x": 192.0, "y": 10.0, "catalog": "WGO30", "length": 20, "side": "front"}, {"kind": "bolt", "id": "CARRIER_4", "x": 192.0, "y": 204.0, "catalog": "WGO30", "length": 20, "side": "front"}], "save": "C:/Users/KyleKassen/Documents/FPE_SCE20_20260909_R2/Backpanel_R2.fpd", "remark": "R2 compact stacked layout. Original431.8square outline/R6.35 and6factoryholes.12M3 LOAD studsL12 +8M3female LOAD standoffsL20,allFRONT,offset0. Raised supports require separate Wurth971300321(4) and971500321(4) extension columns. Bedrock remains directly against panel. See R2 assembly and ordering notes; not load/thermal qualification."};var p=LoadFrontpanel(s.save,s.name+"_verified");verifyPanel(p,s,true);AddFrontpanel(p);Print("PASS RELOADED "+s.name+"\n");
+
+var s={"name": "Peplink_Carrier_R2", "width": 180.0, "height": 210.0, "thickness": 4.0, "radius": 8.0, "bevel": 0.4, "material_id": 5, "color_id": 1, "elements": [{"id": "AIR_WINDOW", "kind": "rect_hole", "x": 90.0, "y": 105.0, "width": 146.0, "height": 160.0, "radius": 5.0, "bevel_front": 0.4, "bevel_reverse": 0.4, "side": "front"}, {"id": "SUPPORT_1", "kind": "hole", "x": 20.0, "y": 8.0, "diameter": 3.8, "side": "front"}, {"id": "SUPPORT_2", "kind": "hole", "x": 20.0, "y": 202.0, "diameter": 3.8, "side": "front"}, {"id": "SUPPORT_3", "kind": "hole", "x": 160.0, "y": 8.0, "diameter": 3.8, "side": "front"}, {"id": "SUPPORT_4", "kind": "hole", "x": 160.0, "y": 202.0, "diameter": 3.8, "side": "front"}, {"id": "ROUTER_1", "kind": "bolt", "x": 9.099999999999994, "y": 46.65, "catalog": "WGO40", "length": 6.0, "depth_offset": 0.0, "side": "front"}, {"id": "ROUTER_2", "kind": "bolt", "x": 9.099999999999994, "y": 129.35, "catalog": "WGO40", "length": 6.0, "depth_offset": 0.0, "side": "front"}, {"id": "ROUTER_3", "kind": "bolt", "x": 170.9, "y": 46.65, "catalog": "WGO40", "length": 6.0, "depth_offset": 0.0, "side": "front"}, {"id": "ROUTER_4", "kind": "bolt", "x": 170.9, "y": 129.35, "catalog": "WGO40", "length": 6.0, "depth_offset": 0.0, "side": "front"}], "remark": "Removable Peplink carrier: upper router shifted17mm toward negativeY. Four WGO40 M4 female LOAD standoffs,6mm,front,zero offset. Four plainD3.8 support holes. Central146x160R5 through-window;0.4mm45deg edge breaks on both faces of window and outer rim; bore deburr<=0.1mm. Fit design requires final alloy/tolerance, hardware/anchor and operating-temperature acceptance.", "datum": {"local_to_fpd": [90.0, 105.0], "installed_underside_z": 70.0}, "native_notes": ["Use new RectHole(id,width,height,radius), then SetEdgeMachining(bevel_45,0.4,bevel_45,0.4).", "Native hardware objects define their own machining; do not add duplicate ordinary holes or cavities."], "save": "C:/Users/KyleKassen/Documents/FPE_SCE20_20260909_R2/Peplink_Carrier_R2.fpd"};var p=LoadFrontpanel(s.save,s.name+"_verified");verifyPanel(p,s,true);AddFrontpanel(p);Print("PASS RELOADED "+s.name+"\n");
