@@ -1,0 +1,1589 @@
+{
+  "status": "PASS",
+  "scope": "Candidate component/support geometric collision audit; solid-bounds proof with exact BREP intersections for overlapping candidate boxes; actual windowed carrier STEP included; no physical qualification",
+  "placements": {
+    "bedrock": [
+      [
+        122,
+        107,
+        0
+      ],
+      0
+    ],
+    "peplink": [
+      [
+        122,
+        90,
+        80
+      ],
+      0
+    ],
+    "b210": [
+      [
+        282,
+        107,
+        50
+      ],
+      180
+    ],
+    "oz": [
+      [
+        282,
+        107,
+        0
+      ],
+      0
+    ],
+    "meanwell": [
+      [
+        391,
+        65.6,
+        0
+      ],
+      180
+    ]
+  },
+  "components": {
+    "bedrock": {
+      "bbox": [
+        39.0,
+        205.0,
+        15.0,
+        199.0,
+        -3.524958103184872e-15,
+        57.000000000002665
+      ],
+      "solids": 29
+    },
+    "peplink": {
+      "bbox": [
+        36.100000000002,
+        207.89999999999998,
+        8.200427138866003,
+        174.430011410287,
+        80.000000000005,
+        109.30000010000002
+      ],
+      "solids": 36
+    },
+    "b210": {
+      "bbox": [
+        207.0,
+        357.0,
+        15.318700000000007,
+        192.9663,
+        50.0,
+        87.70000009999701
+      ],
+      "solids": 197
+    },
+    "oz": {
+      "bbox": [
+        223.89999999999998,
+        340.1,
+        37.9499999,
+        176.04900010000003,
+        -1.0000000556221735e-07,
+        32.720000000000006
+      ],
+      "solids": 2
+    },
+    "meanwell": {
+      "bbox": [
+        355.0,
+        427.00000000000006,
+        27.600000536499998,
+        366.2000008000001,
+        -3.039235529911366e-14,
+        91.00000008491999
+      ],
+      "solids": 22
+    },
+    "carrier": {
+      "bbox": [
+        32.0,
+        212.0,
+        2.0,
+        212.0,
+        70.0,
+        74.0
+      ],
+      "solids": 1
+    },
+    "carrier_support_1": {
+      "bbox": [
+        48.5,
+        55.5,
+        6.5,
+        13.5,
+        0.0,
+        70.0
+      ],
+      "solids": 1
+    },
+    "carrier_support_2": {
+      "bbox": [
+        48.5,
+        55.5,
+        200.5,
+        207.5,
+        0.0,
+        70.0
+      ],
+      "solids": 1
+    },
+    "carrier_support_3": {
+      "bbox": [
+        188.5,
+        195.5,
+        6.5,
+        13.5,
+        0.0,
+        70.0
+      ],
+      "solids": 1
+    },
+    "carrier_support_4": {
+      "bbox": [
+        188.5,
+        195.5,
+        200.5,
+        207.5,
+        0.0,
+        70.0
+      ],
+      "solids": 1
+    },
+    "b210_support_1": {
+      "bbox": [
+        210.5,
+        217.5,
+        43.4925,
+        50.4925,
+        0.0,
+        50.0
+      ],
+      "solids": 1
+    },
+    "b210_support_2": {
+      "bbox": [
+        210.5,
+        217.5,
+        163.5075,
+        170.5075,
+        0.0,
+        50.0
+      ],
+      "solids": 1
+    },
+    "b210_support_3": {
+      "bbox": [
+        346.5,
+        353.5,
+        43.4925,
+        50.4925,
+        0.0,
+        50.0
+      ],
+      "solids": 1
+    },
+    "b210_support_4": {
+      "bbox": [
+        346.5,
+        353.5,
+        163.5075,
+        170.5075,
+        0.0,
+        50.0
+      ],
+      "solids": 1
+    },
+    "router_standoff_1": {
+      "bbox": [
+        38.599999999999994,
+        43.599999999999994,
+        46.15,
+        51.15,
+        74.0,
+        80.0
+      ],
+      "solids": 1
+    },
+    "router_standoff_2": {
+      "bbox": [
+        38.599999999999994,
+        43.599999999999994,
+        128.85,
+        133.85,
+        74.0,
+        80.0
+      ],
+      "solids": 1
+    },
+    "router_standoff_3": {
+      "bbox": [
+        200.4,
+        205.4,
+        46.15,
+        51.15,
+        74.0,
+        80.0
+      ],
+      "solids": 1
+    },
+    "router_standoff_4": {
+      "bbox": [
+        200.4,
+        205.4,
+        128.85,
+        133.85,
+        74.0,
+        80.0
+      ],
+      "solids": 1
+    }
+  },
+  "pair_checks": [
+    {
+      "a": "bedrock",
+      "b": "peplink",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 23.000000000002338,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "bedrock",
+      "b": "b210",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 20.156402786643326,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "bedrock",
+      "b": "oz",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 18.899999999999977,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "bedrock",
+      "b": "meanwell",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 150.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "bedrock",
+      "b": "carrier",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 12.999999999997335,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "bedrock",
+      "b": "carrier_support_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 1.5,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "bedrock",
+      "b": "carrier_support_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 1.5,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "bedrock",
+      "b": "carrier_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 1.5,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "bedrock",
+      "b": "carrier_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 1.5,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "bedrock",
+      "b": "b210_support_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 5.5,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "bedrock",
+      "b": "b210_support_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 5.5,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "bedrock",
+      "b": "b210_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 141.5,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "bedrock",
+      "b": "b210_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 141.5,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "bedrock",
+      "b": "router_standoff_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 21.743414095157323,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "bedrock",
+      "b": "router_standoff_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 21.743414095157323,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "bedrock",
+      "b": "router_standoff_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 21.74341409516041,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "bedrock",
+      "b": "router_standoff_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 21.74341409516041,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "peplink",
+      "b": "b210",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 12.925499900000005,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "peplink",
+      "b": "oz",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 52.76436676394878,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "peplink",
+      "b": "meanwell",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 162.60000001349,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "peplink",
+      "b": "carrier",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 6.000000000005002,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "peplink",
+      "b": "carrier_support_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 10.111874292132475,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "peplink",
+      "b": "carrier_support_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 34.56479426548707,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "peplink",
+      "b": "carrier_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 10.111874292132475,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "peplink",
+      "b": "carrier_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 33.736827402837484,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "peplink",
+      "b": "b210_support_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 30.112455894534744,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "peplink",
+      "b": "b210_support_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 30.116732162517238,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "peplink",
+      "b": "b210_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 141.8095906488708,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "peplink",
+      "b": "b210_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 141.81049875149867,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "peplink",
+      "b": "router_standoff_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 5.002220859751105e-12,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "peplink",
+      "b": "router_standoff_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 5.002220859751105e-12,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "peplink",
+      "b": "router_standoff_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 5.002220859751105e-12,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "peplink",
+      "b": "router_standoff_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 5.002220859751105e-12,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210",
+      "b": "oz",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 17.279999999999994,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210",
+      "b": "meanwell",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 13.500000013489966,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210",
+      "b": "carrier",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 8.825499899999983,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210",
+      "b": "carrier_support_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 152.7497954172116,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210",
+      "b": "carrier_support_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 152.7497954172116,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210",
+      "b": "carrier_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 22.63846284534353,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210",
+      "b": "carrier_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 22.638462845343543,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210",
+      "b": "b210_support_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 0.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210",
+      "b": "b210_support_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 0.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210",
+      "b": "b210_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 0.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210",
+      "b": "b210_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 0.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210",
+      "b": "router_standoff_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 164.6194399212924,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210",
+      "b": "router_standoff_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 164.6194399212924,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210",
+      "b": "router_standoff_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 15.425499899999977,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210",
+      "b": "router_standoff_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 15.425499899999977,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "oz",
+      "b": "meanwell",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 14.899999999999977,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "oz",
+      "b": "carrier",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 42.00105236776811,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "oz",
+      "b": "carrier_support_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 170.16569129853994,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "oz",
+      "b": "carrier_support_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 170.16583498490462,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "oz",
+      "b": "carrier_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 37.47482481760253,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "oz",
+      "b": "carrier_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 37.47547726326908,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "oz",
+      "b": "b210_support_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 6.399999999999977,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "oz",
+      "b": "b210_support_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 6.399999999999977,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "oz",
+      "b": "b210_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 6.399999999999977,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "oz",
+      "b": "b210_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 6.399999999999977,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "oz",
+      "b": "router_standoff_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 185.65777225852946,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "oz",
+      "b": "router_standoff_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 185.65777225852946,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "oz",
+      "b": "router_standoff_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 47.98925296355423,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "oz",
+      "b": "router_standoff_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 47.98925296355423,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "meanwell",
+      "b": "carrier",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 156.66843970627906,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "meanwell",
+      "b": "carrier_support_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 301.64392916151985,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "meanwell",
+      "b": "carrier_support_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 299.5,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "meanwell",
+      "b": "carrier_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 163.49024435727043,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "meanwell",
+      "b": "carrier_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 159.5,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "meanwell",
+      "b": "b210_support_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 137.5,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "meanwell",
+      "b": "b210_support_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 137.5,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "meanwell",
+      "b": "b210_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 1.5,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "meanwell",
+      "b": "b210_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 1.5,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "meanwell",
+      "b": "router_standoff_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 318.73807428670955,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "meanwell",
+      "b": "router_standoff_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 318.73807428670955,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "meanwell",
+      "b": "router_standoff_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 164.32942524088617,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "meanwell",
+      "b": "router_standoff_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 164.32942524088617,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier",
+      "b": "carrier_support_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 0.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier",
+      "b": "carrier_support_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 0.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier",
+      "b": "carrier_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 0.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier",
+      "b": "carrier_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 0.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier",
+      "b": "b210_support_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 20.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier",
+      "b": "b210_support_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 20.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier",
+      "b": "b210_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 135.9788586508947,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier",
+      "b": "b210_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 135.9788586508947,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier",
+      "b": "router_standoff_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 0.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier",
+      "b": "router_standoff_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 0.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier",
+      "b": "router_standoff_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 0.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier",
+      "b": "router_standoff_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 0.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_1",
+      "b": "carrier_support_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 187.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_1",
+      "b": "carrier_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 133.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_1",
+      "b": "carrier_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 229.4733099948663,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_1",
+      "b": "b210_support_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 157.87510904588476,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_1",
+      "b": "b210_support_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 215.7017618292674,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_1",
+      "b": "b210_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 292.54153560862085,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_1",
+      "b": "b210_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 327.38853073412633,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_1",
+      "b": "router_standoff_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 33.25706691817545,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_1",
+      "b": "router_standoff_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 115.52329851592708,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_1",
+      "b": "router_standoff_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 148.5867844056126,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_1",
+      "b": "router_standoff_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 185.2501889337768,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_2",
+      "b": "carrier_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 229.4733099948663,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_2",
+      "b": "carrier_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 133.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_2",
+      "b": "b210_support_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 215.7017618292674,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_2",
+      "b": "b210_support_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 157.87510904588476,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_2",
+      "b": "b210_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 327.38853073412633,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_2",
+      "b": "b210_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 292.54153560862085,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_2",
+      "b": "router_standoff_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 149.48388709155242,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_2",
+      "b": "router_standoff_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 66.94947721976625,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_2",
+      "b": "router_standoff_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 208.12840387606877,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_2",
+      "b": "router_standoff_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 159.5438262672674,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_3",
+      "b": "carrier_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 187.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_3",
+      "b": "b210_support_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 33.534311626302994,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_3",
+      "b": "b210_support_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 150.75559709758707,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_3",
+      "b": "b210_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 153.94982967268913,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_3",
+      "b": "b210_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 212.84560144914906,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_3",
+      "b": "router_standoff_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 148.5867844056126,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_3",
+      "b": "router_standoff_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 185.2501889337768,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_3",
+      "b": "router_standoff_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 33.25706691817545,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_3",
+      "b": "router_standoff_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 115.52329851592708,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_4",
+      "b": "b210_support_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 150.75559709758707,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_4",
+      "b": "b210_support_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 33.534311626302994,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_4",
+      "b": "b210_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 212.84560144914906,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_4",
+      "b": "b210_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 153.94982967268916,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_4",
+      "b": "router_standoff_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 208.12840387606877,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_4",
+      "b": "router_standoff_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 159.5438262672674,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_4",
+      "b": "router_standoff_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 149.48388709155242,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "carrier_support_4",
+      "b": "router_standoff_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 66.94947721976625,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_1",
+      "b": "b210_support_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 113.01499999999999,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_1",
+      "b": "b210_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 129.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_1",
+      "b": "b210_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 171.50332423891962,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_1",
+      "b": "router_standoff_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 168.61675480212517,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_1",
+      "b": "router_standoff_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 185.934149112663,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_1",
+      "b": "router_standoff_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 24.535892076710805,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_1",
+      "b": "router_standoff_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 82.10912133405155,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_2",
+      "b": "b210_support_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 171.50332423891962,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_2",
+      "b": "b210_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 129.0,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_2",
+      "b": "router_standoff_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 202.6223526816575,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_2",
+      "b": "router_standoff_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 171.20507383325415,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_2",
+      "b": "router_standoff_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 115.00529468789685,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_2",
+      "b": "router_standoff_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 38.49126272610447,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_3",
+      "b": "b210_support_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 113.01499999999999,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_3",
+      "b": "router_standoff_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 303.8493212103657,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_3",
+      "b": "router_standoff_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 313.79022898466735,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_3",
+      "b": "router_standoff_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 143.12655239332776,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_3",
+      "b": "router_standoff_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 163.17201906653602,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_4",
+      "b": "router_standoff_1",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 323.95774077223405,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_4",
+      "b": "router_standoff_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 305.29326442987565,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_4",
+      "b": "router_standoff_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 181.95993461817358,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "b210_support_4",
+      "b": "router_standoff_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 146.16695011612578,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "router_standoff_1",
+      "b": "router_standoff_2",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 77.69999999999999,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "router_standoff_1",
+      "b": "router_standoff_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 156.8,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "router_standoff_1",
+      "b": "router_standoff_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 174.9957999495988,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "router_standoff_2",
+      "b": "router_standoff_3",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 174.9957999495988,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "router_standoff_2",
+      "b": "router_standoff_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 156.8,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    },
+    {
+      "a": "router_standoff_3",
+      "b": "router_standoff_4",
+      "minimum_solid_bbox_clearance_lower_bound_mm": 77.69999999999999,
+      "candidate_solid_intersections": 0,
+      "penetrations": [],
+      "pass": true
+    }
+  ],
+  "carrier_supports": [
+    [
+      52,
+      10
+    ],
+    [
+      52,
+      204
+    ],
+    [
+      192,
+      10
+    ],
+    [
+      192,
+      204
+    ]
+  ],
+  "b210_supports": [
+    [
+      214,
+      46.9925
+    ],
+    [
+      214,
+      167.0075
+    ],
+    [
+      350,
+      46.9925
+    ],
+    [
+      350,
+      167.0075
+    ]
+  ],
+  "factory_socket_checks": [
+    {
+      "group": "carrier",
+      "xy": [
+        52,
+        10
+      ],
+      "OD30_tool_clearance_to_OD7_post": 13.686973296661492,
+      "pass": true
+    },
+    {
+      "group": "carrier",
+      "xy": [
+        52,
+        204
+      ],
+      "OD30_tool_clearance_to_OD7_post": 165.69745180104962,
+      "pass": true
+    },
+    {
+      "group": "carrier",
+      "xy": [
+        192,
+        10
+      ],
+      "OD30_tool_clearance_to_OD7_post": 151.71457414099416,
+      "pass": true
+    },
+    {
+      "group": "carrier",
+      "xy": [
+        192,
+        204
+      ],
+      "OD30_tool_clearance_to_OD7_post": 230.22816738359168,
+      "pass": true
+    },
+    {
+      "group": "b210",
+      "xy": [
+        214,
+        46.9925
+      ],
+      "OD30_tool_clearance_to_OD7_post": 174.8677317476988,
+      "pass": true
+    },
+    {
+      "group": "b210",
+      "xy": [
+        214,
+        167.0075
+      ],
+      "OD30_tool_clearance_to_OD7_post": 221.79070504547195,
+      "pass": true
+    },
+    {
+      "group": "b210",
+      "xy": [
+        350,
+        46.9925
+      ],
+      "OD30_tool_clearance_to_OD7_post": 46.01828950964213,
+      "pass": true
+    },
+    {
+      "group": "b210",
+      "xy": [
+        350,
+        167.0075
+      ],
+      "OD30_tool_clearance_to_OD7_post": 138.06038110342604,
+      "pass": true
+    }
+  ],
+  "notes": [
+    "M3 load-hardware flange cavities must remain flush/below panel front, not modeled as full-height 12.1mm columns.",
+    "OZ service requires removing B210 upper assembly first at 50mm underside elevation.",
+    "Carrier underside70 leaves13mm over Bedrock57; router ears80 and top109.3.",
+    "B210 underside50 leaves17.28 over OZ32.72; B210 top87.7.",
+    "Physical upper-left quadrant is clear, but Bedrock SMA allowance reachesY247; reserve the smaller [0,215.9] x [250,431.8] rectangle excluding factory tools."
+  ]
+}

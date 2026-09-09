@@ -1,0 +1,11 @@
+{
+  "valid": true,
+  "solids": 196,
+  "bbox_size_mm": [
+    122.3480002,
+    177.6476,
+    37.256000099997024
+  ],
+  "units": "mm",
+  "scale_matches_original": true
+}

@@ -1,0 +1,5 @@
+id,x_mm,y_mm,x_from_B_mm,y_from_C_mm,feature
+S1,-55.0,-280.79999999999995,7.5,19.800000000000068,FPE WGU30 M3 L12 reverse zero-offset; REFERENCE placement only
+S2,-55.0,-16.099999999999994,7.5,284.5,FPE WGU30 M3 L12 reverse zero-offset; REFERENCE placement only
+S3,55.0,-280.79999999999995,117.5,19.800000000000068,FPE WGU30 M3 L12 reverse zero-offset; REFERENCE placement only
+S4,55.0,-16.099999999999994,117.5,284.5,FPE WGU30 M3 L12 reverse zero-offset; REFERENCE placement only

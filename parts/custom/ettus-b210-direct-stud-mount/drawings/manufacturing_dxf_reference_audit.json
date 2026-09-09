@@ -1,0 +1,26 @@
+[
+  {
+    "file": "exports/plate_profile_mm.dxf",
+    "sha256": "ece5c5e42098042a788492c98aeaee175c7015e67b2f236fc928dca10ed2ec82",
+    "units": 4,
+    "entities": 9,
+    "errors": 0,
+    "fixes": 0
+  },
+  {
+    "file": "exports/plate_underside_machining_mm.dxf",
+    "sha256": "1a8f91ae710f80efe9130abf00dfa5b34312156bbd863f488126c033ad901380",
+    "units": 4,
+    "entities": 13,
+    "errors": 0,
+    "fixes": 0
+  },
+  {
+    "file": "exports/FPE_stud_pattern_mm.dxf",
+    "sha256": "d24d4eb8778f24519e23046054347d17c2149c9b2504fed9223460bb5b7f41b8",
+    "units": 4,
+    "entities": 8,
+    "errors": 0,
+    "fixes": 0
+  }
+]

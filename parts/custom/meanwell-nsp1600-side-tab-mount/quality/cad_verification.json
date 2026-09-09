@@ -1,0 +1,633 @@
+{
+  "status": "PASS",
+  "scope": "Nominal CAD only; rearM4 thread and sideorientation power unverified",
+  "params_sha256": "7de412cbc448c043a8745bd6e72a9d753c8faa0c593c22831f9d6b59ace16946",
+  "checks": [
+    {
+      "check": "Original source preserved",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "All19original PSU solids retained",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "35valid distinct solid components",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "plate_N2.stepvalid complete solids",
+      "passed": true,
+      "measured": 1,
+      "criterion": 1
+    },
+    {
+      "check": "plate_N2.stepmillimeter scale/coordinates",
+      "passed": true,
+      "measured": {
+        "x": [
+          -36.0,
+          36.0
+        ],
+        "y": [
+          -300.6,
+          16.2
+        ],
+        "z": [
+          -0.0,
+          6.0
+        ]
+      },
+      "criterion": {
+        "x": [
+          -36.0,
+          36.0
+        ],
+        "y": [
+          -300.6,
+          16.2
+        ],
+        "z": [
+          -0.0,
+          6.0
+        ]
+      }
+    },
+    {
+      "check": "plate_N2.stepSTEP volume drift",
+      "passed": true,
+      "measured": 1.9097121457440864e-15,
+      "criterion": 1e-08
+    },
+    {
+      "check": "assembled_device_mount_N2.stepvalid complete solids",
+      "passed": true,
+      "measured": 35,
+      "criterion": 35
+    },
+    {
+      "check": "assembled_device_mount_N2.stepmillimeter scale/coordinates",
+      "passed": true,
+      "measured": {
+        "x": [
+          -46.0,
+          46.0
+        ],
+        "y": [
+          -312.2,
+          37.9999995
+        ],
+        "z": [
+          -6.0,
+          91.0000001
+        ]
+      },
+      "criterion": {
+        "x": [
+          -46.0,
+          46.0
+        ],
+        "y": [
+          -312.2,
+          37.9999995
+        ],
+        "z": [
+          -6.0,
+          91.0000001
+        ]
+      }
+    },
+    {
+      "check": "assembled_device_mount_N2.stepSTEP volume drift",
+      "passed": true,
+      "measured": 6.330830956177307e-06,
+      "criterion": 3e-05
+    },
+    {
+      "check": "device_adapter_N2.stepvalid complete solids",
+      "passed": true,
+      "measured": 22,
+      "criterion": 22
+    },
+    {
+      "check": "device_adapter_N2.stepmillimeter scale/coordinates",
+      "passed": true,
+      "measured": {
+        "x": [
+          -36.0,
+          36.0
+        ],
+        "y": [
+          -300.6000008,
+          37.9999995
+        ],
+        "z": [
+          -0.0,
+          91.0000001
+        ]
+      },
+      "criterion": {
+        "x": [
+          -36.0,
+          36.0
+        ],
+        "y": [
+          -300.6000008,
+          37.9999995
+        ],
+        "z": [
+          -0.0,
+          91.0000001
+        ]
+      }
+    },
+    {
+      "check": "device_adapter_N2.stepSTEP volume drift",
+      "passed": true,
+      "measured": 1.0984264580526728e-05,
+      "criterion": 3e-05
+    },
+    {
+      "check": "mount_hardware_N2.stepvalid complete solids",
+      "passed": true,
+      "measured": 15,
+      "criterion": 15
+    },
+    {
+      "check": "mount_hardware_N2.stepmillimeter scale/coordinates",
+      "passed": true,
+      "measured": {
+        "x": [
+          -36.0,
+          36.0
+        ],
+        "y": [
+          -300.6,
+          16.2
+        ],
+        "z": [
+          -2.2,
+          12.0
+        ]
+      },
+      "criterion": {
+        "x": [
+          -36.0,
+          36.0
+        ],
+        "y": [
+          -300.6,
+          16.2
+        ],
+        "z": [
+          -2.2,
+          12.0
+        ]
+      }
+    },
+    {
+      "check": "mount_hardware_N2.stepSTEP volume drift",
+      "passed": true,
+      "measured": 1.8719595011969937e-15,
+      "criterion": 1e-08
+    },
+    {
+      "check": "FPE_interface_REFERENCE_ONLY.stepvalid complete solids",
+      "passed": true,
+      "measured": 5,
+      "criterion": 5
+    },
+    {
+      "check": "FPE_interface_REFERENCE_ONLY.stepmillimeter scale/coordinates",
+      "passed": true,
+      "measured": {
+        "x": [
+          -46.0,
+          46.0
+        ],
+        "y": [
+          -312.2,
+          27.8
+        ],
+        "z": [
+          -6.0,
+          12.0
+        ]
+      },
+      "criterion": {
+        "x": [
+          -46.0,
+          46.0
+        ],
+        "y": [
+          -312.2,
+          27.8
+        ],
+        "z": [
+          -6.0,
+          12.0
+        ]
+      }
+    },
+    {
+      "check": "FPE_interface_REFERENCE_ONLY.stepSTEP volume drift",
+      "passed": true,
+      "measured": 2.9457207422737424e-15,
+      "criterion": 1e-08
+    },
+    {
+      "check": "Side-mounted body width41height85",
+      "passed": true,
+      "measured": {
+        "x": [
+          -20.5000001,
+          20.5
+        ],
+        "y": [
+          -300.6000008,
+          37.9999995
+        ],
+        "z": [
+          6.0,
+          91.0000001
+        ]
+      },
+      "criterion": null
+    },
+    {
+      "check": "Adapter/PSU no interference",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "Adapter/panel no interference",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "Metal17 planar support contact",
+      "passed": true,
+      "measured": 10173.63467974502,
+      "criterion": "Approximate mm2 by1micron intersection; not load capacity"
+    },
+    {
+      "check": "Metal0 planar support contact",
+      "passed": true,
+      "measured": 1378.0008709904828,
+      "criterion": "Approximate mm2 by1micron intersection; not load capacity"
+    },
+    {
+      "check": "Fan14 clear of plate",
+      "passed": true,
+      "measured": 44.2000003,
+      "criterion": "Nominal mm, not thermal proof"
+    },
+    {
+      "check": "Fan15 clear of plate",
+      "passed": true,
+      "measured": 0.8000002999999936,
+      "criterion": "Nominal mm, not thermal proof"
+    },
+    {
+      "check": "McMaster_91294A190_M4x10_H1 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A190_M4x10_H1expected geometry only",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Front minor-bore proxy overlap only; rear thread absent from STEP and must be physically confirmed"
+    },
+    {
+      "check": "McMaster_91294A190_M4x10_H1nominal intrusion",
+      "passed": true,
+      "measured": 4.050000000000001,
+      "criterion": "OEM5max; received3.75..4.35mm"
+    },
+    {
+      "check": "McMaster_91294A190_M4x10_H1proxy head recess",
+      "passed": true,
+      "measured": 0.05,
+      "criterion": "Actual DIN7991 head not fully modeled; physical gauge mandatory"
+    },
+    {
+      "check": "McMaster_91294A190_M4x10_H2 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A190_M4x10_H2expected geometry only",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Front minor-bore proxy overlap only; rear thread absent from STEP and must be physically confirmed"
+    },
+    {
+      "check": "McMaster_91294A190_M4x10_H2nominal intrusion",
+      "passed": true,
+      "measured": 4.050000000000001,
+      "criterion": "OEM5max; received3.75..4.35mm"
+    },
+    {
+      "check": "McMaster_91294A190_M4x10_H2proxy head recess",
+      "passed": true,
+      "measured": 0.05,
+      "criterion": "Actual DIN7991 head not fully modeled; physical gauge mandatory"
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_S1 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_S1 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_S1 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_S1 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_S1 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_S1 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_S2 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_S2 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_S2 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_S2 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_S2 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_S2 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_S3 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_S3 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_S3 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_S3 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_S3 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_S3 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_S4 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_S4 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_S4 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_S4 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_S4 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_S4 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "Front maximum accepted tip disc has positive material clearance",
+      "passed": true,
+      "measured": 1.1142115891855273,
+      "criterion": "Nearest distance includes lateral case material; it is not axial screw clearance"
+    },
+    {
+      "check": "Front axial screw envelope clear through 7.4mm inward",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Measured first axial obstruction7.5mm; OEM5mm intrusion cap still governs"
+    },
+    {
+      "check": "Rear expected STEP thread absence documented",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Evidence discrepancy only. DOES NOT establish rear attachment or justify assembly release"
+    },
+    {
+      "check": "S1 socketOD10 clearance",
+      "passed": true,
+      "measured": 2.999999986511,
+      "criterion": "mm;10mm internal depth/60mm approach"
+    },
+    {
+      "check": "S2 socketOD10 clearance",
+      "passed": true,
+      "measured": 2.999999986511,
+      "criterion": "mm;10mm internal depth/60mm approach"
+    },
+    {
+      "check": "S3 socketOD10 clearance",
+      "passed": true,
+      "measured": 3.000000013489988,
+      "criterion": "mm;10mm internal depth/60mm approach"
+    },
+    {
+      "check": "S4 socketOD10 clearance",
+      "passed": true,
+      "measured": 3.000000013489988,
+      "criterion": "mm;10mm internal depth/60mm approach"
+    },
+    {
+      "check": "Normal removal sample0mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Nuts/washers removed; straight bores and normal path"
+    },
+    {
+      "check": "Normal removal sample0.1mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Nuts/washers removed; straight bores and normal path"
+    },
+    {
+      "check": "Normal removal sample1mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Nuts/washers removed; straight bores and normal path"
+    },
+    {
+      "check": "Normal removal sample5mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Nuts/washers removed; straight bores and normal path"
+    },
+    {
+      "check": "Normal removal sample10mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Nuts/washers removed; straight bores and normal path"
+    },
+    {
+      "check": "Normal removal sample12mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Nuts/washers removed; straight bores and normal path"
+    },
+    {
+      "check": "Normal removal sample13mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Nuts/washers removed; straight bores and normal path"
+    },
+    {
+      "check": "Normal removal sample20mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Nuts/washers removed; straight bores and normal path"
+    },
+    {
+      "check": "intakeairflow planning corridor",
+      "passed": true,
+      "measured": 0,
+      "criterion": "100mm assumption, actual cable/plug/guard clearance still required"
+    },
+    {
+      "check": "exhaustairflow planning corridor",
+      "passed": true,
+      "measured": 0,
+      "criterion": "100mm assumption, actual cable/plug/guard clearance still required"
+    },
+    {
+      "check": "Hardware pairs no unintended interference",
+      "passed": true,
+      "measured": [],
+      "criterion": null
+    },
+    {
+      "check": "Nominal stud tail",
+      "passed": true,
+      "measured": 1.4500000000000002,
+      "criterion": "Actual>=1mm beyond nut plus complete nylon engagement"
+    },
+    {
+      "check": "Evaluated STEP equals delivered plate",
+      "passed": true,
+      "measured": 0.0,
+      "criterion": null
+    }
+  ],
+  "check_count": 77,
+  "passed_count": 77,
+  "N1_comparison": {
+    "N1_max_width_mm": 125,
+    "N2_max_width_mm": 72.0,
+    "maximum_width_reduction_percent": 42.400000000000006,
+    "N2_waist_mm": 45.0,
+    "N1_outline_area_mm2": 37520.061929829746,
+    "N2_outline_area_mm2": 16618.265482457435,
+    "outline_area_reduction_percent": 55.70832075507492,
+    "N1_adapter_device_height_mm": 46,
+    "N2_adapter_device_height_mm": 91.0,
+    "N2_plate_mass_kg": 0.267460321522259,
+    "scope": "Unperforated rounded outline, excludes cables/tools/mainpanel; maxwidth differs from occupied area"
+  },
+  "limitations": [
+    "Rear sideM4 is specified by OEM but absent from STEP; physical thread/hardware confirmation mandatory",
+    "Two-screw roll restraint relies on qualified finite metal contact and joint seating; no thread/anchor rating from CAD",
+    "Sideorientation output-current derating unresolved; no full-power or enclosure thermal qualification",
+    "Actual screw heads, plugs/lugs/guards/cables and finalpanel are not supplier-validated assembly geometry"
+  ]
+}

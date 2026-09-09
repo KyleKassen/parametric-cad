@@ -1,0 +1,105 @@
+{
+  "schema": "part-eval/2",
+  "part": "sce20-layout",
+  "part_dir": "parts/custom/sce20-layout",
+  "attempt_id": "20260908-145628-34253b",
+  "attempt_dir": "parts/custom/sce20-layout/exports/attempts/20260908-145628-34253b",
+  "started": "2026-09-08T14:56:28",
+  "checks": [
+    {
+      "id": "build",
+      "status": "PASS",
+      "severity": "hard",
+      "message": "create_part() ok in 0.2s"
+    },
+    {
+      "id": "export",
+      "status": "PASS",
+      "severity": "hard",
+      "message": "parts/custom/sce20-layout/exports/attempts/20260908-145628-34253b/sce20-layout_v1.step (176 KB)"
+    },
+    {
+      "id": "reimport",
+      "status": "PASS",
+      "severity": "hard",
+      "message": "1 solid(s), volume 1109415.4 mm^3, bbox 431.80 x 431.80 x 6.00 mm"
+    },
+    {
+      "id": "brep_valid",
+      "status": "PASS",
+      "severity": "hard",
+      "message": "BRepCheck_Analyzer passed"
+    },
+    {
+      "id": "non_empty",
+      "status": "PASS",
+      "severity": "hard",
+      "message": "1 solid(s), volume 1109415.4 mm^3"
+    },
+    {
+      "id": "solid_count",
+      "status": "PASS",
+      "severity": "hard",
+      "message": "1 solid(s), expected 1",
+      "measured": 1,
+      "expected": 1
+    },
+    {
+      "id": "dim:width",
+      "status": "PASS",
+      "severity": "hard",
+      "message": "bbox x = 431.800 mm (accept 431.8 +/- 0.01)",
+      "kind": "bbox",
+      "measured": 431.8
+    },
+    {
+      "id": "dim:height",
+      "status": "PASS",
+      "severity": "hard",
+      "message": "bbox y = 431.800 mm (accept 431.8 +/- 0.01)",
+      "kind": "bbox",
+      "measured": 431.8
+    },
+    {
+      "id": "dim:thickness",
+      "status": "PASS",
+      "severity": "hard",
+      "message": "bbox z = 6.000 mm (accept 6 +/- 0.01)",
+      "kind": "bbox",
+      "measured": 6.0
+    },
+    {
+      "id": "dim:factory_mounting_holes",
+      "status": "PASS",
+      "severity": "hard",
+      "message": "4 cylinder feature(s) matching d=12.7+/-0.01 Z-axis hole (need >= 4)",
+      "kind": "cylinder",
+      "measured": 4
+    }
+  ],
+  "promoted": false,
+  "accepted": null,
+  "artifacts": {
+    "step": "parts/custom/sce20-layout/exports/attempts/20260908-145628-34253b/sce20-layout_v1.step"
+  },
+  "spec": "parts/custom/sce20-layout/spec.json",
+  "assumptions": [
+    "Factory outline and holes are interfaces; preserve R6.35 even though not a style ladder radius.",
+    "Catalog mounting cavities represented in STEP; actual production cavities are defined solely by native FPD hardware objects."
+  ],
+  "unresolved": [],
+  "version": "v1",
+  "geometry": {
+    "solid_count": 1,
+    "volume_mm3": 1109415.4,
+    "bbox_size": [
+      431.8,
+      431.8,
+      6.0
+    ]
+  },
+  "warnings": [],
+  "overall": "PASS",
+  "exit_code": 0,
+  "finished": "2026-09-08T14:56:28"
+}

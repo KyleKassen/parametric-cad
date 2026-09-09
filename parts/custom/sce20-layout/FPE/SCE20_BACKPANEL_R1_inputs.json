@@ -1,0 +1,244 @@
+[
+  {
+    "name": "Backpanel_R1",
+    "width": 431.8,
+    "height": 431.8,
+    "thickness": 6,
+    "material_id": 5,
+    "color_id": 1,
+    "radius": 6.35,
+    "bevel": 0.4,
+    "elements": [
+      {
+        "kind": "hole",
+        "id": "FACTORY_1",
+        "x": 22.224999999999994,
+        "y": 22.224999999999994,
+        "diameter": 12.7,
+        "side": "front"
+      },
+      {
+        "kind": "hole",
+        "id": "FACTORY_2",
+        "x": 22.224999999999994,
+        "y": 409.57500000000005,
+        "diameter": 12.7,
+        "side": "front"
+      },
+      {
+        "kind": "hole",
+        "id": "FACTORY_3",
+        "x": 409.57500000000005,
+        "y": 409.57500000000005,
+        "diameter": 12.7,
+        "side": "front"
+      },
+      {
+        "kind": "hole",
+        "id": "FACTORY_4",
+        "x": 409.57500000000005,
+        "y": 22.224999999999994,
+        "diameter": 12.7,
+        "side": "front"
+      },
+      {
+        "kind": "hole",
+        "id": "FACTORY_5",
+        "x": 22.224999999999994,
+        "y": 53.974999999999994,
+        "diameter": 7.1374,
+        "side": "front"
+      },
+      {
+        "kind": "hole",
+        "id": "FACTORY_6",
+        "x": 409.57500000000005,
+        "y": 377.82500000000005,
+        "diameter": 7.1374,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "MEANWELL_1",
+        "x": 400.0,
+        "y": 323.4,
+        "catalog": "WGU30",
+        "length": 12,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "MEANWELL_2",
+        "x": 400.0,
+        "y": 71.4,
+        "catalog": "WGU30",
+        "length": 12,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "MEANWELL_3",
+        "x": 343.0,
+        "y": 323.4,
+        "catalog": "WGU30",
+        "length": 12,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "MEANWELL_4",
+        "x": 343.0,
+        "y": 71.4,
+        "catalog": "WGU30",
+        "length": 12,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "BEDROCK_1",
+        "x": 16.0,
+        "y": 215.0,
+        "catalog": "WGU30",
+        "length": 12,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "BEDROCK_2",
+        "x": 16.0,
+        "y": 379.0,
+        "catalog": "WGU30",
+        "length": 12,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "BEDROCK_3",
+        "x": 168.0,
+        "y": 215.0,
+        "catalog": "WGU30",
+        "length": 12,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "BEDROCK_4",
+        "x": 168.0,
+        "y": 379.0,
+        "catalog": "WGU30",
+        "length": 12,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "B210_1",
+        "x": 322.0,
+        "y": 378.007,
+        "catalog": "WGU30",
+        "length": 12,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "B210_2",
+        "x": 322.0,
+        "y": 257.992,
+        "catalog": "WGU30",
+        "length": 12,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "B210_3",
+        "x": 186.0,
+        "y": 378.007,
+        "catalog": "WGU30",
+        "length": 12,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "B210_4",
+        "x": 186.0,
+        "y": 257.992,
+        "catalog": "WGU30",
+        "length": 12,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "PEPLINK_1",
+        "x": 207.4,
+        "y": 47.65,
+        "catalog": "WGO40",
+        "length": 6,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "PEPLINK_2",
+        "x": 207.4,
+        "y": 130.35,
+        "catalog": "WGO40",
+        "length": 6,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "PEPLINK_3",
+        "x": 45.6,
+        "y": 47.65,
+        "catalog": "WGO40",
+        "length": 6,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "PEPLINK_4",
+        "x": 45.6,
+        "y": 130.35,
+        "catalog": "WGO40",
+        "length": 6,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "OZ_1",
+        "x": 327.1,
+        "y": 130.2,
+        "catalog": "WGU30",
+        "length": 12,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "OZ_2",
+        "x": 327.1,
+        "y": 34.2,
+        "catalog": "WGU30",
+        "length": 12,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "OZ_3",
+        "x": 220.9,
+        "y": 130.2,
+        "catalog": "WGU30",
+        "length": 12,
+        "side": "front"
+      },
+      {
+        "kind": "bolt",
+        "id": "OZ_4",
+        "x": 220.9,
+        "y": 34.2,
+        "catalog": "WGU30",
+        "length": 12,
+        "side": "front"
+      }
+    ],
+    "save": "C:/Users/KyleKassen/Documents/FPE_SCE20_20260908_R1/Backpanel_R1.fpd",
+    "remark": "SCE20 R1. 431.8 square / R6.35 original SUBPANEL outline and six original mounting holes. 6mm bare aluminum, finished thickness +/-0.05mm. FRONT=components and all16 M3x12 load studs +4 M4x6 female load standoffs; depth offset0. Bases/adhesive flush or below face. Rear seat unchanged. See layout and ordering notes; verify factory stud engagement and thermal process before ordering."
+  }
+]

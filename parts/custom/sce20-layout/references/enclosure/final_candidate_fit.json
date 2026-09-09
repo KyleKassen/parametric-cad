@@ -1,0 +1,267 @@
+{
+  "schema": "enclosure-candidate-fit/1",
+  "units": "mm",
+  "placements": {
+    "meanwell": {
+      "translation": [
+        371.5,
+        65.6,
+        0
+      ],
+      "rotation": 180
+    },
+    "bedrock": {
+      "translation": [
+        92.0,
+        297.0,
+        0
+      ],
+      "rotation": 0
+    },
+    "b210": {
+      "translation": [
+        254.0,
+        318.0,
+        0
+      ],
+      "rotation": 180
+    },
+    "peplink": {
+      "translation": [
+        126.5,
+        89.0,
+        6
+      ],
+      "rotation": 0
+    },
+    "oz": {
+      "translation": [
+        274.0,
+        76.0,
+        0
+      ],
+      "rotation": 0
+    }
+  },
+  "integration_model_inputs": {
+    "meanwell": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\meanwell-nsp1600-side-tab-mount\\exports\\device_adapter_N2.step",
+    "bedrock": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\Bedrock_FPE_R1_device_adapter.step",
+    "b210": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\B210_FPE_R1_device_adapter.step",
+    "peplink": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\router_oz\\peplink_normalized.step",
+    "oz": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\router_oz\\oz_normalized.step"
+  },
+  "FPE_standard_stock_adapters": true,
+  "panel_thickness_mm": 6,
+  "source_component_face_z_mm": -106.395,
+  "original_nut_translation_z_mm": 2.825,
+  "fixed_studs_translated": false,
+  "components": {
+    "meanwell": {
+      "source_bbox_mm": {
+        "x": [
+          119.6,
+          191.6
+        ],
+        "y": [
+          -188.2999995,
+          150.3000008
+        ],
+        "z": [
+          -106.395,
+          -15.3949999
+        ]
+      },
+      "fixed_collisions": []
+    },
+    "bedrock": {
+      "source_bbox_mm": {
+        "x": [
+          -206.9,
+          -40.9
+        ],
+        "y": [
+          -10.9,
+          173.1
+        ],
+        "z": [
+          -106.395,
+          -49.395
+        ]
+      },
+      "fixed_collisions": []
+    },
+    "b210": {
+      "source_bbox_mm": {
+        "x": [
+          -36.9,
+          113.1
+        ],
+        "y": [
+          10.4187,
+          188.0663
+        ],
+        "z": [
+          -106.395,
+          -68.6949999
+        ]
+      },
+      "fixed_collisions": []
+    },
+    "peplink": {
+      "source_bbox_mm": {
+        "x": [
+          -175.3,
+          -3.5
+        ],
+        "y": [
+          -208.6995729,
+          -42.4699886
+        ],
+        "z": [
+          -100.395,
+          -71.0949999
+        ]
+      },
+      "fixed_collisions": []
+    },
+    "oz": {
+      "source_bbox_mm": {
+        "x": [
+          -0.0,
+          116.2
+        ],
+        "y": [
+          -208.9500001,
+          -70.8509999
+        ],
+        "z": [
+          -106.3950001,
+          -73.675
+        ]
+      },
+      "fixed_collisions": []
+    }
+  },
+  "factory_socket_service_probes": [
+    {
+      "center_lowerleft_xy_mm": [
+        22.224999999999994,
+        22.224999999999994
+      ],
+      "planning_radius_mm": 15,
+      "planning_height_mm": 60,
+      "component_intersections": []
+    },
+    {
+      "center_lowerleft_xy_mm": [
+        22.224999999999994,
+        409.57500000000005
+      ],
+      "planning_radius_mm": 15,
+      "planning_height_mm": 60,
+      "component_intersections": []
+    },
+    {
+      "center_lowerleft_xy_mm": [
+        409.57500000000005,
+        22.224999999999994
+      ],
+      "planning_radius_mm": 15,
+      "planning_height_mm": 60,
+      "component_intersections": []
+    },
+    {
+      "center_lowerleft_xy_mm": [
+        409.57500000000005,
+        409.57500000000005
+      ],
+      "planning_radius_mm": 15,
+      "planning_height_mm": 60,
+      "component_intersections": []
+    }
+  ],
+  "PSU_planning_corridors": [
+    {
+      "name": "terminal/intake planning",
+      "source_bbox_mm": {
+        "x": [
+          135.1,
+          176.1
+        ],
+        "y": [
+          -250.3,
+          -150.3
+        ],
+        "z": [
+          -100.395,
+          -15.395
+        ]
+      },
+      "enclosure_and_factory_hardware_collisions": [],
+      "other_component_collisions": [],
+      "nearest_inner_y_wall_gap_mm": 1.7949999999999875
+    },
+    {
+      "name": "fan/exhaust planning",
+      "source_bbox_mm": {
+        "x": [
+          135.1,
+          176.1
+        ],
+        "y": [
+          150.3,
+          250.3
+        ],
+        "z": [
+          -100.395,
+          -15.395
+        ]
+      },
+      "enclosure_and_factory_hardware_collisions": [],
+      "other_component_collisions": [],
+      "nearest_inner_y_wall_gap_mm": 1.7949999999999875
+    }
+  ],
+  "PSU_wall_band": {
+    "source_z_mm": [
+      -100.395,
+      -15.394999999999996
+    ],
+    "source_x_mm": [
+      -252.095,
+      252.095
+    ],
+    "source_y_mm": [
+      -252.095,
+      252.095
+    ],
+    "lowerleft_panel_xy_mm": [
+      -36.195,
+      467.995
+    ],
+    "evidence": "solid0 faces45/67; solid1 face4; solid2 face10 in panel_geometry.json"
+  },
+  "wall_slab_boolean_proof": {
+    "bbox_mm": {
+      "x": [
+        -252.094,
+        252.094
+      ],
+      "y": [
+        -252.094,
+        252.094
+      ],
+      "z": [
+        -106.395,
+        -6.395
+      ]
+    },
+    "hits": []
+  },
+  "notes": [
+    "The 100 mm corridors are planning envelopes from the source adapter design, not measured air paths or CFD results.",
+    "All clearance values are nominal CAD, without production tolerance allowance.",
+    "The best centered straight 500.6 mm combined PSU + air-corridor span has only 1.795 mm nominal gap to each 504.19 mm-separated inner wall. Translation cannot increase the smaller gap.",
+    "Closed steel walls at corridor ends do not certify external airflow or enclosure heat rejection."
+  ]
+}

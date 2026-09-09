@@ -1,0 +1,558 @@
+{
+  "source_sha256": "d421a1e7fb7a3b5fd2e12588484a2e970456301955c0a17f55be6d56324dd8a0",
+  "chosen_side": "Original normalized +X face",
+  "side_transform": "Xnew=Zold-20.5;Ynew=Yold;Znew=42.5-Xold. RotationY+90 then translation(-20.5,0,42.5). Original source first translates by(-66.7869113,-354.1518617,-1.4999997).",
+  "side_bbox_mm": {
+    "x": [
+      -20.50000011,
+      20.49999999
+    ],
+    "y": [
+      -300.6000008,
+      37.99999946
+    ],
+    "z": [
+      -2e-08,
+      85.00000008
+    ]
+  },
+  "nominal_mount_axes_xy_mm": [
+    [
+      2.3,
+      -5.8
+    ],
+    [
+      2.3,
+      -257.8
+    ]
+  ],
+  "reimport": {
+    "valid": true,
+    "solids": 19,
+    "bbox_mm": {
+      "x": [
+        -20.50000011,
+        20.49999999
+      ],
+      "y": [
+        -300.6000008,
+        37.99999946
+      ],
+      "z": [
+        -2e-08,
+        85.00000008
+      ]
+    },
+    "relative_volume_difference": 1.8121272527315563e-05
+  },
+  "contact_patches": [
+    {
+      "id": "front_full_station",
+      "rect_x_mm": [
+        -20.5,
+        20.5
+      ],
+      "rect_y_mm": [
+        -21.8,
+        0
+      ],
+      "geometric_rect_area_mm2": 893.8000000000001,
+      "actual_coplanar_metal_area_mm2": 729.8022290424248,
+      "full_rectangle_supported": false,
+      "metal_parts": [
+        {
+          "source_solid_index_zero_based": 17,
+          "area_mm2": 729.8022290424248,
+          "bbox_mm": {
+            "x": [
+              -19.20000001,
+              20.49999999
+            ],
+            "y": [
+              -21.8,
+              2e-08
+            ],
+            "z": [
+              -2e-08,
+              -2e-08
+            ]
+          }
+        }
+      ],
+      "minimum_lever_to_hole_line_x2p3_mm": 0
+    },
+    {
+      "id": "rear_full_station",
+      "rect_x_mm": [
+        -20.5,
+        20.5
+      ],
+      "rect_y_mm": [
+        -273.8,
+        -241.8
+      ],
+      "geometric_rect_area_mm2": 1312.0,
+      "actual_coplanar_metal_area_mm2": 1162.827211970965,
+      "full_rectangle_supported": false,
+      "metal_parts": [
+        {
+          "source_solid_index_zero_based": 0,
+          "area_mm2": 376.2763259113084,
+          "bbox_mm": {
+            "x": [
+              -20.50000001,
+              20.49999999
+            ],
+            "y": [
+              -273.8,
+              -264.40000098
+            ],
+            "z": [
+              -2e-08,
+              -2e-08
+            ]
+          }
+        },
+        {
+          "source_solid_index_zero_based": 17,
+          "area_mm2": 786.5508860596567,
+          "bbox_mm": {
+            "x": [
+              -19.20000001,
+              20.49999999
+            ],
+            "y": [
+              -264.40000035,
+              -241.8
+            ],
+            "z": [
+              -2e-08,
+              -2e-08
+            ]
+          }
+        }
+      ],
+      "minimum_lever_to_hole_line_x2p3_mm": 0
+    },
+    {
+      "id": "front_interior_negative_band",
+      "rect_x_mm": [
+        -16,
+        -12.5
+      ],
+      "rect_y_mm": [
+        -9.8,
+        -1.8
+      ],
+      "geometric_rect_area_mm2": 28.0,
+      "actual_coplanar_metal_area_mm2": 27.99999999999995,
+      "full_rectangle_supported": true,
+      "metal_parts": [
+        {
+          "source_solid_index_zero_based": 17,
+          "area_mm2": 27.99999999999995,
+          "bbox_mm": {
+            "x": [
+              -16.0,
+              -12.5
+            ],
+            "y": [
+              -9.8,
+              -1.8
+            ],
+            "z": [
+              -2e-08,
+              -2e-08
+            ]
+          }
+        }
+      ],
+      "minimum_lever_to_hole_line_x2p3_mm": 14.8
+    },
+    {
+      "id": "front_interior_positive_band",
+      "rect_x_mm": [
+        7.5,
+        9.5
+      ],
+      "rect_y_mm": [
+        -9.8,
+        -1.8
+      ],
+      "geometric_rect_area_mm2": 16.0,
+      "actual_coplanar_metal_area_mm2": 15.999999999999972,
+      "full_rectangle_supported": true,
+      "metal_parts": [
+        {
+          "source_solid_index_zero_based": 17,
+          "area_mm2": 15.999999999999972,
+          "bbox_mm": {
+            "x": [
+              7.5,
+              9.5
+            ],
+            "y": [
+              -9.8,
+              -1.8
+            ],
+            "z": [
+              -2e-08,
+              -2e-08
+            ]
+          }
+        }
+      ],
+      "minimum_lever_to_hole_line_x2p3_mm": 5.2
+    },
+    {
+      "id": "front_outer_positive_band",
+      "rect_x_mm": [
+        19.1,
+        20
+      ],
+      "rect_y_mm": [
+        -9.8,
+        -1.8
+      ],
+      "geometric_rect_area_mm2": 7.199999999999989,
+      "actual_coplanar_metal_area_mm2": 7.199999999999975,
+      "full_rectangle_supported": true,
+      "metal_parts": [
+        {
+          "source_solid_index_zero_based": 17,
+          "area_mm2": 7.199999999999975,
+          "bbox_mm": {
+            "x": [
+              19.1,
+              20.0
+            ],
+            "y": [
+              -9.8,
+              -1.8
+            ],
+            "z": [
+              -2e-08,
+              -2e-08
+            ]
+          }
+        }
+      ],
+      "minimum_lever_to_hole_line_x2p3_mm": 16.8
+    },
+    {
+      "id": "rear_interior_negative_band",
+      "rect_x_mm": [
+        -16,
+        -12.5
+      ],
+      "rect_y_mm": [
+        -261.8,
+        -253.8
+      ],
+      "geometric_rect_area_mm2": 28.0,
+      "actual_coplanar_metal_area_mm2": 28.0,
+      "full_rectangle_supported": true,
+      "metal_parts": [
+        {
+          "source_solid_index_zero_based": 17,
+          "area_mm2": 28.0,
+          "bbox_mm": {
+            "x": [
+              -16.0,
+              -12.5
+            ],
+            "y": [
+              -261.8,
+              -253.8
+            ],
+            "z": [
+              -2e-08,
+              -2e-08
+            ]
+          }
+        }
+      ],
+      "minimum_lever_to_hole_line_x2p3_mm": 14.8
+    },
+    {
+      "id": "rear_interior_positive_band",
+      "rect_x_mm": [
+        7.5,
+        9.5
+      ],
+      "rect_y_mm": [
+        -251.8,
+        -243.8
+      ],
+      "geometric_rect_area_mm2": 16.0,
+      "actual_coplanar_metal_area_mm2": 16.0,
+      "full_rectangle_supported": true,
+      "metal_parts": [
+        {
+          "source_solid_index_zero_based": 17,
+          "area_mm2": 16.0,
+          "bbox_mm": {
+            "x": [
+              7.5,
+              9.5
+            ],
+            "y": [
+              -251.8,
+              -243.8
+            ],
+            "z": [
+              -2e-08,
+              -2e-08
+            ]
+          }
+        }
+      ],
+      "minimum_lever_to_hole_line_x2p3_mm": 5.2
+    },
+    {
+      "id": "front_requested_right_toe",
+      "rect_x_mm": [
+        17.3,
+        18.3
+      ],
+      "rect_y_mm": [
+        -9.8,
+        -1.8
+      ],
+      "geometric_rect_area_mm2": 8.0,
+      "actual_coplanar_metal_area_mm2": 7.471466873382482,
+      "full_rectangle_supported": false,
+      "metal_parts": [
+        {
+          "source_solid_index_zero_based": 17,
+          "area_mm2": 7.471466873382482,
+          "bbox_mm": {
+            "x": [
+              17.3,
+              18.3
+            ],
+            "y": [
+              -9.8,
+              -1.8
+            ],
+            "z": [
+              -2e-08,
+              -2e-08
+            ]
+          }
+        }
+      ],
+      "minimum_lever_to_hole_line_x2p3_mm": 15.0
+    },
+    {
+      "id": "front_requested_left_toe",
+      "rect_x_mm": [
+        -13.7,
+        -12.7
+      ],
+      "rect_y_mm": [
+        -9.8,
+        -1.8
+      ],
+      "geometric_rect_area_mm2": 8.0,
+      "actual_coplanar_metal_area_mm2": 7.999999999999986,
+      "full_rectangle_supported": true,
+      "metal_parts": [
+        {
+          "source_solid_index_zero_based": 17,
+          "area_mm2": 7.999999999999986,
+          "bbox_mm": {
+            "x": [
+              -13.7,
+              -12.7
+            ],
+            "y": [
+              -9.8,
+              -1.8
+            ],
+            "z": [
+              -2e-08,
+              -2e-08
+            ]
+          }
+        }
+      ],
+      "minimum_lever_to_hole_line_x2p3_mm": 15.0
+    },
+    {
+      "id": "rear_requested_right_toe",
+      "rect_x_mm": [
+        17.3,
+        18.3
+      ],
+      "rect_y_mm": [
+        -261.8,
+        -253.8
+      ],
+      "geometric_rect_area_mm2": 8.0,
+      "actual_coplanar_metal_area_mm2": 3.9278469279274453,
+      "full_rectangle_supported": false,
+      "metal_parts": [
+        {
+          "source_solid_index_zero_based": 17,
+          "area_mm2": 3.9278469279274453,
+          "bbox_mm": {
+            "x": [
+              17.3,
+              18.3
+            ],
+            "y": [
+              -258.17386434,
+              -253.8
+            ],
+            "z": [
+              -2e-08,
+              -2e-08
+            ]
+          }
+        }
+      ],
+      "minimum_lever_to_hole_line_x2p3_mm": 15.0
+    },
+    {
+      "id": "rear_requested_left_toe",
+      "rect_x_mm": [
+        -13.7,
+        -12.7
+      ],
+      "rect_y_mm": [
+        -261.8,
+        -253.8
+      ],
+      "geometric_rect_area_mm2": 8.0,
+      "actual_coplanar_metal_area_mm2": 8.0,
+      "full_rectangle_supported": true,
+      "metal_parts": [
+        {
+          "source_solid_index_zero_based": 17,
+          "area_mm2": 8.0,
+          "bbox_mm": {
+            "x": [
+              -13.7,
+              -12.7
+            ],
+            "y": [
+              -261.8,
+              -253.8
+            ],
+            "z": [
+              -2e-08,
+              -2e-08
+            ]
+          }
+        }
+      ],
+      "minimum_lever_to_hole_line_x2p3_mm": 15.0
+    },
+    {
+      "id": "front_alternate_right_toe",
+      "rect_x_mm": [
+        17.3,
+        18.3
+      ],
+      "rect_y_mm": [
+        -11.8,
+        -9.8
+      ],
+      "geometric_rect_area_mm2": 2.0,
+      "actual_coplanar_metal_area_mm2": 2.0,
+      "full_rectangle_supported": true,
+      "metal_parts": [
+        {
+          "source_solid_index_zero_based": 17,
+          "area_mm2": 2.0,
+          "bbox_mm": {
+            "x": [
+              17.3,
+              18.3
+            ],
+            "y": [
+              -11.8,
+              -9.8
+            ],
+            "z": [
+              -2e-08,
+              -2e-08
+            ]
+          }
+        }
+      ],
+      "minimum_lever_to_hole_line_x2p3_mm": 15.0
+    },
+    {
+      "id": "rear_alternate_right_toe",
+      "rect_x_mm": [
+        17.3,
+        18.3
+      ],
+      "rect_y_mm": [
+        -254.8,
+        -252.8
+      ],
+      "geometric_rect_area_mm2": 2.0,
+      "actual_coplanar_metal_area_mm2": 2.0,
+      "full_rectangle_supported": true,
+      "metal_parts": [
+        {
+          "source_solid_index_zero_based": 17,
+          "area_mm2": 2.0,
+          "bbox_mm": {
+            "x": [
+              17.3,
+              18.3
+            ],
+            "y": [
+              -254.8,
+              -252.8
+            ],
+            "z": [
+              -2e-08,
+              -2e-08
+            ]
+          }
+        }
+      ],
+      "minimum_lever_to_hole_line_x2p3_mm": 15.0
+    },
+    {
+      "id": "rear_outer_positive_band",
+      "rect_x_mm": [
+        19.1,
+        20
+      ],
+      "rect_y_mm": [
+        -261.8,
+        -253.8
+      ],
+      "geometric_rect_area_mm2": 7.199999999999989,
+      "actual_coplanar_metal_area_mm2": 7.199999999999989,
+      "full_rectangle_supported": true,
+      "metal_parts": [
+        {
+          "source_solid_index_zero_based": 17,
+          "area_mm2": 7.199999999999989,
+          "bbox_mm": {
+            "x": [
+              19.1,
+              20.0
+            ],
+            "y": [
+              -261.8,
+              -253.8
+            ],
+            "z": [
+              -2e-08,
+              -2e-08
+            ]
+          }
+        }
+      ],
+      "minimum_lever_to_hole_line_x2p3_mm": 16.8
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+# T1 installation and service
+
+Preliminary instructions. Authorize final torque/preload only after SolidRun and FPE joint limits or representative qualification tests establish them. No torque value is supplied here.
+
+## Receive and inspect
+
+1. Confirm that the actual computer has the requested flat Tile face opposite its installed heatsink. Compare six coordinates to the drawing with a nonmetallic fit template. Verify M4 × 0.7 with an appropriate gauge; do not force a screw into an uncertain hole.
+2. Measure usable full-diameter threaded depth at every hole with safe metrology. The modeled 3.5 mm thread-region limit and 4.501 mm drill apex are different dimensions. Do not drive a fastener to the bottom to measure depth.
+3. Inspect the finished 5.10 ±0.05 mm adapter: no warp, raised burr, embedded chip, sharp external rim or coating buildup. Confirm both contact-land planes and 0.050 ±0.010 mm thermal recess depths. Finish the adapter with clear MIL-DTL-5541 Type II Class 3 conversion after machining. No paint, powder coating or anodize on thermal fields/contact lands. Inspect dimensions after finish; the conversion layer is not assumed to have zero thermal resistance. FPE panel interface finish and flatness need agreement.
+4. With each received M4 × 8 screw in its own finished countersink, measure **2.85–3.00 mm projection above the Tile contact plane**, and a head **flush to 0.10 mm recessed below datum A**. Nominal projection is 2.95 mm. A protruding head would hold the main-panel joint apart. Proposed prototype inspection also requires countersink mouth no larger than 8.20 mm, included angle at least 89 degrees (nominal 90), effective conical seating diameter at least 7.60 mm, straight bore ligament at least 3.00 mm after deburring, and effective top contact-land diameter at least 7.90 mm. These are analytical-screen assumptions to confirm, not catalog screw tolerances or manufacturer joint limits.
+5. Independently confirm **at least 2.00 mm effective complete thread engagement**, excluding the measured screw-tip lead, the modeled 0.584 mm female entry and any additional incomplete female-entry thread/phase, and at least **0.50 mm axial margin to the verified full-diameter blind limit**. These are proposed prototype criteria, not SolidRun allowables. The selected stock screw is conditional: ordinary length and tip variation can fail this simultaneous test. If it fails, revise the screw/plate selection with actual measurements and supplier limits.
+
+## Attach the adapter to the Tile
+
+6. Disconnect power and cables. Support the computer without loading SMA connectors, ports or fins. Protect the fin bank; do not remove manufacturer parts unless its procedure authorizes that operation.
+7. Dry-fit the plate. Its solid metal lands must seat without pulling a bowed part flat. Use an appropriate noncontaminating gap/contact inspection method; do not leave inspection media in the assembly.
+8. Clean mating surfaces using material-compatible methods approved by their manufacturers. Keep compound out of blind holes, screw seats and dry contact islands. Dow 340 is noncuring thermal grease; it is not structural adhesive or a locking compound.
+9. Meter a thin film into the upper field. Nominal machined pocket volume is approximately **0.969 mL**, including escape grooves; this is a geometric reference, not a guaranteed dispensing dose. Spread for continuous coverage, leave escape grooves open for displaced air/excess, and avoid overfilling a closed region. Actual filled bond line must be greater than zero and **less than 0.10 mm**. Qualify the application method on the prototype.
+10. Locate the adapter over the six holes and insert all six M4 screws by hand. Tighten in alternating stages around the perimeter and center after an approved preload/torque procedure exists. No washers go under the countersunk heads. Confirm complete seating, head recess and no case distortion. Do not use tightening to squeeze an excessive grease charge or overcome a mismatch.
+11. Use a removable locking method only after compatibility and its influence on friction/preload, the shallow aluminum threads and computer service procedure are established. Until then use witness marks and inspection; witness marks do not prevent loosening. Thermal grease must never be used to lubricate the threads.
+
+## Install on the FPE main panel
+
+12. Use the final FPE-approved four M3 load studs at X=±76, Y=±82 mm relative to the adapter center. Nominal 12 mm projection and flush bases are reference specifications. Verify actual positions, seating plane, anchoring capacity, temperature limits and allowed assembly torque.
+13. Inspect the bottom interface; the six M4 heads must remain below A. Apply a controlled thin film to the lower field (nominal pocket volume **0.961 mL**, not a guaranteed dose), keeping all holes and contact lands dry. Confirm the same <0.10 mm actual-gap criterion and that compound/air can escape through the two +X grooves.
+14. Lower the computer/adapter vertically over the four studs. Add four McMaster M3 washers and four M3 nylon-insert locknuts. Use a 5.5 mm socket with **outside diameter ≤10 mm and internal depth ≥8 mm**. The CAD reserved a 60 mm high access cylinder above each stud; check the actual tool.
+15. Tighten the locknuts by the FPE-approved procedure. Do not spin the stud in the panel or exceed the anchor's allowable torque. Nominal stud tail beyond the nut is **2.35 mm**; verify full nylon engagement and at least two complete exposed M3 threads. Locknut temperature must remain below its catalog **85°C** limit with margin defined during thermal validation. Replace a locknut if prevailing torque is lost.
+16. Prefer a vertical main panel with the fin channels vertical (+Y upward in the plate drawing). Preserve at least the manufacturer-recommended 20 mm above/below and 10 mm at the sides for convection, plus the larger actual connector/hand/tool spaces. Any other fin orientation requires validation with the TEC airflow or other active cooling.
+17. Strain-relieve cables to the main structure close to the unit. Reserved nominal 50 mm I/O and SMA connector corridors are not connector-specific mating or bend-radius evidence. Confirm all selected plugs, boots, latches and cables physically.
+
+## Remove and reinstall
+
+Power down, disconnect and label cables, release cable strain relief, support the computer, and remove all four nuts and washers. Release compound adhesion gently without levering against connectors or thin case edges. Lift at least 20 mm normal to the panel to clear the studs and provide handling room. Maintain a safe grip on the enclosure; fins and connectors are not handles.
+
+The six countersunk screws become accessible after the assembly is lifted from the panel. Leave them installed for routine complete-unit removal. Clean and renew disturbed grease; do not assume an old film remains continuous. Inspect threads, flats, studs, witness marks and prevailing-torque hardware at every service. Record installation cycles and the validated maintenance interval.

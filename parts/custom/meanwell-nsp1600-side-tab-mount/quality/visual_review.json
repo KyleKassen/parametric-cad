@@ -1,0 +1,38 @@
+{
+  "status": "PASS: PRELIMINARY DRAWING AND CAD VISUAL CLARITY",
+  "reviewer": "root",
+  "scope": "Visual clarity and nominal mechanical fit only; no physical qualification",
+  "cad_views_reviewed": true,
+  "views": {
+    "references/product/assembled_hero.png": "bc726b1f86e451fb675bb6d6ef7fa9b2ab563051fecb00ee23d111ac61b7c7f3",
+    "references/product/plate_top_hero.png": "8abc2262fc4e1a27a518f83bb07d12b7a8633c9ff30431e6f8649d35bf278adb",
+    "references/product/exploded_iso.png": "e3f268c6fc48623547970ce529cbc3004331b8e122a99390ecb5b155e1b44fad",
+    "references/views/section_front_side_mount_front.png": "def33c12bbd06e273551f0bc841c7e377578b97481bfda18af97c42108207762",
+    "references/views/section_rear_side_mount_front.png": "809e7dceabb65e87645a94e532065e98da4427b3bda7ccaf8e9ff253af2eccd4",
+    "references/views/installed_top.png": "82708cf5dfa1ccb5ce407291f06be7ea70c1fcbbc85833d6592907f2c07ed8fe",
+    "references/views/plate_bottom.png": "01e67caa9e8781248d23ea3da15ed88f6e99b040dc51393c7402668ed5bc061c"
+  },
+  "cad_review_findings": [
+    "Local tabs and R4 roots visible; central spine and stud access clear.",
+    "True front/rear mounting sections reviewed. Rear threaded feature is absent in supplied source and requires physical confirmation.",
+    "Top and underside views reviewed for contour, screw positions and countersink direction.",
+    "Reference main panel is distinct from the adapter and PSU."
+  ],
+  "all_six_pages_reviewed": true,
+  "pdf_sha256": "987d5cf49d74d487c996a6b569b229b82e10684037d4311c4319e0dbfa56fcbf",
+  "pdf_pages": {
+    "1": "6b3a5ba20c3a02c25af5044d3c775362e675aab14c4d9d2734fe23639547656e",
+    "2": "f99e0448ddc68dbfe0ef9b37af7f0c96ceec0f9a7db1df5f50a530c7fbe7aa09",
+    "3": "3d9c47e3fd628e958ad4e99936a9addec74435ca48c6de73e1b556e7b25b46fe",
+    "4": "a0cb464ce8eff319f1e21a66cd97f4b992646956d138d277e6a2f029e5fcdee1",
+    "5": "044e34771bc89b86c3ca9c02e553fa8b590abf2381267830c71b3d344b9e1353",
+    "6": "82effb283758edf51ddf196896100ca4af9b2aea8e5d004ddbd6ac8b1c20b01f"
+  },
+  "pdf_review_findings": [
+    "All six final A3 raster pages visually inspected by root.",
+    "Dimensioned plans, datum B at left spine, local-tab detail, underside countersink, true mounting sections and complete stud table are clear.",
+    "Page1 explicitly calls out rear-thread confirmation, contact HOLD and side-output derating.",
+    "Page4 DIA4 encoding corrected; no visible clipping, collisions or missing glyphs in final pages.",
+    "Page6 actual-size template has two calibration bars; PDF path verifier separately checks scale and six hole positions."
+  ]
+}

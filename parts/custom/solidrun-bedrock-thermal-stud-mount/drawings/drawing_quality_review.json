@@ -1,0 +1,29 @@
+{
+  "revision": "T1",
+  "status": "ROOT REVIEW APPROVED FOR PRELIMINARY FIT AND THERMAL PROTOTYPE; NOT A PRODUCTION RELEASE",
+  "pdf": "SolidRun_T1_drawing_package.pdf",
+  "pdf_sha256": "ddabbc647f973ae7feb75985c1181699da27381e232bf8e3cab1b2e84ce4f1c1",
+  "review_date": "2026-09-08",
+  "page_count": 6,
+  "page_format": "A3 landscape, 1190.551 x841.8898 points",
+  "all_pages_visually_reviewed": true,
+  "latest_changed_pages_rereviewed": [
+    2
+  ],
+  "remaining_visual_defects": [],
+  "catalog_hyperlinks": 5,
+  "required_text_checks": "PASS: 3.00 straight throat;7.60 effective seat;7.90 land;2.85-3.00 projection; selected McMaster screw and compound;94 CAD /60 manufacturing checks",
+  "source_checks": "Python compile PASS; Ruff F rules PASS; explicit parameter and hardware guards PASS; CAD/manufacturing status and count guards PASS; manufacturing report parameter hash matches current parameters",
+  "dimension_basis": "Parameter-generated vector plan and exact nominal section coordinates, cross-checked against independent STEP/DXF manufacturing verification. Images are CAD-derived; no dimensions inferred from raster scale.",
+  "critical_notes": [
+    "Prototype acceptance criteria are not manufacturer allowables.",
+    "All incomplete female-entry phase and screw-tip losses must be deducted for effective complete thread engagement.",
+    "Stock M4 x8 compatibility is unconfirmed until physical gauges satisfy all fit conditions together.",
+    "Thermal fields must have actual filled gaps strictly greater than zero and below0.10 mm.",
+    "Clear conversion coating and actual Tile/main-panel finish are included in physical contact qualification.",
+    "Derived one-bank geometry is not a native vendor configuration or thermal rating.",
+    "No fabrication, physical fit, preload, housing/FPE strength or complete thermal performance is claimed."
+  ],
+  "pdf_authoring_marker": "NEW SolidRun create operation marked successfully exactly once before first authoring command.",
+  "final_identifier_check": "S1=(-76,-82), S2=(-76,+82), S3=(+76,-82), S4=(+76,+82); matches model/STEP/CSV. Page2 re-rendered and visually reviewed after correction."
+}

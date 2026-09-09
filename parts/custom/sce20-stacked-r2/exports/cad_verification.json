@@ -1,0 +1,408 @@
+{
+  "status": "FAIL",
+  "checks": [
+    {
+      "check": "Backpanel exported/reopened valid single solid",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "431.8 square x6 dimensions",
+      "pass_check": true,
+      "measured": {
+        "x": [
+          -1.1102230246251565e-16,
+          431.8
+        ],
+        "y": [
+          -1.1102230246251565e-16,
+          431.8
+        ],
+        "z": [
+          -6.000000000000023,
+          1.7430501486614958e-14
+        ]
+      }
+    },
+    {
+      "check": "FACTORY_1 factory bore clear",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "FACTORY_2 factory bore clear",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "FACTORY_3 factory bore clear",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "FACTORY_4 factory bore clear",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "FACTORY_5 factory bore clear",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "FACTORY_6 factory bore clear",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "MEANWELL_1 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "MEANWELL_2 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "MEANWELL_3 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "MEANWELL_4 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "BEDROCK_1 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "BEDROCK_2 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "BEDROCK_3 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "BEDROCK_4 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "B210_1 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "B210_2 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "B210_3 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "B210_4 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "OZ_1 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "OZ_2 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "OZ_3 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "OZ_4 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "CARRIER_1 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "CARRIER_2 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "CARRIER_3 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "CARRIER_4 native cavity envelope",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "All machining webs at least0.5mm",
+      "pass_check": true,
+      "measured": [
+        3.891599325896067,
+        "B210_1",
+        "OZ_1"
+      ]
+    },
+    {
+      "check": "All native cavity edge webs at least3mm",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "b210 contained in panel/door envelope",
+      "pass_check": true,
+      "measured": {
+        "x": [
+          207.0,
+          357.0
+        ],
+        "y": [
+          15.318700000000007,
+          192.9663
+        ],
+        "z": [
+          50.0,
+          87.70000009999701
+        ]
+      }
+    },
+    {
+      "check": "bedrock contained in panel/door envelope",
+      "pass_check": true,
+      "measured": {
+        "x": [
+          39.0,
+          205.0
+        ],
+        "y": [
+          15.0,
+          199.0
+        ],
+        "z": [
+          -3.247402347028583e-15,
+          57.000000000002665
+        ]
+      }
+    },
+    {
+      "check": "meanwell contained in panel/door envelope",
+      "pass_check": true,
+      "measured": {
+        "x": [
+          355.0,
+          427.00000000000006
+        ],
+        "y": [
+          27.600000536499998,
+          366.2000008000001
+        ],
+        "z": [
+          -3.044786645034492e-14,
+          91.00000008491999
+        ]
+      }
+    },
+    {
+      "check": "peplink contained in panel/door envelope",
+      "pass_check": true,
+      "measured": {
+        "x": [
+          36.100000000002,
+          207.89999999999998
+        ],
+        "y": [
+          8.200427138866003,
+          174.430011410287
+        ],
+        "z": [
+          80.000000000005,
+          109.30000010000002
+        ]
+      }
+    },
+    {
+      "check": "oz contained in panel/door envelope",
+      "pass_check": true,
+      "measured": {
+        "x": [
+          223.89999999999998,
+          340.1
+        ],
+        "y": [
+          37.9499999,
+          176.04900010000003
+        ],
+        "z": [
+          -1.0000000556221735e-07,
+          32.720000000000006
+        ]
+      }
+    },
+    {
+      "check": "carrier contained in panel/door envelope",
+      "pass_check": true,
+      "measured": {
+        "x": [
+          32.0,
+          212.0
+        ],
+        "y": [
+          2.0,
+          212.0
+        ],
+        "z": [
+          70.0,
+          74.0
+        ]
+      }
+    },
+    {
+      "check": "b210 / bedrock physical clearance",
+      "pass_check": true,
+      "measured": 22.059590436175878
+    },
+    {
+      "check": "b210 / meanwell physical clearance",
+      "pass_check": true,
+      "measured": 13.500000013490023
+    },
+    {
+      "check": "b210 / peplink physical clearance",
+      "pass_check": true,
+      "measured": 12.9255
+    },
+    {
+      "check": "b210 / oz physical clearance",
+      "pass_check": true,
+      "measured": 17.28
+    },
+    {
+      "check": "b210 / carrier physical clearance",
+      "pass_check": true,
+      "measured": 8.825499999999977
+    },
+    {
+      "check": "bedrock / meanwell physical clearance",
+      "pass_check": true,
+      "measured": 150.0
+    },
+    {
+      "check": "bedrock / peplink physical clearance",
+      "pass_check": true,
+      "measured": 23.000000099997933
+    },
+    {
+      "check": "bedrock / oz physical clearance",
+      "pass_check": true,
+      "measured": 18.900000000000006
+    },
+    {
+      "check": "bedrock / carrier physical clearance",
+      "pass_check": true,
+      "measured": 14.958609561043474
+    },
+    {
+      "check": "meanwell / peplink physical clearance",
+      "pass_check": true,
+      "measured": 162.60000001349002
+    },
+    {
+      "check": "meanwell / oz physical clearance",
+      "pass_check": true,
+      "measured": 14.899999999999977
+    },
+    {
+      "check": "meanwell / carrier physical clearance",
+      "pass_check": true,
+      "measured": 156.9969426453904
+    },
+    {
+      "check": "peplink / oz physical clearance",
+      "pass_check": true,
+      "measured": 55.25720233106699
+    },
+    {
+      "check": "peplink / carrier physical clearance",
+      "pass_check": true,
+      "measured": 6.000000099999994
+    },
+    {
+      "check": "oz / carrier physical clearance",
+      "pass_check": true,
+      "measured": 44.83088667425618
+    },
+    {
+      "check": "CARRIER_1_WGO30_L20 unrelated bedrock interference",
+      "pass_check": false,
+      "measured": 0.0
+    },
+    {
+      "check": "CARRIER_2_WGO30_L20 unrelated bedrock interference",
+      "pass_check": false,
+      "measured": 0.0
+    },
+    {
+      "check": "CARRIER_3_WGO30_L20 unrelated bedrock interference",
+      "pass_check": false,
+      "measured": 0.0
+    },
+    {
+      "check": "CARRIER_4_WGO30_L20 unrelated bedrock interference",
+      "pass_check": false,
+      "measured": 0.0
+    },
+    {
+      "check": "Bedrock remains at direct original thermal seating plane",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "Bedrock fin-to-carrier underside gap13mm",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "OZ-to-B210 underside gap17.28mm",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "Upper M3x10 screw insertion5.45mm within7mm blind thread",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "Extension male6mm within native10mm thread",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "Assembly STEP reopened solid count",
+      "pass_check": true,
+      "measured": 368
+    }
+  ],
+  "maximum_height_mm": 109.3,
+  "door_margin_mm": 128.2352,
+  "scope": "Nominal CAD integration; simplified threads; inherited invalid Peplink connector solids; no thermal/load qualification."
+}

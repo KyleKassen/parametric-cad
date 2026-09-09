@@ -1,0 +1,1098 @@
+[
+  {
+    "name": "Bedrock_R1",
+    "width": 166.0,
+    "height": 184.0,
+    "thickness": 6.0,
+    "material_id": 5,
+    "color_id": 1,
+    "radius": 8.0,
+    "bevel": 0.4,
+    "remark": "R1 FIT DESIGN. Bare aluminum; finished thickness +/-0.05 mm; deburr bores <=0.1 mm. Front=device; reverse=backplate seating face. SPECIAL PRECISION MACHINING: BOTH thermal pockets 0.050 +/-0.010 mm, Ra<=1.6um; retain front D8 and reverse D12 hard lands. Keep faces conductive/flat, assembled TIM gap<=0.10 mm. M4x8 heads recessed0.95; nominal penetration2.95. Supplier must confirm tolerances before production.",
+    "elements": [
+      {
+        "id": "P1",
+        "kind": "hole",
+        "x": 7.0,
+        "y": 10.0,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P2",
+        "kind": "hole",
+        "x": 7.0,
+        "y": 174.0,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P3",
+        "kind": "hole",
+        "x": 159.0,
+        "y": 10.0,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P4",
+        "kind": "hole",
+        "x": 159.0,
+        "y": 174.0,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "D1",
+        "kind": "hole",
+        "x": 23.0,
+        "y": 22.0,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 9.9,
+          "depth": 2.7
+        }
+      },
+      {
+        "id": "D2",
+        "kind": "hole",
+        "x": 143.0,
+        "y": 22.0,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 9.9,
+          "depth": 2.7
+        }
+      },
+      {
+        "id": "D3",
+        "kind": "hole",
+        "x": 83.0,
+        "y": 52.0,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 9.9,
+          "depth": 2.7
+        }
+      },
+      {
+        "id": "D4",
+        "kind": "hole",
+        "x": 83.0,
+        "y": 122.0,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 9.9,
+          "depth": 2.7
+        }
+      },
+      {
+        "id": "D5",
+        "kind": "hole",
+        "x": 33.0,
+        "y": 162.0,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 9.9,
+          "depth": 2.7
+        }
+      },
+      {
+        "id": "D6",
+        "kind": "hole",
+        "x": 133.0,
+        "y": 162.0,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 9.9,
+          "depth": 2.7
+        }
+      },
+      {
+        "id": "THERMAL_TOP",
+        "kind": "contour_cavity",
+        "x": 83.0,
+        "y": 92.0,
+        "side": "front",
+        "depth": 0.05,
+        "tool": 600,
+        "dxf": "C:/tmp/sce_fpd_thermal_clean/bedrock_top_clean.dxf",
+        "bbox": [
+          20.0,
+          14.0,
+          165.64999999999998,
+          170.0
+        ],
+        "paths": [
+          {
+            "role": "outer",
+            "start": [
+              -58.0,
+              -78.0
+            ],
+            "segments": [
+              {
+                "type": "LINE",
+                "end": [
+                  58.0,
+                  -78.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  63.0,
+                  -73.0
+                ],
+                "center": [
+                  58.0,
+                  -73.0
+                ],
+                "dir": 1,
+                "radius_mm": 5.0,
+                "sweep_deg": 90.0,
+                "source_bulge": 0.41421356237309503
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  -72.64575131106459
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  63.0,
+                  -67.35424868893541
+                ],
+                "center": [
+                  60.0,
+                  -70.0
+                ],
+                "dir": -1,
+                "radius_mm": 3.9999999999999973,
+                "sweep_deg": -277.18075578145834,
+                "source_bulge": -2.645751311064592
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  -20.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  82.64999999999999,
+                  -20.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  82.64999999999999,
+                  -19.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  -19.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  19.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  82.64999999999999,
+                  19.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  82.64999999999999,
+                  20.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  20.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  73.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  58.0,
+                  78.0
+                ],
+                "center": [
+                  58.0,
+                  73.0
+                ],
+                "dir": 1,
+                "radius_mm": 5.0,
+                "sweep_deg": 90.0,
+                "source_bulge": 0.41421356237309503
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -58.0,
+                  78.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -63.0,
+                  72.99999999999999
+                ],
+                "center": [
+                  -57.99999999999999,
+                  73.0
+                ],
+                "dir": 1,
+                "radius_mm": 5.0,
+                "sweep_deg": 90.0,
+                "source_bulge": 0.41421356237309503
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -63.0,
+                  -67.35424868893541
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -63.0,
+                  -72.64575131106459
+                ],
+                "center": [
+                  -60.0,
+                  -70.0
+                ],
+                "dir": -1,
+                "radius_mm": 3.9999999999999973,
+                "sweep_deg": -277.18075578145834,
+                "source_bulge": -2.645751311064592
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -63.0,
+                  -73.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -58.0,
+                  -78.0
+                ],
+                "center": [
+                  -58.0,
+                  -73.0
+                ],
+                "dir": 1,
+                "radius_mm": 5.0,
+                "sweep_deg": 90.0,
+                "source_bulge": 0.41421356237309503
+              }
+            ],
+            "close_with_finish": true
+          },
+          {
+            "role": "uncut_island",
+            "start": [
+              4.0,
+              -40.0
+            ],
+            "segments": [
+              {
+                "type": "ARC",
+                "end": [
+                  0.0,
+                  -44.0
+                ],
+                "center": [
+                  0.0,
+                  -40.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -4.0,
+                  -40.0
+                ],
+                "center": [
+                  0.0,
+                  -40.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  0.0,
+                  -36.0
+                ],
+                "center": [
+                  0.0,
+                  -40.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  4.0,
+                  -40.0
+                ],
+                "center": [
+                  0.0,
+                  -40.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              }
+            ],
+            "close_with_finish": true
+          },
+          {
+            "role": "uncut_island",
+            "start": [
+              -46.0,
+              70.0
+            ],
+            "segments": [
+              {
+                "type": "ARC",
+                "end": [
+                  -50.0,
+                  66.0
+                ],
+                "center": [
+                  -50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -54.0,
+                  70.0
+                ],
+                "center": [
+                  -50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -50.0,
+                  74.0
+                ],
+                "center": [
+                  -50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -46.0,
+                  70.0
+                ],
+                "center": [
+                  -50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              }
+            ],
+            "close_with_finish": true
+          },
+          {
+            "role": "uncut_island",
+            "start": [
+              4.0,
+              30.0
+            ],
+            "segments": [
+              {
+                "type": "ARC",
+                "end": [
+                  0.0,
+                  26.0
+                ],
+                "center": [
+                  0.0,
+                  30.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -4.0,
+                  30.0
+                ],
+                "center": [
+                  0.0,
+                  30.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  0.0,
+                  34.0
+                ],
+                "center": [
+                  0.0,
+                  30.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  4.0,
+                  30.0
+                ],
+                "center": [
+                  0.0,
+                  30.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              }
+            ],
+            "close_with_finish": true
+          },
+          {
+            "role": "uncut_island",
+            "start": [
+              54.0,
+              70.0
+            ],
+            "segments": [
+              {
+                "type": "ARC",
+                "end": [
+                  50.0,
+                  66.0
+                ],
+                "center": [
+                  50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  46.0,
+                  70.0
+                ],
+                "center": [
+                  50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  50.0,
+                  74.0
+                ],
+                "center": [
+                  50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  54.0,
+                  70.0
+                ],
+                "center": [
+                  50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 4.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              }
+            ],
+            "close_with_finish": true
+          }
+        ]
+      },
+      {
+        "id": "THERMAL_BOTTOM",
+        "kind": "contour_cavity",
+        "x": 83.0,
+        "y": 92.0,
+        "side": "reverse",
+        "depth": 0.05,
+        "tool": 600,
+        "dxf": "C:/tmp/sce_fpd_thermal_clean/bedrock_bottom_clean.dxf",
+        "bbox": [
+          20.0,
+          14.0,
+          165.65,
+          170.0
+        ],
+        "paths": [
+          {
+            "role": "outer",
+            "start": [
+              -62.307692307692314,
+              -75.53846153846153
+            ],
+            "segments": [
+              {
+                "type": "ARC",
+                "end": [
+                  -58.0,
+                  -78.0
+                ],
+                "center": [
+                  -58.00000000000001,
+                  -73.0
+                ],
+                "dir": 1,
+                "radius_mm": 4.9999999999999964,
+                "sweep_deg": 59.489762593884535,
+                "source_bulge": 0.2655644370746378
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  58.0,
+                  -78.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  62.30769230769231,
+                  -75.53846153846153
+                ],
+                "center": [
+                  58.0,
+                  -73.00000000000001
+                ],
+                "dir": 1,
+                "radius_mm": 4.999999999999986,
+                "sweep_deg": 59.48976259388451,
+                "source_bulge": 0.26556443707463767
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  63.0,
+                  -64.80384757729337
+                ],
+                "center": [
+                  60.0,
+                  -70.0
+                ],
+                "dir": -1,
+                "radius_mm": 5.999999999999995,
+                "sweep_deg": -232.61986494804046,
+                "source_bulge": -1.6100079474714177
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  -20.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  82.65,
+                  -20.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  82.64999999999999,
+                  -19.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  -19.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  19.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  82.65,
+                  19.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  82.64999999999999,
+                  20.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  20.5
+                ]
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  63.0,
+                  73.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  58.0,
+                  78.0
+                ],
+                "center": [
+                  58.0,
+                  73.0
+                ],
+                "dir": 1,
+                "radius_mm": 5.0,
+                "sweep_deg": 90.0,
+                "source_bulge": 0.41421356237309503
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -58.0,
+                  78.0
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -63.0,
+                  73.0
+                ],
+                "center": [
+                  -58.0,
+                  73.0
+                ],
+                "dir": 1,
+                "radius_mm": 5.0,
+                "sweep_deg": 90.0,
+                "source_bulge": 0.41421356237309503
+              },
+              {
+                "type": "LINE",
+                "end": [
+                  -63.0,
+                  -64.80384757729337
+                ]
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -62.307692307692314,
+                  -75.53846153846153
+                ],
+                "center": [
+                  -60.0,
+                  -70.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -232.61986494804052,
+                "source_bulge": -1.6100079474714186
+              }
+            ],
+            "close_with_finish": true
+          },
+          {
+            "role": "uncut_island",
+            "start": [
+              6.0,
+              -40.0
+            ],
+            "segments": [
+              {
+                "type": "ARC",
+                "end": [
+                  0.0,
+                  -46.0
+                ],
+                "center": [
+                  0.0,
+                  -40.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -6.0,
+                  -40.0
+                ],
+                "center": [
+                  0.0,
+                  -40.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  0.0,
+                  -34.0
+                ],
+                "center": [
+                  0.0,
+                  -40.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  6.0,
+                  -40.0
+                ],
+                "center": [
+                  0.0,
+                  -40.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              }
+            ],
+            "close_with_finish": true
+          },
+          {
+            "role": "uncut_island",
+            "start": [
+              -44.0,
+              70.0
+            ],
+            "segments": [
+              {
+                "type": "ARC",
+                "end": [
+                  -50.0,
+                  64.0
+                ],
+                "center": [
+                  -50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -56.0,
+                  70.0
+                ],
+                "center": [
+                  -50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -50.0,
+                  76.0
+                ],
+                "center": [
+                  -50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -44.0,
+                  70.0
+                ],
+                "center": [
+                  -50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              }
+            ],
+            "close_with_finish": true
+          },
+          {
+            "role": "uncut_island",
+            "start": [
+              6.0,
+              30.0
+            ],
+            "segments": [
+              {
+                "type": "ARC",
+                "end": [
+                  0.0,
+                  24.0
+                ],
+                "center": [
+                  0.0,
+                  30.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  -6.0,
+                  30.0
+                ],
+                "center": [
+                  0.0,
+                  30.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  0.0,
+                  36.0
+                ],
+                "center": [
+                  0.0,
+                  30.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  6.0,
+                  30.0
+                ],
+                "center": [
+                  0.0,
+                  30.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              }
+            ],
+            "close_with_finish": true
+          },
+          {
+            "role": "uncut_island",
+            "start": [
+              56.0,
+              70.0
+            ],
+            "segments": [
+              {
+                "type": "ARC",
+                "end": [
+                  50.0,
+                  64.0
+                ],
+                "center": [
+                  50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  44.0,
+                  70.0
+                ],
+                "center": [
+                  50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  50.0,
+                  76.0
+                ],
+                "center": [
+                  50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              },
+              {
+                "type": "ARC",
+                "end": [
+                  56.0,
+                  70.0
+                ],
+                "center": [
+                  50.0,
+                  70.0
+                ],
+                "dir": -1,
+                "radius_mm": 6.0,
+                "sweep_deg": -90.0,
+                "source_bulge": -0.41421356237309503
+              }
+            ],
+            "close_with_finish": true
+          }
+        ]
+      }
+    ],
+    "save": "C:/Users/KyleKassen/Documents/FPE_SCE20_20260908_R1/Bedrock_R1.fpd"
+  }
+]

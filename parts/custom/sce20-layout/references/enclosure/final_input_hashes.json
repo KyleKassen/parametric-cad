@@ -1,0 +1,27 @@
+{
+  "meanwell": {
+    "path": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\meanwell-nsp1600-side-tab-mount\\exports\\device_adapter_N2.step",
+    "sha256": "917be263ff3e68bcf2170f5fd28ae8c5fd3165e3a3e7a0a534b182555e7a25f8",
+    "bytes": 7414980
+  },
+  "bedrock": {
+    "path": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\Bedrock_FPE_R1_device_adapter.step",
+    "sha256": "bdae18e2f8b3c0df6bb32386efdec4d4701299858025f3874a486ee1806bc843",
+    "bytes": 73832288
+  },
+  "b210": {
+    "path": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\B210_FPE_R1_device_adapter.step",
+    "sha256": "0d81ddfd15dc1dbc28d995bc6b80d69610b7057117a896f1370d194586e37402",
+    "bytes": 43211589
+  },
+  "peplink": {
+    "path": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\router_oz\\peplink_normalized.step",
+    "sha256": "3ed2ab036c02159b39f2c86b70794960ab475f52c44c9f55b59a3dedcf5bef38",
+    "bytes": 42378643
+  },
+  "oz": {
+    "path": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\router_oz\\oz_normalized.step",
+    "sha256": "55526cf822f697e90824e00d8e2e81b0f19776bd0f8b44c64c8e04e093f5e86d",
+    "bytes": 3111703
+  }
+}

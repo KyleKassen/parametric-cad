@@ -1,0 +1,51 @@
+{
+  "units": "mm",
+  "geometry_changes": false,
+  "source_origin_preserved": true,
+  "files": {
+    "top": {
+      "short_path": "C:\\tmp\\sce_fpd_thermal_clean\\bedrock_top_clean.dxf",
+      "workspace_path": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\Bedrock_FPE_R1_thermal_top_clean.dxf",
+      "closed_polyline_count": 5,
+      "vertices_per_polyline": [
+        20,
+        4,
+        4,
+        4,
+        4
+      ],
+      "signed_loop_areas_mm2": [
+        19580.561839488513,
+        -50.26548245743672,
+        -50.26548245743672,
+        -50.26548245743669,
+        -50.26548245743673
+      ],
+      "net_area_mm2": 19379.49990965876,
+      "maximum_original_endpoint_gap_mm": 1.4210854715202004e-14,
+      "radii_unchanged": true
+    },
+    "bottom": {
+      "short_path": "C:\\tmp\\sce_fpd_thermal_clean\\bedrock_bottom_clean.dxf",
+      "workspace_path": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\Bedrock_FPE_R1_thermal_bottom_clean.dxf",
+      "closed_polyline_count": 5,
+      "vertices_per_polyline": [
+        18,
+        4,
+        4,
+        4,
+        4
+      ],
+      "signed_loop_areas_mm2": [
+        19492.779384854115,
+        -113.09733552923258,
+        -113.09733552923258,
+        -113.09733552923255,
+        -113.09733552923261
+      ],
+      "net_area_mm2": 19040.39004273718,
+      "maximum_original_endpoint_gap_mm": 1.4210854715202004e-14,
+      "radii_unchanged": true
+    }
+  }
+}

@@ -1,0 +1,95 @@
+// SCE20. Creates one new document; never modifies an existing panel.
+
+function near(a,b,label) { if(Math.abs(a-b)>0.0011) Error(label+": "+a+" != "+b); }
+function verifyPanel(p,s) {
+  near(p.Width(),s.width,"width"); near(p.Height(),s.height,"height");
+  near(p.Thickness(),s.thickness,"thickness");
+  if(p.Material()!=s.material_id || p.MaterialColor()!=s.color_id) Error("material/color");
+  if(p.Elements().length!=s.elements.length) Error("element count "+p.Elements().length);
+  for(var i=0;i<s.elements.length;i++) {
+    var a=s.elements[i],e=p.FindElement(a.id);
+    if(!e) Error("missing "+a.id);
+    near(e.X(),a.x,a.id+" X"); near(e.Y(),a.y,a.id+" Y");
+    if(e.IsReverseSide() != (a.side=="reverse")) Error("side "+a.id);
+    if(a.kind=="bolt") {
+      if(e.Type()!=a.catalog) Error("catalog "+a.id);
+      near(e.Length(),a.length,a.id+" length");
+    } else if(a.kind=="hole") {
+      if(!e.IsDrillHole() || e.IsBlindHole()) Error("through hole "+a.id);
+      near(e.Diameter(),a.diameter,a.id+" diameter");
+      if(a.countersink) {
+        if(!e.HasCountersink()) Error("missing countersink "+a.id);
+        near(e.ConeDiameter(),a.countersink.diameter,a.id+" cone mouth");
+        near(e.DrillHoleDiameter(),a.diameter,a.id+" cone throat");
+        near(e.SinkDepth(),a.countersink.depth,a.id+" cone depth");
+        near(e.ConeAngle(),90,a.id+" cone angle");
+      }
+    } else if(a.kind=="contour_cavity") {
+      if(!e.AsCavity()) Error("not cavity "+a.id);
+      near(e.Depth(),a.depth,a.id+" cavity depth");
+      var b=e.BoundingBox();
+      for(var j=0;j<4;j++) near(b[j],a.bbox[j],a.id+" bbox "+j);
+    }
+  }
+  if(s.name=="Backpanel_R1") {
+    var a=p.FindElement("B210_1"),b=p.FindElement("B210_2");
+    if(Math.abs(Math.abs(a.Y()-b.Y())-120.015)>0.00001) Error("B210 critical120.015 pitch");
+  }
+}
+function createPanel(s) {
+  var p=new Frontpanel(s.name,s.thickness,s.width,s.height,s.material_id,s.color_id);
+  p.SetCornerRadii(s.radius,s.radius,s.radius,s.radius);
+  p.SetEdgeMachining(bevel_45,s.bevel,bevel_45,s.bevel);
+  p.SetRemark(s.remark);
+  if(s.outline_dxf) {
+    var outline=new DxfContour("OUTLINE",s.outline_dxf,refpoint_file,100,false);
+    p.SetBorderContour(outline);
+    p.SetEdgeMachining(bevel_45,s.bevel,bevel_45,s.bevel);
+  }
+  for(var i=0;i<s.elements.length;i++) {
+    var a=s.elements[i],e;
+    if(a.kind=="bolt") e=new Bolt(a.id,a.catalog,a.length);
+    else if(a.kind=="hole") e=new DrillHole(a.id,a.diameter);
+    else if(a.kind=="contour_cavity") {
+      if(a.paths) {
+        if(a.paths.length!=1) Error("Each cavity requires exactly one closed path: "+a.id);
+        e=new DxfContour(a.id,"",refpoint_file);
+        e.SetTool(a.tool);
+        for(var pi=0;pi<a.paths.length;pi++) {
+          var path=a.paths[pi];e.Start(path.start[0],path.start[1]);
+          for(var si=0;si<path.segments.length;si++) {
+            var sg=path.segments[si];
+            if(sg.type=="LINE")e.LineTo(sg.end[0],sg.end[1]);
+            else e.ArcToMP(sg.end[0],sg.end[1],sg.center[0],sg.center[1],sg.dir);
+          }
+          e.Finish();
+        }
+        e.SetAsCavity(true);
+      } else e=new DxfContour(a.id,a.dxf,refpoint_file,100,true);
+    } else Error("unsupported kind "+a.kind);
+    if(a.side=="reverse") e.PutOnReverseSide(); else e.PutOnFrontSide();
+    p.AddElement(e,a.x,a.y);
+    if(a.kind=="contour_cavity") {
+      Print("Attached "+a.id+"\n");
+      e.SetTool(a.tool);
+      Print("Tool selected "+a.id+"\n");
+      e.SetDepth(a.depth);
+      Print("Depth selected "+a.id+"\n");
+    }
+    if(a.kind=="bolt") e.SetDepthOffset(0);
+    if(a.countersink) e.SetCountersinkWithParameters(a.countersink.diameter,a.diameter,a.countersink.depth,90);
+  }
+  verifyPanel(p,s);
+  AddFrontpanel(p);
+  SaveFrontpanel(p,s.save,false);
+  var reloaded=LoadFrontpanel(s.save,s.name+"_readback");
+  verifyPanel(reloaded,s);
+  Print("PASS SAVED+RELOADED "+s.name+" | "+s.width+" x "+s.height+" x "+s.thickness+" mm | "+s.elements.length+" native elements\n");
+  for(var i=0;i<s.elements.length;i++) {
+    var a=s.elements[i];
+    if(a.kind=="bolt") {var e=reloaded.FindElement(a.id);Print(a.id+" "+e.Type()+" L"+e.Length()+" FRONT ("+e.X()+", "+e.Y()+")\n");}
+  }
+}
+
+createPanel({"name":"MeanWell_R1","width":72.0,"height":316.8,"thickness":6.0,"material_id":5,"color_id":1,"radius":4.0,"bevel":0.4,"remark":"R1 FIT DESIGN. Bare aluminum; finished thickness +/-0.05 mm; deburr bores <=0.1 mm. Front=device; reverse=backplate seating face. M4x10 device screws; nominal penetration4.05 mm, maximum5 mm. Source N2 side-tab geometry.","elements":[{"id":"P1","kind":"hole","x":7.5,"y":42.80000000000001,"diameter":3.8,"side":"front"},{"id":"P2","kind":"hole","x":7.5,"y":294.8,"diameter":3.8,"side":"front"},{"id":"P3","kind":"hole","x":64.5,"y":42.80000000000001,"diameter":3.8,"side":"front"},{"id":"P4","kind":"hole","x":64.5,"y":294.8,"diameter":3.8,"side":"front"},{"id":"D1","kind":"hole","x":38.3,"y":294.8,"diameter":4.5,"side":"reverse","countersink":{"diameter":8.1,"depth":1.7999999999999998}},{"id":"D2","kind":"hole","x":38.3,"y":42.80000000000001,"diameter":4.5,"side":"reverse","countersink":{"diameter":8.1,"depth":1.7999999999999998}}],"save":"C:/Users/KyleKassen/Documents/FPE_SCE20_20260908_R1/MeanWell_R1.fpd","outline_dxf":"C:/Users/KyleKassen/Documents/FPE_SCE20_20260908_R1/MeanWell_R1_outline.dxf"});
+Print("ALL REQUESTED PANELS SAVED AND NATIVE READBACK PASSED\n");

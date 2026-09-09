@@ -1,0 +1,17 @@
+{
+  "revision": "P2 final foot bosses",
+  "pdf": "B210_mount_shop_pack_P2.pdf",
+  "pages": 6,
+  "page_format": "A3 landscape",
+  "raster_resolution_dpi": 100,
+  "visual_review": "All six final 100dpi raster pages inspected. Includes OD20 integral foot seats/topZ10, M5x30 foot bolts and final12-row BOM. No overlap, clipping or unreadable glyphs observed.",
+  "dxf_reopen": "All six manufacturing DXFs reopen in millimeters with zero ezdxf audit errors; see drawing_dxf_audit_P2.json.",
+  "source_parameter_guard": "Generator rejects changed drawing-critical dimensions until annotations reviewed.",
+  "physical_tests": false,
+  "final_view_files": {
+    "flat_iso.png": "e1d08f84caddca4a9468630066b163f3e36a30c42a0283b436d046ca400e3836",
+    "upright_iso.png": "ead17511eb8e3b2ecdf711c28905223f230b4bfba40eb6e7ab467f0a39610dd5"
+  },
+  "pdf_sha256": "245c102d28b29eb46eaa96e23ff311936ea4a45ed3b972eb4e0ab28e968220ae",
+  "catalog_product_hyperlinks": 12
+}

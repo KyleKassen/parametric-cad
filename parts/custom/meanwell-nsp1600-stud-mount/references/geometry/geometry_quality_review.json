@@ -1,0 +1,25 @@
+{
+  "status": "FRESH SOURCE AUDIT COMPLETE; PHYSICAL INSTALLATION UNQUALIFIED",
+  "review_date": "2026-09-08",
+  "source_sha256": "d421a1e7fb7a3b5fd2e12588484a2e970456301955c0a17f55be6d56324dd8a0",
+  "source_preserved": true,
+  "vendor_copy_hash_matches": true,
+  "source_solids_valid": 19,
+  "normalized_export_reopened_valid_solids": 19,
+  "normalized_export_bbox_unchanged": true,
+  "normalized_export_relative_volume_difference": 0.00001812126823202978,
+  "context_views_visually_reviewed": ["iso", "top", "bottom", "front", "back", "left", "right"],
+  "true_sections_visually_reviewed": ["bottom_H1_section", "bottom_H2_section", "bottom_H3_section"],
+  "manufacturer_mechanical_page_visually_reviewed": "User-supplied NSP-1600-spec.pdf, page6, Case296A,2025-08-19",
+  "nominal_bottom_pattern": [[-35, -16.1], [35, -16.1], [0, -280.8]],
+  "dimensions_source": "Fresh analytic BREP faces and probes; not screenshot pixels.",
+  "critical_findings": [
+    "Manufacturer M3 max4 mm intrusion governs all three bottom points, independent of apparent internal clearance.",
+    "Terminal M3 axes encounter modeled PCB at4.5 mm; fan axis is clear to cover, but max4 mm still governs.",
+    "Extruded minor cylinders are shorter than2 mm; no inherited complete-thread engagement requirement is justified by this CAD.",
+    "Fan underside contains exposed fan frames and open regions; central bottom metal spine only5.5 mm wide.",
+    "Older local claim of a full-width side mounting cross-tube is contradicted by fresh short per-wall extrusions.",
+    "19-source-solid indices differ from older volume-sorted output; identities are zero-based and source-hash-guarded."
+  ],
+  "physical_fit_or_strength_or_thermal_testing_claimed": false
+}

@@ -1,0 +1,202 @@
+{
+  "status": "PRELIMINARY_ANALYTICAL_SCREEN_NOT_ASSEMBLY_RATING",
+  "inputs": {
+    "plate_x_mm": 150.0,
+    "plate_y_mm": 148.0,
+    "plate_t_mm": 3.5,
+    "plate_t_tolerance_mm": 0.05,
+    "outer_corner_radius_mm": 8.0,
+    "edge_break_mm": 0.4,
+    "housing_x_mm": 46.7995,
+    "housing_y_mm": 60.0075,
+    "stud_x_mm": 68.0,
+    "stud_y_mm": 60.0075,
+    "countersink_mouth_nominal_mm": 6.1,
+    "countersink_mouth_max_mm": 6.2,
+    "through_hole_min_mm": 3.3,
+    "through_hole_max_mm": 3.5,
+    "stud_hole_max_mm": 3.9,
+    "countersink_angle_min_deg": 89.0,
+    "upper_bore_deburr_depth_max_mm": 0.1,
+    "straight_throat_ligament_accept_min_mm": 1.8,
+    "screw_head_seat_diameter_accept_min_mm": 5.7,
+    "screw_length_mm": 6.0,
+    "screw_length_assumed_tolerance_mm": 0.2,
+    "head_recess_min_mm": 0.0,
+    "head_recess_max_mm": 0.1,
+    "full_thread_engagement_accept_min_mm": 2.0,
+    "thread_pitch_mm": 0.5,
+    "screw_tip_gap_accept_min_mm": 0.5,
+    "STEP_internal_screw_tip_z_mm": 3.5738,
+    "g_m_per_s2": 9.81,
+    "device_mass_allowance_kg": 1.0,
+    "complete_mass_allowance_kg": 1.3,
+    "inertial_acceleration_g": 3.0,
+    "cable_force_N": 20.0,
+    "cable_arm_mm": 50.0,
+    "load_height_bound_mm": 50.0,
+    "device_handling_resultant_N": 60.0,
+    "package_handling_resultant_N": 75.0,
+    "handling_free_couple_Nmm": 1000.0,
+    "local_plate_attachment_force_N": 60.0,
+    "local_plate_attachment_proof_N": 90.0,
+    "required_stud_tension_screen_N": 150.0,
+    "required_stud_shear_screen_N": 75.0,
+    "E_MPa": 70000.0,
+    "yield_MPa": 240.0,
+    "target_yield_factor": 3.0,
+    "beam_strip_gross_width_mm": 35.0,
+    "beam_strip_net_width_mm": 28.0,
+    "transfer_arm_allowance_mm": 0.2,
+    "support_span_allowance_mm": 0.3,
+    "bending_stress_factor": 1.5,
+    "M3_tensile_area_mm2": 5.03,
+    "thread_shear_diameter_surrogate_mm": 2.5,
+    "stud_bearing_diameter_surrogate_mm": 2.4,
+    "stud_edge_position_allowance_mm": 0.15,
+    "density_kg_per_mm3": 2.7e-06,
+    "CAD_plate_volume_mm3": 77078.86
+  },
+  "loads": {
+    "derived_device_N": 59.24,
+    "derived_package_N": 71.012,
+    "normal_housing_group": {
+      "max_tension_N": 19.32415718227699,
+      "max_shear_N": 10.737684229706572,
+      "sum_x2_mm2": 8760.772801000001,
+      "sum_y2_mm2": 14403.600225,
+      "polar_sum_mm2": 23164.373026
+    },
+    "housing_handling_group": {
+      "max_tension_N": 32.03384841434931,
+      "max_shear_N": 18.28518422970657,
+      "sum_x2_mm2": 8760.772801000001,
+      "sum_y2_mm2": 14403.600225,
+      "polar_sum_mm2": 23164.373026
+    },
+    "FPE_handling_group": {
+      "max_tension_N": 33.58701003611063,
+      "max_shear_N": 21.506605980207812,
+      "sum_x2_mm2": 18496.0,
+      "sum_y2_mm2": 14403.600225,
+      "polar_sum_mm2": 32899.600225
+    },
+    "stud_tension_reserve_ratio": 4.466012301741938,
+    "stud_shear_reserve_ratio": 3.4873006028483204
+  },
+  "sensitivity": {
+    "couple_2Nm_housing_group": {
+      "max_tension_N": 38.80829060397721,
+      "max_shear_N": 21.570368459413142,
+      "sum_x2_mm2": 8760.772801000001,
+      "sum_y2_mm2": 14403.600225,
+      "polar_sum_mm2": 23164.373026
+    },
+    "couple_2Nm_FPE_group": {
+      "max_tension_N": 39.143376441699715,
+      "max_shear_N": 24.263211960415624,
+      "sum_x2_mm2": 18496.0,
+      "sum_y2_mm2": 14403.600225,
+      "polar_sum_mm2": 32899.600225
+    },
+    "deflection_scale_if_typical_E_is_68300_MPa": 1.0248901903367496
+  },
+  "plate": {
+    "minimum_t_mm": 3.45,
+    "net_beam_width_mm": 28.0,
+    "beam_span_mm": 136.3,
+    "transfer_arm_mm": 21.400499999999997,
+    "I_mm4": 95.81512500000002,
+    "moment_Nmm": 1284.0299999999997,
+    "attachment_deflection_screen_mm": 0.22075916770227255,
+    "center_deflection_screen_mm": 0.42996173274566857,
+    "proof_attachment_deflection_screen_mm": 0.3311387515534088,
+    "proof_center_deflection_screen_mm": 0.6449425991185028,
+    "CAD_nominal_mass_kg": 0.208112922,
+    "rectangular_stock_mass_upper_bound_kg": 0.20979
+  },
+  "countersink": {
+    "max_screen_depth_mm": 1.475530719809582,
+    "remaining_ligament_min_mm": 1.9744692801904182,
+    "straight_ligament_after_upper_deburr_min_mm": 1.8744692801904181,
+    "straight_ligament_used_in_punching_mm": 1.8,
+    "nominal_straight_ligament_mm": 2.0500000000000003,
+    "seat_projected_area_mm2": 15.896458827164354,
+    "punching_area_mm2": 18.661060362323372,
+    "average_bearing_per100N_MPa": 6.290709213118393,
+    "STEP_hex_end_face_projected_area_mm2": 9.201124446282394,
+    "plate_top_deburr_opening_screen_mm": 3.7,
+    "STEP_hex_end_face_average_bearing_per100N_MPa": 10.86823687515756
+  },
+  "screw_fit": {
+    "nominal_projection_mm": 2.55,
+    "projection_tolerance_min_mm": 2.25,
+    "projection_tolerance_max_mm": 2.85,
+    "STEP_tip_separation_at_max_projection_mm": 0.7237999999999998,
+    "maximum_combined_lead_loss_at_min_projection_for_2mm_full_engagement_mm": 0.25
+  },
+  "unrated_joints": {
+    "M3_external_shank_VM_MPa": 23.856858846918488,
+    "M3_required_shank_proof_for_factor3_MPa": 71.57057654075547,
+    "thread_shear_surrogate_area_mm2": 3.9269908169872414,
+    "female_required_yield_for_factor3_at_60N_and_zero_preload_MPa": 79.39136094073805,
+    "female_required_yield_MPa_per_added100N_preload": 132.3189349012301,
+    "FPE_required_combined_tension_N": 150.0,
+    "FPE_required_combined_shear_N": 75.0
+  },
+  "plate_checks": {
+    "plate_bending_combined": {
+      "equivalent_stress_MPa": 35.44376292679231,
+      "yield_factor": 6.771290071421324
+    },
+    "countersink_punching": {
+      "shear_stress_MPa": 3.215251375593845,
+      "yield_factor": 43.09587289420502
+    },
+    "countersink_average_bearing_with_factor3": {
+      "equivalent_stress_MPa": 11.323276583613106,
+      "yield_factor": 21.19527843621914
+    },
+    "plate_stud_hole_bearing_with_factor2": {
+      "equivalent_stress_MPa": 18.115942028985508,
+      "yield_factor": 13.248
+    },
+    "plate_stud_hole_tearout": {
+      "shear_stress_MPa": 2.218278615794144,
+      "yield_factor": 62.464680324163986
+    }
+  },
+  "minimum_screened_plate_yield_factor": 6.771290071421324,
+  "plate_target_met": true,
+  "CAD_parameter_audit": {
+    "status": "matched",
+    "mismatches": [],
+    "checked_parameters": {
+      "plate_width": 150,
+      "plate_length": 148,
+      "plate_thickness": 3.5,
+      "plate_thickness_tolerance": 0.05,
+      "corner_radius": 8,
+      "edge_break": 0.4,
+      "housing_pitch_x": 93.599,
+      "housing_pitch_y": 120.015,
+      "housing_clearance_diameter": 3.4,
+      "countersink_diameter_reference": 6.1,
+      "countersink_angle_deg": 90,
+      "screw_length_overall": 6,
+      "screw_head_recess_nominal": 0.05,
+      "screw_pitch": 0.5,
+      "stud_pitch_x": 136,
+      "stud_pitch_y": 120.015,
+      "stud_clearance_diameter": 3.8,
+      "stud_pattern_rotation_deg": 0,
+      "stud_pattern_center_x": 0,
+      "stud_pattern_center_y": 0
+    },
+    "sha256": "0cf5e0eb44355619c7aaf4ed8b1e534cef800c2fad232b3b80aca114e29d7161"
+  },
+  "root_parameter_file_sha256": {
+    "params.json": "0cf5e0eb44355619c7aaf4ed8b1e534cef800c2fad232b3b80aca114e29d7161"
+  },
+  "arithmetic_self_checks": "passed; these do not validate the physical model"
+}

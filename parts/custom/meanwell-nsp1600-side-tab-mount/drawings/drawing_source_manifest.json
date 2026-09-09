@@ -1,0 +1,67 @@
+{
+  "revision": "N2",
+  "status": "ROOT VISUAL REVIEW COMPLETE; PRELIMINARY MECHANICAL FIT PROTOTYPE ONLY",
+  "pdf": "MeanWell_N2_drawing_package.pdf",
+  "pages": 6,
+  "pdf_sha256": "987d5cf49d74d487c996a6b569b229b82e10684037d4311c4319e0dbfa56fcbf",
+  "sources": [
+    {
+      "path": "make_documents.py",
+      "sha256": "08ddd8bf662f47674372750002b4007882a807db922d5a3a4478ae042a3591d1"
+    },
+    {
+      "path": "params.json",
+      "sha256": "7de412cbc448c043a8745bd6e72a9d753c8faa0c593c22831f9d6b59ace16946"
+    },
+    {
+      "path": "references\\research\\catalog_bom.json",
+      "sha256": "c300c295651c70560d016bc11ed8279052835a020db9cf15a2b944b5b8510a1a"
+    },
+    {
+      "path": "DESIGN.md",
+      "sha256": "60df65ed157559c74753acbdc9a9be7c57525ac07e6b108b808c305a111a1f06"
+    },
+    {
+      "path": "ENGINEERING_NOTE.md",
+      "sha256": "1b8a9f8722bbba1e03281e7a7b4a4e0d26471fdd144596cf8d7dff4c097a0d75"
+    },
+    {
+      "path": "references\\engineering\\engineering_results.json",
+      "sha256": "28b78f41972e035f6475151773ebdf9eead61a31d9eb04f35d9525b0c157e095"
+    },
+    {
+      "path": "quality\\cad_verification.json",
+      "sha256": "963482b86f70df10f989a99af91b02eac80be5eded08d3e805e91e6395e500aa"
+    },
+    {
+      "path": "quality\\manufacturing_verification.json",
+      "sha256": "e319fa39e03df62cf774a51f04ecfdc8688af6a151c38ff81cc1481ea82ea322"
+    },
+    {
+      "path": "references\\product\\assembled_hero.png",
+      "sha256": "bc726b1f86e451fb675bb6d6ef7fa9b2ab563051fecb00ee23d111ac61b7c7f3"
+    },
+    {
+      "path": "references\\product\\exploded_iso.png",
+      "sha256": "e3f268c6fc48623547970ce529cbc3004331b8e122a99390ecb5b155e1b44fad"
+    },
+    {
+      "path": "references\\product\\plate_bottom_hero.png",
+      "sha256": "a0498f1d7e98fa7f6039909003dedc772383c6b0565d44ed9714f6f6401ce602"
+    },
+    {
+      "path": "references\\product\\plate_top_hero.png",
+      "sha256": "8abc2262fc4e1a27a518f83bb07d12b7a8633c9ff30431e6f8649d35bf278adb"
+    },
+    {
+      "path": "references\\views\\section_front_side_mount_front.png",
+      "sha256": "def33c12bbd06e273551f0bc841c7e377578b97481bfda18af97c42108207762"
+    },
+    {
+      "path": "references\\views\\section_rear_side_mount_front.png",
+      "sha256": "809e7dceabb65e87645a94e532065e98da4427b3bda7ccaf8e9ff253af2eccd4"
+    }
+  ],
+  "template_scale": "1 mm=72/25.4 PDF points. Rotated+90 degrees; two100 mm bars. Print actual size. R4 quarter-circle Bezier approximation error<0.002 mm; machining contours come from model.py.",
+  "review_scope": "Drawing clarity and digital consistency only. Rear M4, contact/head/preload/chassis/FPE joints and side-orientation thermal operation require physical qualification."
+}

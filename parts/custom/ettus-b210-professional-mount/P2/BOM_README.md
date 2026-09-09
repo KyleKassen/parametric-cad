@@ -1,0 +1,5 @@
+# P2 complete bill of materials
+
+Use **B210_custom_parts_BOM_P2.csv** together with **McMaster_BOM.csv** (or the linked **McMaster_BOM.md**). The former lists custom parts and integration items; the latter lists all purchased fasteners, spacers, protective PET and selected shims/threadlocker. Quantities are separately stated for one flat mount, one upright mount, and two independently complete mounts. One shared cradle cannot be installed in both locations simultaneously.
+
+M03 is the purchased spacer H05, not an additional custom part. M04 is the eight cut PET patches from C01 per mount, not a second sheet purchase. Nominal CAD includes twelve shim rings per mount as an example; actual selection is AR. Supporting plate and radio appear only as integration references, not supplied fabricated deliverables. Use the shop pack for installed arrangement and dimensional inspection. Do not order a substitute by dimensions alone without checking the listed material/class, thread engagement, fit and locking requirements.

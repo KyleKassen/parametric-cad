@@ -1,0 +1,462 @@
+{
+  "revision": "N1",
+  "status": "PRELIMINARY FIT PROTOTYPE; NO PHYSICAL QUALIFICATION",
+  "files": {
+    "ASSEMBLY.md": {
+      "bytes": 4883,
+      "sha256": "9de8944e9f2b0eec641aa104911dd00e5b0e12d5221d44d23b05b7e12135e762"
+    },
+    "BOM.md": {
+      "bytes": 7269,
+      "sha256": "7af741afcbd0eb16f1881c936e415a0f85d4f8ce39fe91f646b613ff5264d0bb"
+    },
+    "datasheets/NSP-1600-spec_USER.pdf": {
+      "bytes": 881692,
+      "sha256": "c9908729a34d379aa0712435d7ebd9d55238d4d3544d948bce4a994bd58d7921"
+    },
+    "DESIGN.md": {
+      "bytes": 9072,
+      "sha256": "95249744938adfa342de17df2e187af872b1d6539c42422b106aea5a7a97074c"
+    },
+    "drawings/document_verification.json": {
+      "bytes": 5464,
+      "sha256": "e996d0a57736908d1c91b8a4f9955f49886c48a24405adbf578ab9aca25e3e82"
+    },
+    "drawings/drawing_quality_review.json": {
+      "bytes": 2811,
+      "sha256": "e35ccd5730c9f22f4424feb3de29650c00a38395164361b8bfb647fbda239cc7"
+    },
+    "drawings/drawing_source_manifest.json": {
+      "bytes": 2814,
+      "sha256": "00ffa3ce4e950498996ef729f8a0b37518e5780ffde876da1310e702127ab8bb"
+    },
+    "drawings/MeanWell_N1_drawing_package.pdf": {
+      "bytes": 534600,
+      "sha256": "541023f6bdb816acade1c824dbb9a9eaa9f2c81e62c42cd7f46e2cc15e7f52cb"
+    },
+    "drawings/MW_NSP_M01_plans_N1.svg": {
+      "bytes": 11687,
+      "sha256": "16c1ed2aacd3b152aafd02cc904f734a67f2b6778be839a6d76aceff98e5688b"
+    },
+    "drawings/MW_NSP_M01_relief_sections_N1.svg": {
+      "bytes": 7848,
+      "sha256": "b6005f671a40cd4efd748519fd339eb105cf7d025defe043f9bc175df4f62caf"
+    },
+    "drawings/REGENERATE.md": {
+      "bytes": 1342,
+      "sha256": "95633188f7682bd53fe54a6bcd82636ad0d9d13324ab73af9b4e884c8c2ae705"
+    },
+    "drawings/verify_document.py": {
+      "bytes": 3674,
+      "sha256": "01029991146d641f9b61b3d4b746916d196ce06a21ac991d79ab3f0d7175a3e9"
+    },
+    "ENGINEERING_NOTE.md": {
+      "bytes": 6123,
+      "sha256": "c171ffaf7494fe77509bc6bab498d4a259a967b46b37dea1294bde7e347eae8a"
+    },
+    "exports/assembled_device_mount_N1.step": {
+      "bytes": 7667969,
+      "sha256": "026d4a6d3c77f6db1ed5a5f6ce967686305ecbd3fc9f8dfd34133e66e9b29446"
+    },
+    "exports/cad_build_metadata.json": {
+      "bytes": 13528,
+      "sha256": "83451a8aa51f5a26a9f3c26908b9fc9cb74840987578b260605bb6d1d22e4c18"
+    },
+    "exports/countersinks_UNDERSIDE_N1.dxf": {
+      "bytes": 20984,
+      "sha256": "abea9343cc0b8a5531409b36b20e425adf172fb4a5a647bc6b7296f71f1eec07"
+    },
+    "exports/device_adapter_N1.step": {
+      "bytes": 7202425,
+      "sha256": "e4c798f48fadd1787594539bf1471c9b90972b598b1ee25faf899e0afdb7dfe3"
+    },
+    "exports/fan_reliefs_TOP_N1.dxf": {
+      "bytes": 20591,
+      "sha256": "3e9363110f5832bae03466e132fab21bddfe89cda83109602f8f09e1ef89dbb5"
+    },
+    "exports/FPE_interface_REFERENCE_ONLY.step": {
+      "bytes": 135922,
+      "sha256": "e4493f5f6f6c3fdce5f781fd47357b3a35f9a257fadc0f2be9b435354eaee0c5"
+    },
+    "exports/FPE_stud_coordinates_N1.csv": {
+      "bytes": 486,
+      "sha256": "91a57d84ed3cbf39062fe6dc0ca55308cdd023e7bf9e9102f47e9b15ff064e1f"
+    },
+    "exports/FPE_stud_pattern_REFERENCE_N1.dxf": {
+      "bytes": 19822,
+      "sha256": "79f4b5a301291149ad647de06fff7b77feace712060ac1e7dc30e0b82c72f13b"
+    },
+    "exports/meanwell-nsp1600-stud-mount_v1.step": {
+      "bytes": 202603,
+      "sha256": "723de7ad96d7b1ea7837fe64e896a6a902d18eb102abf5e7297a3aeb1ffdb020"
+    },
+    "exports/meanwell-nsp1600-stud-mount_v1_report.json": {
+      "bytes": 24295,
+      "sha256": "36a68ef54b7e1636416aed0f0d22e2cc0f6d341f7bd0d56a5ba3de59b22a9f85"
+    },
+    "exports/mount_hardware_N1.step": {
+      "bytes": 639297,
+      "sha256": "68ada3175d765589df8c7ee3583c5575c707cc647883c6e78d9ddec585b33a04"
+    },
+    "exports/plate_N1.step": {
+      "bytes": 202603,
+      "sha256": "70f3111c3ab684c871978db45a16816754419f3d1ac8b72a39eb30358e8613ed"
+    },
+    "exports/plate_N1_preview_ONLY.stl": {
+      "bytes": 516384,
+      "sha256": "663a930c58e4d65c7c32774d21b72e1f0c018fdbdb0b2d47f9c5a737fbdec454"
+    },
+    "exports/profile_drill_N1.dxf": {
+      "bytes": 20614,
+      "sha256": "ca45354d690c6229195fa264b15a927bed0558d741de022e058d0641f49d7741"
+    },
+    "lib/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "lib/features.py": {
+      "bytes": 99133,
+      "sha256": "dadd0c8ff3634fa44c7916f5cbb371d7b81a6d5e795db22c6a558cd03d40a3cb"
+    },
+    "make_documents.py": {
+      "bytes": 28483,
+      "sha256": "44cab6c1b5c5e0801de55fd3cd1495c5cbd1ba3177fd638a89004788a0ba09fd"
+    },
+    "model.py": {
+      "bytes": 13770,
+      "sha256": "62a4a5dd80c2cdb212f07fe73aaba0f3076ee28f40344b49105844ed7b8f7cb2"
+    },
+    "package_design.py": {
+      "bytes": 7071,
+      "sha256": "d1708ce868725824308c5be13069886dcb33fb0d89249c969768eecf742cec05"
+    },
+    "params.json": {
+      "bytes": 2743,
+      "sha256": "d9aad1e3d1bacae227c72cfc882f552ddf619c8aee45bf24df1f340dafe3e301"
+    },
+    "PROTOTYPE_VALIDATION.md": {
+      "bytes": 8750,
+      "sha256": "d596ef4ff8f298f9bc9d8293dd82bc83e081932a65e54311c36cf03a50b0108b"
+    },
+    "quality/cad_verification.json": {
+      "bytes": 16837,
+      "sha256": "4ac341088f762cfa1b8d48e298731de801a1c3c2eb52f0c1135c82eab6a36f95"
+    },
+    "quality/DESIGN_REVIEW.md": {
+      "bytes": 2672,
+      "sha256": "c052c793c600c7ae92743e4ceb2b0d367d13c9404f6693988240c9e26d1a688f"
+    },
+    "quality/engineering_review.json": {
+      "bytes": 6756,
+      "sha256": "fe50226550c1624d914b13fee481d0f1f15505838d1e9f08711b5d798936a1eb"
+    },
+    "quality/evaluated_plate_N1.step": {
+      "bytes": 202603,
+      "sha256": "723de7ad96d7b1ea7837fe64e896a6a902d18eb102abf5e7297a3aeb1ffdb020"
+    },
+    "quality/final_delivery_checks.json": {
+      "bytes": 5922,
+      "sha256": "e03e9f4224c2d4047822ca5b526f53e2640a973287ff19c40aa67c91724ada55"
+    },
+    "quality/manufacturing_verification.json": {
+      "bytes": 14416,
+      "sha256": "f00d7152579ea50aab3e19c585770c5207b4518c874d948284e7218228bc8b2f"
+    },
+    "quality/prior_design_preservation.json": {
+      "bytes": 1238,
+      "sha256": "6d05a09324b084aa316d927e50f6e4771847dbe91d0ab5d6c0dc25e3613844c7"
+    },
+    "quality/repository_evaluation.json": {
+      "bytes": 24295,
+      "sha256": "36a68ef54b7e1636416aed0f0d22e2cc0f6d341f7bd0d56a5ba3de59b22a9f85"
+    },
+    "quality/visual_review.json": {
+      "bytes": 1118,
+      "sha256": "717982ab8e6aec66966f52cef465d51fa711d27355fb4fa71d968b5d74102549"
+    },
+    "README.md": {
+      "bytes": 8327,
+      "sha256": "3fe6bc0f3730cb2a67ea8def3ffec272272eb5220627b280c43e69aff3b6b9ad"
+    },
+    "references/engineering/engineering_calculations.py": {
+      "bytes": 49380,
+      "sha256": "b950e2aaaf6fc469acce4f5e3a8e423be3252e28fbc07113223df839c0610f0a"
+    },
+    "references/engineering/engineering_checks.md": {
+      "bytes": 21397,
+      "sha256": "816fad10d31f88025d541827afd3ca5409b23c725b4e3cf349cd1f9f4d9cd148"
+    },
+    "references/engineering/engineering_results.json": {
+      "bytes": 18231,
+      "sha256": "e0b80a3e933ebd18bb2b71218d7293ff3fa41a8aa0b794a4de90ea789deb49bb"
+    },
+    "references/geometry/audit_nsp1600.py": {
+      "bytes": 6553,
+      "sha256": "d57731f4b2facdaa7a1a3b4eb6d93c76fa26169df58d17e21310b8aa35ae7ee2"
+    },
+    "references/geometry/fan_bottom_contact_geometry.json": {
+      "bytes": 9442,
+      "sha256": "d16ec6d85277ecf8d1f9e07481dada810353eee11d5f56aecf5e58da371d2f53"
+    },
+    "references/geometry/fan_contact_audit.py": {
+      "bytes": 2317,
+      "sha256": "dd4a6b8e2de6dbdd8ad56609f3a23e9068a73c8a1575336e268449e31ddbb534"
+    },
+    "references/geometry/geometry_quality_review.json": {
+      "bytes": 1735,
+      "sha256": "95a5ec0b67ddbd2fe19ee9ef327ba4e16ea8425dc48828eaf081a218dca3d593"
+    },
+    "references/geometry/inspect_mounting_interface.py": {
+      "bytes": 7730,
+      "sha256": "4cfa4f831cb876be1dab9ad249e4da2b5c4449d1961fb85651025cb143b9f059"
+    },
+    "references/geometry/MEASURED_FINDINGS.md": {
+      "bytes": 9070,
+      "sha256": "20c98352e3f0a76dbc36ff58dab2bc29a5e66c3507ad66842378e7ec51a9a759"
+    },
+    "references/geometry/mounting_interface.json": {
+      "bytes": 33026,
+      "sha256": "25b5fa03ae7cc7fc5a06e662558d6986b4c22c666514149358772a37855979bd"
+    },
+    "references/geometry/NSP1600_normalized_ORIGINAL_REFERENCE.step": {
+      "bytes": 6883349,
+      "sha256": "4483ecb45d71737fa0b6b4f3ef40bb131c22e74ccea204c1cf7e63978a8b6e8b"
+    },
+    "references/geometry/nsp1600_source_audit.json": {
+      "bytes": 1424543,
+      "sha256": "c19ae6d0f2a77f99dd1da96be365bf02bb96e558695648010c430a65b93c253d"
+    },
+    "references/geometry/sections/bottom_H1_section.png": {
+      "bytes": 46883,
+      "sha256": "5d269025788ddd5028e2431e54f9b2b41ef8d016bce97d04f436326a71a747b0"
+    },
+    "references/geometry/sections/bottom_H1_section.svg": {
+      "bytes": 138082,
+      "sha256": "c026944f5eadab2b802c42a04341a7d0c04032467b67bacc3fe22a7b8eb6e9fe"
+    },
+    "references/geometry/sections/bottom_H2_section.png": {
+      "bytes": 47842,
+      "sha256": "c65043282fdfaa84f9a30161d388ef05f082cd198a742e1bcae19c0286fe33ca"
+    },
+    "references/geometry/sections/bottom_H2_section.svg": {
+      "bytes": 203150,
+      "sha256": "9afd9b7eb590405b35bd34d0b76c7febdf6369d50fcaf5671df9ae972c956c3a"
+    },
+    "references/geometry/sections/bottom_H3_section.png": {
+      "bytes": 68598,
+      "sha256": "5559d6a7626a77132f8b9e4a22c912ea2eba033f5a9aa72703498c82ab9bf2f3"
+    },
+    "references/geometry/sections/bottom_H3_section.svg": {
+      "bytes": 221241,
+      "sha256": "6c09d3843bed3f6f918ec728ceec42de91679a6496969c226bb69687e7e37092"
+    },
+    "references/geometry/views/NSP1600_source_back.png": {
+      "bytes": 24439,
+      "sha256": "e03f7f3128bec6fda068891e382ea885447bcb43b53a078017e6b5878cf0bc3a"
+    },
+    "references/geometry/views/NSP1600_source_bottom.png": {
+      "bytes": 16436,
+      "sha256": "bf65a49bae1177e2e412b8022629c49902d39146798d2446676c3aec9d3dbee1"
+    },
+    "references/geometry/views/NSP1600_source_front.png": {
+      "bytes": 30212,
+      "sha256": "789d96d880e56e739e5ed7222125c7ecab753c8c78c732a563989cffb85ec5f8"
+    },
+    "references/geometry/views/NSP1600_source_iso.png": {
+      "bytes": 57462,
+      "sha256": "4fed6ad17d027ee4a60081ae6743653f7dfa952cbffbf75e2048df35eb6baa62"
+    },
+    "references/geometry/views/NSP1600_source_left.png": {
+      "bytes": 24053,
+      "sha256": "218e2c16901968b7bc4a1f4c8ab901368eac77c78abfe85d8507f81e6c970d1f"
+    },
+    "references/geometry/views/NSP1600_source_right.png": {
+      "bytes": 22862,
+      "sha256": "c5f748ef324e5e8307039b33f9dda58c2cb9bd5f2b47ee09ae0f3c8fe63b872e"
+    },
+    "references/geometry/views/NSP1600_source_top.png": {
+      "bytes": 12757,
+      "sha256": "a4ab20b1f94d758dce15a50ee2cb9ce8abcc9ffef7b1d733dae288917ab62981"
+    },
+    "references/input_device.step": {
+      "bytes": 3081271,
+      "sha256": "d421a1e7fb7a3b5fd2e12588484a2e970456301955c0a17f55be6d56324dd8a0"
+    },
+    "references/product/assembled_hero.png": {
+      "bytes": 393342,
+      "sha256": "7920c0e9fe7771f224e914b07fb4b47fbde448d4ae2b438d8cbce4a8a4986254"
+    },
+    "references/product/exploded_iso.png": {
+      "bytes": 429063,
+      "sha256": "f9ca65476dad21805c29afa9bec2ea58b9464c739a147500cadc72496808223d"
+    },
+    "references/product/plate_bottom_hero.png": {
+      "bytes": 151882,
+      "sha256": "e236bb0fa0e64113b47d002645899f10723aea26b13e4275f0d2ec2b6aad4642"
+    },
+    "references/product/plate_top_hero.png": {
+      "bytes": 159135,
+      "sha256": "2bc735a0207a5c58445851b3e962bafe711c5e8cd072c8c2383de20d598a1f5b"
+    },
+    "references/research/B210_catalog_source_snapshot.json": {
+      "bytes": 7175,
+      "sha256": "8b8c609b5b3f6f3ba83771b2b850e2dfdc1bb091aa6ab9ee1c669ca459c97888"
+    },
+    "references/research/catalog_bom.json": {
+      "bytes": 10146,
+      "sha256": "2671966fcc7c867bd784f22839231749b0b3c82981d93b0a1c236c97a57a6b70"
+    },
+    "references/research/Enclosed_Type_EN_OFFICIAL_2026-09-08.pdf": {
+      "bytes": 1032948,
+      "sha256": "ab8140d4bd9e26038b99e2f6519b0c9f6630c81d7a3007fc33e87eb4bfe2d068"
+    },
+    "references/research/Enclosed_Type_EN_OFFICIAL_2026-09-08_text.txt": {
+      "bytes": 12977,
+      "sha256": "92de218faf3385e350ccdd648c79201e73f84a7dd7e7fddcfd43634f5fe6d921"
+    },
+    "references/research/FPE_6_5_1_Bolt_10-Base.ini": {
+      "bytes": 5293,
+      "sha256": "8870c105754794c30afe9045c9b1988ca9e354d887b0e005d049e641a0c07d49"
+    },
+    "references/research/FPE_6_5_1_Bolzen.fpjs": {
+      "bytes": 2935,
+      "sha256": "988c2dd1fcc08af0d01ae2e245da5ae2da31fb73c4a1eaf38a58cf74d9518d0e"
+    },
+    "references/research/hardware_catalog_evidence.md": {
+      "bytes": 2348,
+      "sha256": "382cd9a30add898703628088cbdb06d559a6531ee9d0e0b2ddef46d60239ea3b"
+    },
+    "references/research/inspect_sources.py": {
+      "bytes": 3719,
+      "sha256": "d41a3ec49716780fe455be9c0c9efa2cb8ff6b0d3d59de14c30774bc836a73e2"
+    },
+    "references/research/make_catalog_bom.py": {
+      "bytes": 7540,
+      "sha256": "eeb02f9d47dc3681a4e84695a460b9cd490da21a22bf39888c1b407857fabe4f"
+    },
+    "references/research/MeanWell_Enclosed_Type_Installation_Manual_EN_page_1.png": {
+      "bytes": 227943,
+      "sha256": "b7290ff093e56d8b9f498573c3630055b0e33b70bf42626c48eb41048aeee31b"
+    },
+    "references/research/MeanWell_Enclosed_Type_Installation_Manual_EN_page_2.png": {
+      "bytes": 172033,
+      "sha256": "0aa33375474ef56421ab2064bd7f958f16f9f77c54c00488ec47f7034ca428ef"
+    },
+    "references/research/MeanWell_Enclosed_Type_Installation_Manual_EN_page_4.png": {
+      "bytes": 198467,
+      "sha256": "703883e149c1d7c34955bf5a4724618a3c38ebe04e46d4f9e9a173beeeb2d9e6"
+    },
+    "references/research/MeanWell_Enclosed_Type_Installation_Manual_EN_page_5.png": {
+      "bytes": 227350,
+      "sha256": "9cf71a0d3799e5188a50d6c31d3e9220ff475b315516c75666cf029b207f31d1"
+    },
+    "references/research/MeanWell_Enclosed_Type_Installation_Manual_EN_text.txt": {
+      "bytes": 12977,
+      "sha256": "92de218faf3385e350ccdd648c79201e73f84a7dd7e7fddcfd43634f5fe6d921"
+    },
+    "references/research/meanwell_requirements.json": {
+      "bytes": 4666,
+      "sha256": "2955d7e8a840e095bfa2b935e7186493bc53d08e5cbb4ab1f75fdde3b0a3d6d1"
+    },
+    "references/research/meanwell_requirements.md": {
+      "bytes": 10258,
+      "sha256": "dc707b1cdf42d811884c0c778d9f6e1bb323eef146f34ae5f9dae13304b51e43"
+    },
+    "references/research/NSP-1600-spec_OFFICIAL_2026-09-08.pdf": {
+      "bytes": 5367530,
+      "sha256": "e481006af3d6da2df43f207d20e40fd94f04bd7ed6a15c5b34ae1ab3384dc6bb"
+    },
+    "references/research/NSP-1600-spec_OFFICIAL_2026-09-08_text.txt": {
+      "bytes": 16184,
+      "sha256": "085efa7a6ecb2487c927ee15485c1295601b033d332e88efbce5b5ac5da12005"
+    },
+    "references/research/NSP-1600-SPEC_page_2.png": {
+      "bytes": 398120,
+      "sha256": "ea0ecae9ce24a5e487bd9d2415632c25654bcb8ae6d36d15a4ccff514f0dd6a8"
+    },
+    "references/research/NSP-1600-SPEC_page_3.png": {
+      "bytes": 148273,
+      "sha256": "e9a53a2b3dc85e4f5b3f3d973413ba6d8def83c9f7a6b236d6f446d75d6b4f98"
+    },
+    "references/research/NSP-1600-SPEC_page_6.png": {
+      "bytes": 237193,
+      "sha256": "78877d7aa48e474405e9fc8267d0acbb336d1207e0050fb471972f82e1c08772"
+    },
+    "references/research/NSP-1600-SPEC_page_8.png": {
+      "bytes": 88982,
+      "sha256": "37048d17bde64adf12665fe61d161aa1d301bd3fb1810ae7e477b1c7c8c1d49f"
+    },
+    "references/research/NSP-1600-SPEC_text.txt": {
+      "bytes": 16184,
+      "sha256": "085efa7a6ecb2487c927ee15485c1295601b033d332e88efbce5b5ac5da12005"
+    },
+    "references/research/source_manifest.json": {
+      "bytes": 1684,
+      "sha256": "cd94b558986066fc6c8b010966973f89b14b3ac95817f0b55b9b03e5855ec6e9"
+    },
+    "references/user_pdf_text.txt": {
+      "bytes": 21277,
+      "sha256": "5c3a49a4a2d2c891363dbb08eeffde4709c3666d8a6d8f6833c6b21a339cbb7e"
+    },
+    "references/views/installed_bottom.png": {
+      "bytes": 12394,
+      "sha256": "3773327d09f08e32a0ddbf66c3966409792434dd9f9f50480b7c2c267845637c"
+    },
+    "references/views/installed_front.png": {
+      "bytes": 39325,
+      "sha256": "b30e5bc516a6e3e69b52fd71ed6cfa255a590db66620cd33eadd63007b17602f"
+    },
+    "references/views/installed_right.png": {
+      "bytes": 32312,
+      "sha256": "4eb1026464f5f9663dbf3ad2149c7034dcb4a24fc5a7135b43430e94cb3f4343"
+    },
+    "references/views/installed_top.png": {
+      "bytes": 28397,
+      "sha256": "ee11dca081fde4164bda8329b7fe89e7c3ae5a19d42b0b1cd5e1d56036dfb52e"
+    },
+    "references/views/plate_bottom.png": {
+      "bytes": 17099,
+      "sha256": "b121160f846190222d3940ed5c48d9cfc55ccee419f6806092ba8d74a185b7ad"
+    },
+    "references/views/plate_front.png": {
+      "bytes": 10187,
+      "sha256": "0ea11dbced29bd01bfc694019b1573f206fab9614e930bbc3b6a41f55b33bd42"
+    },
+    "references/views/plate_iso.png": {
+      "bytes": 30924,
+      "sha256": "d63e12441e734386699db80c5dd5e78d3f671bfff00f8203184dc5fedcbd2cfb"
+    },
+    "references/views/plate_top.png": {
+      "bytes": 15697,
+      "sha256": "06b88e1cf810c2e3cf3e0dbb1de22f38aa1120c5310d7d744a07968666c0c70b"
+    },
+    "references/views/section_fan_mount_front.png": {
+      "bytes": 33913,
+      "sha256": "62dbff0eb068918f1b35c549b04cb34a4f779c3723b88cdcd944abee057bb367"
+    },
+    "references/views/section_front_mount_front.png": {
+      "bytes": 16250,
+      "sha256": "e36f6758fc1cd357983689caa48cc4efc01d84251fe20fc9d3db962a707aa829"
+    },
+    "render_support.py": {
+      "bytes": 42142,
+      "sha256": "0cbe1d0bef6ab7ae77ebb22eed9e6bc3681bc360441d996d4e3665ce25ce86e7"
+    },
+    "requirements.txt": {
+      "bytes": 100,
+      "sha256": "5eeda0c6c91282ba4dd9ce4aab24de56b3fa757d5aa2e306091c28e6ac3e1596"
+    },
+    "spec.json": {
+      "bytes": 1248,
+      "sha256": "6f7c821c52334bb73ddd36c8d095ce10af6b3ad0ed778ebe4499b2e3c493aab4"
+    },
+    "verify_and_render.py": {
+      "bytes": 13983,
+      "sha256": "c03b89e0fc17d6a3420b2ebce8b6bc7242376cf36a5220bcaa3e3f20593b3ce6"
+    },
+    "verify_manufacturing.py": {
+      "bytes": 17384,
+      "sha256": "b18e794f264f4318535c4902bd909a637703e9aae2d591586224a43e56b6c6c0"
+    }
+  }
+}

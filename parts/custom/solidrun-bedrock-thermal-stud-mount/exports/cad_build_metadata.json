@@ -1,0 +1,900 @@
+{
+  "revision": "T1 preliminary thermal and fit prototype",
+  "units": "mm",
+  "plate_volume_mm3": 152561.320811191,
+  "plate_mass_kg_at_2700_kg_m3": 0.4119155661902157,
+  "component_count": 43,
+  "source_device_solids": 22,
+  "installed_device_solids": 21,
+  "assembly_bbox_mm": {
+    "x": [
+      -100.0,
+      100.0
+    ],
+    "y": [
+      -110.0,
+      110.0
+    ],
+    "z": [
+      -6.0,
+      56.1
+    ]
+  },
+  "components": [
+    {
+      "name": "adapter_T1",
+      "kind": "plate",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -83.0054416,
+          83.0054416
+        ],
+        "y": [
+          -92.0054416,
+          92.0054416
+        ],
+        "z": [
+          -0.0119744,
+          5.1054416
+        ]
+      }
+    },
+    {
+      "name": "FPE_PANEL_REFERENCE_ONLY",
+      "kind": "panel",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -100.0,
+          100.0
+        ],
+        "y": [
+          -110.0,
+          110.0
+        ],
+        "z": [
+          -6.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "name": "Tile_SOURCE",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -65.762,
+          65.0
+        ],
+        "y": [
+          -80.0000001,
+          80.0
+        ],
+        "z": [
+          5.0999999,
+          34.1000001
+        ]
+      }
+    },
+    {
+      "name": "ONE_60W_BANK_CLIPPED_REFERENCE_NOT_VENDOR_HYBRID",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -64.8435972,
+          64.8435972
+        ],
+        "y": [
+          -80.0000001,
+          80.0000001
+        ],
+        "z": [
+          34.0999999,
+          56.1
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_00",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -50.5055354,
+          -48.0055352
+        ],
+        "y": [
+          78.0044772,
+          80.0048291
+        ],
+        "z": [
+          18.6780895,
+          21.1643945
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_01",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -37.6955354,
+          -35.1955352
+        ],
+        "y": [
+          78.0044769,
+          80.0048291
+        ],
+        "z": [
+          18.6780895,
+          21.1643945
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_02",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -51.8555353,
+          -33.8455353
+        ],
+        "y": [
+          70.704829,
+          80.004829
+        ],
+        "z": [
+          13.521242,
+          24.171242
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_03",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -67.9570157,
+          -18.1670156
+        ],
+        "y": [
+          34.7547561,
+          65.5347561
+        ],
+        "z": [
+          12.146842,
+          24.9244814
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_04",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -62.8887073,
+          -53.8887073
+        ],
+        "y": [
+          25.0731204,
+          32.7731204
+        ],
+        "z": [
+          12.176842,
+          17.9268421
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_05",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -65.0046099,
+          -43.9046099
+        ],
+        "y": [
+          -38.7713584,
+          23.5891642
+        ],
+        "z": [
+          10.346842,
+          29.3870609
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_06",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -64.5124342,
+          -55.5003946
+        ],
+        "y": [
+          65.5755192,
+          73.3455192
+        ],
+        "z": [
+          13.921242,
+          21.031242
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_07",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -62.7841348,
+          -59.0897999
+        ],
+        "y": [
+          26.776773,
+          31.076773
+        ],
+        "z": [
+          10.8751851,
+          12.7251851
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_08",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -19.1462076,
+          -8.8462076
+        ],
+        "y": [
+          71.0818563,
+          81.5818563
+        ],
+        "z": [
+          10.746842,
+          19.446842
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_09",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -62.9418075,
+          -37.2418075
+        ],
+        "y": [
+          -56.5610156,
+          -49.6110156
+        ],
+        "z": [
+          10.406842,
+          28.4400505
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_10",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -62.9418075,
+          -37.2418075
+        ],
+        "y": [
+          -66.0610156,
+          -59.1110156
+        ],
+        "z": [
+          10.406842,
+          28.4400505
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_11",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -62.9418075,
+          -37.2418075
+        ],
+        "y": [
+          -47.0610156,
+          -40.1110156
+        ],
+        "z": [
+          10.406842,
+          28.4400505
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_12",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -62.9418075,
+          -37.2418075
+        ],
+        "y": [
+          -75.5610156,
+          -68.6110156
+        ],
+        "z": [
+          10.406842,
+          28.4400505
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_13",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -29.9865178,
+          -21.3165178
+        ],
+        "y": [
+          51.7647665,
+          62.7647665
+        ],
+        "z": [
+          13.0299183,
+          19.299919
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_14",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -29.9865178,
+          -21.3165178
+        ],
+        "y": [
+          37.5143365,
+          48.5143365
+        ],
+        "z": [
+          13.0299183,
+          19.299919
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_15",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          18.4865278,
+          28.686528
+        ],
+        "y": [
+          79.9999999,
+          90.0
+        ],
+        "z": [
+          15.3520418,
+          25.5520419
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_16",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          43.4865278,
+          53.686528
+        ],
+        "y": [
+          79.9999999,
+          90.0
+        ],
+        "z": [
+          15.3520418,
+          25.5520419
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_17",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -6.5134722,
+          3.686528
+        ],
+        "y": [
+          79.9999999,
+          90.0
+        ],
+        "z": [
+          15.3520417,
+          25.5520419
+        ]
+      }
+    },
+    {
+      "name": "aux_SOURCE_18",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -31.5134721,
+          -21.313472
+        ],
+        "y": [
+          79.9999999,
+          90.0
+        ],
+        "z": [
+          15.3520417,
+          25.5520419
+        ]
+      }
+    },
+    {
+      "name": "Dow340_top_NOMINAL_FILLED_POCKET",
+      "kind": "tim_top",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -63.0,
+          82.65
+        ],
+        "y": [
+          -78.0,
+          78.0
+        ],
+        "z": [
+          5.05,
+          5.1
+        ]
+      }
+    },
+    {
+      "name": "Dow340_bottom_NOMINAL_FILLED_POCKET",
+      "kind": "tim_bottom",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -63.0,
+          82.65
+        ],
+        "y": [
+          -78.0,
+          78.0
+        ],
+        "z": [
+          0.0,
+          0.05
+        ]
+      }
+    },
+    {
+      "name": "McMaster_91294A188_M4x8_1",
+      "kind": "screw",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -64.0,
+          -56.0
+        ],
+        "y": [
+          -74.0,
+          -66.0
+        ],
+        "z": [
+          0.05,
+          8.05
+        ]
+      }
+    },
+    {
+      "name": "McMaster_91294A188_M4x8_2",
+      "kind": "screw",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          56.0,
+          64.0
+        ],
+        "y": [
+          -74.0,
+          -66.0
+        ],
+        "z": [
+          0.05,
+          8.05
+        ]
+      }
+    },
+    {
+      "name": "McMaster_91294A188_M4x8_3",
+      "kind": "screw",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -4.0,
+          4.0
+        ],
+        "y": [
+          -44.0,
+          -36.0
+        ],
+        "z": [
+          0.05,
+          8.05
+        ]
+      }
+    },
+    {
+      "name": "McMaster_91294A188_M4x8_4",
+      "kind": "screw",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -4.0,
+          4.0
+        ],
+        "y": [
+          26.0,
+          34.0
+        ],
+        "z": [
+          0.05,
+          8.05
+        ]
+      }
+    },
+    {
+      "name": "McMaster_91294A188_M4x8_5",
+      "kind": "screw",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -54.0,
+          -46.0
+        ],
+        "y": [
+          66.0,
+          74.0
+        ],
+        "z": [
+          0.05,
+          8.05
+        ]
+      }
+    },
+    {
+      "name": "McMaster_91294A188_M4x8_6",
+      "kind": "screw",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          46.0,
+          54.0
+        ],
+        "y": [
+          66.0,
+          74.0
+        ],
+        "z": [
+          0.05,
+          8.05
+        ]
+      }
+    },
+    {
+      "name": "FPE_WGU30_M3_L12_REFERENCE_1",
+      "kind": "stud",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -81.95,
+          -70.05
+        ],
+        "y": [
+          -87.95,
+          -76.05
+        ],
+        "z": [
+          -2.2,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "McMaster_98688A142_washer_1",
+      "kind": "washer",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -79.5,
+          -72.5
+        ],
+        "y": [
+          -85.5,
+          -78.5
+        ],
+        "z": [
+          5.1,
+          5.65
+        ]
+      }
+    },
+    {
+      "name": "McMaster_90576A102_locknut_1",
+      "kind": "nut",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -79.1754265,
+          -72.8245735
+        ],
+        "y": [
+          -84.75,
+          -79.25
+        ],
+        "z": [
+          5.65,
+          9.65
+        ]
+      }
+    },
+    {
+      "name": "FPE_WGU30_M3_L12_REFERENCE_2",
+      "kind": "stud",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -81.95,
+          -70.05
+        ],
+        "y": [
+          76.05,
+          87.95
+        ],
+        "z": [
+          -2.2,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "McMaster_98688A142_washer_2",
+      "kind": "washer",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -79.5,
+          -72.5
+        ],
+        "y": [
+          78.5,
+          85.5
+        ],
+        "z": [
+          5.1,
+          5.65
+        ]
+      }
+    },
+    {
+      "name": "McMaster_90576A102_locknut_2",
+      "kind": "nut",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -79.1754265,
+          -72.8245735
+        ],
+        "y": [
+          79.25,
+          84.75
+        ],
+        "z": [
+          5.65,
+          9.65
+        ]
+      }
+    },
+    {
+      "name": "FPE_WGU30_M3_L12_REFERENCE_3",
+      "kind": "stud",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          70.05,
+          81.95
+        ],
+        "y": [
+          -87.95,
+          -76.05
+        ],
+        "z": [
+          -2.2,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "McMaster_98688A142_washer_3",
+      "kind": "washer",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          72.5,
+          79.5
+        ],
+        "y": [
+          -85.5,
+          -78.5
+        ],
+        "z": [
+          5.1,
+          5.65
+        ]
+      }
+    },
+    {
+      "name": "McMaster_90576A102_locknut_3",
+      "kind": "nut",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          72.8245735,
+          79.1754265
+        ],
+        "y": [
+          -84.75,
+          -79.25
+        ],
+        "z": [
+          5.65,
+          9.65
+        ]
+      }
+    },
+    {
+      "name": "FPE_WGU30_M3_L12_REFERENCE_4",
+      "kind": "stud",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          70.05,
+          81.95
+        ],
+        "y": [
+          76.05,
+          87.95
+        ],
+        "z": [
+          -2.2,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "McMaster_98688A142_washer_4",
+      "kind": "washer",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          72.5,
+          79.5
+        ],
+        "y": [
+          78.5,
+          85.5
+        ],
+        "z": [
+          5.1,
+          5.65
+        ]
+      }
+    },
+    {
+      "name": "McMaster_90576A102_locknut_4",
+      "kind": "nut",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          72.8245735,
+          79.1754265
+        ],
+        "y": [
+          79.25,
+          84.75
+        ],
+        "z": [
+          5.65,
+          9.65
+        ]
+      }
+    }
+  ],
+  "hardware_geometry": "Simplified catalog proxies; ideal conical head is not a complete or conservative hardware envelope. Not supplier CAD or a real thread/seat fit test.",
+  "datum": "Plate underside Z0; Tile mounting face Z5.1; source preserved; hybrid is derived reference.",
+  "thermal_fields": {
+    "top": {
+      "area_mm2": 19379.449909658742,
+      "primary_thermal_area_mm2_excluding_vents": 19340.19990965874,
+      "volume_mm3": 968.9724954829372
+    },
+    "bottom": {
+      "area_mm2": 19224.99161968345,
+      "primary_thermal_area_mm2_excluding_vents": 19185.74161968345,
+      "volume_mm3": 961.2495809841726
+    }
+  },
+  "derived_configuration_limit": "Tile and one fin bank clipped from the 60W alternative. Spatial fit only; no physical joint, product availability or 60W hybrid rating established."
+}

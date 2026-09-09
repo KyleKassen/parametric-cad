@@ -1,0 +1,48 @@
+// Diagnostic only, one deliberate final Error, no production saves.
+var rows=["V4 exact expected bbox -63,-78,82.65,78"];
+function n(x){return Math.round(x*1000)/1000;}
+function snap(e,label){var b=e.BoundingBox();rows.push(label+":"+n(b[0])+","+n(b[1])+","+n(b[2])+","+n(b[3]));}
+
+var a={"id":"THERMAL_TOP","native_side":"front","source_local_bbox":[-63,-78,82.65,78],"placed_bbox":[20,14,165.65,170],"paths":[{"role":"outer","start":[-58.0,-78.0],"segments":[{"type":"LINE","end":[58.0,-78.0]},{"type":"ARC","end":[63.0,-73.0],"center":[58.0,-73.0],"dir":1,"radius_mm":5.0,"sweep_deg":90.0,"source_bulge":0.41421356237309503},{"type":"LINE","end":[63.0,-72.64575131106459]},{"type":"ARC","end":[63.0,-67.35424868893541],"center":[60.0,-70.0],"dir":-1,"radius_mm":3.9999999999999973,"sweep_deg":-277.18075578145834,"source_bulge":-2.645751311064592},{"type":"LINE","end":[63.0,-20.5]},{"type":"LINE","end":[82.64999999999999,-20.5]},{"type":"LINE","end":[82.64999999999999,-19.5]},{"type":"LINE","end":[63.0,-19.5]},{"type":"LINE","end":[63.0,19.5]},{"type":"LINE","end":[82.64999999999999,19.5]},{"type":"LINE","end":[82.64999999999999,20.5]},{"type":"LINE","end":[63.0,20.5]},{"type":"LINE","end":[63.0,73.0]},{"type":"ARC","end":[58.0,78.0],"center":[58.0,73.0],"dir":1,"radius_mm":5.0,"sweep_deg":90.0,"source_bulge":0.41421356237309503},{"type":"LINE","end":[-58.0,78.0]},{"type":"ARC","end":[-63.0,72.99999999999999],"center":[-57.99999999999999,73.0],"dir":1,"radius_mm":5.0,"sweep_deg":90.0,"source_bulge":0.41421356237309503},{"type":"LINE","end":[-63.0,-67.35424868893541]},{"type":"ARC","end":[-63.0,-72.64575131106459],"center":[-60.0,-70.0],"dir":-1,"radius_mm":3.9999999999999973,"sweep_deg":-277.18075578145834,"source_bulge":-2.645751311064592},{"type":"LINE","end":[-63.0,-73.0]},{"type":"ARC","end":[-58.0,-78.0],"center":[-58.0,-73.0],"dir":1,"radius_mm":5.0,"sweep_deg":90.0,"source_bulge":0.41421356237309503}],"close_with_finish":true},{"role":"uncut_island","start":[4.0,-40.0],"segments":[{"type":"ARC","end":[0.0,-44.0],"center":[0.0,-40.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[-4.0,-40.0],"center":[0.0,-40.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[0.0,-36.0],"center":[0.0,-40.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[4.0,-40.0],"center":[0.0,-40.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503}],"close_with_finish":true},{"role":"uncut_island","start":[-46.0,70.0],"segments":[{"type":"ARC","end":[-50.0,66.0],"center":[-50.0,70.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[-54.0,70.0],"center":[-50.0,70.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[-50.0,74.0],"center":[-50.0,70.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[-46.0,70.0],"center":[-50.0,70.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503}],"close_with_finish":true},{"role":"uncut_island","start":[4.0,30.0],"segments":[{"type":"ARC","end":[0.0,26.0],"center":[0.0,30.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[-4.0,30.0],"center":[0.0,30.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[0.0,34.0],"center":[0.0,30.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[4.0,30.0],"center":[0.0,30.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503}],"close_with_finish":true},{"role":"uncut_island","start":[54.0,70.0],"segments":[{"type":"ARC","end":[50.0,66.0],"center":[50.0,70.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[46.0,70.0],"center":[50.0,70.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[50.0,74.0],"center":[50.0,70.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[54.0,70.0],"center":[50.0,70.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503}],"close_with_finish":true}],"path_count":5,"geometry_changed":false};
+
+function test(label,zeroLine,flushEach,chordLen,allLines){try{
+ var e=new DxfContour(label,"",refpoint_file,100,false);e.SetTool(600);
+ var lines=0;
+ for(var i=0;i<a.paths.length;i++){
+  var p=a.paths[i];e.Start(p.start[0],p.start[1]);
+  if(zeroLine)e.LineTo(p.start[0],p.start[1]);
+  var current=[p.start[0],p.start[1]];
+  if(chordLen>0 && p.segments[0].type=="ARC"){
+   var s=p.segments[0];var aa=Math.atan2(current[1]-s.center[1],current[0]-s.center[0]);
+   var da=s.dir*chordLen/s.radius_mm;
+   current=[s.center[0]+s.radius_mm*Math.cos(aa+da),s.center[1]+s.radius_mm*Math.sin(aa+da)];
+   e.LineTo(current[0],current[1]);
+  }
+  for(var j=0;j<p.segments.length;j++){
+   var s=p.segments[j];
+   if(s.type=="LINE"){e.LineTo(s.end[0],s.end[1]);lines++;}
+   else if(allLines){
+    var aa=Math.atan2(current[1]-s.center[1],current[0]-s.center[0]);
+    var sweep=s.sweep_deg*Math.PI/180;
+    var nn=Math.ceil(Math.abs(sweep)/(2*Math.acos(1-0.0003/s.radius_mm)));
+    for(var k=1;k<=nn;k++){
+     if(k==nn)e.LineTo(s.end[0],s.end[1]);
+     else e.LineTo(s.center[0]+s.radius_mm*Math.cos(aa+sweep*k/nn),s.center[1]+s.radius_mm*Math.sin(aa+sweep*k/nn));
+     lines++;
+    }
+   }else e.ArcToMP(s.end[0],s.end[1],s.center[0],s.center[1],s.dir);
+   current=s.end;
+  }
+  e.Finish();if(flushEach)e.SetAsCavity(true);
+ }
+ e.SetAsCavity(true);snap(e,label+(allLines?" nLines="+lines:""));
+}catch(err){rows.push(label+" ERR "+err);}}
+test("ZERO_LINE_EXACT",true,false,0,false);
+test("FLUSH_EACH_EXACT",false,true,0,false);
+test("ZERO_AND_FLUSH_EXACT",true,true,0,false);
+test("FIRST_CHORD0005",false,false,.0005,false);
+test("FIRST_CHORD002",false,false,.002,false);
+test("FIRST_CHORD01",false,false,.01,false);
+test("ALL_LINES_SAG0003",false,false,0,true);
+rows.push("Arc argument order unchanged; exact data unchanged");
+Error(rows.join("\n"));

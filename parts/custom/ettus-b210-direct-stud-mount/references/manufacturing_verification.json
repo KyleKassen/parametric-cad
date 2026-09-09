@@ -1,0 +1,189 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "Exported housing bore 1 matches fresh vendor axis",
+      "pass": true,
+      "measured": [
+        {
+          "x": -46.7995,
+          "y": 60.0075,
+          "diameter": 3.4,
+          "zmin": 1.35,
+          "zmax": 3.4000000000000004
+        }
+      ]
+    },
+    {
+      "check": "Exported housing bore 1 straight throat",
+      "pass": true,
+      "measured": 2.0500000000000003
+    },
+    {
+      "check": "Exported housing bore 2 matches fresh vendor axis",
+      "pass": true,
+      "measured": [
+        {
+          "x": 46.7995,
+          "y": 60.0075,
+          "diameter": 3.4,
+          "zmin": 1.35,
+          "zmax": 3.4000000000000004
+        }
+      ]
+    },
+    {
+      "check": "Exported housing bore 2 straight throat",
+      "pass": true,
+      "measured": 2.0500000000000003
+    },
+    {
+      "check": "Exported housing bore 3 matches fresh vendor axis",
+      "pass": true,
+      "measured": [
+        {
+          "x": 46.7995,
+          "y": -60.0075,
+          "diameter": 3.4,
+          "zmin": 1.35,
+          "zmax": 3.4000000000000004
+        }
+      ]
+    },
+    {
+      "check": "Exported housing bore 3 straight throat",
+      "pass": true,
+      "measured": 2.0500000000000003
+    },
+    {
+      "check": "Exported housing bore 4 matches fresh vendor axis",
+      "pass": true,
+      "measured": [
+        {
+          "x": -46.7995,
+          "y": -60.0075,
+          "diameter": 3.4,
+          "zmin": 1.35,
+          "zmax": 3.4000000000000004
+        }
+      ]
+    },
+    {
+      "check": "Exported housing bore 4 straight throat",
+      "pass": true,
+      "measured": 2.0500000000000003
+    },
+    {
+      "check": "Exported stud bore -68.0,-60.0075",
+      "pass": true,
+      "measured": [
+        {
+          "x": -68.0,
+          "y": -60.0075,
+          "diameter": 3.8,
+          "zmin": 0.1,
+          "zmax": 3.4000000000000004
+        }
+      ]
+    },
+    {
+      "check": "Exported stud bore -68.0,60.0075",
+      "pass": true,
+      "measured": [
+        {
+          "x": -68.0,
+          "y": 60.0075,
+          "diameter": 3.8,
+          "zmin": 0.1,
+          "zmax": 3.4000000000000004
+        }
+      ]
+    },
+    {
+      "check": "Exported stud bore 68.0,-60.0075",
+      "pass": true,
+      "measured": [
+        {
+          "x": 68.0,
+          "y": -60.0075,
+          "diameter": 3.8,
+          "zmin": 0.1,
+          "zmax": 3.4000000000000004
+        }
+      ]
+    },
+    {
+      "check": "Exported stud bore 68.0,60.0075",
+      "pass": true,
+      "measured": [
+        {
+          "x": 68.0,
+          "y": 60.0075,
+          "diameter": 3.8,
+          "zmin": 0.1,
+          "zmax": 3.4000000000000004
+        }
+      ]
+    },
+    {
+      "check": "DXF has eight drill operations",
+      "pass": true,
+      "measured": null
+    },
+    {
+      "check": "Profile DXF forms one valid manufacturable blank",
+      "pass": true,
+      "measured": null
+    },
+    {
+      "check": "DXF outline and eight bores equal STEP at straight midsection",
+      "pass": true,
+      "measured": 0
+    },
+    {
+      "check": "plate_underside_machining_mm.dxf reference markers",
+      "pass": true,
+      "measured": [
+        [
+          -46.7995,
+          -60.0075
+        ],
+        [
+          -46.7995,
+          60.0075
+        ],
+        [
+          46.7995,
+          -60.0075
+        ],
+        [
+          46.7995,
+          60.0075
+        ]
+      ]
+    },
+    {
+      "check": "FPE_stud_pattern_mm.dxf reference markers",
+      "pass": true,
+      "measured": [
+        [
+          -68.0,
+          -60.0075
+        ],
+        [
+          -68.0,
+          60.0075
+        ],
+        [
+          68.0,
+          -60.0075
+        ],
+        [
+          68.0,
+          60.0075
+        ]
+      ]
+    }
+  ],
+  "count": 17
+}

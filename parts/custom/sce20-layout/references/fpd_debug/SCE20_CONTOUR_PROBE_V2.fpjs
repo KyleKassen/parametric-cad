@@ -1,0 +1,34 @@
+// Diagnostic only. Final Error intentionally exposes measurements.
+var rows=["SCE20 PROBE V2: bbox xmin,ymin,xmax,ymax"];
+var owner=new Frontpanel("PROBE_V2_ONLY",6,400,400,alu_raw,elox_natural);
+function n(x){return Math.round(x*1000)/1000;}
+function info(e,label){try{var b=e.BoundingBox();rows.push(label+": "+n(b[0])+","+n(b[1])+","+n(b[2])+","+n(b[3])+" S="+e.Scale());}catch(err){rows.push(label+" ERR "+err);}}
+function fresh(id,omit){if(omit)return new DxfContour(id,"",refpoint_file);return new DxfContour(id,"",refpoint_file,100,false);}
+function rect(e){e.Start(-63,-78);e.LineTo(82.65,-78);e.LineTo(82.65,78);e.LineTo(-63,78);e.LineTo(-63,-78);e.Finish();}
+function circle(e){e.Start(54,70);e.ArcToMP(50,66,50,70,-1);e.ArcToMP(46,70,50,70,-1);e.ArcToMP(50,74,50,70,-1);e.ArcToMP(54,70,50,70,-1);e.Finish();}
+try{
+var r=fresh("RECT100",false);rect(r);info(r,"Rect100 local");owner.AddElement(r,83,92);info(r,"Rect100 placed");
+var ro=fresh("RECTOMIT",true);rect(ro);info(ro,"Rect omitScale local");
+var q=fresh("QEND",false);q.Start(10,20);q.ArcToMP(20,30,10,30,1);q.Finish();info(q,"Arc end-first expected10,20,20,30");
+var c=fresh("CIRC",false);circle(c);info(c,"Circle expected46,66,54,74");
+var m=fresh("MULTI",false);rect(m);circle(m);info(m,"Rect+circle local");
+}catch(err){rows.push("BASIC ERR "+err);}
+
+var a={"id":"THERMAL_TOP","native_side":"front","source_local_bbox":[-63,-78,82.65,78],"placed_bbox":[20,14,165.65,170],"paths":[{"role":"outer","start":[-58.0,-78.0],"segments":[{"type":"LINE","end":[58.0,-78.0]},{"type":"ARC","end":[63.0,-73.0],"center":[58.0,-73.0],"dir":1,"radius_mm":5.0,"sweep_deg":90.0,"source_bulge":0.41421356237309503},{"type":"LINE","end":[63.0,-72.64575131106459]},{"type":"ARC","end":[63.0,-67.35424868893541],"center":[60.0,-70.0],"dir":-1,"radius_mm":3.9999999999999973,"sweep_deg":-277.18075578145834,"source_bulge":-2.645751311064592},{"type":"LINE","end":[63.0,-20.5]},{"type":"LINE","end":[82.64999999999999,-20.5]},{"type":"LINE","end":[82.64999999999999,-19.5]},{"type":"LINE","end":[63.0,-19.5]},{"type":"LINE","end":[63.0,19.5]},{"type":"LINE","end":[82.64999999999999,19.5]},{"type":"LINE","end":[82.64999999999999,20.5]},{"type":"LINE","end":[63.0,20.5]},{"type":"LINE","end":[63.0,73.0]},{"type":"ARC","end":[58.0,78.0],"center":[58.0,73.0],"dir":1,"radius_mm":5.0,"sweep_deg":90.0,"source_bulge":0.41421356237309503},{"type":"LINE","end":[-58.0,78.0]},{"type":"ARC","end":[-63.0,72.99999999999999],"center":[-57.99999999999999,73.0],"dir":1,"radius_mm":5.0,"sweep_deg":90.0,"source_bulge":0.41421356237309503},{"type":"LINE","end":[-63.0,-67.35424868893541]},{"type":"ARC","end":[-63.0,-72.64575131106459],"center":[-60.0,-70.0],"dir":-1,"radius_mm":3.9999999999999973,"sweep_deg":-277.18075578145834,"source_bulge":-2.645751311064592},{"type":"LINE","end":[-63.0,-73.0]},{"type":"ARC","end":[-58.0,-78.0],"center":[-58.0,-73.0],"dir":1,"radius_mm":5.0,"sweep_deg":90.0,"source_bulge":0.41421356237309503}],"close_with_finish":true},{"role":"uncut_island","start":[4.0,-40.0],"segments":[{"type":"ARC","end":[0.0,-44.0],"center":[0.0,-40.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[-4.0,-40.0],"center":[0.0,-40.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[0.0,-36.0],"center":[0.0,-40.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[4.0,-40.0],"center":[0.0,-40.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503}],"close_with_finish":true},{"role":"uncut_island","start":[-46.0,70.0],"segments":[{"type":"ARC","end":[-50.0,66.0],"center":[-50.0,70.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[-54.0,70.0],"center":[-50.0,70.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[-50.0,74.0],"center":[-50.0,70.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[-46.0,70.0],"center":[-50.0,70.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503}],"close_with_finish":true},{"role":"uncut_island","start":[4.0,30.0],"segments":[{"type":"ARC","end":[0.0,26.0],"center":[0.0,30.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[-4.0,30.0],"center":[0.0,30.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[0.0,34.0],"center":[0.0,30.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[4.0,30.0],"center":[0.0,30.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503}],"close_with_finish":true},{"role":"uncut_island","start":[54.0,70.0],"segments":[{"type":"ARC","end":[50.0,66.0],"center":[50.0,70.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[46.0,70.0],"center":[50.0,70.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[50.0,74.0],"center":[50.0,70.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503},{"type":"ARC","end":[54.0,70.0],"center":[50.0,70.0],"dir":-1,"radius_mm":4.0,"sweep_deg":-90.0,"source_bulge":-0.41421356237309503}],"close_with_finish":true}],"path_count":5,"geometry_changed":false};
+
+try{
+var e=fresh("ACTUALTOP",false);e.SetTool(600);
+for(var i=0;i<a.paths.length;i++){
+var p=a.paths[i];e.Start(p.start[0],p.start[1]);
+for(var j=0;j<p.segments.length;j++){
+var s=p.segments[j];if(s.type=="LINE")e.LineTo(s.end[0],s.end[1]);
+else e.ArcToMP(s.end[0],s.end[1],s.center[0],s.center[1],s.dir);
+}
+e.Finish();info(e,"Top path"+i+" Finish");
+}
+e.SetAsCavity(true);info(e,"Top cavity beforeAttach");
+owner.AddElement(e,83,92);info(e,"Top placed83,92");
+e.SetTool(600);e.SetDepth(.05);info(e,"Top depth005");
+}catch(err){rows.push("ACTUAL ERR "+err);}
+rows.push("END intentionally reported via Error");
+Error(rows.join("\n"));

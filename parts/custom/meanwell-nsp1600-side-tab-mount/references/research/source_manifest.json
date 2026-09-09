@@ -1,0 +1,59 @@
+{
+  "date": "2026-09-08",
+  "status": "N2 evidence copies only; all prior folders read-only",
+  "sources": {
+    "specification": {
+      "url": "https://www.meanwell.com/Upload/PDF/NSP-1600/NSP-1600-spec.pdf",
+      "revision": "2026-06-15",
+      "reopened_via_web_during_N2": true
+    },
+    "manual": {
+      "url": "https://www.meanwell.com/Upload/PDF/Enclosed_Type_EN.pdf",
+      "revision": "2025.12.17",
+      "reopened_via_web_during_N2": true
+    },
+    "user_pdf_context": "The distinct supplied N1 attachment was 2025-08-19; current official PDF used here remains 2026-06-15. Final received PSU revision must be confirmed."
+  },
+  "files": {
+    "NSP-1600-spec_OFFICIAL_2026-09-08.pdf": {
+      "bytes": 5367530,
+      "sha256": "e481006af3d6da2df43f207d20e40fd94f04bd7ed6a15c5b34ae1ab3384dc6bb",
+      "provenance": "Read-only copy of exact official source retained during N1 same-day research; prior source unchanged."
+    },
+    "Enclosed_Type_EN_OFFICIAL_2026-09-08.pdf": {
+      "bytes": 1032948,
+      "sha256": "ab8140d4bd9e26038b99e2f6519b0c9f6630c81d7a3007fc33e87eb4bfe2d068",
+      "provenance": "Read-only copy of exact official source retained during N1 same-day research; prior source unchanged."
+    },
+    "NSP-1600-SPEC_page_3.png": {
+      "bytes": 148273,
+      "sha256": "e9a53a2b3dc85e4f5b3f3d973413ba6d8def83c9f7a6b236d6f446d75d6b4f98",
+      "provenance": "Read-only copy of exact official source retained during N1 same-day research; prior source unchanged."
+    },
+    "NSP-1600-SPEC_page_6.png": {
+      "bytes": 237193,
+      "sha256": "78877d7aa48e474405e9fc8267d0acbb336d1207e0050fb471972f82e1c08772",
+      "provenance": "Read-only copy of exact official source retained during N1 same-day research; prior source unchanged."
+    },
+    "NSP-1600-SPEC_page_8.png": {
+      "bytes": 88982,
+      "sha256": "37048d17bde64adf12665fe61d161aa1d301bd3fb1810ae7e477b1c7c8c1d49f",
+      "provenance": "Read-only copy of exact official source retained during N1 same-day research; prior source unchanged."
+    },
+    "MeanWell_Enclosed_Type_Installation_Manual_EN_page_1.png": {
+      "bytes": 227943,
+      "sha256": "b7290ff093e56d8b9f498573c3630055b0e33b70bf42626c48eb41048aeee31b",
+      "provenance": "Read-only copy of exact official source retained during N1 same-day research; prior source unchanged."
+    },
+    "FPE_6_5_1_Bolt_10-Base.ini": {
+      "bytes": 5293,
+      "sha256": "8870c105754794c30afe9045c9b1988ca9e354d887b0e005d049e641a0c07d49",
+      "provenance": "Read-only copy of exact official source retained during N1 same-day research; prior source unchanged."
+    },
+    "FPE_6_5_1_Bolzen.fpjs": {
+      "bytes": 2935,
+      "sha256": "988c2dd1fcc08af0d01ae2e245da5ae2da31fb73c4a1eaf38a58cf74d9518d0e",
+      "provenance": "Read-only copy of exact official source retained during N1 same-day research; prior source unchanged."
+    }
+  }
+}

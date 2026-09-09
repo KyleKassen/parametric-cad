@@ -1,0 +1,1211 @@
+{
+  "native": "C:\\Users\\KyleKassen\\Documents\\FPE_SCE20_20260908_R1\\B210_R2_native.step",
+  "native_sha256": "fe4bb818abc939060c440b59c6febefd5e8a1d12ecf418710a926ba6a97c954f",
+  "expected": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\B210_FPE_R1_plate.step",
+  "physical_variant": "B210_FPE_R1 preliminary standard-stock fit variant",
+  "units": "mm",
+  "normalization_translation": [
+    -75.0,
+    -74.0,
+    3.9999999999999987
+  ],
+  "raw_native_bbox": {
+    "x": [
+      -5.551115123125783e-17,
+      150.0
+    ],
+    "y": [
+      -5.551115123125783e-17,
+      148.0
+    ],
+    "z": [
+      -4.000000000000002,
+      3.164135620181696e-15
+    ]
+  },
+  "normalized_bbox": {
+    "x": [
+      -75.0,
+      75.0
+    ],
+    "y": [
+      -74.0,
+      74.0
+    ],
+    "z": [
+      -3.552713678800501e-15,
+      4.000000000000002
+    ]
+  },
+  "native_volume_mm3": 88061.4437464227,
+  "expected_volume_mm3": 88060.15379607814,
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "valid single native plate",
+      "pass": true,
+      "measured": 1,
+      "criterion": 1
+    },
+    {
+      "check": "native XYZ size",
+      "pass": true,
+      "measured": {
+        "x": [
+          -75.0,
+          75.0
+        ],
+        "y": [
+          -74.0,
+          74.0
+        ],
+        "z": [
+          -3.552713678800501e-15,
+          4.000000000000002
+        ]
+      },
+      "criterion": {
+        "x": [
+          -75.0,
+          75.0
+        ],
+        "y": [
+          -74.0,
+          74.0
+        ],
+        "z": [
+          -3.219646771412954e-15,
+          4.000000000000003
+        ]
+      }
+    },
+    {
+      "check": "complete native/reference geometry",
+      "pass": true,
+      "measured": {
+        "extra_native_metal_mm3": 1.3142095922958106,
+        "missing_native_metal_mm3": 0.024259247744339518,
+        "nominal_symmetric_difference_upper_bound_mm3": 1.8036353813466222,
+        "boolean": {
+          "method": "bounded microscopic-translation retry after empty nominal OCCT common",
+          "test_translation_mm": [
+            1e-05,
+            0,
+            0
+          ],
+          "conservative_translation_volume_bound_mm3": 0.46516654130647195
+        }
+      },
+      "criterion": "<3mm3 permits omitted source0.1boredeburr and native0.001machining quantization; not missing islands or misplaced counterbores"
+    },
+    {
+      "check": "stud bore 1",
+      "pass": true,
+      "measured": [
+        {
+          "kind": "CYLINDER",
+          "xy": [
+            -68.0,
+            -60.007999999999996
+          ],
+          "bbox": {
+            "x": [
+              -69.9,
+              -66.1
+            ],
+            "y": [
+              -61.907999999999994,
+              -58.108
+            ],
+            "z": [
+              -1.3322676295501878e-15,
+              3.9999999999999987
+            ]
+          },
+          "radius_mm": 1.9
+        }
+      ],
+      "criterion": "correct sourceXY/radius"
+    },
+    {
+      "check": "stud bore 2",
+      "pass": true,
+      "measured": [
+        {
+          "kind": "CYLINDER",
+          "xy": [
+            -68.0,
+            60.007000000000005
+          ],
+          "bbox": {
+            "x": [
+              -69.9,
+              -66.1
+            ],
+            "y": [
+              58.107000000000006,
+              61.907000000000004
+            ],
+            "z": [
+              -1.3322676295501878e-15,
+              3.9999999999999987
+            ]
+          },
+          "radius_mm": 1.9
+        }
+      ],
+      "criterion": "correct sourceXY/radius"
+    },
+    {
+      "check": "stud bore 3",
+      "pass": true,
+      "measured": [
+        {
+          "kind": "CYLINDER",
+          "xy": [
+            68.0,
+            -60.007999999999996
+          ],
+          "bbox": {
+            "x": [
+              66.1,
+              69.9
+            ],
+            "y": [
+              -61.907999999999994,
+              -58.108
+            ],
+            "z": [
+              -1.3322676295501878e-15,
+              3.9999999999999987
+            ]
+          },
+          "radius_mm": 1.9
+        }
+      ],
+      "criterion": "correct sourceXY/radius"
+    },
+    {
+      "check": "stud bore 4",
+      "pass": true,
+      "measured": [
+        {
+          "kind": "CYLINDER",
+          "xy": [
+            68.0,
+            60.007000000000005
+          ],
+          "bbox": {
+            "x": [
+              66.1,
+              69.9
+            ],
+            "y": [
+              58.107000000000006,
+              61.907000000000004
+            ],
+            "z": [
+              -1.3322676295501878e-15,
+              3.9999999999999987
+            ]
+          },
+          "radius_mm": 1.9
+        }
+      ],
+      "criterion": "correct sourceXY/radius"
+    },
+    {
+      "check": "housing bore 1",
+      "pass": true,
+      "measured": [
+        {
+          "kind": "CYLINDER",
+          "xy": [
+            -46.8,
+            -60.007999999999996
+          ],
+          "bbox": {
+            "x": [
+              -48.5,
+              -45.099999999999994
+            ],
+            "y": [
+              -61.708,
+              -58.30799999999999
+            ],
+            "z": [
+              1.8489999999999989,
+              3.9999999999999987
+            ]
+          },
+          "radius_mm": 1.7
+        }
+      ],
+      "criterion": "correct sourceXY/radius"
+    },
+    {
+      "check": "housing bore 2",
+      "pass": true,
+      "measured": [
+        {
+          "kind": "CYLINDER",
+          "xy": [
+            -46.8,
+            60.007000000000005
+          ],
+          "bbox": {
+            "x": [
+              -48.5,
+              -45.099999999999994
+            ],
+            "y": [
+              58.307,
+              61.70700000000001
+            ],
+            "z": [
+              1.8489999999999989,
+              3.9999999999999987
+            ]
+          },
+          "radius_mm": 1.7
+        }
+      ],
+      "criterion": "correct sourceXY/radius"
+    },
+    {
+      "check": "housing bore 3",
+      "pass": true,
+      "measured": [
+        {
+          "kind": "CYLINDER",
+          "xy": [
+            46.79900000000001,
+            -60.007999999999996
+          ],
+          "bbox": {
+            "x": [
+              45.099000000000004,
+              48.49900000000001
+            ],
+            "y": [
+              -61.708,
+              -58.30799999999999
+            ],
+            "z": [
+              1.8489999999999989,
+              3.9999999999999987
+            ]
+          },
+          "radius_mm": 1.7
+        }
+      ],
+      "criterion": "correct sourceXY/radius"
+    },
+    {
+      "check": "housing bore 4",
+      "pass": true,
+      "measured": [
+        {
+          "kind": "CYLINDER",
+          "xy": [
+            46.79900000000001,
+            60.007000000000005
+          ],
+          "bbox": {
+            "x": [
+              45.099000000000004,
+              48.49900000000001
+            ],
+            "y": [
+              58.307,
+              61.70700000000001
+            ],
+            "z": [
+              1.8489999999999989,
+              3.9999999999999987
+            ]
+          },
+          "radius_mm": 1.7
+        }
+      ],
+      "criterion": "correct sourceXY/radius"
+    },
+    {
+      "check": "housing 1 one actual countersink",
+      "pass": true,
+      "measured": [
+        {
+          "kind": "CONE",
+          "xy": [
+            -46.8,
+            -60.007999999999996
+          ],
+          "bbox": {
+            "x": [
+              -50.349,
+              -43.251
+            ],
+            "y": [
+              -63.556999999999995,
+              -56.458999999999996
+            ],
+            "z": [
+              -1.5543122344752192e-15,
+              1.8489999999999989
+            ]
+          },
+          "max_radius_mm": 3.5489999999999995,
+          "angle_deg": 44.999999999974314
+        }
+      ],
+      "criterion": 1
+    },
+    {
+      "check": "countersink 1 at UNDERSIDE, no extra recess",
+      "pass": true,
+      "measured": [
+        -1.5543122344752192e-15,
+        1.8489999999999989
+      ],
+      "criterion": [
+        0,
+        1.8499999999999999
+      ]
+    },
+    {
+      "check": "countersink 1 mouth/angle",
+      "pass": true,
+      "measured": {
+        "kind": "CONE",
+        "xy": [
+          -46.8,
+          -60.007999999999996
+        ],
+        "bbox": {
+          "x": [
+            -50.349,
+            -43.251
+          ],
+          "y": [
+            -63.556999999999995,
+            -56.458999999999996
+          ],
+          "z": [
+            -1.5543122344752192e-15,
+            1.8489999999999989
+          ]
+        },
+        "max_radius_mm": 3.5489999999999995,
+        "angle_deg": 44.999999999974314
+      },
+      "criterion": "specified mouth radius;45-degree halfangle"
+    },
+    {
+      "check": "countersink 1 no unintended large counterbore",
+      "pass": true,
+      "measured": [],
+      "criterion": "no additional straight recess before cone"
+    },
+    {
+      "check": "screw 1 nominal penetration from actual native seat",
+      "pass": true,
+      "measured": 2.5489999999999977,
+      "criterion": 2.55
+    },
+    {
+      "check": "housing 2 one actual countersink",
+      "pass": true,
+      "measured": [
+        {
+          "kind": "CONE",
+          "xy": [
+            -46.8,
+            60.007000000000005
+          ],
+          "bbox": {
+            "x": [
+              -50.349,
+              -43.251
+            ],
+            "y": [
+              56.458000000000006,
+              63.556000000000004
+            ],
+            "z": [
+              -1.5543122344752192e-15,
+              1.8489999999999989
+            ]
+          },
+          "max_radius_mm": 3.5489999999999995,
+          "angle_deg": 44.999999999974314
+        }
+      ],
+      "criterion": 1
+    },
+    {
+      "check": "countersink 2 at UNDERSIDE, no extra recess",
+      "pass": true,
+      "measured": [
+        -1.5543122344752192e-15,
+        1.8489999999999989
+      ],
+      "criterion": [
+        0,
+        1.8499999999999999
+      ]
+    },
+    {
+      "check": "countersink 2 mouth/angle",
+      "pass": true,
+      "measured": {
+        "kind": "CONE",
+        "xy": [
+          -46.8,
+          60.007000000000005
+        ],
+        "bbox": {
+          "x": [
+            -50.349,
+            -43.251
+          ],
+          "y": [
+            56.458000000000006,
+            63.556000000000004
+          ],
+          "z": [
+            -1.5543122344752192e-15,
+            1.8489999999999989
+          ]
+        },
+        "max_radius_mm": 3.5489999999999995,
+        "angle_deg": 44.999999999974314
+      },
+      "criterion": "specified mouth radius;45-degree halfangle"
+    },
+    {
+      "check": "countersink 2 no unintended large counterbore",
+      "pass": true,
+      "measured": [],
+      "criterion": "no additional straight recess before cone"
+    },
+    {
+      "check": "screw 2 nominal penetration from actual native seat",
+      "pass": true,
+      "measured": 2.5489999999999977,
+      "criterion": 2.55
+    },
+    {
+      "check": "housing 3 one actual countersink",
+      "pass": true,
+      "measured": [
+        {
+          "kind": "CONE",
+          "xy": [
+            46.79900000000001,
+            -60.007999999999996
+          ],
+          "bbox": {
+            "x": [
+              43.25000000000001,
+              50.348000000000006
+            ],
+            "y": [
+              -63.556999999999995,
+              -56.458999999999996
+            ],
+            "z": [
+              -3.552713678800501e-15,
+              1.8489999999999989
+            ]
+          },
+          "max_radius_mm": 3.5489999999999995,
+          "angle_deg": 44.999999999974314
+        }
+      ],
+      "criterion": 1
+    },
+    {
+      "check": "countersink 3 at UNDERSIDE, no extra recess",
+      "pass": true,
+      "measured": [
+        -3.552713678800501e-15,
+        1.8489999999999989
+      ],
+      "criterion": [
+        0,
+        1.8499999999999999
+      ]
+    },
+    {
+      "check": "countersink 3 mouth/angle",
+      "pass": true,
+      "measured": {
+        "kind": "CONE",
+        "xy": [
+          46.79900000000001,
+          -60.007999999999996
+        ],
+        "bbox": {
+          "x": [
+            43.25000000000001,
+            50.348000000000006
+          ],
+          "y": [
+            -63.556999999999995,
+            -56.458999999999996
+          ],
+          "z": [
+            -3.552713678800501e-15,
+            1.8489999999999989
+          ]
+        },
+        "max_radius_mm": 3.5489999999999995,
+        "angle_deg": 44.999999999974314
+      },
+      "criterion": "specified mouth radius;45-degree halfangle"
+    },
+    {
+      "check": "countersink 3 no unintended large counterbore",
+      "pass": true,
+      "measured": [],
+      "criterion": "no additional straight recess before cone"
+    },
+    {
+      "check": "screw 3 nominal penetration from actual native seat",
+      "pass": true,
+      "measured": 2.548999999999996,
+      "criterion": 2.55
+    },
+    {
+      "check": "housing 4 one actual countersink",
+      "pass": true,
+      "measured": [
+        {
+          "kind": "CONE",
+          "xy": [
+            46.79900000000001,
+            60.007000000000005
+          ],
+          "bbox": {
+            "x": [
+              43.25000000000001,
+              50.348000000000006
+            ],
+            "y": [
+              56.458000000000006,
+              63.556000000000004
+            ],
+            "z": [
+              -3.552713678800501e-15,
+              1.8489999999999989
+            ]
+          },
+          "max_radius_mm": 3.5489999999999995,
+          "angle_deg": 44.999999999974314
+        }
+      ],
+      "criterion": 1
+    },
+    {
+      "check": "countersink 4 at UNDERSIDE, no extra recess",
+      "pass": true,
+      "measured": [
+        -3.552713678800501e-15,
+        1.8489999999999989
+      ],
+      "criterion": [
+        0,
+        1.8499999999999999
+      ]
+    },
+    {
+      "check": "countersink 4 mouth/angle",
+      "pass": true,
+      "measured": {
+        "kind": "CONE",
+        "xy": [
+          46.79900000000001,
+          60.007000000000005
+        ],
+        "bbox": {
+          "x": [
+            43.25000000000001,
+            50.348000000000006
+          ],
+          "y": [
+            56.458000000000006,
+            63.556000000000004
+          ],
+          "z": [
+            -3.552713678800501e-15,
+            1.8489999999999989
+          ]
+        },
+        "max_radius_mm": 3.5489999999999995,
+        "angle_deg": 44.999999999974314
+      },
+      "criterion": "specified mouth radius;45-degree halfangle"
+    },
+    {
+      "check": "countersink 4 no unintended large counterbore",
+      "pass": true,
+      "measured": [],
+      "criterion": "no additional straight recess before cone"
+    },
+    {
+      "check": "screw 4 nominal penetration from actual native seat",
+      "pass": true,
+      "measured": 2.548999999999996,
+      "criterion": 2.55
+    }
+  ],
+  "nominal_screw_projections_from_actual_native_seats_mm": [
+    2.5489999999999977,
+    2.5489999999999977,
+    2.548999999999996,
+    2.548999999999996
+  ],
+  "vertical_cylinders_and_cones": [
+    {
+      "kind": "CYLINDER",
+      "xy": [
+        67.0,
+        66.0
+      ],
+      "bbox": {
+        "x": [
+          67.0,
+          75.0
+        ],
+        "y": [
+          66.0,
+          74.0
+        ],
+        "z": [
+          0.3989999999999987,
+          3.6009999999999986
+        ]
+      },
+      "radius_mm": 8.0
+    },
+    {
+      "kind": "CONE",
+      "xy": [
+        67.0,
+        66.0
+      ],
+      "bbox": {
+        "x": [
+          67.0,
+          75.0
+        ],
+        "y": [
+          66.0,
+          74.0
+        ],
+        "z": [
+          -1.7763568394002505e-15,
+          0.3989999999999987
+        ]
+      },
+      "max_radius_mm": 4.0,
+      "angle_deg": 44.999999999974314
+    },
+    {
+      "kind": "CONE",
+      "xy": [
+        67.0,
+        66.0
+      ],
+      "bbox": {
+        "x": [
+          67.0,
+          75.0
+        ],
+        "y": [
+          66.0,
+          74.0
+        ],
+        "z": [
+          3.6009999999999986,
+          3.999999999999999
+        ]
+      },
+      "max_radius_mm": 4.0,
+      "angle_deg": 44.999999999974314
+    },
+    {
+      "kind": "CYLINDER",
+      "xy": [
+        -67.0,
+        66.0
+      ],
+      "bbox": {
+        "x": [
+          -75.0,
+          -67.0
+        ],
+        "y": [
+          66.0,
+          74.0
+        ],
+        "z": [
+          0.3989999999999987,
+          3.6009999999999986
+        ]
+      },
+      "radius_mm": 8.0
+    },
+    {
+      "kind": "CYLINDER",
+      "xy": [
+        67.0,
+        -66.0
+      ],
+      "bbox": {
+        "x": [
+          67.0,
+          75.0
+        ],
+        "y": [
+          -74.0,
+          -66.0
+        ],
+        "z": [
+          0.3989999999999987,
+          3.6009999999999986
+        ]
+      },
+      "radius_mm": 8.0
+    },
+    {
+      "kind": "CONE",
+      "xy": [
+        -67.0,
+        66.0
+      ],
+      "bbox": {
+        "x": [
+          -75.0,
+          -67.0
+        ],
+        "y": [
+          66.0,
+          74.0
+        ],
+        "z": [
+          -1.7763568394002505e-15,
+          0.39899999999999874
+        ]
+      },
+      "max_radius_mm": 4.0,
+      "angle_deg": 44.999999999974314
+    },
+    {
+      "kind": "CONE",
+      "xy": [
+        -67.0,
+        66.0
+      ],
+      "bbox": {
+        "x": [
+          -75.0,
+          -67.0
+        ],
+        "y": [
+          66.0,
+          74.0
+        ],
+        "z": [
+          3.6009999999999986,
+          3.999999999999999
+        ]
+      },
+      "max_radius_mm": 4.0,
+      "angle_deg": 44.999999999974314
+    },
+    {
+      "kind": "CONE",
+      "xy": [
+        67.0,
+        -66.0
+      ],
+      "bbox": {
+        "x": [
+          67.0,
+          75.0
+        ],
+        "y": [
+          -74.0,
+          -66.0
+        ],
+        "z": [
+          -1.5543122344752192e-15,
+          0.3989999999999989
+        ]
+      },
+      "max_radius_mm": 4.0,
+      "angle_deg": 44.999999999974314
+    },
+    {
+      "kind": "CONE",
+      "xy": [
+        -67.0,
+        -66.0
+      ],
+      "bbox": {
+        "x": [
+          -75.0,
+          -67.0
+        ],
+        "y": [
+          -74.0,
+          -66.0
+        ],
+        "z": [
+          -1.3877787807814457e-15,
+          0.39899999999999874
+        ]
+      },
+      "max_radius_mm": 4.0,
+      "angle_deg": 44.999999999974314
+    },
+    {
+      "kind": "CYLINDER",
+      "xy": [
+        -68.0,
+        -60.007999999999996
+      ],
+      "bbox": {
+        "x": [
+          -69.9,
+          -66.1
+        ],
+        "y": [
+          -61.907999999999994,
+          -58.108
+        ],
+        "z": [
+          -1.3322676295501878e-15,
+          3.9999999999999987
+        ]
+      },
+      "radius_mm": 1.9
+    },
+    {
+      "kind": "CONE",
+      "xy": [
+        -46.8,
+        -60.007999999999996
+      ],
+      "bbox": {
+        "x": [
+          -50.349,
+          -43.251
+        ],
+        "y": [
+          -63.556999999999995,
+          -56.458999999999996
+        ],
+        "z": [
+          -1.5543122344752192e-15,
+          1.8489999999999989
+        ]
+      },
+      "max_radius_mm": 3.5489999999999995,
+      "angle_deg": 44.999999999974314
+    },
+    {
+      "kind": "CONE",
+      "xy": [
+        46.79900000000001,
+        -60.007999999999996
+      ],
+      "bbox": {
+        "x": [
+          43.25000000000001,
+          50.348000000000006
+        ],
+        "y": [
+          -63.556999999999995,
+          -56.458999999999996
+        ],
+        "z": [
+          -3.552713678800501e-15,
+          1.8489999999999989
+        ]
+      },
+      "max_radius_mm": 3.5489999999999995,
+      "angle_deg": 44.999999999974314
+    },
+    {
+      "kind": "CYLINDER",
+      "xy": [
+        68.0,
+        -60.007999999999996
+      ],
+      "bbox": {
+        "x": [
+          66.1,
+          69.9
+        ],
+        "y": [
+          -61.907999999999994,
+          -58.108
+        ],
+        "z": [
+          -1.3322676295501878e-15,
+          3.9999999999999987
+        ]
+      },
+      "radius_mm": 1.9
+    },
+    {
+      "kind": "CYLINDER",
+      "xy": [
+        -68.0,
+        60.007000000000005
+      ],
+      "bbox": {
+        "x": [
+          -69.9,
+          -66.1
+        ],
+        "y": [
+          58.107000000000006,
+          61.907000000000004
+        ],
+        "z": [
+          -1.3322676295501878e-15,
+          3.9999999999999987
+        ]
+      },
+      "radius_mm": 1.9
+    },
+    {
+      "kind": "CONE",
+      "xy": [
+        -46.8,
+        60.007000000000005
+      ],
+      "bbox": {
+        "x": [
+          -50.349,
+          -43.251
+        ],
+        "y": [
+          56.458000000000006,
+          63.556000000000004
+        ],
+        "z": [
+          -1.5543122344752192e-15,
+          1.8489999999999989
+        ]
+      },
+      "max_radius_mm": 3.5489999999999995,
+      "angle_deg": 44.999999999974314
+    },
+    {
+      "kind": "CONE",
+      "xy": [
+        46.79900000000001,
+        60.007000000000005
+      ],
+      "bbox": {
+        "x": [
+          43.25000000000001,
+          50.348000000000006
+        ],
+        "y": [
+          56.458000000000006,
+          63.556000000000004
+        ],
+        "z": [
+          -3.552713678800501e-15,
+          1.8489999999999989
+        ]
+      },
+      "max_radius_mm": 3.5489999999999995,
+      "angle_deg": 44.999999999974314
+    },
+    {
+      "kind": "CYLINDER",
+      "xy": [
+        68.0,
+        60.007000000000005
+      ],
+      "bbox": {
+        "x": [
+          66.1,
+          69.9
+        ],
+        "y": [
+          58.107000000000006,
+          61.907000000000004
+        ],
+        "z": [
+          -1.3322676295501878e-15,
+          3.9999999999999987
+        ]
+      },
+      "radius_mm": 1.9
+    },
+    {
+      "kind": "CONE",
+      "xy": [
+        67.0,
+        -66.0
+      ],
+      "bbox": {
+        "x": [
+          67.0,
+          75.0
+        ],
+        "y": [
+          -74.0,
+          -66.0
+        ],
+        "z": [
+          3.600999999999998,
+          4.000000000000002
+        ]
+      },
+      "max_radius_mm": 4.0,
+      "angle_deg": 44.999999999974314
+    },
+    {
+      "kind": "CONE",
+      "xy": [
+        -67.0,
+        -66.0
+      ],
+      "bbox": {
+        "x": [
+          -75.0,
+          -67.0
+        ],
+        "y": [
+          -74.0,
+          -66.0
+        ],
+        "z": [
+          3.6009999999999986,
+          3.9999999999999987
+        ]
+      },
+      "max_radius_mm": 4.0,
+      "angle_deg": 44.999999999974314
+    },
+    {
+      "kind": "CYLINDER",
+      "xy": [
+        -46.8,
+        -60.007999999999996
+      ],
+      "bbox": {
+        "x": [
+          -48.5,
+          -45.099999999999994
+        ],
+        "y": [
+          -61.708,
+          -58.30799999999999
+        ],
+        "z": [
+          1.8489999999999989,
+          3.9999999999999987
+        ]
+      },
+      "radius_mm": 1.7
+    },
+    {
+      "kind": "CYLINDER",
+      "xy": [
+        46.79900000000001,
+        -60.007999999999996
+      ],
+      "bbox": {
+        "x": [
+          45.099000000000004,
+          48.49900000000001
+        ],
+        "y": [
+          -61.708,
+          -58.30799999999999
+        ],
+        "z": [
+          1.8489999999999989,
+          3.9999999999999987
+        ]
+      },
+      "radius_mm": 1.7
+    },
+    {
+      "kind": "CYLINDER",
+      "xy": [
+        -46.8,
+        60.007000000000005
+      ],
+      "bbox": {
+        "x": [
+          -48.5,
+          -45.099999999999994
+        ],
+        "y": [
+          58.307,
+          61.70700000000001
+        ],
+        "z": [
+          1.8489999999999989,
+          3.9999999999999987
+        ]
+      },
+      "radius_mm": 1.7
+    },
+    {
+      "kind": "CYLINDER",
+      "xy": [
+        46.79900000000001,
+        60.007000000000005
+      ],
+      "bbox": {
+        "x": [
+          45.099000000000004,
+          48.49900000000001
+        ],
+        "y": [
+          58.307,
+          61.70700000000001
+        ],
+        "z": [
+          1.8489999999999989,
+          3.9999999999999987
+        ]
+      },
+      "radius_mm": 1.7
+    },
+    {
+      "kind": "CYLINDER",
+      "xy": [
+        -67.0,
+        -66.0
+      ],
+      "bbox": {
+        "x": [
+          -75.0,
+          -67.0
+        ],
+        "y": [
+          -74.0,
+          -66.0
+        ],
+        "z": [
+          0.3989999999999987,
+          3.6009999999999986
+        ]
+      },
+      "radius_mm": 8.0
+    }
+  ],
+  "scope": "actual native exported geometry; ideal conical screw-seat calculation still requires received-head/thread/projection measurement; no supplier/physical/load qualification"
+}

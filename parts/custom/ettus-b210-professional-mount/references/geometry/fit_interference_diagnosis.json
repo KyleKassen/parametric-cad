@@ -1,0 +1,128 @@
+{
+  "params": {
+    "revision": "P1",
+    "status": "PRELIMINARY - prototype manufacture; not application qualified",
+    "units": "mm",
+    "base_width": 160.0,
+    "base_length": 180.0,
+    "base_thickness": 12.0,
+    "base_corner_radius": 16.0,
+    "center_y": 3.053,
+    "pocket_width": 123.0,
+    "pocket_ymin": -75.43,
+    "pocket_ymax": 81.155,
+    "pocket_floor_z": 6.0,
+    "end_stop_top": 9.8,
+    "label_relief_ymin": -77.2,
+    "label_relief_ymax": 83.306,
+    "cutter_radius": 3.0,
+    "edge_break": 0.5,
+    "window_width": 80.0,
+    "window_length": 100.0,
+    "foot_relief_diameter": 16.0,
+    "foot_x": 46.7995,
+    "foot_y": 60.0075,
+    "support_x": 50.0,
+    "support_y_pitch": 70.0,
+    "support_land_width": 16.0,
+    "support_land_length": 20.0,
+    "support_land_height": 1.5,
+    "film_thickness": 0.2,
+    "device_pan_z": 7.7,
+    "device_height": 33.7,
+    "bar_width_y": 20.0,
+    "bar_thickness": 8.0,
+    "bar_corner_radius": 3.0,
+    "spacer_length": 30.0,
+    "spacer_od": 12.0,
+    "spacer_id": 5.5,
+    "retainer_bolt_x": 70.0,
+    "retainer_bolt_length": 50.0,
+    "panel_bolt_x": 70.0,
+    "panel_bolt_y_pitch": 140.0,
+    "clearance_hole": 5.5,
+    "tap_minor_representation": 4.2,
+    "thread": "M5 x 0.8 - 6H THRU; threads represented by minor bores",
+    "source_sha256": "c59b649ccc6a4c128885fd9e64acfd74d756b23bbcff7f119e21a4acb426c912",
+    "source_frame_rotation": "rotate X +90 deg, then Z +180 deg",
+    "source_frame_translation": [
+      58.5005,
+      80.6355,
+      1.21
+    ],
+    "top_gap_target": [
+      0.2,
+      0.4
+    ],
+    "material": "6061-T6/T651 certified stock; unwelded",
+    "finish": "Black sulfuric anodize 10-15 um nominal; dimensions apply after finish. Mask threads and contact bearing seats. No grounding credit."
+  },
+  "base_valid": true,
+  "intersections": [
+    {
+      "solid_index": 172,
+      "intersection_volume_mm3": 0.3884080166505066,
+      "intersection_bbox": {
+        "x": [
+          -55.429982,
+          -51.779018
+        ],
+        "y": [
+          -77.424446,
+          -77.2
+        ],
+        "z": [
+          10.870273,
+          12.0
+        ]
+      },
+      "source_solid_bbox": {
+        "x": [
+          -56.3545,
+          -50.8545
+        ],
+        "y": [
+          -77.424446,
+          -67.8235
+        ],
+        "z": [
+          10.16,
+          15.66
+        ]
+      }
+    },
+    {
+      "solid_index": 173,
+      "intersection_volume_mm3": 0.3884080166505336,
+      "intersection_bbox": {
+        "x": [
+          51.780018,
+          55.430982
+        ],
+        "y": [
+          -77.424446,
+          -77.2
+        ],
+        "z": [
+          10.870273,
+          12.0
+        ]
+      },
+      "source_solid_bbox": {
+        "x": [
+          50.8555,
+          56.3555
+        ],
+        "y": [
+          -77.424446,
+          -67.8235
+        ],
+        "z": [
+          10.16,
+          15.66
+        ]
+      }
+    }
+  ],
+  "total_volume_mm3": 0.7768160333010402
+}

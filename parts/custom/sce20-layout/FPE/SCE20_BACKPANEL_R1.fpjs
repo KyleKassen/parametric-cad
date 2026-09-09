@@ -1,0 +1,81 @@
+// SCE20 R1. Creates new documents; never modifies an existing panel.
+
+function near(a,b,label) { if(Math.abs(a-b)>0.0011) Error(label+": "+a+" != "+b); }
+function verifyPanel(p,s) {
+  near(p.Width(),s.width,"width"); near(p.Height(),s.height,"height");
+  near(p.Thickness(),s.thickness,"thickness");
+  if(p.Material()!=s.material_id || p.MaterialColor()!=s.color_id) Error("material/color");
+  if(p.Elements().length!=s.elements.length) Error("element count "+p.Elements().length);
+  for(var i=0;i<s.elements.length;i++) {
+    var a=s.elements[i],e=p.FindElement(a.id);
+    if(!e) Error("missing "+a.id);
+    near(e.X(),a.x,a.id+" X"); near(e.Y(),a.y,a.id+" Y");
+    if(e.IsReverseSide() != (a.side=="reverse")) Error("side "+a.id);
+    if(a.kind=="bolt") {
+      if(e.Type()!=a.catalog) Error("catalog "+a.id);
+      near(e.Length(),a.length,a.id+" length");
+    } else if(a.kind=="hole") {
+      if(!e.IsDrillHole() || e.IsBlindHole()) Error("through hole "+a.id);
+      near(e.Diameter(),a.diameter,a.id+" diameter");
+      if(a.countersink) {
+        if(!e.HasCountersink()) Error("missing countersink "+a.id);
+        near(e.ConeDiameter(),a.countersink.diameter,a.id+" cone mouth");
+        near(e.DrillHoleDiameter(),a.diameter,a.id+" cone throat");
+        near(e.SinkDepth(),a.countersink.depth,a.id+" cone depth");
+        near(e.ConeAngle(),90,a.id+" cone angle");
+      }
+    } else if(a.kind=="contour_cavity") {
+      if(!e.AsCavity()) Error("not cavity "+a.id);
+      near(e.Depth(),a.depth,a.id+" cavity depth");
+      var b=e.BoundingBox();
+      for(var j=0;j<4;j++) near(b[j],a.bbox[j],a.id+" bbox "+j);
+    }
+  }
+  if(s.name=="Backpanel_R1") {
+    var a=p.FindElement("B210_1"),b=p.FindElement("B210_2");
+    if(Math.abs(Math.abs(a.Y()-b.Y())-120.015)>0.00001) Error("B210 critical120.015 pitch");
+  }
+}
+function createPanel(s) {
+  var p=new Frontpanel(s.name,s.thickness,s.width,s.height,s.material_id,s.color_id);
+  p.SetCornerRadii(s.radius,s.radius,s.radius,s.radius);
+  p.SetEdgeMachining(bevel_45,s.bevel,bevel_45,s.bevel);
+  p.SetRemark(s.remark);
+  if(s.outline_dxf) {
+    var outline=new DxfContour("OUTLINE",s.outline_dxf,refpoint_file,100,false);
+    p.SetBorderContour(outline);
+    p.SetEdgeMachining(bevel_45,s.bevel,bevel_45,s.bevel);
+  }
+  for(var i=0;i<s.elements.length;i++) {
+    var a=s.elements[i],e;
+    if(a.kind=="bolt") e=new Bolt(a.id,a.catalog,a.length);
+    else if(a.kind=="hole") e=new DrillHole(a.id,a.diameter);
+    else if(a.kind=="contour_cavity") {
+      e=new DxfContour(a.id,a.dxf,refpoint_file,100,true);
+    } else Error("unsupported kind "+a.kind);
+    if(a.side=="reverse") e.PutOnReverseSide(); else e.PutOnFrontSide();
+    p.AddElement(e,a.x,a.y);
+    if(a.kind=="contour_cavity") {
+      Print("Attached "+a.id+"\n");
+      e.SetTool(a.tool);
+      Print("Tool selected "+a.id+"\n");
+      e.SetDepth(a.depth);
+      Print("Depth selected "+a.id+"\n");
+    }
+    if(a.kind=="bolt") e.SetDepthOffset(0);
+    if(a.countersink) e.SetCountersinkWithParameters(a.countersink.diameter,a.diameter,a.countersink.depth,90);
+  }
+  verifyPanel(p,s);
+  AddFrontpanel(p);
+  SaveFrontpanel(p,s.save,false);
+  var reloaded=LoadFrontpanel(s.save,s.name+"_readback");
+  verifyPanel(reloaded,s);
+  Print("PASS SAVED+RELOADED "+s.name+" | "+s.width+" x "+s.height+" x "+s.thickness+" mm | "+s.elements.length+" native elements\n");
+  for(var i=0;i<s.elements.length;i++) {
+    var a=s.elements[i];
+    if(a.kind=="bolt") {var e=reloaded.FindElement(a.id);Print(a.id+" "+e.Type()+" L"+e.Length()+" FRONT ("+e.X()+", "+e.Y()+")\n");}
+  }
+}
+
+createPanel({"name":"Backpanel_R1","width":431.8,"height":431.8,"thickness":6,"material_id":5,"color_id":1,"radius":6.35,"bevel":0.4,"elements":[{"kind":"hole","id":"FACTORY_1","x":22.224999999999994,"y":22.224999999999994,"diameter":12.7,"side":"front"},{"kind":"hole","id":"FACTORY_2","x":22.224999999999994,"y":409.57500000000005,"diameter":12.7,"side":"front"},{"kind":"hole","id":"FACTORY_3","x":409.57500000000005,"y":409.57500000000005,"diameter":12.7,"side":"front"},{"kind":"hole","id":"FACTORY_4","x":409.57500000000005,"y":22.224999999999994,"diameter":12.7,"side":"front"},{"kind":"hole","id":"FACTORY_5","x":22.224999999999994,"y":53.974999999999994,"diameter":7.1374,"side":"front"},{"kind":"hole","id":"FACTORY_6","x":409.57500000000005,"y":377.82500000000005,"diameter":7.1374,"side":"front"},{"kind":"bolt","id":"MEANWELL_1","x":400.0,"y":323.4,"catalog":"WGU30","length":12,"side":"front"},{"kind":"bolt","id":"MEANWELL_2","x":400.0,"y":71.4,"catalog":"WGU30","length":12,"side":"front"},{"kind":"bolt","id":"MEANWELL_3","x":343.0,"y":323.4,"catalog":"WGU30","length":12,"side":"front"},{"kind":"bolt","id":"MEANWELL_4","x":343.0,"y":71.4,"catalog":"WGU30","length":12,"side":"front"},{"kind":"bolt","id":"BEDROCK_1","x":16.0,"y":215.0,"catalog":"WGU30","length":12,"side":"front"},{"kind":"bolt","id":"BEDROCK_2","x":16.0,"y":379.0,"catalog":"WGU30","length":12,"side":"front"},{"kind":"bolt","id":"BEDROCK_3","x":168.0,"y":215.0,"catalog":"WGU30","length":12,"side":"front"},{"kind":"bolt","id":"BEDROCK_4","x":168.0,"y":379.0,"catalog":"WGU30","length":12,"side":"front"},{"kind":"bolt","id":"B210_1","x":322.0,"y":378.007,"catalog":"WGU30","length":12,"side":"front"},{"kind":"bolt","id":"B210_2","x":322.0,"y":257.992,"catalog":"WGU30","length":12,"side":"front"},{"kind":"bolt","id":"B210_3","x":186.0,"y":378.007,"catalog":"WGU30","length":12,"side":"front"},{"kind":"bolt","id":"B210_4","x":186.0,"y":257.992,"catalog":"WGU30","length":12,"side":"front"},{"kind":"bolt","id":"PEPLINK_1","x":207.4,"y":47.65,"catalog":"WGO40","length":6,"side":"front"},{"kind":"bolt","id":"PEPLINK_2","x":207.4,"y":130.35,"catalog":"WGO40","length":6,"side":"front"},{"kind":"bolt","id":"PEPLINK_3","x":45.6,"y":47.65,"catalog":"WGO40","length":6,"side":"front"},{"kind":"bolt","id":"PEPLINK_4","x":45.6,"y":130.35,"catalog":"WGO40","length":6,"side":"front"},{"kind":"bolt","id":"OZ_1","x":327.1,"y":130.2,"catalog":"WGU30","length":12,"side":"front"},{"kind":"bolt","id":"OZ_2","x":327.1,"y":34.2,"catalog":"WGU30","length":12,"side":"front"},{"kind":"bolt","id":"OZ_3","x":220.9,"y":130.2,"catalog":"WGU30","length":12,"side":"front"},{"kind":"bolt","id":"OZ_4","x":220.9,"y":34.2,"catalog":"WGU30","length":12,"side":"front"}],"save":"C:/Users/KyleKassen/Documents/FPE_SCE20_20260908_R1/Backpanel_R1.fpd","remark":"SCE20 R1. 431.8 square / R6.35 original SUBPANEL outline and six original mounting holes. 6mm bare aluminum, finished thickness +/-0.05mm. FRONT=components and all16 M3x12 load studs +4 M4x6 female load standoffs; depth offset0. Bases/adhesive flush or below face. Rear seat unchanged. See layout and ordering notes; verify factory stud engagement and thermal process before ordering."});
+Print("ALL REQUESTED PANELS SAVED AND NATIVE READBACK PASSED\n");

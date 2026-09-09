@@ -1,0 +1,563 @@
+{
+  "schema": "enclosure-candidate-fit/1",
+  "units": "mm",
+  "placements": {
+    "meanwell": {
+      "translation": [
+        378,
+        65.6,
+        0
+      ],
+      "rotation": 180
+    },
+    "bedrock": {
+      "translation": [
+        90,
+        315,
+        0
+      ],
+      "rotation": 0
+    },
+    "b210": {
+      "translation": [
+        259,
+        285,
+        0
+      ],
+      "rotation": 180
+    },
+    "peplink": {
+      "translation": [
+        90,
+        100,
+        6
+      ],
+      "rotation": 0
+    },
+    "oz": {
+      "translation": [
+        259,
+        70,
+        0
+      ],
+      "rotation": 0
+    }
+  },
+  "panel_thickness_mm": 6,
+  "source_component_face_z_mm": -106.395,
+  "original_nut_translation_z_mm": 2.825,
+  "fixed_studs_translated": false,
+  "components": {
+    "meanwell": {
+      "source_bbox_mm": {
+        "x": [
+          126.1,
+          198.1
+        ],
+        "y": [
+          -188.2999995,
+          150.3000008
+        ],
+        "z": [
+          -106.395,
+          -15.3949999
+        ]
+      },
+      "fixed_collisions": []
+    },
+    "bedrock": {
+      "source_bbox_mm": {
+        "x": [
+          -208.9,
+          -42.9
+        ],
+        "y": [
+          7.1,
+          191.1
+        ],
+        "z": [
+          -106.395,
+          -50.295
+        ]
+      },
+      "fixed_collisions": [
+        {
+          "other": "enclosure_source_solid_44",
+          "probe_solid_index": 0,
+          "other_solid_index": 0,
+          "volume_mm3": 61.75657846806476,
+          "bbox_mm": {
+            "x": [
+              -197.6813426,
+              -189.6686574
+            ],
+            "y": [
+              188.9125,
+              191.1
+            ],
+            "z": [
+              -106.395,
+              -101.295
+            ]
+          }
+        },
+        {
+          "other": "enclosure_source_solid_63",
+          "probe_solid_index": 0,
+          "other_solid_index": 0,
+          "volume_mm3": 271.3686894071335,
+          "bbox_mm": {
+            "x": [
+              -202.717575,
+              -184.5706407
+            ],
+            "y": [
+              184.2134999,
+              191.1000001
+            ],
+            "z": [
+              -106.3950001,
+              -101.2949999
+            ]
+          }
+        }
+      ]
+    },
+    "b210": {
+      "source_bbox_mm": {
+        "x": [
+          -31.9,
+          118.1
+        ],
+        "y": [
+          -22.5813,
+          155.0663
+        ],
+        "z": [
+          -106.395,
+          -69.1949999
+        ]
+      },
+      "fixed_collisions": []
+    },
+    "peplink": {
+      "source_bbox_mm": {
+        "x": [
+          -211.8,
+          -40.0
+        ],
+        "y": [
+          -197.6995729,
+          -31.4699886
+        ],
+        "z": [
+          -100.395,
+          -71.0949999
+        ]
+      },
+      "fixed_collisions": [
+        {
+          "other": "enclosure_source_solid_46",
+          "probe_solid_index": 6,
+          "other_solid_index": 0,
+          "volume_mm3": 36.297792446611176,
+          "bbox_mm": {
+            "x": [
+              -197.5455015,
+              -189.8044985
+            ],
+            "y": [
+              -190.9000001,
+              -188.9124999
+            ],
+            "z": [
+              -100.395,
+              -96.5199999
+            ]
+          }
+        },
+        {
+          "other": "enclosure_source_solid_46",
+          "probe_solid_index": 10,
+          "other_solid_index": 0,
+          "volume_mm3": 2.6745074762341647,
+          "bbox_mm": {
+            "x": [
+              -197.4718121,
+              -194.8999999
+            ],
+            "y": [
+              -190.8000001,
+              -189.4859049
+            ],
+            "z": [
+              -99.395,
+              -96.5199999
+            ]
+          }
+        },
+        {
+          "other": "enclosure_source_solid_62",
+          "probe_solid_index": 6,
+          "other_solid_index": 0,
+          "volume_mm3": 30.749699810205193,
+          "bbox_mm": {
+            "x": [
+              -200.2117598,
+              -187.1382402
+            ],
+            "y": [
+              -190.9000001,
+              -188.8999993
+            ],
+            "z": [
+              -100.395,
+              -97.8605999
+            ]
+          }
+        },
+        {
+          "other": "enclosure_source_solid_62",
+          "probe_solid_index": 7,
+          "other_solid_index": 0,
+          "volume_mm3": 52.624081460871814,
+          "bbox_mm": {
+            "x": [
+              -199.0570593,
+              -188.2929407
+            ],
+            "y": [
+              -188.9000001,
+              -186.6264999
+            ],
+            "z": [
+              -100.395,
+              -97.8605999
+            ]
+          }
+        },
+        {
+          "other": "enclosure_source_solid_62",
+          "probe_solid_index": 10,
+          "other_solid_index": 0,
+          "volume_mm3": 4.012690309114759,
+          "bbox_mm": {
+            "x": [
+              -199.7039571,
+              -196.2521251
+            ],
+            "y": [
+              -190.8000007,
+              -186.6264999
+            ],
+            "z": [
+              -99.395,
+              -97.8605999
+            ]
+          }
+        }
+      ]
+    },
+    "oz": {
+      "source_bbox_mm": {
+        "x": [
+          -15.0,
+          101.2
+        ],
+        "y": [
+          -214.9500001,
+          -76.8509999
+        ],
+        "z": [
+          -106.3950001,
+          -73.675
+        ]
+      },
+      "fixed_collisions": []
+    }
+  },
+  "factory_socket_service_probes": [
+    {
+      "center_lowerleft_xy_mm": [
+        22.224999999999994,
+        22.224999999999994
+      ],
+      "planning_radius_mm": 15,
+      "planning_height_mm": 60,
+      "component_intersections": [
+        {
+          "other": "peplink",
+          "probe_solid_index": 0,
+          "other_solid_index": 5,
+          "volume_mm3": 993.1031996499333,
+          "bbox_mm": {
+            "x": [
+              -200.9000001,
+              -179.4553172
+            ],
+            "y": [
+              -188.9000001,
+              -178.6749999
+            ],
+            "z": [
+              -89.795,
+              -71.6411594
+            ]
+          }
+        },
+        {
+          "other": "peplink",
+          "probe_solid_index": 0,
+          "other_solid_index": 6,
+          "volume_mm3": 880.034560538165,
+          "bbox_mm": {
+            "x": [
+              -200.9,
+              -178.9339221
+            ],
+            "y": [
+              -190.9000001,
+              -188.8999999
+            ],
+            "z": [
+              -100.395,
+              -74.8489646
+            ]
+          }
+        },
+        {
+          "other": "peplink",
+          "probe_solid_index": 0,
+          "other_solid_index": 7,
+          "volume_mm3": 778.4141078490967,
+          "bbox_mm": {
+            "x": [
+              -207.8562885,
+              -179.4553172
+            ],
+            "y": [
+              -188.9000001,
+              -178.6749999
+            ],
+            "z": [
+              -100.395,
+              -88.7949998
+            ]
+          }
+        },
+        {
+          "other": "peplink",
+          "probe_solid_index": 0,
+          "other_solid_index": 9,
+          "volume_mm3": 44.21605541687207,
+          "bbox_mm": {
+            "x": [
+              -199.9000001,
+              -194.8999999
+            ],
+            "y": [
+              -190.8000001,
+              -184.7999999
+            ],
+            "z": [
+              -84.4885397,
+              -79.4885395
+            ]
+          }
+        },
+        {
+          "other": "peplink",
+          "probe_solid_index": 0,
+          "other_solid_index": 10,
+          "volume_mm3": 44.21605541683335,
+          "bbox_mm": {
+            "x": [
+              -199.9000001,
+              -194.8999999
+            ],
+            "y": [
+              -190.8000001,
+              -184.7999999
+            ],
+            "z": [
+              -99.395,
+              -94.3949998
+            ]
+          }
+        },
+        {
+          "other": "peplink",
+          "probe_solid_index": 0,
+          "other_solid_index": 19,
+          "volume_mm3": 3.9229865512161526,
+          "bbox_mm": {
+            "x": [
+              -179.3,
+              -178.9339222
+            ],
+            "y": [
+              -190.9,
+              -189.3902159
+            ],
+            "z": [
+              -92.2949999,
+              -79.0949999
+            ]
+          }
+        },
+        {
+          "other": "peplink",
+          "probe_solid_index": 0,
+          "other_solid_index": 28,
+          "volume_mm3": 206.08843454395338,
+          "bbox_mm": {
+            "x": [
+              -197.9,
+              -179.6331207
+            ],
+            "y": [
+              -188.4,
+              -178.675
+            ],
+            "z": [
+              -93.895,
+              -92.2949999
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "center_lowerleft_xy_mm": [
+        22.224999999999994,
+        409.57500000000005
+      ],
+      "planning_radius_mm": 15,
+      "planning_height_mm": 60,
+      "component_intersections": [
+        {
+          "other": "bedrock",
+          "probe_solid_index": 0,
+          "other_solid_index": 0,
+          "volume_mm3": 1334.2308692605675,
+          "bbox_mm": {
+            "x": [
+              -207.4380402,
+              -178.8976735
+            ],
+            "y": [
+              178.6749999,
+              191.1000001
+            ],
+            "z": [
+              -106.3950001,
+              -101.2949999
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "center_lowerleft_xy_mm": [
+        409.57500000000005,
+        22.224999999999994
+      ],
+      "planning_radius_mm": 15,
+      "planning_height_mm": 60,
+      "component_intersections": []
+    },
+    {
+      "center_lowerleft_xy_mm": [
+        409.57500000000005,
+        409.57500000000005
+      ],
+      "planning_radius_mm": 15,
+      "planning_height_mm": 60,
+      "component_intersections": []
+    }
+  ],
+  "PSU_planning_corridors": [
+    {
+      "name": "terminal/intake planning",
+      "source_bbox_mm": {
+        "x": [
+          141.6,
+          182.6
+        ],
+        "y": [
+          -250.3,
+          -150.3
+        ],
+        "z": [
+          -100.395,
+          -15.395
+        ]
+      },
+      "enclosure_and_factory_hardware_collisions": [],
+      "other_component_collisions": [],
+      "nearest_inner_y_wall_gap_mm": 1.7949999999999875
+    },
+    {
+      "name": "fan/exhaust planning",
+      "source_bbox_mm": {
+        "x": [
+          141.6,
+          182.6
+        ],
+        "y": [
+          150.3,
+          250.3
+        ],
+        "z": [
+          -100.395,
+          -15.395
+        ]
+      },
+      "enclosure_and_factory_hardware_collisions": [],
+      "other_component_collisions": [],
+      "nearest_inner_y_wall_gap_mm": 1.7949999999999875
+    }
+  ],
+  "PSU_wall_band": {
+    "source_z_mm": [
+      -100.395,
+      -15.394999999999996
+    ],
+    "source_x_mm": [
+      -252.095,
+      252.095
+    ],
+    "source_y_mm": [
+      -252.095,
+      252.095
+    ],
+    "lowerleft_panel_xy_mm": [
+      -36.195,
+      467.995
+    ],
+    "evidence": "solid0 faces45/67; solid1 face4; solid2 face10 in panel_geometry.json"
+  },
+  "wall_slab_boolean_proof": {
+    "bbox_mm": {
+      "x": [
+        -252.094,
+        252.094
+      ],
+      "y": [
+        -252.094,
+        252.094
+      ],
+      "z": [
+        -106.395,
+        -6.395
+      ]
+    },
+    "hits": []
+  },
+  "notes": [
+    "The 100 mm corridors are planning envelopes from the source adapter design, not measured air paths or CFD results.",
+    "All clearance values are nominal CAD, without production tolerance allowance.",
+    "The best centered straight 500.6 mm combined PSU + air-corridor span has only 1.795 mm nominal gap to each 504.19 mm-separated inner wall. Translation cannot increase the smaller gap.",
+    "Closed steel walls at corridor ends do not certify external airflow or enclosure heat rejection."
+  ]
+}

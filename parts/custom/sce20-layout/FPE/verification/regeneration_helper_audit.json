@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "scope": "portable helper only; no native application execution or geometry qualification",
+  "qa_directory": "C:\\tmp\\sce20_fpd_helper_zlvm0muz",
+  "checks": [
+    {
+      "check": "helper stages successfully",
+      "pass": true,
+      "stdout": "Staged two scripts and inputs for four panels in C:\\tmp\\sce20_fpd_helper_zlvm0muz\\staged\nNo native .fpd files were created or changed.\nIn Front Panel Designer: Edit > Scripts > Add; select and execute each staged .fpjs.\nRequire PASS SAVED+RELOADED, inspect native features and 2D/3D views, then export and verify STEP."
+    },
+    {
+      "check": "all four native save paths rewritten",
+      "pass": true
+    },
+    {
+      "check": "input geometry identical excluding paths",
+      "pass": true
+    },
+    {
+      "check": "native API template bodies preserved exactly",
+      "pass": true
+    },
+    {
+      "check": "both staged JavaScript files parse",
+      "pass": true
+    },
+    {
+      "check": "Mean Well adjacent DXF byte-identical",
+      "pass": true
+    },
+    {
+      "check": "no native files created",
+      "pass": true
+    },
+    {
+      "check": "existing staged files protected; no changes",
+      "pass": true
+    },
+    {
+      "check": "existing native target blocks all staging before writes",
+      "pass": true
+    },
+    {
+      "check": "delivery folder cannot be staging target",
+      "pass": true
+    }
+  ],
+  "source_sha256": {
+    "SCE20_BACKPANEL_R1.fpjs": "d700b96a27d75e2386e21d01c3f46b7fe5470b20b6d2d417c0c153a27b59d116",
+    "SCE20_BACKPANEL_R1_inputs.json": "550a19e92dae205d4b5926c48a590d0cd1080ddd4af3a6e48f6a871fcf1a4e8d",
+    "SCE20_ADAPTERS_FINAL_R3.fpjs": "caa3f79d2cc3996481ec68f81fe760a850336d52fd85a5d5a7858ef2fb5e1d7b",
+    "SCE20_ADAPTERS_FINAL_R3_inputs.json": "af2e899d7195b60be268ffd18c5645c3c24370ac31f7015c6db725c2ad85bbe7"
+  },
+  "helper_sha256": "5aa4f6359a69b6379b53e1619d5c891b4506a30763fb41e04dc80f33ea7bf836"
+}

@@ -1,0 +1,475 @@
+{
+  "schema": "design-review/2",
+  "generated": "2026-09-08T19:32:29+00:00",
+  "source": "C:\\tmp\\sce_adapters\\B210_FPE_R1\\B210_FPE_R1_plate.step",
+  "role": "plate",
+  "role_declared": "plate",
+  "rubric": {
+    "weights": {
+      "edge_break_coverage": 0.19,
+      "face_composition": 0.11,
+      "feature_composition": 0.19,
+      "pattern_discipline": 0.23,
+      "radius_vocabulary": 0.12,
+      "symmetry": 0.08,
+      "sharp_edge_length": 0.08
+    },
+    "void_knots": [
+      0.3,
+      0.7,
+      0.22,
+      0.55
+    ],
+    "proportion_knots": [
+      3.0,
+      16.0
+    ],
+    "exclude_blank_perimeter": false,
+    "note": "an interface: thin by function, and IS its hole pattern",
+    "claim": "thin by function"
+  },
+  "style": {
+    "radius_ladder": [
+      0.4,
+      0.6,
+      1.0,
+      1.5,
+      2.5,
+      3.0,
+      4.0,
+      5.0,
+      8.0,
+      12.0,
+      16.0,
+      24.0
+    ],
+    "ladder_source": "lib.features.Style.radius_ladder + lib.features.Style.break_ladder"
+  },
+  "config_errors": [],
+  "metrics": {
+    "edge_break_coverage": {
+      "id": "edge_break_coverage",
+      "status": "scored",
+      "score": 100.0,
+      "message": "100.0% of convex body edge length is broken (647 of 647 mm), body term 100.0; 100% of bore/boss rim length is broken",
+      "value": 1.0,
+      "body_score": 100.0,
+      "rim_score": 100.0,
+      "body_broken_mm": 647.3,
+      "body_sharp_mm": 0.0,
+      "rim_broken_mm": 740.0,
+      "rim_bare_mm": 0.0,
+      "rim_coverage": 1.0,
+      "worst": [],
+      "population": 1387.3166,
+      "unmeasured": 0.0,
+      "unmeasured_fraction": 0.0,
+      "examined": 1387.3166,
+      "relevant": 1387.3166,
+      "examined_fraction": 1.0
+    },
+    "sharp_edge_length": {
+      "id": "sharp_edge_length",
+      "status": "scored",
+      "score": 100.0,
+      "message": "0 mm of unbroken convex edge (0.00 x bbox diagonal)",
+      "value": 0.0,
+      "per_diagonal": 0.0,
+      "bbox_diagonal_mm": 210.8,
+      "population": 647.3432,
+      "unmeasured": 0.0,
+      "unmeasured_fraction": 0.0,
+      "examined": 1387.3166,
+      "relevant": 1387.3166,
+      "examined_fraction": 1.0
+    },
+    "face_composition": {
+      "id": "face_composition",
+      "status": "scored",
+      "score": 0.7978922578922935,
+      "message": "largest empty region spans 0.99 of the silhouette scale on the +Z face at [-0.0, 0.0, 4.0] (empty circle R73.6 mm); area-weighted mean 0.95 over 6 exterior face(s), 0 of them developed curved skin",
+      "value": 0.9879,
+      "void_worst": 0.9879,
+      "void_mean": 0.9489,
+      "knots": [
+        0.3,
+        0.7,
+        0.22,
+        0.55
+      ],
+      "developed_faces": 0,
+      "faces": [
+        {
+          "lec_radius_mm": 73.6,
+          "silhouette_mm2": 22200.0,
+          "features": 8,
+          "wire_failures": 0,
+          "at": [
+            -0.0,
+            0.0,
+            4.0
+          ],
+          "normal": "+Z",
+          "index": 10,
+          "area_mm2": 21821.7,
+          "void": 0.988
+        },
+        {
+          "lec_radius_mm": 72.55,
+          "silhouette_mm2": 22200.0,
+          "features": 8,
+          "wire_failures": 0,
+          "at": [
+            -0.0,
+            0.0,
+            0.0
+          ],
+          "normal": "-Z",
+          "index": 8,
+          "area_mm2": 21704.0,
+          "void": 0.974
+        },
+        {
+          "lec_radius_mm": 1.6,
+          "silhouette_mm2": 592.0,
+          "features": 0,
+          "wire_failures": 0,
+          "at": [
+            -75.0,
+            -0.0,
+            2.0
+          ],
+          "normal": "-X",
+          "index": 0,
+          "area_mm2": 422.4,
+          "void": 0.132
+        },
+        {
+          "lec_radius_mm": 1.6,
+          "silhouette_mm2": 592.0,
+          "features": 0,
+          "wire_failures": 0,
+          "at": [
+            75.0,
+            -0.0,
+            2.0
+          ],
+          "normal": "+X",
+          "index": 41,
+          "area_mm2": 422.4,
+          "void": 0.132
+        },
+        {
+          "lec_radius_mm": 1.6,
+          "silhouette_mm2": 600.0,
+          "features": 0,
+          "wire_failures": 0,
+          "at": [
+            0.0,
+            -74.0,
+            2.0
+          ],
+          "normal": "-Y",
+          "index": 7,
+          "area_mm2": 428.8,
+          "void": 0.131
+        },
+        {
+          "lec_radius_mm": 1.6,
+          "silhouette_mm2": 600.0,
+          "features": 0,
+          "wire_failures": 0,
+          "at": [
+            0.0,
+            74.0,
+            2.0
+          ],
+          "normal": "+Y",
+          "index": 12,
+          "area_mm2": 428.8,
+          "void": 0.131
+        }
+      ],
+      "population": 45228.1031,
+      "unmeasured": 0.0,
+      "unmeasured_fraction": 0.0,
+      "examined": 45228.1031,
+      "relevant": 46238.9769,
+      "examined_fraction": 0.9781
+    },
+    "feature_composition": {
+      "id": "feature_composition",
+      "status": "scored",
+      "score": 100.0,
+      "message": "100% of 8 feature centres sit on a shared centreline or a constant-pitch run, across 2 family(ies); weakest is 4x D3.8 on +Z (100%)",
+      "value": 1.0,
+      "families": [
+        {
+          "diameter": 3.8,
+          "axis": "+Z",
+          "count": 4,
+          "organised": 1.0,
+          "per_axis": [
+            1.0,
+            1.0
+          ],
+          "lattice_economy": 1.0
+        },
+        {
+          "diameter": 3.4,
+          "axis": "+Z",
+          "count": 4,
+          "organised": 1.0,
+          "per_axis": [
+            1.0,
+            1.0
+          ],
+          "lattice_economy": 1.0
+        }
+      ],
+      "population": 8,
+      "unmeasured": 0,
+      "unmeasured_fraction": 0.0
+    },
+    "pattern_discipline": {
+      "id": "pattern_discipline",
+      "status": "scored",
+      "score": 100.0,
+      "message": "2 fastener family(ies), 8 of 8 screws patterned; weakest is 4x D3.8 on Z (score 100)",
+      "value": 100.0,
+      "screws": 8,
+      "loose": 0,
+      "groups": [
+        {
+          "diameter": 3.8,
+          "count": 4,
+          "axis": "Z",
+          "pitch_cv": 0.0,
+          "symmetric_fraction": 1.0,
+          "inset_cv": 0.0,
+          "mean_inset_mm": 7.0,
+          "score": 100.0
+        },
+        {
+          "diameter": 3.4,
+          "count": 4,
+          "axis": "Z",
+          "pitch_cv": 0.0,
+          "symmetric_fraction": 1.0,
+          "inset_cv": 0.0,
+          "mean_inset_mm": 13.99,
+          "score": 100.0
+        }
+      ],
+      "population": 8,
+      "unmeasured": 0.0,
+      "unmeasured_fraction": 0.0
+    },
+    "radius_vocabulary": {
+      "id": "radius_vocabulary",
+      "status": "scored",
+      "score": 100.0,
+      "message": "2 distinct break sizes, 100% of exterior blend/chamfer area on the ladder",
+      "value": 1.0,
+      "visible": true,
+      "applied": 1.0,
+      "applied_factor": 1.0,
+      "distinct": [
+        {
+          "size": 0.4,
+          "faces": 16,
+          "area_mm2": 657.3,
+          "kind": "chamfer",
+          "on_ladder": true
+        },
+        {
+          "size": 8.0,
+          "faces": 4,
+          "area_mm2": 160.8,
+          "kind": "fillet",
+          "on_ladder": true
+        }
+      ],
+      "off_ladder": [],
+      "split_rungs": [],
+      "coherence": 1.0,
+      "split_ratio": 1.2,
+      "ladder": [
+        0.4,
+        0.6,
+        1.0,
+        1.5,
+        2.5,
+        3.0,
+        4.0,
+        5.0,
+        8.0,
+        12.0,
+        16.0,
+        24.0
+      ],
+      "reclassified_faces": 4,
+      "reclassified_mm2": 1702.4,
+      "population": 818.186,
+      "unmeasured": 0.0,
+      "unmeasured_fraction": 0.0
+    },
+    "symmetry": {
+      "id": "symmetry",
+      "status": "scored",
+      "score": 100.0,
+      "message": "best mirror plane is normal-X: 0.0% asymmetric volume, with slender difference spread over 0% of the bbox diagonal",
+      "value": 0.0,
+      "best_axis": "X",
+      "worst_axis": "X",
+      "worst_axis_score": 100.0,
+      "extent": 0.0,
+      "raw_extent": 0.0,
+      "per_axis": {
+        "X": [
+          0.0,
+          0.0
+        ],
+        "Y": [
+          0.0,
+          0.0
+        ],
+        "Z": [
+          0.0011,
+          0.0081
+        ]
+      },
+      "per_axis_raw_extent": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0484
+      },
+      "errors": null,
+      "population": 3.0,
+      "unmeasured": 0.0,
+      "unmeasured_fraction": 0.0
+    },
+    "proportion": {
+      "id": "proportion",
+      "status": "not_required",
+      "score": null,
+      "message": "not required for role plate: an interface: thin by function, and IS its hole pattern"
+    }
+  },
+  "findings": [
+    {
+      "id": "empty_face_region",
+      "metric": "face_composition",
+      "severity": "high",
+      "message": "the +Z face at [-0.0, 0.0, 4.0] carries an empty circle of R73.6 mm, 0.99 of its own silhouette scale - sink a 1.5-2.5 mm recessed panel with a rounded-corner boundary, leave a proud perimeter frame, and fill it with a rib field. Only relief deeper than 1 mm counts, so a scribed outline buys nothing",
+      "at": [
+        -0.0,
+        0.0,
+        4.0
+      ],
+      "builder": "lib.features.recessed_panel() / lib.features.rib_field() / lib.features.connector_land()"
+    }
+  ],
+  "shape": {
+    "solids": 1,
+    "faces": 50,
+    "edges": 112,
+    "bbox_size": [
+      150.0,
+      148.0,
+      4.0
+    ],
+    "bbox_surface_mm2": 46784.0,
+    "volume_mm3": 88060.2,
+    "features_error": null,
+    "frame": {
+      "basis": "faces",
+      "size_mm": [
+        150.0,
+        148.0,
+        4.0
+      ],
+      "diagonal_mm": 210.761,
+      "axes": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          -0.0
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "world_aligned": true,
+      "explained": 0.9935
+    }
+  },
+  "weights": {
+    "edge_break_coverage": 0.19,
+    "face_composition": 0.11,
+    "feature_composition": 0.19,
+    "pattern_discipline": 0.23,
+    "radius_vocabulary": 0.12,
+    "symmetry": 0.08,
+    "sharp_edge_length": 0.08
+  },
+  "probe_failures": 0,
+  "coverage": 1.0,
+  "errored": [],
+  "absent": [],
+  "floors": [
+    {
+      "metric": "edge_break_coverage",
+      "floor": 10.0,
+      "score": 100.0,
+      "status": "scored",
+      "met": true,
+      "detail": "its body term 100.0 against a floor of 10",
+      "why": "a part on which essentially no BODY corner is broken has not had a refinement pass at all. 10 is a body coverage of about 23% (the term is zero at or below 15% and 100 at 92%). It is held against the BODY term, not the 0.85/0.15 composite: the rim term alone is worth 15.0, so deburring the bore mouths of an otherwise raw box used to clear a floor of 10 while not one corner of the part was broken. Measured under this key over the corpus, the lowest body term any good case reaches under its own role is the sheet bracket's 24.2 - so the margin is 14.2, and the next lowest is the sealed cover at 63.8"
+    },
+    {
+      "metric": "sharp_edge_length",
+      "floor": 25.0,
+      "score": 100.0,
+      "status": "scored",
+      "met": true,
+      "detail": "scored 100.0 against a floor of 25",
+      "why": "the same defect measured in absolute length rather than as a fraction: 25 is 5.3 bbox diagonals of unbroken convex edge, against the 6.9 a completely raw rectangular prism measures. A part can hold a passable break FRACTION on a small edge population while carrying a whole prism of raw edge, and this is the only metric that sees that. The lowest good corpus case is the sealed cover at 78.32, so the margin is 53"
+    }
+  ],
+  "floor_failures": [],
+  "excused": {},
+  "excused_weight": 0.0,
+  "config_delta": {
+    "default_score": 74.0,
+    "role_only_score": 89.1,
+    "configured_score": 89.1,
+    "delta": 15.1,
+    "role_delta": 15.1,
+    "waiver_delta": 0.0,
+    "cap": 53.0,
+    "role_cap": 28.0,
+    "waiver_cap": 25.0,
+    "within_cap": true,
+    "over": [],
+    "knobs": [
+      "role=plate"
+    ],
+    "message": "configuration (role=plate) is worth +15.1 points against the default rubric on the same geometry (74.0 -> 89.1): role +15.1 of 28, waivers +0.0 of 25"
+  },
+  "score": 89.1,
+  "score_unexcused": 89.1,
+  "band_uncapped": "A",
+  "band": "A",
+  "band_label": "meets every measured standard",
+  "status": "ok",
+  "message": "score 89.1 (A - meets every measured standard) as a plate",
+  "elapsed_s": 0.49
+}

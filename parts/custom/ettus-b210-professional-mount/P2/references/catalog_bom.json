@@ -1,0 +1,487 @@
+{
+  "revision": "P2",
+  "status": "FINAL SELECTED CATALOG HARDWARE / CONSUMABLE BOM; preliminary mount still requires prototype validation",
+  "source_date": "2026-09-08",
+  "currency": "USD",
+  "selection_authority": "Root engineering task confirmed selected part numbers and quantities on this turn.",
+  "combined_scope": "Two complete independent mounts, one flat and one upright. Physical hardware quantities add; a shared film sheet, threadlocker bottle and shim selection packs supply both.",
+  "price_scope": "Observed public McMaster prices only, excluding shipping, tax, machining, finish, support structure and purchased radio. Reconfirm at procurement; no quote or purchase performed.",
+  "quantity_rules": [
+    "H rows are installed hardware quantities.",
+    "C01 rows are purchased sheets; installed cut-patch counts are separate fields.",
+    "C02 and S rows have AR installed quantities. initial_procurement_packs is starter inventory, not a mandatory installed quantity.",
+    "Pack-rounded purchase estimates include a bottle and one pack of each shim for fit selection. Removing unused optional inventory changes the estimate."
+  ],
+  "items": [
+    {
+      "item_id": "H01",
+      "mcmaster_part_number": "91290A197",
+      "description": "M5 x 0.8 x 45 mm fully threaded socket-head cap screw; Class 12.9 black-oxide alloy steel; DIN 912 / ISO 4762; head Ø8.5 x 5 mm; 4 mm hex",
+      "qty_flat": 4,
+      "qty_upright": 4,
+      "qty_combined": 8,
+      "quantity_unit": "screw",
+      "pack_qty": 5,
+      "pack_unit": "screw",
+      "pack_price_usd": 3.26,
+      "cost_per_unit_usd": 0.652,
+      "cost_per_unit_exact_usd": "0.652",
+      "cost_per_unit_basis": "USD per screw; pack price divided by pack quantity without rounding to cents",
+      "url": "https://www.mcmaster.com/91290A197/",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL",
+      "source_date": "2026-09-08",
+      "notes": [
+        "Retainer screw into 9.20 mm aluminum boss only. Nominal 5 mm bar + 1 mm washer + 30 mm spacer + 0.6508 mm selected shim stack gives 8.3492 mm nominal screw entry and 0.8508 mm nominal tip recess.",
+        "Measure actual device, spacer, bonded film and shim stack. Select final cold/warm top gap 0.20–0.30 mm, at least 7.5 mm effective full-thread engagement, and at least 0.5 mm screw-tip recess. Nominal entry is not effective full-thread engagement.",
+        "Dry indoor service. No catalog tightening torque supplied."
+      ],
+      "catalog_strength_class": "12.9",
+      "catalog_tensile_strength_psi": 170000,
+      "thread_fit": "5g6g",
+      "initial_procurement_packs": {
+        "flat": 1,
+        "upright": 1,
+        "combined": 2
+      },
+      "initial_procurement_cost_usd": {
+        "flat": 3.26,
+        "upright": 3.26,
+        "combined": 6.52
+      }
+    },
+    {
+      "item_id": "H02",
+      "mcmaster_part_number": "91290A252",
+      "description": "M5 x 0.8 x 25 mm fully threaded socket-head cap screw; Class 12.9 black-oxide alloy steel; DIN 912 / ISO 4762; head Ø8.5 x 5 mm; 4 mm hex",
+      "qty_flat": 4,
+      "qty_upright": 4,
+      "qty_combined": 8,
+      "quantity_unit": "screw",
+      "pack_qty": 50,
+      "pack_unit": "screw",
+      "pack_price_usd": 10.96,
+      "cost_per_unit_usd": 0.2192,
+      "cost_per_unit_exact_usd": "0.2192",
+      "cost_per_unit_basis": "USD per screw; pack price divided by pack quantity without rounding to cents",
+      "url": "https://www.mcmaster.com/91290A252/",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL",
+      "source_date": "2026-09-08",
+      "notes": [
+        "Flat: four base-to-support bolts. Upright: four cradle-to-web bolts only. The four foot bolts are H07 M5 x 30 mm.",
+        "Specified counts assume 6 mm supporting plate; reselect length if plate or stack changes.",
+        "Do not apply full Class 12.9 screw preload to lower-rated nut/washer or aluminum members."
+      ],
+      "catalog_strength_class": "12.9",
+      "catalog_tensile_strength_psi": 170000,
+      "thread_fit": "5g6g",
+      "initial_procurement_packs": {
+        "flat": 1,
+        "upright": 1,
+        "combined": 1
+      },
+      "initial_procurement_cost_usd": {
+        "flat": 10.96,
+        "upright": 10.96,
+        "combined": 10.96
+      }
+    },
+    {
+      "item_id": "H03",
+      "mcmaster_part_number": "98688A144",
+      "description": "M5 zinc-plated high-strength steel flat washer; ISO 7089; Ø5.3 ID x Ø10 OD x 0.9–1.1 mm; Rockwell C30; catalog for Class 10.9",
+      "qty_flat": 12,
+      "qty_upright": 16,
+      "qty_combined": 28,
+      "quantity_unit": "washer",
+      "pack_qty": 100,
+      "pack_unit": "washer",
+      "pack_price_usd": 10.82,
+      "cost_per_unit_usd": 0.1082,
+      "cost_per_unit_exact_usd": "0.1082",
+      "cost_per_unit_basis": "USD per washer; pack price divided by pack quantity without rounding to cents",
+      "url": "https://www.mcmaster.com/98688A144/",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL",
+      "source_date": "2026-09-08",
+      "notes": [
+        "One under each retainer screw; one under head and one under nut at through-bolt joints except upright foot TOP: those four washers are H06 Ø15 mm. Upright foot bottom nuts retain H03 Ø10 mm washers.",
+        "Actual 0.9–1.1 mm thickness enters the screw stack. Washer is listed for Class 10.9, not full Class 12.9 assembly capacity."
+      ],
+      "catalog_for_fastener_class": "10.9",
+      "initial_procurement_packs": {
+        "flat": 1,
+        "upright": 1,
+        "combined": 1
+      },
+      "initial_procurement_cost_usd": {
+        "flat": 10.82,
+        "upright": 10.82,
+        "combined": 10.82
+      }
+    },
+    {
+      "item_id": "H04",
+      "mcmaster_part_number": "94645A102",
+      "description": "M5 x 0.8 nylon-insert locknut; Class 10 zinc-plated steel; DIN 985; 8 mm across flats x 5 mm overall height; 6H",
+      "qty_flat": 4,
+      "qty_upright": 8,
+      "qty_combined": 12,
+      "quantity_unit": "nut",
+      "pack_qty": 100,
+      "pack_unit": "nut",
+      "pack_price_usd": 15.66,
+      "cost_per_unit_usd": 0.1566,
+      "cost_per_unit_exact_usd": "0.1566",
+      "cost_per_unit_basis": "USD per nut; pack price divided by pack quantity without rounding to cents",
+      "url": "https://www.mcmaster.com/94645A102/",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL",
+      "source_date": "2026-09-08",
+      "notes": [
+        "Through-bolt joints only. Nylon insert maximum 185°F /85°C.",
+        "Class 10 nut limits the joint; no Class 12.9 joint rating claimed.",
+        "Replace nuts after prototype removal cycles before final installation; locking retention diminishes with reuse."
+      ],
+      "catalog_strength_class": "10",
+      "initial_procurement_packs": {
+        "flat": 1,
+        "upright": 1,
+        "combined": 1
+      },
+      "initial_procurement_cost_usd": {
+        "flat": 15.66,
+        "upright": 15.66,
+        "combined": 15.66
+      }
+    },
+    {
+      "item_id": "H05",
+      "mcmaster_part_number": "94669A146",
+      "description": "Aluminum unthreaded round spacer for M5; 30 mm long x Ø10 mm OD x Ø5.3 mm ID; each dimension ±0.13 mm",
+      "qty_flat": 4,
+      "qty_upright": 4,
+      "qty_combined": 8,
+      "quantity_unit": "spacer",
+      "pack_qty": 1,
+      "pack_unit": "spacer",
+      "pack_price_usd": 2.14,
+      "cost_per_unit_usd": 2.14,
+      "cost_per_unit_exact_usd": "2.14",
+      "cost_per_unit_basis": "USD per spacer; pack price divided by pack quantity without rounding to cents",
+      "url": "https://www.mcmaster.com/94669A146/",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL",
+      "source_date": "2026-09-08",
+      "notes": [
+        "Catalog alloy, temper, yield strength and finish are not specified. Do not label this bought spacer 6061-T6.",
+        "Inspect actual length and match/select/shim for required finished top clearance.",
+        "Price uses observed 1–24 piece tier; quantities here remain in that tier."
+      ],
+      "catalog_tensile_strength_psi": 45000,
+      "catalog_hardness": "Rockwell B50",
+      "source_record": "mcmaster_spacers_films.json",
+      "initial_procurement_packs": {
+        "flat": 4,
+        "upright": 4,
+        "combined": 8
+      },
+      "initial_procurement_cost_usd": {
+        "flat": 8.56,
+        "upright": 8.56,
+        "combined": 17.12
+      }
+    },
+    {
+      "item_id": "H06",
+      "mcmaster_part_number": "91100A140",
+      "description": "M5 zinc-plated steel oversized flat washer; DIN 9021; Ø5.3 ID x Ø15 OD x 1.0–1.4 mm; Rockwell B56; foot TOP only",
+      "qty_flat": 0,
+      "qty_upright": 4,
+      "qty_combined": 4,
+      "quantity_unit": "washer",
+      "pack_qty": 100,
+      "pack_unit": "washer",
+      "pack_price_usd": 5.12,
+      "cost_per_unit_usd": 0.0512,
+      "cost_per_unit_exact_usd": "0.0512",
+      "cost_per_unit_basis": "USD per washer; pack price divided by pack quantity without rounding to cents",
+      "url": "https://www.mcmaster.com/91100A140/",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL",
+      "source_date": "2026-09-08",
+      "notes": [
+        "Upright foot TOP only: one under each of four foot screw heads. Replaces H03 at those four positions. Do not stack an extra H03 above it.",
+        "Model nominal thickness is 1.2 mm; catalog allows 1.0–1.4 mm. Recheck foot screw protrusion with measured washers.",
+        "Catalog table and technical drawing do not state ID/OD tolerance. Incoming acceptance OD ≥14.9 mm is a design requirement, not a supplier-guaranteed tolerance.",
+        "Catalog hardness is Rockwell B56 and DIN 9021 is stated; no strength grade/class or yield value is specified. Do not use full Class 12.9 preload. Qualify washer and aluminum bearing behavior on prototype.",
+        "Material certificate with traceable lot number available; observed delivery label tomorrow is not a delivery commitment."
+      ],
+      "catalog_strength_class": null,
+      "catalog_hardness": "Rockwell B56",
+      "nominal_id_mm": 5.3,
+      "nominal_od_mm": 15.0,
+      "thickness_min_mm": 1.0,
+      "thickness_max_mm": 1.4,
+      "catalog_diameter_tolerance": "Not stated",
+      "incoming_acceptance_min_od_mm": 14.9,
+      "initial_procurement_packs": {"flat": 0, "upright": 1, "combined": 1},
+      "initial_procurement_cost_usd": {"flat": 0, "upright": 5.12, "combined": 5.12}
+    },
+    {
+      "item_id": "H07",
+      "mcmaster_part_number": "91290A194",
+      "description": "M5 x 0.8 x 30 mm fully threaded socket-head cap screw; Class 12.9 black-oxide alloy steel; DIN 912 / ISO 4762; head Ø8.5 x 5 mm; 4 mm hex; upright foot only",
+      "qty_flat": 0,
+      "qty_upright": 4,
+      "qty_combined": 4,
+      "quantity_unit": "screw",
+      "pack_qty": 10,
+      "pack_unit": "screw",
+      "pack_price_usd": 4.59,
+      "cost_per_unit_usd": 0.459,
+      "cost_per_unit_exact_usd": "0.459",
+      "cost_per_unit_basis": "USD per screw; pack price divided by pack quantity without rounding to cents",
+      "url": "https://www.mcmaster.com/91290A194/",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL",
+      "source_date": "2026-09-08",
+      "notes": [
+        "Upright foot only: four screws through integral 10 mm total-thickness bolt seats. Main foot remains 6 mm thick.",
+        "Nominal head-to-nut-end stack: 10 mm seat + 1.2 mm H06 top washer + 6 mm supporting plate + 1 mm H03 bottom washer + 5 mm H04 nut = 23.2 mm. M5 x 30 gives 6.8 mm nominal tail beyond nut.",
+        "Inspect actual stack, full nut engagement, nylon insert engagement, thread protrusion and underside clearance. Reselect length if support-plate thickness changes.",
+        "Integral seat provides local foot stiffness; the engineering screen does not rely on the soft oversized washer to spread bending load. Do not apply full Class 12.9 screw preload to the lower-rated joint."
+      ],
+      "catalog_strength_class": "12.9",
+      "catalog_tensile_strength_psi": 170000,
+      "thread_fit": "5g6g",
+      "initial_procurement_packs": {"flat": 0, "upright": 1, "combined": 1},
+      "initial_procurement_cost_usd": {"flat": 0, "upright": 4.59, "combined": 4.59}
+    },
+    {
+      "item_id": "C01",
+      "mcmaster_part_number": "8689K65",
+      "description": "Adhesive-backed smooth semi-clear PET sheet; acrylic adhesive; 27 x 20 in; nominal film 0.005 in (0.127 mm)",
+      "qty_flat": 1,
+      "qty_upright": 1,
+      "qty_combined": 1,
+      "quantity_unit": "sheet",
+      "pack_qty": 1,
+      "pack_unit": "sheet",
+      "pack_price_usd": 4,
+      "cost_per_unit_usd": 4,
+      "cost_per_unit_exact_usd": "4",
+      "cost_per_unit_basis": "USD per sheet; pack price divided by pack quantity without rounding to cents",
+      "url": "https://www.mcmaster.com/8689K65/",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL",
+      "source_date": "2026-09-08",
+      "notes": [
+        "Eight 16 x 20 mm R1 patches per mount; 16 for two independent mounts. One purchased sheet supplies either or both.",
+        "Catalog thickness ±0.0005 in; adhesive inclusion is not explicit. Measure bonded thickness with liner removed; installed total must be ≤0.20 mm.",
+        "No friction, structural support or cooling credit. Do not substitute compressible foam."
+      ],
+      "installed_qty_flat": 8,
+      "installed_qty_upright": 8,
+      "installed_qty_combined": 16,
+      "installed_quantity_unit": "cut patch,16 x 20 mm,R1",
+      "source_record": "mcmaster_spacers_films.json",
+      "initial_procurement_packs": {
+        "flat": 1,
+        "upright": 1,
+        "combined": 1
+      },
+      "initial_procurement_cost_usd": {
+        "flat": 4,
+        "upright": 4,
+        "combined": 4
+      }
+    },
+    {
+      "item_id": "C02",
+      "mcmaster_part_number": "91458A115",
+      "description": "LOCTITE 243 medium-strength blue removable threadlocker; 0.34 fl oz bottle (approximately 10 mL)",
+      "qty_flat": "AR",
+      "qty_upright": "AR",
+      "qty_combined": "AR",
+      "quantity_unit": "bottle",
+      "pack_qty": 1,
+      "pack_unit": "bottle",
+      "pack_price_usd": 18.42,
+      "cost_per_unit_usd": 18.42,
+      "cost_per_unit_exact_usd": "18.42",
+      "cost_per_unit_basis": "USD per bottle; pack price divided by pack quantity without rounding to cents",
+      "url": "https://www.mcmaster.com/91458A115/",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL",
+      "source_date": "2026-09-08",
+      "notes": [
+        "Initial procurement: one shared bottle for either or both mounts; installed quantity is as required at four retainer threads per mount.",
+        "Apply only to tapped retainer joint as specified. Keep off nylon nuts and anti-mar film.",
+        "Use Henkel product-specific TDS; actual cure and removal procedure require representative-joint qualification.",
+        "Published adhesive breakaway data are not installation torque."
+      ],
+      "initial_procurement_packs": {
+        "flat": 1,
+        "upright": 1,
+        "combined": 1
+      },
+      "initial_procurement_cost_usd": {
+        "flat": 18.42,
+        "upright": 18.42,
+        "combined": 18.42
+      }
+    },
+    {
+      "item_id": "S01",
+      "mcmaster_part_number": "98055A095",
+      "description": "Spring-steel DIN 988 shim; Ø5 nominal ID x Ø10 OD x 0.10 mm; actual thickness 0.07–0.10 mm",
+      "qty_flat": "AR",
+      "qty_upright": "AR",
+      "qty_combined": "AR",
+      "quantity_unit": "shim",
+      "pack_qty": 50,
+      "pack_unit": "shim",
+      "pack_price_usd": 5.52,
+      "cost_per_unit_usd": 0.1104,
+      "cost_per_unit_exact_usd": "0.1104",
+      "cost_per_unit_basis": "USD per shim; pack price divided by pack quantity without rounding to cents",
+      "url": "https://www.mcmaster.com/98055A095/",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL",
+      "source_date": "2026-09-08",
+      "notes": [
+        "Prototype selection inventory: one pack shared across either or both mounts; installed count depends on measurement.",
+        "Actual ID5.03–5.40 mm, OD9.53–9.96 mm. No more than four stacked shims per location without redesign.",
+        "Dry indoor service; center within bearing face."
+      ],
+      "initial_procurement_packs": {
+        "flat": 1,
+        "upright": 1,
+        "combined": 1
+      },
+      "source_record": "mcmaster_spacers_films.json",
+      "initial_procurement_cost_usd": {
+        "flat": 5.52,
+        "upright": 5.52,
+        "combined": 5.52
+      }
+    },
+    {
+      "item_id": "S02",
+      "mcmaster_part_number": "98055A098",
+      "description": "Spring-steel DIN 988 shim; Ø5 nominal ID x Ø10 OD x 0.50 mm; actual thickness 0.45–0.50 mm",
+      "qty_flat": "AR",
+      "qty_upright": "AR",
+      "qty_combined": "AR",
+      "quantity_unit": "shim",
+      "pack_qty": 50,
+      "pack_unit": "shim",
+      "pack_price_usd": 6.9,
+      "cost_per_unit_usd": 0.138,
+      "cost_per_unit_exact_usd": "0.138",
+      "cost_per_unit_basis": "USD per shim; pack price divided by pack quantity without rounding to cents",
+      "url": "https://www.mcmaster.com/98055A098/",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL",
+      "source_date": "2026-09-08",
+      "notes": [
+        "Prototype selection inventory: one pack shared across either or both mounts; installed count depends on measurement.",
+        "Actual ID5.03–5.40 mm, OD9.53–9.96 mm. No more than four stacked shims per location without redesign.",
+        "Dry indoor service; center within bearing face."
+      ],
+      "initial_procurement_packs": {
+        "flat": 1,
+        "upright": 1,
+        "combined": 1
+      },
+      "source_record": "mcmaster_spacers_films.json",
+      "initial_procurement_cost_usd": {
+        "flat": 6.9,
+        "upright": 6.9,
+        "combined": 6.9
+      }
+    },
+    {
+      "item_id": "S03",
+      "mcmaster_part_number": "98126A161",
+      "description": "18-8 stainless fine shim; ASTM A240; 1/4 in ID x 3/8 in OD x 0.002 in thick (0.0508 mm nominal)",
+      "qty_flat": "AR",
+      "qty_upright": "AR",
+      "qty_combined": "AR",
+      "quantity_unit": "shim",
+      "pack_qty": 10,
+      "pack_unit": "shim",
+      "pack_price_usd": 8.31,
+      "cost_per_unit_usd": 0.831,
+      "cost_per_unit_exact_usd": "0.831",
+      "cost_per_unit_basis": "USD per shim; pack price divided by pack quantity without rounding to cents",
+      "url": "https://www.mcmaster.com/98126A161/",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL",
+      "source_date": "2026-09-08",
+      "notes": [
+        "Fine-step prototype selection inventory: one pack shared across either or both mounts.",
+        "Not an exact metric 0.05 mm M5 washer. Actual ID6.35–6.6294 mm, OD9.4742–9.5758 mm, thickness0.0381–0.0635 mm.",
+        "Larger bore/smaller annulus requires centered placement and verified bearing support; do not automatically substitute under a screw head without the specified washer."
+      ],
+      "initial_procurement_packs": {
+        "flat": 1,
+        "upright": 1,
+        "combined": 1
+      },
+      "source_record": "mcmaster_spacers_films.json",
+      "initial_procurement_cost_usd": {
+        "flat": 8.31,
+        "upright": 8.31,
+        "combined": 8.31
+      }
+    }
+  ],
+  "initial_procurement_total_usd": {
+    "flat": 92.41,
+    "upright": 102.12,
+    "combined": 113.94
+  },
+  "allocated_installed_hardware_H01_H05_usd": {
+    "flat": 13.9696,
+    "upright": 15.0288,
+    "combined": 28.9984
+  },
+  "allocated_installed_hardware_H01_H06_usd": {"flat": 13.9696, "upright": 15.2336, "combined": 29.2032},
+  "allocated_installed_hardware_usd": {"flat": 13.9696, "upright": 17.0696, "combined": 31.0392},
+  "foot_stack": {
+    "units": "mm",
+    "main_foot_thickness_nominal": 6.0,
+    "integral_bolt_seat_total_thickness_nominal": 10.0,
+    "top_washer_thickness_nominal": 1.2,
+    "support_plate_thickness_nominal": 6.0,
+    "bottom_washer_thickness_nominal": 1.0,
+    "nut_overall_height_nominal": 5.0,
+    "head_to_nut_end_stack_nominal": 23.2,
+    "screw_length_nominal": 30.0,
+    "tail_beyond_nut_nominal": 6.8,
+    "purpose": "Integral bolt seats provide local foot stiffness without relying on oversized-washer spread stiffness. Actual nut and nylon engagement and underside clearance require inspection."
+  },
+  "retainer_stack": {
+    "units": "mm",
+    "boss_height_nominal": 9.20,
+    "screw_length_nominal": 45.0,
+    "bar_thickness_nominal": 5.0,
+    "head_washer_thickness_nominal": 1.0,
+    "spacer_length_nominal": 30.0,
+    "selected_shim_stack_nominal": 0.6508,
+    "nominal_shim_recipe": "One S02 0.50 + one S01 0.10 + one S03 0.0508 at each of four retainer stations. Three rings per station; actual selection remains AR.",
+    "nominal_rings_per_station": 3,
+    "stations_per_mount": 4,
+    "nominal_rings_per_mount": 12,
+    "screw_entry_nominal": 8.3492,
+    "tip_recess_nominal": 0.8508,
+    "effective_full_thread_engagement_min": 7.5,
+    "tip_recess_min": 0.5,
+    "final_cold_and_warm_top_gap_min": 0.20,
+    "final_cold_and_warm_top_gap_max": 0.30,
+    "status": "Nominal geometry only. Actual fit selection and final assembled measurements govern; use shim locations in final assembly drawing."
+  },
+  "engineering_limits": [
+    "Grade 12.9 screw designation is directly verified; catalog proof stress is not separately stated. No tightening torque supplied.",
+    "Grade 10 nuts, H03 washers listed for 10.9, H06 washers of unspecified strength grade and the aluminum female threads restrict joint preload/capacity. Full 12.9 screw capacity is not a rated assembly capacity.",
+    "All purchased dimensions and formed thread engagement must be physically inspected; film total includes adhesive in the design bound even though catalog inclusion is unclear.",
+    "No outdoor, vehicle, airborne, overhead or vibration qualification implied."
+  ],
+  "source_files": [
+    "verified_hardware_candidates_P2.json",
+    "mcmaster_spacers_films.json",
+    "mcmaster_foot_washer.md"
+  ],
+  "purchase_made": false
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "part-spec/1",
+  "part_name": "SolidRun Bedrock thermal stud adapter T1",
+  "units": "mm",
+  "solid_count": 1,
+  "dimensions": [
+    {"id":"plate_width", "kind":"bbox", "axis":"x", "expected":166.0,"tol":0.01},
+    {"id":"plate_length", "kind":"bbox", "axis":"y", "expected":184.0,"tol":0.01},
+    {"id":"plate_thickness", "kind":"bbox", "axis":"z", "expected":5.1,"tol":0.005},
+    {"id":"six_tile_bores", "kind":"cylinder", "diameter":4.5,"tol":0.001,"axis":"Z","type":"hole","count_min":6},
+    {"id":"four_panel_bores", "kind":"cylinder", "diameter":3.8,"tol":0.001,"axis":"Z","type":"hole","count_min":4}
+  ],
+  "design": {"role":"plate","min_score":70,"severity":"hard","metrics":{"edge_break_coverage":{"min_score":60}}},
+  "assumptions":["Gate checks nominal prototype CAD only. Physical thread, thermal and supplier joint limits remain open in DESIGN.md.","Shallow thermal pockets are functional interface geometry; no appearance waiver is requested."],
+  "unresolved":[]
+}

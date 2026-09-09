@@ -1,0 +1,82 @@
+{
+  "_extends": "../oz51x-dual-tx-housing-vertical-opus-5/params.json",
+  "part_name": "OZ51x dual transmitter housing — snap service cover",
+  "version": "v2",
+  "description": "Separate Opus 5 derivative with two hook/two release-tab cover, no cover inserts, preserved mounting interfaces and D-shaped central DE-9 front I/O.",
+  "material": "Unfilled MJF PA12 nylon, black dyed; qualify snaps at actual service temperature.",
+  "process": "MJF additive manufacturing. Separate base and cover. FDM coupon/prototype only.",
+  "actual_modules": {"rf": "A13-Z516-D31-AS-SL", "ttl": "A13-Z510TTL-D31-AS-S"},
+  "fiber_bay": {
+    "depth": 62.0,
+    "spool_setback": 9.5,
+    "_comment": "v2 moves the R15 drum 7.5 mm away from the module partition. With the 1.5 mm retention flange, clear gap is 8 mm. Bay grows 4 mm to retain 3 mm between flange envelope and DE-9 rear keepout."
+  },
+  "mounting_hardware": {
+    "screw": "M3 through screws into plate standoffs",
+    "washer_od": 9.0,
+    "washer_id": 3.2,
+    "washer_thickness": 0.8,
+    "_comment": "Representative M3 large-series flat washer envelope, check ordered hardware. Keep existing 4.5 x 9 slots and their locations for larger standoff/screw options."
+  },
+  "fiber_service": {
+    "min_flange_partition_gap": 8.0,
+    "min_flange_connector_gap": 3.0,
+    "routing_channel_width": 6.0,
+    "_comment": "Routing clearances are design targets, not human-factors qualification or fiber specifications. Preserve the inherited 15 mm bend-radius surface."
+  },
+  "production": {
+    "edges": {"plan_radius": 3.0},
+    "posts": {"extra_lid_posts": [], "corner_web": false},
+    "rear_panel": {"de9_flange_long": 30.81, "de9_flange_short": 12.55},
+    "labels": {"enabled": true},
+    "cover_fastening": {"mode": "snap", "insert_family": "none", "screw": "none"}
+  },
+  "snap": {
+    "tip_y": [-3.0, 70.0],
+    "beam_length": 26.0,
+    "beam_thickness": 1.6,
+    "beam_outer_x": 41.5,
+    "slot": 1.6,
+    "root_radius": 0.8,
+    "hook_width": 6.0,
+    "hook_reach": 0.8,
+    "hook_top_below_seam": 2.62,
+    "hook_depth": 4.8,
+    "roof_clearance": 0.4,
+    "fixed_roof_relief": 0.7,
+    "pocket_depth": 1.3,
+    "pocket_side_clearance": 0.5,
+    "release_travel": 1.3,
+    "pad_depth": 1.4,
+    "pad_clearance": 0.6
+  },
+  "cover_design": {
+    "frame": 10.0,
+    "recess_depth": 1.0,
+    "recess_radius": 3.0,
+    "rim_break": 0.6,
+    "panel_break": 0.4,
+    "label_depth": 0.4,
+    "label_size": 8.0
+  },
+  "panel_connector": {
+    "type": "Amphenol L177SDE09S candidate, flange outside panel, custom power/control harness",
+    "footprint_axis": "height",
+    "cutout_w": 20.8,
+    "cutout_h": 11.8,
+    "cutout_radius": 2.1,
+    "side_angle_degrees": 10.0,
+    "cutout_allowance": 0.0,
+    "flange_recess": 0.4,
+    "screw_spacing": 24.99,
+    "screw_hole_dia": 3.4,
+    "rear_keepout_depth": 18.0,
+    "rear_keepout_w": 33.0,
+    "rear_keepout_h": 15.0
+  },
+  "notes": [
+    "FRONT I/O is canonical +Y: two SC/APC fiber outputs and shared DE-9. SMA RF/TTL inputs are on -Y.",
+    "No inherited electrical pin assignment is approved. RF family data support eight shared nets; exact TTL pinout must be confirmed before harness wiring.",
+    "No cover inserts or screws; module and connector mounting hardware remains. Production release requires latch and exact-hardware qualification."
+  ]
+}

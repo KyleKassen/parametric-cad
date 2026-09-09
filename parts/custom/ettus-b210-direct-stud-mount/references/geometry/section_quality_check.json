@@ -1,0 +1,9 @@
+{
+  "dxf_units_code": 4,
+  "dxf_units": "mm",
+  "dxf_error_count": 0,
+  "dxf_fix_count": 0,
+  "dxf_entity_count": 252,
+  "four_section_svgs_rasterized_and_visually_reviewed": true,
+  "section_curve_sampling_target_step_mm": 0.03
+}

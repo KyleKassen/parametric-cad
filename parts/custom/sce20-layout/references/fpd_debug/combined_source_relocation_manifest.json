@@ -1,0 +1,14 @@
+[
+  {
+    "file": "SCE20_ADAPTERS_R1.fpjs",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\SCE20_ADAPTERS_R1.fpjs",
+    "destination": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\fpd_debug\\SCE20_ADAPTERS_R1.fpjs",
+    "sha256": "9B3C53FA50C1FC34943671035892F19B94CCAA8DB19362F88B66E2546CB61C8B"
+  },
+  {
+    "file": "SCE20_ADAPTERS_R1_inputs.json",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\SCE20_ADAPTERS_R1_inputs.json",
+    "destination": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\fpd_debug\\SCE20_ADAPTERS_R1_inputs.json",
+    "sha256": "5262C459C1695729D9A9E9A6805D8CBC4AC111F79AC6673266AD5EDF4CA9253D"
+  }
+]

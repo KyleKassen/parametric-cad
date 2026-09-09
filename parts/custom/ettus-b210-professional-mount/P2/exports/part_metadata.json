@@ -1,0 +1,46 @@
+{
+  "units": "mm",
+  "revision": "P2",
+  "parts": {
+    "B210_M01_base": {
+      "volume_mm3": 117213.14969981155,
+      "bbox_mm": [
+        160.0,
+        180.0,
+        9.200000000000001
+      ],
+      "valid": true,
+      "solids": 1
+    },
+    "B210_M02_retainer": {
+      "volume_mm3": 15635.338135391221,
+      "bbox_mm": [
+        160.0,
+        20.0,
+        5.0
+      ],
+      "valid": true,
+      "solids": 1
+    },
+    "B210_M03_spacer": {
+      "volume_mm3": 1694.339457897315,
+      "bbox_mm": [
+        10.0,
+        10.0,
+        30.0
+      ],
+      "valid": true,
+      "solids": 1
+    },
+    "B210_M04_film": {
+      "volume_mm3": 63.82831853071796,
+      "bbox_mm": [
+        16.0,
+        20.0,
+        0.2
+      ],
+      "valid": true,
+      "solids": 1
+    }
+  }
+}

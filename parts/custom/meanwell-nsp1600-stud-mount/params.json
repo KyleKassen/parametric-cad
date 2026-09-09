@@ -1,0 +1,99 @@
+{
+  "revision": "N1 preliminary fit prototype",
+  "units": "mm",
+  "plate_width": 125.0,
+  "plate_length": 300.6,
+  "plate_center_y": -150.3,
+  "plate_thickness": 5.0,
+  "plate_thickness_tolerance": 0.05,
+  "corner_radius": 8.0,
+  "edge_break": 0.4,
+  "bore_deburr": 0.1,
+  "housing_points": [
+    [
+      -35.0,
+      -16.1
+    ],
+    [
+      35.0,
+      -16.1
+    ],
+    [
+      0.0,
+      -280.8
+    ]
+  ],
+  "housing_clearance_diameter": 3.4,
+  "countersink_diameter_reference": 6.1,
+  "countersink_angle_deg": 90.0,
+  "screw_diameter": 3.0,
+  "screw_pitch": 0.5,
+  "screw_length_overall": 8.0,
+  "screw_head_diameter": 6.0,
+  "screw_head_height_catalog": 1.7,
+  "screw_head_recess_nominal": 0.05,
+  "screw_hex_drive": 2.0,
+  "screw_projection_accept_min": 2.75,
+  "screw_projection_accept_max": 3.35,
+  "manufacturer_max_penetration": 4.0,
+  "manufacturer_bottom_torque_kgf_cm": [
+    6.0,
+    8.0
+  ],
+  "fan_relief_width": 37.15,
+  "fan_relief_length": 29.6,
+  "fan_relief_centers_x": [
+    -21.425,
+    21.425
+  ],
+  "fan_relief_center_y": -284.3,
+  "fan_relief_radius": 0.5,
+  "fan_relief_depth": 0.5,
+  "fan_relief_depth_tolerance": 0.05,
+  "minimum_physical_fan_gap": 0.2,
+  "stud_pitch_x": 110.0,
+  "stud_pitch_y": 264.7,
+  "stud_pattern_rotation_deg": 0.0,
+  "stud_pattern_center_x": 0.0,
+  "stud_pattern_center_y": -148.45,
+  "stud_clearance_diameter": 3.8,
+  "stud_diameter": 3.0,
+  "stud_projection": 12.0,
+  "stud_base_diameter_reference": 11.9,
+  "stud_base_thickness_reference": 2.2,
+  "stud_cavity_diameter_reference": 12.1,
+  "stud_cavity_depth_reference": 2.3,
+  "washer_id": 3.2,
+  "washer_od": 7.0,
+  "washer_thickness_nominal": 0.55,
+  "nut_across_flats": 5.5,
+  "nut_height_nominal": 4.0,
+  "panel_reference_width": 145.0,
+  "panel_reference_length": 340.0,
+  "panel_reference_thickness": 6.0,
+  "tool_socket_envelope_diameter": 10.0,
+  "tool_socket_envelope_height": 60.0,
+  "tool_socket_internal_depth_min": 10.0,
+  "service_lift_min": 20.0,
+  "device_translate": [
+    -66.7869113,
+    -354.1518617,
+    -1.4999997
+  ],
+  "device_solids": 19,
+  "device_fan_indices": [
+    14,
+    15
+  ],
+  "device_shell_index": 17,
+  "device_fan_bracket_index": 0,
+  "device_pcb_index": 10,
+  "input_step_sha256": "d421a1e7fb7a3b5fd2e12588484a2e970456301955c0a17f55be6d56324dd8a0",
+  "source_pdf_sha256": "c9908729a34d379aa0712435d7ebd9d55238d4d3544d948bce4a994bd58d7921",
+  "intake_reservation_length": 100.0,
+  "exhaust_reservation_length": 100.0,
+  "source_terminal_plane_y": 0.0,
+  "source_fan_extreme_y": -300.6,
+  "nominal_device_mass_kg_manufacturer": 1.8,
+  "working_variant": "NSP-1600-12; user provisional;24V possible"
+}

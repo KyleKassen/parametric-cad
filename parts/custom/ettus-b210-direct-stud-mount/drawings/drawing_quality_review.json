@@ -1,0 +1,41 @@
+{
+  "pdf": "B210_direct_stud_mount_shop_pack_D1.pdf",
+  "sha256": "a6d0789ba7523eae704817eab7c16997231cea29f67be0bd40e85dba3af20f12",
+  "page_count": 5,
+  "pages_mm": [
+    [
+      420.0,
+      297.0
+    ],
+    [
+      420.0,
+      297.0
+    ],
+    [
+      420.0,
+      297.0
+    ],
+    [
+      420.0,
+      297.0
+    ],
+    [
+      420.0,
+      297.0
+    ]
+  ],
+  "all_five_latest_pages_visually_read": true,
+  "visual_defects_found": 0,
+  "empty_pages": 0,
+  "draft_placeholder_found": false,
+  "hyperlinks": [
+    "https://www.mcmaster.com/91294A126/",
+    "https://www.mcmaster.com/98688A142/",
+    "https://www.mcmaster.com/90576A102/",
+    "https://docs.frontpanelexpress.com/elements/studs_standoffs.html"
+  ],
+  "root_review": "APPROVED FOR PRELIMINARY FIT PROTOTYPE; NOT A PRODUCTION RELEASE",
+  "final_page_2_added_and_visually_reviewed": "Effective conical seat DIA >=5.70; full seating, no head rocking",
+  "source_hashes_current": true,
+  "python_syntax": "PASS"
+}

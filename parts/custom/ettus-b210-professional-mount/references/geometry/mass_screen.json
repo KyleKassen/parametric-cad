@@ -1,0 +1,74 @@
+{
+  "units": "mm and kg",
+  "aluminum_density_assumed_kg_per_mm3": 2.7e-06,
+  "hardware_density_assumed_kg_per_mm3": 8e-06,
+  "metal_parts": [
+    {
+      "part": "base",
+      "qty": 1,
+      "one_volume_mm3": 173117.12034125603,
+      "one_mass_kg_at_assumed_density": 0.4674162249213913,
+      "total_mass_kg": 0.4674162249213913
+    },
+    {
+      "part": "retainer",
+      "qty": 2,
+      "one_volume_mm3": 25069.61137038151,
+      "one_mass_kg_at_assumed_density": 0.06768795070003007,
+      "total_mass_kg": 0.13537590140006014
+    },
+    {
+      "part": "spacer",
+      "qty": 4,
+      "one_volume_mm3": 2680.1712325937924,
+      "one_mass_kg_at_assumed_density": 0.007236462328003239,
+      "total_mass_kg": 0.028945849312012956
+    },
+    {
+      "part": "adapter",
+      "qty": 2,
+      "one_volume_mm3": 68864.05322912663,
+      "one_mass_kg_at_assumed_density": 0.18593294371864189,
+      "total_mass_kg": 0.37186588743728377
+    }
+  ],
+  "hardware_simplified_envelopes": [
+    {
+      "part": "retainer_M5x50",
+      "qty": 4,
+      "one_envelope_volume_mm3": 1223.9035713939795,
+      "total_mass_estimate_kg": 0.03916491428460734
+    },
+    {
+      "part": "web_M5x30",
+      "qty": 4,
+      "one_envelope_volume_mm3": 831.2044896952552,
+      "total_mass_estimate_kg": 0.026598543670248165
+    },
+    {
+      "part": "foot_M5x25",
+      "qty": 4,
+      "one_envelope_volume_mm3": 733.0297192705741,
+      "total_mass_estimate_kg": 0.02345695101665837
+    },
+    {
+      "part": "washer",
+      "qty": 20,
+      "one_envelope_volume_mm3": 56.477981929910484,
+      "total_mass_estimate_kg": 0.009036477108785678
+    },
+    {
+      "part": "locknut",
+      "qty": 8,
+      "one_envelope_volume_mm3": 207.8560111894061,
+      "total_mass_estimate_kg": 0.01330278471612199
+    }
+  ],
+  "structural_metal_mass_kg": 1.0036038630707482,
+  "hardware_envelope_mass_estimate_kg": 0.11155967079642154,
+  "mount_without_device_mass_estimate_kg": 1.1151635338671697,
+  "device_mass_design_allowance_kg": 1.0,
+  "total_with_1kg_device_allowance_kg": 2.11516353386717,
+  "recommended_rounded_assembly_mass_design_allowance_kg": 2.2,
+  "limitations": "CAD volume and assumed densities, not weighed mass. Simplified hardware contains unmodeled threads/lock elements. Films and coatings omitted. Device mass allowance1kg is unconfirmed; no device CAD volume-to-mass inference."
+}

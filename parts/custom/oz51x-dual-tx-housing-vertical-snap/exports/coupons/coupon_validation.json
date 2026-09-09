@@ -1,0 +1,147 @@
+{
+  "units": "mm",
+  "latch_target": {
+    "side": "+X",
+    "tip_y": 70.0,
+    "root_y": 44.0
+  },
+  "crop_canonical_mm": {
+    "min": [
+      35.0,
+      39.0,
+      22.0
+    ],
+    "max": [
+      48.0,
+      76.0,
+      33.72
+    ]
+  },
+  "seated_latch_interference_mm3": 0.0,
+  "seated_latch_base": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 812.9020000000013,
+    "bounds_mm": {
+      "min": [
+        43.1,
+        38.99999999999999,
+        22.0
+      ],
+      "max": [
+        46.1,
+        76.0,
+        29.72
+      ],
+      "size": [
+        3.0,
+        37.00000000000001,
+        7.719999999999999
+      ]
+    }
+  },
+  "seated_latch_cover": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 768.8306408821144,
+    "bounds_mm": {
+      "min": [
+        35.0,
+        38.99999999999999,
+        24.919999999999998
+      ],
+      "max": [
+        46.10000000000001,
+        76.0,
+        32.72
+      ],
+      "size": [
+        11.100000000000009,
+        37.00000000000001,
+        7.800000000000001
+      ]
+    }
+  },
+  "source_model_sha256": "fdfde2dcad4127276ab61f27d7f322228d4bac4739b542b3a4fc2491c024ab74",
+  "resolved_params_sha256": "2da45ad4a7e7f6464eaa1e191c709a4d3da0e87e314a065b600ad099de25e3f1",
+  "print_parts": {
+    "latch_base": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 812.9020000000013,
+      "bounds_mm": {
+        "min": [
+          43.1,
+          38.99999999999999,
+          0.0
+        ],
+        "max": [
+          46.1,
+          76.0,
+          7.720000000000001
+        ],
+        "size": [
+          3.0,
+          37.00000000000001,
+          7.720000000000001
+        ]
+      },
+      "from_canonical_frame": {
+        "rotation_x_degrees": 0,
+        "translation_z_mm": -22.0
+      }
+    },
+    "latch_cover": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 768.8306408821142,
+      "bounds_mm": {
+        "min": [
+          35.0,
+          -76.0,
+          2.220446049250313e-15
+        ],
+        "max": [
+          46.10000000000001,
+          -39.0,
+          7.800000000000011
+        ],
+        "size": [
+          11.100000000000009,
+          37.0,
+          7.80000000000001
+        ]
+      },
+      "from_canonical_frame": {
+        "rotation_x_degrees": 180,
+        "translation_z_mm": 32.72
+      }
+    },
+    "de9_panel": {
+      "valid": true,
+      "solids": 1,
+      "volume_mm3": 2220.2953349117697,
+      "bounds_mm": {
+        "min": [
+          -21.0,
+          98.25,
+          0.0
+        ],
+        "max": [
+          21.0,
+          101.25,
+          24.0
+        ],
+        "size": [
+          42.0,
+          3.0,
+          24.0
+        ]
+      },
+      "from_canonical_frame": {
+        "rotation_x_degrees": 0,
+        "translation_z_mm": -4.359999999999999
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "url": "https://www.meanwell.com/Upload/PDF/NSP-1600/NSP-1600-spec.pdf",
+    "status": "RETRIEVED",
+    "filename": "NSP-1600-spec_OFFICIAL_2026-09-08.pdf",
+    "sha256": "e481006af3d6da2df43f207d20e40fd94f04bd7ed6a15c5b34ae1ab3384dc6bb",
+    "pages": 8,
+    "encrypted_original": false,
+    "dates": [
+      "2026-06-15"
+    ],
+    "normalized_text_sha256": "4af92d6970808ba5e629751c89a22b8a476ca97842fcfe8bc16c40344b0bd27e"
+  },
+  {
+    "url": "https://www.meanwell.com/Upload/PDF/Enclosed_Type_EN.pdf",
+    "status": "RETRIEVED",
+    "filename": "Enclosed_Type_EN_OFFICIAL_2026-09-08.pdf",
+    "sha256": "ab8140d4bd9e26038b99e2f6519b0c9f6630c81d7a3007fc33e87eb4bfe2d068",
+    "pages": 9,
+    "encrypted_original": false,
+    "dates": [
+      "2025.12.17"
+    ],
+    "normalized_text_sha256": "2b68f44f7d40ca896aa0849a3bd4b91505df75c11a33d907fd09ce64b99cec96"
+  },
+  {
+    "source": "Existing vendor copy; preserved",
+    "filename": "MeanWell_Enclosed_Type_Installation_Manual_EN.pdf",
+    "sha256": "78f6477d220d86b34dc7ed8a5db001b214b6331fcfffa88e1b355021f2fbad8c",
+    "pages": 9,
+    "encrypted_original": false,
+    "dates": [
+      "2025.12.17"
+    ],
+    "normalized_text_sha256": "2b68f44f7d40ca896aa0849a3bd4b91505df75c11a33d907fd09ce64b99cec96"
+  },
+  {
+    "source": "Existing vendor copy; preserved",
+    "filename": "NSP-1600-SPEC.pdf",
+    "sha256": "dac026dbe43bf68bd152b48a126ad9c1bdcf9969f79bf47efa728d5756ca0899",
+    "pages": 8,
+    "encrypted_original": false,
+    "dates": [
+      "2026-06-15"
+    ],
+    "normalized_text_sha256": "4af92d6970808ba5e629751c89a22b8a476ca97842fcfe8bc16c40344b0bd27e"
+  }
+]

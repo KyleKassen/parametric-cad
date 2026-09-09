@@ -1,0 +1,103 @@
+{
+  "revision": "N2 preliminary side mount with local tabs",
+  "units": "mm",
+  "plate_width": 72.0,
+  "plate_length": 316.8,
+  "plate_center_y": -142.2,
+  "plate_thickness": 6.0,
+  "plate_thickness_tolerance": 0.05,
+  "corner_radius": 4.0,
+  "edge_break": 0.4,
+  "bore_deburr": 0.1,
+  "housing_points": [
+    [
+      2.3,
+      -5.8
+    ],
+    [
+      2.3,
+      -257.8
+    ]
+  ],
+  "housing_clearance_diameter": 4.5,
+  "countersink_diameter_reference": 8.1,
+  "countersink_angle_deg": 90.0,
+  "screw_diameter": 4.0,
+  "screw_pitch": 0.7,
+  "screw_length_overall": 10.0,
+  "screw_head_diameter": 8.0,
+  "screw_head_height_catalog": 2.3,
+  "screw_head_recess_nominal": 0.05,
+  "screw_hex_drive": 2.5,
+  "screw_projection_accept_min": 3.75,
+  "screw_projection_accept_max": 4.35,
+  "manufacturer_max_penetration": 5.0,
+  "stud_pitch_x": 57.0,
+  "stud_pitch_y": 252.0,
+  "stud_pattern_rotation_deg": 0.0,
+  "stud_pattern_center_x": 0.0,
+  "stud_pattern_center_y": -131.8,
+  "stud_clearance_diameter": 3.8,
+  "stud_diameter": 3.0,
+  "stud_projection": 12.0,
+  "stud_base_diameter_reference": 11.9,
+  "stud_base_thickness_reference": 2.2,
+  "stud_cavity_diameter_reference": 12.1,
+  "stud_cavity_depth_reference": 2.3,
+  "washer_id": 3.2,
+  "washer_od": 7.0,
+  "washer_thickness_nominal": 0.55,
+  "nut_across_flats": 5.5,
+  "nut_height_nominal": 4.0,
+  "panel_reference_width": 92.0,
+  "panel_reference_length": 340.0,
+  "panel_reference_thickness": 6.0,
+  "tool_socket_envelope_diameter": 10.0,
+  "tool_socket_envelope_height": 60.0,
+  "tool_socket_internal_depth_min": 10.0,
+  "service_lift_min": 20.0,
+  "device_translate": [
+    -66.7869113,
+    -354.1518617,
+    -1.4999997
+  ],
+  "device_solids": 19,
+  "device_fan_indices": [
+    14,
+    15
+  ],
+  "device_shell_index": 17,
+  "device_fan_bracket_index": 0,
+  "device_pcb_index": 10,
+  "input_step_sha256": "d421a1e7fb7a3b5fd2e12588484a2e970456301955c0a17f55be6d56324dd8a0",
+  "source_pdf_sha256": "c9908729a34d379aa0712435d7ebd9d55238d4d3544d948bce4a994bd58d7921",
+  "intake_reservation_length": 100.0,
+  "exhaust_reservation_length": 100.0,
+  "source_terminal_plane_y": 0.0,
+  "source_fan_extreme_y": -300.6,
+  "nominal_device_mass_kg_manufacturer": 1.8,
+  "working_variant": "NSP-1600-12; user provisional;24V possible",
+  "spine_width": 45.0,
+  "tab_length": 44.0,
+  "tab_stations_y": [
+    -257.8,
+    -5.8
+  ],
+  "plate_fan_end_y": -300.6,
+  "plate_terminal_end_y": 16.2,
+  "manufacturer_side_torque_kgf_cm": [
+    7,
+    10
+  ],
+  "device_side_rotate_y_deg": 90.0,
+  "device_side_translate": [
+    -20.5,
+    0,
+    42.5
+  ],
+  "device_face_source": "+X",
+  "case_width_side": 41.0,
+  "case_height_side": 85.0,
+  "front_thread_zone_depth": 2.1,
+  "rear_thread_not_modeled": true
+}

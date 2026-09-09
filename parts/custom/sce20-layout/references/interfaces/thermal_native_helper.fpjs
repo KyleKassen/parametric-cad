@@ -1,0 +1,19 @@
+// Programmatic paths avoid native DXF file import. Units mm.
+// Direction mapping comes from installed RaspberryPiCase.fpjs roundedCorner.
+function buildThermalContour(a) {
+  var e = new DxfContour(a.id, "", refpoint_file, 100, false);
+  for (var i=0;i<a.paths.length;i++) {
+    var p=a.paths[i];
+    e.Start(p.start[0],p.start[1]);
+    for(var j=0;j<p.segments.length;j++) {
+      var s=p.segments[j];
+      if(s.type=="LINE") e.LineTo(s.end[0],s.end[1]);
+      else e.ArcToMP(s.end[0],s.end[1],s.center[0],s.center[1],s.dir);
+    }
+    e.Finish();
+  }
+  e.SetAsCavity(true);
+  return e;
+}
+// Attach to 166x184x6 panel at(83,92), select side and tool600, then depth0.05.
+// Native save/reload and island preservation still require verification.

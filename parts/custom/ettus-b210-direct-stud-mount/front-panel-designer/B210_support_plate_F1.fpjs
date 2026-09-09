@@ -1,0 +1,41 @@
+/// B210 D1 adapter supporting plate - F1 fit prototype (all dimensions mm).
+/// Run in Front Panel Designer: Edit > Scripts > PastePad.
+/// Creates a NEW panel. Source interface: ../params.json, D1 stud pattern.
+/// Outline adopts the D1 reference panel; enclosure attachments remain undefined.
+
+var panelWidth = 180;
+var panelHeight = 200;
+var panelThickness = 6;
+var pitchX = 136;
+var pitchY = 120.015;
+var studLength = 12;
+var panelName = "B210_support_plate_F1";
+var fp = new Frontpanel(panelName, panelThickness, panelWidth, panelHeight,
+                        alu_elox, elox_natural);
+fp.SetCornerRadii(8, 8, 8, 8);
+fp.SetEdgeMachining(bevel_45, 0.4, bevel_45, 0.4);
+fp.SetRemark("F1 FIT PROTOTYPE for B210 D1 adapter. Four M3 x 12 load studs, reverse side, zero depth offset. Bases and adhesive must be flush or below mounting face for direct adapter seating. Pattern 136 x 120.015 mm centered. Enclosure attachment and physical fit to be confirmed before production release.");
+
+var locations = [
+    ["S1", (panelWidth-pitchX)/2, (panelHeight-pitchY)/2],
+    ["S2", (panelWidth+pitchX)/2, (panelHeight-pitchY)/2],
+    ["S3", (panelWidth-pitchX)/2, (panelHeight+pitchY)/2],
+    ["S4", (panelWidth+pitchX)/2, (panelHeight+pitchY)/2]
+];
+
+for (var i = 0; i < locations.length; i++) {
+    var p = locations[i];
+    var stud = new Bolt(p[0], "WGU30", studLength);
+    stud.PutOnReverseSide();
+    stud.SetDepthOffset(0);
+    fp.AddElement(stud, p[1], p[2]);
+    if (stud.Type() != "WGU30" || Math.abs(stud.Length()-12) > 0.00001 || !stud.IsReverseSide())
+        Error("Incorrect load stud specification: " + p[0]);
+    Print(p[0] + ": " + stud.Type() + " M3, length=" + stud.Length()
+          + ", reverse=" + stud.IsReverseSide() + ", x=" + stud.X() + ", y=" + stud.Y());
+}
+if (fp.Elements().length != 4) Error("Expected exactly four native stud elements.");
+AddFrontpanel(fp);
+SaveFrontpanel(fp, "C:/Users/KyleKassen/OneDrive - Ataero/Shared Documents - Ataero San Antonio/06 R&D Products/NEW R&D/04 Shared Engineering/03 Tools & Methods/Parametric CAD - CadQuery Models/parts/custom/ettus-b210-direct-stud-mount/front-panel-designer/F1.fpd", false);
+Print("Created " + panelName + ": 180 x 200 x 6 mm, R8, natural anodized aluminum.");
+Print("Four native WGU30 load studs; no duplicate drill holes or pockets.");

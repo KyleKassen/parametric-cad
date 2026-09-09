@@ -1,0 +1,115 @@
+{
+  "date": "2026-09-09",
+  "units": "mm",
+  "scope": "Final selected stacked concept geometry and catalog interfaces; structural and thermal qualification separate",
+  "height_datum": "main backpanel component face Z0",
+  "b210_over_oz": {
+    "upper_adapter_underside_z": 50,
+    "lower_top_z": 32.72,
+    "nominal_closed_gap": 17.28,
+    "upper_assembly_top_z": 87.7,
+    "anchor": "4xWGO30 M3 female load L20 depth offset0",
+    "extension": "4xWurth971300321 L30 M3 male/female",
+    "upper_fastener": "4xM3x10 socket screw +D7 ID3.2 washer0.55",
+    "upper_nominal_thread_insertion": 5.45,
+    "service": "Remove B210 and adapter as a unit before releasing OZ cover; 47 mm outward cover service sweep cannot fit atZ50."
+  },
+  "peplink_over_bedrock": {
+    "carrier_underside_z": 70,
+    "carrier_thickness": 4,
+    "router_standoff_height": 6,
+    "router_mount_face_z": 80,
+    "upper_assembly_top_z": 109.3,
+    "lower_bedrock_top_z": 57,
+    "carrier_rim_roof_gap": 13,
+    "carrier_outer": [
+      180,
+      210,
+      4,
+      8
+    ],
+    "carrier_window_throat": [
+      146,
+      160,
+      5
+    ],
+    "support_xy": [
+      [
+        -70,
+        -97
+      ],
+      [
+        -70,
+        97
+      ],
+      [
+        70,
+        -97
+      ],
+      [
+        70,
+        97
+      ]
+    ],
+    "carrier_router_offset_y": -17,
+    "carrier_router_hardware_xy": [
+      [
+        -80.9,
+        -58.35
+      ],
+      [
+        -80.9,
+        24.35
+      ],
+      [
+        80.9,
+        -58.35
+      ],
+      [
+        80.9,
+        24.35
+      ]
+    ],
+    "main_anchor": "4xWGO30 M3 female load L20 depth offset0",
+    "extension": "4xWurth971500321 L50 M3 male/female",
+    "carrier_native": "4xWGO40 M4 female load L6 depth offset0 on front",
+    "upper_fastener": "4xM3x10 socket screw +D7 ID3.2 washer0.55",
+    "router_fastener": "M4x8 +washerID4.3 OD9 thickness1 +2.5mm ear =>4.5mm insertion into6mmnative female",
+    "thermal": "Bedrock unchanged directly on main panel; both original thermal layers retained. Central carrier window opens146x160 throat abovefins, but overlyingrouter stillchangesairflow. Keep localY fins vertical and both channelendsunblocked; validate temperatures.",
+    "service": "Remove Peplink/carrier together before lower Bedrock service; carrier removal itself does not disturb lower TIM."
+  },
+  "extension_spec": {
+    "material": "steel,gloss zinc",
+    "across_flats": 5.5,
+    "across_corners": 6.3508529610858835,
+    "male_length": 6,
+    "female_length": 7,
+    "thread": "M3x0.5",
+    "top_insertion": 5.45,
+    "nominal_top_bottom_margin": 1.55,
+    "native_WGO30_L20_usable_thread": 10,
+    "nominal_native_bottom_margin": 4,
+    "note": "Part is not stainless. 7mm female was verified in current individual datasheets and is sufficient for5.45mmnominal insertion. No rated torque/load assumed."
+  },
+  "primary_sources": [
+    {
+      "url": "https://www.we-online.com/components/products/datasheet/971300321.pdf",
+      "local_file": "carrier/references/971300321.pdf",
+      "sha256": "c92a160cb51bb8e022119c04c89658baeb2debe5a5b506ef2599695f0f084b3e"
+    },
+    {
+      "url": "https://www.we-online.com/components/products/datasheet/971500321.pdf",
+      "local_file": "carrier/references/971500321.pdf",
+      "sha256": "22acc040ffca7ff0b54541db0727220b0e182420d7074fdb604a0e50c3329f88"
+    }
+  ],
+  "native_catalog_source": "C:/Users/KyleKassen/AppData/Local/Programs/FrontDesign/Config/Bolt.d/10-Base.ini",
+  "native_caution": "Load hardware max20mm native length; purchased extensions are separate BOM parts, not fabricated native studs. WGU40 male catalog containsThreadSize3000 inconsistent nameM4; selected femaleWGO30/WGO40 records are unambiguous.",
+  "unresolved": [
+    "Actual column and bonded-anchor torque/load capacities under increased moment arm",
+    "Finished tolerances and physical screw thread engagement/end clearance",
+    "Cable models,bend radii and connector wrench access",
+    "Bedrock/Peplink temperatures in final airflow",
+    "Actual native FPD export geometry verification"
+  ]
+}

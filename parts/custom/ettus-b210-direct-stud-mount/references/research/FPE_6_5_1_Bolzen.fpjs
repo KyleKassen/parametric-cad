@@ -1,0 +1,90 @@
+/// Skript zum Ersetzen bestimmter Planflaechen durch Bolzen.
+
+if (!HasFrontpanel())
+    Error("Bitte erst Frontplatte auswaehlen.");
+
+// Vergleiche zwei Gleitkommazahlen mit hinreichender Genauigkeit.
+var fpeql = function(x, y)
+{
+    if (Math.abs(x-y) < 0.0001)
+        return true;
+    return false;
+};
+
+e = frontpanel.Elements();
+
+if (0 == e.length)
+    Error("Die Platte ist leer!");
+
+var p_studlen = new Param(6), p_standofflen = new Param(6);
+
+var dia = new Dialog("Bolzenlänge", 300, 150);
+dia.VSpacer(10).NewlineC();
+dia.Spacer(10).Text(__("Vorgabelänge für Bolzen:|Default value for studs:"));
+dia.Spacer(3).SpinValue(p_studlen, 5, 20, 1).Spacer(3).Text("mm").Spacer(0).VSpacer(5).NewlineC();
+dia.Spacer(10).Text(__("Vorgabelänge für Buchsen:|Default value for standoffs:"));
+dia.Spacer(3).SpinValue(p_standofflen, 5, 20, 1).Spacer(3).Text("mm").Spacer(0);
+dia.Newline().VSpacer(0).NewlineC().Spacer(0).DlgButton(1, "Ok").Spacer(0).VSpacer(5);
+
+if (0 == dia.Show())
+    Error("Abgebrochen.");
+
+var studlen = p_studlen.get(), standofflen = p_standofflen.get();
+
+switch (studlen) {
+case 6: case 8: case 10: case 12: case 14: case 16: case 18:
+    break;
+default:
+    Error("Ungültige Bolzenlänge "+studlen);
+}
+
+switch (standofflen) {
+case 5: case 6: case 7: case 8: case 9: case 10: case 12:
+case 14: case 16: case 18: case 20:
+    break;
+default:
+    Error("Ungültige Buchsenlänge "+standofflen);
+}
+
+var nreplaced = 0;
+
+for (var i = 0; i < e.length; ++i) {
+
+    // Wir ersetzen:
+    //
+    // 1) Kreis-Planflaeche mit Durchm. 4,6mm, Tiefe 1,1mm mit
+    //    einem Bolzen,
+    // 2) Kreis-Planflaeche mit Durchm. 5,6mm, Tiefe 1,1mm mit
+    //    einer Huelse/Buchse,
+    // 3) Kreis-in-Kreis Planflaeche mit Durchm. 7mm, Innen-
+    //    Durchm. 1,3mm, Tiefe 1,1mm mit einem Bolzen.
+
+    if (e[i].IsCavity() && e[i].IsReverseSide()
+        && fpeql(e[i].Diameter(), 4.6) && fpeql(e[i].Depth(), 1.1)) {
+        var x = e[i].X(), y = e[i].Y();
+	frontpanel.RemoveElement(e[i]);
+	frontpanel.AddElement(new Bolt("rplcbolt"+nreplaced, "GU30", studlen), x, y);
+        ++nreplaced;
+    } else if (e[i].IsCavity() && e[i].IsReverseSide()
+               && fpeql(e[i].Diameter(), 5.6) && fpeql(e[i].Depth(), 1.1)) {
+        var x = e[i].X(), y = e[i].Y();
+	frontpanel.RemoveElement(e[i]);
+	frontpanel.AddElement(new Bolt("rplcbolt"+nreplaced, "GO30", standofflen), x, y);
+        ++nreplaced;
+    } else if (e[i].IsCavity() && e[i].IsReverseSide()
+               && e[i].Type() == cavity_circle_in_circle
+               && fpeql(e[i].Diameter(), 7)
+               && fpeql(e[i].DiameterInner(), 1.3)
+               && fpeql(e[i].Depth(), 1.1)) {
+        var x = e[i].X(), y = e[i].Y();
+	frontpanel.RemoveElement(e[i]);
+	frontpanel.AddElement(new Bolt("rplcbolt"+nreplaced, "GU30", studlen), x, y);
+        ++nreplaced;
+    }
+}
+
+Print(nreplaced + " Elemente ersetzt.");
+
+if (nreplaced > 0)
+    frontpanel.SetModified();	// XXX
+

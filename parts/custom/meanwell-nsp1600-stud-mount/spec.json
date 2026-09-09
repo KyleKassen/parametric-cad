@@ -1,0 +1,61 @@
+{
+  "schema": "part-spec/1",
+  "part_name": "Mean Well NSP-1600 stud adapter N1",
+  "units": "mm",
+  "solid_count": 1,
+  "dimensions": [
+    {
+      "id": "plate_width",
+      "kind": "bbox",
+      "axis": "x",
+      "expected": 125,
+      "tol": 0.01
+    },
+    {
+      "id": "plate_length",
+      "kind": "bbox",
+      "axis": "y",
+      "expected": 300.6,
+      "tol": 0.01
+    },
+    {
+      "id": "plate_thickness",
+      "kind": "bbox",
+      "axis": "z",
+      "expected": 5,
+      "tol": 0.005
+    },
+    {
+      "id": "three_M3_bores",
+      "kind": "cylinder",
+      "diameter": 3.4,
+      "tol": 0.001,
+      "axis": "Z",
+      "type": "hole",
+      "count_min": 3
+    },
+    {
+      "id": "four_stud_bores",
+      "kind": "cylinder",
+      "diameter": 3.8,
+      "tol": 0.001,
+      "axis": "Z",
+      "type": "hole",
+      "count_min": 4
+    }
+  ],
+  "design": {
+    "role": "plate",
+    "min_score": 70,
+    "severity": "hard",
+    "metrics": {
+      "edge_break_coverage": {
+        "min_score": 60
+      }
+    }
+  },
+  "assumptions": [
+    "Nominal digital fit prototype; manufacturer pattern tolerance and hardware received-fit checks required."
+  ],
+  "unresolved": []
+}

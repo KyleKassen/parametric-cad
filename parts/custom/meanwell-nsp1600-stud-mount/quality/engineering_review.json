@@ -1,0 +1,98 @@
+{
+  "status": "PASS_STATIC_CONSISTENCY_REVIEW",
+  "reviewed_at_UTC": "2026-09-08T17:13:38.710370+00:00",
+  "scope": "Independent static consistency review of final N1 CAD source, parameters, engineering summary, assembly, prototype plan, BOM and README, with supporting calculation records and regeneration-script entry points. Existing CAD/manufacturing PASS records were inspected, not rerun.",
+  "no_new_modeling_or_physical_testing": true,
+  "no_unsafe_or_contradictory_mechanical_claim_found": true,
+  "findings": [],
+  "matched_items": [
+    "Final plate125x300.6x5.00+/-0.05mm; fan relief0.50+/-0.05mm; minimum relief floor4.40mm; three housingM3/four FPEM3 interfaces match source and documents.",
+    "M3x8 McMaster91294A128, head flush0..0.10recess, projection2.75..3.35mm versus4.00mm manufacturer maximum. Source ideal cone is explicitly a proxy; complete seating, actual pitch/boss traversal and internal clearance require inspection.",
+    "Minimum countersink straight ligament3.374469mm from adverse geometric stack exceeds receiving3.30mm; effective conical seat diameter>=5.7mm and cone mouth<=6.2mm are stated project checks.",
+    "Rear countersink mouth nominal6.1mm exceeds top central-land width5.7mm in plan only. Maximum screened cone depth1.475531mm is below the minimum pocket floor4.40mm, leaving2.924469mm vertical separation. The top bore/deburr remains within the land. No new CAD boolean was needed for this dimensional consistency check.",
+    "Nominal5.7mm adapter land versus5.5mm source metal spine gives only0.10mm per-side margin; actual profile/position survey is explicitly required. Minimum0.20mm normal fan gap and no plastic contact under qualified handling are not falsely claimed from nominal geometry alone.",
+    "Device1.8kg manufacturer mass and package2.4kg allowance; device125N/package145N resultant loads include50N cable force; separate5Nm cable couple. The current source has no140N package claim.",
+    "Front/rear local tension/shear240/100N and160/150N; minimum plate yield factor3.03545064, front control. Proof criteria0.70mm local/0.85mm combined/0.10mm residual agree across engineering and prototype documents.",
+    "4.5mm thickness appears only as a rejected candidate in engineering summary. Other4.5 values in drawing source denote physical pocket-floor/PCB coordinates, not a contradictory plate thickness. Rendering size1400 is unrelated to load.",
+    "Three device screws, four WGU30M3x12 studs, four98688A142 washers and four90576A102 nuts match36 assembly components including19 original device solids and one reference panel. Nominal stud tail12-5-.55-4=2.45mm matches documents.",
+    "Manufacturer torque0.5884..0.7845Nm is consistently separated from unverified countersunk-head/seat/preload/case-boss capacity; no unsupported2mm complete engagement or thread material/strength is assigned.",
+    "NoTIM, no conductive panel-cooling credit.12V1500W/89percent gives185.393W typical loss;24V1608W/91percent gives159.033W. Typical losses are not presented as worst-case heat or TEC capacity.",
+    "Documented regeneration flags match present entry points; model guards STEP hash, detailed calculations reject critical parameter changes, and drawings reject unsupported dimension/hardware changes. Optional PDF page rasterization uses external pdftoppm; it is not invoked by the README default command.",
+    "The README packaging script is now present. Static inspection of package_design.py confirms original-input/parameter/source hashes, current PDF visual-review prerequisites and archive integrity checks; it has not been executed by this reviewer. The README drawing-package filename matches the generator."
+  ],
+  "existing_release_holds_retained": [
+    "Actual hole-pattern/case/fan survey before finish machining",
+    "Received screw seating/projection/boss traversal and manufacturer-compatible tightening qualification",
+    "FPE anchorage, panel support, prevailing torque and temperature qualification",
+    "Actual cable/lug/tool/strain-relief and protective-earth integration",
+    "Package weighing, surrogate correlation and qualified assembly load proof",
+    "Powered enclosure airflow/derating/TEC/humidity thermal validation"
+  ],
+  "review_limits": [
+    "No independent re-import or fresh geometry regeneration in this review",
+    "No installation of the pinned environment or full clean-folder regeneration",
+    "Drawing PDF visual review and ZIP packaging remain parent-owned work",
+    "No physical fabrication, fastener preload measurement, load test or thermal test"
+  ],
+  "calculation_params_hash": "d9aad1e3d1bacae227c72cfc882f552ddf619c8aee45bf24df1f340dafe3e301",
+  "reviewed_files": [
+    {
+      "path": "model.py",
+      "sha256": "62a4a5dd80c2cdb212f07fe73aaba0f3076ee28f40344b49105844ed7b8f7cb2"
+    },
+    {
+      "path": "params.json",
+      "sha256": "d9aad1e3d1bacae227c72cfc882f552ddf619c8aee45bf24df1f340dafe3e301"
+    },
+    {
+      "path": "ENGINEERING_NOTE.md",
+      "sha256": "c171ffaf7494fe77509bc6bab498d4a259a967b46b37dea1294bde7e347eae8a"
+    },
+    {
+      "path": "ASSEMBLY.md",
+      "sha256": "9de8944e9f2b0eec641aa104911dd00e5b0e12d5221d44d23b05b7e12135e762"
+    },
+    {
+      "path": "PROTOTYPE_VALIDATION.md",
+      "sha256": "d596ef4ff8f298f9bc9d8293dd82bc83e081932a65e54311c36cf03a50b0108b"
+    },
+    {
+      "path": "BOM.md",
+      "sha256": "7af741afcbd0eb16f1881c936e415a0f85d4f8ce39fe91f646b613ff5264d0bb"
+    },
+    {
+      "path": "README.md",
+      "sha256": "3fe6bc0f3730cb2a67ea8def3ffec272272eb5220627b280c43e69aff3b6b9ad"
+    },
+    {
+      "path": "requirements.txt",
+      "sha256": "5eeda0c6c91282ba4dd9ce4aab24de56b3fa757d5aa2e306091c28e6ac3e1596"
+    },
+    {
+      "path": "make_documents.py",
+      "sha256": "29cb3a4eda5d273397225e8346fe4f004b24cee5a0b95a481f4006d34969385f"
+    },
+    {
+      "path": "verify_and_render.py",
+      "sha256": "c03b89e0fc17d6a3420b2ebce8b6bc7242376cf36a5220bcaa3e3f20593b3ce6"
+    },
+    {
+      "path": "verify_manufacturing.py",
+      "sha256": "b18e794f264f4318535c4902bd909a637703e9aae2d591586224a43e56b6c6c0"
+    },
+    {
+      "path": "references/engineering/engineering_results.json",
+      "sha256": "e0b80a3e933ebd18bb2b71218d7293ff3fa41a8aa0b794a4de90ea789deb49bb"
+    },
+    {
+      "path": "package_design.py",
+      "sha256": "d1708ce868725824308c5be13069886dcb33fb0d89249c969768eecf742cec05"
+    }
+  ],
+  "resolved_during_review": [
+    {
+      "item": "README referenced a not-yet-written packaging script",
+      "resolution": "Parent completed package_design.py during review. File and entry point inspected; no open finding remains."
+    }
+  ]
+}

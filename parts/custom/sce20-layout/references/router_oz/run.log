@@ -1,0 +1,300 @@
+{
+  "schema": "router-oz-panel-interface/1",
+  "units": "mm",
+  "peplink": {
+    "raw_bbox": {
+      "min": [
+        -70.762177469938,
+        7.239482215666,
+        -125.40007859017204
+      ],
+      "max": [
+        101.037822530062,
+        36.53948231566601,
+        40.82950568131
+      ],
+      "size": [
+        171.8,
+        29.300000100000005,
+        166.22958427148205
+      ]
+    },
+    "raw_holes": [
+      {
+        "raw": [
+          96.037822530062,
+          7.239482215666,
+          0.37993282011500185
+        ],
+        "top": 9.739482415666002,
+        "diameter": 4.5
+      },
+      {
+        "raw": [
+          96.037822530062,
+          7.239482215666,
+          -82.320067179885
+        ],
+        "top": 9.739482415666002,
+        "diameter": 4.5
+      },
+      {
+        "raw": [
+          -65.762177469938,
+          7.239482215666,
+          0.37993282011500185
+        ],
+        "top": 9.739482415666002,
+        "diameter": 4.5
+      },
+      {
+        "raw": [
+          -65.762177469938,
+          7.239482215666,
+          -82.320067179885
+        ],
+        "top": 9.739482415666002,
+        "diameter": 4.5
+      }
+    ],
+    "normalization": {
+      "first_rotate_axis": "X",
+      "degrees": 90,
+      "then_translate": [
+        -15.137822530062003,
+        -40.970067179885,
+        -7.239482215666
+      ]
+    },
+    "normalized_bbox": {
+      "min": [
+        -85.9,
+        -81.799572861195,
+        -1.3395233720098833e-14
+      ],
+      "max": [
+        85.89999999999999,
+        84.43001141028707,
+        29.300000100000002
+      ],
+      "size": [
+        171.8,
+        166.22958427148205,
+        29.300000100000016
+      ]
+    },
+    "mounting_holes_xy": [
+      [
+        80.9,
+        -41.35
+      ],
+      [
+        80.9,
+        41.35
+      ],
+      [
+        -80.9,
+        -41.35
+      ],
+      [
+        -80.9,
+        41.35
+      ]
+    ],
+    "mount_face_z": 0,
+    "installed_mount_face_above_panel_mm": 6,
+    "installed_overall_height_above_panel_mm": 35.3,
+    "ear_thickness": 2.5,
+    "diameter": 4.5,
+    "fastener_selection": "FPE WGO40 M4 female load standoff 6 mm, catalog body OD5 mm; M4x8 screw + 9 mm OD x4.3 ID x1 washer +2.5 ear yields4.5mm thread engagement. Catalog and final native FPD verification performed by main task.",
+    "connector_direction": "Ethernet/power/Wi-Fi ports at negative local Y; cellular/GPS/SIM at positive local Y",
+    "service_allowance_mm": {
+      "negative_y": 40,
+      "positive_y": 40,
+      "sides": 10,
+      "note": "design allowances for right-angle or flexible cable routing, not manufacturer values; confirm actual connector boots/coax bend radii"
+    }
+  },
+  "oz": {
+    "raw_bbox": {
+      "min": [
+        -16.360000100000004,
+        -36.8490001,
+        -12.000000000000002
+      ],
+      "max": [
+        16.36000000000001,
+        101.2500001,
+        104.2
+      ],
+      "size": [
+        32.720000100000014,
+        138.09900019999998,
+        116.2
+      ]
+    },
+    "canonical_bbox": {
+      "min": [
+        -58.1,
+        -36.8490001,
+        -1.0000000660582699e-07
+      ],
+      "max": [
+        58.1,
+        101.2500001,
+        32.72000000000001
+      ],
+      "size": [
+        116.2,
+        138.09900019999998,
+        32.72000010000002
+      ]
+    },
+    "inverse_installed_first_translate": [
+      16.36,
+      0,
+      -46.1
+    ],
+    "inverse_installed_then_rotate": {
+      "axis": "Y",
+      "degrees": -90
+    },
+    "canonical_mount_xy": [
+      [
+        -53.1,
+        -22
+      ],
+      [
+        -53.1,
+        74
+      ],
+      [
+        53.1,
+        -22
+      ],
+      [
+        53.1,
+        74
+      ]
+    ],
+    "normalization_after_canonical": {
+      "translate": [
+        0,
+        -32.2,
+        0
+      ],
+      "rotate_axis": "Z",
+      "rotate_degrees": 180
+    },
+    "normalized_bbox": {
+      "min": [
+        -58.10000000000001,
+        -69.0500001,
+        -1.0000000660582699e-07
+      ],
+      "max": [
+        58.10000000000001,
+        69.0490001,
+        32.72000000000001
+      ],
+      "size": [
+        116.20000000000002,
+        138.0990002,
+        32.72000010000002
+      ]
+    },
+    "mounting_slots_xy": [
+      [
+        53.1,
+        54.2
+      ],
+      [
+        53.1,
+        -41.8
+      ],
+      [
+        -53.1,
+        54.2
+      ],
+      [
+        -53.1,
+        -41.8
+      ]
+    ],
+    "slot_size": [
+      4.5,
+      9
+    ],
+    "ear_thickness": 3,
+    "fastener_selection": "M3 male stud with 9 mm OD x3.2 ID x0.8 washer + M3 nut; reference test 12 mm protrusion; actual catalog usable thread length to be checked",
+    "service_allowance_mm": {
+      "cover_outward_extra": 47,
+      "fiber_front_negative_y": 40,
+      "SMA_positive_y": 30,
+      "note": "47 mm documented source cover swing; cable allowances chosen not manufacturer values; internal R15 spool does not certify external fiber bend radius"
+    },
+    "manufacturing": "Base+snap cover remain unfilled MJF PA12 printed geometry; no existing planar aluminum mounting plate in this component. Integral ears accept direct backpanel fasteners."
+  },
+  "geometric_checks": [
+    {
+      "part": "peplink",
+      "mount": 0,
+      "M4_screw_shaft_ear_clearance_overlap_mm3": 0.0,
+      "female_standoff_body_OD5_overlap_mm3": 0.0,
+      "washer_OD9_ID4p3_overlap_mm3": 0.0,
+      "socket_OD10_access_overlap_mm3": 0.0
+    },
+    {
+      "part": "peplink",
+      "mount": 1,
+      "M4_screw_shaft_ear_clearance_overlap_mm3": 0.0,
+      "female_standoff_body_OD5_overlap_mm3": 0.0,
+      "washer_OD9_ID4p3_overlap_mm3": 0.0,
+      "socket_OD10_access_overlap_mm3": 0.0
+    },
+    {
+      "part": "peplink",
+      "mount": 2,
+      "M4_screw_shaft_ear_clearance_overlap_mm3": 0.0,
+      "female_standoff_body_OD5_overlap_mm3": 0.0,
+      "washer_OD9_ID4p3_overlap_mm3": 0.0,
+      "socket_OD10_access_overlap_mm3": 0.0
+    },
+    {
+      "part": "peplink",
+      "mount": 3,
+      "M4_screw_shaft_ear_clearance_overlap_mm3": 0.0,
+      "female_standoff_body_OD5_overlap_mm3": 0.0,
+      "washer_OD9_ID4p3_overlap_mm3": 0.0,
+      "socket_OD10_access_overlap_mm3": 0.0
+    },
+    {
+      "part": "oz",
+      "mount": 0,
+      "stud_M3x12_overlap_mm3": 0.0,
+      "washer_OD9_ID3p2_overlap_mm3": 0.0,
+      "socket_OD10_access_overlap_mm3": 0.0
+    },
+    {
+      "part": "oz",
+      "mount": 1,
+      "stud_M3x12_overlap_mm3": 0.0,
+      "washer_OD9_ID3p2_overlap_mm3": 0.0,
+      "socket_OD10_access_overlap_mm3": 0.0
+    },
+    {
+      "part": "oz",
+      "mount": 2,
+      "stud_M3x12_overlap_mm3": 0.0,
+      "washer_OD9_ID3p2_overlap_mm3": 0.0,
+      "socket_OD10_access_overlap_mm3": 0.0
+    },
+    {
+      "part": "oz",
+      "mount": 3,
+      "stud_M3x12_overlap_mm3": 0.0,
+      "washer_OD9_ID3p2_overlap_mm3": 0.0,
+      "socket_OD10_access_overlap_mm3": 0.0
+    }
+  ]
+}

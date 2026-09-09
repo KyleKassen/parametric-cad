@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "scope": "CSV revision labels only; numeric values unchanged",
+  "checks": [
+    {
+      "file": "HARDWARE_BOM.csv",
+      "changed_field": "Item",
+      "rows": 18,
+      "changed_rows": 3,
+      "all_other_values_unchanged": true,
+      "sha256": "89a7f2d172669f9d2b6319134819275e9fc52cb45d9b727adfe4e35816be4913"
+    },
+    {
+      "file": "MOUNTING_COORDINATES.csv",
+      "changed_field": "Panel",
+      "rows": 50,
+      "changed_rows": 24,
+      "all_other_values_unchanged": true,
+      "sha256": "8c01050bd0dd1cbed737685a6b60b96618b21bbac0486c87187a01b28b4d4d63"
+    }
+  ]
+}

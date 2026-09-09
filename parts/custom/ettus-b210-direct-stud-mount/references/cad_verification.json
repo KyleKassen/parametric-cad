@@ -1,0 +1,555 @@
+{
+  "revision": "D1 preliminary fit prototype",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "Original input SHA256 preserved",
+      "pass": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "192 installed source bodies after removal of exactly four feet",
+      "pass": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "All component solids valid",
+      "pass": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "plate_D1.step solid validity and completeness",
+      "pass": true,
+      "measured": {
+        "solids": 1,
+        "bbox_mm": {
+          "x": [
+            -75.0,
+            75.0
+          ],
+          "y": [
+            -74.0,
+            74.0
+          ],
+          "z": [
+            -0.0,
+            3.5
+          ]
+        }
+      },
+      "criterion": "valid;1 distinct solids"
+    },
+    {
+      "check": "Plate exported units/scale",
+      "pass": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "Plate export volume preserved",
+      "pass": true,
+      "measured": 77078.85991781125,
+      "criterion": 77078.85991781038
+    },
+    {
+      "check": "Plate exported symmetric difference",
+      "pass": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "assembled_device_mount_D1.step solid validity and completeness",
+      "pass": true,
+      "measured": {
+        "solids": 210,
+        "bbox_mm": {
+          "x": [
+            -90.0,
+            90.0
+          ],
+          "y": [
+            -100.0,
+            100.0
+          ],
+          "z": [
+            -6.0,
+            37.2000001
+          ]
+        }
+      },
+      "criterion": "valid;210 distinct solids"
+    },
+    {
+      "check": "Assembly export coordinate scale",
+      "pass": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "device_adapter_D1.step solid validity and completeness",
+      "pass": true,
+      "measured": {
+        "solids": 197,
+        "bbox_mm": {
+          "x": [
+            -75.0,
+            75.0
+          ],
+          "y": [
+            -85.9663,
+            91.6813
+          ],
+          "z": [
+            -0.0,
+            37.2000001
+          ]
+        }
+      },
+      "criterion": "valid;197 distinct solids"
+    },
+    {
+      "check": "mount_hardware_D1.step solid validity and completeness",
+      "pass": true,
+      "measured": {
+        "solids": 17,
+        "bbox_mm": {
+          "x": [
+            -75.0,
+            75.0
+          ],
+          "y": [
+            -74.0,
+            74.0
+          ],
+          "z": [
+            -2.2,
+            12.0
+          ]
+        }
+      },
+      "criterion": "valid;17 distinct solids"
+    },
+    {
+      "check": "FPE_interface_REFERENCE_ONLY.step solid validity and completeness",
+      "pass": true,
+      "measured": {
+        "solids": 5,
+        "bbox_mm": {
+          "x": [
+            -90.0,
+            90.0
+          ],
+          "y": [
+            -100.0,
+            100.0
+          ],
+          "z": [
+            -6.0,
+            12.0
+          ]
+        }
+      },
+      "criterion": "valid;5 distinct solids"
+    },
+    {
+      "check": "removed_feet_REFERENCE_ONLY.step solid validity and completeness",
+      "pass": true,
+      "measured": {
+        "solids": 4,
+        "bbox_mm": {
+          "x": [
+            -53.1495,
+            53.1495
+          ],
+          "y": [
+            -66.3575,
+            66.3575
+          ],
+          "z": [
+            -3.556,
+            0.0
+          ]
+        }
+      },
+      "criterion": "valid;4 distinct solids"
+    },
+    {
+      "check": "Adapter to actual device interference",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3; nominal touching permitted"
+    },
+    {
+      "check": "Adapter to reference panel interference",
+      "pass": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_1 vs adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_1 vs original device",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3; smooth thread envelopes"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_2 vs adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_2 vs original device",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3; smooth thread envelopes"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_3 vs adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_3 vs original device",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3; smooth thread envelopes"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_4 vs adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_4 vs original device",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3; smooth thread envelopes"
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_1 vs adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3"
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_1 vs original device",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3; smooth thread envelopes"
+    },
+    {
+      "check": "McMaster_98688A142_washer_1 vs adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3"
+    },
+    {
+      "check": "McMaster_98688A142_washer_1 vs original device",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3; smooth thread envelopes"
+    },
+    {
+      "check": "McMaster_90576A102_locknut_1 vs adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3"
+    },
+    {
+      "check": "McMaster_90576A102_locknut_1 vs original device",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3; smooth thread envelopes"
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_2 vs adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3"
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_2 vs original device",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3; smooth thread envelopes"
+    },
+    {
+      "check": "McMaster_98688A142_washer_2 vs adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3"
+    },
+    {
+      "check": "McMaster_98688A142_washer_2 vs original device",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3; smooth thread envelopes"
+    },
+    {
+      "check": "McMaster_90576A102_locknut_2 vs adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3"
+    },
+    {
+      "check": "McMaster_90576A102_locknut_2 vs original device",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3; smooth thread envelopes"
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_3 vs adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3"
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_3 vs original device",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3; smooth thread envelopes"
+    },
+    {
+      "check": "McMaster_98688A142_washer_3 vs adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3"
+    },
+    {
+      "check": "McMaster_98688A142_washer_3 vs original device",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3; smooth thread envelopes"
+    },
+    {
+      "check": "McMaster_90576A102_locknut_3 vs adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3"
+    },
+    {
+      "check": "McMaster_90576A102_locknut_3 vs original device",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3; smooth thread envelopes"
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_4 vs adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3"
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_4 vs original device",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3; smooth thread envelopes"
+    },
+    {
+      "check": "McMaster_98688A142_washer_4 vs adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3"
+    },
+    {
+      "check": "McMaster_98688A142_washer_4 vs original device",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3; smooth thread envelopes"
+    },
+    {
+      "check": "McMaster_90576A102_locknut_4 vs adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3"
+    },
+    {
+      "check": "McMaster_90576A102_locknut_4 vs original device",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001mm3; smooth thread envelopes"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_1 nominal internal screw separation",
+      "pass": true,
+      "measured": 1.023800000000386,
+      "criterion": "nominal CAD >0.5mm; actual measure required"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_1 head below seating plane",
+      "pass": true,
+      "measured": 0.05,
+      "criterion": "nominalZ=+0.05; plate undersideZ=0"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_2 nominal internal screw separation",
+      "pass": true,
+      "measured": 1.0238000000003984,
+      "criterion": "nominal CAD >0.5mm; actual measure required"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_2 head below seating plane",
+      "pass": true,
+      "measured": 0.05,
+      "criterion": "nominalZ=+0.05; plate undersideZ=0"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_3 nominal internal screw separation",
+      "pass": true,
+      "measured": 1.023800000000386,
+      "criterion": "nominal CAD >0.5mm; actual measure required"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_3 head below seating plane",
+      "pass": true,
+      "measured": 0.05,
+      "criterion": "nominalZ=+0.05; plate undersideZ=0"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_4 nominal internal screw separation",
+      "pass": true,
+      "measured": 1.0238000000003984,
+      "criterion": "nominal CAD >0.5mm; actual measure required"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_4 head below seating plane",
+      "pass": true,
+      "measured": 0.05,
+      "criterion": "nominalZ=+0.05; plate undersideZ=0"
+    },
+    {
+      "check": "Stud1 10mmOD socket to device clearance",
+      "pass": true,
+      "measured": 1.8264999999999816,
+      "criterion": ">0.5mm envelope; actual socket verify"
+    },
+    {
+      "check": "Stud2 10mmOD socket to device clearance",
+      "pass": true,
+      "measured": 1.8264999999999958,
+      "criterion": ">0.5mm envelope; actual socket verify"
+    },
+    {
+      "check": "Stud3 10mmOD socket to device clearance",
+      "pass": true,
+      "measured": 1.8255000000000123,
+      "criterion": ">0.5mm envelope; actual socket verify"
+    },
+    {
+      "check": "Stud4 10mmOD socket to device clearance",
+      "pass": true,
+      "measured": 1.8254999999999981,
+      "criterion": ">0.5mm envelope; actual socket verify"
+    },
+    {
+      "check": "Vertical removal sample Zlift0mm",
+      "pass": true,
+      "measured": 0,
+      "criterion": "nuts and washers removed; <=0.00001mm3"
+    },
+    {
+      "check": "Vertical removal sample Zlift0.1mm",
+      "pass": true,
+      "measured": 0,
+      "criterion": "nuts and washers removed; <=0.00001mm3"
+    },
+    {
+      "check": "Vertical removal sample Zlift2mm",
+      "pass": true,
+      "measured": 0,
+      "criterion": "nuts and washers removed; <=0.00001mm3"
+    },
+    {
+      "check": "Vertical removal sample Zlift6mm",
+      "pass": true,
+      "measured": 0,
+      "criterion": "nuts and washers removed; <=0.00001mm3"
+    },
+    {
+      "check": "Vertical removal sample Zlift12mm",
+      "pass": true,
+      "measured": 0,
+      "criterion": "nuts and washers removed; <=0.00001mm3"
+    },
+    {
+      "check": "Vertical removal sample Zlift13mm",
+      "pass": true,
+      "measured": 0,
+      "criterion": "nuts and washers removed; <=0.00001mm3"
+    },
+    {
+      "check": "Vertical removal sample Zlift20mm",
+      "pass": true,
+      "measured": 0,
+      "criterion": "nuts and washers removed; <=0.00001mm3"
+    },
+    {
+      "check": "USB/DC/ref connector planning corridor vs mount",
+      "pass": true,
+      "measured": 0,
+      "criterion": "110W\u00d760outboard\u00d732H envelope; actual plugs/cable bends not modeled"
+    },
+    {
+      "check": "RF connector planning corridor vs mount",
+      "pass": true,
+      "measured": 0,
+      "criterion": "110W\u00d760outboard\u00d732H envelope; actual plugs/cable bends not modeled"
+    },
+    {
+      "check": "Nominal stud thread tail",
+      "pass": true,
+      "measured": 3.95,
+      "criterion": ">=1mm / two M3 pitches beyond nut"
+    },
+    {
+      "check": "plate_profile_mm.dxf reopens in mm without repair",
+      "pass": true,
+      "measured": {
+        "units": 4,
+        "entities": 9,
+        "errors": 0,
+        "fixes": 0
+      },
+      "criterion": null
+    },
+    {
+      "check": "plate_underside_machining_mm.dxf reopens in mm without repair",
+      "pass": true,
+      "measured": {
+        "units": 4,
+        "entities": 13,
+        "errors": 0,
+        "fixes": 0
+      },
+      "criterion": null
+    },
+    {
+      "check": "FPE_stud_pattern_mm.dxf reopens in mm without repair",
+      "pass": true,
+      "measured": {
+        "units": 4,
+        "entities": 8,
+        "errors": 0,
+        "fixes": 0
+      },
+      "criterion": null
+    }
+  ],
+  "check_count": 72,
+  "limits": [
+    "No helical thread fit, actual plugs, actual screw-head tolerance, real FPE anchor thread/adhesive or panel support are simulated.",
+    "Original vendor internal intersections are not altered or interpreted as mount defects.",
+    "Clearance samples and envelope distances do not constitute physical validation."
+  ]
+}

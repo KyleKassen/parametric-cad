@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Bedrock_R1",
+    "width": 166.0,
+    "height": 184.0,
+    "thickness": 6.0,
+    "material_id": 5,
+    "color_id": 1,
+    "radius": 8.0,
+    "bevel": 0.4,
+    "remark": "R1 FIT DESIGN. Bare aluminum; finished thickness +/-0.05 mm; deburr bores <=0.1 mm. Front=device; reverse=backplate seating face. SPECIAL PRECISION MACHINING: BOTH thermal pockets 0.050 +/-0.010 mm, Ra<=1.6um; retain front D8 and reverse D12 hard lands. Keep faces conductive/flat, assembled TIM gap<=0.10 mm. M4x8 heads recessed0.95; nominal penetration2.95. Supplier must confirm tolerances before production.",
+    "elements": [
+      {
+        "id": "P1",
+        "kind": "hole",
+        "x": 7.0,
+        "y": 10.0,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P2",
+        "kind": "hole",
+        "x": 7.0,
+        "y": 174.0,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P3",
+        "kind": "hole",
+        "x": 159.0,
+        "y": 10.0,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P4",
+        "kind": "hole",
+        "x": 159.0,
+        "y": 174.0,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "D1",
+        "kind": "hole",
+        "x": 23.0,
+        "y": 22.0,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 9.9,
+          "depth": 2.7
+        }
+      },
+      {
+        "id": "D2",
+        "kind": "hole",
+        "x": 143.0,
+        "y": 22.0,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 9.9,
+          "depth": 2.7
+        }
+      },
+      {
+        "id": "D3",
+        "kind": "hole",
+        "x": 83.0,
+        "y": 52.0,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 9.9,
+          "depth": 2.7
+        }
+      },
+      {
+        "id": "D4",
+        "kind": "hole",
+        "x": 83.0,
+        "y": 122.0,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 9.9,
+          "depth": 2.7
+        }
+      },
+      {
+        "id": "D5",
+        "kind": "hole",
+        "x": 33.0,
+        "y": 162.0,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 9.9,
+          "depth": 2.7
+        }
+      },
+      {
+        "id": "D6",
+        "kind": "hole",
+        "x": 133.0,
+        "y": 162.0,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 9.9,
+          "depth": 2.7
+        }
+      },
+      {
+        "id": "THERMAL_TOP",
+        "kind": "contour_cavity",
+        "x": 83.0,
+        "y": 92.0,
+        "side": "front",
+        "depth": 0.05,
+        "tool": 600,
+        "dxf": "C:/Users/KyleKassen/Documents/FPE_SCE20_20260908_R1/Bedrock_R1_top_pocket_native2.dxf",
+        "bbox": [
+          20.0,
+          14.0,
+          165.64999999999998,
+          170.0
+        ]
+      },
+      {
+        "id": "THERMAL_BOTTOM",
+        "kind": "contour_cavity",
+        "x": 83.0,
+        "y": 92.0,
+        "side": "reverse",
+        "depth": 0.05,
+        "tool": 600,
+        "dxf": "C:/Users/KyleKassen/Documents/FPE_SCE20_20260908_R1/Bedrock_R1_bottom_pocket_native2.dxf",
+        "bbox": [
+          20.0,
+          14.0,
+          165.65,
+          170.0
+        ]
+      }
+    ],
+    "save": "C:/Users/KyleKassen/Documents/FPE_SCE20_20260908_R1/Bedrock_R1.fpd"
+  }
+]

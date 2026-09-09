@@ -1,0 +1,500 @@
+{
+  "schema": "sce20-stacked-r2-enclosure-fit/1",
+  "units": "mm",
+  "placements": {
+    "bedrock": {
+      "translation_mm": [
+        122,
+        107,
+        0
+      ],
+      "rotation_z_deg": 0
+    },
+    "peplink": {
+      "translation_mm": [
+        122,
+        90,
+        80
+      ],
+      "rotation_z_deg": 0
+    },
+    "b210": {
+      "translation_mm": [
+        282,
+        107,
+        50
+      ],
+      "rotation_z_deg": 180
+    },
+    "oz": {
+      "translation_mm": [
+        282,
+        107,
+        0
+      ],
+      "rotation_z_deg": 0
+    },
+    "meanwell": {
+      "translation_mm": [
+        391,
+        65.6,
+        0
+      ],
+      "rotation_z_deg": 180
+    }
+  },
+  "inputs": {
+    "bedrock": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\enclosure\\candidate_bedrock_fpe_source.brep",
+    "peplink": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\enclosure\\candidate_peplink_fpe_source.brep",
+    "b210": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\enclosure\\candidate_b210_fpe_source.brep",
+    "oz": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\enclosure\\candidate_oz_fpe_source.brep",
+    "meanwell": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\enclosure\\candidate_meanwell_fpe_source.brep"
+  },
+  "main_panel_thickness_mm": 6,
+  "component_face_source_z_mm": -106.395,
+  "original_nut_translation_z_mm": 2.825,
+  "expanded_wall_slab": {
+    "bbox_mm": {
+      "x": [
+        -36.194,
+        467.994
+      ],
+      "y": [
+        -36.194,
+        467.994
+      ],
+      "z": [
+        0.0,
+        120.0
+      ]
+    },
+    "wall_hits": []
+  },
+  "components_and_supports": {
+    "bedrock": {
+      "bbox_mm": {
+        "x": [
+          39.0,
+          205.0
+        ],
+        "y": [
+          15.0,
+          199.0
+        ],
+        "z": [
+          -0.0,
+          57.0
+        ]
+      },
+      "factory_and_case_hardware_hits": [],
+      "conservative_envelope": false
+    },
+    "peplink": {
+      "bbox_mm": {
+        "x": [
+          36.1,
+          207.9
+        ],
+        "y": [
+          8.2004271,
+          174.4300114
+        ],
+        "z": [
+          80.0,
+          109.3000001
+        ]
+      },
+      "factory_and_case_hardware_hits": [],
+      "conservative_envelope": false
+    },
+    "b210": {
+      "bbox_mm": {
+        "x": [
+          207.0,
+          357.0
+        ],
+        "y": [
+          15.3187,
+          192.9663
+        ],
+        "z": [
+          50.0,
+          87.7000001
+        ]
+      },
+      "factory_and_case_hardware_hits": [],
+      "conservative_envelope": false
+    },
+    "oz": {
+      "bbox_mm": {
+        "x": [
+          223.9,
+          340.1
+        ],
+        "y": [
+          37.9499999,
+          176.0490001
+        ],
+        "z": [
+          -1e-07,
+          32.72
+        ]
+      },
+      "factory_and_case_hardware_hits": [],
+      "conservative_envelope": false
+    },
+    "meanwell": {
+      "bbox_mm": {
+        "x": [
+          355.0,
+          427.0
+        ],
+        "y": [
+          27.6000005,
+          366.2000008
+        ],
+        "z": [
+          -0.0,
+          91.0000001
+        ]
+      },
+      "factory_and_case_hardware_hits": [],
+      "conservative_envelope": false
+    },
+    "peplink_carrier_outer_envelope": {
+      "bbox_mm": {
+        "x": [
+          32.0,
+          212.0
+        ],
+        "y": [
+          2.0,
+          212.0
+        ],
+        "z": [
+          70.0,
+          74.0
+        ]
+      },
+      "factory_and_case_hardware_hits": [],
+      "conservative_envelope": true
+    },
+    "Peplink_carrier_post_D8_52_10": {
+      "bbox_mm": {
+        "x": [
+          48.0,
+          56.0
+        ],
+        "y": [
+          6.0,
+          14.0
+        ],
+        "z": [
+          0.0,
+          70.0
+        ]
+      },
+      "factory_and_case_hardware_hits": [],
+      "conservative_envelope": true
+    },
+    "Peplink_carrier_post_D8_52_204": {
+      "bbox_mm": {
+        "x": [
+          48.0,
+          56.0
+        ],
+        "y": [
+          200.0,
+          208.0
+        ],
+        "z": [
+          0.0,
+          70.0
+        ]
+      },
+      "factory_and_case_hardware_hits": [],
+      "conservative_envelope": true
+    },
+    "Peplink_carrier_post_D8_192_10": {
+      "bbox_mm": {
+        "x": [
+          188.0,
+          196.0
+        ],
+        "y": [
+          6.0,
+          14.0
+        ],
+        "z": [
+          0.0,
+          70.0
+        ]
+      },
+      "factory_and_case_hardware_hits": [],
+      "conservative_envelope": true
+    },
+    "Peplink_carrier_post_D8_192_204": {
+      "bbox_mm": {
+        "x": [
+          188.0,
+          196.0
+        ],
+        "y": [
+          200.0,
+          208.0
+        ],
+        "z": [
+          0.0,
+          70.0
+        ]
+      },
+      "factory_and_case_hardware_hits": [],
+      "conservative_envelope": true
+    },
+    "B210_post_D8_214_46.992": {
+      "bbox_mm": {
+        "x": [
+          210.0,
+          218.0
+        ],
+        "y": [
+          42.992,
+          50.992
+        ],
+        "z": [
+          0.0,
+          50.0
+        ]
+      },
+      "factory_and_case_hardware_hits": [],
+      "conservative_envelope": true
+    },
+    "B210_post_D8_214_167.007": {
+      "bbox_mm": {
+        "x": [
+          210.0,
+          218.0
+        ],
+        "y": [
+          163.007,
+          171.007
+        ],
+        "z": [
+          0.0,
+          50.0
+        ]
+      },
+      "factory_and_case_hardware_hits": [],
+      "conservative_envelope": true
+    },
+    "B210_post_D8_350_46.992": {
+      "bbox_mm": {
+        "x": [
+          346.0,
+          354.0
+        ],
+        "y": [
+          42.992,
+          50.992
+        ],
+        "z": [
+          0.0,
+          50.0
+        ]
+      },
+      "factory_and_case_hardware_hits": [],
+      "conservative_envelope": true
+    },
+    "B210_post_D8_350_167.007": {
+      "bbox_mm": {
+        "x": [
+          346.0,
+          354.0
+        ],
+        "y": [
+          163.007,
+          171.007
+        ],
+        "z": [
+          0.0,
+          50.0
+        ]
+      },
+      "factory_and_case_hardware_hits": [],
+      "conservative_envelope": true
+    }
+  },
+  "factory_socket_probes": [
+    {
+      "center_xy_mm": [
+        22.225,
+        22.225
+      ],
+      "radius_mm": 15,
+      "height_mm": 60,
+      "hits": []
+    },
+    {
+      "center_xy_mm": [
+        22.225,
+        409.575
+      ],
+      "radius_mm": 15,
+      "height_mm": 60,
+      "hits": []
+    },
+    {
+      "center_xy_mm": [
+        409.575,
+        22.225
+      ],
+      "radius_mm": 15,
+      "height_mm": 60,
+      "hits": []
+    },
+    {
+      "center_xy_mm": [
+        409.575,
+        409.575
+      ],
+      "radius_mm": 15,
+      "height_mm": 60,
+      "hits": []
+    }
+  ],
+  "PSU_corridors": [
+    {
+      "name": "PSU_terminal_intake_100mm",
+      "bbox_mm": {
+        "x": [
+          370.5,
+          411.5
+        ],
+        "y": [
+          -34.4,
+          65.6
+        ],
+        "z": [
+          6.0,
+          91.0
+        ]
+      },
+      "factory_and_case_hardware_hits": [
+        {
+          "other": "source_solid_47",
+          "probe_solid_index": 0,
+          "other_solid_index": 0,
+          "volume_mm3": 204.83064269123776,
+          "bbox_mm": {
+            "x": [
+              404.8124999,
+              411.5000001
+            ],
+            "y": [
+              17.4624999,
+              26.9875001
+            ],
+            "z": [
+              5.9999999,
+              9.8750001
+            ]
+          }
+        },
+        {
+          "other": "source_solid_61",
+          "probe_solid_index": 0,
+          "other_solid_index": 0,
+          "volume_mm3": 152.30144455413551,
+          "bbox_mm": {
+            "x": [
+              401.4753872,
+              411.5000001
+            ],
+            "y": [
+              15.1764999,
+              29.2735001
+            ],
+            "z": [
+              5.9999999,
+              8.5344001
+            ]
+          }
+        }
+      ],
+      "other_equipment_hits": [],
+      "Y_inner_wall_margin_mm": 1.7950000000000017
+    },
+    {
+      "name": "PSU_fan_exhaust_100mm",
+      "bbox_mm": {
+        "x": [
+          370.5,
+          411.5
+        ],
+        "y": [
+          366.2,
+          466.2
+        ],
+        "z": [
+          6.0,
+          91.0
+        ]
+      },
+      "factory_and_case_hardware_hits": [
+        {
+          "other": "source_solid_45",
+          "probe_solid_index": 0,
+          "other_solid_index": 0,
+          "volume_mm3": 204.83064269129818,
+          "bbox_mm": {
+            "x": [
+              404.8124999,
+              411.5000001
+            ],
+            "y": [
+              404.8124999,
+              414.3375001
+            ],
+            "z": [
+              5.9999999,
+              9.8750001
+            ]
+          }
+        },
+        {
+          "other": "source_solid_64",
+          "probe_solid_index": 0,
+          "other_solid_index": 0,
+          "volume_mm3": 152.3014445542516,
+          "bbox_mm": {
+            "x": [
+              401.4753872,
+              411.5000001
+            ],
+            "y": [
+              402.5264999,
+              416.6235001
+            ],
+            "z": [
+              5.9999999,
+              8.5344001
+            ]
+          }
+        }
+      ],
+      "other_equipment_hits": [],
+      "Y_inner_wall_margin_mm": 1.795000000000016
+    }
+  ],
+  "max_modeled_component_height_mm": 109.30000010000002,
+  "nearest_door_pocket_above_main_panel_mm": 237.5352,
+  "nominal_door_margin_mm": 128.2351999,
+  "limitations": [
+    "New carrier checked as solid outer envelope; its window reduces occupancy.",
+    "New extension posts conservatively represented by diameter8mm cylinders to full height.",
+    "This report checks enclosure/factory-hardware/socket and PSU corridors, not every inter-component or mounting interface.",
+    "With B210 undersideZ50, upper B210 must be removed before the documented OZ outward cover motion to79.72mm.",
+    "PSU corridors establish nominal geometry only, not closed-case heat rejection or side-orientation output rating."
+  ],
+  "status": "FAIL"
+}

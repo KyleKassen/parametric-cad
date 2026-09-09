@@ -1,0 +1,60 @@
+{
+  "status": "NOMINAL_GEOMETRY_AUDIT_COMPLETE; PHYSICAL_REAR_THREAD_AND_SIDE_THERMAL_HOLDS",
+  "source_preserved": true,
+  "source_sha256": "d421a1e7fb7a3b5fd2e12588484a2e970456301955c0a17f55be6d56324dd8a0",
+  "source_solids": 19,
+  "normalized_reference_reimport_valid": true,
+  "source_scripts_compile_and_ruff_E9_F": "PASS",
+  "visual_review": {
+    "four_true_sections_reviewed": true,
+    "seven_context_views_reviewed": true,
+    "observations": "Side profiles, actual front extrusion and absent rear threads are clear. Render-only recentering prevents terminal-blade cropping."
+  },
+  "files": [
+    {
+      "path": "sections\\minus_X_front.png",
+      "sha256": "556718f4516684a112a58330f07b6764b75e1fb8a10a9e12e0ca09ef482685a5"
+    },
+    {
+      "path": "sections\\minus_X_rear.png",
+      "sha256": "6a5981e9bfdf91997892ee594821f8c4d3df3cbe4cd269a39dbb40d5e4e81df7"
+    },
+    {
+      "path": "sections\\plus_X_front.png",
+      "sha256": "0a4cadc15a044f5b4b0b4d3dc42c5ef58a625f8716f5acaaefc2730445efd389"
+    },
+    {
+      "path": "sections\\plus_X_rear.png",
+      "sha256": "a963fa54813922fe7fdc10ecd5f7e0de54efec60e5273034200c8d888567ef81"
+    },
+    {
+      "path": "views\\NSP1600_side_source_back.png",
+      "sha256": "c67b9a68ade2619000f16831785cbb7943621d9a5bca5e3dcdc9a06cf16722dd"
+    },
+    {
+      "path": "views\\NSP1600_side_source_bottom.png",
+      "sha256": "a6ed06ea22df1cc53ba96ca09a850c5d37622ddba5ee47460f3bc72b9237dd2a"
+    },
+    {
+      "path": "views\\NSP1600_side_source_front.png",
+      "sha256": "e1c47c2bd30e2e5f2e12791dbca8a50b7c6a2f44eefd5efc2291acb291e9c460"
+    },
+    {
+      "path": "views\\NSP1600_side_source_iso.png",
+      "sha256": "1f73f55c5c8ffdc0c9723b5b3327660231a97c4c15582dfa1af56a3626d09e54"
+    },
+    {
+      "path": "views\\NSP1600_side_source_left.png",
+      "sha256": "e1d2c7b8081d0bf5b73b21cfe7feda7de23a1c20c4ba0974af218287eb414a2b"
+    },
+    {
+      "path": "views\\NSP1600_side_source_right.png",
+      "sha256": "dc142ddc712931364a0f24dc3b5d041cfde3b7a9f0e3c680fd08c2686b13f918"
+    },
+    {
+      "path": "views\\NSP1600_side_source_top.png",
+      "sha256": "0a1f754aac5bb7abb2dc56b14d8788a157ebff64e17e87c28827d28886a8c56d"
+    }
+  ],
+  "scope": "CAD geometry only. No physical fit, strength, electrical or thermal validation."
+}

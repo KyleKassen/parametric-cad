@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "archive": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\SCE20_FPE_Package.zip",
+  "archive_bytes": 89285150,
+  "archive_sha256": "378b6ec7fceaedaf631220362bb6894144683230717beea20a26da3628239c53",
+  "file_count": 56,
+  "checksum_manifest_entries": 55,
+  "native_files": [
+    "B210_R2.fpd",
+    "Backpanel_R1.fpd",
+    "Bedrock_R3.fpd",
+    "MeanWell_R2.fpd"
+  ],
+  "checks": {
+    "zip_crc": true,
+    "zip_file_count": true,
+    "all_archived_bytes_match_folder": true,
+    "all_four_final_native_files_only": true,
+    "no_failed_debug_sources": true,
+    "renamed_cad_matches_original_sources": true,
+    "four_adapter_export_audit_reports_pass": true,
+    "transfer_manifest_hashes_match": true
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "status": "PRELIMINARY ANALYTICAL SCREENING; physical validation outstanding",
+  "units": {
+    "length": "mm",
+    "force": "N",
+    "moment": "N mm",
+    "stress": "MPa"
+  },
+  "inputs": {
+    "E_MPa": 70000.0,
+    "yield_MPa": 240.0,
+    "fastener_proof_MPa": 450.0,
+    "target_yield_SF": 3.0,
+    "device_mass_allowance_kg": 1.0,
+    "complete_package_mass_allowance_kg": 2.2,
+    "gravity_m_s2": 9.81,
+    "handling_inertia_g": 3,
+    "gravity_added_g": 1,
+    "cable_force_N": 20.0,
+    "cable_lever_mm": 50.0,
+    "component_screen_load_N": 150.0,
+    "upright_each_axis_screen_N": 150.0,
+    "upright_CG_height_limit_mm": 120.0,
+    "upright_CG_offset_limit_mm": 50.0,
+    "upright_added_cable_couple_Nmm": 1500.0,
+    "adapter_nominal_thickness_mm": 8.0,
+    "adapter_thickness_screen_min_mm": 7.95,
+    "adapter_width_screen_min_mm": 35.8,
+    "adapter_hole_screen_max_mm": 5.6,
+    "thread_completed_engagement_min_mm": 8.0
+  },
+  "derived_loads": {
+    "device_resultant_envelope_N": 59.24,
+    "complete_package_component_envelope_N": 106.32800000000002,
+    "device_overturning_moment_Nmm": 2962.0,
+    "local_reaction_upper_bound_N": 101.55428571428573,
+    "upright_root_moment_per_support_Nmm": 13500.0,
+    "upright_foot_bolt_axial_bound_N": 346.14553314121036,
+    "foot_bolt_screen_axial_N": 400.0
+  },
+  "stresses": {
+    "bar_bending_MPa": 25.904605263157897,
+    "floor_local_bending_MPa": 29.86111111111111,
+    "base_rail_bending_MPa": 16.826923076923077,
+    "end_lip_von_mises_MPa": 9.894209935728817,
+    "adapter_root_von_mises_MPa": 53.963558010487084,
+    "adapter_lower_web_hole_local_MPa": 79.62226429239979,
+    "adapter_near_foot_hole_local_MPa": 75.5141350295526
+  },
+  "yield_safety_factors": {
+    "bar_bending": 9.264761904761905,
+    "floor_local_bending": 8.037209302325582,
+    "base_rail_bending": 14.262857142857143,
+    "end_lip_von_mises": 24.2566108419976,
+    "adapter_root_von_mises": 4.447445810622036,
+    "adapter_lower_web_hole_local": 3.014232289584721,
+    "adapter_near_foot_hole_local": 3.1782129253824536
+  },
+  "deflections_mm": {
+    "bar": 0.15111019736842105,
+    "local_floor": 0.02190999779541446,
+    "base_rail_flexure": 0.06543803418803419,
+    "upright_severe_envelope": 1.95698641120753,
+    "upright_handling_envelope": 1.4351233682188553,
+    "upright_normal_service_bound": 0.44875997844107596
+  },
+  "fasteners": {
+    "M5_stress_area_mm2": 14.2,
+    "combined_external_stress_MPa": 33.58940850059668,
+    "external_proof_SF": 13.397080213306113,
+    "thread_surrogate_area_mm2": 25.132741228718345,
+    "thread_external_allowed_at_SF3_N": 1160.8315931098994,
+    "remaining_preload_budget_after_150N_N": 1010.8315931098994,
+    "assumed_6mm_support_bearing_MPa": 13.333333333333334,
+    "conservative_two_plane_edge_tearout_allowed_N": 3879.7938089542854,
+    "washer_average_pressure_MPa": 7.082406033848771,
+    "spacer_external_pressure_MPa": 1.6789972018485662
+  },
+  "contact_and_retention": {
+    "one_pad_average_at_150N_MPa": 0.46875,
+    "four_pad_gravity_average_MPa": 0.007664062500000001,
+    "top_travel_including_film_loss_and_member_flex_mm": 0.8384582293518698,
+    "opposed_bottom_film_loss_mm": 0.2,
+    "end_pitch_factor": 0.6428571428571429,
+    "end_tip_rise_mm": 1.5060385196495005,
+    "nominal_end_overlap_mm": 2.1000000000000005,
+    "residual_end_overlap_before_tolerance_mm": 0.5939614803505,
+    "after_additional_0p2mm_tolerance_reserve_mm": 0.3939614803505,
+    "residual_side_overlap_before_tolerance_mm": 3.342119074272665
+  },
+  "strength_screen_pass": true
+}

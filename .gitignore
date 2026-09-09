@@ -60,3 +60,13 @@ scratch/
 
 # `make diff` writes its overlay PNGs here, at the repo root, with no --out knob
 renders/
+
+# Release / deliverable zip bundles. These re-package files that already live
+# loose in the part directory, so committing one stores a second copy of the
+# whole part. Verified 2026-09-09 across all nine bundles then present
+# (B210 D1/P1/P2, MeanWell N1/N2, SCE20 FPE, SolidRun T1, oz51x print v1/v2):
+# every single zip entry existed as a loose file in the part tree, 295 MB of
+# pure duplication. Rebuild one with the part's own package_release.py.
+# A genuine vendor-supplied archive under parts/vendor/ is still tracked.
+*.zip
+!parts/vendor/**/*.zip

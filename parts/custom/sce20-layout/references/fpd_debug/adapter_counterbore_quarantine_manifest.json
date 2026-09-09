@@ -1,0 +1,58 @@
+[
+  {
+    "file": "B210_R1.fpd",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\B210_R1.fpd",
+    "destination": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\fpd_debug\\B210_R1.fpd",
+    "sha256": "167EE383AC50D9D8ABE9C62EFEE688B5E2CF53B7E74937B55BC4DD663B66FB5D",
+    "reason": "Native STEP audit: FPD countersink third parameter is additional cylindrical recess, not geometric cone depth; adapters require revised native files"
+  },
+  {
+    "file": "MeanWell_R1.fpd",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\MeanWell_R1.fpd",
+    "destination": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\fpd_debug\\MeanWell_R1.fpd",
+    "sha256": "601BE8D944B29669D224F2D5C540F7ACC732250D17228D149C3D7BB0CE42768B",
+    "reason": "Native STEP audit: FPD countersink third parameter is additional cylindrical recess, not geometric cone depth; adapters require revised native files"
+  },
+  {
+    "file": "B210_R1.fpjs",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\B210_R1.fpjs",
+    "destination": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\fpd_debug\\B210_R1.fpjs",
+    "sha256": "C7D64A770912EEE04414E6CFBC75B7E6CEF53415D1C540A13C035B1570D2F45E",
+    "reason": "Native STEP audit: FPD countersink third parameter is additional cylindrical recess, not geometric cone depth; adapters require revised native files"
+  },
+  {
+    "file": "B210_R1_inputs.json",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\B210_R1_inputs.json",
+    "destination": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\fpd_debug\\B210_R1_inputs.json",
+    "sha256": "C40F034D3CBCC880180EAEC7D0269F40AC71E7F82AC3DA610284BE78B4860564",
+    "reason": "Native STEP audit: FPD countersink third parameter is additional cylindrical recess, not geometric cone depth; adapters require revised native files"
+  },
+  {
+    "file": "MeanWell_R1.fpjs",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\MeanWell_R1.fpjs",
+    "destination": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\fpd_debug\\MeanWell_R1.fpjs",
+    "sha256": "D60F04CABF3DF9F502F62150B82A5076AF101A2A8689C0A3C4AE3708A063975F",
+    "reason": "Native STEP audit: FPD countersink third parameter is additional cylindrical recess, not geometric cone depth; adapters require revised native files"
+  },
+  {
+    "file": "MeanWell_R1_inputs.json",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\MeanWell_R1_inputs.json",
+    "destination": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\fpd_debug\\MeanWell_R1_inputs.json",
+    "sha256": "9FC6EB9DD623564A9226D44D7EA2215E2A0E8CA27EB89C695181ABC92945B16C",
+    "reason": "Native STEP audit: FPD countersink third parameter is additional cylindrical recess, not geometric cone depth; adapters require revised native files"
+  },
+  {
+    "file": "SCE20_BEDROCK_R2.fpjs",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\SCE20_BEDROCK_R2.fpjs",
+    "destination": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\fpd_debug\\SCE20_BEDROCK_R2.fpjs",
+    "sha256": "371C0B10280D188479E92F300E9A18E8184CAD361AA681BAB6964C9F8749A4D8",
+    "reason": "Native STEP audit: FPD countersink third parameter is additional cylindrical recess, not geometric cone depth; adapters require revised native files"
+  },
+  {
+    "file": "SCE20_BEDROCK_R2_inputs.json",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\SCE20_BEDROCK_R2_inputs.json",
+    "destination": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\fpd_debug\\SCE20_BEDROCK_R2_inputs.json",
+    "sha256": "120684AB43E7DB646C8A0C72D051BFC79DD9305E43CF47EF8DA28D19E48B1460",
+    "reason": "Native STEP audit: FPD countersink third parameter is additional cylindrical recess, not geometric cone depth; adapters require revised native files"
+  }
+]

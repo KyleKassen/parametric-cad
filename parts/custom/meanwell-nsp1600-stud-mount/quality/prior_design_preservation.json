@@ -1,0 +1,20 @@
+{
+  "scope": "Restore only three identified delayed agent documentation edits; controlling requirements already in completed prior assembly and engineering documents. Original completed files and package preserved.",
+  "records": [
+    {
+      "path": "parts\\custom\\solidrun-bedrock-thermal-stud-mount\\BOM.md",
+      "reverted_delayed_agent_edit_sha256": "27cf15139a58ad1ecf73865fa150f608fa69acaef7380510669e9bd992b98597",
+      "restored_completed_sha256": "bffc9338768a017b9bac1075dee68322b3664efd081db7690c65e40fe4658a3f"
+    },
+    {
+      "path": "parts\\custom\\solidrun-bedrock-thermal-stud-mount\\references\\research\\catalog_bom.json",
+      "reverted_delayed_agent_edit_sha256": "923d72b65e72271099f98a6de0870690307c7c832fa73b5d1433a0d99b67e926",
+      "restored_completed_sha256": "f18dda54f879805e9f29b1f1121ef990bf6012b4c4458c47e9e7105519c0287a"
+    },
+    {
+      "path": "parts\\custom\\solidrun-bedrock-thermal-stud-mount\\references\\research\\hardware_tim_candidates.md",
+      "reverted_delayed_agent_edit_sha256": "5562469e5951f11164c11bf53e712722d84b8d15e0aa9c83b34492b0af825f41",
+      "restored_completed_sha256": "e72624355e46ccfae762b38bd935382089d4d60b7a53756203e036fc122adddb"
+    }
+  ]
+}

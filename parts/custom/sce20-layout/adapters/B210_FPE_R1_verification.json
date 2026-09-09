@@ -1,0 +1,506 @@
+{
+  "name": "B210_FPE_R1",
+  "status": "PASS",
+  "scope": "nominal CAD only; no thread certification, thermal performance or assembly load rating",
+  "checks": [
+    {
+      "check": "plate reopened valid/component count",
+      "pass": true,
+      "measured": 1,
+      "criterion": 1
+    },
+    {
+      "check": "plate reopened mm bounds",
+      "pass": true,
+      "measured": {
+        "x": [
+          -75.0,
+          75.0
+        ],
+        "y": [
+          -74.0,
+          74.0
+        ],
+        "z": [
+          -0.0,
+          4.0
+        ]
+      },
+      "criterion": {
+        "x": [
+          -75.0,
+          75.0
+        ],
+        "y": [
+          -74.0,
+          74.0
+        ],
+        "z": [
+          -0.0,
+          4.0
+        ]
+      }
+    },
+    {
+      "check": "plate reopened volume",
+      "pass": true,
+      "measured": 88060.15379607814,
+      "criterion": "<10 ppm to source geometry"
+    },
+    {
+      "check": "assembly reopened valid/component count",
+      "pass": true,
+      "measured": 210,
+      "criterion": 210
+    },
+    {
+      "check": "assembly reopened mm bounds",
+      "pass": true,
+      "measured": {
+        "x": [
+          -90.0,
+          90.0
+        ],
+        "y": [
+          -100.0,
+          100.0
+        ],
+        "z": [
+          -6.0,
+          37.7000001
+        ]
+      },
+      "criterion": {
+        "x": [
+          -90.0,
+          90.0
+        ],
+        "y": [
+          -100.0,
+          100.0
+        ],
+        "z": [
+          -6.0,
+          37.7000001
+        ]
+      }
+    },
+    {
+      "check": "assembly reopened volume",
+      "pass": true,
+      "measured": 418686.71446107543,
+      "criterion": "<10 ppm to source geometry"
+    },
+    {
+      "check": "device_adapter reopened valid/component count",
+      "pass": true,
+      "measured": 197,
+      "criterion": 197
+    },
+    {
+      "check": "device_adapter reopened mm bounds",
+      "pass": true,
+      "measured": {
+        "x": [
+          -75.0,
+          75.0
+        ],
+        "y": [
+          -85.9663,
+          91.6813
+        ],
+        "z": [
+          -0.0,
+          37.7000001
+        ]
+      },
+      "criterion": {
+        "x": [
+          -75.0,
+          75.0
+        ],
+        "y": [
+          -85.9663,
+          91.6813
+        ],
+        "z": [
+          -0.0,
+          37.7000001
+        ]
+      }
+    },
+    {
+      "check": "device_adapter reopened volume",
+      "pass": true,
+      "measured": 202505.43467779655,
+      "criterion": "<10 ppm to source geometry"
+    },
+    {
+      "check": "exported plate/device interference",
+      "pass": true,
+      "measured": 0,
+      "criterion": "<=0.00001 mm3"
+    },
+    {
+      "check": "source input SHA256 preserved",
+      "pass": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "housing screw penetration preserved",
+      "pass": true,
+      "measured": 2.55,
+      "criterion": 2.55
+    },
+    {
+      "check": "minimum straight bore throat preserved",
+      "pass": true,
+      "measured": 2.0500000000000003,
+      "criterion": 2.0500000000000003
+    },
+    {
+      "check": "stud exits full nominal locknut",
+      "pass": true,
+      "measured": 3.45,
+      "criterion": ">=1 mm above4mm nut; physical nylon engagement required"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_1 vs reopened adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_1 deliberately recessed head",
+      "pass": true,
+      "measured": 0.55,
+      "criterion": 0.55
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_1 vs source device",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_1 to internal original screws",
+      "pass": true,
+      "measured": 1.023800000000386,
+      "criterion": ">0.5 mm"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_2 vs reopened adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_2 deliberately recessed head",
+      "pass": true,
+      "measured": 0.55,
+      "criterion": 0.55
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_2 vs source device",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_2 to internal original screws",
+      "pass": true,
+      "measured": 1.0238000000003984,
+      "criterion": ">0.5 mm"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_3 vs reopened adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_3 deliberately recessed head",
+      "pass": true,
+      "measured": 0.55,
+      "criterion": 0.55
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_3 vs source device",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_3 to internal original screws",
+      "pass": true,
+      "measured": 1.023800000000386,
+      "criterion": ">0.5 mm"
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_4 vs reopened adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_4 deliberately recessed head",
+      "pass": true,
+      "measured": 0.55,
+      "criterion": 0.55
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_4 vs source device",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A126_M3x6_4 to internal original screws",
+      "pass": true,
+      "measured": 1.0238000000003984,
+      "criterion": ">0.5 mm"
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_1 vs reopened adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_1 vs source device",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_1 vs reopened adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_1 vs source device",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_1 vs reopened adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_1 vs source device",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_2 vs reopened adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_2 vs source device",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_2 vs reopened adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_2 vs source device",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_2 vs reopened adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_2 vs source device",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_3 vs reopened adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_3 vs source device",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_3 vs reopened adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_3 vs source device",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_3 vs reopened adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_3 vs source device",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_4 vs reopened adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_4 vs source device",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_4 vs reopened adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_4 vs source device",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_4 vs reopened adapter",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_4 vs source device",
+      "pass": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "stud socket OD10 clearance 1",
+      "pass": true,
+      "measured": 1.8264999999999816,
+      "criterion": ">0.5 mm"
+    },
+    {
+      "check": "stud socket OD10 clearance 2",
+      "pass": true,
+      "measured": 1.8264999999999958,
+      "criterion": ">0.5 mm"
+    },
+    {
+      "check": "stud socket OD10 clearance 3",
+      "pass": true,
+      "measured": 1.8255000000000123,
+      "criterion": ">0.5 mm"
+    },
+    {
+      "check": "stud socket OD10 clearance 4",
+      "pass": true,
+      "measured": 1.8254999999999981,
+      "criterion": ">0.5 mm"
+    },
+    {
+      "check": "normal lift 0",
+      "pass": true,
+      "measured": 0,
+      "criterion": "nuts and washers removed"
+    },
+    {
+      "check": "normal lift 0.1",
+      "pass": true,
+      "measured": 0,
+      "criterion": "nuts and washers removed"
+    },
+    {
+      "check": "normal lift 1",
+      "pass": true,
+      "measured": 0,
+      "criterion": "nuts and washers removed"
+    },
+    {
+      "check": "normal lift 6",
+      "pass": true,
+      "measured": 0,
+      "criterion": "nuts and washers removed"
+    },
+    {
+      "check": "normal lift 12",
+      "pass": true,
+      "measured": 0,
+      "criterion": "nuts and washers removed"
+    },
+    {
+      "check": "normal lift 13",
+      "pass": true,
+      "measured": 0,
+      "criterion": "nuts and washers removed"
+    },
+    {
+      "check": "normal lift 20",
+      "pass": true,
+      "measured": 0,
+      "criterion": "nuts and washers removed"
+    }
+  ],
+  "changes": {
+    "plate_thickness": 4.0,
+    "countersink_diameter_reference": 7.1,
+    "screw_head_recess_nominal": 0.55
+  },
+  "integration_step": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\B210_FPE_R1_device_adapter.step",
+  "bbox_mm": {
+    "x": [
+      -75.0,
+      75.0
+    ],
+    "y": [
+      -85.9663,
+      91.6813
+    ],
+    "z": [
+      -0.0,
+      37.7000001
+    ]
+  },
+  "thermal_fields": {},
+  "physical_acceptance": {
+    "screw_projection_mm": [
+      2.4,
+      2.9
+    ],
+    "minimum_complete_thread_engagement_mm": 2,
+    "minimum_actual_tip_gap_mm": 0.5,
+    "head_recess_nominal_mm": 0.55,
+    "note": "Gauge actual installed protrusion/complete threads. Original <=0.10 underside recess criterion is intentionally superseded; recess is now functionally deeper to preserve penetration with stock thickness."
+  }
+}

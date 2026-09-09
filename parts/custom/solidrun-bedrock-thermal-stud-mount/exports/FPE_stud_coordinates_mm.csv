@@ -1,0 +1,5 @@
+id,x_from_adapter_center_mm,y_from_adapter_center_mm,x_from_B_mm,y_from_C_mm,feature
+1,-76.0,-82.0,7.0,10.0,FPE WGU30 M3 load stud L12 reverse side zero offset; reference placement
+2,-76.0,82.0,7.0,174.0,FPE WGU30 M3 load stud L12 reverse side zero offset; reference placement
+3,76.0,-82.0,159.0,10.0,FPE WGU30 M3 load stud L12 reverse side zero offset; reference placement
+4,76.0,82.0,159.0,174.0,FPE WGU30 M3 load stud L12 reverse side zero offset; reference placement

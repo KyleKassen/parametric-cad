@@ -1,0 +1,113 @@
+{
+  "date": "2026-09-08",
+  "scope": "Official mechanical integration evidence; no physical validation",
+  "specification": {
+    "url": "https://www.meanwell.com/Upload/PDF/NSP-1600/NSP-1600-spec.pdf",
+    "revision": "2026-06-15",
+    "case_number": "296A",
+    "pages": 8,
+    "normalized_text_matches_local_vendor_copy": true,
+    "variants": ["NSP-1600-12", "NSP-1600-24", "NSP-1600-36", "NSP-1600-48"]
+  },
+  "installation_manual": {
+    "url": "https://www.meanwell.com/Upload/PDF/Enclosed_Type_EN.pdf",
+    "revision": "2025.12.17",
+    "pages": 9,
+    "normalized_text_matches_local_vendor_copy": true
+  },
+  "bottom_mounting": {
+    "evidence": "Manufacturer specification page 6 group 1",
+    "count": 3,
+    "thread_callout": "M3",
+    "pitch_explicitly_specified_mm": null,
+    "coarse_pitch_candidate_mm": 0.5,
+    "max_external_penetration_mm": 4.0,
+    "recommended_mounting_torque_kgf_cm": [6, 8],
+    "recommended_mounting_torque_Nm_calculated": [0.588399, 0.784532],
+    "guaranteed_complete_engagement_mm": null,
+    "allowable_tension_N": null,
+    "allowable_shear_N": null,
+    "drawing_axes_from_terminal_body_corner_mm": [[7.5, 16.1], [77.5, 16.1], [42.5, 280.8]],
+    "drawing_general_tolerance_mm": 0.5,
+    "notes": "L starts at the PSU chassis mounting face, not at the purchased screw head. Physical pitch, engagement, tip clearance and adapter fit remain to be checked."
+  },
+  "side_mounting": {
+    "evidence": "Manufacturer specification page 6 group 2 and optional bracket page 8",
+    "count_per_side": 2,
+    "count_total": 4,
+    "thread_callout": "M4",
+    "pitch_explicitly_specified_mm": null,
+    "coarse_pitch_candidate_mm": 0.7,
+    "max_external_penetration_mm": 5.0,
+    "recommended_mounting_torque_kgf_cm": [7, 10],
+    "recommended_mounting_torque_Nm_calculated": [0.6864655, 0.980665],
+    "optional_bracket_order_number": "PGG2MHS013A",
+    "bracket_screw_callout": "M4 x 4 combination screw",
+    "selected_for_bottom_adapter": false
+  },
+  "body_dimensions_LWH_mm": [300, 85, 41],
+  "manufacturer_unit_mass_kg": 1.8,
+  "device_case_material_or_alloy": null,
+  "working_ambient_C": [-20, 70],
+  "working_relative_humidity_percent_noncondensing": [20, 90],
+  "horizontal_derating": {
+    "full_load_through_C": 50,
+    "load_percent_at60C": 75,
+    "load_percent_at70C": 50,
+    "other_orientation_curve_found": false,
+    "low_input_voltage_derating_also_applies": true
+  },
+  "manufacturer_product_vibration_only": {
+    "frequency_Hz": [10, 500],
+    "acceleration_g": 2,
+    "cycle_minutes": 10,
+    "minutes_per_axis": 60,
+    "axes": ["X", "Y", "Z"],
+    "mount_qualification": false
+  },
+  "airflow": {
+    "direction": "Terminal-side intake to twin-fan exhaust",
+    "obstructions_permitted": false,
+    "clearance_from_adjacent_heat_source_mm": [100, 150],
+    "universal_60mm_fan_clearance_found": false,
+    "actual_cable_and_tool_envelope_confirmed": false
+  },
+  "terminal_access": {
+    "output_blade_projections_mm": [38, 28],
+    "output_blade_lug_hole_diameter_mm": 6.5,
+    "AC_terminal_screw": "M3.5",
+    "AC_terminal_product_specific_max_torque_kgf_cm": 8,
+    "AC_terminal_product_specific_max_torque_Nm_calculated": 0.784532,
+    "output_lug_torque_found": false,
+    "FG_access_and_protective_earth_required": true,
+    "adapter_contact_is_protective_earth_proof": false
+  },
+  "FPE": {
+    "help_url": "https://docs.frontpanelexpress.com/elements/studs_standoffs.html",
+    "package_url": "https://assets.frontpanelexpress.com/fpd/Version-6.5.1/FrontDesign-US-6.5.1-amd64.deb",
+    "package_sha256": "a9969415df52668fd9b0d85ff47d838c34b109c0b650978006e9e482d184bb1a",
+    "catalog_identifier_candidate": "WGU40",
+    "catalog_name": "M4",
+    "catalog_thread_size_raw": 3000,
+    "verified_shank_diameter_mm": null,
+    "conflict_resolved": false,
+    "override_found_in_readable_package_files": false,
+    "nominal_cavity_diameter_mm": 12.1,
+    "nominal_cavity_depth_mm": 2.3,
+    "nominal_base_diameter_from_drawpath_mm": 11.9,
+    "nominal_base_thickness_from_drawpath_mm": 2.2,
+    "geometric_lengths_mm": [6, 12, 20],
+    "minimum_panel_thickness_mm": 3,
+    "minimum_cavity_edge_to_panel_edge_or_cutout_mm": 0.5,
+    "minimum_remaining_material_to_opposing_cavity_mm": 0.5,
+    "verified_fallback_identifier": "WGU30",
+    "verified_fallback_nominal_thread_mm": 3,
+    "selected_identifier": "WGU30",
+    "selected_geometric_length_mm": 12,
+    "selected_quantity": 4,
+    "selected_stud_axes_mm": [[-55, -16.1], [55, -16.1], [-55, -280.8], [55, -280.8]],
+    "installed_capacity_or_temperature_rating_found": false,
+    "supplier_contacted": false,
+    "purchase_made": false
+  }
+}

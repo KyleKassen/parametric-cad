@@ -1,0 +1,36 @@
+{
+  "revision": "D1",
+  "pages": 5,
+  "status": "ROOT REVIEW APPROVED FOR PRELIMINARY FIT PROTOTYPE; NOT A PRODUCTION RELEASE",
+  "pdf": "B210_direct_stud_mount_shop_pack_D1.pdf",
+  "sources": [
+    {
+      "path": "make_documents.py",
+      "sha256": "20b152b0d0698d284bbb2337876f9b5dfaa439a124b5fde3634986cd986ca332"
+    },
+    {
+      "path": "params.json",
+      "sha256": "0cf5e0eb44355619c7aaf4ed8b1e534cef800c2fad232b3b80aca114e29d7161"
+    },
+    {
+      "path": "references\\research\\catalog_bom.json",
+      "sha256": "8b8c609b5b3f6f3ba83771b2b850e2dfdc1bb091aa6ab9ee1c669ca459c97888"
+    },
+    {
+      "path": "references\\product\\assembled_hero.png",
+      "sha256": "f065bbca75e93d7d9387424b4567a108d7910252f5ec5fe124152170bd6224ad"
+    },
+    {
+      "path": "references\\product\\exploded_iso.png",
+      "sha256": "d83d68e4706b8c325a10334ceb0b0c1e0267af8cefbc3f865a22eec7e238b839"
+    },
+    {
+      "path": "references\\product\\plate_bottom_hero.png",
+      "sha256": "c27b6716dee54c3e7211c2896a5f98222c7fd11d5408f638e2c2ed8a62f9e8bc"
+    },
+    {
+      "path": "references\\views\\section_fastener.png",
+      "sha256": "5410515c30bd765694bd27de07b86d8cbb64263cce2e768f20697c4832677020"
+    }
+  ]
+}

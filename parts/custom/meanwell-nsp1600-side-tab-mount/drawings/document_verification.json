@@ -1,0 +1,252 @@
+{
+  "status": "PASS",
+  "scope": "Electronic PDF only; printer and physical fit not verified",
+  "pdf_sha256": "987d5cf49d74d487c996a6b569b229b82e10684037d4311c4319e0dbfa56fcbf",
+  "checks": [
+    {
+      "check": "Six pages",
+      "passed": true,
+      "measured": 6
+    },
+    {
+      "check": "Page 1 A3 landscape",
+      "passed": true,
+      "measured": [
+        419.9999361111111,
+        297.0000127777778
+      ]
+    },
+    {
+      "check": "Page 1 preliminary status",
+      "passed": true,
+      "measured": null
+    },
+    {
+      "check": "Page 2 A3 landscape",
+      "passed": true,
+      "measured": [
+        419.9999361111111,
+        297.0000127777778
+      ]
+    },
+    {
+      "check": "Page 2 preliminary status",
+      "passed": true,
+      "measured": null
+    },
+    {
+      "check": "Page 3 A3 landscape",
+      "passed": true,
+      "measured": [
+        419.9999361111111,
+        297.0000127777778
+      ]
+    },
+    {
+      "check": "Page 3 preliminary status",
+      "passed": true,
+      "measured": null
+    },
+    {
+      "check": "Page 4 A3 landscape",
+      "passed": true,
+      "measured": [
+        419.9999361111111,
+        297.0000127777778
+      ]
+    },
+    {
+      "check": "Page 4 preliminary status",
+      "passed": true,
+      "measured": null
+    },
+    {
+      "check": "Page 5 A3 landscape",
+      "passed": true,
+      "measured": [
+        419.9999361111111,
+        297.0000127777778
+      ]
+    },
+    {
+      "check": "Page 5 preliminary status",
+      "passed": true,
+      "measured": null
+    },
+    {
+      "check": "Page 6 A3 landscape",
+      "passed": true,
+      "measured": [
+        419.9999361111111,
+        297.0000127777778
+      ]
+    },
+    {
+      "check": "Page 6 preliminary status",
+      "passed": true,
+      "measured": null
+    },
+    {
+      "check": "Horizontal 100 mm calibration",
+      "passed": true,
+      "measured": 99.99997638888887
+    },
+    {
+      "check": "Vertical 100 mm calibration",
+      "passed": true,
+      "measured": 100.00001166666667
+    },
+    {
+      "check": "Rotated template outline 316.8 x72 mm",
+      "passed": true,
+      "measured": [
+        316.79984194444444,
+        72.00000416666667
+      ]
+    },
+    {
+      "check": "Six template drill circles",
+      "passed": true,
+      "measured": 6
+    },
+    {
+      "check": "Template hole 1 actual position and bore",
+      "passed": true,
+      "measured": {
+        "paper_center_mm": [
+          70.80001291666666,
+          150.79999402777776
+        ],
+        "bore_mm": [
+          4.499998055555554,
+          4.499998055555554
+        ]
+      }
+    },
+    {
+      "check": "Template hole 2 actual position and bore",
+      "passed": true,
+      "measured": {
+        "paper_center_mm": [
+          322.8000098611111,
+          150.79999402777776
+        ],
+        "bore_mm": [
+          4.499998055555554,
+          4.499998055555554
+        ]
+      }
+    },
+    {
+      "check": "Template hole 3 actual position and bore",
+      "passed": true,
+      "measured": {
+        "paper_center_mm": [
+          322.79999222222216,
+          120.00000694444444
+        ],
+        "bore_mm": [
+          3.7999811111111232,
+          3.799981111111103
+        ]
+      }
+    },
+    {
+      "check": "Template hole 4 actual position and bore",
+      "passed": true,
+      "measured": {
+        "paper_center_mm": [
+          70.79999527777777,
+          120.00000694444444
+        ],
+        "bore_mm": [
+          3.799981111111113,
+          3.799981111111103
+        ]
+      }
+    },
+    {
+      "check": "Template hole 5 actual position and bore",
+      "passed": true,
+      "measured": {
+        "paper_center_mm": [
+          322.79999222222216,
+          177.00000583333332
+        ],
+        "bore_mm": [
+          3.7999811111111232,
+          3.7999811111111232
+        ]
+      }
+    },
+    {
+      "check": "Template hole 6 actual position and bore",
+      "passed": true,
+      "measured": {
+        "paper_center_mm": [
+          70.79999527777777,
+          177.00000583333332
+        ],
+        "bore_mm": [
+          3.799981111111113,
+          3.7999811111111232
+        ]
+      }
+    },
+    {
+      "check": "Critical annotation 91294A190",
+      "passed": true,
+      "measured": null
+    },
+    {
+      "check": "Critical annotation 3.90",
+      "passed": true,
+      "measured": null
+    },
+    {
+      "check": "Critical annotation 7.60",
+      "passed": true,
+      "measured": null
+    },
+    {
+      "check": "Critical annotation 3.75-4.35",
+      "passed": true,
+      "measured": null
+    },
+    {
+      "check": "Critical annotation 77 nominal CAD",
+      "passed": true,
+      "measured": null
+    },
+    {
+      "check": "Critical annotation 51 manufacturing geometry",
+      "passed": true,
+      "measured": null
+    },
+    {
+      "check": "Critical annotation 57 x252",
+      "passed": true,
+      "measured": null
+    },
+    {
+      "check": "Critical annotation 316.80",
+      "passed": true,
+      "measured": null
+    },
+    {
+      "check": "Critical annotation factor 3.33",
+      "passed": true,
+      "measured": null
+    },
+    {
+      "check": "Critical annotation sensitivity 1.84",
+      "passed": true,
+      "measured": null
+    },
+    {
+      "check": "Catalog hyperlinks",
+      "passed": true,
+      "measured": 4
+    }
+  ]
+}

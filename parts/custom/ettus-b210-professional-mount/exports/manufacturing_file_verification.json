@@ -1,0 +1,42 @@
+{
+  "pdf_pages": 6,
+  "pdf_text_checks": "PASS",
+  "dxf": [
+    {
+      "file": "adapter_side_profile.dxf",
+      "units": "mm",
+      "entities": 21,
+      "audit_errors": 0
+    },
+    {
+      "file": "B210_flat_plate_drill_template_P1.dxf",
+      "units": "mm",
+      "entities": 5,
+      "audit_errors": 0
+    },
+    {
+      "file": "B210_M01_machining_sections_P1.dxf",
+      "units": "mm",
+      "entities": 160,
+      "audit_errors": 0
+    },
+    {
+      "file": "B210_M02_profile_P1.dxf",
+      "units": "mm",
+      "entities": 10,
+      "audit_errors": 0
+    },
+    {
+      "file": "B210_M04_film_profile_P1.dxf",
+      "units": "mm",
+      "entities": 8,
+      "audit_errors": 0
+    },
+    {
+      "file": "B210_upright_plate_drill_template_P1.dxf",
+      "units": "mm",
+      "entities": 5,
+      "audit_errors": 0
+    }
+  ]
+}

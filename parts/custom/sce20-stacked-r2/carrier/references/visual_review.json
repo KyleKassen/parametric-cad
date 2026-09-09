@@ -1,0 +1,20 @@
+{
+  "status": "REVIEWED",
+  "artifact": "exports/Peplink_Carrier_R2_frame.step",
+  "views": [
+    "references/product/carrier_R2_hero.png",
+    "references/views/carrier_R2_top.png",
+    "references/views/carrier_R2_iso.png"
+  ],
+  "verdict": "Open frame, uniform side rails, symmetric support holes and continuous inner/outer0.4mm edge highlights are visible; no unintended islands, broken corners or hole breakout. Plate geometry is appropriate to the two mounting patterns. Native hardware is omitted in this frame render and cannot be judged from it.",
+  "review_score": 100,
+  "role": "plate",
+  "band": "A",
+  "config_delta": 7,
+  "floor_edge_break_body": 100,
+  "floor_sharp_edge": 100,
+  "unfixed_findings": [
+    "Low:96mm bare bore rim; source manufacturing note limits deburr<=0.1 rather than the scorer0.4suggestion."
+  ],
+  "scope": "Appearance and nominal CAD geometry only."
+}

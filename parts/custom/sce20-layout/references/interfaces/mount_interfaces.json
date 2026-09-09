@@ -1,0 +1,1249 @@
+{
+  "units": "mm",
+  "date": "2026-09-08",
+  "scope": "Integration audit of existing unreleased prototypes; no source modification or physical qualification",
+  "transform": "panel XY = translation_xy + Rz(rotation_deg) * local XY; adapter underside Z0 touches new component-facing backpanel Z0. All selected STEP assemblies already normalized; do not apply vendor normalize transform again.",
+  "components": {
+    "b210": {
+      "source_directory": "parts/custom/ettus-b210-direct-stud-mount",
+      "revision": "D1",
+      "source_params_sha256": "0cf5e0eb44355619c7aaf4ed8b1e534cef800c2fad232b3b80aca114e29d7161",
+      "source_model_sha256": "0bd462222a9b4e5e4e20ecd43f1f3195bc6ccec8277cd3058a87f3ad4c4013a2",
+      "current_assembly_with_reference_coupon": "parts/custom/ettus-b210-direct-stud-mount/exports/assembled_device_mount_D1.step",
+      "integration_step": "parts/custom/ettus-b210-direct-stud-mount/exports/device_adapter_D1.step",
+      "plate_step": "parts/custom/ettus-b210-direct-stud-mount/exports/plate_D1.step",
+      "integration_step_scope": "adapter, device, housing screws; does not include the reference main panel, panel studs, washers or nuts; add final panel hardware separately",
+      "fresh_reopen": {
+        "device_adapter": {
+          "bbox_mm": {
+            "x": [
+              -75.0,
+              75.0
+            ],
+            "y": [
+              -85.9663,
+              91.6813
+            ],
+            "z": [
+              -0.0,
+              37.2000001
+            ]
+          },
+          "solid_count": 197,
+          "valid": true,
+          "volume_mm3": 191524.14080360593,
+          "sha256": "b9989bbdd083a5fadfe86f1ed6c351f8c05aea3de7465521489548633785237b"
+        },
+        "plate": {
+          "bbox_mm": {
+            "x": [
+              -75.0,
+              75.0
+            ],
+            "y": [
+              -74.0,
+              74.0
+            ],
+            "z": [
+              -0.0,
+              3.5
+            ]
+          },
+          "solid_count": 1,
+          "valid": true,
+          "volume_mm3": 77078.85991781125,
+          "sha256": "f87658796445d1da372b014e8087053dc3912f0aa0017ef04f8db165cb9397f4"
+        }
+      },
+      "device_bbox_from_existing_build_metadata_mm": {
+        "x": [
+          -61.1735001,
+          61.1745001
+        ],
+        "y": [
+          -85.9663,
+          91.6813
+        ],
+        "z": [
+          3.4999999,
+          37.2000001
+        ]
+      },
+      "assembly_excluding_reference_panel_bbox_mm": {
+        "x": [
+          -75.0054416,
+          75.0054416
+        ],
+        "y": [
+          -85.9663,
+          91.6813
+        ],
+        "z": [
+          -2.2,
+          37.2000001
+        ]
+      },
+      "backpanel_studs": {
+        "catalog": "WGU30",
+        "native_kind": "M3 male load stud",
+        "length_mm": 12,
+        "native_side_convention": "original support coupon uses reverse side; new backpanel may designate either face consistently, no additional XY mirror",
+        "depth_offset_mm": 0,
+        "qty": 4,
+        "local_xy_mm": [
+          [
+            -68.0,
+            -60.0075
+          ],
+          [
+            -68.0,
+            60.0075
+          ],
+          [
+            68.0,
+            -60.0075
+          ],
+          [
+            68.0,
+            60.0075
+          ]
+        ],
+        "pitch_xy_mm": [
+          136.0,
+          120.015
+        ],
+        "base_and_adhesive_seating": "flush or below component-facing supporting panel surface",
+        "do_not_add_ordinary_holes_or_pockets_under_native_studs": true
+      },
+      "adapter": {
+        "width_mm": 150.0,
+        "height_mm": 148.0,
+        "thickness_mm": 3.5,
+        "thickness_tolerance_mm": 0.05,
+        "outline": {
+          "type": "centered_rounded_rectangle",
+          "corner_radius_mm": 8.0
+        },
+        "local_to_adapter_fpd_translation_mm": [
+          75.0,
+          74.0
+        ],
+        "edge_bevel_both_faces_mm": 0.4,
+        "stud_clearance_holes": {
+          "diameter_mm": 3.8,
+          "local_xy_mm": [
+            [
+              -68.0,
+              -60.0075
+            ],
+            [
+              -68.0,
+              60.0075
+            ],
+            [
+              68.0,
+              -60.0075
+            ],
+            [
+              68.0,
+              60.0075
+            ]
+          ]
+        },
+        "housing_holes": {
+          "diameter_mm": 3.4,
+          "local_xy_mm": [
+            [
+              -46.7995,
+              -60.0075
+            ],
+            [
+              -46.7995,
+              60.0075
+            ],
+            [
+              46.7995,
+              -60.0075
+            ],
+            [
+              46.7995,
+              60.0075
+            ]
+          ],
+          "countersink": {
+            "face": "underside contacting backpanel",
+            "included_angle_deg": 90,
+            "mouth_diameter_mm": 6.1,
+            "depth_mm": 1.3499999999999999
+          },
+          "opposite_bore_deburr_max_mm": 0.1
+        },
+        "source_material_finish": "6061-T6/T651, clear MIL-DTL-5541 Type II Class 3 conversion, dims after finish; supplier material/process capability must be explicitly resolved for FPE",
+        "source_planar_dxf": "parts/custom/ettus-b210-direct-stud-mount/exports/plate_profile_mm.dxf"
+      },
+      "service": {
+        "socket_od_max_mm": 10,
+        "socket_approach_height_mm": 40.0,
+        "normal_lift_min_mm": 20
+      },
+      "housing_screw": {
+        "thread": "M3",
+        "pitch_mm": 0.5,
+        "overall_length_mm": 6.0,
+        "head_recess_nominal_mm": 0.05,
+        "nominal_projection_mm": 2.55
+      },
+      "external_panel_hardware": {
+        "washers": {
+          "part": "McMaster 98688A142",
+          "qty": 4,
+          "ID_mm": 3.2,
+          "OD_mm": 7,
+          "nominal_thickness_mm": 0.55
+        },
+        "nuts": {
+          "part": "McMaster 90576A102",
+          "qty": 4,
+          "type": "M3 nylon insert locknut",
+          "height_mm": 4,
+          "across_flats_mm": 5.5
+        }
+      },
+      "reservations": [
+        {
+          "name": "RF end cable planning",
+          "bbox_mm": {
+            "x": [
+              -55,
+              55
+            ],
+            "y": [
+              80,
+              140
+            ],
+            "z": [
+              9.9,
+              41.9
+            ]
+          }
+        },
+        {
+          "name": "USB/DC/reference cable planning",
+          "bbox_mm": {
+            "x": [
+              -55,
+              55
+            ],
+            "y": [
+              -140,
+              -80
+            ],
+            "z": [
+              9.9,
+              41.9
+            ]
+          }
+        }
+      ],
+      "orientation_note": "Original design initial orientation plate-facing-up; vertical enclosure installation needs application load qualification. No geometric restriction to in-plane rotation.",
+      "manufacturing_note": "Existing F1.fpd is a 180x200x6 support coupon, NOT the 150x148x3.5 D1 adapter. Preserve 3.5 thickness or redesign short housing-screw stack."
+    },
+    "meanwell": {
+      "source_directory": "parts/custom/meanwell-nsp1600-side-tab-mount",
+      "revision": "N2",
+      "source_params_sha256": "7de412cbc448c043a8745bd6e72a9d753c8faa0c593c22831f9d6b59ace16946",
+      "source_model_sha256": "198c293b1752bd94a526041587fc93c07b9ef334dd5e3b558811f05c4185b5d2",
+      "current_assembly_with_reference_coupon": "parts/custom/meanwell-nsp1600-side-tab-mount/exports/assembled_device_mount_N2.step",
+      "integration_step": "parts/custom/meanwell-nsp1600-side-tab-mount/exports/device_adapter_N2.step",
+      "plate_step": "parts/custom/meanwell-nsp1600-side-tab-mount/exports/plate_N2.step",
+      "integration_step_scope": "adapter, device, housing screws; does not include the reference main panel, panel studs, washers or nuts; add final panel hardware separately",
+      "fresh_reopen": {
+        "device_adapter": {
+          "bbox_mm": {
+            "x": [
+              -36.0,
+              36.0
+            ],
+            "y": [
+              -300.6000008,
+              37.9999995
+            ],
+            "z": [
+              -0.0,
+              91.0000001
+            ]
+          },
+          "solid_count": 22,
+          "valid": true,
+          "volume_mm3": 257992.49604178377,
+          "sha256": "917be263ff3e68bcf2170f5fd28ae8c5fd3165e3a3e7a0a534b182555e7a25f8"
+        },
+        "plate": {
+          "bbox_mm": {
+            "x": [
+              -36.0,
+              36.0
+            ],
+            "y": [
+              -300.6,
+              16.2
+            ],
+            "z": [
+              -0.0,
+              6.0
+            ]
+          },
+          "solid_count": 1,
+          "valid": true,
+          "volume_mm3": 99059.37834157722,
+          "sha256": "7826936af5d489426cd39502cc6f1f2dbd2bc2d703a5c1bdc4594ec76509bcb3"
+        }
+      },
+      "device_bbox_from_existing_build_metadata_mm": {
+        "x": [
+          -20.5000001,
+          20.5
+        ],
+        "y": [
+          -300.6000008,
+          37.9999995
+        ],
+        "z": [
+          6.0,
+          91.0000001
+        ]
+      },
+      "assembly_excluding_reference_panel_bbox_mm": {
+        "x": [
+          -36.0067931,
+          36.0067931
+        ],
+        "y": [
+          -300.6067931,
+          37.9999995
+        ],
+        "z": [
+          -2.2,
+          91.0000001
+        ]
+      },
+      "backpanel_studs": {
+        "catalog": "WGU30",
+        "native_kind": "M3 male load stud",
+        "length_mm": 12,
+        "native_side_convention": "original support coupon uses reverse side; new backpanel may designate either face consistently, no additional XY mirror",
+        "depth_offset_mm": 0,
+        "qty": 4,
+        "local_xy_mm": [
+          [
+            -28.5,
+            -257.8
+          ],
+          [
+            -28.5,
+            -5.800000000000011
+          ],
+          [
+            28.5,
+            -257.8
+          ],
+          [
+            28.5,
+            -5.800000000000011
+          ]
+        ],
+        "pitch_xy_mm": [
+          57.0,
+          252.0
+        ],
+        "base_and_adhesive_seating": "flush or below component-facing supporting panel surface",
+        "do_not_add_ordinary_holes_or_pockets_under_native_studs": true
+      },
+      "adapter": {
+        "width_mm": 72.0,
+        "height_mm": 316.8,
+        "thickness_mm": 6.0,
+        "thickness_tolerance_mm": 0.05,
+        "outline": {
+          "type": "closed_xy_bulge_polyline",
+          "vertices_before_fillet": [
+            [
+              -22.5,
+              -300.6
+            ],
+            [
+              22.5,
+              -300.6
+            ],
+            [
+              22.5,
+              -279.8
+            ],
+            [
+              36.0,
+              -279.8
+            ],
+            [
+              36.0,
+              -235.8
+            ],
+            [
+              22.5,
+              -235.8
+            ],
+            [
+              22.5,
+              -27.8
+            ],
+            [
+              36.0,
+              -27.8
+            ],
+            [
+              36.0,
+              16.2
+            ],
+            [
+              -36.0,
+              16.2
+            ],
+            [
+              -36.0,
+              -27.8
+            ],
+            [
+              -22.5,
+              -27.8
+            ],
+            [
+              -22.5,
+              -235.8
+            ],
+            [
+              -36.0,
+              -235.8
+            ],
+            [
+              -36.0,
+              -279.8
+            ],
+            [
+              -22.5,
+              -279.8
+            ]
+          ],
+          "vertices_xyb": [
+            [
+              -22.5,
+              -296.6,
+              0.41421356237309503
+            ],
+            [
+              -18.5,
+              -300.6,
+              0
+            ],
+            [
+              18.5,
+              -300.6,
+              0.41421356237309503
+            ],
+            [
+              22.5,
+              -296.6,
+              0
+            ],
+            [
+              22.5,
+              -283.8,
+              -0.41421356237309503
+            ],
+            [
+              26.5,
+              -279.8,
+              0
+            ],
+            [
+              32.0,
+              -279.8,
+              0.41421356237309503
+            ],
+            [
+              36.0,
+              -275.8,
+              0
+            ],
+            [
+              36.0,
+              -239.8,
+              0.41421356237309503
+            ],
+            [
+              32.0,
+              -235.8,
+              0
+            ],
+            [
+              26.5,
+              -235.8,
+              -0.41421356237309503
+            ],
+            [
+              22.5,
+              -231.8,
+              0
+            ],
+            [
+              22.5,
+              -31.8,
+              -0.41421356237309503
+            ],
+            [
+              26.5,
+              -27.8,
+              0
+            ],
+            [
+              32.0,
+              -27.8,
+              0.41421356237309503
+            ],
+            [
+              36.0,
+              -23.8,
+              0
+            ],
+            [
+              36.0,
+              12.2,
+              0.41421356237309503
+            ],
+            [
+              32.0,
+              16.2,
+              0
+            ],
+            [
+              -32.0,
+              16.2,
+              0.41421356237309503
+            ],
+            [
+              -36.0,
+              12.2,
+              0
+            ],
+            [
+              -36.0,
+              -23.8,
+              0.41421356237309503
+            ],
+            [
+              -32.0,
+              -27.8,
+              0
+            ],
+            [
+              -26.5,
+              -27.8,
+              -0.41421356237309503
+            ],
+            [
+              -22.5,
+              -31.8,
+              0
+            ],
+            [
+              -22.5,
+              -231.8,
+              -0.41421356237309503
+            ],
+            [
+              -26.5,
+              -235.8,
+              0
+            ],
+            [
+              -32.0,
+              -235.8,
+              0.41421356237309503
+            ],
+            [
+              -36.0,
+              -239.8,
+              0
+            ],
+            [
+              -36.0,
+              -275.8,
+              0.41421356237309503
+            ],
+            [
+              -32.0,
+              -279.8,
+              0
+            ],
+            [
+              -26.5,
+              -279.8,
+              -0.41421356237309503
+            ],
+            [
+              -22.5,
+              -283.8,
+              0
+            ]
+          ],
+          "corner_radius_mm": 4.0
+        },
+        "local_to_adapter_fpd_translation_mm": [
+          36.0,
+          300.6
+        ],
+        "edge_bevel_both_faces_mm": 0.4,
+        "stud_clearance_holes": {
+          "diameter_mm": 3.8,
+          "local_xy_mm": [
+            [
+              -28.5,
+              -257.8
+            ],
+            [
+              -28.5,
+              -5.800000000000011
+            ],
+            [
+              28.5,
+              -257.8
+            ],
+            [
+              28.5,
+              -5.800000000000011
+            ]
+          ]
+        },
+        "housing_holes": {
+          "diameter_mm": 4.5,
+          "local_xy_mm": [
+            [
+              2.3,
+              -5.8
+            ],
+            [
+              2.3,
+              -257.8
+            ]
+          ],
+          "countersink": {
+            "face": "underside contacting backpanel",
+            "included_angle_deg": 90,
+            "mouth_diameter_mm": 8.1,
+            "depth_mm": 1.7999999999999998
+          },
+          "opposite_bore_deburr_max_mm": 0.1
+        },
+        "source_material_finish": "6061-T6/T651, clear MIL-DTL-5541 Type II Class 3 conversion, dims after finish; supplier material/process capability must be explicitly resolved for FPE",
+        "source_planar_dxf": "parts/custom/meanwell-nsp1600-side-tab-mount/exports/plate_profile_mm.dxf"
+      },
+      "service": {
+        "socket_od_max_mm": 10,
+        "socket_approach_height_mm": 60.0,
+        "normal_lift_min_mm": 20.0
+      },
+      "housing_screw": {
+        "thread": "M4",
+        "pitch_mm": 0.7,
+        "overall_length_mm": 10.0,
+        "head_recess_nominal_mm": 0.05,
+        "nominal_projection_mm": 4.050000000000001
+      },
+      "external_panel_hardware": {
+        "washers": {
+          "part": "McMaster 98688A142",
+          "qty": 4,
+          "ID_mm": 3.2,
+          "OD_mm": 7,
+          "nominal_thickness_mm": 0.55
+        },
+        "nuts": {
+          "part": "McMaster 90576A102",
+          "qty": 4,
+          "type": "M3 nylon insert locknut",
+          "height_mm": 4,
+          "across_flats_mm": 5.5
+        }
+      },
+      "reservations": [
+        {
+          "name": "terminal/intake planning",
+          "bbox_mm": {
+            "x": [
+              -20.5,
+              20.5
+            ],
+            "y": [
+              0,
+              100
+            ],
+            "z": [
+              6,
+              91
+            ]
+          }
+        },
+        {
+          "name": "fan/exhaust planning",
+          "bbox_mm": {
+            "x": [
+              -20.5,
+              20.5
+            ],
+            "y": [
+              -400.6,
+              -300.6
+            ],
+            "z": [
+              6,
+              91
+            ]
+          }
+        }
+      ],
+      "orientation_note": "Already side-mounted on manufacturer original +X narrow side. Rotating in panel plane changes fan/terminal direction. Original airflow 500.6 overall reservation cannot fit within <500.6 clear dimension when axial; enclosure open volume may exceed subpanel bounds. Side orientation output derating remains unresolved.",
+      "manufacturing_note": "Preserve 6.0 thickness, local-tab R4 contour and underside 8.1 countersinks. Rear M4 source thread absent; actual feature must be verified. Existing conservative countersink-seat strength screen is HOLD."
+    },
+    "bedrock": {
+      "source_directory": "parts/custom/solidrun-bedrock-thermal-stud-mount",
+      "revision": "T1",
+      "source_params_sha256": "a46019a96b438b19c79a8865ffe0f5e7e8a3ee22b2cb5215bc2c7a90d410e8f5",
+      "source_model_sha256": "c2c3be61905b60b06d440a09b5b6c530265f76a146daaba36fbaed7909309027",
+      "current_assembly_with_reference_coupon": "parts/custom/solidrun-bedrock-thermal-stud-mount/exports/assembled_device_mount_T1.step",
+      "integration_step": "parts/custom/solidrun-bedrock-thermal-stud-mount/exports/device_adapter_T1.step",
+      "plate_step": "parts/custom/solidrun-bedrock-thermal-stud-mount/exports/plate_T1.step",
+      "integration_step_scope": "adapter, device, housing screws; does not include the reference main panel, panel studs, washers or nuts; add final panel hardware separately",
+      "fresh_reopen": {
+        "device_adapter": {
+          "bbox_mm": {
+            "x": [
+              -83.0,
+              83.0
+            ],
+            "y": [
+              -92.0,
+              92.0
+            ],
+            "z": [
+              -0.0,
+              56.1
+            ]
+          },
+          "solid_count": 29,
+          "valid": true,
+          "volume_mm3": 515261.93006528454,
+          "sha256": "bfa9ebcd381f4fcea46cc907fc31166beea2c2ba9c6c44344b5a367dcdef5f0d"
+        },
+        "plate": {
+          "bbox_mm": {
+            "x": [
+              -83.0,
+              83.0
+            ],
+            "y": [
+              -92.0,
+              92.0
+            ],
+            "z": [
+              -0.0,
+              5.1
+            ]
+          },
+          "solid_count": 1,
+          "valid": true,
+          "volume_mm3": 152561.32081119204,
+          "sha256": "8099a2595e537cbe29916f2a7b514b83210c59866befc3a373306239403ece1b"
+        },
+        "fin_bank_large_planar_faces": [
+          {
+            "area_mm2": 7194.499957242988,
+            "bbox_mm": {
+              "x": [
+                -32.4999999,
+                32.4999999
+              ],
+              "y": [
+                -80.0,
+                79.3
+              ],
+              "z": [
+                40.0,
+                40.0
+              ]
+            },
+            "normal": [
+              -2.321406976728e-14,
+              -2.359224774361e-15,
+              -1.0
+            ]
+          },
+          {
+            "area_mm2": 1421.9999999999377,
+            "bbox_mm": {
+              "x": [
+                12.0,
+                12.0
+              ],
+              "y": [
+                -80.0,
+                78.0
+              ],
+              "z": [
+                30.0,
+                39.0
+              ]
+            },
+            "normal": [
+              -1.0,
+              1.638574839135e-14,
+              2.249673816775e-14
+            ]
+          },
+          {
+            "area_mm2": 1421.9999999999375,
+            "bbox_mm": {
+              "x": [
+                14.0,
+                14.0
+              ],
+              "y": [
+                -80.0,
+                78.0
+              ],
+              "z": [
+                30.0,
+                39.0
+              ]
+            },
+            "normal": [
+              1.0,
+              -1.638574839135e-14,
+              -2.249673816775e-14
+            ]
+          },
+          {
+            "area_mm2": 1421.9999999999375,
+            "bbox_mm": {
+              "x": [
+                25.0,
+                25.0
+              ],
+              "y": [
+                -80.0,
+                78.0
+              ],
+              "z": [
+                30.0,
+                39.0
+              ]
+            },
+            "normal": [
+              -1.0,
+              1.638574839135e-14,
+              2.249673816775e-14
+            ]
+          },
+          {
+            "area_mm2": 1421.9999999999375,
+            "bbox_mm": {
+              "x": [
+                27.0,
+                27.0
+              ],
+              "y": [
+                -80.0,
+                78.0
+              ],
+              "z": [
+                30.0,
+                39.0
+              ]
+            },
+            "normal": [
+              1.0,
+              -1.638574839135e-14,
+              -2.249673816775e-14
+            ]
+          },
+          {
+            "area_mm2": 1421.9999999999366,
+            "bbox_mm": {
+              "x": [
+                -25.0,
+                -25.0
+              ],
+              "y": [
+                -80.0,
+                78.0
+              ],
+              "z": [
+                30.0,
+                39.0
+              ]
+            },
+            "normal": [
+              1.0,
+              -1.644993315995e-14,
+              -2.34361143722e-14
+            ]
+          },
+          {
+            "area_mm2": 1421.9999999999366,
+            "bbox_mm": {
+              "x": [
+                -12.0,
+                -12.0
+              ],
+              "y": [
+                -80.0,
+                78.0
+              ],
+              "z": [
+                30.0,
+                39.0
+              ]
+            },
+            "normal": [
+              1.0,
+              -1.644993315995e-14,
+              -2.34361143722e-14
+            ]
+          },
+          {
+            "area_mm2": 1421.9999999999363,
+            "bbox_mm": {
+              "x": [
+                -27.0,
+                -27.0
+              ],
+              "y": [
+                -80.0,
+                78.0
+              ],
+              "z": [
+                30.0,
+                39.0
+              ]
+            },
+            "normal": [
+              -1.0,
+              1.644993315995e-14,
+              2.34361143722e-14
+            ]
+          },
+          {
+            "area_mm2": 1421.9999999999363,
+            "bbox_mm": {
+              "x": [
+                -14.0,
+                -14.0
+              ],
+              "y": [
+                -80.0,
+                78.0
+              ],
+              "z": [
+                30.0,
+                39.0
+              ]
+            },
+            "normal": [
+              -1.0,
+              1.644993315995e-14,
+              2.34361143722e-14
+            ]
+          },
+          {
+            "area_mm2": 1421.9999999999363,
+            "bbox_mm": {
+              "x": [
+                -1.0,
+                -1.0
+              ],
+              "y": [
+                -80.0,
+                78.0
+              ],
+              "z": [
+                30.0,
+                39.0
+              ]
+            },
+            "normal": [
+              -1.0,
+              1.644993315995e-14,
+              2.34361143722e-14
+            ]
+          }
+        ]
+      },
+      "device_bbox_from_existing_build_metadata_mm": {
+        "x": [
+          -67.9570157,
+          65.0
+        ],
+        "y": [
+          -80.0000001,
+          90.0
+        ],
+        "z": [
+          5.0999999,
+          56.1
+        ]
+      },
+      "assembly_excluding_reference_panel_bbox_mm": {
+        "x": [
+          -83.0054416,
+          83.0054416
+        ],
+        "y": [
+          -92.0054416,
+          92.0054416
+        ],
+        "z": [
+          -2.2,
+          56.1
+        ]
+      },
+      "backpanel_studs": {
+        "catalog": "WGU30",
+        "native_kind": "M3 male load stud",
+        "length_mm": 12,
+        "native_side_convention": "original support coupon uses reverse side; new backpanel may designate either face consistently, no additional XY mirror",
+        "depth_offset_mm": 0,
+        "qty": 4,
+        "local_xy_mm": [
+          [
+            -76.0,
+            -82.0
+          ],
+          [
+            -76.0,
+            82.0
+          ],
+          [
+            76.0,
+            -82.0
+          ],
+          [
+            76.0,
+            82.0
+          ]
+        ],
+        "pitch_xy_mm": [
+          152.0,
+          164.0
+        ],
+        "base_and_adhesive_seating": "flush or below component-facing supporting panel surface",
+        "do_not_add_ordinary_holes_or_pockets_under_native_studs": true
+      },
+      "adapter": {
+        "width_mm": 166.0,
+        "height_mm": 184.0,
+        "thickness_mm": 5.1,
+        "thickness_tolerance_mm": 0.05,
+        "outline": {
+          "type": "centered_rounded_rectangle",
+          "corner_radius_mm": 8.0
+        },
+        "local_to_adapter_fpd_translation_mm": [
+          83.0,
+          92.0
+        ],
+        "edge_bevel_both_faces_mm": 0.4,
+        "stud_clearance_holes": {
+          "diameter_mm": 3.8,
+          "local_xy_mm": [
+            [
+              -76.0,
+              -82.0
+            ],
+            [
+              -76.0,
+              82.0
+            ],
+            [
+              76.0,
+              -82.0
+            ],
+            [
+              76.0,
+              82.0
+            ]
+          ]
+        },
+        "housing_holes": {
+          "diameter_mm": 4.5,
+          "local_xy_mm": [
+            [
+              -60,
+              -70
+            ],
+            [
+              60,
+              -70
+            ],
+            [
+              0,
+              -40
+            ],
+            [
+              0,
+              30
+            ],
+            [
+              -50,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "countersink": {
+            "face": "underside contacting backpanel",
+            "included_angle_deg": 90,
+            "mouth_diameter_mm": 8.1,
+            "depth_mm": 1.7999999999999998
+          },
+          "opposite_bore_deburr_max_mm": 0.1
+        },
+        "source_material_finish": "6061-T6/T651, clear MIL-DTL-5541 Type II Class 3 conversion, dims after finish; supplier material/process capability must be explicitly resolved for FPE",
+        "source_planar_dxf": "parts/custom/solidrun-bedrock-thermal-stud-mount/exports/plate_profile_mm.dxf",
+        "thermal_fields": {
+          "both_faces": true,
+          "field_width_mm": 126,
+          "field_height_mm": 156,
+          "corner_radius_mm": 5,
+          "depth_mm": 0.05,
+          "depth_tolerance_mm": 0.01,
+          "hard_lands_local_xy_mm": [
+            [
+              -60,
+              -70
+            ],
+            [
+              60,
+              -70
+            ],
+            [
+              0,
+              -40
+            ],
+            [
+              0,
+              30
+            ],
+            [
+              -50,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "top_hard_land_diameter_mm": 8,
+          "underside_hard_land_diameter_mm": 10,
+          "escape_grooves": {
+            "y_mm": [
+              -20,
+              20
+            ],
+            "x_start_mm": 62,
+            "x_end_mm": 84,
+            "width_mm": 1,
+            "corner_radius_mm": 0.25,
+            "depth_mm": 0.05,
+            "clip_to_actual_stock": true
+          },
+          "source_top_contour_dxf": "parts/custom/solidrun-bedrock-thermal-stud-mount/exports/thermal_top_pocket_contour_mm.dxf",
+          "source_bottom_contour_dxf": "parts/custom/solidrun-bedrock-thermal-stud-mount/exports/thermal_bottom_pocket_contour_mm.dxf",
+          "Ra_max_um": 1.6,
+          "assembled_gap_max_mm": 0.1
+        }
+      },
+      "service": {
+        "socket_od_max_mm": 10,
+        "socket_approach_height_mm": 60.0,
+        "normal_lift_min_mm": 20.0
+      },
+      "housing_screw": {
+        "thread": "M4",
+        "pitch_mm": 0.7,
+        "overall_length_mm": 8.0,
+        "head_recess_nominal_mm": 0.05,
+        "nominal_projection_mm": 2.950000000000001
+      },
+      "external_panel_hardware": {
+        "washers": {
+          "part": "McMaster 98688A142",
+          "qty": 4,
+          "ID_mm": 3.2,
+          "OD_mm": 7,
+          "nominal_thickness_mm": 0.55
+        },
+        "nuts": {
+          "part": "McMaster 90576A102",
+          "qty": 4,
+          "type": "M3 nylon insert locknut",
+          "height_mm": 4,
+          "across_flats_mm": 5.5
+        }
+      },
+      "reservations": [
+        {
+          "name": "IO side cable planning",
+          "bbox_mm": {
+            "x": [
+              -117.96,
+              -67.96
+            ],
+            "y": [
+              -75,
+              75
+            ],
+            "z": [
+              5.1,
+              50.1
+            ]
+          }
+        },
+        {
+          "name": "SMA end cable planning",
+          "bbox_mm": {
+            "x": [
+              -58,
+              58
+            ],
+            "y": [
+              90,
+              140
+            ],
+            "z": [
+              5.1,
+              50.1
+            ]
+          }
+        }
+      ],
+      "orientation_note": "Original vertical-fin installation rotates assembly about X+90 so local +Y becomes vertical. Preserve fin channels along backpanel vertical (local Y); rotation 0 or 180 deg about panel normal. Device is derived Tile + one clipped fin bank reference, not proven vendor configuration.",
+      "manufacturing_note": "5.10 +/- .05 stock and 0.050 +/- .010 thermal recesses with islands/grooves on BOTH faces are function-critical. A generic 5/6 mm plate or plain through-hole FPD is not an equivalent adapter. FPE capability acceptance needed; retain exact nominal geometry and explicit remarks."
+    }
+  },
+  "installed_catalog_evidence": {
+    "path": "C:\\Users\\KyleKassen\\AppData\\Local\\Programs\\FrontDesign\\Config\\Bolt.d\\10-Base.ini",
+    "sha256": "8870c105754794c30afe9045c9b1988ca9e354d887b0e005d049e641a0c07d49",
+    "WGU30_section": "Name=M3\nType=WGLSU\nThreadSize=3000\nPlateDiameter=12100\nLengths=6000, 12000, 20000\nInchUnit=0",
+    "dimension_units": "0.001 mm; native API mm",
+    "note": "Name=M3 ThreadSize=3000 PlateDiameter=12100 Lengths include12000, load type WGLSU; native properties confirmation remains root execution responsibility."
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "schema": "sce20-stacked-r2-psu-right-edge/1",
+  "units": "mm",
+  "assumptions": [
+    "Original N2 side mount retained, R180, translationY65.6,Z0.",
+    "New backpanel6mm retains rear seat, original studs fixed, nuts shifted2.825mm.",
+    "Physical enclosure-wall freedom in this Z band was proved in final_candidate_fit.json.",
+    "No production tolerances, heat rejection, strength or cable harness validation is inferred."
+  ],
+  "dimensions_mm": {
+    "nominal_body_local_half_width": 20.5,
+    "adapter_local_half_width": 36,
+    "stud_local_half_pitch_x": 28.5,
+    "native_cavity_radius": 6.05,
+    "native_socket_radius": 5,
+    "panel_width": 431.8,
+    "panel_height": 431.8,
+    "case_inner_x_at_PSU_z": [
+      -36.195,
+      467.995
+    ],
+    "case_inner_y_at_PSU_z": [
+      -36.195,
+      467.995
+    ],
+    "PSU_and_corridor_y_range": [
+      -34.4,
+      466.2
+    ]
+  },
+  "candidates": [
+    {
+      "center_x_mm": 371.5,
+      "translation_y_mm": 65.6,
+      "rotation_z_deg": 180,
+      "bbox_mm": {
+        "x": [
+          335.5,
+          407.5
+        ],
+        "y": [
+          27.6000005,
+          366.2000008
+        ],
+        "z": [
+          -0.0,
+          91.0000001
+        ]
+      },
+      "case_and_factory_hardware_hits": [],
+      "factory_socket_hits": [],
+      "adapter_right_panel_margin_mm": 24.30000000000001,
+      "native_stud_cavity_edge_web_mm": 25.75000000000001
+    },
+    {
+      "center_x_mm": 378,
+      "translation_y_mm": 65.6,
+      "rotation_z_deg": 180,
+      "bbox_mm": {
+        "x": [
+          342.0,
+          414.0
+        ],
+        "y": [
+          27.6000005,
+          366.2000008
+        ],
+        "z": [
+          -0.0,
+          91.0000001
+        ]
+      },
+      "case_and_factory_hardware_hits": [],
+      "factory_socket_hits": [],
+      "adapter_right_panel_margin_mm": 17.80000000000001,
+      "native_stud_cavity_edge_web_mm": 19.25000000000001
+    },
+    {
+      "center_x_mm": 382,
+      "translation_y_mm": 65.6,
+      "rotation_z_deg": 180,
+      "bbox_mm": {
+        "x": [
+          346.0,
+          418.0
+        ],
+        "y": [
+          27.6000005,
+          366.2000008
+        ],
+        "z": [
+          -0.0,
+          91.0000001
+        ]
+      },
+      "case_and_factory_hardware_hits": [],
+      "factory_socket_hits": [],
+      "adapter_right_panel_margin_mm": 13.800000000000011,
+      "native_stud_cavity_edge_web_mm": 15.25000000000001
+    },
+    {
+      "center_x_mm": 386,
+      "translation_y_mm": 65.6,
+      "rotation_z_deg": 180,
+      "bbox_mm": {
+        "x": [
+          350.0,
+          422.0
+        ],
+        "y": [
+          27.6000005,
+          366.2000008
+        ],
+        "z": [
+          -0.0,
+          91.0000001
+        ]
+      },
+      "case_and_factory_hardware_hits": [],
+      "factory_socket_hits": [],
+      "adapter_right_panel_margin_mm": 9.800000000000011,
+      "native_stud_cavity_edge_web_mm": 11.25000000000001
+    },
+    {
+      "center_x_mm": 390,
+      "translation_y_mm": 65.6,
+      "rotation_z_deg": 180,
+      "bbox_mm": {
+        "x": [
+          354.0,
+          426.0
+        ],
+        "y": [
+          27.6000005,
+          366.2000008
+        ],
+        "z": [
+          -0.0,
+          91.0000001
+        ]
+      },
+      "case_and_factory_hardware_hits": [],
+      "factory_socket_hits": [],
+      "adapter_right_panel_margin_mm": 5.800000000000011,
+      "native_stud_cavity_edge_web_mm": 7.2500000000000115
+    },
+    {
+      "center_x_mm": 391.8,
+      "translation_y_mm": 65.6,
+      "rotation_z_deg": 180,
+      "bbox_mm": {
+        "x": [
+          355.8,
+          427.8
+        ],
+        "y": [
+          27.6000005,
+          366.2000008
+        ],
+        "z": [
+          -0.0,
+          91.0000001
+        ]
+      },
+      "case_and_factory_hardware_hits": [],
+      "factory_socket_hits": [],
+      "adapter_right_panel_margin_mm": 4.0,
+      "native_stud_cavity_edge_web_mm": 5.45
+    },
+    {
+      "center_x_mm": 393.8,
+      "translation_y_mm": 65.6,
+      "rotation_z_deg": 180,
+      "bbox_mm": {
+        "x": [
+          357.8,
+          429.8
+        ],
+        "y": [
+          27.6000005,
+          366.2000008
+        ],
+        "z": [
+          -0.0,
+          91.0000001
+        ]
+      },
+      "case_and_factory_hardware_hits": [],
+      "factory_socket_hits": [
+        {
+          "other": "factory_socket_409.575_22.225",
+          "probe_solid_index": 13,
+          "other_solid_index": 0,
+          "volume_mm3": 8.940682497822912,
+          "bbox_mm": {
+            "x": [
+              395.7149785,
+              398.8500002
+            ],
+            "y": [
+              27.9608351,
+              32.7118669
+            ],
+            "z": [
+              34.0000027,
+              36.0000027
+            ]
+          }
+        }
+      ],
+      "adapter_right_panel_margin_mm": 2.0,
+      "native_stud_cavity_edge_web_mm": 3.45
+    },
+    {
+      "center_x_mm": 395.8,
+      "translation_y_mm": 65.6,
+      "rotation_z_deg": 180,
+      "bbox_mm": {
+        "x": [
+          359.8,
+          431.8
+        ],
+        "y": [
+          27.6000005,
+          366.2000008
+        ],
+        "z": [
+          -0.0,
+          91.0000001
+        ]
+      },
+      "case_and_factory_hardware_hits": [],
+      "factory_socket_hits": [
+        {
+          "other": "factory_socket_409.575_22.225",
+          "probe_solid_index": 13,
+          "other_solid_index": 0,
+          "volume_mm3": 32.63144858455982,
+          "bbox_mm": {
+            "x": [
+              395.5710945,
+              400.8500002
+            ],
+            "y": [
+              27.6000005,
+              34.4264088
+            ],
+            "z": [
+              34.0000027,
+              36.0000027
+            ]
+          }
+        }
+      ],
+      "adapter_right_panel_margin_mm": 0.0,
+      "native_stud_cavity_edge_web_mm": 1.4500000000000002
+    }
+  ],
+  "no_overhang_upper_center_x_mm": 395.8,
+  "lower_right_R15_socket_is_limiting": true,
+  "nominal_max_center_x_mm": 392.4266234874726,
+  "nominal_max_center_x_0p1_mm_rounded_down": 392.4,
+  "upper_bound_search_mm": [
+    392.4266234874726,
+    392.4266292810441
+  ],
+  "interpretation": "Choose manufacturing/handling margin below the geometric limit; do not place exactly at a tangent."
+}

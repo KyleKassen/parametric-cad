@@ -1,0 +1,61 @@
+{
+  "schema": "part-spec/1",
+  "part_name": "Mean Well NSP-1600 narrow-side tab adapter N2",
+  "units": "mm",
+  "solid_count": 1,
+  "dimensions": [
+    {
+      "id": "plate_width",
+      "kind": "bbox",
+      "axis": "x",
+      "expected": 72,
+      "tol": 0.01
+    },
+    {
+      "id": "plate_length",
+      "kind": "bbox",
+      "axis": "y",
+      "expected": 316.8,
+      "tol": 0.01
+    },
+    {
+      "id": "plate_thickness",
+      "kind": "bbox",
+      "axis": "z",
+      "expected": 6,
+      "tol": 0.005
+    },
+    {
+      "id": "two_M4_bores",
+      "kind": "cylinder",
+      "diameter": 4.5,
+      "tol": 0.001,
+      "axis": "Z",
+      "type": "hole",
+      "count_min": 2
+    },
+    {
+      "id": "four_stud_bores",
+      "kind": "cylinder",
+      "diameter": 3.8,
+      "tol": 0.001,
+      "axis": "Z",
+      "type": "hole",
+      "count_min": 4
+    }
+  ],
+  "design": {
+    "role": "plate",
+    "min_score": 70,
+    "severity": "hard",
+    "metrics": {
+      "edge_break_coverage": {
+        "min_score": 60
+      }
+    }
+  },
+  "assumptions": [
+    "PRELIMINARY. Side-M4 rear thread not modeled; confirm physical thread. Side-orientation output derating remains unresolved."
+  ],
+  "unresolved": []
+}

@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "flat_hardware_vs_device",
+      "status": "PASS",
+      "measured": []
+    },
+    {
+      "id": "upright_hardware_vs_device",
+      "status": "PASS",
+      "measured": []
+    },
+    {
+      "id": "B210_M01_base_P1_mm_scale",
+      "status": "PASS",
+      "measured": [
+        160.0,
+        180.0,
+        12.000000000000002
+      ]
+    },
+    {
+      "id": "B210_M02_retainer_P1_mm_scale",
+      "status": "PASS",
+      "measured": [
+        160.0,
+        20.0,
+        8.0
+      ]
+    },
+    {
+      "id": "B210_M03_spacer_P1_mm_scale",
+      "status": "PASS",
+      "measured": [
+        12.0,
+        12.0,
+        30.0
+      ]
+    },
+    {
+      "id": "B210_M04_film_P1_mm_scale",
+      "status": "PASS",
+      "measured": [
+        16.0,
+        20.0,
+        0.2
+      ]
+    },
+    {
+      "id": "foot_driver_preinstall_20.0_-66.947",
+      "status": "PASS",
+      "measured": 0.0
+    },
+    {
+      "id": "foot_driver_preinstall_55.0_-66.947",
+      "status": "PASS",
+      "measured": 0.0
+    },
+    {
+      "id": "foot_driver_preinstall_20.0_73.053",
+      "status": "PASS",
+      "measured": 0.0
+    },
+    {
+      "id": "foot_driver_preinstall_55.0_73.053",
+      "status": "PASS",
+      "measured": 0.0
+    },
+    {
+      "id": "web_rear_tool_-66.947_26.0",
+      "status": "PASS",
+      "measured": 0
+    },
+    {
+      "id": "web_nut_tool_-66.947_26.0",
+      "status": "PASS",
+      "measured": 0.0
+    },
+    {
+      "id": "web_rear_tool_-66.947_166.0",
+      "status": "PASS",
+      "measured": 0
+    },
+    {
+      "id": "web_nut_tool_-66.947_166.0",
+      "status": "PASS",
+      "measured": 0.0
+    },
+    {
+      "id": "web_rear_tool_73.053_26.0",
+      "status": "PASS",
+      "measured": 0
+    },
+    {
+      "id": "web_nut_tool_73.053_26.0",
+      "status": "PASS",
+      "measured": 0.0
+    },
+    {
+      "id": "web_rear_tool_73.053_166.0",
+      "status": "PASS",
+      "measured": 0
+    },
+    {
+      "id": "web_nut_tool_73.053_166.0",
+      "status": "PASS",
+      "measured": 0.0
+    }
+  ],
+  "limitations": [
+    "Threads are represented as clearance/minor bores and nominal shanks; expected engaged-thread intersections are not treated as clashes.",
+    "Purchased head/socket/nut envelopes are nominal; substitute hardware requires recheck."
+  ]
+}

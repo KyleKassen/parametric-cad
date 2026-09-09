@@ -1,0 +1,65 @@
+{
+  "status": "ROOT_AND_VISUAL_QA_PASS; PRELIMINARY_FIT_PROTOTYPE_ONLY",
+  "release_scope": "PRELIMINARY_FIT_PROTOTYPE_ONLY",
+  "pdf": "MeanWell_N1_drawing_package.pdf",
+  "pdf_sha256": "541023f6bdb816acade1c824dbb9a9eaa9f2c81e62c42cd7f46e2cc15e7f52cb",
+  "date": "2026-09-08",
+  "method": "Poppler rendered all six final pages at1600px; each read and visually inspected. Electronic PDF independently parsed with pypdf.",
+  "pages": [
+    {
+      "page": 1,
+      "image": "qa/page-1.png",
+      "sha256": "8b36ab5f66a05a3c671a97bbbe6c732f5cf913d1bc973adbd490e1f1cbc86802",
+      "result": "PASS",
+      "observations": "CAD overview, design basis and scoped81/48verification counts readable."
+    },
+    {
+      "page": 2,
+      "image": "qa/page-2.png",
+      "sha256": "b1e1d5b9e61b8300207a0788a7792b1dd7b0ad9752ba42b181dcc4f4e60f8f5d",
+      "result": "PASS",
+      "observations": "Dimensioned plans, datum definitions and H/S coordinate IDs agree with parameters."
+    },
+    {
+      "page": 3,
+      "image": "qa/page-3.png",
+      "sha256": "dd25c9fcec1537c3dd7984b10a182192f9947418a73f90277fdf06414a1cb52d",
+      "result": "PASS",
+      "observations": "Pocket boundary dimensions, central land, crosssection and physical CSK acceptance readable."
+    },
+    {
+      "page": 4,
+      "image": "qa/page-4.png",
+      "sha256": "7a7d061221a50f05e843c7008ee27550d40641126e36fbfda6416eb11032b702",
+      "result": "PASS",
+      "observations": "Actual CAD sections, color legend, screw projection, torque qualification, explicit110 x264.7 mm FPE pitch and access clear."
+    },
+    {
+      "page": 5,
+      "image": "qa/page-5.png",
+      "sha256": "71eacebcb630071da0d48351b556e9707eb4d7cf2bd5c4c6f2c16e8425337129",
+      "result": "PASS",
+      "observations": "BOM links, quantities and complete assembly/prototype acceptance text readable."
+    },
+    {
+      "page": 6,
+      "image": "qa/page-6.png",
+      "sha256": "a50996f805c80a20e22e24ad9e2ca927d0515fe78506a8f0e86b3f73d81ed976",
+      "result": "PASS",
+      "observations": "A3 fullscale template with labeled seven holes and both calibration bars; no cropping."
+    }
+  ],
+  "automated_report": "document_verification.json",
+  "automated_checks_passed": 31,
+  "source_lint": "Python compile and Ruff E9,F PASS",
+  "limitations": [
+    "Printer scale unverified; user must check both100mm bars.",
+    "No physical fit, load, electrical or thermal validation performed.",
+    "Supplier and application approvals remain as recorded in engineering and prototype documents."
+  ],
+  "root_review": {
+    "date": "2026-09-08",
+    "all_six_pages_reviewed": true,
+    "result": "Revised page 4 approved; no remaining layout findings. Other five page rasters unchanged by SHA256."
+  }
+}

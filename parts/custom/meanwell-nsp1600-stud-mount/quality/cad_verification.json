@@ -1,0 +1,631 @@
+{
+  "status": "PASS",
+  "scope": "Nominal CAD analytical checks only; no physical fabrication or testing",
+  "params_sha256": "d9aad1e3d1bacae227c72cfc882f552ddf619c8aee45bf24df1f340dafe3e301",
+  "checks": [
+    {
+      "check": "Original source STEP hash preserved",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "All 19 original PSU solids retained",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "36 components each valid single solid",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "plate_N1.step valid complete solids",
+      "passed": true,
+      "measured": 1,
+      "criterion": 1
+    },
+    {
+      "check": "plate_N1.step millimeter scale and coordinates",
+      "passed": true,
+      "measured": {
+        "x": [
+          -62.5,
+          62.5
+        ],
+        "y": [
+          -300.6,
+          0.0
+        ],
+        "z": [
+          -0.0,
+          5.0
+        ]
+      },
+      "criterion": {
+        "x": [
+          -62.5,
+          62.5
+        ],
+        "y": [
+          -300.6,
+          0.0
+        ],
+        "z": [
+          -0.0,
+          5.0
+        ]
+      }
+    },
+    {
+      "check": "plate_N1.step STEP volume roundtrip",
+      "passed": true,
+      "measured": 6.8860197755524786e-15,
+      "criterion": "relative <1e-08; source audit observed18.1ppm vendor reserialization drift"
+    },
+    {
+      "check": "assembled_device_mount_N1.step valid complete solids",
+      "passed": true,
+      "measured": 36,
+      "criterion": 36
+    },
+    {
+      "check": "assembled_device_mount_N1.step millimeter scale and coordinates",
+      "passed": true,
+      "measured": {
+        "x": [
+          -72.5,
+          72.5
+        ],
+        "y": [
+          -320.3,
+          37.9999995
+        ],
+        "z": [
+          -6.0,
+          46.0
+        ]
+      },
+      "criterion": {
+        "x": [
+          -72.5,
+          72.5
+        ],
+        "y": [
+          -320.3,
+          37.9999995
+        ],
+        "z": [
+          -6.0,
+          46.0
+        ]
+      }
+    },
+    {
+      "check": "assembled_device_mount_N1.step STEP volume roundtrip",
+      "passed": true,
+      "measured": 4.418308436749852e-06,
+      "criterion": "relative <3e-05; source audit observed18.1ppm vendor reserialization drift"
+    },
+    {
+      "check": "device_adapter_N1.step valid complete solids",
+      "passed": true,
+      "measured": 23,
+      "criterion": 23
+    },
+    {
+      "check": "device_adapter_N1.step millimeter scale and coordinates",
+      "passed": true,
+      "measured": {
+        "x": [
+          -62.5,
+          62.5
+        ],
+        "y": [
+          -300.6000008,
+          37.9999995
+        ],
+        "z": [
+          -0.0,
+          46.0
+        ]
+      },
+      "criterion": {
+        "x": [
+          -62.5,
+          62.5
+        ],
+        "y": [
+          -300.6000008,
+          37.9999995
+        ],
+        "z": [
+          -0.0,
+          46.0
+        ]
+      }
+    },
+    {
+      "check": "device_adapter_N1.step STEP volume roundtrip",
+      "passed": true,
+      "measured": 8.26511551930451e-06,
+      "criterion": "relative <3e-05; source audit observed18.1ppm vendor reserialization drift"
+    },
+    {
+      "check": "mount_hardware_N1.step valid complete solids",
+      "passed": true,
+      "measured": 16,
+      "criterion": 16
+    },
+    {
+      "check": "mount_hardware_N1.step millimeter scale and coordinates",
+      "passed": true,
+      "measured": {
+        "x": [
+          -62.5,
+          62.5
+        ],
+        "y": [
+          -300.6,
+          0.0
+        ],
+        "z": [
+          -2.2,
+          12.0
+        ]
+      },
+      "criterion": {
+        "x": [
+          -62.5,
+          62.5
+        ],
+        "y": [
+          -300.6,
+          0.0
+        ],
+        "z": [
+          -2.2,
+          12.0
+        ]
+      }
+    },
+    {
+      "check": "mount_hardware_N1.step STEP volume roundtrip",
+      "passed": true,
+      "measured": 4.957581066813343e-15,
+      "criterion": "relative <1e-08; source audit observed18.1ppm vendor reserialization drift"
+    },
+    {
+      "check": "FPE_interface_REFERENCE_ONLY.step valid complete solids",
+      "passed": true,
+      "measured": 5,
+      "criterion": 5
+    },
+    {
+      "check": "FPE_interface_REFERENCE_ONLY.step millimeter scale and coordinates",
+      "passed": true,
+      "measured": {
+        "x": [
+          -72.5,
+          72.5
+        ],
+        "y": [
+          -320.3,
+          19.7
+        ],
+        "z": [
+          -6.0,
+          12.0
+        ]
+      },
+      "criterion": {
+        "x": [
+          -72.5,
+          72.5
+        ],
+        "y": [
+          -320.3,
+          19.7
+        ],
+        "z": [
+          -6.0,
+          12.0
+        ]
+      }
+    },
+    {
+      "check": "FPE_interface_REFERENCE_ONLY.step STEP volume roundtrip",
+      "passed": true,
+      "measured": 5.907855285260564e-15,
+      "criterion": "relative <1e-08; source audit observed18.1ppm vendor reserialization drift"
+    },
+    {
+      "check": "Adapter vs PSU interference",
+      "passed": true,
+      "measured": 0,
+      "criterion": "mm3; surface contact allowed"
+    },
+    {
+      "check": "Adapter vs panel interference",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "Fan 14 to adapter nominal minimum distance",
+      "passed": true,
+      "measured": 0.5000003,
+      "criterion": "Nominal >=0.20mm; physical gap must be gauged separately"
+    },
+    {
+      "check": "Fan 15 to adapter nominal minimum distance",
+      "passed": true,
+      "measured": 0.5000003,
+      "criterion": "Nominal >=0.20mm; physical gap must be gauged separately"
+    },
+    {
+      "check": "Metal part 17 supported contact footprint",
+      "passed": true,
+      "measured": 21805.08590228411,
+      "criterion": "mm2 approximate from1micron overlap; >100mm2"
+    },
+    {
+      "check": "Metal part 0 supported contact footprint",
+      "passed": true,
+      "measured": 540.5819243022169,
+      "criterion": "mm2 approximate from1micron overlap; >100mm2"
+    },
+    {
+      "check": "McMaster_91294A128_M3x8_H1 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A128_M3x8_H1 outside expected female minor-bore zone",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Not a thread fit or actual-head geometry test"
+    },
+    {
+      "check": "McMaster_91294A128_M3x8_H1 nominal intrusion",
+      "passed": true,
+      "measured": 3.0500000000000007,
+      "criterion": "OEM max4mm"
+    },
+    {
+      "check": "McMaster_91294A128_M3x8_H1 ideal proxy head recess",
+      "passed": true,
+      "measured": 0.05,
+      "criterion": "Actual DIN7991 head gauge required: flush to0.10below A"
+    },
+    {
+      "check": "McMaster_91294A128_M3x8_H2 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A128_M3x8_H2 outside expected female minor-bore zone",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Not a thread fit or actual-head geometry test"
+    },
+    {
+      "check": "McMaster_91294A128_M3x8_H2 nominal intrusion",
+      "passed": true,
+      "measured": 3.0500000000000007,
+      "criterion": "OEM max4mm"
+    },
+    {
+      "check": "McMaster_91294A128_M3x8_H2 ideal proxy head recess",
+      "passed": true,
+      "measured": 0.05,
+      "criterion": "Actual DIN7991 head gauge required: flush to0.10below A"
+    },
+    {
+      "check": "McMaster_91294A128_M3x8_H3 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A128_M3x8_H3 outside expected female minor-bore zone",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Not a thread fit or actual-head geometry test"
+    },
+    {
+      "check": "McMaster_91294A128_M3x8_H3 nominal intrusion",
+      "passed": true,
+      "measured": 3.0500000000000007,
+      "criterion": "OEM max4mm"
+    },
+    {
+      "check": "McMaster_91294A128_M3x8_H3 ideal proxy head recess",
+      "passed": true,
+      "measured": 0.05,
+      "criterion": "Actual DIN7991 head gauge required: flush to0.10below A"
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_S1 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_S1 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_S1 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_S1 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_S1 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_S1 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_S2 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_S2 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_S2 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_S2 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_S2 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_S2 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_S3 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_S3 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_S3 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_S3 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_S3 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_S3 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_S4 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_S4 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_S4 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_S4 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_S4 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_S4 vs PSU",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "H1 nominal tip to modeled PCB",
+      "passed": true,
+      "measured": 1.4499998008099872,
+      "criterion": ">1mm CAD; manufacturer4mm cap still governs"
+    },
+    {
+      "check": "H1 maximum accepted protrusion vs PCB",
+      "passed": true,
+      "measured": 1.1499998008099883,
+      "criterion": "2.75..3.35mm physical protrusion acceptance, unverified receiving tolerances"
+    },
+    {
+      "check": "H2 nominal tip to modeled PCB",
+      "passed": true,
+      "measured": 1.4499998008099872,
+      "criterion": ">1mm CAD; manufacturer4mm cap still governs"
+    },
+    {
+      "check": "H2 maximum accepted protrusion vs PCB",
+      "passed": true,
+      "measured": 1.1499998008099883,
+      "criterion": "2.75..3.35mm physical protrusion acceptance, unverified receiving tolerances"
+    },
+    {
+      "check": "S1 socket OD10 access",
+      "passed": true,
+      "measured": 7.500000015080005,
+      "criterion": "mm; >=10mm internal socket depth,60mm overhead reservation"
+    },
+    {
+      "check": "S2 socket OD10 access",
+      "passed": true,
+      "measured": 7.500000015080005,
+      "criterion": "mm; >=10mm internal socket depth,60mm overhead reservation"
+    },
+    {
+      "check": "S3 socket OD10 access",
+      "passed": true,
+      "measured": 7.4999999849000005,
+      "criterion": "mm; >=10mm internal socket depth,60mm overhead reservation"
+    },
+    {
+      "check": "S4 socket OD10 access",
+      "passed": true,
+      "measured": 7.4999999849000005,
+      "criterion": "mm; >=10mm internal socket depth,60mm overhead reservation"
+    },
+    {
+      "check": "Normal removal sample 0mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Nuts and washers removed first; samples plus straight cylindrical bore path"
+    },
+    {
+      "check": "Normal removal sample 0.1mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Nuts and washers removed first; samples plus straight cylindrical bore path"
+    },
+    {
+      "check": "Normal removal sample 1mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Nuts and washers removed first; samples plus straight cylindrical bore path"
+    },
+    {
+      "check": "Normal removal sample 5mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Nuts and washers removed first; samples plus straight cylindrical bore path"
+    },
+    {
+      "check": "Normal removal sample 10mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Nuts and washers removed first; samples plus straight cylindrical bore path"
+    },
+    {
+      "check": "Normal removal sample 12mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Nuts and washers removed first; samples plus straight cylindrical bore path"
+    },
+    {
+      "check": "Normal removal sample 13mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Nuts and washers removed first; samples plus straight cylindrical bore path"
+    },
+    {
+      "check": "Normal removal sample 20mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Nuts and washers removed first; samples plus straight cylindrical bore path"
+    },
+    {
+      "check": "intake corridor vs added adapter hardware",
+      "passed": true,
+      "measured": 0,
+      "criterion": "100mm planning reservation, not plug/cable modeling or universal OEM minimum"
+    },
+    {
+      "check": "exhaust corridor vs added adapter hardware",
+      "passed": true,
+      "measured": 0,
+      "criterion": "100mm planning reservation, not plug/cable modeling or universal OEM minimum"
+    },
+    {
+      "check": "Hardware pair interference excluding nominal contact",
+      "passed": true,
+      "measured": [],
+      "criterion": null
+    },
+    {
+      "check": "Stud protrusion past nominal nut",
+      "passed": true,
+      "measured": 2.45,
+      "criterion": ">=1mm nominal, physically verify nylon fully traversed"
+    },
+    {
+      "check": "Repository evaluated STEP matches deliverable plate",
+      "passed": true,
+      "measured": 0.0,
+      "criterion": "symmetric difference mm3"
+    }
+  ],
+  "passed_count": 81,
+  "check_count": 81,
+  "limitations": [
+    "Manufacturer general\u00b10.5mm pattern not covered by self-centering CSKs; fit template and coordinate survey mandatory",
+    "Thread material/capacity, real screw seat, FPE anchors and all physical loads unvalidated",
+    "Actual plugs, lugs, terminal covers and cable bend radii not modeled",
+    "No cooling capacity, EMC, electrical safety or vibration qualification"
+  ]
+}

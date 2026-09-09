@@ -1,0 +1,1085 @@
+{
+  "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\02 Component Library\\Enclosures & Transport\\Saginaw SCE-20H2010LP CAD Package\\SCE-20H2010LP.stp",
+  "source_sha256": "53c943f7f13f685a41d3698485beeea6a84635aebf1fdee093479fc0b733d99a",
+  "units": "mm",
+  "identity_evidence": {
+    "step_product_name": "SUBPANEL",
+    "step_product_entity": "#108856",
+    "solid_index_zero_based": 60,
+    "face_index_zero_based": 0,
+    "panel_valid": true
+  },
+  "panel": {
+    "width_mm": 431.8,
+    "height_mm": 431.8,
+    "source_thickness_mm": 3.175,
+    "corner_radius_mm": 6.35,
+    "center_xy_mm": [
+      0,
+      0
+    ],
+    "source_rear_face_z_mm": -112.395,
+    "source_component_face_z_mm": -109.22,
+    "holes": [
+      {
+        "center_xy_mm": [
+          -193.675,
+          -193.675
+        ],
+        "diameter_mm": 12.7,
+        "type": "round through hole"
+      },
+      {
+        "center_xy_mm": [
+          -193.675,
+          193.675
+        ],
+        "diameter_mm": 12.7,
+        "type": "round through hole"
+      },
+      {
+        "center_xy_mm": [
+          193.675,
+          193.675
+        ],
+        "diameter_mm": 12.7,
+        "type": "round through hole"
+      },
+      {
+        "center_xy_mm": [
+          193.675,
+          -193.675
+        ],
+        "diameter_mm": 12.7,
+        "type": "round through hole"
+      },
+      {
+        "center_xy_mm": [
+          -193.675,
+          -161.925
+        ],
+        "diameter_mm": 7.1374,
+        "type": "round through hole"
+      },
+      {
+        "center_xy_mm": [
+          193.675,
+          161.925
+        ],
+        "diameter_mm": 7.1374,
+        "type": "round through hole"
+      }
+    ]
+  },
+  "transforms": {
+    "panel_center_component_face_origin_to_source_translation_mm": [
+      0,
+      0,
+      -109.22
+    ],
+    "panel_lower_left_component_face_origin_to_source_translation_mm": [
+      -215.9,
+      -215.9,
+      -109.22
+    ],
+    "rotation_degrees": [
+      0,
+      0,
+      0
+    ],
+    "normal_toward_door_source": [
+      0,
+      0,
+      1
+    ],
+    "source_x_positive": "right as viewed through open door",
+    "source_y_positive": "up as viewed through open door",
+    "if_new_thickness_rear_face_retained": "new_component_face_z_mm = -112.395 + new_thickness_mm"
+  },
+  "keepouts": {
+    "factory_subpanel_stud_and_nut_solids": [
+      {
+        "solid_index_zero_based": 44,
+        "bbox_mm": {
+          "x": [
+            -201.6125001,
+            -185.7374999
+          ],
+          "y": [
+            185.7374999,
+            201.6125001
+          ],
+          "z": [
+            -125.0950001,
+            -96.5199999
+          ]
+        },
+        "volume_mm3": 2199.396136994308,
+        "face_count": 16,
+        "valid": true
+      },
+      {
+        "solid_index_zero_based": 45,
+        "bbox_mm": {
+          "x": [
+            185.7374999,
+            201.6125001
+          ],
+          "y": [
+            185.7374999,
+            201.6125001
+          ],
+          "z": [
+            -125.0950001,
+            -96.5199999
+          ]
+        },
+        "volume_mm3": 2199.396136994308,
+        "face_count": 16,
+        "valid": true
+      },
+      {
+        "solid_index_zero_based": 46,
+        "bbox_mm": {
+          "x": [
+            -201.6125001,
+            -185.7374999
+          ],
+          "y": [
+            -201.6125001,
+            -185.7374999
+          ],
+          "z": [
+            -125.0950001,
+            -96.5199999
+          ]
+        },
+        "volume_mm3": 2199.3961369943077,
+        "face_count": 16,
+        "valid": true
+      },
+      {
+        "solid_index_zero_based": 47,
+        "bbox_mm": {
+          "x": [
+            185.7374999,
+            201.6125001
+          ],
+          "y": [
+            -201.6125001,
+            -185.7374999
+          ],
+          "z": [
+            -125.0950001,
+            -96.5199999
+          ]
+        },
+        "volume_mm3": 2199.396136994308,
+        "face_count": 16,
+        "valid": true
+      },
+      {
+        "solid_index_zero_based": 61,
+        "bbox_mm": {
+          "x": [
+            184.2134999,
+            203.1365001
+          ],
+          "y": [
+            -203.1365,
+            -184.2135
+          ],
+          "z": [
+            -109.22,
+            -100.6855999
+          ]
+        },
+        "volume_mm3": 1089.8921245137985,
+        "face_count": 50,
+        "valid": true
+      },
+      {
+        "solid_index_zero_based": 62,
+        "bbox_mm": {
+          "x": [
+            -203.1365001,
+            -184.2134999
+          ],
+          "y": [
+            -203.1365,
+            -184.2135
+          ],
+          "z": [
+            -109.22,
+            -100.6855999
+          ]
+        },
+        "volume_mm3": 1089.8921245137983,
+        "face_count": 50,
+        "valid": true
+      },
+      {
+        "solid_index_zero_based": 63,
+        "bbox_mm": {
+          "x": [
+            -203.1365001,
+            -184.2134999
+          ],
+          "y": [
+            184.2135,
+            203.1365
+          ],
+          "z": [
+            -109.22,
+            -100.6855999
+          ]
+        },
+        "volume_mm3": 1089.8921245137988,
+        "face_count": 50,
+        "valid": true
+      },
+      {
+        "solid_index_zero_based": 64,
+        "bbox_mm": {
+          "x": [
+            184.2134999,
+            203.1365001
+          ],
+          "y": [
+            184.2135,
+            203.1365
+          ],
+          "z": [
+            -109.22,
+            -100.6855999
+          ]
+        },
+        "volume_mm3": 1089.8921245137988,
+        "face_count": 50,
+        "valid": true
+      }
+    ],
+    "factory_panel_stud_top_source_z_mm": -96.52,
+    "factory_nut_top_source_z_mm": -100.6856,
+    "factory_nut_bounding_radius_mm": 9.4615,
+    "source_document_pocket_solid_index_zero_based": 9,
+    "source_document_pocket_bbox_mm": {
+      "x": [
+        -198.5772001,
+        4.6228001
+      ],
+      "y": [
+        -160.8169251,
+        4.2830751
+      ],
+      "z": [
+        131.1402,
+        152.2222001
+      ]
+    },
+    "nearest_door_assembly_z_over_panel_mm": 131.1402,
+    "clearance_above_source_panel_to_document_pocket_mm": 240.3602
+  },
+  "conservative_cavity_probe": {
+    "source_bbox_mm": {
+      "x": [
+        -215.9,
+        215.9
+      ],
+      "y": [
+        -215.9,
+        215.9
+      ],
+      "z": [
+        -109.2199,
+        131.1401
+      ]
+    },
+    "excluded_solids_zero_based": [
+      44,
+      45,
+      46,
+      47,
+      60,
+      61,
+      62,
+      63,
+      64
+    ],
+    "remaining_intersections": [],
+    "passed": true,
+    "meaning": "No enclosure material intersects this rectangular volume except excluded original subpanel and four factory subpanel stud/nut assemblies. Keep their local boxes clear. Actual free shape varies beyond this proven volume."
+  },
+  "source_large_planar_faces": [
+    {
+      "solid_index_zero_based": 0,
+      "face_index_zero_based": 0,
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bbox_mm": {
+        "x": [
+          219.4052,
+          251.0282
+        ],
+        "y": [
+          -252.095,
+          252.095
+        ],
+        "z": [
+          127.0,
+          127.0
+        ]
+      },
+      "area_mm2": 15380.679712108427
+    },
+    {
+      "solid_index_zero_based": 0,
+      "face_index_zero_based": 3,
+      "normal": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "bbox_mm": {
+        "x": [
+          219.4052,
+          251.0282
+        ],
+        "y": [
+          -252.095,
+          252.095
+        ],
+        "z": [
+          125.095,
+          125.095
+        ]
+      },
+      "area_mm2": 15380.679712108436
+    },
+    {
+      "solid_index_zero_based": 0,
+      "face_index_zero_based": 45,
+      "normal": [
+        -1.0,
+        -0.0,
+        0.0
+      ],
+      "bbox_mm": {
+        "x": [
+          252.095,
+          252.095
+        ],
+        "y": [
+          -252.095,
+          252.095
+        ],
+        "z": [
+          -123.5456,
+          124.0282
+        ]
+      },
+      "area_mm2": 124824.234222
+    },
+    {
+      "solid_index_zero_based": 0,
+      "face_index_zero_based": 56,
+      "normal": [
+        -0.0,
+        -0.0,
+        1.0
+      ],
+      "bbox_mm": {
+        "x": [
+          -250.5456,
+          250.5456
+        ],
+        "y": [
+          -252.095,
+          252.095
+        ],
+        "z": [
+          -125.095,
+          -125.095
+        ]
+      },
+      "area_mm2": 252257.22421431608
+    },
+    {
+      "solid_index_zero_based": 0,
+      "face_index_zero_based": 67,
+      "normal": [
+        1.0,
+        -0.0,
+        -0.0
+      ],
+      "bbox_mm": {
+        "x": [
+          -252.095,
+          -252.095
+        ],
+        "y": [
+          -252.095,
+          252.095
+        ],
+        "z": [
+          -123.5456,
+          124.0282
+        ]
+      },
+      "area_mm2": 124824.23422199997
+    },
+    {
+      "solid_index_zero_based": 0,
+      "face_index_zero_based": 72,
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bbox_mm": {
+        "x": [
+          -251.0282,
+          -219.4052
+        ],
+        "y": [
+          -252.095,
+          252.095
+        ],
+        "z": [
+          127.0,
+          127.0
+        ]
+      },
+      "area_mm2": 15479.996254307855
+    },
+    {
+      "solid_index_zero_based": 0,
+      "face_index_zero_based": 77,
+      "normal": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "bbox_mm": {
+        "x": [
+          -251.0282,
+          -219.4052
+        ],
+        "y": [
+          -252.095,
+          252.095
+        ],
+        "z": [
+          125.095,
+          125.095
+        ]
+      },
+      "area_mm2": 15479.996254307855
+    },
+    {
+      "solid_index_zero_based": 0,
+      "face_index_zero_based": 112,
+      "normal": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "bbox_mm": {
+        "x": [
+          -254.0,
+          -254.0
+        ],
+        "y": [
+          -252.095,
+          252.095
+        ],
+        "z": [
+          -123.5456,
+          124.0282
+        ]
+      },
+      "area_mm2": 124824.23422199997
+    },
+    {
+      "solid_index_zero_based": 0,
+      "face_index_zero_based": 114,
+      "normal": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "bbox_mm": {
+        "x": [
+          -250.5456,
+          250.5456
+        ],
+        "y": [
+          -252.095,
+          252.095
+        ],
+        "z": [
+          -127.0,
+          -127.0
+        ]
+      },
+      "area_mm2": 252257.22421431608
+    },
+    {
+      "solid_index_zero_based": 0,
+      "face_index_zero_based": 122,
+      "normal": [
+        1.0,
+        0.0,
+        -0.0
+      ],
+      "bbox_mm": {
+        "x": [
+          254.0,
+          254.0
+        ],
+        "y": [
+          -252.095,
+          252.095
+        ],
+        "z": [
+          -123.5456,
+          124.0282
+        ]
+      },
+      "area_mm2": 124824.234222
+    },
+    {
+      "solid_index_zero_based": 1,
+      "face_index_zero_based": 0,
+      "normal": [
+        -0.0,
+        1.0,
+        0.0
+      ],
+      "bbox_mm": {
+        "x": [
+          -253.1618,
+          253.1618
+        ],
+        "y": [
+          254.0,
+          254.0
+        ],
+        "z": [
+          -125.6538,
+          126.4158
+        ]
+      },
+      "area_mm2": 126579.11599802486
+    },
+    {
+      "solid_index_zero_based": 1,
+      "face_index_zero_based": 4,
+      "normal": [
+        0.0,
+        -1.0,
+        -0.0
+      ],
+      "bbox_mm": {
+        "x": [
+          -253.1618,
+          253.1618
+        ],
+        "y": [
+          252.095,
+          252.095
+        ],
+        "z": [
+          -125.6538,
+          126.4158
+        ]
+      },
+      "area_mm2": 126579.11599802488
+    },
+    {
+      "solid_index_zero_based": 1,
+      "face_index_zero_based": 6,
+      "normal": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "bbox_mm": {
+        "x": [
+          -219.075,
+          219.075
+        ],
+        "y": [
+          220.1418,
+          251.0282
+        ],
+        "z": [
+          125.095,
+          125.095
+        ]
+      },
+      "area_mm2": 13532.876159999996
+    },
+    {
+      "solid_index_zero_based": 1,
+      "face_index_zero_based": 8,
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bbox_mm": {
+        "x": [
+          -219.075,
+          219.075
+        ],
+        "y": [
+          220.1418,
+          251.0282
+        ],
+        "z": [
+          127.0,
+          127.0
+        ]
+      },
+      "area_mm2": 13532.876159999996
+    },
+    {
+      "solid_index_zero_based": 2,
+      "face_index_zero_based": 0,
+      "normal": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "bbox_mm": {
+        "x": [
+          -253.1618,
+          253.1618
+        ],
+        "y": [
+          -254.0,
+          -254.0
+        ],
+        "z": [
+          -125.6538,
+          126.4158
+        ]
+      },
+      "area_mm2": 126579.11599802488
+    },
+    {
+      "solid_index_zero_based": 2,
+      "face_index_zero_based": 10,
+      "normal": [
+        -0.0,
+        1.0,
+        -0.0
+      ],
+      "bbox_mm": {
+        "x": [
+          -253.1618,
+          253.1618
+        ],
+        "y": [
+          -252.095,
+          -252.095
+        ],
+        "z": [
+          -125.6538,
+          126.4158
+        ]
+      },
+      "area_mm2": 126579.11599802488
+    },
+    {
+      "solid_index_zero_based": 2,
+      "face_index_zero_based": 12,
+      "normal": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "bbox_mm": {
+        "x": [
+          -219.075,
+          219.075
+        ],
+        "y": [
+          -251.0282,
+          -220.1418
+        ],
+        "z": [
+          125.095,
+          125.095
+        ]
+      },
+      "area_mm2": 13532.876159999996
+    },
+    {
+      "solid_index_zero_based": 2,
+      "face_index_zero_based": 14,
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bbox_mm": {
+        "x": [
+          -219.075,
+          219.075
+        ],
+        "y": [
+          -251.0282,
+          -220.1418
+        ],
+        "z": [
+          127.0,
+          127.0
+        ]
+      },
+      "area_mm2": 13532.876159999996
+    },
+    {
+      "solid_index_zero_based": 3,
+      "face_index_zero_based": 7,
+      "normal": [
+        0.0,
+        -0.0,
+        1.0
+      ],
+      "bbox_mm": {
+        "x": [
+          -243.5479,
+          228.0285
+        ],
+        "y": [
+          -226.425125,
+          226.425125
+        ],
+        "z": [
+          154.1272,
+          154.1272
+        ]
+      },
+      "area_mm2": 213204.1820208552
+    },
+    {
+      "solid_index_zero_based": 3,
+      "face_index_zero_based": 34,
+      "normal": [
+        -0.0,
+        0.0,
+        -1.0
+      ],
+      "bbox_mm": {
+        "x": [
+          -243.5479,
+          228.0285
+        ],
+        "y": [
+          -226.425125,
+          226.425125
+        ],
+        "z": [
+          152.2222,
+          152.2222
+        ]
+      },
+      "area_mm2": 213204.18202085525
+    },
+    {
+      "solid_index_zero_based": 9,
+      "face_index_zero_based": 42,
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "bbox_mm": {
+        "x": [
+          -178.3842,
+          -15.5702
+        ],
+        "y": [
+          -157.768925,
+          4.283075
+        ],
+        "z": [
+          133.1722,
+          133.1722
+        ]
+      },
+      "area_mm2": 21955.55487988038
+    },
+    {
+      "solid_index_zero_based": 9,
+      "face_index_zero_based": 44,
+      "normal": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "bbox_mm": {
+        "x": [
+          -179.1462,
+          -14.8082
+        ],
+        "y": [
+          -158.530925,
+          4.283075
+        ],
+        "z": [
+          131.1402,
+          131.1402
+        ]
+      },
+      "area_mm2": 22327.747683877667
+    }
+  ],
+  "factory_stud_and_nut_cylinders": [
+    {
+      "solid_index_zero_based": 44,
+      "face_index_zero_based": 2,
+      "diameter_mm": 8.382,
+      "bbox_mm": {
+        "x": [
+          -197.866,
+          -189.484
+        ],
+        "y": [
+          189.484,
+          193.675
+        ],
+        "z": [
+          -124.333,
+          -116.7765
+        ]
+      }
+    },
+    {
+      "solid_index_zero_based": 44,
+      "face_index_zero_based": 3,
+      "diameter_mm": 8.382,
+      "bbox_mm": {
+        "x": [
+          -197.866,
+          -189.484
+        ],
+        "y": [
+          193.675,
+          197.866
+        ],
+        "z": [
+          -124.333,
+          -116.7765
+        ]
+      }
+    },
+    {
+      "solid_index_zero_based": 44,
+      "face_index_zero_based": 10,
+      "diameter_mm": 9.524999999999999,
+      "bbox_mm": {
+        "x": [
+          -198.4375,
+          -188.9125
+        ],
+        "y": [
+          188.9125,
+          193.675
+        ],
+        "z": [
+          -112.395,
+          -97.282
+        ]
+      }
+    },
+    {
+      "solid_index_zero_based": 44,
+      "face_index_zero_based": 14,
+      "diameter_mm": 9.524999999999999,
+      "bbox_mm": {
+        "x": [
+          -198.4375,
+          -188.9125
+        ],
+        "y": [
+          193.675,
+          198.4375
+        ],
+        "z": [
+          -112.395,
+          -97.282
+        ]
+      }
+    },
+    {
+      "solid_index_zero_based": 61,
+      "face_index_zero_based": 6,
+      "diameter_mm": 0.508,
+      "bbox_mm": {
+        "x": [
+          197.5978063,
+          197.817777
+        ],
+        "y": [
+          -186.7535001,
+          -186.6264999
+        ],
+        "z": [
+          -106.768898,
+          -101.2263636
+        ]
+      }
+    },
+    {
+      "solid_index_zero_based": 61,
+      "face_index_zero_based": 10,
+      "diameter_mm": 0.508,
+      "bbox_mm": {
+        "x": [
+          189.532223,
+          189.7521937
+        ],
+        "y": [
+          -186.7535001,
+          -186.6264999
+        ],
+        "z": [
+          -106.7688979,
+          -101.2263397
+        ]
+      }
+    },
+    {
+      "solid_index_zero_based": 61,
+      "face_index_zero_based": 17,
+      "diameter_mm": 0.508,
+      "bbox_mm": {
+        "x": [
+          189.532223,
+          189.7521937
+        ],
+        "y": [
+          -200.7235001,
+          -200.5964999
+        ],
+        "z": [
+          -106.768898,
+          -101.2263636
+        ]
+      }
+    },
+    {
+      "solid_index_zero_based": 61,
+      "face_index_zero_based": 21,
+      "diameter_mm": 0.508,
+      "bbox_mm": {
+        "x": [
+          185.5753871,
+          185.6094168
+        ],
+        "y": [
+          -193.8020001,
+          -193.5479999
+        ],
+        "z": [
+          -106.7688973,
+          -101.2265269
+        ]
+      }
+    },
+    {
+      "solid_index_zero_based": 61,
+      "face_index_zero_based": 27,
+      "diameter_mm": 0.508,
+      "bbox_mm": {
+        "x": [
+          197.5978063,
+          197.817777
+        ],
+        "y": [
+          -200.7235001,
+          -200.5964999
+        ],
+        "z": [
+          -106.7688979,
+          -101.2263397
+        ]
+      }
+    },
+    {
+      "solid_index_zero_based": 61,
+      "face_index_zero_based": 30,
+      "diameter_mm": 0.508,
+      "bbox_mm": {
+        "x": [
+          201.7405832,
+          201.7746129
+        ],
+        "y": [
+          -193.8020001,
+          -193.5479999
+        ],
+        "z": [
+          -106.7688973,
+          -101.2265269
+        ]
+      }
+    },
+    {
+      "solid_index_zero_based": 61,
+      "face_index_zero_based": 46,
+      "diameter_mm": 9.3218,
+      "bbox_mm": {
+        "x": [
+          189.0140993,
+          198.3359007
+        ],
+        "y": [
+          -198.3359,
+          -193.675
+        ],
+        "z": [
+          -108.7120018,
+          -101.1935982
+        ]
+      }
+    },
+    {
+      "solid_index_zero_based": 61,
+      "face_index_zero_based": 49,
+      "diameter_mm": 9.3218,
+      "bbox_mm": {
+        "x": [
+          189.0140993,
+          198.3359007
+        ],
+        "y": [
+          -193.675,
+          -189.0141
+        ],
+        "z": [
+          -108.7120018,
+          -101.1935982
+        ]
+      }
+    }
+  ],
+  "sales_drawing": {
+    "file": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\02 Component Library\\Enclosures & Transport\\Saginaw SCE-20H2010LP CAD Package\\SCE-20H2010LP Sales Drawing.pdf",
+    "visually_reviewed": true,
+    "mounting_pitch_in": 15.25,
+    "nominal_usable_depth_in": 10.29,
+    "note": "Sales drawing nominal usable depth does not account for the door document pocket over its local XY footprint. STEP local clearance governs layout."
+  },
+  "limitations": [
+    "STEP establishes geometry only, not material strength, allowable panel load, vibration duty or fastener torque.",
+    "No screenshot was available in the visible user request. The named SUBPANEL product and unique 431.8 mm square flat solid were identified directly from the supplied STEP.",
+    "Increasing panel thickness while retaining the rear mounting face reduces component clearance and available original enclosure stud projection by exactly the thickness increase."
+  ]
+}

@@ -1,0 +1,784 @@
+{
+  "status": "PASS",
+  "count": 94,
+  "checks": [
+    {
+      "check": "Input SHA256 preserved",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "21 derived configuration source components",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "All component solids valid and distinct",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "plate_T1.step valid complete solids",
+      "passed": true,
+      "measured": 1,
+      "criterion": 1
+    },
+    {
+      "check": "plate_T1.step mm scale and coordinates",
+      "passed": true,
+      "measured": {
+        "x": [
+          -83.0,
+          83.0
+        ],
+        "y": [
+          -92.0,
+          92.0
+        ],
+        "z": [
+          -0.0,
+          5.1
+        ]
+      },
+      "criterion": {
+        "x": [
+          -83.0,
+          83.0
+        ],
+        "y": [
+          -92.0,
+          92.0
+        ],
+        "z": [
+          -0.0,
+          5.1
+        ]
+      }
+    },
+    {
+      "check": "plate_T1.step volume roundtrip",
+      "passed": true,
+      "measured": 6.867650927977267e-15,
+      "criterion": "<10 ppm; complex source helices show ~5 ppm STEP reserialization drift"
+    },
+    {
+      "check": "assembled_device_mount_T1.step valid complete solids",
+      "passed": true,
+      "measured": 43,
+      "criterion": 43
+    },
+    {
+      "check": "assembled_device_mount_T1.step mm scale and coordinates",
+      "passed": true,
+      "measured": {
+        "x": [
+          -100.0,
+          100.0
+        ],
+        "y": [
+          -110.0,
+          110.0
+        ],
+        "z": [
+          -6.0,
+          56.1
+        ]
+      },
+      "criterion": {
+        "x": [
+          -100.0,
+          100.0
+        ],
+        "y": [
+          -110.0,
+          110.0
+        ],
+        "z": [
+          -6.0,
+          56.1
+        ]
+      }
+    },
+    {
+      "check": "assembled_device_mount_T1.step volume roundtrip",
+      "passed": true,
+      "measured": 2.3837642250468325e-06,
+      "criterion": "<10 ppm; complex source helices show ~5 ppm STEP reserialization drift"
+    },
+    {
+      "check": "device_adapter_T1.step valid complete solids",
+      "passed": true,
+      "measured": 29,
+      "criterion": 29
+    },
+    {
+      "check": "device_adapter_T1.step mm scale and coordinates",
+      "passed": true,
+      "measured": {
+        "x": [
+          -83.0,
+          83.0
+        ],
+        "y": [
+          -92.0,
+          92.0
+        ],
+        "z": [
+          -0.0,
+          56.1
+        ]
+      },
+      "criterion": {
+        "x": [
+          -83.0,
+          83.0
+        ],
+        "y": [
+          -92.0,
+          92.0
+        ],
+        "z": [
+          -0.0,
+          56.1
+        ]
+      }
+    },
+    {
+      "check": "device_adapter_T1.step volume roundtrip",
+      "passed": true,
+      "measured": 3.6307418923975525e-06,
+      "criterion": "<10 ppm; complex source helices show ~5 ppm STEP reserialization drift"
+    },
+    {
+      "check": "mount_hardware_T1.step valid complete solids",
+      "passed": true,
+      "measured": 19,
+      "criterion": 19
+    },
+    {
+      "check": "mount_hardware_T1.step mm scale and coordinates",
+      "passed": true,
+      "measured": {
+        "x": [
+          -83.0,
+          83.0
+        ],
+        "y": [
+          -92.0,
+          92.0
+        ],
+        "z": [
+          -2.2,
+          12.0
+        ]
+      },
+      "criterion": {
+        "x": [
+          -83.0,
+          83.0
+        ],
+        "y": [
+          -92.0,
+          92.0
+        ],
+        "z": [
+          -2.2,
+          12.0
+        ]
+      }
+    },
+    {
+      "check": "mount_hardware_T1.step volume roundtrip",
+      "passed": true,
+      "measured": 8.4479908029718e-15,
+      "criterion": "<10 ppm; complex source helices show ~5 ppm STEP reserialization drift"
+    },
+    {
+      "check": "FPE_interface_REFERENCE_ONLY.step valid complete solids",
+      "passed": true,
+      "measured": 5,
+      "criterion": 5
+    },
+    {
+      "check": "FPE_interface_REFERENCE_ONLY.step mm scale and coordinates",
+      "passed": true,
+      "measured": {
+        "x": [
+          -100.0,
+          100.0
+        ],
+        "y": [
+          -110.0,
+          110.0
+        ],
+        "z": [
+          -6.0,
+          12.0
+        ]
+      },
+      "criterion": {
+        "x": [
+          -100.0,
+          100.0
+        ],
+        "y": [
+          -110.0,
+          110.0
+        ],
+        "z": [
+          -6.0,
+          12.0
+        ]
+      }
+    },
+    {
+      "check": "FPE_interface_REFERENCE_ONLY.step volume roundtrip",
+      "passed": true,
+      "measured": 6.178257177004642e-15,
+      "criterion": "<10 ppm; complex source helices show ~5 ppm STEP reserialization drift"
+    },
+    {
+      "check": "vertical_fin_installation_REFERENCE.step valid complete solids",
+      "passed": true,
+      "measured": 43,
+      "criterion": 43
+    },
+    {
+      "check": "vertical_fin_installation_REFERENCE.step mm scale and coordinates",
+      "passed": true,
+      "measured": {
+        "x": [
+          -100.0,
+          100.0
+        ],
+        "y": [
+          -56.1,
+          6.0
+        ],
+        "z": [
+          -110.0,
+          110.0
+        ]
+      },
+      "criterion": {
+        "x": [
+          -100.0,
+          100.0
+        ],
+        "y": [
+          -56.1,
+          6.0
+        ],
+        "z": [
+          -110.0,
+          110.0
+        ]
+      }
+    },
+    {
+      "check": "vertical_fin_installation_REFERENCE.step volume roundtrip",
+      "passed": true,
+      "measured": 2.3837644540317747e-06,
+      "criterion": "<10 ppm; complex source helices show ~5 ppm STEP reserialization drift"
+    },
+    {
+      "check": "TIM_top_NOMINAL_POCKET_VOLUME.step valid complete solids",
+      "passed": true,
+      "measured": 1,
+      "criterion": 1
+    },
+    {
+      "check": "TIM_top_NOMINAL_POCKET_VOLUME.step mm scale and coordinates",
+      "passed": true,
+      "measured": {
+        "x": [
+          -63.0,
+          82.65
+        ],
+        "y": [
+          -78.0,
+          78.0
+        ],
+        "z": [
+          5.05,
+          5.1
+        ]
+      },
+      "criterion": {
+        "x": [
+          -63.0,
+          82.65
+        ],
+        "y": [
+          -78.0,
+          78.0
+        ],
+        "z": [
+          5.05,
+          5.1
+        ]
+      }
+    },
+    {
+      "check": "TIM_top_NOMINAL_POCKET_VOLUME.step volume roundtrip",
+      "passed": true,
+      "measured": 1.5252537066538783e-15,
+      "criterion": "<10 ppm; complex source helices show ~5 ppm STEP reserialization drift"
+    },
+    {
+      "check": "TIM_bottom_NOMINAL_POCKET_VOLUME.step valid complete solids",
+      "passed": true,
+      "measured": 1,
+      "criterion": 1
+    },
+    {
+      "check": "TIM_bottom_NOMINAL_POCKET_VOLUME.step mm scale and coordinates",
+      "passed": true,
+      "measured": {
+        "x": [
+          -63.0,
+          82.65
+        ],
+        "y": [
+          -78.0,
+          78.0
+        ],
+        "z": [
+          -0.0,
+          0.05
+        ]
+      },
+      "criterion": {
+        "x": [
+          -63.0,
+          82.65
+        ],
+        "y": [
+          -78.0,
+          78.0
+        ],
+        "z": [
+          0.0,
+          0.05
+        ]
+      }
+    },
+    {
+      "check": "TIM_bottom_NOMINAL_POCKET_VOLUME.step volume roundtrip",
+      "passed": true,
+      "measured": 1.6202968590025162e-14,
+      "criterion": "<10 ppm; complex source helices show ~5 ppm STEP reserialization drift"
+    },
+    {
+      "check": "Adapter/device nominal interference",
+      "passed": true,
+      "measured": 0,
+      "criterion": "No volumetric overlap; nominal contact allowed"
+    },
+    {
+      "check": "Adapter/panel nominal interference",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "top TIM vs metal overlap",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "top TIM exact nominal pocket gap",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "bottom TIM vs metal overlap",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "bottom TIM exact nominal pocket gap",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_1 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_1 outside expected thread engagement zone",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Does NOT verify thread fit, preload, real screw tip or seat"
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_1 nominal depth to full-diameter limit",
+      "passed": true,
+      "measured": 0.5499999999999989,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_1 nominal head recess",
+      "passed": true,
+      "measured": 0.05,
+      "criterion": "Ideal proxy only; physical head gauge is mandatory"
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_2 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_2 outside expected thread engagement zone",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Does NOT verify thread fit, preload, real screw tip or seat"
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_2 nominal depth to full-diameter limit",
+      "passed": true,
+      "measured": 0.5499999999999989,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_2 nominal head recess",
+      "passed": true,
+      "measured": 0.05,
+      "criterion": "Ideal proxy only; physical head gauge is mandatory"
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_3 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_3 outside expected thread engagement zone",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Does NOT verify thread fit, preload, real screw tip or seat"
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_3 nominal depth to full-diameter limit",
+      "passed": true,
+      "measured": 0.5499999999999989,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_3 nominal head recess",
+      "passed": true,
+      "measured": 0.05,
+      "criterion": "Ideal proxy only; physical head gauge is mandatory"
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_4 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_4 outside expected thread engagement zone",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Does NOT verify thread fit, preload, real screw tip or seat"
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_4 nominal depth to full-diameter limit",
+      "passed": true,
+      "measured": 0.5499999999999989,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_4 nominal head recess",
+      "passed": true,
+      "measured": 0.05,
+      "criterion": "Ideal proxy only; physical head gauge is mandatory"
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_5 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_5 outside expected thread engagement zone",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Does NOT verify thread fit, preload, real screw tip or seat"
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_5 nominal depth to full-diameter limit",
+      "passed": true,
+      "measured": 0.5499999999999989,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_5 nominal head recess",
+      "passed": true,
+      "measured": 0.05,
+      "criterion": "Ideal proxy only; physical head gauge is mandatory"
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_6 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_6 outside expected thread engagement zone",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Does NOT verify thread fit, preload, real screw tip or seat"
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_6 nominal depth to full-diameter limit",
+      "passed": true,
+      "measured": 0.5499999999999989,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_91294A188_M4x8_6 nominal head recess",
+      "passed": true,
+      "measured": 0.05,
+      "criterion": "Ideal proxy only; physical head gauge is mandatory"
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_1 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_1 vs actual device",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_1 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_1 vs actual device",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_1 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_1 vs actual device",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_2 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_2 vs actual device",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_2 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_2 vs actual device",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_2 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_2 vs actual device",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_3 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_3 vs actual device",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_3 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_3 vs actual device",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_3 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_3 vs actual device",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_4 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "FPE_WGU30_M3_L12_REFERENCE_4 vs actual device",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_4 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_98688A142_washer_4 vs actual device",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_4 vs adapter",
+      "passed": true,
+      "measured": 0,
+      "criterion": null
+    },
+    {
+      "check": "McMaster_90576A102_locknut_4 vs actual device",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "Stud 1 socket OD10 device clearance",
+      "passed": true,
+      "measured": 6.401754250971931,
+      "criterion": ">0.5 mm nominal; socket internal depth >=8 mm"
+    },
+    {
+      "check": "Stud 2 socket OD10 device clearance",
+      "passed": true,
+      "measured": 6.401754250985085,
+      "criterion": ">0.5 mm nominal; socket internal depth >=8 mm"
+    },
+    {
+      "check": "Stud 3 socket OD10 device clearance",
+      "passed": true,
+      "measured": 6.40175425099733,
+      "criterion": ">0.5 mm nominal; socket internal depth >=8 mm"
+    },
+    {
+      "check": "Stud 4 socket OD10 device clearance",
+      "passed": true,
+      "measured": 6.401754254104989,
+      "criterion": ">0.5 mm nominal; socket internal depth >=8 mm"
+    },
+    {
+      "check": "Normal removal path sample 0 mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Washers/nuts removed; grease released; straight aligned studs"
+    },
+    {
+      "check": "Normal removal path sample 0.1 mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Washers/nuts removed; grease released; straight aligned studs"
+    },
+    {
+      "check": "Normal removal path sample 1 mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Washers/nuts removed; grease released; straight aligned studs"
+    },
+    {
+      "check": "Normal removal path sample 6 mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Washers/nuts removed; grease released; straight aligned studs"
+    },
+    {
+      "check": "Normal removal path sample 12 mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Washers/nuts removed; grease released; straight aligned studs"
+    },
+    {
+      "check": "Normal removal path sample 13 mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Washers/nuts removed; grease released; straight aligned studs"
+    },
+    {
+      "check": "Normal removal path sample 20 mm",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Washers/nuts removed; grease released; straight aligned studs"
+    },
+    {
+      "check": "IO side 50mm plug reservation vs added hardware",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Reserved generic corridor; connector-specific mating and bend envelope not validated"
+    },
+    {
+      "check": "SMA end 50mm plug reservation vs added hardware",
+      "passed": true,
+      "measured": 0,
+      "criterion": "Reserved generic corridor; connector-specific mating and bend envelope not validated"
+    }
+  ],
+  "limitations": [
+    "Analytical nominal CAD only; no physical test.",
+    "Derived Tile/fin-bank reference does not verify product configuration or 60W cooling.",
+    "Major-diameter screw proxies exempt only the blind thread zone; real head/tip fit and supplier engagement limits remain mandatory.",
+    "Generic plug reservations require actual-cable check; thermal contact, preload, plate flatness, FPE anchoring and TEC capacity remain unqualified."
+  ]
+}

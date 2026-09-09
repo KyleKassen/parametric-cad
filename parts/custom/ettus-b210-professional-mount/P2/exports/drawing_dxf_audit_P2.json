@@ -1,0 +1,38 @@
+[
+  {
+    "file": "B210_flat_plate_drill_template_P2.dxf",
+    "units": 4,
+    "entities": 5,
+    "errors": 0
+  },
+  {
+    "file": "B210_M01_machining_sections_P2.dxf",
+    "units": 4,
+    "entities": 173,
+    "errors": 0
+  },
+  {
+    "file": "B210_M02_profile_P2.dxf",
+    "units": 4,
+    "entities": 10,
+    "errors": 0
+  },
+  {
+    "file": "B210_M04_film_profile_P2.dxf",
+    "units": 4,
+    "entities": 8,
+    "errors": 0
+  },
+  {
+    "file": "B210_M05_machining_sections_P2.dxf",
+    "units": 4,
+    "entities": 39,
+    "errors": 0
+  },
+  {
+    "file": "B210_upright_plate_drill_template_P2.dxf",
+    "units": 4,
+    "entities": 5,
+    "errors": 0
+  }
+]

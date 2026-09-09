@@ -1,0 +1,6 @@
+﻿item,description,qty_flat,qty_upright,qty_both,material,finish,manufacturing_reference
+M01,Machined cradle base with integral thread bosses,1,1,2,Certified6061-T6/T651,"Black anodize10-15um, mask seats/threads",B210_M01_base_P2.step; shop pack sheet2
+M02,5mm retainer bar,2,2,4,Certified6061-T6/T651,Black anodize10-15um,B210_M02_retainer_P2.step; shop pack sheet3
+M05,Ribbed upright support with integral foot bolt seats,0,2,2,Certified6061-T6/T651,"Black anodize10-15um, mask seats",adapter_machined.step; shop pack sheet4
+INTEGRATION,Supporting plate;6mm thickness assumed,1,1,2,Material/span/attachment require integration validation,Application-specific,Plate drill templates; supporting plate not supplied or structurally qualified
+RADIO,Supplied enclosedB210 configuration,1,1,2,User-supplied,Original device; unmodified,references/input_device.step; weigh/measure actual unit

@@ -1,0 +1,259 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "reopened single valid frame",
+      "passed": true,
+      "measured": 1,
+      "criterion": 1
+    },
+    {
+      "check": "reopened expected size",
+      "passed": true,
+      "measured": [
+        180.0,
+        210.0,
+        4.000000000000004
+      ],
+      "criterion": [
+        180,
+        210,
+        4
+      ]
+    },
+    {
+      "check": "four support holes",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "M3 shaft through support 1",
+      "passed": true,
+      "measured": 0,
+      "criterion": 0
+    },
+    {
+      "check": "support hole center 1",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "M3 shaft through support 2",
+      "passed": true,
+      "measured": 0,
+      "criterion": 0
+    },
+    {
+      "check": "support hole center 2",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "M3 shaft through support 3",
+      "passed": true,
+      "measured": 0,
+      "criterion": 0
+    },
+    {
+      "check": "support hole center 3",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "M3 shaft through support 4",
+      "passed": true,
+      "measured": 0,
+      "criterion": 0
+    },
+    {
+      "check": "support hole center 4",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "complete minimum window throat",
+      "passed": true,
+      "measured": 0,
+      "criterion": 0
+    },
+    {
+      "check": "underside 0.4mm window bevel reaches required X mouth",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "underside window bevel retains rail outside mouth",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "upper 0.4mm window bevel reaches required X mouth",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "upper window bevel retains rail outside mouth",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "native anchor machining land 1",
+      "passed": true,
+      "measured": 264.47733373694695,
+      "criterion": 264.47733373694695
+    },
+    {
+      "check": "nominal1.7mm backing under native anchor 1",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "native anchor machining land 2",
+      "passed": true,
+      "measured": 264.477333736947,
+      "criterion": 264.477333736947
+    },
+    {
+      "check": "nominal1.7mm backing under native anchor 2",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "native anchor machining land 3",
+      "passed": true,
+      "measured": 264.477333736947,
+      "criterion": 264.477333736947
+    },
+    {
+      "check": "nominal1.7mm backing under native anchor 3",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "native anchor machining land 4",
+      "passed": true,
+      "measured": 264.477333736947,
+      "criterion": 264.477333736947
+    },
+    {
+      "check": "nominal1.7mm backing under native anchor 4",
+      "passed": true,
+      "measured": null,
+      "criterion": null
+    },
+    {
+      "check": "surface web from native base to window",
+      "passed": true,
+      "measured": 1.4500000000000028,
+      "criterion": ">=1.4mm nominal"
+    },
+    {
+      "check": "surface web from native base to outer rim",
+      "passed": true,
+      "measured": 2.649999999999989,
+      "criterion": ">=2.6mm nominal"
+    },
+    {
+      "check": "support screw nominal insertion",
+      "passed": true,
+      "measured": 5.45,
+      "criterion": 5.45
+    },
+    {
+      "check": "extension female end clearance",
+      "passed": true,
+      "measured": 1.5499999999999998,
+      "criterion": ">=1mm nominal"
+    },
+    {
+      "check": "lower extension male end clearance",
+      "passed": true,
+      "measured": 4,
+      "criterion": ">=1mm nominal"
+    },
+    {
+      "check": "overall shoulder height",
+      "passed": true,
+      "measured": 70,
+      "criterion": null
+    },
+    {
+      "check": "frame vs lower Bedrock",
+      "passed": true,
+      "measured": 0,
+      "criterion": 0
+    },
+    {
+      "check": "D7 support clearance to lower Bedrock 1",
+      "passed": true,
+      "measured": 0,
+      "criterion": 0
+    },
+    {
+      "check": "D7 support minimum gap 1",
+      "passed": true,
+      "measured": 1.5,
+      "criterion": ">=1.49mm nominal"
+    },
+    {
+      "check": "D7 support clearance to lower Bedrock 2",
+      "passed": true,
+      "measured": 0,
+      "criterion": 0
+    },
+    {
+      "check": "D7 support minimum gap 2",
+      "passed": true,
+      "measured": 1.5,
+      "criterion": ">=1.49mm nominal"
+    },
+    {
+      "check": "D7 support clearance to lower Bedrock 3",
+      "passed": true,
+      "measured": 0,
+      "criterion": 0
+    },
+    {
+      "check": "D7 support minimum gap 3",
+      "passed": true,
+      "measured": 1.5,
+      "criterion": ">=1.49mm nominal"
+    },
+    {
+      "check": "D7 support clearance to lower Bedrock 4",
+      "passed": true,
+      "measured": 0,
+      "criterion": 0
+    },
+    {
+      "check": "D7 support minimum gap 4",
+      "passed": true,
+      "measured": 1.5,
+      "criterion": ">=1.49mm nominal"
+    },
+    {
+      "check": "catalog envelope export valid",
+      "passed": true,
+      "measured": 5,
+      "criterion": 5
+    }
+  ],
+  "frame_sha256": "6c0d9ec839f12779e44d6c31fb6d5417c4a4c154f6f1aade2b545122fe1c6ad8",
+  "fpd_input_sha256": "a9abdcc96bf33078cdfe6a9596045705dbb87e1f750bbd31c56883b5103695a0",
+  "frame_volume_mm3": 57225.481036850324,
+  "frame_mass_kg_at_2700": 0.15450879879949586,
+  "minimum_window_throat_area_mm2": 23338.539816339744,
+  "scope": "Nominal reopened CAD/frame-interface checks only; catalog anchors are envelope surrogates, final native FPD machining and physical load/temperature acceptance remain separate."
+}

@@ -1,0 +1,321 @@
+{
+  "revision": "N2",
+  "status": "PASS",
+  "scope": "Final independent static consistency and bounded numerical-arithmetic review of N2 files. PASS applies only to document/source/result consistency. Countersunk-seat contact remains HOLD; no fabrication, physical fit, installed structural capacity or side-orientation thermal release is granted.",
+  "reviewed_at_utc": "2026-09-08T18:55:44.558236+00:00",
+  "reviewer": "/root/official_research",
+  "file_modification_scope": "Only quality/independent_review.json written. No source/model/geometry/BOM/prior-design files modified.",
+  "checks": [
+    {
+      "check": "Strict UTF-8 decode and absence of common mojibake markers",
+      "status": "PASS",
+      "evidence": "All 13 inspected text/JSON/source artifacts decode as UTF-8; no listed corruption markers."
+    },
+    {
+      "check": "Model Python static syntax",
+      "status": "PASS",
+      "evidence": "ast.parse succeeded. No regeneration or broad test run performed during this static review."
+    },
+    {
+      "check": "Final N2 plate and local-tab dimensions",
+      "status": "PASS",
+      "evidence": "Params/model/user documentation: 6.00 +/-0.05 mm plate, 45 mm spine, 72 mm maximum width, 44 mm tab stations, 316.8 mm length, R4 contour."
+    },
+    {
+      "check": "Housing axes and selected screw dimensions",
+      "status": "PASS",
+      "evidence": "Two M4 x 0.7 x 10 overall countersunk screws on the 252 mm side pattern; no N1 M3 x 8 housing screws carried forward."
+    },
+    {
+      "check": "Selected catalog hardware part numbers and counts",
+      "status": "PASS",
+      "evidence": "Two 91294A190 screws, four 98688A142 washers, four 90576A102 nuts, four FPE WGU30 M3 x 12 studs. Shorter screw alternatives have quantity zero and are excluded from selected totals."
+    },
+    {
+      "check": "Catalog purchasing arithmetic and price context",
+      "status": "PASS",
+      "evidence": {
+        "mcmaster_initial_packs_usd": "20.64",
+        "installed_allocation_usd": "0.6980",
+        "scope": "Observed same-day prices with explicit reused washer/nut evidence; fabrication, FPE and other costs excluded. No purchase."
+      }
+    },
+    {
+      "check": "Projection arithmetic and manufacturer hard limit",
+      "status": "PASS",
+      "evidence": "Nominal 4.05 mm, proposed measured 3.75-4.35 mm, never above manufacturer 5.00 mm from side face. Received head seating/engagement remain physical checks."
+    },
+    {
+      "check": "FPE stack, tooling and received-thread requirement",
+      "status": "PASS",
+      "evidence": "1.45 mm nominal nut tail; documents require actual full nylon engagement plus >=1.00 mm complete thread beyond nut, 5.5 AF/OD<=10 mm socket, >=10 mm internal depth, 60 mm approach and 20 mm lift."
+    },
+    {
+      "check": "Datum B is left spine rather than outer tab",
+      "status": "PASS",
+      "evidence": "README/model/metadata identify B at X=-22.5 mm; outer tab is X=-36 mm. A is underside Z=0; C is fan end Y=-300.6 mm."
+    },
+    {
+      "check": "Stud CSV coordinate transforms from B/C",
+      "status": "PASS",
+      "evidence": "Four stud axes X=+/-28.5 and Y=-5.8/-257.8. Negative left-tab X-from-B coordinate is intentional."
+    },
+    {
+      "check": "Rear source thread discrepancy remains a physical release hold",
+      "status": "PASS",
+      "evidence": "README, DESIGN, BOM, ASSEMBLY, PROTOTYPE and CAD report distinguish the manufacturer M4 callout from the STEP rear open hole; no added insert or inferred capacity is authorized."
+    },
+    {
+      "check": "Side orientation does not inherit horizontal power rating",
+      "status": "PASS",
+      "evidence": "All user-facing documents hold side-output derating unresolved and retain factory airflow. 12 V/185 W typical loss is a planning reference, not side-mounted rated output or TEC capacity."
+    },
+    {
+      "check": "Conical head/seat and clamp torque qualification remains separate",
+      "status": "PASS",
+      "evidence": "Final note and DESIGN distinguish the ideal CAD cone from the actual DIN7991 head, report seat sensitivity 1.83971666 HOLD, and state manufacturer 0.6865-0.9807 N m does not qualify head/seat/case contact or locking."
+    },
+    {
+      "check": "No whole-assembly structural or physical qualification claim",
+      "status": "PASS",
+      "evidence": "Frame factor approximately 3.33 is explicitly frame-only; actual case threads, toe contact, seats, preload, FPE anchors and final panel remain separate. No fabrication/proof/powered testing or service-environment qualification is claimed."
+    },
+    {
+      "check": "Prototype force/contact coupling and acceptance criteria",
+      "status": "PASS",
+      "evidence": "Final prototype plan agrees with saved engineering results: device 125 N+5 N m; package 2.2 kg/140 N; M4 qualification 1250 N tension/175 N shear paired with 1070 N toe; FPE qualification 500/250 N. Coupled 1.5x surrogate proof and proposed 0.30/0.40/0.10 mm criteria retain all actual joint qualification holds."
+    },
+    {
+      "check": "Material, finish and thermal-interface scope match",
+      "status": "PASS",
+      "evidence": "Certified 6061-T6/T651 minimum yield 240 MPa, clear MIL-DTL-5541 Type II Class 3 conversion, dimensions after finish. No fan pockets, TIM or panel-cooling credit; FG conductor preserved; actual nut temperature limit 85 C."
+    },
+    {
+      "check": "Current CAD report agrees with parameter file",
+      "status": "PASS",
+      "evidence": "77 reported nominal CAD checks pass against current params hash. This review reads the existing verified result; it does not repeat its geometry tests."
+    },
+    {
+      "check": "Current manufacturing report agrees with parameter file",
+      "status": "PASS",
+      "evidence": "51 independent manufacturing checks pass against current params hash, including STEP/DXF reconstruction and millimeter scale."
+    },
+    {
+      "check": "Manufacturing verified exports unchanged",
+      "status": "PASS",
+      "evidence": {
+        "plate_N2.step": "7826936af5d489426cd39502cc6f1f2dbd2bc2d703a5c1bdc4594ec76509bcb3",
+        "profile_drill_N2.dxf": "218dd94c639310b7ce096e685e1f9b34bc86309d6c16635ec7cc447b4e657760",
+        "countersinks_UNDERSIDE_N2.dxf": "38322abb4914c6424cc88433c9cd26834097105d86f3500a3cb951ea8777bd89",
+        "FPE_stud_pattern_REFERENCE_N2.dxf": "1eea8b68da9a0989a1f424f77a96f0453776fe0591b35630214db338ce694742",
+        "FPE_stud_coordinates_N2.csv": "84fdd3686d7a7452046dcb711b09da56f551f82c3c80cb62f5cab6b5db57c717"
+      }
+    },
+    {
+      "check": "Source assembly count and mass/height comparisons agree",
+      "status": "PASS",
+      "evidence": "35 separate assembly components retain all 19 source solids. Plate mass 0.26746 kg; N2 height above main panel 91 mm; N1 values appear only as labeled comparisons."
+    },
+    {
+      "check": "Regeneration entry points and source preservation",
+      "status": "PASS",
+      "evidence": "Model statically parses, default input path is relative to the design folder, and README distinguishes the optional repository gate. Packaging-engineering schema block is explicitly pending by owner and excluded from this bounded review."
+    },
+    {
+      "check": "Engineering device force derivation",
+      "status": "PASS",
+      "evidence": {
+        "independently_recomputed": 120.632,
+        "reported": 120.632,
+        "scope": "Arithmetic from saved engineering inputs; calculation source not executed during this review."
+      }
+    },
+    {
+      "check": "Engineering package force derivation",
+      "status": "PASS",
+      "evidence": {
+        "independently_recomputed": 136.32800000000003,
+        "reported": 136.32800000000003,
+        "scope": "Arithmetic from saved engineering inputs; calculation source not executed during this review."
+      }
+    },
+    {
+      "check": "Engineering minimum strip I",
+      "status": "PASS",
+      "evidence": {
+        "independently_recomputed": 614.3808854166667,
+        "reported": 614.3808854166667,
+        "scope": "Arithmetic from saved engineering inputs; calculation source not executed during this review."
+      }
+    },
+    {
+      "check": "Engineering minimum strip Z",
+      "status": "PASS",
+      "evidence": {
+        "independently_recomputed": 206.51458333333335,
+        "reported": 206.51458333333335,
+        "scope": "Arithmetic from saved engineering inputs; calculation source not executed during this review."
+      }
+    },
+    {
+      "check": "Engineering frame equivalent stress",
+      "status": "PASS",
+      "evidence": {
+        "independently_recomputed": 72.05509347367246,
+        "reported": 72.05509347367246,
+        "scope": "Arithmetic from saved engineering inputs; calculation source not executed during this review."
+      }
+    },
+    {
+      "check": "Engineering frame yield ratio",
+      "status": "PASS",
+      "evidence": {
+        "independently_recomputed": 3.3307846597644257,
+        "reported": 3.3307846597644257,
+        "scope": "Arithmetic from saved engineering inputs; calculation source not executed during this review."
+      }
+    },
+    {
+      "check": "Engineering projected annular seat area",
+      "status": "PASS",
+      "evidence": {
+        "independently_recomputed": 28.74557278034661,
+        "reported": 28.74557278034661,
+        "scope": "Arithmetic from saved engineering inputs; calculation source not executed during this review."
+      }
+    },
+    {
+      "check": "Engineering seat contact sensitivity ratio",
+      "status": "PASS",
+      "evidence": {
+        "independently_recomputed": 1.839716657942183,
+        "reported": 1.8397166579421833,
+        "scope": "Arithmetic from saved engineering inputs; calculation source not executed during this review."
+      }
+    },
+    {
+      "check": "Engineering roll contact equilibrium",
+      "status": "PASS",
+      "evidence": {
+        "independently_recomputed": 1066.7064383154502,
+        "reported": 1066.7064383154502,
+        "scope": "Arithmetic from saved engineering inputs; calculation source not executed during this review."
+      }
+    },
+    {
+      "check": "Engineering conservative screw plus contact bound",
+      "status": "PASS",
+      "evidence": {
+        "independently_recomputed": 1238.7349364634592,
+        "reported": 1238.7349364634592,
+        "scope": "Arithmetic from saved engineering inputs; calculation source not executed during this review."
+      }
+    },
+    {
+      "check": "Engineering coupled local proof displacement",
+      "status": "PASS",
+      "evidence": {
+        "independently_recomputed": 0.2045725388342879,
+        "reported": 0.2045725388342879,
+        "scope": "Arithmetic from saved engineering inputs; calculation source not executed during this review."
+      }
+    },
+    {
+      "check": "Engineering combined proof displacement",
+      "status": "PASS",
+      "evidence": {
+        "independently_recomputed": 0.2868277209509625,
+        "reported": 0.2868277209509625,
+        "scope": "Arithmetic from saved engineering inputs; calculation source not executed during this review."
+      }
+    },
+    {
+      "check": "Engineering minimum straight ligament",
+      "status": "PASS",
+      "evidence": {
+        "independently_recomputed": 3.9165459533529625,
+        "reported": 3.9165459533529625,
+        "scope": "Arithmetic from saved engineering inputs; calculation source not executed during this review."
+      }
+    },
+    {
+      "check": "Final engineering input identity and source self-check report",
+      "status": "PASS",
+      "evidence": {
+        "params_sha256": "7de412cbc448c043a8745bd6e72a9d753c8faa0c593c22831f9d6b59ace16946",
+        "source_self_check_scope": "Arithmetic, station equilibrium, CAD parameter consistency and explicit retention of contact HOLD; not physical validation",
+        "review_note": "Source AST parses; recorded self-checks cover arithmetic, station equilibrium, parameter consistency and retention of contact HOLD, not physical validation."
+      }
+    },
+    {
+      "check": "Final note retains frame-only pass and explicit seat HOLD",
+      "status": "PASS",
+      "evidence": {
+        "frame_ratio": 3.3307846597644257,
+        "seat_pressure_sensitivity_ratio": 1.8397166579421833,
+        "interpretation": "Static report consistency passes. Seat/head/preload/toe and other installed capacities remain unresolved; no full-assembly or all-contact strength rating."
+      }
+    },
+    {
+      "check": "Final note clarifies units, definitions and bore envelope",
+      "status": "PASS",
+      "evidence": "N m to N mm conversion is explicit; N/V and selected bending allowance are defined. Actual drawing bore 4.5+0.1/0 is distinguished from conservative 4.4-4.6 mm analytical envelope."
+    },
+    {
+      "check": "Final DESIGN load paragraph corrected and coupled proof preserved",
+      "status": "PASS",
+      "evidence": "The stale CAD-mass update instruction is removed. Final 2.2 kg / 140 N basis, all roll at either station, paired toe reactions, M4 1250/175 N and FPE 500/250 N qualification demands agree with the prototype plan. Predicted local/combined proof 0.20457/0.28683 mm remain below proposed 0.30/0.40 mm criteria; residual criterion 0.10 mm is a proposed test criterion, not calculated permanent set."
+    }
+  ],
+  "passed_current_static_checks": 38,
+  "failed_current_static_checks": 0,
+  "inspected_files_sha256": {
+    "README.md": "3927e4d05460621d1c9406a95b4df43cfb2796dde9918a1c0c860efb7518773e",
+    "DESIGN.md": "60df65ed157559c74753acbdc9a9be7c57525ac07e6b108b808c305a111a1f06",
+    "BOM.md": "c5e13ca7426bcc1d49b96529a85d2a8c605e78f25af7984299d35530e2069d06",
+    "ASSEMBLY.md": "85444f101936d3e66da77aa873d01d1770095285ae6212c2501356c4ba89aa2f",
+    "PROTOTYPE_VALIDATION.md": "7223b83fb5d657f273f9f4ee8bb07467a2e4c6fb55bac7f10edeef0eb49e6cae",
+    "params.json": "7de412cbc448c043a8745bd6e72a9d753c8faa0c593c22831f9d6b59ace16946",
+    "model.py": "198c293b1752bd94a526041587fc93c07b9ef334dd5e3b558811f05c4185b5d2",
+    "references/research/catalog_bom.json": "c300c295651c70560d016bc11ed8279052835a020db9cf15a2b944b5b8510a1a",
+    "quality/cad_verification.json": "963482b86f70df10f989a99af91b02eac80be5eded08d3e805e91e6395e500aa",
+    "quality/manufacturing_verification.json": "e319fa39e03df62cf774a51f04ecfdc8688af6a151c38ff81cc1481ea82ea322",
+    "exports/cad_build_metadata.json": "5d5a8b3bd7d323d3bfd2a5c5f42ad9378b2ea88259b835ff1ddedb3f29793932",
+    "exports/FPE_stud_coordinates_N2.csv": "84fdd3686d7a7452046dcb711b09da56f551f82c3c80cb62f5cab6b5db57c717",
+    "requirements.txt": "5eeda0c6c91282ba4dd9ce4aab24de56b3fa757d5aa2e306091c28e6ac3e1596",
+    "ENGINEERING_NOTE.md": "1b8a9f8722bbba1e03281e7a7b4a4e0d26471fdd144596cf8d7dff4c097a0d75",
+    "references/engineering/engineering_results.json": "28b78f41972e035f6475151773ebdf9eead61a31d9eb04f35d9525b0c157e095",
+    "references/engineering/engineering_calculations.py": "ae07633793c24fc1ea38083dfd805760e9823c44b6623dd9737ebc0776c1fa95"
+  },
+  "observations": [
+    {
+      "severity": "low",
+      "file": "DESIGN.md",
+      "finding": "Earlier stale instruction to update package force after CAD mass.",
+      "disposition": "RESOLVED by engineering owner: final 2.2 kg allowance, 136.328 N derived / 140 N rounded and contact-coupled demands now agree."
+    }
+  ],
+  "pending": [],
+  "engineering_artifacts_present_at_close": {
+    "ENGINEERING_NOTE.md": true,
+    "references/engineering/engineering_results.json": true,
+    "references/engineering/engineering_calculations.py": true
+  },
+  "release_holds": [
+    "Actual rear M4 thread and both mounting feature engagements/clearance",
+    "Actual case toe support, alloy/contact capacity, countersunk head/seat and preload/locking procedure",
+    "Final FPE anchor installation/capacity, panel support and measured complete nut engagement",
+    "Side-orientation output derating, actual load/ambient, airflow and enclosure thermal operation",
+    "No fabrication, physical fit, proof, powered testing or broader service qualification performed"
+  ],
+  "engineering_release_state": {
+    "status": "PRELIMINARY_FRAME_SCREEN_PASS_CONTACT_HOLD_NO_ASSEMBLY_RATING",
+    "frame_target_met": true,
+    "whole_screen_target_met": false,
+    "contact_status": "HOLD",
+    "frame_yield_ratio": 3.3307846597644257,
+    "seat_contact_sensitivity_yield_ratio": 1.8397166579421833,
+    "assembly_rating_established": false
+  },
+  "limitations_of_review": "No new broad CAD tests, FEA, fabrication, physical measurement, proof or powered test. Existing 77 CAD and 51 manufacturing checks were reviewed with matching parameter/export hashes. This bounded arithmetic recomputation does not independently validate the effective-strip, contact, preload or installed-anchor model assumptions."
+}

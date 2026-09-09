@@ -1,0 +1,375 @@
+{
+  "source_sha256": "80714a02ccf0ba999e2d004db3d40b22f86bf4f631081086a0ba262754f6b8b2",
+  "normalized_frame": "(newX,newY,newZ)=(oldY,oldZ-80,oldX+14.5); right-handed. Equivalent rotation -120deg about (1,1,1), translation(0,-80,14.5).",
+  "solid_indices_are_zero_based": true,
+  "variant_indices": {
+    "Tile": 19,
+    "30W": 21,
+    "60W": 20
+  },
+  "mating_face_area_mm2": 20410.101855,
+  "mating_face_bbox_mm": {
+    "x": [
+      -64.4859363,
+      64.4859363
+    ],
+    "y": [
+      -79.5,
+      79.5
+    ],
+    "z": [
+      -0.0,
+      -0.0
+    ]
+  },
+  "hole_axes_xy_mm": [
+    [
+      -60.0,
+      -70.0
+    ],
+    [
+      60.0,
+      -70.0
+    ],
+    [
+      0.0,
+      -40.0
+    ],
+    [
+      0.0,
+      30.0
+    ],
+    [
+      -50.0,
+      70.0
+    ],
+    [
+      50.0,
+      70.0
+    ]
+  ],
+  "holes": [
+    {
+      "axis_xy_mm": [
+        -60.0,
+        -70.0
+      ],
+      "verified_by_coaxial_analytic_cylinders": true,
+      "entry_mouth_diameter_mm": 4.5,
+      "entry_depth_mm": 0.584,
+      "entry_cone_half_angle_deg": 45,
+      "thread_minor_cylindrical_patch_diameter_mm": 3.332,
+      "thread_root_cylindrical_patch_diameter_mm": 4.1095,
+      "modeled_thread_region_z_mm": [
+        0.584,
+        3.5
+      ],
+      "nominal_modeled_region_span_mm": 2.916,
+      "root_feature_axial_repeats_mm": [
+        0.7000839,
+        0.6999229
+      ],
+      "inferred_nominal_geometric_pitch_mm": 0.7,
+      "drill_cone_z_mm": [
+        3.4999999,
+        4.5010339
+      ],
+      "drill_cone_half_angle_deg": 59,
+      "axis_probe_first_material_z_mm": 4.4920208,
+      "probe_radius_mm": 0.015,
+      "bore_type_from_geometry": "BLIND - conical bottom; solid Tile behind",
+      "usable_complete_engagement_mm": null,
+      "allowable_screw_penetration_mm": null
+    },
+    {
+      "axis_xy_mm": [
+        60.0,
+        -70.0
+      ],
+      "verified_by_coaxial_analytic_cylinders": true,
+      "entry_mouth_diameter_mm": 4.5,
+      "entry_depth_mm": 0.584,
+      "entry_cone_half_angle_deg": 45,
+      "thread_minor_cylindrical_patch_diameter_mm": 3.332,
+      "thread_root_cylindrical_patch_diameter_mm": 4.1095,
+      "modeled_thread_region_z_mm": [
+        0.584,
+        3.5
+      ],
+      "nominal_modeled_region_span_mm": 2.916,
+      "root_feature_axial_repeats_mm": [
+        0.7000844,
+        0.6999228999999998
+      ],
+      "inferred_nominal_geometric_pitch_mm": 0.7,
+      "drill_cone_z_mm": [
+        3.4999999,
+        4.5010339
+      ],
+      "drill_cone_half_angle_deg": 59,
+      "axis_probe_first_material_z_mm": 4.4920208,
+      "probe_radius_mm": 0.015,
+      "bore_type_from_geometry": "BLIND - conical bottom; solid Tile behind",
+      "usable_complete_engagement_mm": null,
+      "allowable_screw_penetration_mm": null
+    },
+    {
+      "axis_xy_mm": [
+        0.0,
+        -40.0
+      ],
+      "verified_by_coaxial_analytic_cylinders": true,
+      "entry_mouth_diameter_mm": 4.5,
+      "entry_depth_mm": 0.584,
+      "entry_cone_half_angle_deg": 45,
+      "thread_minor_cylindrical_patch_diameter_mm": 3.332,
+      "thread_root_cylindrical_patch_diameter_mm": 4.1095,
+      "modeled_thread_region_z_mm": [
+        0.584,
+        3.5
+      ],
+      "nominal_modeled_region_span_mm": 2.916,
+      "root_feature_axial_repeats_mm": [
+        0.7000843,
+        0.6999228999999998
+      ],
+      "inferred_nominal_geometric_pitch_mm": 0.7,
+      "drill_cone_z_mm": [
+        3.4999999,
+        4.5010339
+      ],
+      "drill_cone_half_angle_deg": 59,
+      "axis_probe_first_material_z_mm": 4.4920208,
+      "probe_radius_mm": 0.015,
+      "bore_type_from_geometry": "BLIND - conical bottom; solid Tile behind",
+      "usable_complete_engagement_mm": null,
+      "allowable_screw_penetration_mm": null
+    },
+    {
+      "axis_xy_mm": [
+        0.0,
+        30.0
+      ],
+      "verified_by_coaxial_analytic_cylinders": true,
+      "entry_mouth_diameter_mm": 4.5,
+      "entry_depth_mm": 0.584,
+      "entry_cone_half_angle_deg": 45,
+      "thread_minor_cylindrical_patch_diameter_mm": 3.332,
+      "thread_root_cylindrical_patch_diameter_mm": 4.1095,
+      "modeled_thread_region_z_mm": [
+        0.584,
+        3.5
+      ],
+      "nominal_modeled_region_span_mm": 2.916,
+      "root_feature_axial_repeats_mm": [
+        0.7000843999999999,
+        0.6999229000000002
+      ],
+      "inferred_nominal_geometric_pitch_mm": 0.7,
+      "drill_cone_z_mm": [
+        3.4999999,
+        4.5010339
+      ],
+      "drill_cone_half_angle_deg": 59,
+      "axis_probe_first_material_z_mm": 4.4920208,
+      "probe_radius_mm": 0.015,
+      "bore_type_from_geometry": "BLIND - conical bottom; solid Tile behind",
+      "usable_complete_engagement_mm": null,
+      "allowable_screw_penetration_mm": null
+    },
+    {
+      "axis_xy_mm": [
+        -50.0,
+        70.0
+      ],
+      "verified_by_coaxial_analytic_cylinders": true,
+      "entry_mouth_diameter_mm": 4.5,
+      "entry_depth_mm": 0.584,
+      "entry_cone_half_angle_deg": 45,
+      "thread_minor_cylindrical_patch_diameter_mm": 3.332,
+      "thread_root_cylindrical_patch_diameter_mm": 4.1095,
+      "modeled_thread_region_z_mm": [
+        0.584,
+        3.5
+      ],
+      "nominal_modeled_region_span_mm": 2.916,
+      "root_feature_axial_repeats_mm": [
+        0.7000845,
+        0.6999228999999998
+      ],
+      "inferred_nominal_geometric_pitch_mm": 0.7,
+      "drill_cone_z_mm": [
+        3.4999999,
+        4.5010339
+      ],
+      "drill_cone_half_angle_deg": 59,
+      "axis_probe_first_material_z_mm": 4.4920208,
+      "probe_radius_mm": 0.015,
+      "bore_type_from_geometry": "BLIND - conical bottom; solid Tile behind",
+      "usable_complete_engagement_mm": null,
+      "allowable_screw_penetration_mm": null
+    },
+    {
+      "axis_xy_mm": [
+        50.0,
+        70.0
+      ],
+      "verified_by_coaxial_analytic_cylinders": true,
+      "entry_mouth_diameter_mm": 4.5,
+      "entry_depth_mm": 0.584,
+      "entry_cone_half_angle_deg": 45,
+      "thread_minor_cylindrical_patch_diameter_mm": 3.332,
+      "thread_root_cylindrical_patch_diameter_mm": 4.1095,
+      "modeled_thread_region_z_mm": [
+        0.584,
+        3.5
+      ],
+      "nominal_modeled_region_span_mm": 2.916,
+      "root_feature_axial_repeats_mm": [
+        0.7000843,
+        0.6999229
+      ],
+      "inferred_nominal_geometric_pitch_mm": 0.7,
+      "drill_cone_z_mm": [
+        3.4999999,
+        4.5010339
+      ],
+      "drill_cone_half_angle_deg": 59,
+      "axis_probe_first_material_z_mm": 4.4920208,
+      "probe_radius_mm": 0.015,
+      "bore_type_from_geometry": "BLIND - conical bottom; solid Tile behind",
+      "usable_complete_engagement_mm": null,
+      "allowable_screw_penetration_mm": null
+    }
+  ],
+  "thread_identity_limit": "Helical geometry and nominal 0.7 mm repeats support an M4x0.7 hypothesis; verify actual thread and useful engagement by vendor drawing/gauge. Modeled region span is not a guaranteed full-thread engagement.",
+  "documentation_comparison": "Fresh blind-hole geometry agrees with the official Tile brief described by the research team. The old local claims of an open22 mm cavity, safe3.5 penetration and proven physical hybrid interchangeability are unsupported and must not be inherited.",
+  "axis_material_intervals_from_reopened_tile": [
+    {
+      "xy": [
+        -60.0,
+        -70.0
+      ],
+      "solid_z_intervals": [
+        [
+          4.4920208,
+          5.0000001
+        ],
+        [
+          23.9999999,
+          24.5079792
+        ]
+      ]
+    },
+    {
+      "xy": [
+        60.0,
+        -70.0
+      ],
+      "solid_z_intervals": [
+        [
+          4.4920208,
+          5.0000001
+        ],
+        [
+          23.9999999,
+          24.5079792
+        ]
+      ]
+    },
+    {
+      "xy": [
+        0.0,
+        -40.0
+      ],
+      "solid_z_intervals": [
+        [
+          4.4920208,
+          5.0000001
+        ],
+        [
+          23.9999999,
+          24.5079792
+        ]
+      ]
+    },
+    {
+      "xy": [
+        0.0,
+        30.0
+      ],
+      "solid_z_intervals": [
+        [
+          4.4920208,
+          5.0000001
+        ],
+        [
+          23.9999999,
+          24.5079792
+        ]
+      ]
+    },
+    {
+      "xy": [
+        -50.0,
+        70.0
+      ],
+      "solid_z_intervals": [
+        [
+          4.4920208,
+          5.0000001
+        ],
+        [
+          23.9999999,
+          24.5079792
+        ]
+      ]
+    },
+    {
+      "xy": [
+        50.0,
+        70.0
+      ],
+      "solid_z_intervals": [
+        [
+          4.4920208,
+          5.0000001
+        ],
+        [
+          23.9999999,
+          24.5079792
+        ]
+      ]
+    }
+  ],
+  "internal_cavity_axis_interval_mm": [
+    5.0,
+    24.0
+  ],
+  "nominal_material_after_drill_apex_mm": 0.4989661,
+  "blind_bore_caveat": "There is an internal cavity between the side walls. The holes are blind because each drill point remains capped by nominal0.499 mm of material before that cavity. A probe hit bounding box must not be interpreted as continuous solid through the cavity.",
+  "derived_split_contact": {
+    "split_z_mm": 29,
+    "tile_plane_area_mm2": 20410.101855041838,
+    "bank_clipped_plane_area_mm2": 7337.683379053077,
+    "coincident_planar_area_mm2": 7132.892849829204,
+    "source": "secondary geometric check of reopened normalized exports",
+    "limit": "Coincident geometry does not establish a detachable bank, attachment scheme, thermal contact resistance, pressure, TIM, or vendor configuration."
+  },
+  "derived_reference_bbox_mm": {
+    "x": [
+      -67.9570157,
+      65.0
+    ],
+    "y": [
+      -80.0000001,
+      90.0
+    ],
+    "z": [
+      -1e-07,
+      51.0
+    ]
+  },
+  "no_nonphysical_configuration_claim": "Derived reference only: actual Tile geometry plus a mathematically clipped region of the actual60W body and shared auxiliary geometry. No native hybrid is present in source.",
+  "roundtrip_note": "Derived STEP reopens valid,21 solids, identical bounding box; volume drift1.886mm3,about5.2ppm, from complex BREP roundtrip is recorded in the main audit."
+}

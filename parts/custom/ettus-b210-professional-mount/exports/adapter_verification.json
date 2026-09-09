@@ -1,0 +1,108 @@
+{
+  "machined_valid": true,
+  "machined_solids": 1,
+  "volume_mm3": 68864.05322912663,
+  "pair_intersection_volume_mm3": 0.0,
+  "profile_dxf_units": "millimeters",
+  "profile_entities": 7,
+  "metrics": {
+    "units": "mm",
+    "material": "6061-T6 aluminum plate, certified stock",
+    "web_t": 8.0,
+    "foot_t": 8.0,
+    "inside_radius": 6.0,
+    "web_and_foot_thickness_tolerance": 0.05,
+    "minimum_web_and_foot_t_after_finish": 7.95,
+    "finish": "Deburr and break accessible edges 0.2-0.5 mm. Black sulfuric anodize nominal 10-15 micrometers per shop specification; account for final dimensional build. Dimensions apply after finish. Web and foot thickness 8.00 +/-0.05, minimum7.95mm after finish. No welds.",
+    "root_center_xz": [
+      6.0,
+      14.0
+    ],
+    "root_tangent_z": 14.0,
+    "root_tangent_x": 6.0,
+    "web_lower_hole_edge_to_root_tangent": 9.25,
+    "web_upper_hole_edge_to_end": 7.25,
+    "foot_first_hole_edge_to_root_tangent": 11.25,
+    "foot_last_hole_edge_to_end": 7.25,
+    "hole_edge_to_strip_side": 15.25,
+    "cradle_lower_edge_z": 16.0,
+    "cradle_lower_edge_to_root": 2.0,
+    "overall_bbox_one": {
+      "x": [
+        -8.0,
+        65.0
+      ],
+      "y": [
+        -18.0,
+        18.0
+      ],
+      "z": [
+        0,
+        176.0
+      ]
+    },
+    "finished_web_hole_centers": [
+      [
+        0,
+        -66.947,
+        26.0
+      ],
+      [
+        0,
+        -66.947,
+        166.0
+      ],
+      [
+        0,
+        73.053,
+        26.0
+      ],
+      [
+        0,
+        73.053,
+        166.0
+      ]
+    ],
+    "finished_foot_hole_centers": [
+      [
+        20.0,
+        -66.947,
+        0
+      ],
+      [
+        55.0,
+        -66.947,
+        0
+      ],
+      [
+        20.0,
+        73.053,
+        0
+      ],
+      [
+        55.0,
+        73.053,
+        0
+      ]
+    ],
+    "manufacturing_route": "One-piece machined angle cut from certified 6061-T6 plate. Suggested minimum sawn blank 75 x 180 x 38.1 mm; finish width 36. Rough profile by saw/waterjet or mill; finish 2.5D outline including R6 root with 12 mm endmill. Drill four 5.5 mm through holes in two orthogonal setups using finished datums. Long flute/reach and workholding to be planned by shop. No sheet metal forming or neutral-axis flat pattern."
+  },
+  "machined_reopen": {
+    "valid": true,
+    "solids": 1,
+    "size_mm": [
+      73.0,
+      36.0,
+      176.0
+    ]
+  },
+  "pair_reopen": {
+    "valid": true,
+    "solids": 2,
+    "size_mm": [
+      73.0,
+      176.0,
+      176.0
+    ]
+  }
+}

@@ -1,0 +1,684 @@
+PAGE 1
+■ 
+■ 
+
+ 
+
+
+
+‧ 
+‧
+‧
+‧ 
+‧ 
+‧ 
+■  ■ 
+‧
+‧ 
+‧B CANBus protocol
+‧-~+℃
+‧ 
+‧
+‧
+
+‧
+‧
+
+‧
+‧ 
+CNS15598-1UL62368-1 TPTC004IEC62368-1 BS EN/EN62368-1
+Bauar
+Sicherheit
+egel gema
+t gepruft
+od
+be
+www.
+ID 2000000000
+tuv.com
+wac g
+o s
+AS/NZS62368-1
+Back
+File Name:NSP-1600-SPEC   2025-08-19
+Front User’s Manual
+https://www.meanwell.com/serviceGTIN.aspx
+■ 
+
+
+
+
+1600W AC/DC High Reliable Industrial Enclosed Type Power Supply NSP-1600  series
+IS 13252
+(except for 48V)
+THOMAS SAMUEL
+THOMAS SAMUEL
+Click Me
+
+
+  
+
+
+PAGE 2
+SPECIFICATION NSP-1600-12 NSP-1600-24
+OUTPUT
+INPUT
+PROTECTION
+FUNCTION
+ENVIRONMENT
+SAFETY & EMC (Note 7)
+OTHERS
+NOTE
+DC VOLTAGE
+RATED CURRENT
+CURRENT RANGE
+RATED POWER
+RIPPLE & NOISE (max.)                          Note.2
+VOLTAGE ADJ. RANGE
+LINE REGULATION
+LOAD REGULATION
+SETUP, RISE TIME
+HOLD UP TIME (Typ.)
+VOLTAGE RANGE                                     Note.4
+FREQUENCY RANGE
+POWER FACTOR (Typ.)
+EFFICIENCY (Typ.)
+INRUSH CURRENT (Typ.)
+LEAKAGE CURRENT
+AC CURRENT (Typ.)                                 Note.4
+12V 24V
+125A 67A
+0 ~ 125A 0 ~ 67A
+1500W 1608W
+150mVp-p
+11.5 ~ 15V
+200mVp-p
+23.5 ~ 30V
+±1.0% ±1.0%
+±0.5%
+±0.5%
+1500ms, 60ms/230Vac at full load
+16ms / 230Vac at 70% load          10ms / 230Vac at full load
+90 ~ 264Vac          250 ~ 400Vdc
+47 ~ 63Hz
+0.97/230Vac at full load
+89%
+COLD START 35A/230Vac
+14A/115Vac     8A/230Vac 15A/115Vac          8.5A/230Vac
+<2mA / 230Vac
+NSP-1600-48NSP-1600-36     
+48V36V
+33.5A44.5A
+0 ~ 33.5A0 ~ 44.5A
+1608W1602W
+300mVp-p250mVp-p
+47.5 ~ 58.8V35.5 ~ 45V
+±1.0%±1.0%
+±0.5% ±0.5%±0.5%
+±0.5% ±0.5%±0.5%
+VOLTAGE TOLERANCE                             Note.3
+91% 92.5%91.5%
+OVER TEMPERATURE
+OVERLOAD
+OVER VOLTAGE
+105 ~ 115% rated output power 
+15.75 ~ 18.75V
+38dB 38dB 38dB 38dB
+45dB 38dB 38dB 38dB
+Protection type : Shut down o/p voltage, re-power on to recover
+Shut down o/p voltage, recovers automatically after temperature goes down
+31.5 ~ 37.5V 63 ~ 75V47.2 ~ 56.3V
+ALARM SIGNAL
+CANBus INTERFACE
+FAN NOISE (Typ.)
+REMOTE SENSE
+REMOTE CONTROL
+AUXILIARY POWER 12Vaux @ 0.8A
+WORKING TEMP.
+WORKING HUMIDITY
+STORAGE TEMP., HUMIDITY
+TEMP. COEFFICIENT
+VIBRATION
+-20 ~ +70℃ (Refer to "Derating Curve")
+20 ~ 90% RH non-condensing
+-40 ~ +85℃, 10 ~ 95% RH non-condensing
+±0.03%/℃ (0 ~ 50℃)
+10 ~ 500Hz, 2G 10min./1cycle, 60min. each along X, Y, Z axes
+SAFETY STANDARDS
+WITHSTAND VOLTAGE
+UL62368-1, CAN/CSA C22.2 No. 62368-1, TUV EN62368-1, 5598 1, BS EN/ BSMI CNS1 -
+BIS IS 13252(Part 1):2010/ IEC 60950-1 : 2005 (except for 48V), , EAC TP TC 004 approved AS/NZS62368.1
+I/P-O/P:3KVac     I/P-FG:2KVac    O/P-FG:1.5KVac
+ISOLATION RESISTANCE
+MTBF
+DIMENSION
+PACKING
+684.7K hrs min.      Telcordia SR-332 (Bellcore) ; 69.2K hrs min.      MIL-HDBK-217F (25℃)
+300*85*41mm (L*W*H)
+I/P-O/P, I/P-FG, O/P-FG:100M Ohms / 500Vdc / 25℃/ 70% RH
+1.8Kg;6pcs/11.3Kg/1.25CUFT 
+Parameter
+Parameter
+ESD 
+Radiated
+EFT / Burst
+Surge
+Conducted
+Magnetic Field
+Voltage Dips and Interruptions
+Conducted
+Radiated
+Harmonic Current 
+Voltage Flicker
+Standard
+Standard
+BS EN/EN55032(CISPR32),CNS 15936
+BS EN/EN55032(CISPR32),CNS 15936
+BS EN/EN61000-3-2
+BS EN/EN61000-3-3
+BS EN/EN61000-4-2
+BS EN/EN61000-4-3
+BS EN/EN61000-4-4
+BS EN/EN61000-4-5
+BS EN/EN61000-4-6
+BS EN/EN61000-4-8
+BS EN/EN61000-4-11
+Test Level / Note
+Test Level / Note
+Class B(CISPR32) / Class A(CNS 15936)
+Class A(CISPR32 & CNS 15936)
+Class A
+-----
+EMC IMMUNITY
+EMC EMISSION
+Isolated signal output for T-alarm and DC OK
+Communication provides functions such as control, setting and monitoring
+Built-in intelligent fan speed control detect by  PSU’S internal temperatureNote.6
+10% load with Ta=25℃
+70% load with Ta=25℃ 
+Compensate voltage drop on the load wiring up to 0.5Vdc. Please refer to the Function Manual
+By electrical signal or dry contact     Power ON:short     Power OFF:open. Please refer to the Function Manual
+Adjustment of output voltage is allowable to of nominal output voltage ; . 40 ~ 125%(12V: 60~125%) 15~125% by request
+Please refer to the Function Manual.
+BS EN/EN55024, BS EN/EN61000-6-2, BSMI CNS1 -1 SEMI5598 , design refer to  F47 at  200Vac
+Level 3, 8KV air ; Level 2, 4KV contact
+Level 3
+Level 3
+Level 4, 2KV/Line-Line 4KV/Line-Earth
+Level 3
+Level 4
+>95% dip 0.5 periods, 30% dip 25 periods, 
+>95% interruptions 250 periods
+   ℃
+
+
+
+
+
+
+ 
+
+https://www.meanwell.com//Upload/PDF/EMI_statement_en.pdf)
+℃℃
+※：https://www.meanwell.com/serviceDisclaimer.aspx
+Protection type : , unit will shut down o/p voltage after 5 sec. re-power on to recoverConstant current limiting After O/P voltage falls, 
+1600W AC/DC High Reliable Industrial Enclosed Type Power Supply NSP-1600  series
+OUTPUT VOLTAGE PROGRAMMABLE(PV)  
+File Name:NSP-1600-SPEC   2025-08-19
+
+PAGE 3
+◎ The curve above is measured at 115/230Vac.
+PFC fosc : 90KHz
+PWM fosc : 70KHz
+LIMITING
+ACTIVE
+CURRENT
+INRUSH
+CONTROL
+Input
+RECTIFIERS
+&
+FILTERSWITCHING
+POWERRECTIFIERS
+FILTER
+EMI
+PWM
+CIRCUIT
+DETECTION
+POWER
+AUX
+&
+PFC
+FILTER
+&
+PFC
+CONTROL
+MCUDETECTION
+CIRCUIT
+O.V.P.
+MCU
+O.T.P.
+DC-OK
+CANBus
+T-Alarm
+R.CFAN
+RECTIFIERS
+DATA
+ISOLATION
+LOAD (%)
+INPUT VOLTAGE (Vac) 60Hz
+Derating Curve Efficiency vs Load (48V Model)
+Static Characteristics
+MODEL
+INPUT 12V
+1500W
+1200W
+1050W
+900W
+1608W
+1286W
+1126W
+965W
+1602W
+1282W
+1121W
+961W
+1608W
+1286W
+1126W
+965W
+125A
+100A
+87.5A
+75A
+67A
+53.6A
+46.9A
+40.2A
+44.5A
+35.6A
+31.15A
+26.7A
+33.5A
+26.8A
+23.45A
+20.1A
+180~264Vac
+115Vac
+100Vac
+90Vac
+24V 36V 48V
+File Name:NSP-1600-SPEC   2025-08-19
+Block Diagram
+AMBIENT TEMPERATURE (℃)
+LOAD (%)
+-20 20100 30 40 50 60 70
+20
+40
+60
+75
+50
+80
+100
+(HORIZONTAL)
++Vo
+-RS
++RS
+-Vo
+12Vdc/0.8A
+AUX. POWER
+PV
+1600W AC/DC High Reliable Industrial Enclosed Type Power Supply NSP-1600  series
+74
+79
+84
+89
+94
+99
+10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+230Vac
+115Vac
+EFFICIENCY (%)
+LOAD
+90 100 115 180 264
+80
+70
+60
+90
+100
+50
+40
+30
+ 
+ 
+240220
+
+PAGE 4
+File Name:NSP-1600-SPEC   2025-08-19
+60 80 100 125
+ %
+100
+40
+60
+80
+20
+OUTPUT CURRENT (%)
+OUTPUT VOLTAGE (%)
+40
+OUTPUT  VOLTAGE(%)
+EXTERNAL VOLTAGE (DC) ◎ The rated current should change with the Output Voltage Programming accordingly.
+◎ For Remote Sense / Local Sense, please refer to “Voltage Drop Compensation” section.
+1600W AC/DC High Reliable Industrial Enclosed Type Power Supply NSP-1600  series
+2. Remote Control
+※ The power supply can be turned ON/OFF individually or along with other units by using the “Remote Control" function.
+switch
+switch
+Pin4 R.C
+ Pin3 +5V-aux
+CN1 +Vo-Vo
+Between +5V-aux(Pin 3) and R.C(Pin 4)
+Switch Short
+Switch Open
+PSU Vo Status
+Power ON
+Power OFF
+3
+2 1
+5V-aux
+R.C 
+R.C. by external .switch R.C. by user’s  control module.optocoupler R.C. by user’s  control module.Relay
+R.C 5V-aux
+ 5V-aux R.C 
+User’s power User’s PSU 
+User’s Optocoupler Relay
+40
+60
+63
+78
+86
+95
+100
+125
+Vout 
+0.40 1 2 3 4.7 5 V
+Non-Linear
+12V
+Others
+※ In addition to the adjustment via the built-in potentiometer, the output voltage can be trimmed by applying External Voltage.
+1. Output Voltage Programming (P.V)
+External Voltage (DC)
+Function Manual
+Pin14 -Vo(signal)Pin12 PV
+CN1 +Vo-Vo
+
+PAGE 5
+File Name:NSP-1600-SPEC   2025-08-19
+4. Alarm Signal Output
+※ There are 2 alarm signals, DC OK and T-ALARM, in TTL signal form, on CN1. These signals are isolated from output. 
+The maximum sink current is 10mA.
+DCOKFail signal 
+T-ALARM 
+"High" > 3.5~5.5V                                                        
+"High" > 3.5~5.5V                                                        
+"Low" < -0.5~0.5V
+"Low" < -0.5~0.5V
+Power Supply Status
+Power Supply Status
+Vout ≦ 77%±5%
+Vout ≧ 80%±5%
+Pin6 T-ALARM
+Pin2 GND-aux
+Application
+Circuit
+ Pin5 DC OK
+CN1 +Vo-Vo
+OFF(OTP or Fan Fail)
+ON(Normal Work)
+5.CANBus Communication Interface
+NSP-1600 supports CAN 2.0B with maximum 250KHz bus speed, allowing information reading, status monitoring, output trimming, etc. 
+For details, please refer to the User’s Manual.
+1600W AC/DC High Reliable Industrial Enclosed Type Power Supply NSP-1600  series
+◎ The +RS signal should be connected to the positive terminal of the load whereas -RS signal to the negative terminal.
+3. Voltage Drop Compensation
+Sense lines should be twisted in pairs to minimize noise pick-up.
+LOAD
+LOAD
++Vo
++Vo
+-Vo
+-Vo
+Pin16 -RS
+Pin15 +RS
+Pin16 -RS
+ Pin15 +RS
+ Pin13 +Vo(signal)
+ Pin14 -Vo(signal)
+CN1
+CN1
++Vo
++Vo
+-Vo
+-Vo
+※ The Remote Sense compensates voltage drop on the load wiring up to 0.5Vdc
+3.1 Remote Sense
+3.2 Local Sense
+※The +RS,-RS have to be connected to the +Vo(signal), -Vo(signal), respectively, as the following diagram, in order to get the correct output voltage if 
+Remote Sense is not used.
+
+PAGE 6
+Mechanical Specification
+Case No.296A(Unit: mm , tolerance 0.5mm)±
+※ Mounting Instruction
+Hole No. Recommended Screw Size MAX. Penetration Depth L Recommended mounting torque
+1
+2
+M3 4mm
+M4 5mm
+※ Control Pin No. Assignment( ) : HRS DF11-16DP-2DS or equivalentCN1
+Mating Housing
+Terminal
+HRS DF11-16DS or equivalent
+HRS DF11-**SC or equivalent
+6~8Kgf-cm
+7~10Kgf-cm
+LED
+-Vo
++Vo
+2
+1
+10
+2
+3
+9
+CN2
+28
+38
+(Bottom View)
+3-M3 L=4
+16.1
+707.5
+264.7
+(Top View)
+16.8
+22.8
+42.5
+5.8 252
+1
+1 1
+2 2
+2-M4  L=5
+Air flow
+85direction
+30
+21.6
+29.6
+20
+SVR
+Mounting Screw
+Mounting Surface Chassis of NSP-1600
+2-M3
+12 max.
+ψ6.5
+13
+5.8 252
+22.8
+16.8
+41
+300
+2 2
+2-M4  L=5
+File Name:NSP-1600-SPEC   2025-08-19
+2-ψ2.8
+2-ψ2.8
+252
+15
+105
+115
+41.3
+176
+4
+2
+8
+1
+7
+1600W AC/DC High Reliable Industrial Enclosed Type Power Supply NSP-1600  series
+FG
+AC/N
+AC/L
+Bracket
+(Mw’s Order No.: PGG2MHS013A)
+4 R.C
+2 GND-aux
+NC
+A0,A1,A2
+Auxiliary voltage output GND.
+This pin is use for remote ON-OFFusage only.
+The signal return is isolated from the output terminals (+Vo & -Vo).
+Retain for future use.
+CANBus interface address lines. (Note.1)
+Pin No.
+5
+6
+3
+1
+Function
+DC-OK
+T-ALARM
++5V-aux
++12V-aux
+Description
+High (3.5 ~ 5.5Vdc) : When the Vout ≦77%±5%.  
+Low (-0.5 ~ 0.5Vdc) : When Vout ≧80%±5%. 
+The maximum sourcing current is 10mA and only for output. (Note.2)
+Auxiliary voltage output, 10.6~13.2Vdc, referenced to GND-aux (pin2). 
+The maximum load current is 0.8A. This output has the built-in "Oring diodes" and is not controlled by “Remote ON-OFF”.
+12
+10,11
+7,8,9
+PV Connection for output voltage . (Note.1)programming
+15 +RS Positive sensing for remote sense. 
+High (3.5 ~ 5.5Vdc) : When the internal temperature exceeds the limit of temperature alarm, or when Fan fails.
+Low (-0.5 ~ 0.5Vdc) : When the internal temperature is normal, and when Fan works normally.
+The maximum sourcing current is 10mA and only for output(Note.2)
+16 -RS Negative sensing for remote sense. 
+13
+14
++Vo(Signal)
+-Vo(Signal)
+Positive output voltage signal.
+Negative output voltage signal.
+It is for local sense; it cannot be connected directly to the load.
+It is for local sense and certain function reference; it cannot be connected directly to the load.
+The unit can turn the output ON/OFF by electrical signal or dry contact between Remote ON/OFF and +5V-aux. (Note.2)
+Short (4.5 ~ 5.5Vdc) : Power ON ; Open (-0.5 ~ 0.5Vdc) : Power OFF ; The maximum input voltage is 5.5Vdc.
+Note1: Non-isolated signal, referenced to [-Vo(signal)].
+Note2: Isolated signal, referenced to [GND-aux].
+1
+2
+15
+16
+CN1
+1
+2
+15
+16
+
+PAGE 7
+File Name:NSP-1600-SPEC   2025-08-19
+   ※ LED Status Indicators 
+LED
+Green
+Red
+The power supply functions normally.
+Description
+The LED will present a constant red light when the abnormal status (OTP, OLP, fan fail) arises.
+Red (Flashing) The LEDwill flash with the red light when the internal temperature reaches 60℃; under this condition, the unit still operates normally 
+without entering OTP.(In the meantime, an alarm signal will be sent out through the interface.)CANBus
+1600W AC/DC High Reliable Industrial Enclosed Type Power Supply NSP-1600  series
+※ AC Input Terminal Pin No.  Assignment
+Pin No.
+1 1 2 3
+3
+2
+Assignment Diagram Maximum mounting torqueScrew thread
+8Kgf-cmM3.5AC/N
+AC/L
+FG
+※ 8 or equivalentControl Pin No. Assignment : HRS DF11- DP-2DS (CN2) 
+Mating Housing
+Terminal
+HRS DF11-8DS or equivalent
+HRS DF11-**SC or equivalent
+1
+2
+7
+8
+Pin No.
+1,2,3,4
+5,6
+7
+8
+Function
+NC
+-Vo (Signal)
+CANH
+CANL
+Description
+For standard model: Retain for future use.
+Negative output voltage signal.
+It is for local sense and certain function reference; it cannot be connected directly to the load.
+For CANBus model: Data line used in CANBus interface. (Note)
+For CANBus model: Data line used in CANBus interface. (Note)
+Note: Isolated signal, referenced to GND- ].[ aux
+Accessory List
+Item Quantity
+1
+2
+No.
+4pcs/per model 
+(Please refer to Installation Diagram)
+Bracket 
+(By request accesory, should  ordered seperately)
+Mw’s Order No.: PGG2MHS013A
+1
+Control function interface(CN1) 
+mating wire along with NSP-1600 
+(standard accessory)
+1pcs/per model
+UL1007  26AWG
+HRS DF11-16DS or equivalent
+15
+15
+1
+16
+2
+
+
+PAGE 8
+File Name:NSP-1600-SPEC   2025-08-19
+1600W AC/DC High Reliable Industrial Enclosed Type Power Supply NSP-1600  series
+Please refer to : http://www.meanwell.com/manual.html
+Installation Manual
+Installation Diagram
+M4*4
+(combination screw)

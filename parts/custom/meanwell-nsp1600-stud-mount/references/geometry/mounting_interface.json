@@ -1,0 +1,1514 @@
+{
+  "source_sha256": "d421a1e7fb7a3b5fd2e12588484a2e970456301955c0a17f55be6d56324dd8a0",
+  "translation_mm": [
+    -66.7869113,
+    -354.1518617,
+    -1.4999997
+  ],
+  "frame": "X width centre; Y=0 terminal chassis plane; Z=0 bottom contact plane; original axis directions retained.",
+  "normalized_bbox_mm": {
+    "x": [
+      -42.5000001,
+      42.5000001
+    ],
+    "y": [
+      -300.6000008,
+      37.9999995
+    ],
+    "z": [
+      -0.0,
+      41.0
+    ]
+  },
+  "source_solid_indices_zero_based": {
+    "main_shell": 17,
+    "fan_bracket": 0,
+    "PCB_reference": 10,
+    "fans": [
+      14,
+      15
+    ],
+    "cover": 16,
+    "terminal_panel": 18
+  },
+  "nominal_mounting_axes_mm": [
+    [
+      -35,
+      -16.1
+    ],
+    [
+      35,
+      -16.1
+    ],
+    [
+      0,
+      -280.8
+    ]
+  ],
+  "measured_mounting_axes_mm": [
+    [
+      -35.0,
+      -16.100001
+    ],
+    [
+      35.0,
+      -16.100001
+    ],
+    [
+      -4.28e-05,
+      -280.800001
+    ]
+  ],
+  "holes": [
+    {
+      "hole_id": "H1",
+      "owning_source_solid_index_zero_based": 17,
+      "axis_mm": [
+        -35.0,
+        -16.100001
+      ],
+      "local_source_faces": [
+        {
+          "face_index_zero_based": 151,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Torus",
+          "bbox_mm": {
+            "x": [
+              -37.045,
+              -35.0
+            ],
+            "y": [
+              -18.145001,
+              -14.055001
+            ],
+            "z": [
+              -0.0,
+              0.72
+            ]
+          },
+          "area_mm2": 5.6374011
+        },
+        {
+          "face_index_zero_based": 152,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Cylinder",
+          "bbox_mm": {
+            "x": [
+              -36.325,
+              -35.0
+            ],
+            "y": [
+              -17.425001,
+              -14.775001
+            ],
+            "z": [
+              0.72,
+              2.1
+            ]
+          },
+          "area_mm2": 5.7444022,
+          "diameter_mm": 2.65,
+          "axis_location_mm": [
+            -35.0,
+            -16.100001,
+            1.41
+          ],
+          "axis_direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "u_span_radians": 3.1415927
+        },
+        {
+          "face_index_zero_based": 153,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Plane",
+          "bbox_mm": {
+            "x": [
+              -37.045,
+              -32.955
+            ],
+            "y": [
+              -18.145001,
+              -14.055001
+            ],
+            "z": [
+              2.1,
+              2.1
+            ]
+          },
+          "area_mm2": 7.6227604,
+          "normal": [
+            -0.0,
+            0.0,
+            1.0
+          ],
+          "wire_bboxes_mm": [
+            {
+              "x": [
+                -37.045,
+                -32.955
+              ],
+              "y": [
+                -18.145001,
+                -14.055001
+              ],
+              "z": [
+                2.1,
+                2.1
+              ]
+            },
+            {
+              "x": [
+                -36.325,
+                -33.675
+              ],
+              "y": [
+                -17.425001,
+                -14.775001
+              ],
+              "z": [
+                2.1,
+                2.1
+              ]
+            }
+          ]
+        },
+        {
+          "face_index_zero_based": 154,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Cylinder",
+          "bbox_mm": {
+            "x": [
+              -37.045,
+              -35.0
+            ],
+            "y": [
+              -18.145001,
+              -14.055001
+            ],
+            "z": [
+              1.92,
+              2.1
+            ]
+          },
+          "area_mm2": 1.1564203,
+          "diameter_mm": 4.09,
+          "axis_location_mm": [
+            -35.0,
+            -16.100001,
+            2.01
+          ],
+          "axis_direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "u_span_radians": 3.1415927
+        },
+        {
+          "face_index_zero_based": 155,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Torus",
+          "bbox_mm": {
+            "x": [
+              -37.765,
+              -35.0
+            ],
+            "y": [
+              -18.865001,
+              -13.335001
+            ],
+            "z": [
+              1.2,
+              1.92
+            ]
+          },
+          "area_mm2": 8.1956026
+        },
+        {
+          "face_index_zero_based": 156,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Torus",
+          "bbox_mm": {
+            "x": [
+              -35.0,
+              -32.235
+            ],
+            "y": [
+              -18.865001,
+              -13.335001
+            ],
+            "z": [
+              1.2,
+              1.92
+            ]
+          },
+          "area_mm2": 8.1956026
+        },
+        {
+          "face_index_zero_based": 157,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Cylinder",
+          "bbox_mm": {
+            "x": [
+              -35.0,
+              -32.955
+            ],
+            "y": [
+              -18.145001,
+              -14.055001
+            ],
+            "z": [
+              1.92,
+              2.1
+            ]
+          },
+          "area_mm2": 1.1564203,
+          "diameter_mm": 4.09,
+          "axis_location_mm": [
+            -35.0,
+            -16.100001,
+            2.01
+          ],
+          "axis_direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "u_span_radians": 3.1415927
+        },
+        {
+          "face_index_zero_based": 158,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Cylinder",
+          "bbox_mm": {
+            "x": [
+              -35.0,
+              -33.675
+            ],
+            "y": [
+              -17.425001,
+              -14.775001
+            ],
+            "z": [
+              0.72,
+              2.1
+            ]
+          },
+          "area_mm2": 5.7444022,
+          "diameter_mm": 2.65,
+          "axis_location_mm": [
+            -35.0,
+            -16.100001,
+            1.41
+          ],
+          "axis_direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "u_span_radians": 3.1415927
+        },
+        {
+          "face_index_zero_based": 159,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Torus",
+          "bbox_mm": {
+            "x": [
+              -35.0,
+              -32.955
+            ],
+            "y": [
+              -18.145001,
+              -14.055001
+            ],
+            "z": [
+              -0.0,
+              0.72
+            ]
+          },
+          "area_mm2": 5.6374011
+        }
+      ],
+      "other_component_axial_material_by_probe_radius_mm": {
+        "0.01": [
+          {
+            "source_solid_index_zero_based": 10,
+            "material_z_intervals_mm": [
+              [
+                4.4999998,
+                6.0999998
+              ]
+            ]
+          },
+          {
+            "source_solid_index_zero_based": 16,
+            "material_z_intervals_mm": [
+              [
+                40.4,
+                41.0
+              ]
+            ]
+          }
+        ],
+        "1.5": [
+          {
+            "source_solid_index_zero_based": 10,
+            "material_z_intervals_mm": [
+              [
+                4.4999998,
+                6.0999998
+              ]
+            ]
+          },
+          {
+            "source_solid_index_zero_based": 16,
+            "material_z_intervals_mm": [
+              [
+                40.4,
+                41.0
+              ]
+            ]
+          }
+        ]
+      },
+      "manufacturer_limit_separate_from_geometry": {
+        "recommended_thread": "M3",
+        "maximum_penetration_mm": 4,
+        "mounting_torque_kgf_cm": [
+          6,
+          8
+        ],
+        "source": "User supplied NSP-1600-spec.pdf page6, Case296A mounting instruction;2025-08-19"
+      },
+      "geometry_does_not_establish": "thread class, effective engagement, sheet strength, permitted substitute torque, electrical clearances or physical installation condition"
+    },
+    {
+      "hole_id": "H2",
+      "owning_source_solid_index_zero_based": 17,
+      "axis_mm": [
+        35.0,
+        -16.100001
+      ],
+      "local_source_faces": [
+        {
+          "face_index_zero_based": 142,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Torus",
+          "bbox_mm": {
+            "x": [
+              32.955,
+              35.0
+            ],
+            "y": [
+              -18.145001,
+              -14.055001
+            ],
+            "z": [
+              -0.0,
+              0.72
+            ]
+          },
+          "area_mm2": 5.6374011
+        },
+        {
+          "face_index_zero_based": 143,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Cylinder",
+          "bbox_mm": {
+            "x": [
+              33.675,
+              35.0
+            ],
+            "y": [
+              -17.425001,
+              -14.775001
+            ],
+            "z": [
+              0.72,
+              2.1
+            ]
+          },
+          "area_mm2": 5.7444022,
+          "diameter_mm": 2.65,
+          "axis_location_mm": [
+            35.0,
+            -16.100001,
+            1.41
+          ],
+          "axis_direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "u_span_radians": 3.1415927
+        },
+        {
+          "face_index_zero_based": 144,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Plane",
+          "bbox_mm": {
+            "x": [
+              32.955,
+              37.045
+            ],
+            "y": [
+              -18.145001,
+              -14.055001
+            ],
+            "z": [
+              2.1,
+              2.1
+            ]
+          },
+          "area_mm2": 7.6227604,
+          "normal": [
+            -0.0,
+            0.0,
+            1.0
+          ],
+          "wire_bboxes_mm": [
+            {
+              "x": [
+                32.955,
+                37.045
+              ],
+              "y": [
+                -18.145001,
+                -14.055001
+              ],
+              "z": [
+                2.1,
+                2.1
+              ]
+            },
+            {
+              "x": [
+                33.675,
+                36.325
+              ],
+              "y": [
+                -17.425001,
+                -14.775001
+              ],
+              "z": [
+                2.1,
+                2.1
+              ]
+            }
+          ]
+        },
+        {
+          "face_index_zero_based": 145,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Cylinder",
+          "bbox_mm": {
+            "x": [
+              32.955,
+              35.0
+            ],
+            "y": [
+              -18.145001,
+              -14.055001
+            ],
+            "z": [
+              1.92,
+              2.1
+            ]
+          },
+          "area_mm2": 1.1564203,
+          "diameter_mm": 4.09,
+          "axis_location_mm": [
+            35.0,
+            -16.100001,
+            2.01
+          ],
+          "axis_direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "u_span_radians": 3.1415927
+        },
+        {
+          "face_index_zero_based": 146,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Torus",
+          "bbox_mm": {
+            "x": [
+              32.235,
+              35.0
+            ],
+            "y": [
+              -18.865001,
+              -13.335001
+            ],
+            "z": [
+              1.2,
+              1.92
+            ]
+          },
+          "area_mm2": 8.1956026
+        },
+        {
+          "face_index_zero_based": 147,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Torus",
+          "bbox_mm": {
+            "x": [
+              35.0,
+              37.765
+            ],
+            "y": [
+              -18.865001,
+              -13.335001
+            ],
+            "z": [
+              1.2,
+              1.92
+            ]
+          },
+          "area_mm2": 8.1956026
+        },
+        {
+          "face_index_zero_based": 148,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Cylinder",
+          "bbox_mm": {
+            "x": [
+              35.0,
+              37.045
+            ],
+            "y": [
+              -18.145001,
+              -14.055001
+            ],
+            "z": [
+              1.92,
+              2.1
+            ]
+          },
+          "area_mm2": 1.1564203,
+          "diameter_mm": 4.09,
+          "axis_location_mm": [
+            35.0,
+            -16.100001,
+            2.01
+          ],
+          "axis_direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "u_span_radians": 3.1415927
+        },
+        {
+          "face_index_zero_based": 149,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Cylinder",
+          "bbox_mm": {
+            "x": [
+              35.0,
+              36.325
+            ],
+            "y": [
+              -17.425001,
+              -14.775001
+            ],
+            "z": [
+              0.72,
+              2.1
+            ]
+          },
+          "area_mm2": 5.7444022,
+          "diameter_mm": 2.65,
+          "axis_location_mm": [
+            35.0,
+            -16.100001,
+            1.41
+          ],
+          "axis_direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "u_span_radians": 3.1415927
+        },
+        {
+          "face_index_zero_based": 150,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Torus",
+          "bbox_mm": {
+            "x": [
+              35.0,
+              37.045
+            ],
+            "y": [
+              -18.145001,
+              -14.055001
+            ],
+            "z": [
+              -0.0,
+              0.72
+            ]
+          },
+          "area_mm2": 5.6374011
+        }
+      ],
+      "other_component_axial_material_by_probe_radius_mm": {
+        "0.01": [
+          {
+            "source_solid_index_zero_based": 10,
+            "material_z_intervals_mm": [
+              [
+                4.4999998,
+                6.0999998
+              ]
+            ]
+          },
+          {
+            "source_solid_index_zero_based": 13,
+            "material_z_intervals_mm": [
+              [
+                7.9953327,
+                37.3609943
+              ]
+            ]
+          },
+          {
+            "source_solid_index_zero_based": 16,
+            "material_z_intervals_mm": [
+              [
+                40.4,
+                41.0
+              ]
+            ]
+          }
+        ],
+        "1.5": [
+          {
+            "source_solid_index_zero_based": 10,
+            "material_z_intervals_mm": [
+              [
+                4.4999998,
+                6.0999998
+              ]
+            ]
+          },
+          {
+            "source_solid_index_zero_based": 13,
+            "material_z_intervals_mm": [
+              [
+                6.1875393,
+                37.4499999
+              ]
+            ]
+          },
+          {
+            "source_solid_index_zero_based": 16,
+            "material_z_intervals_mm": [
+              [
+                40.4,
+                41.0
+              ]
+            ]
+          }
+        ]
+      },
+      "manufacturer_limit_separate_from_geometry": {
+        "recommended_thread": "M3",
+        "maximum_penetration_mm": 4,
+        "mounting_torque_kgf_cm": [
+          6,
+          8
+        ],
+        "source": "User supplied NSP-1600-spec.pdf page6, Case296A mounting instruction;2025-08-19"
+      },
+      "geometry_does_not_establish": "thread class, effective engagement, sheet strength, permitted substitute torque, electrical clearances or physical installation condition"
+    },
+    {
+      "hole_id": "H3",
+      "owning_source_solid_index_zero_based": 0,
+      "axis_mm": [
+        -4.28e-05,
+        -280.800001
+      ],
+      "local_source_faces": [
+        {
+          "face_index_zero_based": 113,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Torus",
+          "bbox_mm": {
+            "x": [
+              -2.2850428,
+              2.2849572
+            ],
+            "y": [
+              -280.800001,
+              -278.515001
+            ],
+            "z": [
+              0.8,
+              1.28
+            ]
+          },
+          "area_mm2": 4.6886681
+        },
+        {
+          "face_index_zero_based": 114,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Torus",
+          "bbox_mm": {
+            "x": [
+              -2.2850428,
+              2.2849572
+            ],
+            "y": [
+              -283.085001,
+              -280.800001
+            ],
+            "z": [
+              0.8,
+              1.28
+            ]
+          },
+          "area_mm2": 4.6886681
+        },
+        {
+          "face_index_zero_based": 115,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Cylinder",
+          "bbox_mm": {
+            "x": [
+              -1.8050428,
+              1.8049572
+            ],
+            "y": [
+              -282.605001,
+              -280.800001
+            ],
+            "z": [
+              1.28,
+              1.7
+            ]
+          },
+          "area_mm2": 2.3816414,
+          "diameter_mm": 3.61,
+          "axis_location_mm": [
+            -4.28e-05,
+            -280.800001,
+            1.49
+          ],
+          "axis_direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "u_span_radians": 3.1415927
+        },
+        {
+          "face_index_zero_based": 116,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Cylinder",
+          "bbox_mm": {
+            "x": [
+              -1.8050428,
+              1.8049572
+            ],
+            "y": [
+              -280.800001,
+              -278.995001
+            ],
+            "z": [
+              1.28,
+              1.7
+            ]
+          },
+          "area_mm2": 2.3816414,
+          "diameter_mm": 3.61,
+          "axis_location_mm": [
+            -4.28e-05,
+            -280.800001,
+            1.49
+          ],
+          "axis_direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "u_span_radians": 3.1415927
+        },
+        {
+          "face_index_zero_based": 117,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Plane",
+          "bbox_mm": {
+            "x": [
+              -1.8050428,
+              1.8049572
+            ],
+            "y": [
+              -282.605001,
+              -278.995001
+            ],
+            "z": [
+              1.7,
+              1.7
+            ]
+          },
+          "area_mm2": 4.7199288,
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "wire_bboxes_mm": [
+            {
+              "x": [
+                -1.8050428,
+                1.8049572
+              ],
+              "y": [
+                -282.605001,
+                -278.995001
+              ],
+              "z": [
+                1.7,
+                1.7
+              ]
+            },
+            {
+              "x": [
+                -1.3250428,
+                1.3249572
+              ],
+              "y": [
+                -282.125001,
+                -279.475001
+              ],
+              "z": [
+                1.7,
+                1.7
+              ]
+            }
+          ]
+        },
+        {
+          "face_index_zero_based": 118,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Cylinder",
+          "bbox_mm": {
+            "x": [
+              -1.3250428,
+              1.3249572
+            ],
+            "y": [
+              -280.800001,
+              -279.475001
+            ],
+            "z": [
+              0.48,
+              1.7
+            ]
+          },
+          "area_mm2": 5.0783845,
+          "diameter_mm": 2.65,
+          "axis_location_mm": [
+            -4.28e-05,
+            -280.800001,
+            1.09
+          ],
+          "axis_direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "u_span_radians": 3.1415927
+        },
+        {
+          "face_index_zero_based": 119,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Cylinder",
+          "bbox_mm": {
+            "x": [
+              -1.3250428,
+              1.3249572
+            ],
+            "y": [
+              -282.125001,
+              -280.800001
+            ],
+            "z": [
+              0.48,
+              1.7
+            ]
+          },
+          "area_mm2": 5.0783845,
+          "diameter_mm": 2.65,
+          "axis_location_mm": [
+            -4.28e-05,
+            -280.800001,
+            1.09
+          ],
+          "axis_direction": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "u_span_radians": 3.1415927
+        },
+        {
+          "face_index_zero_based": 120,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Torus",
+          "bbox_mm": {
+            "x": [
+              -1.8050428,
+              1.8049572
+            ],
+            "y": [
+              -282.605001,
+              -280.800001
+            ],
+            "z": [
+              -0.0,
+              0.48
+            ]
+          },
+          "area_mm2": 3.5516897
+        },
+        {
+          "face_index_zero_based": 121,
+          "type": "GeomAbs_SurfaceType.GeomAbs_Torus",
+          "bbox_mm": {
+            "x": [
+              -1.8050428,
+              1.8049572
+            ],
+            "y": [
+              -280.800001,
+              -278.995001
+            ],
+            "z": [
+              -0.0,
+              0.48
+            ]
+          },
+          "area_mm2": 3.5516897
+        }
+      ],
+      "other_component_axial_material_by_probe_radius_mm": {
+        "0.01": [
+          {
+            "source_solid_index_zero_based": 16,
+            "material_z_intervals_mm": [
+              [
+                40.4,
+                41.0
+              ]
+            ]
+          }
+        ],
+        "1.5": [
+          {
+            "source_solid_index_zero_based": 16,
+            "material_z_intervals_mm": [
+              [
+                40.4,
+                41.0
+              ]
+            ]
+          }
+        ]
+      },
+      "manufacturer_limit_separate_from_geometry": {
+        "recommended_thread": "M3",
+        "maximum_penetration_mm": 4,
+        "mounting_torque_kgf_cm": [
+          6,
+          8
+        ],
+        "source": "User supplied NSP-1600-spec.pdf page6, Case296A mounting instruction;2025-08-19"
+      },
+      "geometry_does_not_establish": "thread class, effective engagement, sheet strength, permitted substitute torque, electrical clearances or physical installation condition"
+    }
+  ],
+  "source_faces_at_normalized_z0": [
+    {
+      "source_solid_index_zero_based": 0,
+      "face_index_zero_based": 56,
+      "type": "GeomAbs_SurfaceType.GeomAbs_Plane",
+      "bbox_mm": {
+        "x": [
+          -42.5,
+          -41.7
+        ],
+        "y": [
+          -298.200001,
+          -265.600001
+        ],
+        "z": [
+          -0.0,
+          -0.0
+        ]
+      },
+      "area_mm2": 26.08,
+      "normal": [
+        0.0,
+        -0.0,
+        -1.0
+      ],
+      "wire_bboxes_mm": [
+        {
+          "x": [
+            -42.5,
+            -41.7
+          ],
+          "y": [
+            -298.200001,
+            -265.600001
+          ],
+          "z": [
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "source_solid_index_zero_based": 0,
+      "face_index_zero_based": 60,
+      "type": "GeomAbs_SurfaceType.GeomAbs_Plane",
+      "bbox_mm": {
+        "x": [
+          -41.6,
+          41.6
+        ],
+        "y": [
+          -298.200001,
+          -265.900001
+        ],
+        "z": [
+          -0.0,
+          -0.0
+        ]
+      },
+      "area_mm2": 523.6045655,
+      "normal": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "wire_bboxes_mm": [
+        {
+          "x": [
+            -41.6,
+            41.6
+          ],
+          "y": [
+            -298.200001,
+            -265.900001
+          ],
+          "z": [
+            -0.0,
+            -0.0
+          ]
+        },
+        {
+          "x": [
+            -1.8050428,
+            1.8049572
+          ],
+          "y": [
+            -282.605001,
+            -278.995001
+          ],
+          "z": [
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "source_solid_index_zero_based": 0,
+      "face_index_zero_based": 82,
+      "type": "GeomAbs_SurfaceType.GeomAbs_Plane",
+      "bbox_mm": {
+        "x": [
+          4.2499997,
+          38.4
+        ],
+        "y": [
+          -299.100001,
+          -298.300001
+        ],
+        "z": [
+          -0.0,
+          -0.0
+        ]
+      },
+      "area_mm2": 27.3200003,
+      "normal": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "wire_bboxes_mm": [
+        {
+          "x": [
+            4.2499997,
+            38.4
+          ],
+          "y": [
+            -299.100001,
+            -298.300001
+          ],
+          "z": [
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "source_solid_index_zero_based": 0,
+      "face_index_zero_based": 92,
+      "type": "GeomAbs_SurfaceType.GeomAbs_Plane",
+      "bbox_mm": {
+        "x": [
+          -38.4,
+          -4.2500003
+        ],
+        "y": [
+          -299.100001,
+          -298.300001
+        ],
+        "z": [
+          -0.0,
+          -0.0
+        ]
+      },
+      "area_mm2": 27.3199997,
+      "normal": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "wire_bboxes_mm": [
+        {
+          "x": [
+            -38.4,
+            -4.2500003
+          ],
+          "y": [
+            -299.100001,
+            -298.300001
+          ],
+          "z": [
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "source_solid_index_zero_based": 0,
+      "face_index_zero_based": 281,
+      "type": "GeomAbs_SurfaceType.GeomAbs_Plane",
+      "bbox_mm": {
+        "x": [
+          41.7,
+          42.5
+        ],
+        "y": [
+          -298.200001,
+          -265.600001
+        ],
+        "z": [
+          -0.0,
+          -0.0
+        ]
+      },
+      "area_mm2": 26.08,
+      "normal": [
+        0.0,
+        -0.0,
+        -1.0
+      ],
+      "wire_bboxes_mm": [
+        {
+          "x": [
+            41.7,
+            42.5
+          ],
+          "y": [
+            -298.200001,
+            -265.600001
+          ],
+          "z": [
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    },
+    {
+      "source_solid_index_zero_based": 14,
+      "face_index_zero_based": 25,
+      "type": "GeomAbs_SurfaceType.GeomAbs_Plane",
+      "bbox_mm": {
+        "x": [
+          -37.7000003,
+          -5.7000003
+        ],
+        "y": [
+          -274.3000007,
+          -270.3000003
+        ],
+        "z": [
+          3e-07,
+          3e-07
+        ]
+      },
+      "area_mm2": 128.0000112,
+      "normal": [
+        0.0,
+        -0.0,
+        -1.0
+      ],
+      "wire_bboxes_mm": [
+        {
+          "x": [
+            -37.7000003,
+            -5.7000003
+          ],
+          "y": [
+            -274.3000007,
+            -270.3000003
+          ],
+          "z": [
+            3e-07,
+            3e-07
+          ]
+        }
+      ]
+    },
+    {
+      "source_solid_index_zero_based": 14,
+      "face_index_zero_based": 31,
+      "type": "GeomAbs_SurfaceType.GeomAbs_Plane",
+      "bbox_mm": {
+        "x": [
+          -37.7000003,
+          -5.7000003
+        ],
+        "y": [
+          -298.3000007,
+          -294.3000007
+        ],
+        "z": [
+          3e-07,
+          3e-07
+        ]
+      },
+      "area_mm2": 128.0,
+      "normal": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "wire_bboxes_mm": [
+        {
+          "x": [
+            -37.7000003,
+            -5.7000003
+          ],
+          "y": [
+            -298.3000007,
+            -294.3000007
+          ],
+          "z": [
+            3e-07,
+            3e-07
+          ]
+        }
+      ]
+    },
+    {
+      "source_solid_index_zero_based": 15,
+      "face_index_zero_based": 25,
+      "type": "GeomAbs_SurfaceType.GeomAbs_Plane",
+      "bbox_mm": {
+        "x": [
+          5.6999997,
+          37.6999997
+        ],
+        "y": [
+          -274.3000007,
+          -270.3000003
+        ],
+        "z": [
+          3e-07,
+          3e-07
+        ]
+      },
+      "area_mm2": 128.0000112,
+      "normal": [
+        0.0,
+        -0.0,
+        -1.0
+      ],
+      "wire_bboxes_mm": [
+        {
+          "x": [
+            5.6999997,
+            37.6999997
+          ],
+          "y": [
+            -274.3000007,
+            -270.3000003
+          ],
+          "z": [
+            3e-07,
+            3e-07
+          ]
+        }
+      ]
+    },
+    {
+      "source_solid_index_zero_based": 15,
+      "face_index_zero_based": 31,
+      "type": "GeomAbs_SurfaceType.GeomAbs_Plane",
+      "bbox_mm": {
+        "x": [
+          5.6999997,
+          37.6999997
+        ],
+        "y": [
+          -298.3000007,
+          -294.3000007
+        ],
+        "z": [
+          3e-07,
+          3e-07
+        ]
+      },
+      "area_mm2": 128.0,
+      "normal": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "wire_bboxes_mm": [
+        {
+          "x": [
+            5.6999997,
+            37.6999997
+          ],
+          "y": [
+            -298.3000007,
+            -294.3000007
+          ],
+          "z": [
+            3e-07,
+            3e-07
+          ]
+        }
+      ]
+    },
+    {
+      "source_solid_index_zero_based": 17,
+      "face_index_zero_based": 11,
+      "type": "GeomAbs_SurfaceType.GeomAbs_Plane",
+      "bbox_mm": {
+        "x": [
+          -41.2,
+          41.2
+        ],
+        "y": [
+          -265.8000003,
+          0.0
+        ],
+        "z": [
+          -0.0,
+          -0.0
+        ]
+      },
+      "area_mm2": 21819.0949246,
+      "normal": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "wire_bboxes_mm": [
+        {
+          "x": [
+            -41.2,
+            41.2
+          ],
+          "y": [
+            -265.8000003,
+            0.0
+          ],
+          "z": [
+            -0.0,
+            -0.0
+          ]
+        },
+        {
+          "x": [
+            4.8249994,
+            10.8249994
+          ],
+          "y": [
+            -265.7250003,
+            -259.7250003
+          ],
+          "z": [
+            -0.0,
+            -0.0
+          ]
+        },
+        {
+          "x": [
+            32.955,
+            37.045
+          ],
+          "y": [
+            -18.145001,
+            -14.055001
+          ],
+          "z": [
+            -0.0,
+            -0.0
+          ]
+        },
+        {
+          "x": [
+            -37.045,
+            -32.955
+          ],
+          "y": [
+            -18.145001,
+            -14.055001
+          ],
+          "z": [
+            -0.0,
+            -0.0
+          ]
+        },
+        {
+          "x": [
+            -11.4467953,
+            -5.4467953
+          ],
+          "y": [
+            -265.7250003,
+            -259.7250003
+          ],
+          "z": [
+            -0.0,
+            -0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "normalized_step_roundtrip": {
+    "valid": true,
+    "solids": 19,
+    "bbox_mm": {
+      "x": [
+        -42.5000001,
+        42.5000001
+      ],
+      "y": [
+        -300.6000008,
+        37.9999995
+      ],
+      "z": [
+        -0.0,
+        41.0
+      ]
+    },
+    "relative_volume_difference": 1.812126823202978e-05
+  },
+  "source_hash_after_export": "d421a1e7fb7a3b5fd2e12588484a2e970456301955c0a17f55be6d56324dd8a0"
+}

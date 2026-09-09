@@ -1,0 +1,7 @@
+{
+  "meanwell": {"translation": [378, 65.6, 0], "rotation": 180},
+  "bedrock": {"translation": [90, 300, 0], "rotation": 0},
+  "b210": {"translation": [259, 285, 0], "rotation": 180},
+  "peplink": {"translation": [123, 90, 6], "rotation": 0},
+  "oz": {"translation": [281, 74, 0], "rotation": 0}
+}

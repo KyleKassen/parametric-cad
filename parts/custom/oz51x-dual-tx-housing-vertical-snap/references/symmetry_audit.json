@@ -1,0 +1,120 @@
+{
+  "assembly": {
+    "world_frame_symmetry": {
+      "id": "symmetry",
+      "status": "scored",
+      "score": 84.00854483976049,
+      "message": "best mirror plane is normal-Z: 2.8% asymmetric volume, with slender difference spread over 18% of the bbox diagonal; normal-Y is the part's least symmetric plane at 20.0% asymmetric volume over 67% of the diagonal, scoring 0 - disclosed, not charged, because one mirror plane is all this metric asks a part for",
+      "value": 0.0276,
+      "best_axis": "Z",
+      "worst_axis": "Y",
+      "worst_axis_score": 0.0,
+      "extent": 0.1758,
+      "raw_extent": 0.1758,
+      "per_axis": {
+        "Y": [
+          0.2,
+          0.6657
+        ],
+        "Z": [
+          0.0276,
+          0.1758
+        ],
+        "X": [
+          0.0776,
+          0.7425
+        ]
+      },
+      "per_axis_raw_extent": {
+        "Y": 0.6657,
+        "Z": 0.1758,
+        "X": 0.7425
+      },
+      "errors": null,
+      "population": 3.0,
+      "unmeasured": 0.0,
+      "unmeasured_fraction": 0.0
+    },
+    "cut_z_volume": 3697.3575684737384,
+    "total_volume": 134007.86781908022,
+    "solidwise_minus_all_mirror_z_volume": 8050.221121117421
+  },
+  "base": {
+    "world_frame_symmetry": {
+      "id": "symmetry",
+      "status": "scored",
+      "score": 85.94659802746692,
+      "message": "best mirror plane is normal-Z: 2.5% asymmetric volume, with slender difference spread over 15% of the bbox diagonal (the largest difference of any shape spans 16%, but it is a compact lump - a functional interface, priced by volume rather than by extent); normal-Y is the part's least symmetric plane at 24.5% asymmetric volume over 67% of the diagonal, scoring 0 - disclosed, not charged, because one mirror plane is all this metric asks a part for",
+      "value": 0.0255,
+      "best_axis": "Z",
+      "worst_axis": "Y",
+      "worst_axis_score": 0.0,
+      "extent": 0.1532,
+      "raw_extent": 0.1561,
+      "per_axis": {
+        "Y": [
+          0.2452,
+          0.6677
+        ],
+        "Z": [
+          0.0255,
+          0.1532
+        ],
+        "X": [
+          0.3932,
+          0.986
+        ]
+      },
+      "per_axis_raw_extent": {
+        "Y": 0.6677,
+        "Z": 0.1561,
+        "X": 0.986
+      },
+      "errors": null,
+      "population": 3.0,
+      "unmeasured": 0.0,
+      "unmeasured_fraction": 0.0
+    },
+    "cut_z_volume": 2697.318922247043,
+    "total_volume": 105948.63266450514
+  },
+  "cover": {
+    "world_frame_symmetry": {
+      "id": "symmetry",
+      "status": "scored",
+      "score": 76.69066598931835,
+      "message": "best mirror plane is normal-Z: 3.6% asymmetric volume, with slender difference spread over 20% of the bbox diagonal; normal-X is the part's least symmetric plane at 98.2% asymmetric volume over 100% of the diagonal, scoring 0 - disclosed, not charged, because one mirror plane is all this metric asks a part for",
+      "value": 0.0356,
+      "best_axis": "Z",
+      "worst_axis": "X",
+      "worst_axis_score": 0.0,
+      "extent": 0.1953,
+      "raw_extent": 0.1953,
+      "per_axis": {
+        "Y": [
+          0.0372,
+          0.0971
+        ],
+        "Z": [
+          0.0356,
+          0.1953
+        ],
+        "X": [
+          0.9824,
+          0.9991
+        ]
+      },
+      "per_axis_raw_extent": {
+        "Y": 0.1007,
+        "Z": 0.1953,
+        "X": 0.9991
+      },
+      "errors": null,
+      "population": 3.0,
+      "unmeasured": 0.0,
+      "unmeasured_fraction": 0.0
+    },
+    "cut_z_volume": 1000.0386462266964,
+    "total_volume": 28059.235209245537
+  }
+}

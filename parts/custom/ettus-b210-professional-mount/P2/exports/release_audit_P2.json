@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "revision": "P2",
+  "P1_manifest_files_unchanged": 89,
+  "executed_check_counts": {
+    "verification_report.json": 34,
+    "hardware_verification.json": 18,
+    "additional_verification.json": 3
+  },
+  "pdf_pages": 6,
+  "exact_product_links": 12,
+  "min_frame_yield_SF": 3.021670542144869,
+  "end_capture_analytical_reserve_mm": 0.15075937889679975,
+  "parameter_source_sha256": {
+    "model.py": "0c61e5849386717e27a3a488e66d08adbd2f16dba31428b4bea7f454104e121f",
+    "params.json": "042f9280e43697e4569fb85e35ab94b981669909d2da814db4a4cb577e0d1a64",
+    "vertical_adapter.py": "c2e14fc9a35dc4b7c95ecc4c4df88c576ec99af2263ec92b0c9966ea9b7ac3a8",
+    "adapter_params.json": "b34fa4e218515841f1e5e29cd291c7c1b7e89e8d464d31de1cf74ddc334324ac"
+  },
+  "limitations": "Preliminary CAD and analytical/manufacturing checks only. No procurement, manufacture, physical fit, preload, case contact, thermal or vibration validation."
+}

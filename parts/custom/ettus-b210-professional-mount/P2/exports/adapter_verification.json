@@ -1,0 +1,113 @@
+{
+  "machined_valid": true,
+  "machined_solids": 1,
+  "volume_mm3": 67973.433459708,
+  "pair_intersection_volume_mm3": 0.0,
+  "profile_dxf_units": "millimeters",
+  "profile_note": "Actual center section; not rib envelope or sheetmetal flat",
+  "metrics": {
+    "units": "mm",
+    "material": "6061-T6 aluminum plate, certified stock",
+    "web_t": 6.0,
+    "foot_t": 6.0,
+    "inside_radius": 6.0,
+    "web_and_foot_thickness_tolerance": 0.1,
+    "minimum_web_and_foot_t_after_finish": 5.9,
+    "finish": "Deburr and break accessible edges 0.2-0.5mm. Black sulfuric anodize10-15um per shop specification. Dimensions after finish. Web and foot6.00 +/-0.10, ribs3.00 +/-0.10, rear return depth and foot rib height8.00 +/-0.10. Minimum walls5.90, ribs2.90. No welds.",
+    "root_center_xz": [
+      6.0,
+      12.0
+    ],
+    "root_tangent_z": 12.0,
+    "root_tangent_x": 6.0,
+    "web_lower_hole_edge_to_root_tangent": 11.25,
+    "web_upper_hole_edge_to_end": 7.25,
+    "foot_first_hole_edge_to_root_tangent": 11.25,
+    "foot_last_hole_edge_to_end": 7.25,
+    "hole_edge_to_strip_side": 15.25,
+    "cradle_lower_edge_z": 16.0,
+    "cradle_lower_edge_to_root": 4.0,
+    "overall_bbox_one": {
+      "x": [
+        -14.0,
+        65.0
+      ],
+      "y": [
+        -18.0,
+        18.0
+      ],
+      "z": [
+        0,
+        176.0
+      ]
+    },
+    "rib_width": 3.0,
+    "rear_return_depth": 8.0,
+    "foot_rib_height": 8.0,
+    "foot_bolt_boss_od": 20.0,
+    "foot_bolt_boss_top": 10.0,
+    "finished_web_hole_centers": [
+      [
+        0,
+        -66.947,
+        26.0
+      ],
+      [
+        0,
+        -66.947,
+        166.0
+      ],
+      [
+        0,
+        73.053,
+        26.0
+      ],
+      [
+        0,
+        73.053,
+        166.0
+      ]
+    ],
+    "finished_foot_hole_centers": [
+      [
+        20.0,
+        -66.947,
+        0
+      ],
+      [
+        55.0,
+        -66.947,
+        0
+      ],
+      [
+        20.0,
+        73.053,
+        0
+      ],
+      [
+        55.0,
+        73.053,
+        0
+      ]
+    ],
+    "manufacturing_route": "Integral ribbed bracket from certified6061-T6/T651 plate; sawn blank82x180x38.1mm. Finish width36 and outer profile79x176, R6 front root. Mill rear pocket30wide mouth (24flat between R3 fillets) x8deep leaving6web and two3wide returns; mill foot pocket30wide mouth (24flat between R3 fillets) leaving6floor and two3wide x8high edge ribs, continuous through heel/root toX65. R3 internal pocket corners and R6 front root. Orthogonal setups for web and foot holes. Finish critical datums in supported fixtures; no sheet metal forming or flat pattern."
+  },
+  "machined_reopen": {
+    "valid": true,
+    "solids": 1,
+    "size_mm": [
+      79.0,
+      36.0,
+      176.0
+    ]
+  },
+  "pair_reopen": {
+    "valid": true,
+    "solids": 2,
+    "size_mm": [
+      79.0,
+      176.0,
+      176.0
+    ]
+  }
+}

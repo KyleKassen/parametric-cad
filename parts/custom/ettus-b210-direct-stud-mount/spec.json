@@ -1,0 +1,16 @@
+{
+  "schema": "part-spec/1",
+  "part_name": "B210 direct stud adapter D1",
+  "units": "mm",
+  "solid_count": 1,
+  "dimensions": [
+    {"id":"width", "kind":"bbox", "axis":"x", "expected":150.0, "tol":0.01},
+    {"id":"length", "kind":"bbox", "axis":"y", "expected":148.0, "tol":0.01},
+    {"id":"thickness", "kind":"bbox", "axis":"z", "expected":3.5, "tol":0.005},
+    {"id":"housing_bores", "kind":"cylinder", "diameter":3.4, "tol":0.001, "axis":"Z", "type":"hole", "count_min":4},
+    {"id":"stud_bores", "kind":"cylinder", "diameter":3.8, "tol":0.001, "axis":"Z", "type":"hole", "count_min":4}
+  ],
+  "design": {"role":"plate", "min_score":70, "severity":"hard", "metrics":{"edge_break_coverage":{"min_score":60}}},
+  "assumptions": ["CAD gate verifies nominal prototype geometry only; all production-release items are listed in DESIGN.md and ENGINEERING_NOTE.md.", "Plate role selected before modeling because the eight-hole interface and two flat seating faces define function."],
+  "unresolved": []
+}

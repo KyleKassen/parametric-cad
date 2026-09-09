@@ -1,0 +1,53 @@
+{
+  "revision": "T1",
+  "pages": 6,
+  "status": "ROOT REVIEW APPROVED FOR PRELIMINARY FIT AND THERMAL PROTOTYPE; NOT A PRODUCTION RELEASE",
+  "pdf": "SolidRun_T1_drawing_package.pdf",
+  "pdf_sha256": "ddabbc647f973ae7feb75985c1181699da27381e232bf8e3cab1b2e84ce4f1c1",
+  "sources": [
+    {
+      "path": "make_documents.py",
+      "sha256": "cdb03b71f6516bbeea62c1062095cb7da00f0b5a0baa6095019d8175f0ca2b5f"
+    },
+    {
+      "path": "params.json",
+      "sha256": "a46019a96b438b19c79a8865ffe0f5e7e8a3ee22b2cb5215bc2c7a90d410e8f5"
+    },
+    {
+      "path": "references\\research\\catalog_bom.json",
+      "sha256": "f18dda54f879805e9f29b1f1121ef990bf6012b4c4458c47e9e7105519c0287a"
+    },
+    {
+      "path": "exports\\cad_verification.json",
+      "sha256": "632bf35bac5a17b30b7589eb7a90aaca27e52e859c569746347756fc7a37e7c0"
+    },
+    {
+      "path": "exports\\manufacturing_verification.json",
+      "sha256": "6c57c006263b5b74a6ac98aafe05897da3c59a33491bd95b6e4a8ae3b54ebe36"
+    },
+    {
+      "path": "references\\product\\assembled_hero.png",
+      "sha256": "fa2f8a6c8c4bb15f1b97222960ecf79fdfc0db88b4b18e6c176ce43731e53450"
+    },
+    {
+      "path": "references\\product\\exploded_iso.png",
+      "sha256": "309bb7a1a6a497c29fa4cf38e20ed84d8f4c546bc12ee84b63e505bfdde63e48"
+    },
+    {
+      "path": "references\\product\\plate_bottom_hero.png",
+      "sha256": "2ed2be22356b247c4f20e8d73547f3850940253db244bbf88c476c70f4847349"
+    },
+    {
+      "path": "references\\product\\thermal_bottom_hero.png",
+      "sha256": "ccc829d837fbadcc1cc73540c3d4064509ae0847ab12393b84cfde06119c98a8"
+    },
+    {
+      "path": "references\\product\\thermal_top_hero.png",
+      "sha256": "8d7a5fd171f778dda410ebc560c83296ce6644df483b000701888b349b9e9377"
+    },
+    {
+      "path": "references\\views\\section_fastener.png",
+      "sha256": "a554d17c544db3b91fe90badb93f2cc48ea6decbfcbf15a14d3f5df6fef577e8"
+    }
+  ]
+}

@@ -1,0 +1,526 @@
+{
+  "units": "mm",
+  "scope": "Exact nominal feature specification; native FPD save/reload and supplier special-process acceptance remain required",
+  "panels": {
+    "B210_FPE_R1": {
+      "component": "b210",
+      "params_file": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\adapters\\B210_FPE_R1_params.json",
+      "adapter": {
+        "width_mm": 150.0,
+        "height_mm": 148.0,
+        "thickness_mm": 4.0,
+        "thickness_tolerance_mm": 0.05,
+        "outline": {
+          "type": "centered_rounded_rectangle",
+          "corner_radius_mm": 8.0
+        },
+        "local_to_adapter_fpd_translation_mm": [
+          75.0,
+          74.0
+        ],
+        "edge_bevel_both_faces_mm": 0.4,
+        "stud_clearance_holes": {
+          "diameter_mm": 3.8,
+          "local_xy_mm": [
+            [
+              -68.0,
+              -60.0075
+            ],
+            [
+              -68.0,
+              60.0075
+            ],
+            [
+              68.0,
+              -60.0075
+            ],
+            [
+              68.0,
+              60.0075
+            ]
+          ]
+        },
+        "housing_holes": {
+          "diameter_mm": 3.4,
+          "local_xy_mm": [
+            [
+              -46.7995,
+              -60.0075
+            ],
+            [
+              -46.7995,
+              60.0075
+            ],
+            [
+              46.7995,
+              -60.0075
+            ],
+            [
+              46.7995,
+              60.0075
+            ]
+          ],
+          "countersink": {
+            "face": "underside contacting backpanel",
+            "included_angle_deg": 90,
+            "mouth_diameter_mm": 7.1,
+            "depth_mm": 1.8499999999999999,
+            "depth_mm_definition": "Geometric cone height, NOT FPD SinkDepth/additional axial recess",
+            "fpd_sink_depth_additional_recess_mm": 0
+          },
+          "opposite_bore_deburr_max_mm": 0.1
+        },
+        "source_material_finish": "6061-T6/T651, clear MIL-DTL-5541 Type II Class 3 conversion, dims after finish; supplier material/process capability must be explicitly resolved for FPE",
+        "source_planar_dxf": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\B210_FPE_R1_plate_profile_mm.dxf",
+        "countersunk_screw_head_recess_nominal_mm": 0.55,
+        "screw_projection_nominal_mm": 2.55,
+        "no_panel_studs_on_this_adapter": true,
+        "feature_side_convention": "Designate upper/device side FPD front; underside/backpanel contact side reverse. All coordinates use same XY, no extra mirror."
+      },
+      "native_hardware_count": 0,
+      "countersink_face": "reverse",
+      "catalog_holes": "ordinary through clearance bores; device countersinks reverse only",
+      "manufacturing_remarks": "Preliminary fit prototype. Actual finished stock thickness +/-0.05 and conical seating must meet screw projection acceptance. No physical qualification implied. Aluminum alloy, finish, tolerances and any 0.05mm thermal pockets require supplier capability confirmation."
+    },
+    "MeanWell_N2": {
+      "component": "meanwell",
+      "params_file": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\meanwell-nsp1600-side-tab-mount\\params.json",
+      "adapter": {
+        "width_mm": 72.0,
+        "height_mm": 316.8,
+        "thickness_mm": 6.0,
+        "thickness_tolerance_mm": 0.05,
+        "outline": {
+          "type": "closed_xy_bulge_polyline",
+          "vertices_before_fillet": [
+            [
+              -22.5,
+              -300.6
+            ],
+            [
+              22.5,
+              -300.6
+            ],
+            [
+              22.5,
+              -279.8
+            ],
+            [
+              36.0,
+              -279.8
+            ],
+            [
+              36.0,
+              -235.8
+            ],
+            [
+              22.5,
+              -235.8
+            ],
+            [
+              22.5,
+              -27.8
+            ],
+            [
+              36.0,
+              -27.8
+            ],
+            [
+              36.0,
+              16.2
+            ],
+            [
+              -36.0,
+              16.2
+            ],
+            [
+              -36.0,
+              -27.8
+            ],
+            [
+              -22.5,
+              -27.8
+            ],
+            [
+              -22.5,
+              -235.8
+            ],
+            [
+              -36.0,
+              -235.8
+            ],
+            [
+              -36.0,
+              -279.8
+            ],
+            [
+              -22.5,
+              -279.8
+            ]
+          ],
+          "vertices_xyb": [
+            [
+              -22.5,
+              -296.6,
+              0.41421356237309503
+            ],
+            [
+              -18.5,
+              -300.6,
+              0
+            ],
+            [
+              18.5,
+              -300.6,
+              0.41421356237309503
+            ],
+            [
+              22.5,
+              -296.6,
+              0
+            ],
+            [
+              22.5,
+              -283.8,
+              -0.41421356237309503
+            ],
+            [
+              26.5,
+              -279.8,
+              0
+            ],
+            [
+              32.0,
+              -279.8,
+              0.41421356237309503
+            ],
+            [
+              36.0,
+              -275.8,
+              0
+            ],
+            [
+              36.0,
+              -239.8,
+              0.41421356237309503
+            ],
+            [
+              32.0,
+              -235.8,
+              0
+            ],
+            [
+              26.5,
+              -235.8,
+              -0.41421356237309503
+            ],
+            [
+              22.5,
+              -231.8,
+              0
+            ],
+            [
+              22.5,
+              -31.8,
+              -0.41421356237309503
+            ],
+            [
+              26.5,
+              -27.8,
+              0
+            ],
+            [
+              32.0,
+              -27.8,
+              0.41421356237309503
+            ],
+            [
+              36.0,
+              -23.8,
+              0
+            ],
+            [
+              36.0,
+              12.2,
+              0.41421356237309503
+            ],
+            [
+              32.0,
+              16.2,
+              0
+            ],
+            [
+              -32.0,
+              16.2,
+              0.41421356237309503
+            ],
+            [
+              -36.0,
+              12.2,
+              0
+            ],
+            [
+              -36.0,
+              -23.8,
+              0.41421356237309503
+            ],
+            [
+              -32.0,
+              -27.8,
+              0
+            ],
+            [
+              -26.5,
+              -27.8,
+              -0.41421356237309503
+            ],
+            [
+              -22.5,
+              -31.8,
+              0
+            ],
+            [
+              -22.5,
+              -231.8,
+              -0.41421356237309503
+            ],
+            [
+              -26.5,
+              -235.8,
+              0
+            ],
+            [
+              -32.0,
+              -235.8,
+              0.41421356237309503
+            ],
+            [
+              -36.0,
+              -239.8,
+              0
+            ],
+            [
+              -36.0,
+              -275.8,
+              0.41421356237309503
+            ],
+            [
+              -32.0,
+              -279.8,
+              0
+            ],
+            [
+              -26.5,
+              -279.8,
+              -0.41421356237309503
+            ],
+            [
+              -22.5,
+              -283.8,
+              0
+            ]
+          ],
+          "corner_radius_mm": 4.0
+        },
+        "local_to_adapter_fpd_translation_mm": [
+          36.0,
+          300.6
+        ],
+        "edge_bevel_both_faces_mm": 0.4,
+        "stud_clearance_holes": {
+          "diameter_mm": 3.8,
+          "local_xy_mm": [
+            [
+              -28.5,
+              -257.8
+            ],
+            [
+              -28.5,
+              -5.800000000000011
+            ],
+            [
+              28.5,
+              -257.8
+            ],
+            [
+              28.5,
+              -5.800000000000011
+            ]
+          ]
+        },
+        "housing_holes": {
+          "diameter_mm": 4.5,
+          "local_xy_mm": [
+            [
+              2.3,
+              -5.8
+            ],
+            [
+              2.3,
+              -257.8
+            ]
+          ],
+          "countersink": {
+            "face": "underside contacting backpanel",
+            "included_angle_deg": 90,
+            "mouth_diameter_mm": 8.1,
+            "depth_mm": 1.7999999999999998,
+            "depth_mm_definition": "Geometric cone height, NOT FPD SinkDepth/additional axial recess",
+            "fpd_sink_depth_additional_recess_mm": 0
+          },
+          "opposite_bore_deburr_max_mm": 0.1
+        },
+        "source_material_finish": "6061-T6/T651, clear MIL-DTL-5541 Type II Class 3 conversion, dims after finish; supplier material/process capability must be explicitly resolved for FPE",
+        "source_planar_dxf": "parts/custom/meanwell-nsp1600-side-tab-mount/exports/plate_profile_mm.dxf",
+        "countersunk_screw_head_recess_nominal_mm": 0.05,
+        "screw_projection_nominal_mm": 4.050000000000001,
+        "no_panel_studs_on_this_adapter": true,
+        "feature_side_convention": "Designate upper/device side FPD front; underside/backpanel contact side reverse. All coordinates use same XY, no extra mirror."
+      },
+      "native_hardware_count": 0,
+      "countersink_face": "reverse",
+      "catalog_holes": "ordinary through clearance bores; device countersinks reverse only",
+      "manufacturing_remarks": "Preliminary fit prototype. Actual finished stock thickness +/-0.05 and conical seating must meet screw projection acceptance. No physical qualification implied. Aluminum alloy, finish, tolerances and any 0.05mm thermal pockets require supplier capability confirmation."
+    },
+    "Bedrock_FPE_R1": {
+      "component": "bedrock",
+      "params_file": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\adapters\\Bedrock_FPE_R1_params.json",
+      "adapter": {
+        "width_mm": 166.0,
+        "height_mm": 184.0,
+        "thickness_mm": 6.0,
+        "thickness_tolerance_mm": 0.05,
+        "outline": {
+          "type": "centered_rounded_rectangle",
+          "corner_radius_mm": 8.0
+        },
+        "local_to_adapter_fpd_translation_mm": [
+          83.0,
+          92.0
+        ],
+        "edge_bevel_both_faces_mm": 0.4,
+        "stud_clearance_holes": {
+          "diameter_mm": 3.8,
+          "local_xy_mm": [
+            [
+              -76.0,
+              -82.0
+            ],
+            [
+              -76.0,
+              82.0
+            ],
+            [
+              76.0,
+              -82.0
+            ],
+            [
+              76.0,
+              82.0
+            ]
+          ]
+        },
+        "housing_holes": {
+          "diameter_mm": 4.5,
+          "local_xy_mm": [
+            [
+              -60,
+              -70
+            ],
+            [
+              60,
+              -70
+            ],
+            [
+              0,
+              -40
+            ],
+            [
+              0,
+              30
+            ],
+            [
+              -50,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "countersink": {
+            "face": "underside contacting backpanel",
+            "included_angle_deg": 90,
+            "mouth_diameter_mm": 9.9,
+            "depth_mm": 2.7,
+            "depth_mm_definition": "Geometric cone height, NOT FPD SinkDepth/additional axial recess",
+            "fpd_sink_depth_additional_recess_mm": 0
+          },
+          "opposite_bore_deburr_max_mm": 0.1
+        },
+        "source_material_finish": "6061-T6/T651, clear MIL-DTL-5541 Type II Class 3 conversion, dims after finish; supplier material/process capability must be explicitly resolved for FPE",
+        "source_planar_dxf": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\Bedrock_FPE_R1_plate_profile_mm.dxf",
+        "thermal_fields": {
+          "both_faces": true,
+          "field_width_mm": 126,
+          "field_height_mm": 156,
+          "corner_radius_mm": 5,
+          "depth_mm": 0.05,
+          "depth_tolerance_mm": 0.01,
+          "hard_lands_local_xy_mm": [
+            [
+              -60,
+              -70
+            ],
+            [
+              60,
+              -70
+            ],
+            [
+              0,
+              -40
+            ],
+            [
+              0,
+              30
+            ],
+            [
+              -50,
+              70
+            ],
+            [
+              50,
+              70
+            ]
+          ],
+          "top_hard_land_diameter_mm": 8,
+          "underside_hard_land_diameter_mm": 12,
+          "escape_grooves": {
+            "y_mm": [
+              -20,
+              20
+            ],
+            "x_start_mm": 62,
+            "x_end_mm": 84,
+            "width_mm": 1,
+            "corner_radius_mm": 0.25,
+            "depth_mm": 0.05,
+            "clip_to_actual_stock": true
+          },
+          "source_top_contour_dxf": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\Bedrock_FPE_R1_thermal_top_contour.dxf",
+          "source_bottom_contour_dxf": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\Bedrock_FPE_R1_thermal_bottom_contour.dxf",
+          "Ra_max_um": 1.6,
+          "assembled_gap_max_mm": 0.1
+        },
+        "countersunk_screw_head_recess_nominal_mm": 0.95,
+        "screw_projection_nominal_mm": 2.9499999999999993,
+        "no_panel_studs_on_this_adapter": true,
+        "feature_side_convention": "Designate upper/device side FPD front; underside/backpanel contact side reverse. All coordinates use same XY, no extra mirror."
+      },
+      "native_hardware_count": 0,
+      "countersink_face": "reverse",
+      "catalog_holes": "ordinary through clearance bores; device countersinks reverse only",
+      "manufacturing_remarks": "Preliminary fit prototype. Actual finished stock thickness +/-0.05 and conical seating must meet screw projection acceptance. No physical qualification implied. Aluminum alloy, finish, tolerances and any 0.05mm thermal pockets require supplier capability confirmation."
+    }
+  }
+}

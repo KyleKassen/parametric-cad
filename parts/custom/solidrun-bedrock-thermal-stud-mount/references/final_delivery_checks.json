@@ -1,0 +1,172 @@
+{
+  "revision": "T1",
+  "status": "PASS",
+  "scope": "Digital content integrity only; preliminary thermal/fit prototype. Appearance gate remains below initial threshold; no physical validation.",
+  "checks": [
+    {
+      "check": "cad_verification.json",
+      "pass": true,
+      "detail": 94
+    },
+    {
+      "check": "manufacturing_verification.json",
+      "pass": true,
+      "detail": 60
+    },
+    {
+      "check": "Plate-only analytical target met",
+      "pass": true,
+      "detail": 4.275361667633688
+    },
+    {
+      "check": "Engineering input hash matches",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Original input preserved",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing source: make_documents.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing source: params.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing source: references\\research\\catalog_bom.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing source: exports\\cad_verification.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing source: exports\\manufacturing_verification.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing source: references\\product\\assembled_hero.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing source: references\\product\\exploded_iso.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing source: references\\product\\plate_bottom_hero.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing source: references\\product\\thermal_bottom_hero.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing source: references\\product\\thermal_top_hero.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing source: references\\views\\section_fastener.png",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "PDF six pages",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "PDF includes 91294A188",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "PDF includes 98688A142",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "PDF includes 90576A102",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "PDF includes 10405K83",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "PDF includes 5.10",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "PDF includes 2.85",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "PDF includes 3.00",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "PDF includes 0.050",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "PDF has no placeholder image text",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "PDF has linked catalog items",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "Prior design preserved: ettus-b210-professional-mount",
+      "pass": true,
+      "detail": {
+        "files_checked": 89,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "Prior design preserved: ettus-b210-professional-mount/P2",
+      "pass": true,
+      "detail": {
+        "files_checked": 96,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "Prior design preserved: ettus-b210-direct-stud-mount",
+      "pass": true,
+      "detail": {
+        "files_checked": 86,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "Identical custom STEP geometry in gate and deliverable",
+      "pass": true,
+      "detail": 0
+    }
+  ],
+  "visual_review": "All six PDF pages and final CAD views inspected. Final page2 and corrected orthographic views rechecked after edits."
+}

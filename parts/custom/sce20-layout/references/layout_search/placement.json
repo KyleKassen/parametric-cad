@@ -1,0 +1,2225 @@
+{
+  "schema": "sce20-layout-search/1",
+  "units": "mm",
+  "datum": "lower-left panel origin; panel front Z=0; +Y up; all transforms apply to normalized source files",
+  "placements": {
+    "meanwell": {
+      "translation_mm": [
+        371.5,
+        65.6,
+        0
+      ],
+      "rotation_z_deg": 180,
+      "mount_points_panel_xy_mm": [
+        [
+          400.0,
+          323.4
+        ],
+        [
+          400.0,
+          71.39999999999999
+        ],
+        [
+          343.0,
+          323.4
+        ],
+        [
+          343.0,
+          71.39999999999999
+        ]
+      ]
+    },
+    "bedrock": {
+      "translation_mm": [
+        92.0,
+        297.0,
+        0
+      ],
+      "rotation_z_deg": 0,
+      "mount_points_panel_xy_mm": [
+        [
+          16.0,
+          215.0
+        ],
+        [
+          16.0,
+          379.0
+        ],
+        [
+          168.0,
+          215.0
+        ],
+        [
+          168.0,
+          379.0
+        ]
+      ]
+    },
+    "b210": {
+      "translation_mm": [
+        254.0,
+        318.0,
+        0
+      ],
+      "rotation_z_deg": 180,
+      "mount_points_panel_xy_mm": [
+        [
+          322.0,
+          378.0075
+        ],
+        [
+          322.0,
+          257.9925
+        ],
+        [
+          186.0,
+          378.0075
+        ],
+        [
+          186.0,
+          257.9925
+        ]
+      ]
+    },
+    "peplink": {
+      "translation_mm": [
+        126.5,
+        89.0,
+        6
+      ],
+      "rotation_z_deg": 0,
+      "mount_points_panel_xy_mm": [
+        [
+          45.599999999999994,
+          47.65
+        ],
+        [
+          45.599999999999994,
+          130.35
+        ],
+        [
+          207.4,
+          47.65
+        ],
+        [
+          207.4,
+          130.35
+        ]
+      ]
+    },
+    "oz": {
+      "translation_mm": [
+        274.0,
+        76.0,
+        0
+      ],
+      "rotation_z_deg": 0,
+      "mount_points_panel_xy_mm": [
+        [
+          220.9,
+          34.2
+        ],
+        [
+          220.9,
+          130.2
+        ],
+        [
+          327.1,
+          34.2
+        ],
+        [
+          327.1,
+          130.2
+        ]
+      ]
+    }
+  },
+  "search": {
+    "method": "20 bounded multi-start SLSQP max-min clearance runs; fixed orthogonal orientations/topology",
+    "seed": 82026,
+    "elapsed_seconds": 1.626403570175171,
+    "constraint_evaluations": 1346,
+    "runs": [
+      {
+        "seed": 0,
+        "success": true,
+        "feasible": true,
+        "minimum_margin_mm": 3.412995627825392,
+        "hard_margin_mm": 1.294999999999959,
+        "vector": [
+          371.4639868834778,
+          65.6,
+          91.5,
+          297.5,
+          255.0,
+          315.68962364551095,
+          126.53799562782592,
+          87.810376354489,
+          273.95099125565184,
+          76.0
+        ],
+        "iterations": 7,
+        "message": "Optimization terminated successfully"
+      },
+      {
+        "seed": 1,
+        "success": true,
+        "feasible": true,
+        "minimum_margin_mm": 0.025109957516479042,
+        "hard_margin_mm": 1.294999999999959,
+        "vector": [
+          375.0442015823952,
+          65.6,
+          91.8565515839133,
+          299.40557209437316,
+          254.2665144529169,
+          317.7286356570903,
+          128.6287063293488,
+          89.41309969099979,
+          276.0404497059376,
+          77.29264421475203
+        ],
+        "iterations": 1,
+        "message": "Optimization terminated successfully"
+      },
+      {
+        "seed": 2,
+        "success": true,
+        "feasible": true,
+        "minimum_margin_mm": 3.4129956278201234,
+        "hard_margin_mm": 0.7949489073249438,
+        "vector": [
+          371.46398688346045,
+          65.6,
+          91.99987344887896,
+          297.31002146512054,
+          256.57791556119236,
+          318.14806018654286,
+          126.53799562782014,
+          88.5324943477585,
+          273.9509912556403,
+          74.14994890732494
+        ],
+        "iterations": 5,
+        "message": "Optimization terminated successfully"
+      },
+      {
+        "seed": 3,
+        "success": true,
+        "feasible": true,
+        "minimum_margin_mm": 3.412995627825495,
+        "hard_margin_mm": 0.26004591469860117,
+        "vector": [
+          371.4639868834766,
+          65.6,
+          91.87336931009159,
+          297.98671964440433,
+          255.0878723107162,
+          314.23229904827735,
+          126.53799562782554,
+          86.3646187758986,
+          273.95099125565105,
+          73.91129680400151
+        ],
+        "iterations": 7,
+        "message": "Optimization terminated successfully"
+      },
+      {
+        "seed": 4,
+        "success": true,
+        "feasible": true,
+        "minimum_margin_mm": 3.4129956278243583,
+        "hard_margin_mm": 0.9356947652217471,
+        "vector": [
+          371.46398688347887,
+          65.6,
+          92.5385974212469,
+          296.00988035394045,
+          255.44444158410036,
+          318.30580421758833,
+          126.53799562782629,
+          87.21479818268364,
+          273.9509912556526,
+          74.29069476522174
+        ],
+        "iterations": 6,
+        "message": "Optimization terminated successfully"
+      },
+      {
+        "seed": 5,
+        "success": true,
+        "feasible": true,
+        "minimum_margin_mm": 3.412995627819889,
+        "hard_margin_mm": 0.00043758264110493883,
+        "vector": [
+          371.4639868834597,
+          65.6,
+          92.70508778111298,
+          299.00071802832446,
+          256.74718895194724,
+          313.9999792730401,
+          126.5379956278199,
+          86.10501044384111,
+          273.9509912556398,
+          76.03449029827767
+        ],
+        "iterations": 7,
+        "message": "Optimization terminated successfully"
+      },
+      {
+        "seed": 6,
+        "success": true,
+        "feasible": true,
+        "minimum_margin_mm": 3.412995627825392,
+        "hard_margin_mm": 1.294999999999959,
+        "vector": [
+          371.4639868834778,
+          65.6,
+          92.63040498672254,
+          298.34173908526225,
+          257.0509811059495,
+          318.49485872702917,
+          126.53799562782599,
+          88.60950594773314,
+          273.9509912556519,
+          77.2747983611071
+        ],
+        "iterations": 8,
+        "message": "Optimization terminated successfully"
+      },
+      {
+        "seed": 7,
+        "success": true,
+        "feasible": true,
+        "minimum_margin_mm": 3.412995627825751,
+        "hard_margin_mm": 0.8409543492566272,
+        "vector": [
+          371.4639868834774,
+          65.6,
+          91.93338425263892,
+          296.966023458919,
+          253.68980373980492,
+          317.68348009117705,
+          126.53799562782582,
+          88.14588074453297,
+          273.9509912556516,
+          74.19595434925662
+        ],
+        "iterations": 7,
+        "message": "Optimization terminated successfully"
+      },
+      {
+        "seed": 8,
+        "success": true,
+        "feasible": true,
+        "minimum_margin_mm": 0.00737890811189601,
+        "hard_margin_mm": 1.294999999999959,
+        "vector": [
+          375.0631908130448,
+          65.6,
+          92.89050523024942,
+          302.1526806255036,
+          255.09184107884798,
+          315.3377053706411,
+          127.50620085541574,
+          88.50725873758729,
+          274.7217256778072,
+          74.65076296092165
+        ],
+        "iterations": 1,
+        "message": "Optimization terminated successfully"
+      },
+      {
+        "seed": 9,
+        "success": true,
+        "feasible": true,
+        "minimum_margin_mm": 3.4129956278250653,
+        "hard_margin_mm": 1.0126667140053698,
+        "vector": [
+          371.4639868834781,
+          65.6,
+          91.89931156143543,
+          298.2748699849323,
+          253.3480301781568,
+          315.42995605893617,
+          126.53799562782605,
+          87.11723957520537,
+          273.9509912556521,
+          76.1384864908567
+        ],
+        "iterations": 6,
+        "message": "Optimization terminated successfully"
+      },
+      {
+        "seed": 10,
+        "success": true,
+        "feasible": true,
+        "minimum_margin_mm": 3.412995627825392,
+        "hard_margin_mm": 0.019081854864857917,
+        "vector": [
+          371.4639868834778,
+          65.6,
+          91.54498919008738,
+          299.16200437217407,
+          255.85735259071345,
+          313.9990304966796,
+          126.5379956278259,
+          86.12365471606486,
+          273.9509912556518,
+          76.26746227488886
+        ],
+        "iterations": 7,
+        "message": "Optimization terminated successfully"
+      },
+      {
+        "seed": 11,
+        "success": true,
+        "feasible": true,
+        "minimum_margin_mm": 0.035401452976381975,
+        "hard_margin_mm": 1.2673591925750802,
+        "vector": [
+          375.03318131963795,
+          65.6,
+          90.95385919257508,
+          297.21008603086756,
+          254.89049162170036,
+          314.04880899647907,
+          127.7619076667611,
+          87.93737077691901,
+          276.1928728601934,
+          77.97641071444443
+        ],
+        "iterations": 1,
+        "message": "Optimization terminated successfully"
+      },
+      {
+        "seed": 12,
+        "success": true,
+        "feasible": true,
+        "minimum_margin_mm": 3.4129956278202087,
+        "hard_margin_mm": 7.105427357601002e-15,
+        "vector": [
+          371.4639868834608,
+          65.6,
+          91.95025353382592,
+          295.9453681283201,
+          257.0030618261544,
+          315.8263742015561,
+          126.53799562782025,
+          87.94410155757524,
+          273.9509912556405,
+          73.355
+        ],
+        "iterations": 7,
+        "message": "Optimization terminated successfully"
+      },
+      {
+        "seed": 13,
+        "success": true,
+        "feasible": true,
+        "minimum_margin_mm": 3.4129955916184826,
+        "hard_margin_mm": 0.4915187886554335,
+        "vector": [
+          371.4639867748556,
+          65.6,
+          91.2921841729973,
+          294.6949655736831,
+          254.3373146622577,
+          315.70729451465786,
+          126.53799559161853,
+          86.59609164985544,
+          273.9509911832371,
+          78.32695193580358
+        ],
+        "iterations": 7,
+        "message": "Optimization terminated successfully"
+      },
+      {
+        "seed": 14,
+        "success": true,
+        "feasible": true,
+        "minimum_margin_mm": 3.412995627787211,
+        "hard_margin_mm": 0.879481925157954,
+        "vector": [
+          371.4639868833617,
+          65.6,
+          91.8793697694717,
+          298.95453195057667,
+          254.36087201616786,
+          318.3589805053364,
+          126.53799562778725,
+          86.98405478635796,
+          273.9509912555745,
+          75.62045013714732
+        ],
+        "iterations": 7,
+        "message": "Optimization terminated successfully"
+      },
+      {
+        "seed": 15,
+        "success": true,
+        "feasible": true,
+        "minimum_margin_mm": -2.842170943040401e-14,
+        "hard_margin_mm": 1.294999999999959,
+        "vector": [
+          375.02500000000003,
+          65.6,
+          99.11643589723434,
+          296.3194032404754,
+          264.02500000000003,
+          294.1131357049042,
+          123.12500000000001,
+          91.88939183017546,
+          273.73801822078997,
+          85.06313570490421
+        ],
+        "iterations": 2,
+        "message": "Optimization terminated successfully"
+      },
+      {
+        "seed": 16,
+        "success": false,
+        "feasible": false,
+        "minimum_margin_mm": -9.961291409022067,
+        "hard_margin_mm": 1.0647025780033363,
+        "vector": [
+          378.54879742199665,
+          65.6,
+          102.5533557046802,
+          291.71831608381933,
+          250.59206429565813,
+          319.83684532238357,
+          127.88850513600471,
+          89.18078508227016,
+          279.1576515888806,
+          77.28356722934622
+        ],
+        "iterations": 5,
+        "message": "Positive directional derivative for linesearch"
+      },
+      {
+        "seed": 17,
+        "success": false,
+        "feasible": false,
+        "minimum_margin_mm": -24.881457174774198,
+        "hard_margin_mm": 0.06923267191973714,
+        "vector": [
+          379.54426732808025,
+          65.6,
+          91.88883174086527,
+          308.77879806815304,
+          243.7386374866607,
+          287.0420576922065,
+          127.72009466143491,
+          90.56339377822158,
+          258.4144561550715,
+          99.53112945250365
+        ],
+        "iterations": 8,
+        "message": "Positive directional derivative for linesearch"
+      },
+      {
+        "seed": 18,
+        "success": false,
+        "feasible": false,
+        "minimum_margin_mm": -11.774659658753677,
+        "hard_margin_mm": 1.294999999999959,
+        "vector": [
+          366.5482756331179,
+          65.6,
+          104.53892251933246,
+          290.9336702932499,
+          262.40362475059504,
+          288.84191332028485,
+          126.56787462616799,
+          89.6232323285099,
+          258.7932149674143,
+          82.51008297707133
+        ],
+        "iterations": 13,
+        "message": "Positive directional derivative for linesearch"
+      },
+      {
+        "seed": 19,
+        "success": false,
+        "feasible": false,
+        "minimum_margin_mm": -18.737294034816216,
+        "hard_margin_mm": 1.294999999999959,
+        "vector": [
+          363.10992379318685,
+          65.6,
+          91.42122078998189,
+          287.5317727563637,
+          265.97453188422344,
+          285.2502037117583,
+          131.55529411806825,
+          87.98539404817275,
+          258.11081593412115,
+          94.93749774657448
+        ],
+        "iterations": 5,
+        "message": "Positive directional derivative for linesearch"
+      }
+    ],
+    "raw_best": {
+      "seed": 7,
+      "success": true,
+      "feasible": true,
+      "minimum_margin_mm": 3.412995627825751,
+      "hard_margin_mm": 0.8409543492566272,
+      "vector": [
+        371.4639868834774,
+        65.6,
+        91.93338425263892,
+        296.966023458919,
+        253.68980373980492,
+        317.68348009117705,
+        126.53799562782582,
+        88.14588074453297,
+        273.9509912556516,
+        74.19595434925662
+      ],
+      "iterations": 7,
+      "message": "Optimization terminated successfully"
+    },
+    "rounding_mm": 0.1
+  },
+  "selected_clearances": {
+    "variable_clearances": [
+      [
+        "Peplink conservative complete envelope factory socket 1",
+        3.374999999999993
+      ],
+      [
+        "PSU device/terminals factory socket 3",
+        3.3785540780552026
+      ],
+      [
+        "OZ complete envelope / PSU lower tab",
+        3.3999999999999773
+      ],
+      [
+        "OZ complete envelope / Peplink conservative complete envelope",
+        3.5
+      ],
+      [
+        "peplink component socket 3 / OZ complete envelope",
+        3.5
+      ],
+      [
+        "peplink component socket 4 / OZ complete envelope",
+        3.5
+      ],
+      [
+        "oz component socket 1 / Peplink conservative complete envelope",
+        3.5
+      ],
+      [
+        "oz component socket 2 / Peplink conservative complete envelope",
+        3.5
+      ],
+      [
+        "Peplink upper coax/SIM 40 mm / Bedrock device",
+        3.569988589700017
+      ],
+      [
+        "B210 adapter / Bedrock adapter",
+        4.0
+      ],
+      [
+        "B210 RF cable envelope / Peplink conservative complete envelope",
+        4.569988589700017
+      ],
+      [
+        "Bedrock adapter factory socket 2",
+        5.574999999999989
+      ],
+      [
+        "meanwell component socket 4 / OZ complete envelope",
+        5.899999999999977
+      ],
+      [
+        "bedrock component socket 4 / B210 adapter",
+        6.0
+      ],
+      [
+        "b210 component socket 3 / Bedrock adapter",
+        6.0
+      ],
+      [
+        "b210 component socket 4 / Bedrock adapter",
+        6.0
+      ],
+      [
+        "B210 adapter / PSU upper tab",
+        6.5
+      ],
+      [
+        "Bedrock device factory socket 2",
+        7.6480836256634745
+      ],
+      [
+        "meanwell component socket 3 / B210 adapter",
+        9.0
+      ],
+      [
+        "PSU lower tab factory socket 3",
+        12.254105195364595
+      ],
+      [
+        "oz component socket 3 / PSU lower tab",
+        12.366634676873907
+      ],
+      [
+        "Peplink upper coax/SIM 40 mm / B210 device/connectors",
+        12.888688589700024
+      ],
+      [
+        "Peplink lower cable 40 mm / OZ complete envelope",
+        14.400000000000006
+      ],
+      [
+        "OZ lower fiber/DE9 40 mm / Peplink conservative complete envelope",
+        15.502022892250146
+      ],
+      [
+        "PSU center plate factory socket 3",
+        16.321897292469355
+      ],
+      [
+        "OZ complete envelope / PSU center plate",
+        16.899999999999977
+      ],
+      [
+        "oz component socket 4 / PSU center plate",
+        16.899999999999977
+      ],
+      [
+        "B210 device/connectors / Bedrock adapter",
+        17.82549990000001
+      ],
+      [
+        "OZ complete envelope / PSU device/terminals",
+        18.899999999999977
+      ],
+      [
+        "PSU intake 100 mm / OZ complete envelope",
+        18.899999999999977
+      ],
+      [
+        "oz component socket 3 / PSU device/terminals",
+        18.899999999999977
+      ],
+      [
+        "oz component socket 4 / PSU device/terminals",
+        18.899999999999977
+      ],
+      [
+        "OZ upper SMA 30 mm / Peplink conservative complete envelope",
+        19.599999999999994
+      ],
+      [
+        "bedrock component socket 4 / B210 device/connectors",
+        19.82549990000001
+      ],
+      [
+        "B210 adapter / PSU center plate",
+        20.0
+      ],
+      [
+        "B210 device/connectors / PSU upper tab",
+        20.326499899999988
+      ],
+      [
+        "oz component socket 3 / PSU center plate",
+        21.65801943130807
+      ],
+      [
+        "b210 component socket 2 / PSU center plate",
+        22.0
+      ],
+      [
+        "bedrock component socket 3 / B210 device/connectors",
+        22.284032234530525
+      ],
+      [
+        "meanwell component socket 3 / B210 device/connectors",
+        22.826499899999988
+      ],
+      [
+        "b210 component socket 2 / PSU device/terminals",
+        24.0
+      ],
+      [
+        "b210 component socket 3 / Bedrock device",
+        24.0
+      ],
+      [
+        "b210 component socket 4 / Bedrock device",
+        24.0
+      ],
+      [
+        "b210 component socket 1 / PSU center plate",
+        24.468916781076274
+      ],
+      [
+        "bedrock component socket 3 / B210 adapter",
+        26.016124838541646
+      ],
+      [
+        "b210 component socket 1 / PSU device/terminals",
+        26.311612163061785
+      ],
+      [
+        "b210 component socket 1 / PSU upper tab",
+        30.291628699310564
+      ],
+      [
+        "PSU center plate factory socket 4",
+        31.08656257522354
+      ],
+      [
+        "PSU device/terminals factory socket 4",
+        31.800333866330426
+      ],
+      [
+        "Peplink upper coax/SIM 40 mm / OZ complete envelope",
+        31.82428392986646
+      ],
+      [
+        "oz component socket 4 / PSU lower tab",
+        32.74652301868345
+      ],
+      [
+        "B210 RF cable envelope / OZ complete envelope",
+        32.94999999999999
+      ],
+      [
+        "B210 device/connectors / PSU center plate",
+        33.82649989999999
+      ],
+      [
+        "OZ upper SMA 30 mm / PSU device/terminals",
+        35.0
+      ],
+      [
+        "B210 device/connectors / Bedrock device",
+        35.82549990000001
+      ],
+      [
+        "B210 device/connectors / PSU device/terminals",
+        35.82649989999999
+      ],
+      [
+        "PSU exhaust 100 mm / B210 device/connectors",
+        35.82649989999999
+      ],
+      [
+        "bedrock component socket 3 / Peplink conservative complete envelope",
+        36.56998858970002
+      ],
+      [
+        "OZ lower fiber/DE9 40 mm / PSU device/terminals",
+        37.164936432072615
+      ],
+      [
+        "b210 component socket 2 / PSU upper tab",
+        40.458344187288624
+      ],
+      [
+        "B210 RF cable envelope / PSU device/terminals",
+        42.0
+      ],
+      [
+        "B210 RF cable envelope / Bedrock device",
+        42.0
+      ],
+      [
+        "Bedrock SMA 50 mm / B210 device/connectors",
+        42.82549990000001
+      ],
+      [
+        "bedrock component socket 1 / Peplink conservative complete envelope",
+        43.303456929579994
+      ],
+      [
+        "B210 USB/DC cable envelope / Bedrock device",
+        43.41658669218482
+      ],
+      [
+        "Peplink conservative complete envelope / Bedrock device",
+        43.56998858970002
+      ],
+      [
+        "PSU upper tab factory socket 4",
+        49.20853720495431
+      ],
+      [
+        "OZ upper SMA 30 mm / B210 device/connectors",
+        51.268699999999995
+      ],
+      [
+        "Bedrock IO 50 mm / Peplink conservative complete envelope",
+        51.315469320698895
+      ],
+      [
+        "B210 USB/DC cable envelope / PSU device/terminals",
+        52.680546694202
+      ],
+      [
+        "Peplink conservative complete envelope / B210 device/connectors",
+        52.888688589700024
+      ],
+      [
+        "OZ complete envelope factory socket 3",
+        62.474999999999966
+      ],
+      [
+        "meanwell component socket 2 / OZ complete envelope",
+        62.89999999999998
+      ],
+      [
+        "meanwell component socket 1 / B210 adapter",
+        66.0
+      ],
+      [
+        "B210 adapter factory socket 4",
+        67.4694564672279
+      ],
+      [
+        "peplink component socket 2 / Bedrock adapter",
+        69.65
+      ],
+      [
+        "OZ complete envelope / Bedrock adapter",
+        72.57280826866216
+      ],
+      [
+        "peplink component socket 4 / Bedrock adapter",
+        76.37802221730387
+      ],
+      [
+        "b210 component socket 4 / Peplink conservative complete envelope",
+        79.56248858970002
+      ],
+      [
+        "B210 device/connectors factory socket 4",
+        79.56796867364602
+      ],
+      [
+        "bedrock component socket 3 / OZ complete envelope",
+        79.77860874064872
+      ],
+      [
+        "meanwell component socket 1 / B210 device/connectors",
+        79.82649989999999
+      ],
+      [
+        "OZ complete envelope / B210 device/connectors",
+        81.2687
+      ],
+      [
+        "peplink component socket 2 / Bedrock device",
+        81.65
+      ],
+      [
+        "oz component socket 2 / Bedrock adapter",
+        82.7601845941541
+      ],
+      [
+        "OZ upper SMA 30 mm / Bedrock device",
+        85.93487359622983
+      ],
+      [
+        "peplink component socket 4 / B210 device/connectors",
+        90.96870000000001
+      ],
+      [
+        "oz component socket 2 / B210 device/connectors",
+        91.11870000000002
+      ],
+      [
+        "oz component socket 4 / B210 device/connectors",
+        91.85579946267907
+      ],
+      [
+        "OZ complete envelope / Bedrock device",
+        92.9839367848017
+      ],
+      [
+        "peplink component socket 4 / Bedrock device",
+        95.24162059743449
+      ],
+      [
+        "OZ complete envelope / B210 adapter",
+        98.94999999999999
+      ],
+      [
+        "oz component socket 2 / Bedrock device",
+        102.78427529097183
+      ],
+      [
+        "b210 component socket 2 / OZ complete envelope",
+        107.9425
+      ],
+      [
+        "peplink component socket 4 / B210 adapter",
+        108.65
+      ],
+      [
+        "oz component socket 2 / B210 adapter",
+        108.80000000000001
+      ],
+      [
+        "oz component socket 4 / B210 adapter",
+        108.80000000000001
+      ],
+      [
+        "oz component socket 3 / Peplink conservative complete envelope",
+        109.70000000000002
+      ],
+      [
+        "oz component socket 4 / Peplink conservative complete envelope",
+        109.70000000000002
+      ],
+      [
+        "oz component socket 1 / PSU lower tab",
+        110.60363316090026
+      ],
+      [
+        "b210 component socket 4 / OZ complete envelope",
+        111.83329279897062
+      ],
+      [
+        "oz component socket 2 / PSU lower tab",
+        115.36361576489799
+      ],
+      [
+        "oz component socket 2 / PSU center plate",
+        123.1
+      ],
+      [
+        "peplink component socket 3 / PSU lower tab",
+        123.1119529942464
+      ],
+      [
+        "oz component socket 1 / PSU center plate",
+        123.99864340371954
+      ],
+      [
+        "oz component socket 1 / PSU device/terminals",
+        125.1
+      ],
+      [
+        "oz component socket 2 / PSU device/terminals",
+        125.1
+      ],
+      [
+        "meanwell component socket 4 / Peplink conservative complete envelope",
+        125.6
+      ],
+      [
+        "peplink component socket 4 / PSU lower tab",
+        128.3225881086922
+      ],
+      [
+        "b210 component socket 2 / Peplink conservative complete envelope",
+        133.4303957824406
+      ],
+      [
+        "B210 device/connectors / PSU lower tab",
+        134.46392604663416
+      ],
+      [
+        "peplink component socket 4 / PSU center plate",
+        136.6
+      ],
+      [
+        "peplink component socket 3 / PSU center plate",
+        136.6108134995347
+      ],
+      [
+        "Peplink conservative complete envelope / PSU device/terminals",
+        138.6
+      ],
+      [
+        "PSU intake 100 mm / Peplink conservative complete envelope",
+        138.6
+      ],
+      [
+        "peplink component socket 3 / PSU device/terminals",
+        138.6
+      ],
+      [
+        "peplink component socket 4 / PSU device/terminals",
+        138.6
+      ],
+      [
+        "b210 component socket 1 / Bedrock adapter",
+        142.0
+      ],
+      [
+        "b210 component socket 2 / Bedrock adapter",
+        142.0
+      ],
+      [
+        "B210 adapter factory socket 2",
+        142.7570323313671
+      ],
+      [
+        "b210 component socket 3 / PSU upper tab",
+        148.01470209182517
+      ],
+      [
+        "Peplink upper coax/SIM 40 mm / PSU device/terminals",
+        149.5
+      ],
+      [
+        "b210 component socket 4 / PSU upper tab",
+        150.6742144873389
+      ],
+      [
+        "B210 adapter / PSU lower tab",
+        150.740206978762
+      ],
+      [
+        "Peplink lower cable 40 mm / PSU device/terminals",
+        150.8853623547341
+      ],
+      [
+        "peplink component socket 1 / Bedrock adapter",
+        152.35
+      ],
+      [
+        "meanwell component socket 4 / B210 device/connectors",
+        152.39795966395084
+      ],
+      [
+        "peplink component socket 3 / Bedrock adapter",
+        155.65112044427204
+      ],
+      [
+        "B210 device/connectors factory socket 2",
+        155.69267143559475
+      ],
+      [
+        "OZ complete envelope / PSU upper tab",
+        156.38696397078624
+      ],
+      [
+        "bedrock component socket 2 / B210 adapter",
+        158.0
+      ],
+      [
+        "b210 component socket 4 / PSU center plate",
+        158.0
+      ],
+      [
+        "b210 component socket 3 / PSU center plate",
+        158.42710012800814
+      ],
+      [
+        "b210 component socket 1 / Bedrock device",
+        160.0
+      ],
+      [
+        "b210 component socket 2 / Bedrock device",
+        160.0
+      ],
+      [
+        "b210 component socket 4 / PSU device/terminals",
+        160.0
+      ],
+      [
+        "b210 component socket 2 / PSU lower tab",
+        160.14521202944397
+      ],
+      [
+        "b210 component socket 3 / PSU device/terminals",
+        160.4219364420874
+      ],
+      [
+        "Bedrock adapter / PSU upper tab",
+        160.5
+      ],
+      [
+        "bedrock component socket 1 / B210 adapter",
+        160.55965692160635
+      ],
+      [
+        "meanwell component socket 3 / Bedrock adapter",
+        163.0
+      ],
+      [
+        "peplink component socket 1 / Bedrock device",
+        164.35
+      ],
+      [
+        "oz component socket 4 / Bedrock adapter",
+        164.49764010156605
+      ],
+      [
+        "PSU intake 100 mm / B210 device/connectors",
+        164.66341009700577
+      ],
+      [
+        "peplink component socket 1 / OZ complete envelope",
+        165.3
+      ],
+      [
+        "peplink component socket 2 / OZ complete envelope",
+        165.3
+      ],
+      [
+        "bedrock component socket 4 / PSU upper tab",
+        165.83679346089355
+      ],
+      [
+        "oz component socket 4 / PSU upper tab",
+        166.4059508885266
+      ],
+      [
+        "Bedrock adapter factory socket 1",
+        167.775
+      ],
+      [
+        "meanwell component socket 4 / B210 adapter",
+        168.16685595113174
+      ],
+      [
+        "Bedrock IO 50 mm / B210 device/connectors",
+        168.7854999
+      ],
+      [
+        "peplink component socket 2 / B210 adapter",
+        170.24805990366912
+      ],
+      [
+        "peplink component socket 2 / B210 device/connectors",
+        170.7422521777131
+      ],
+      [
+        "meanwell component socket 2 / B210 device/connectors",
+        171.62202211212139
+      ],
+      [
+        "peplink component socket 3 / Bedrock device",
+        171.69064066893864
+      ],
+      [
+        "bedrock component socket 2 / B210 device/connectors",
+        171.8254999
+      ],
+      [
+        "oz component socket 1 / Bedrock adapter",
+        171.8599728598871
+      ],
+      [
+        "bedrock component socket 1 / B210 device/connectors",
+        172.187387769488
+      ],
+      [
+        "peplink component socket 3 / B210 device/connectors",
+        173.6687
+      ],
+      [
+        "meanwell component socket 3 / OZ complete envelope",
+        173.68277057399797
+      ],
+      [
+        "Bedrock adapter / PSU center plate",
+        174.0
+      ],
+      [
+        "bedrock component socket 3 / PSU center plate",
+        176.0
+      ],
+      [
+        "bedrock component socket 4 / PSU center plate",
+        176.45203222890615
+      ],
+      [
+        "bedrock component socket 3 / PSU device/terminals",
+        178.0
+      ],
+      [
+        "bedrock component socket 4 / PSU device/terminals",
+        178.4471040927057
+      ],
+      [
+        "OZ complete envelope factory socket 1",
+        178.675
+      ],
+      [
+        "Bedrock device factory socket 1",
+        179.78348413537287
+      ],
+      [
+        "meanwell component socket 3 / Bedrock device",
+        181.0
+      ],
+      [
+        "meanwell component socket 2 / B210 adapter",
+        181.6326873835342
+      ],
+      [
+        "Peplink conservative complete envelope factory socket 3",
+        182.17499999999998
+      ],
+      [
+        "meanwell component socket 2 / Peplink conservative complete envelope",
+        182.6
+      ],
+      [
+        "bedrock component socket 3 / PSU upper tab",
+        183.47071390537045
+      ],
+      [
+        "meanwell component socket 1 / OZ complete envelope",
+        185.83797447049156
+      ],
+      [
+        "oz component socket 4 / Bedrock device",
+        185.9666201198524
+      ],
+      [
+        "oz component socket 1 / B210 device/connectors",
+        187.1187
+      ],
+      [
+        "oz component socket 3 / B210 device/connectors",
+        187.48853547563473
+      ],
+      [
+        "oz component socket 1 / Bedrock device",
+        188.64671440538308
+      ],
+      [
+        "peplink component socket 3 / B210 adapter",
+        191.35
+      ],
+      [
+        "meanwell component socket 3 / Peplink conservative complete envelope",
+        193.86517411953946
+      ],
+      [
+        "Bedrock device / PSU device/terminals",
+        194.0
+      ],
+      [
+        "PSU exhaust 100 mm / Bedrock device",
+        194.0
+      ],
+      [
+        "Bedrock adapter / PSU lower tab",
+        195.48608646141545
+      ],
+      [
+        "b210 component socket 3 / Peplink conservative complete envelope",
+        199.5774885897
+      ],
+      [
+        "bedrock component socket 4 / Peplink conservative complete envelope",
+        200.56998858970002
+      ],
+      [
+        "oz component socket 2 / PSU upper tab",
+        201.01601879465585
+      ],
+      [
+        "bedrock component socket 3 / PSU lower tab",
+        201.9850477691565
+      ],
+      [
+        "bedrock component socket 2 / Peplink conservative complete envelope",
+        202.03666392397602
+      ],
+      [
+        "Bedrock SMA 50 mm / PSU device/terminals",
+        202.07335301815527
+      ],
+      [
+        "oz component socket 1 / B210 adapter",
+        204.8
+      ],
+      [
+        "oz component socket 3 / B210 adapter",
+        204.8
+      ],
+      [
+        "Bedrock IO 50 mm / OZ complete envelope",
+        206.71613894420534
+      ],
+      [
+        "bedrock component socket 1 / OZ complete envelope",
+        206.78529812052582
+      ],
+      [
+        "peplink component socket 4 / PSU upper tab",
+        208.7000526438868
+      ],
+      [
+        "meanwell component socket 4 / Bedrock adapter",
+        209.6461273817909
+      ],
+      [
+        "Peplink lower cable 40 mm / Bedrock device",
+        209.7995728612
+      ],
+      [
+        "B210 device/connectors factory socket 3",
+        209.86858731948243
+      ],
+      [
+        "Bedrock SMA 50 mm / Peplink conservative complete envelope",
+        213.56998858970002
+      ],
+      [
+        "b210 component socket 4 / PSU lower tab",
+        217.3531898944785
+      ],
+      [
+        "Peplink lower cable 40 mm / B210 device/connectors",
+        219.1182728612
+      ],
+      [
+        "OZ lower fiber/DE9 40 mm / B210 device/connectors",
+        219.3687
+      ],
+      [
+        "meanwell component socket 1 / Bedrock adapter",
+        220.0
+      ],
+      [
+        "Bedrock adapter factory socket 4",
+        220.47560648610715
+      ],
+      [
+        "B210 adapter factory socket 3",
+        220.95864309238598
+      ],
+      [
+        "OZ lower fiber/DE9 40 mm / Bedrock device",
+        221.69305920574058
+      ],
+      [
+        "Peplink conservative complete envelope factory socket 2",
+        221.85881081570417
+      ],
+      [
+        "PSU exhaust 100 mm / OZ complete envelope",
+        221.95614994858786
+      ],
+      [
+        "oz component socket 3 / Bedrock adapter",
+        223.70734574997806
+      ],
+      [
+        "B210 USB/DC cable envelope / Peplink conservative complete envelope",
+        224.56998858970002
+      ],
+      [
+        "peplink component socket 1 / B210 device/connectors",
+        226.51209942569935
+      ],
+      [
+        "b210 component socket 1 / Peplink conservative complete envelope",
+        227.08642536277048
+      ],
+      [
+        "b210 component socket 1 / OZ complete envelope",
+        227.95749999999998
+      ],
+      [
+        "b210 component socket 3 / OZ complete envelope",
+        229.8684883211241
+      ],
+      [
+        "meanwell component socket 4 / Bedrock device",
+        231.2104146730199
+      ],
+      [
+        "peplink component socket 1 / B210 adapter",
+        232.3791955922001
+      ],
+      [
+        "bedrock component socket 4 / OZ complete envelope",
+        233.80329248148988
+      ],
+      [
+        "meanwell component socket 1 / Peplink conservative complete envelope",
+        235.17651316811714
+      ],
+      [
+        "PSU exhaust 100 mm / Peplink conservative complete envelope",
+        237.42415315395587
+      ],
+      [
+        "meanwell component socket 1 / Bedrock device",
+        238.0
+      ],
+      [
+        "Bedrock device factory socket 4",
+        238.581863014688
+      ],
+      [
+        "oz component socket 3 / Bedrock device",
+        244.69951942284553
+      ],
+      [
+        "PSU intake 100 mm / Bedrock device",
+        246.08526977452348
+      ],
+      [
+        "Bedrock SMA 50 mm / OZ complete envelope",
+        250.76405743247975
+      ],
+      [
+        "B210 device/connectors factory socket 1",
+        251.00520473445607
+      ],
+      [
+        "B210 USB/DC cable envelope / OZ complete envelope",
+        252.95
+      ],
+      [
+        "B210 adapter factory socket 1",
+        256.59262002123694
+      ],
+      [
+        "meanwell component socket 2 / Bedrock adapter",
+        256.6752949745161
+      ],
+      [
+        "OZ complete envelope factory socket 4",
+        260.6371732005681
+      ],
+      [
+        "oz component socket 3 / PSU upper tab",
+        262.3320033217123
+      ],
+      [
+        "PSU upper tab factory socket 3",
+        264.18271123047714
+      ],
+      [
+        "meanwell component socket 2 / Bedrock device",
+        278.28141485102765
+      ],
+      [
+        "peplink component socket 3 / PSU upper tab",
+        279.25107299709526
+      ],
+      [
+        "b210 component socket 1 / PSU lower tab",
+        279.92749789420117
+      ],
+      [
+        "Bedrock adapter factory socket 3",
+        282.37540458148186
+      ],
+      [
+        "peplink component socket 1 / PSU lower tab",
+        284.9052819456727
+      ],
+      [
+        "oz component socket 1 / PSU upper tab",
+        285.73871431235295
+      ],
+      [
+        "peplink component socket 2 / PSU lower tab",
+        287.2452950861656
+      ],
+      [
+        "Peplink conservative complete envelope factory socket 4",
+        292.64010834257215
+      ],
+      [
+        "peplink component socket 2 / PSU center plate",
+        298.4
+      ],
+      [
+        "peplink component socket 1 / PSU center plate",
+        298.4050469257227
+      ],
+      [
+        "PSU lower tab factory socket 1",
+        299.451437029631
+      ],
+      [
+        "peplink component socket 1 / PSU device/terminals",
+        300.4
+      ],
+      [
+        "peplink component socket 2 / PSU device/terminals",
+        300.4
+      ],
+      [
+        "PSU lower tab factory socket 4",
+        301.18180885370367
+      ],
+      [
+        "bedrock component socket 2 / OZ complete envelope",
+        302.72164775978956
+      ],
+      [
+        "Bedrock device factory socket 3",
+        303.95365062968006
+      ],
+      [
+        "PSU upper tab factory socket 2",
+        304.78063770341066
+      ],
+      [
+        "OZ complete envelope factory socket 2",
+        312.84673438971447
+      ],
+      [
+        "PSU center plate factory socket 1",
+        312.9030058569149
+      ],
+      [
+        "PSU device/terminals factory socket 1",
+        313.81893383745404
+      ],
+      [
+        "PSU center plate factory socket 2",
+        314.64115527342756
+      ],
+      [
+        "bedrock component socket 2 / PSU upper tab",
+        316.261902503238
+      ],
+      [
+        "b210 component socket 3 / PSU lower tab",
+        316.4835595427082
+      ],
+      [
+        "PSU device/terminals factory socket 2",
+        316.6238701450786
+      ],
+      [
+        "bedrock component socket 1 / PSU upper tab",
+        325.9761471768018
+      ],
+      [
+        "bedrock component socket 4 / PSU lower tab",
+        326.09456353132714
+      ],
+      [
+        "Bedrock IO 50 mm / PSU device/terminals",
+        326.96
+      ],
+      [
+        "bedrock component socket 1 / PSU center plate",
+        328.0
+      ],
+      [
+        "bedrock component socket 2 / PSU center plate",
+        328.2459152037726
+      ],
+      [
+        "bedrock component socket 1 / PSU device/terminals",
+        330.0
+      ],
+      [
+        "bedrock component socket 2 / PSU device/terminals",
+        330.2444481270346
+      ],
+      [
+        "peplink component socket 2 / PSU upper tab",
+        331.6008207060701
+      ],
+      [
+        "bedrock component socket 1 / PSU lower tab",
+        336.8578798272756
+      ],
+      [
+        "peplink component socket 1 / PSU upper tab",
+        380.26753366978636
+      ],
+      [
+        "PSU upper tab factory socket 1",
+        404.6187629861181
+      ],
+      [
+        "bedrock component socket 2 / PSU lower tab",
+        423.54125822375613
+      ],
+      [
+        "PSU lower tab factory socket 2",
+        430.0930871739079
+      ]
+    ],
+    "hard_constraints": [
+      [
+        "PSU exhaust 100 mm case wall",
+        1.294999999999959
+      ],
+      [
+        "PSU intake 100 mm case wall",
+        1.2949999999999946
+      ],
+      [
+        "Bedrock SMA 50 mm factory nut 2",
+        2.3134999999999994
+      ],
+      [
+        "OZ lower fiber/DE9 40 mm case wall",
+        2.645000000000003
+      ],
+      [
+        "Peplink lower cable 40 mm case wall",
+        2.8954271387999952
+      ],
+      [
+        "OZ complete envelope panel edge",
+        4.950000000000003
+      ],
+      [
+        "Peplink conservative complete envelope panel edge",
+        5.200427138799995
+      ],
+      [
+        "Bedrock adapter panel edge",
+        7.0
+      ],
+      [
+        "PSU intake 100 mm factory nut 3",
+        8.11349999999999
+      ],
+      [
+        "PSU exhaust 100 mm factory nut 4",
+        8.11349999999999
+      ],
+      [
+        "B210 USB/DC cable envelope case wall",
+        9.495000000000005
+      ],
+      [
+        "Bedrock IO 50 mm case wall",
+        9.735000000000007
+      ],
+      [
+        "bedrock stud panel-edge margin",
+        10.0
+      ],
+      [
+        "Bedrock device panel edge",
+        22.0429843
+      ],
+      [
+        "PSU upper tab panel edge",
+        22.30000000000001
+      ],
+      [
+        "PSU lower tab panel edge",
+        22.30000000000001
+      ],
+      [
+        "PSU device/terminals panel edge",
+        25.599999999999994
+      ],
+      [
+        "meanwell stud panel-edge margin",
+        25.80000000000001
+      ],
+      [
+        "B210 device/connectors panel edge",
+        25.83370000000002
+      ],
+      [
+        "Bedrock IO 50 mm factory nut 2",
+        28.113499999999988
+      ],
+      [
+        "oz stud panel-edge margin",
+        28.200000000000003
+      ],
+      [
+        "Bedrock SMA 50 mm case wall",
+        30.495000000000005
+      ],
+      [
+        "PSU center plate panel edge",
+        35.80000000000001
+      ],
+      [
+        "B210 adapter panel edge",
+        37.80000000000001
+      ],
+      [
+        "peplink stud panel-edge margin",
+        39.599999999999994
+      ],
+      [
+        "b210 stud panel-edge margin",
+        47.79250000000002
+      ],
+      [
+        "OZ lower fiber/DE9 40 mm factory nut 3",
+        81.30799515117947
+      ],
+      [
+        "Peplink upper coax/SIM 40 mm case wall",
+        87.195
+      ],
+      [
+        "OZ upper SMA 30 mm factory nut 3",
+        144.94789495380456
+      ],
+      [
+        "OZ upper SMA 30 mm case wall",
+        151.495
+      ],
+      [
+        "B210 RF cable envelope case wall",
+        158.495
+      ],
+      [
+        "Bedrock IO 50 mm factory nut 1",
+        190.3135
+      ],
+      [
+        "OZ lower fiber/DE9 40 mm factory nut 1",
+        196.7799392162739
+      ],
+      [
+        "OZ upper SMA 30 mm factory nut 1",
+        233.625997107523
+      ],
+      [
+        "OZ upper SMA 30 mm factory nut 4",
+        243.0424727410244
+      ],
+      [
+        "Bedrock SMA 50 mm factory nut 4",
+        250.1135
+      ],
+      [
+        "OZ upper SMA 30 mm factory nut 2",
+        305.1931142201001
+      ],
+      [
+        "PSU intake 100 mm factory nut 1",
+        319.3135
+      ],
+      [
+        "PSU exhaust 100 mm factory nut 2",
+        319.3135
+      ],
+      [
+        "PSU intake 100 mm factory nut 4",
+        334.9621943794663
+      ],
+      [
+        "PSU exhaust 100 mm factory nut 3",
+        334.9621943794663
+      ],
+      [
+        "Bedrock SMA 50 mm factory nut 1",
+        355.50350003424984
+      ],
+      [
+        "Bedrock IO 50 mm factory nut 4",
+        377.9002390114826
+      ],
+      [
+        "OZ lower fiber/DE9 40 mm factory nut 4",
+        402.98566782880204
+      ],
+      [
+        "Bedrock IO 50 mm factory nut 3",
+        424.75882063227994
+      ],
+      [
+        "Bedrock SMA 50 mm factory nut 3",
+        438.2437392478783
+      ],
+      [
+        "OZ lower fiber/DE9 40 mm factory nut 2",
+        442.6547419665987
+      ],
+      [
+        "PSU intake 100 mm factory nut 2",
+        466.3659910616242
+      ],
+      [
+        "PSU exhaust 100 mm factory nut 1",
+        466.3659910616242
+      ]
+    ]
+  },
+  "physical_boxes": [
+    {
+      "name": "PSU center plate",
+      "component": "meanwell",
+      "bounds_mm": [
+        [
+          349.0,
+          394.0
+        ],
+        [
+          49.39999999999999,
+          366.20000000000005
+        ],
+        [
+          0.0,
+          6.0
+        ]
+      ]
+    },
+    {
+      "name": "PSU upper tab",
+      "component": "meanwell",
+      "bounds_mm": [
+        [
+          335.5,
+          407.5
+        ],
+        [
+          301.4,
+          345.4
+        ],
+        [
+          0.0,
+          6.0
+        ]
+      ]
+    },
+    {
+      "name": "PSU lower tab",
+      "component": "meanwell",
+      "bounds_mm": [
+        [
+          335.5,
+          407.5
+        ],
+        [
+          49.39999999999999,
+          93.39999999999999
+        ],
+        [
+          0.0,
+          6.0
+        ]
+      ]
+    },
+    {
+      "name": "PSU device/terminals",
+      "component": "meanwell",
+      "bounds_mm": [
+        [
+          351.0,
+          392.0
+        ],
+        [
+          27.599999999999994,
+          366.20000000000005
+        ],
+        [
+          6.0,
+          91.0
+        ]
+      ]
+    },
+    {
+      "name": "Bedrock adapter",
+      "component": "bedrock",
+      "bounds_mm": [
+        [
+          9.0,
+          175.0
+        ],
+        [
+          205.0,
+          389.0
+        ],
+        [
+          0.0,
+          6.0
+        ]
+      ]
+    },
+    {
+      "name": "Bedrock device",
+      "component": "bedrock",
+      "bounds_mm": [
+        [
+          24.0429843,
+          157.0
+        ],
+        [
+          217.0,
+          387.0
+        ],
+        [
+          6.0,
+          57.0
+        ]
+      ]
+    },
+    {
+      "name": "B210 adapter",
+      "component": "b210",
+      "bounds_mm": [
+        [
+          179.0,
+          329.0
+        ],
+        [
+          244.0,
+          392.0
+        ],
+        [
+          0.0,
+          4.0
+        ]
+      ]
+    },
+    {
+      "name": "B210 device/connectors",
+      "component": "b210",
+      "bounds_mm": [
+        [
+          192.8254999,
+          315.1735001
+        ],
+        [
+          226.3187,
+          403.9663
+        ],
+        [
+          4.0,
+          37.7
+        ]
+      ]
+    },
+    {
+      "name": "Peplink conservative complete envelope",
+      "component": "peplink",
+      "bounds_mm": [
+        [
+          40.599999999999994,
+          212.4
+        ],
+        [
+          7.200427138799995,
+          173.43001141029998
+        ],
+        [
+          6.0,
+          35.3
+        ]
+      ]
+    },
+    {
+      "name": "OZ complete envelope",
+      "component": "oz",
+      "bounds_mm": [
+        [
+          215.9,
+          332.1
+        ],
+        [
+          6.950000000000003,
+          145.05
+        ],
+        [
+          0.0,
+          32.72
+        ]
+      ]
+    }
+  ],
+  "service_boxes": [
+    {
+      "name": "PSU intake 100 mm",
+      "component": "meanwell",
+      "bounds_mm": [
+        [
+          351.0,
+          392.0
+        ],
+        [
+          -34.400000000000006,
+          65.6
+        ],
+        [
+          6.0,
+          91.0
+        ]
+      ]
+    },
+    {
+      "name": "PSU exhaust 100 mm",
+      "component": "meanwell",
+      "bounds_mm": [
+        [
+          351.0,
+          392.0
+        ],
+        [
+          366.20000000000005,
+          466.20000000000005
+        ],
+        [
+          6.0,
+          91.0
+        ]
+      ]
+    },
+    {
+      "name": "Bedrock IO 50 mm",
+      "component": "bedrock",
+      "bounds_mm": [
+        [
+          -25.959999999999994,
+          24.040000000000006
+        ],
+        [
+          222.0,
+          372.0
+        ],
+        [
+          6.0,
+          51.0
+        ]
+      ]
+    },
+    {
+      "name": "Bedrock SMA 50 mm",
+      "component": "bedrock",
+      "bounds_mm": [
+        [
+          34.0,
+          150.0
+        ],
+        [
+          387.0,
+          437.0
+        ],
+        [
+          6.0,
+          51.0
+        ]
+      ]
+    },
+    {
+      "name": "B210 RF cable envelope",
+      "component": "b210",
+      "bounds_mm": [
+        [
+          199.0,
+          309.0
+        ],
+        [
+          178.0,
+          238.0
+        ],
+        [
+          10.4,
+          42.4
+        ]
+      ]
+    },
+    {
+      "name": "B210 USB/DC cable envelope",
+      "component": "b210",
+      "bounds_mm": [
+        [
+          199.0,
+          309.0
+        ],
+        [
+          398.0,
+          458.0
+        ],
+        [
+          10.4,
+          42.4
+        ]
+      ]
+    },
+    {
+      "name": "Peplink lower cable 40 mm",
+      "component": "peplink",
+      "bounds_mm": [
+        [
+          51.5,
+          201.5
+        ],
+        [
+          -32.799572861200005,
+          7.200427138799995
+        ],
+        [
+          10.0,
+          45.0
+        ]
+      ]
+    },
+    {
+      "name": "Peplink upper coax/SIM 40 mm",
+      "component": "peplink",
+      "bounds_mm": [
+        [
+          51.5,
+          201.5
+        ],
+        [
+          173.43001141029998,
+          213.43001141029998
+        ],
+        [
+          10.0,
+          45.0
+        ]
+      ]
+    },
+    {
+      "name": "OZ lower fiber/DE9 40 mm",
+      "component": "oz",
+      "bounds_mm": [
+        [
+          227.9,
+          320.1
+        ],
+        [
+          -33.05,
+          6.950000000000003
+        ],
+        [
+          8.0,
+          40.0
+        ]
+      ]
+    },
+    {
+      "name": "OZ upper SMA 30 mm",
+      "component": "oz",
+      "bounds_mm": [
+        [
+          232.0,
+          316.0
+        ],
+        [
+          145.05,
+          175.05
+        ],
+        [
+          8.0,
+          40.0
+        ]
+      ]
+    }
+  ],
+  "assumptions": [
+    "PSU100mm from terminal face and fan face, not from terminal protrusion; cabinet wall box exact[-36.195,467.995]",
+    "Manufacturer/source-prescribed nominal areas: Bedrock50mm, B21060mm source cable planning. Router40mm eachend andOZ40/30mm are selected cable planning allowances, not vendor minimums.",
+    "Other-component cable reservations are not forced to be mutually disjoint: routed cable crossings may occur at different elevations; actual harness routing still required.",
+    "Complete connector bounds are conservative for invalid source Peplink subsolids.",
+    "Factory socket radius15mm,height60; component socketsradius5mm,height40-60. No supplier load/thermal/vibration qualification is established.",
+    "This is a best-found constrained layout, not a proof of global optimality over arbitrary orientations."
+  ]
+}

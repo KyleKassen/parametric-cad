@@ -1,0 +1,309 @@
+{
+  "units": "mm",
+  "cutter_catalog": "C:/Users/KyleKassen/AppData/Local/Programs/FrontDesign/Config/Werkzeug.d/10-Base.ini",
+  "installed_Cutter06": {
+    "diameter_mm": 0.6,
+    "max_plunge_mm": 0.5,
+    "max_breakthrough_mm": 0.5,
+    "max_depth_mm": 0.8
+  },
+  "supplier_sources": [
+    "https://www.frontpanelexpress.com/faq",
+    "https://docs.frontpanelexpress.com/elements/milling_elements/cavity.html",
+    "https://docs.frontpanelexpress.com/elements/milling_elements/free_contour.html"
+  ],
+  "caveats": [
+    "FAQ states smallest cutter1mm and typical production tolerance0.05..0.10mm; catalog0.6mm is not supplier process acceptance.",
+    "No minimum blind-pocket depth found in inspected installed catalog or official cavity page.0.05mm is below catalog maximum but +/-0.01 depth capability is not established.",
+    "Free-contour help says multiple paths may split/group on import. Native output must preserve all four fully enclosed circular hardlands plus two lands joined to outer perimeter.",
+    "2D offset screen is approximate; native FPD toolpath/actual part controls production."
+  ],
+  "thermal_contours": {
+    "top": {
+      "sha256": "af6025d79fe0295c5891708296e59a84587fdf6175fb0fabba88cabb9e89c469",
+      "entity_counts": {
+        "LINE": 14,
+        "ARC": 6,
+        "CIRCLE": 4
+      },
+      "arc_radii_mm": [
+        4.0,
+        5.0
+      ],
+      "circle_radii_mm": [
+        4.0
+      ],
+      "valid_sampled_polygon": true,
+      "fully_enclosed_islands": 4,
+      "sampled_area_mm2": 19379.514244085614,
+      "bounds_mm": [
+        -63.0,
+        -78.0,
+        82.65,
+        78.0
+      ],
+      "groove_R0_25_survives_export": false,
+      "cutter_screen": {
+        "0.6": {
+          "effective_radius_for_numerical_screen_mm": 0.3,
+          "estimated_uncut_area_mm2": 0.40812647372661864,
+          "significant_patches": [
+            {
+              "area_mm2": 0.1055991097445653,
+              "centroid_mm": [
+                -62.87318858142121,
+                -72.96811259476827
+              ],
+              "bounds_mm": [
+                -63.0,
+                -73.38154534959315,
+                -62.49803286430638,
+                -72.64575
+              ]
+            },
+            {
+              "area_mm2": 0.09845322604421175,
+              "centroid_mm": [
+                -62.87668330283663,
+                -67.04343156232957
+              ],
+              "bounds_mm": [
+                -63.0,
+                -67.35425,
+                -62.51180556297912,
+                -66.65361674858208
+              ]
+            },
+            {
+              "area_mm2": 0.0984532260442119,
+              "centroid_mm": [
+                62.87668330283653,
+                -67.04343156232957
+              ],
+              "bounds_mm": [
+                62.51180556297912,
+                -67.35425,
+                63.0,
+                -66.65361674858208
+              ]
+            },
+            {
+              "area_mm2": 0.10559910974456517,
+              "centroid_mm": [
+                62.87318858142116,
+                -72.96811259476826
+              ],
+              "bounds_mm": [
+                62.49803286430638,
+                -73.38154534959315,
+                63.0,
+                -72.64575
+              ]
+            }
+          ]
+        },
+        "1.0": {
+          "effective_radius_for_numerical_screen_mm": 0.4999,
+          "estimated_uncut_area_mm2": 1.047553005051133,
+          "significant_patches": [
+            {
+              "area_mm2": 0.28664807069189285,
+              "centroid_mm": [
+                -62.78697321844517,
+                -73.16936320485019
+              ],
+              "bounds_mm": [
+                -63.0,
+                -73.87121903408189,
+                -62.15747756188245,
+                -72.64575
+              ]
+            },
+            {
+              "area_mm2": 0.23709908014471262,
+              "centroid_mm": [
+                -62.80740193500403,
+                -66.8790973397688
+              ],
+              "bounds_mm": [
+                -63.0,
+                -67.35425,
+                -62.22044700966565,
+                -66.25854670114245
+              ]
+            },
+            {
+              "area_mm2": 0.2370990221560061,
+              "centroid_mm": [
+                62.807402008591,
+                -66.87909739815434
+              ],
+              "bounds_mm": [
+                62.22115704820495,
+                -67.35425,
+                63.0,
+                -66.25854670114245
+              ]
+            },
+            {
+              "area_mm2": 0.286648070691893,
+              "centroid_mm": [
+                62.7869732184451,
+                -73.1693632048501
+              ],
+              "bounds_mm": [
+                62.15747756188245,
+                -73.87121903408189,
+                63.0,
+                -72.64575
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "bottom": {
+      "sha256": "78463163907c709685826e269d928941303c7e32199d2e040f5c187f3175b7d1",
+      "entity_counts": {
+        "LINE": 12,
+        "ARC": 6,
+        "CIRCLE": 4
+      },
+      "arc_radii_mm": [
+        5.0,
+        6.0
+      ],
+      "circle_radii_mm": [
+        6.0
+      ],
+      "valid_sampled_polygon": true,
+      "fully_enclosed_islands": 4,
+      "sampled_area_mm2": 19040.413157224153,
+      "bounds_mm": [
+        -63.0,
+        -78.0,
+        82.65,
+        78.0
+      ],
+      "groove_R0_25_survives_export": false,
+      "cutter_screen": {
+        "0.6": {
+          "effective_radius_for_numerical_screen_mm": 0.3,
+          "estimated_uncut_area_mm2": 0.44612530593863103,
+          "significant_patches": [
+            {
+              "area_mm2": 0.05479067091400287,
+              "centroid_mm": [
+                -62.89638341226637,
+                -64.62559236785295
+              ],
+              "bounds_mm": [
+                -63.0,
+                -64.80385,
+                -62.56946638738928,
+                -64.30793699172952
+              ]
+            },
+            {
+              "area_mm2": 0.05479068082872656,
+              "centroid_mm": [
+                62.89638343113891,
+                -64.62559234233547
+              ],
+              "bounds_mm": [
+                62.57015594354383,
+                -64.80385,
+                63.0,
+                -64.30793699172952
+              ]
+            },
+            {
+              "area_mm2": 0.1682634435161296,
+              "centroid_mm": [
+                61.93374012510496,
+                -75.83795464389759
+              ],
+              "bounds_mm": [
+                61.44935772623883,
+                -76.31077639126076,
+                62.30769,
+                -75.53846
+              ]
+            },
+            {
+              "area_mm2": 0.16826344351612993,
+              "centroid_mm": [
+                -61.93374012510497,
+                -75.83795464389773
+              ],
+              "bounds_mm": [
+                -62.30769,
+                -76.31077639126076,
+                -61.44935772623883,
+                -75.53846
+              ]
+            }
+          ]
+        },
+        "1.0": {
+          "effective_radius_for_numerical_screen_mm": 0.4999,
+          "estimated_uncut_area_mm2": 1.2786996546490281,
+          "significant_patches": [
+            {
+              "area_mm2": 0.1415430338765193,
+              "centroid_mm": [
+                -62.83406398867386,
+                -64.51876413081173
+              ],
+              "bounds_mm": [
+                -63.0,
+                -64.80385,
+                -62.30485232128756,
+                -64.0002218962065
+              ]
+            },
+            {
+              "area_mm2": 0.14154303387651931,
+              "centroid_mm": [
+                62.83406398867381,
+                -64.51876413081163
+              ],
+              "bounds_mm": [
+                62.30485232128756,
+                -64.80385,
+                63.0,
+                -64.0002218962065
+              ]
+            },
+            {
+              "area_mm2": 0.4977846291718987,
+              "centroid_mm": [
+                61.645937520327045,
+                -76.03603821608853
+              ],
+              "bounds_mm": [
+                60.83462684657135,
+                -76.82023266876456,
+                62.30769,
+                -75.53846
+              ]
+            },
+            {
+              "area_mm2": 0.49778462917189875,
+              "centroid_mm": [
+                -61.64593752032697,
+                -76.03603821608847
+              ],
+              "bounds_mm": [
+                -62.30769,
+                -76.82023266876456,
+                -60.83462684657135,
+                -75.53846
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,326 @@
+B210 mounting system | P2 flat and upright
+                                                                                                                                                                                   PRELIMINARY - PROTOTYPE MANUFACTURE / NOT QUALIFIED
+
+
+
+
+ Option                            Structural footprint                               Height above plate                                                    Plate fixing centers
+
+
+ Flat                              160 x180                                           50.851 nominal incl. screw heads                                      140 x140; 4 xDIA5.5
+
+
+ Upright                           79 x180                                            176 nominal                                                           35 x140; 4 xDIA5.5
+
+ P2: 8 mm broad base with integral thread bosses; 5 mm retainer bars; 6 mm upright web/foot with machined reinforcing ribs.
+ Both orientations use the same cradle. Upright supports are identical and bolt to the cradle. Custom structural parts are unwelded 6061-T6/T651.
+ Reserve front RF 60 mm and rear USB/DC/reference 70 mm beyond the model, subject to actual connector and cable dimensions.
+ Reserve 50 mm normal-to-cradle withdrawal flat /60 mm upright, plus tools and plate underside access. Do not size a box from the part envelope alone.
+ Preliminary installation: rigid flat 6 mm metal plate in stationary indoor service. Box size, cable route, temperature and support stiffness remain to be confirmed.
+
+
+
+
+B210 / P2 | mm | Dimensions apply AFTER finish | Do not scale drawing                                                                                                                                                  2026-09-08 / 1 of 6
+M01 | Machined cradle base and integral bosses
+                                                                                                                                                                            PRELIMINARY - PROTOTYPE MANUFACTURE / NOT QUALIFIED
+
+
+
+
+                                                                                                      DATUM A: underside Z0. B: X centerplane. C: Y=3.053 centerplane.
+                                                                                                      Certified 6061-T6/T651; general linear +/-0.20, angles +/-0.5deg.
+                                                                                                      Broad plate 8.00 +/-0.10; MIN 7.90. A flatness 0.10.
+                                                                                                      Outer plan R16; accessible outer edges 0.5 x45deg.
+                                                                                                      Black sulfuric anodize 10-15um; final fit dimensions govern.
+                                                            140 hole pitch
+
+
+                                                                                                     Feature                        Coordinates / size                                   Requirement
+
+
+                                                                                                     4 plate bores                  X +/-70; Y=C +/-70                                   DIA5.5 +.10/0 THRU
+
+
+                                                                                                     4 thread bosses                X +/-68; Y=C +/-38                                   DIA12; top Z9.20 +/-.05
+
+
+                                                                                                     4 retainer taps                Concentric with bosses                               M5 x0.8-6H THRU
+
+
+                                                                                                     4 foot reliefs                 X +/-46.7995; Y +/-60.0075                           DIA16 +.20/0 THRU
+
+
+
+
+                                                                                    140 hole pitch
+      180 +/-0.20
+
+
+
+
+                                                                                                     Lower pocket                   X +/-61.50; Y -75.430 /81.155                        Floor Z4.00 +/-.10
+
+
+                                                                                                     Upper end relief               Y -77.930 /83.306                                    Floor Z7.80 +/-.05
+
+
+                                                                                                     4 hard lands                   X +/-50; Y=C +/-38                                   16 x20 R1; Z5.50 +/-.05
+
+
+                                                             136 tap pitch                           Center window                  X +/-40; Y=C +/-50                                   80 x100 R5 THRU
+
+
+                                                                                                      Hole centers +/-0.10 coordinate from B/C; no chain tolerances.
+                                                                                                      Pocket width +0.10/0; end positions +/-0.05. Land coplanarity0.05.
+                                                                                                      Machine pockets, lands and bosses from one blank. No bonded support blocks.
+                                                                                                      DIA6 cutter corner reliefs: exact contours in STEP and Z-layer DXF.
+                                                                                                      Drill 4.2 then tap M5 THRU. Assembly complete thread engagement>=7.5 mm;
+                                                                                                      screw-tip recess>=0.5 mm above underside. Actual screw and shim sizes govern.
+                                                                                                      Mask threads and spacer seats during anodize; seats clean and flat.
+                                                                                                      Critical inner end-stop edges: deburr<=0.10; no general chamfer here.
+                                                                                                      Stock must allow 9.20 mm bosses plus facing allowance; mill broad plate to8.
+                                                                                                      An 8 mm finished blank cannot produce the integral bosses.
+
+                                                              160 +/-0.20
+                                                                                                       SECTION Y=C+38: integral floor, hard lands and raised thread seats
+
+
+
+
+B210-M01 / P2 / QTY 1 | mm | Dimensions apply AFTER finish | Do not scale drawing                                                                                                                                  2026-09-08 / 2 of 6
+M02 / M03 / M04 | Retainer, spacer and film
+                                                                                                                                                                                                       PRELIMINARY - PROTOTYPE MANUFACTURE / NOT QUALIFIED
+
+
+
+
+                                                                                                                                                     M02 RETAINER BAR - QTY 2
+                                                                                                                                                     Certified 6061-T6/T651;160 x20 x5.
+                                                                                                                                                     Thickness 5.00 +/-0.10; MIN 4.90 after finish.
+                                                       136 +/-0.10; 2X DIA5.5 +0.10/0 THRU
+                                                                                                                                                     Width 20.00 +/-0.10; plan corners R3.
+                                                                                                                                                     Holes X +/-68,Y0; coordinate tolerance +/-0.10.
+                                                                                                                                                     Edges0.5 x45deg; hole rims deburred.
+                                                                                                                                                     Underside flatness 0.05; black anodize as M01.
+                                                                                                                                                     PET patch centers X +/-50,Y0.
+
+                                                                         160 +/-0.20
+
+
+
+
+                                                                               M03 CATALOG SPACER - QTY 4                                            M04 ANTI-MAR FILM - QTY 8
+                                                                               McMaster 94669A146, aluminum.                                         McMaster 8689K65 PET sheet, acrylic adhesive.
+                                                                               OD10 +/-0.13; ID5.300 +/-0.13.                                        Cut 8 patches 16 x20 with R1 corners per mount.
+                                                                               Length 30.00 +/-0.13; catalog tolerances apply.                       Four on hard lands; four below retainer bars.
+                                                                               Alloy, temper and yield not stated in catalog.                        Installed bonded TOTAL thickness <=0.20 mm.
+                                                                               Measure and match actual spacer lengths.                              Catalog 0.005 +/-.0005 in =0.127 +/-.0127 mm;
+                                                                               Annular metal shims sit under spacers.                                adhesive inclusion not explicit. Measure total.
+                                                                               Nominal reference shim total0.6508:                                   Adhesive on mount; PET face contacts case.
+                                                                               0.50 +0.10 +0.0508; measure actual stack.                             Catalog limit 150F /65.6C; qualify actual
+                                                                                                                                                     box temperature, adhesion and wear.
+
+
+
+
+   Assembled Z station                                                  Reference dimension                                                     Acceptance
+
+
+   Pan underside                                                        5.70 with0.20 mm lower film                                             Actual case rests on four hard lands
+
+
+   Device top                                                           39.40 nominal                                                           Measure actual enclosure
+
+
+   Bar underside                                                        9.20 +30 +0.6508 =39.8508                                               Select measured spacer/shim stack
+
+
+   Top film underside                                                   39.6508 reference                                                       Four gaps 0.20-0.30, cold and warm
+
+  Metal seats carry screw preload; no clamping preload on the radio. CAD gap 0.2508 mm is a reference, not a delivered fit guarantee.
+  Film has no credited retention, strength, friction, cooling or grounding function. No thick foam substitution; reset gaps after any change.
+
+
+
+
+B210 / P2 | mm | Dimensions apply AFTER finish | Do not scale drawing                                                                                                                                                                      2026-09-08 / 3 of 6
+M05 | Ribbed upright support
+                                                                                                                                                                                                   PRELIMINARY - PROTOTYPE MANUFACTURE / NOT QUALIFIED
+
+
+
+
+                                                                                                                                                                                                                                             36 +/-0.10
+                               140 hole pitch
+
+
+
+
+                                                                                                           WEB VIEW: holes Y0                                                   FOOT VIEW: holes X20/55, Y0
+     176 +/-0.20
+
+
+
+
+                                                                                                        Feature                        Position                                                Dimension / tolerance
+
+
+                                                                                                        Main web                       X=-6 to0                                                6.00 +/-.10; MIN 5.90
+
+
+                                                                                                        Foot floor                     Z=0 to6                                                 6.00 +/-.10; MIN 5.90
+
+
+                                                                                                        Overall width                  Y=-18 to18                                              36.00 +/-.10
+
+
+                                                                                                        Rear returns                   X=-14 to-6; Z0 to176                                    2X3.00 wide x8.00 deep
+
+
+                                                                                                        Foot ribs                      X=-14 to65; Z6 to14                                     2X3.00 wide x8.00 high
+
+
+                                                                                                        Rib Y zones                    Y=-18 to-15 /15 to18                                    Rib3 +/-.10; MIN 2.90
+
+
+                                                                                                        Channel openings               30 mouth;24 flat floor                                  Inside blendsR3; front rootR6
+
+
+                                                                                                        2 web holes                    Y0; Z26 /166                                            DIA5.5 +.10/0 alongX
+
+
+                                                                                                        2 foot holes                   Y0; X20 /55                                             DIA5.5 +.10/0 alongZ
+                              79 +/-0.20 overall X
+                                                                                                        A=foot undersideZ0; B=cradle mating faceX0; C=width centerplaneY0.
+                                                                                                        A flatness 0.10; A/B perpendicularity 0.10 over160. Hole coordinates +/-.15.
+                                                                                                        General +/-.20, angles +/-.5deg. Return depth/rib height8 +/-.10; MIN 7.90.
+                                                                                                        Machine one-piece certified 6061-T6/T651 from 82 x180 x38.1 oversize stock.
+                                                                                                        Rear and foot pockets require orthogonal setups, R3 tools and supported workholding.
+                                                                                                        Black anodize 10-15um; mask seats. Deburr0.2-0.5; preserve full root and ribs.
+                                                                                                        Pair atY=-66.947/+73.053; 140 spacing. Not a freestanding stand.
+  R6 front root center(X6,Z12), tangent(X6,Z6)/(X0,Z12). STEP defines rib-blend transitions.
+  Machined part: layered DXF sections complement STEP; no sheet-metal flat pattern or bend allowance.
+
+
+
+
+B210-M05 / P2 / QTY 2 IDENTICAL | mm | Dimensions apply AFTER finish | Do not scale drawing                                                                                                                                            2026-09-08 / 4 of 6
+Hardware | Exact McMaster procurement schedule
+                                                                                                                                                                                                    PRELIMINARY - PROTOTYPE MANUFACTURE / NOT QUALIFIED
+
+
+
+
+ ID           McMaster PN                  Specification / role                                                                                    Flat              Upright       USD / pack qty
+
+
+ H01          91290A197                    M5x45 cap screw; Class 12.9 black oxide                                                                 4                 4             $3.26 / 5
+
+
+ H02          91290A252                    M5x25 cap screw; Class 12.9 black oxide                                                                 4                 8             $10.96 / 50
+
+
+ H03          98688A144                    ISO7089 steel washer; OD10, ID5.3, t0.9-1.1                                                             12                16            $10.82 / 100
+
+
+ H04          94645A102                    M5 locknut; Class 10 zinc steel, DIN985                                                                 4                 8             $15.66 / 100
+
+
+ H05          94669A146                    Al spacer; L30, OD10, ID5.3, each +/-.13                                                                4                 4             $2.14 / 1
+
+
+ H06          91100A140                    Foot TOP washer; OD15, ID5.3, t1.0-1.4                                                                  0                 4             $5.12 / 100
+
+
+ C01          8689K65                      PET adhesive sheet 27x20in;8 patches/version                                                            1                 1             $4.00 / 1
+
+
+ C02          91458A115                    LOCTITE 243 removable threadlocker,0.34fl oz                                                            AR                AR            $18.42 / 1
+
+
+ S01          98055A095                    DIN988 spring-steel shim,5ID x10OD x.10                                                                 AR                AR            $5.52 / 50
+
+
+ S02          98055A098                    DIN988 spring-steel shim,5ID x10OD x.50                                                                 AR                AR            $6.90 / 50
+
+
+ S03          98126A161                    18-8 shim,6.35ID x9.525OD x.0508                                                                        AR                AR            $8.31 / 10
+
+
+
+ Four H06 large washers go on TOP of upright feet only; ordinary H03 washers remain below supporting plate. Accept H06 OD>=14.9 mm on receipt; catalog OD tolerance is not
+ stated. H06 is zinc steel, DIN9021; no strength grade stated.
+ Use 4 mm hex drive and 8 mm nut wrench. Screws are Class 12.9, washers catalogued for Class 10.9, nuts Class 10: do not apply maximum screw-class preload to these lower-rated
+ joints or aluminum members. Dry indoor service; establish assembly tightening procedure.
+ Reference retainer entry:45 -(5 bar +1 washer +30 spacer +.6508 shim)=8.3492 mm;9.2 boss gives0.8508 mm nominal tip recess. Actual COMPLETE engaged threads>=7.5 mm and tip
+ recess>=0.5 mm must both be inspected; nominal entry is not effective engagement.
+ Through bolts assume6 mm rigid plate and underside access. Inspect>=2 complete threads beyond locknut. Select different lengths for actual plate/washer stacks. No screw enters
+ the radio.
+ Use the fewest metal shims; no more than 4 per location without redesign. Measure all stacks. Fine shim 98126A161 is an inch-size substitute; center it under the spacer. Keep
+ spring-steel shims dry.
+ Prices observed2026-09-08 before tax/shipping, not quotes. Installed counts are per complete version. One film sheet and one threadlocker bottle can serve both. See
+ catalog_bom.json/CSV for all full descriptions, tolerances, pack rounding and source URLs.
+
+
+
+
+  Source pages: https://www.mcmaster.com/[part-number]/ . Full linked catalog records accompany this PDF. No purchase or physical hardware inspection performed.
+
+
+
+
+B210 / P2 | mm | Dimensions apply AFTER finish | Do not scale drawing                                                                                                                                                                   2026-09-08 / 5 of 6
+Installation, removal and prototype release gates
+                                                                                                                                                 PRELIMINARY - PROTOTYPE MANUFACTURE / NOT QUALIFIED
+
+
+
+
+ ASSEMBLY / INSTALLATION                                                                                           DIGITAL DELIVERABLES
+ 1. Inspect material certificates, dimensions, finish, deburring and actual hardware. Check ribs, bosses and       Actual supplied STEP imported, measured and preserved.
+ bearing seats. Keep precision seats and threads clean.                                                            196 source solids, including duplicate front overlays,
+ 2. Fit 4 PET patches on hard lands and 4 below bars. Measure installed bonded thickness without release liner;    documented.
+ maximum 0.20 mm. Record actual thickness.                                                                         Editable CAD source, actual STEP exports and machining
+                                                                                                                   DXFs accompany this pack.
+ 3. Flat: mount cradle at X +/-70,Y=C +/-70 using M5x25, washers both sides and new locknuts. Assumed plate 6
+                                                                                                                   Verification reports state the checked revision,
+ mm, accessible from below.
+                                                                                                                   digital checks, calculations and assumptions.
+ 4. Upright: attach supports to plate first at foot X20/55,Y=-66.947/+73.053. Use M5x25, large OD15 washers on
+                                                                                                                   No fabrication, FEA, physical load, thermal or
+ top, ordinary OD10 washers and locknuts below. Then attach cradle to webs at Z26/166 with M5x25, ordinary
+                                                                                                                   vibration test has occurred.
+ washers and locknuts.
+ 5. Place disconnected radio in cradle. Feet enter 16 mm reliefs; metal pan bears on four film-covered hard        BEFORE SERVICE
+ lands. Actual labels and device screw heads must clear relieved ends and stops; installed label clearance         Confirm actual mounting plate and box.
+ >=0.20 mm.                                                                                                        Weigh device and complete mount.
+ 6. Fit matched spacers, measured shim stacks, two bars and four M5x45 screws with washers. Close metal seats,     Measure case, label and device-fastener clearances.
+ never clamp the case. Inspect all four top gaps 0.20-0.30 mm, complete threads>=7.5 mm and screw-tip              Set/record all four cold and warm gaps.
+ recess>=0.5 mm simultaneously.                                                                                    Verify no unintended case clamp load.
+ 7. Apply threadlocker 243 only to retainer/base threads, following supplier preparation/cure procedure. Connect   Perform staged retention, handling and cable-force
+ actual plugs, check cable bend radius and anchor cables to supporting plate. Log final stacks/gaps and witness    tests per prototype plan.
+ marks.                                                                                                            Test worst expected operating temperature in actual
+ REMOVAL                                                                                                           box.
+                                                                                                                   Inspect permanent set, cracks, loose screws, film wear
+ Power down, disconnect cables, remove 4 retainer screws, bars and spacer/shims. Withdraw normal to cradle
+                                                                                                                   and case damage after loading.
+ plane; reserve 50 mm flat /60 mm upright. Keep each shim stack identified by position. Disassemble enclosure
+                                                                                                                   Approve supporting structure and its fixing edge
+ off-mount. Replace worn films/locknuts, reset gaps and restore locking on service.
+                                                                                                                   distances.
+
+
+                                                                                                                   Neither PET nor anodized contact establishes protective
+                                                                                                                   or RF ground. Provide a separate verified bond if
+                                                                                                                   required.
+
+
+                                                                                                                   Stationary indoor preliminary scope. No vehicle,
+                                                                                                                   airborne, outdoor or overhead qualification claimed.
+
+
+
+
+B210 / P2 | mm | Dimensions apply AFTER finish | Do not scale drawing                                                                                                                2026-09-08 / 6 of 6
+

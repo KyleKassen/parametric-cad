@@ -1,0 +1,159 @@
+{
+  "part": "oz51x-dual-tx-housing-vertical-snap",
+  "version": "v2",
+  "units": "mm",
+  "status": "prototype candidate; not production accepted",
+  "mechanical_checks": "66/66 pass; reference hardware, not exact SKUs",
+  "style_gate": "50.0/100; unchanged target 70; see evaluation report for verdict",
+  "files": [
+    {
+      "file": "README.md",
+      "sha256": "9bc3caef12548000f553ea83bb058fdcdc72f094dde25790a34ff95d6386ea0d"
+    },
+    {
+      "file": "DESIGN.md",
+      "sha256": "38a153d43b7141cad63a0685b3588e72e1853493bbcaf0a2ec002aeacaee2ffc"
+    },
+    {
+      "file": "CONNECTOR.md",
+      "sha256": "186be46f4af07b42571a02842910f0d0ff161fc18d2acc4e53b6d64c795e7872"
+    },
+    {
+      "file": "exports/base_v2.step",
+      "sha256": "1b144804fb7e2a82bd28ced1b875e66a61e8be4e6f66d1634851dde9e6ade9aa"
+    },
+    {
+      "file": "exports/cover_v2.step",
+      "sha256": "5ff64541945bc52d4f9b01a0ea2602c00a0ee4ce5e18d6b34a39530ad6abf01f"
+    },
+    {
+      "file": "exports/oz51x-dual-tx-housing-vertical-snap_v2.step",
+      "sha256": "c8751b57b14593dd457c9ef71095b63600ecae92e213b6d87118874f86d18ec2"
+    },
+    {
+      "file": "exports/base_print_v2.stl",
+      "sha256": "cc717efcc2e689ba99f527ca71a12165fe05ed79210e7b5b644961a3fed2a9b4",
+      "mesh_check": {
+        "triangles": 31240,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "zero_area_export_triangles_removed": 12,
+        "seam_normalization_grid_mm": 1e-05
+      }
+    },
+    {
+      "file": "exports/base_v2.stl",
+      "sha256": "d19f0febf21c80c2c2025bc31ca6969d52a3d405cb915f1d09bd5c7b9f63352c",
+      "mesh_check": {
+        "triangles": 31240,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "zero_area_export_triangles_removed": 12,
+        "seam_normalization_grid_mm": 1e-05
+      }
+    },
+    {
+      "file": "exports/cover_print_v2.stl",
+      "sha256": "08aa79019120666b5a7009413e1c2aa6a792f26aa0a73b4b15a50aa0f1317d72",
+      "mesh_check": {
+        "triangles": 9362,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "zero_area_export_triangles_removed": 4,
+        "seam_normalization_grid_mm": 1e-05
+      }
+    },
+    {
+      "file": "exports/cover_v2.stl",
+      "sha256": "fed73f4ee27b9470f262b6e2a17c1f6ba42fb15ab3cd91930294c44108e2be7e",
+      "mesh_check": {
+        "triangles": 9362,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "zero_area_export_triangles_removed": 4,
+        "seam_normalization_grid_mm": 1e-05
+      }
+    },
+    {
+      "file": "exports/coupons/de9_panel_coupon_v2.step",
+      "sha256": "ab468f0b19d4e1cb454f4e08368bde26b677053ca22db6441d3715c4c0701c94"
+    },
+    {
+      "file": "exports/coupons/de9_panel_coupon_v2.stl",
+      "sha256": "c605041f7e87558b544c692233615f73aa837013c4589d0508fcf3a0d5c495d2",
+      "mesh_check": {
+        "triangles": 2080,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "zero_area_export_triangles_removed": 0,
+        "seam_normalization_grid_mm": 1e-05
+      }
+    },
+    {
+      "file": "exports/coupons/latch_base_coupon_v2.step",
+      "sha256": "d852aa46071890cc709c9bbe4c3ddd668534c657c2a15ea0dcf45c71acf4669d"
+    },
+    {
+      "file": "exports/coupons/latch_base_coupon_v2.stl",
+      "sha256": "fb7b7f7f83ab905fa62df1ab6fa7cfcbba5387c401b5af04bdae198a153cbbfe",
+      "mesh_check": {
+        "triangles": 36,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "zero_area_export_triangles_removed": 0,
+        "seam_normalization_grid_mm": 1e-05
+      }
+    },
+    {
+      "file": "exports/coupons/latch_coupon_seated_v2.step",
+      "sha256": "c7d35a94d29b560a182be15be5b6f0453dd7e8b83eeef919579d75902493529a"
+    },
+    {
+      "file": "exports/coupons/latch_cover_coupon_v2.step",
+      "sha256": "2650a18b36dc1dce3f7d966d9ad4bd53031db3c2daf8691d502a86f8744b5597"
+    },
+    {
+      "file": "exports/coupons/latch_cover_coupon_v2.stl",
+      "sha256": "c45abb6ea632f142b4af1a05355ff5c54cd8e43c6865041bcd76d8c7568ae60d",
+      "mesh_check": {
+        "triangles": 930,
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "zero_area_export_triangles_removed": 4,
+        "seam_normalization_grid_mm": 1e-05
+      }
+    },
+    {
+      "file": "exports/coupons/README.md",
+      "sha256": "ba2abc3a847b19f715144abf3e4b5c8775ec73fbf16a471964e4120de6b4c087"
+    },
+    {
+      "file": "exports/coupons/coupon_validation.json",
+      "sha256": "f313ab99d82ec00bc2fb98b08e10a7676735f30e4c019ead5c1a2fc514e6f74d"
+    },
+    {
+      "file": "references/product/with_reference_connectors_front_io.png",
+      "sha256": "0c72ac32647637cdb36ced5cec38601cee0c554ecfdc77315a8a684ebed8d96f"
+    },
+    {
+      "file": "references/product/exploded_front_io.png",
+      "sha256": "941ee317115cd31792b36f9ec86256fc3e3fad0667d52975dcd58be213e06e9e"
+    },
+    {
+      "file": "references/product/open_housing_open.png",
+      "sha256": "d74dc2ecd268c7d4a9dcd5a1d75f27a540cde5a8bd28c7e76f64e6cfd58cc381"
+    },
+    {
+      "file": "references/product/open_housing_interior_elevation.png",
+      "sha256": "96e20b3d094d20544c2772d7fd641dc409fea5f2df9f2031c4a8fad13bf1148e"
+    },
+    {
+      "file": "references/fit_report.json",
+      "sha256": "330ad809c6d3459733ff97e8206a4c4627b8c115ca0d9262f122d5debf83cb72"
+    },
+    {
+      "file": "references/evaluation.json",
+      "sha256": "cc14d18e16f28301a1de9895158cb4b5cb49fc70f820102b88e74c7b4a67377d"
+    }
+  ]
+}

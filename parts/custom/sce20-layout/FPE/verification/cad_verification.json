@@ -1,0 +1,357 @@
+{
+  "status": "PASS",
+  "scope": "nominal exported CAD integration; Peplink inherited connector validity exception; threads simplified, no strength/thermal qualification",
+  "checks": [
+    {
+      "check": "exported backpanel valid single solid",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "exported 431.8 x431.8 x6 dimensions",
+      "pass_check": true,
+      "measured": {
+        "x": [
+          -1.1102230246251565e-16,
+          431.8
+        ],
+        "y": [
+          -1.1102230246251565e-16,
+          431.8
+        ],
+        "z": [
+          -6.000000000000023,
+          1.7430501486614958e-14
+        ]
+      }
+    },
+    {
+      "check": "FACTORY_1 open through nominal diameter",
+      "pass_check": true,
+      "measured": 0.0
+    },
+    {
+      "check": "FACTORY_2 open through nominal diameter",
+      "pass_check": true,
+      "measured": 0.0
+    },
+    {
+      "check": "FACTORY_3 open through nominal diameter",
+      "pass_check": true,
+      "measured": 0.0
+    },
+    {
+      "check": "FACTORY_4 open through nominal diameter",
+      "pass_check": true,
+      "measured": 0.0
+    },
+    {
+      "check": "FACTORY_5 open through nominal diameter",
+      "pass_check": true,
+      "measured": 0.0
+    },
+    {
+      "check": "FACTORY_6 open through nominal diameter",
+      "pass_check": true,
+      "measured": 0.0
+    },
+    {
+      "check": "MEANWELL_1 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "MEANWELL_2 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "MEANWELL_3 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "MEANWELL_4 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "BEDROCK_1 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "BEDROCK_2 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "BEDROCK_3 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "BEDROCK_4 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "B210_1 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "B210_2 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "B210_3 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "B210_4 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "PEPLINK_1 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "PEPLINK_2 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "PEPLINK_3 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "PEPLINK_4 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "OZ_1 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "OZ_2 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "OZ_3 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "OZ_4 correct recessed mounting cavity",
+      "pass_check": true,
+      "measured": null
+    },
+    {
+      "check": "b210 physical envelope contained",
+      "pass_check": true,
+      "measured": {
+        "x": [
+          179.0,
+          329.0
+        ],
+        "y": [
+          226.3187,
+          403.9663
+        ],
+        "z": [
+          -3.219646771412954e-15,
+          37.70000009999701
+        ]
+      }
+    },
+    {
+      "check": "b210 reference validity",
+      "pass_check": true,
+      "measured": {
+        "valid": true,
+        "exception": null
+      }
+    },
+    {
+      "check": "bedrock physical envelope contained",
+      "pass_check": true,
+      "measured": {
+        "x": [
+          9.0,
+          175.0
+        ],
+        "y": [
+          205.0,
+          389.0
+        ],
+        "z": [
+          -3.247402347028583e-15,
+          57.000000000002665
+        ]
+      }
+    },
+    {
+      "check": "bedrock reference validity",
+      "pass_check": true,
+      "measured": {
+        "valid": true,
+        "exception": null
+      }
+    },
+    {
+      "check": "meanwell physical envelope contained",
+      "pass_check": true,
+      "measured": {
+        "x": [
+          335.5,
+          407.50000000000006
+        ],
+        "y": [
+          27.600000536499998,
+          366.2000008000001
+        ],
+        "z": [
+          -3.044786645034492e-14,
+          91.00000008491999
+        ]
+      }
+    },
+    {
+      "check": "meanwell reference validity",
+      "pass_check": true,
+      "measured": {
+        "valid": true,
+        "exception": null
+      }
+    },
+    {
+      "check": "peplink physical envelope contained",
+      "pass_check": true,
+      "measured": {
+        "x": [
+          40.600000000002,
+          212.39999999999998
+        ],
+        "y": [
+          7.200427138866002,
+          173.430011410287
+        ],
+        "z": [
+          6.000000000005003,
+          35.30000010000001
+        ]
+      }
+    },
+    {
+      "check": "peplink reference validity",
+      "pass_check": true,
+      "measured": {
+        "valid": false,
+        "exception": "inherited Peplink connector solids; conservative packing envelope used"
+      }
+    },
+    {
+      "check": "oz physical envelope contained",
+      "pass_check": true,
+      "measured": {
+        "x": [
+          215.89999999999998,
+          332.1
+        ],
+        "y": [
+          6.949999900000003,
+          145.04900010000003
+        ],
+        "z": [
+          -1.0000000556221735e-07,
+          32.720000000000006
+        ]
+      }
+    },
+    {
+      "check": "oz reference validity",
+      "pass_check": true,
+      "measured": {
+        "valid": true,
+        "exception": null
+      }
+    },
+    {
+      "check": "b210 / bedrock separation",
+      "pass_check": true,
+      "measured": 4.0
+    },
+    {
+      "check": "b210 / meanwell separation",
+      "pass_check": true,
+      "measured": 6.5
+    },
+    {
+      "check": "b210 / peplink separation",
+      "pass_check": true,
+      "measured": 60.35895222577178
+    },
+    {
+      "check": "b210 / oz separation",
+      "pass_check": true,
+      "measured": 81.2697
+    },
+    {
+      "check": "bedrock / meanwell separation",
+      "pass_check": true,
+      "measured": 160.5
+    },
+    {
+      "check": "bedrock / peplink separation",
+      "pass_check": true,
+      "measured": 32.179421844588305
+    },
+    {
+      "check": "bedrock / oz separation",
+      "pass_check": true,
+      "measured": 78.58354335409723
+    },
+    {
+      "check": "meanwell / peplink separation",
+      "pass_check": true,
+      "measured": 123.1006498767574
+    },
+    {
+      "check": "meanwell / oz separation",
+      "pass_check": true,
+      "measured": 3.3999999999999773
+    },
+    {
+      "check": "peplink / oz separation",
+      "pass_check": true,
+      "measured": 5.30330092961333
+    },
+    {
+      "check": "installed STEP reopened solid count",
+      "pass_check": true,
+      "measured": {
+        "actual": 347,
+        "expected": 347
+      }
+    }
+  ],
+  "source_paths": {
+    "b210": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\B210_FPE_R1_device_adapter.step",
+    "bedrock": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\Bedrock_FPE_R1_device_adapter.step",
+    "meanwell": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\meanwell-nsp1600-side-tab-mount\\exports\\device_adapter_N2.step",
+    "peplink": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\router_oz\\peplink_normalized.step",
+    "oz": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\router_oz\\oz_normalized.step"
+  },
+  "panel_mass_kg_at2700kg_m3": 2.995421510996793,
+  "max_component_height_mm": 91.00000008491999,
+  "door_clearance_mm": 146.53519991508
+}

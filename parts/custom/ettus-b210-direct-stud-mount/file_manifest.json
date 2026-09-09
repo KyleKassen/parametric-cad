@@ -1,0 +1,350 @@
+{
+  "revision": "D1",
+  "status": "PRELIMINARY FIT PROTOTYPE",
+  "files": {
+    "ASSEMBLY.md": {
+      "bytes": 5877,
+      "sha256": "885d3dc8623a87d7ccc3ba2badc60decf150d528f18988fe010fdfb8066b0514"
+    },
+    "BOM.md": {
+      "bytes": 3381,
+      "sha256": "9abe44358284f7c57c34955f1e2f83017789e3eb80cd41ceadea8e7ad71c19a0"
+    },
+    "datasheets/PEM_SO_standoffs.pdf": {
+      "bytes": 2314328,
+      "sha256": "426192ba40cb3d4422bdf069b5f510b9ebd0b3d7e3285f41a3576732df4077d2"
+    },
+    "DESIGN.md": {
+      "bytes": 8914,
+      "sha256": "f81afdb70b6be7896017bdeead1d0c7a25b79a5b4bf64476456c9cb5055da062"
+    },
+    "drawings/B210_direct_stud_mount_shop_pack_D1.pdf": {
+      "bytes": 1119770,
+      "sha256": "a6d0789ba7523eae704817eab7c16997231cea29f67be0bd40e85dba3af20f12"
+    },
+    "drawings/B210_DS_M01_dimensioned_D1.svg": {
+      "bytes": 10586,
+      "sha256": "4895dc18d9c2bcfe5c9dac4fde4e42a2ab14d7e33d9056ee46046af286e1991a"
+    },
+    "drawings/drawing_quality_review.json": {
+      "bytes": 1017,
+      "sha256": "2c0de575db3b9457e5b546f51ec6e2225fd49d5193dfea02e4baaa26ac2b43a6"
+    },
+    "drawings/drawing_source_manifest.json": {
+      "bytes": 1255,
+      "sha256": "f6b4d1329eb9e88918cc8067a714678025a2b5ad762125683c5b8197204e6ae6"
+    },
+    "drawings/manufacturing_dxf_reference_audit.json": {
+      "bytes": 649,
+      "sha256": "a3b006de908611a7e9fbb8a880650c403084652ef538ec09653c8d04d85e208c"
+    },
+    "drawings/qa/page-1.png": {
+      "bytes": 272587,
+      "sha256": "e314957d0287678375e14aa9521bbe33846732f54d096e0f34aea02800ea20e6"
+    },
+    "drawings/qa/page-2.png": {
+      "bytes": 239555,
+      "sha256": "1dc36d03609ab8ee70049975eb7e1c2d69d805923d5d91586cf9a6487b595f92"
+    },
+    "drawings/qa/page-3.png": {
+      "bytes": 187184,
+      "sha256": "b0cacb218a81401336d16434a884da01ca9c7d6708199c10482bcec0134705cf"
+    },
+    "drawings/qa/page-4.png": {
+      "bytes": 187357,
+      "sha256": "383f0ee07334441806716a926fe71161d36c273517f07e5fec174c7511dedc48"
+    },
+    "drawings/qa/page-5.png": {
+      "bytes": 267238,
+      "sha256": "79243700a2693eb24cd6eb9132d9c246fed7b4750cb578887a8ce60f8199d01e"
+    },
+    "drawings/REGENERATE_DRAWINGS.md": {
+      "bytes": 1767,
+      "sha256": "27ad785da78346534b2dd4dcb3c9897461df66aa16bf7caa11aaa42f086200e5"
+    },
+    "ENGINEERING_NOTE.md": {
+      "bytes": 12678,
+      "sha256": "b0a5c26d0a67d7ce0f9cdbae43e36826b5425b134930974e575dfd07a9ac66d7"
+    },
+    "exports/assembled_device_mount_D1.step": {
+      "bytes": 43679506,
+      "sha256": "9a788ec957729d3793d523c69569e77c6cbbbcbd313b484464ad1bda548718c1"
+    },
+    "exports/cad_build_metadata.json": {
+      "bytes": 75917,
+      "sha256": "13aae4ce75802f316e1f9152dd2102a5c0c57603ab4ad74c308f2469083d88dd"
+    },
+    "exports/device_adapter_D1.step": {
+      "bytes": 43213865,
+      "sha256": "b9989bbdd083a5fadfe86f1ed6c351f8c05aea3de7465521489548633785237b"
+    },
+    "exports/ettus-b210-direct-stud-mount_v1.step": {
+      "bytes": 146763,
+      "sha256": "c2bd044cee9bb9679c085daa1f23938d9e61c7f2531a977396919aa0cba0419f"
+    },
+    "exports/ettus-b210-direct-stud-mount_v1_report.json": {
+      "bytes": 18385,
+      "sha256": "8f7d19d8cc0b3ec5f02c4c6c56b455ba63c088fa73015e01b258ff26f4d2fd80"
+    },
+    "exports/FPE_interface_REFERENCE_ONLY.step": {
+      "bytes": 135810,
+      "sha256": "06438804359a4c31ab1d3c309af5d8319213bbb62566009b469743824b74dc51"
+    },
+    "exports/FPE_stud_coordinates_mm.csv": {
+      "bytes": 500,
+      "sha256": "3674bdd849ee327e3f6bc0f876153ed977cbed4c3268293f06314c87030d7f1f"
+    },
+    "exports/FPE_stud_pattern_mm.dxf": {
+      "bytes": 20161,
+      "sha256": "d24d4eb8778f24519e23046054347d17c2149c9b2504fed9223460bb5b7f41b8"
+    },
+    "exports/mount_hardware_D1.step": {
+      "bytes": 615536,
+      "sha256": "bdc8a55a5e0ba1f5bf61c629fb8b8db0c153aff61d32762845fdee38e2fc2dca"
+    },
+    "exports/plate_D1.step": {
+      "bytes": 146763,
+      "sha256": "f87658796445d1da372b014e8087053dc3912f0aa0017ef04f8db165cb9397f4"
+    },
+    "exports/plate_D1_preview.stl": {
+      "bytes": 533084,
+      "sha256": "751dd2186d866b617bb8d06c98a2c45ad983300d7480134804e91f880f99f87d"
+    },
+    "exports/plate_profile_mm.dxf": {
+      "bytes": 20558,
+      "sha256": "ece5c5e42098042a788492c98aeaee175c7015e67b2f236fc928dca10ed2ec82"
+    },
+    "exports/plate_underside_machining_mm.dxf": {
+      "bytes": 21074,
+      "sha256": "1a8f91ae710f80efe9130abf00dfa5b34312156bbd863f488126c033ad901380"
+    },
+    "exports/removed_feet_REFERENCE_ONLY.step": {
+      "bytes": 71745,
+      "sha256": "5ba750fb5da98ffaef96616d5ed511abe06265decf309ac831d6a18caaf1b768"
+    },
+    "lib/__init__.py": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "lib/features.py": {
+      "bytes": 99133,
+      "sha256": "dadd0c8ff3634fa44c7916f5cbb371d7b81a6d5e795db22c6a558cd03d40a3cb"
+    },
+    "make_bom.py": {
+      "bytes": 3978,
+      "sha256": "3083715167a92e7908bbc9257b431328ee2fab533c8598d0a574e84863627d7f"
+    },
+    "make_documents.py": {
+      "bytes": 25351,
+      "sha256": "20b152b0d0698d284bbb2337876f9b5dfaa439a124b5fde3634986cd986ca332"
+    },
+    "model.py": {
+      "bytes": 14473,
+      "sha256": "0bd462222a9b4e5e4e20ecd43f1f3195bc6ccec8277cd3058a87f3ad4c4013a2"
+    },
+    "package_design.py": {
+      "bytes": 6047,
+      "sha256": "829a151c135e66e5202937d3ac97713d9b11d2f6eb6cb992469826b6b6c894e2"
+    },
+    "params.json": {
+      "bytes": 1908,
+      "sha256": "0cf5e0eb44355619c7aaf4ed8b1e534cef800c2fad232b3b80aca114e29d7161"
+    },
+    "PROTOTYPE_VALIDATION.md": {
+      "bytes": 4309,
+      "sha256": "7e41de8230e71d838c99578aa8dc5ffc8973ffccacb7f371fc3a6622147f7dfd"
+    },
+    "README.md": {
+      "bytes": 5371,
+      "sha256": "6dd89319ae8f7f0857a320577945c42ccd3eca143d904dd800881bb4f8a6b756"
+    },
+    "references/cad_verification.json": {
+      "bytes": 14880,
+      "sha256": "d62ff1afc6b4b1a0cf4945691a86385efc6494ca8b884698a571cf65a9cf5258"
+    },
+    "references/engineering/engineering_calculations.py": {
+      "bytes": 29767,
+      "sha256": "c8ac3d987edfb1486573ca9d408ad3e1fa10da5e5ce54b33b6c19b2766f58457"
+    },
+    "references/engineering/engineering_checks.md": {
+      "bytes": 14339,
+      "sha256": "0be79c8f2029176473163ffc030e919c9dc619a3ee6799cd55cb0ff22ba21c89"
+    },
+    "references/engineering/engineering_results.json": {
+      "bytes": 7413,
+      "sha256": "a8115e81c10016afbab8130709ebf1435ec3d53ab549f201b073d70c0318ca01"
+    },
+    "references/final_delivery_checks.json": {
+      "bytes": 3171,
+      "sha256": "8eba4bdc6121b27ee19975571eb46e5deb28d7d8002fbe92b5bd15fe0b72ddcc"
+    },
+    "references/geometry/section_quality_check.json": {
+      "bytes": 238,
+      "sha256": "760db82e0caf0d8b9e520aec94a6185001f4139764ef136dd465f5daaa57d438"
+    },
+    "references/geometry/sections/foot_174_xz.png": {
+      "bytes": 83739,
+      "sha256": "a4bbf6872d0794a2c2a4cc1911908907aeeec3d70025b3d34e5a2152c18bce7c"
+    },
+    "references/geometry/sections/foot_174_xz.svg": {
+      "bytes": 98433,
+      "sha256": "b27c4270bd6a4c452be896d6d96d9378e159b9049003c4bc0953856a324a3bed"
+    },
+    "references/geometry/sections/foot_175_xz.png": {
+      "bytes": 83412,
+      "sha256": "6412ba66ae47037968300e6ec67440a41178701e17cb2cf4ce3f9651018eaa5e"
+    },
+    "references/geometry/sections/foot_175_xz.svg": {
+      "bytes": 98432,
+      "sha256": "0556ad2acb339a6e738f1e1bdfab973ea82941fd178bcc4152e36d2cd768a3e9"
+    },
+    "references/geometry/sections/foot_176_xz.png": {
+      "bytes": 83941,
+      "sha256": "fc1377cd65c81b42f2715d5febd656fe6cd2213205ec660a691e445594f9bdfe"
+    },
+    "references/geometry/sections/foot_176_xz.svg": {
+      "bytes": 98433,
+      "sha256": "e5175280043d7cce3ec9dbb1bfd6d0b80e89000d6df0259467fb6db0005f0cff"
+    },
+    "references/geometry/sections/foot_177_xz.png": {
+      "bytes": 84332,
+      "sha256": "9691db261c3f51f603541d2153c2d0f15c503e49485cf97f50bd624622df7ab4"
+    },
+    "references/geometry/sections/foot_177_xz.svg": {
+      "bytes": 98434,
+      "sha256": "dab401449c540d09e7b5e530ebba68e1375cb3a66892a68bb823b281f03c50c5"
+    },
+    "references/geometry/sections/under_feet_sections_mm.dxf": {
+      "bytes": 1104949,
+      "sha256": "c880bd1647953349a6ffaff17652de817c81131a397b5d677fe69e334f6cd700"
+    },
+    "references/geometry/under_feet_audit.json": {
+      "bytes": 495989,
+      "sha256": "1d016d2d554676ca5cc398309bd60ef9e5c6f618b841f2421787e18f855bc2e8"
+    },
+    "references/geometry/under_feet_audit.py": {
+      "bytes": 11967,
+      "sha256": "7d2968dd82860baf543c2f9a1c00056fba8cfdcd8b9763d263a52a9a275cfe5d"
+    },
+    "references/geometry/UNDER_FEET_FINDINGS.md": {
+      "bytes": 6905,
+      "sha256": "7610aea2e55479c5962b8fc87fd097e2cbb66b2a3c8385c264334e0a9a9e834b"
+    },
+    "references/input_device.step": {
+      "bytes": 11571832,
+      "sha256": "c59b649ccc6a4c128885fd9e64acfd74d756b23bbcff7f119e21a4acb426c912"
+    },
+    "references/manufacturing_verification.json": {
+      "bytes": 4029,
+      "sha256": "a70dd6e6e3e225900e2882438427bcebd5e0d30c1ec41190c24b6cc8f3506d0b"
+    },
+    "references/product/assembled_hero.png": {
+      "bytes": 368692,
+      "sha256": "f065bbca75e93d7d9387424b4567a108d7910252f5ec5fe124152170bd6224ad"
+    },
+    "references/product/exploded_iso.png": {
+      "bytes": 409770,
+      "sha256": "d83d68e4706b8c325a10334ceb0b0c1e0267af8cefbc3f865a22eec7e238b839"
+    },
+    "references/product/plate_bottom_hero.png": {
+      "bytes": 126653,
+      "sha256": "c27b6716dee54c3e7211c2896a5f98222c7fd11d5408f638e2c2ed8a62f9e8bc"
+    },
+    "references/research/catalog_bom.json": {
+      "bytes": 7175,
+      "sha256": "8b8c609b5b3f6f3ba83771b2b850e2dfdc1bb091aa6ab9ee1c669ca459c97888"
+    },
+    "references/research/FPE_6_5_1_Bolt_10-Base.ini": {
+      "bytes": 5293,
+      "sha256": "8870c105754794c30afe9045c9b1988ca9e354d887b0e005d049e641a0c07d49"
+    },
+    "references/research/FPE_6_5_1_Bolzen.fpjs": {
+      "bytes": 2935,
+      "sha256": "988c2dd1fcc08af0d01ae2e245da5ae2da31fb73c4a1eaf38a58cf74d9518d0e"
+    },
+    "references/research/fpe_package_manifest.json": {
+      "bytes": 17490,
+      "sha256": "13fa32590c3ab824cfdecf38b7f809d775c5c9b21b7ac4a5ea5674a572f5c5b3"
+    },
+    "references/research/FPE_stud_findings.md": {
+      "bytes": 8583,
+      "sha256": "0d0a3e3ae87a987bb754a4afcb2226b7fd675491e4c995596c4d97bfc6c91803"
+    },
+    "references/research/inspect_fpe_catalog.py": {
+      "bytes": 2060,
+      "sha256": "fb7872f45f98b38e7668821b76b6a5317a2d9faa18dcc7d0301bc1f3d471202f"
+    },
+    "references/research/material_finish_locking.md": {
+      "bytes": 7138,
+      "sha256": "b0b23382274375e792857466eac5e16ba6febd043585c6a5e60be8c5c1bc1229"
+    },
+    "references/views/device_adapter_bottom.png": {
+      "bytes": 54882,
+      "sha256": "7947d3850501ce33dfef142e70d1d5e9c61298e0222905be1fb6ab980c041438"
+    },
+    "references/views/device_adapter_front.png": {
+      "bytes": 47298,
+      "sha256": "1e4d50767de3309efdededfd55c9350d811fea9ea072b2680ccfa6e074cf764d"
+    },
+    "references/views/installed_bottom.png": {
+      "bytes": 12996,
+      "sha256": "5f2577eea90d80714e4e5d1096bb8f66c813277644ac91703a1eea3b869e4b2a"
+    },
+    "references/views/installed_front.png": {
+      "bytes": 43448,
+      "sha256": "a41f3f1f79a37d486675aab9b258d2bfc652f177f8f0283e208c17924f76d94c"
+    },
+    "references/views/installed_right.png": {
+      "bytes": 25880,
+      "sha256": "6894f67ac5a7d08e9962e0663a1315885ac36a0d1f2d4696533d4d67099e22de"
+    },
+    "references/views/installed_top.png": {
+      "bytes": 71239,
+      "sha256": "5708121f69ac59dd92b7d4a9dc975b3b0631efad29e5353a9affb1f38ac89421"
+    },
+    "references/views/plate_bottom.png": {
+      "bytes": 21064,
+      "sha256": "14420fc9a85b754e72c57248967c260998ce2550fc9d42cbcad1bf8dd7477e86"
+    },
+    "references/views/plate_front.png": {
+      "bytes": 9204,
+      "sha256": "96c14e0e731fcc0e99de7c3db3811d0a5d841f536cad9f75c6afbde9d0278db3"
+    },
+    "references/views/plate_iso.png": {
+      "bytes": 30272,
+      "sha256": "ee4aad49999511d950fb7697e722ec41b461c502ae9365f7485918a0e143fd63"
+    },
+    "references/views/plate_top.png": {
+      "bytes": 17549,
+      "sha256": "df645f0df54b06d7b9bcf04c7f005f02e0378d992cc1d46e7a7403899397b99b"
+    },
+    "references/views/section_fastener.png": {
+      "bytes": 12835,
+      "sha256": "5410515c30bd765694bd27de07b86d8cbb64263cce2e768f20697c4832677020"
+    },
+    "references/views/section_fastener_front.png": {
+      "bytes": 12835,
+      "sha256": "5410515c30bd765694bd27de07b86d8cbb64263cce2e768f20697c4832677020"
+    },
+    "render_support.py": {
+      "bytes": 42142,
+      "sha256": "0cbe1d0bef6ab7ae77ebb22eed9e6bc3681bc360441d996d4e3665ce25ce86e7"
+    },
+    "requirements.txt": {
+      "bytes": 100,
+      "sha256": "5eeda0c6c91282ba4dd9ce4aab24de56b3fa757d5aa2e306091c28e6ac3e1596"
+    },
+    "spec.json": {
+      "bytes": 1007,
+      "sha256": "7303b5e475777927282b2ea8d780516e449f4f1911a6db9c30b2c6eb8921ddba"
+    },
+    "verify_and_render.py": {
+      "bytes": 12960,
+      "sha256": "94114e4c762ea375b306c09ecfe47f7ff0caad9fb5c062632c10234dc68f5d6a"
+    },
+    "verify_manufacturing.py": {
+      "bytes": 5527,
+      "sha256": "ea7a94512c51971f2929103814e6b87f2782bc7968f371593dcfebe59d6398b8"
+    }
+  }
+}

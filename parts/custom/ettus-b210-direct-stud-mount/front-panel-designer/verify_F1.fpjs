@@ -1,0 +1,22 @@
+/// Read and verify the saved B210 support plate without modifying it.
+var expected = [[22,39.9925],[158,39.9925],[22,160.0075],[158,160.0075]];
+function verifyPanel(panel) {
+    Print("Dimensions: "+panel.Width()+" x "+panel.Height()+" x "+panel.Thickness()+"\n");
+    if (Math.abs(panel.Width()-180)>0.0001 || Math.abs(panel.Height()-200)>0.0001 || Math.abs(panel.Thickness()-6)>0.0001)
+        Error("Unexpected panel dimensions.");
+    var elements = panel.Elements();
+    if (elements.length != 4) Error("Expected exactly four stud elements.");
+    for (var j=0; j<4; j++) {
+        var e=elements[j];
+        if (e.Type()!="WGU30" || Math.abs(e.Length()-12)>0.0001 || !e.IsReverseSide())
+            Error("Incorrect stud specification.");
+        if (Math.abs(e.X()-expected[j][0])>0.001 || Math.abs(e.Y()-expected[j][1])>0.001)
+            Error("Incorrect stud coordinates.");
+        Print("PASS stud "+j+" WGU30 M3 x "+e.Length()+" reverse, XY="+e.X()+","+e.Y()+"\n");
+    }
+    Print("PASS panel 180 x 200 x 6 mm; exactly four native studs.\n");
+}
+var filename="C:/Users/KyleKassen/OneDrive - Ataero/Shared Documents - Ataero San Antonio/06 R&D Products/NEW R&D/04 Shared Engineering/03 Tools & Methods/Parametric CAD - CadQuery Models/parts/custom/ettus-b210-direct-stud-mount/front-panel-designer/F1.fpd";
+var saved=LoadFrontpanel(filename,"F1_saved_verification");
+verifyPanel(saved);
+Print("PASS saved F1.fpd reloaded and verified.");

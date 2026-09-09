@@ -1,0 +1,21 @@
+{
+  "schema": "part-spec/1",
+  "units": "mm",
+  "solid_count": 2,
+  "dimensions": [
+    {"id": "preserved_cross_section", "kind": "bbox", "axis": "x", "expected": 32.72, "tol": 0.02},
+    {"id": "preserved_mounting_height", "kind": "bbox", "axis": "z", "expected": 116.2, "tol": 0.02},
+    {"id": "fiber_access_body_depth_with_labels", "kind": "bbox", "axis": "y", "expected": 138.1, "tol": 0.02},
+    {"id": "two_sma_passages", "kind": "cylinder", "diameter": 7.0, "axis": "Y", "tol": 0.05, "type": "hole", "count_min": 2}
+  ],
+  "validators": [{"id": "reference_hardware_and_service_motion", "script": "fit_check.py", "timeout": 300}],
+  "design": {"role": "enclosure", "min_score": 70, "severity": "hard"},
+  "assumptions": [
+    "This is a prototype candidate, not an accepted production part. Automatic design-review limitations are documented; keep the repository bar unchanged.",
+    "Both actual TX SKUs are checked only against the available OZ510 TX reference STEP. Verify exact RF and TTL hardware.",
+    "DE-9 cutout is a dimensioned prototype allowance for candidate L177SDE09S, not an exact purchased connector B-rep.",
+    "Motion checks sample rigid sweeps and hook translation; elastic deformation, retention force, creep and fatigue require test prints.",
+    "No IP, shock, vibration, thermal or electrical interface qualification is implied by these geometry checks."
+  ],
+  "unresolved": ["Actual TTL header mapping and current", "Exact-SKU module mechanics", "Ordered connector and jackpost fit", "Latch endurance at service temperature"]
+}

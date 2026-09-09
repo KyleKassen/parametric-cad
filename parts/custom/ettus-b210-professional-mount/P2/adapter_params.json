@@ -1,0 +1,49 @@
+{
+  "revision": "P2 - preliminary ribbed upright adapter, physical validation required",
+  "units": "mm",
+  "material": "6061-T6 aluminum plate, certified stock",
+  "web_t": 6.0,
+  "foot_t": 6.0,
+  "foot_bolt_boss_od": 20.0,
+  "foot_bolt_boss_top": 10.0,
+  "foot_bolt_boss_top_tolerance": 0.1,
+  "web_and_foot_thickness_tolerance": 0.1,
+  "minimum_web_and_foot_t_after_finish": 5.9,
+  "inside_radius": 6.0,
+  "strip_width": 36.0,
+  "overall_height": 176.0,
+  "foot_tip_x": 65.0,
+  "free_corner_radius": 3.0,
+  "clearance_hole_d": 5.5,
+  "web_hole_z": [
+    26.0,
+    166.0
+  ],
+  "foot_hole_x": [
+    20.0,
+    55.0
+  ],
+  "bracket_y_centers": [
+    -66.947,
+    73.053
+  ],
+  "cradle_rotation_y_deg": 90.0,
+  "cradle_translation": [
+    0.0,
+    0.0,
+    96.0
+  ],
+  "machined_general_tolerance": 0.2,
+  "hole_position_tolerance": 0.15,
+  "hole_diameter_tolerance": 0.1,
+  "web_to_foot_perpendicularity": 0.1,
+  "finish": "Deburr and break accessible edges 0.2-0.5mm. Black sulfuric anodize10-15um per shop specification. Dimensions after finish. Web and foot6.00 +/-0.10, ribs3.00 +/-0.10, rear return depth and foot rib height8.00 +/-0.10. Minimum walls5.90, ribs2.90. No welds. Foot bolt seat total10.00+/-0.10, OD20+/-0.20; blend boss/floorR0.2-0.5 adds material to nominal sharp CAD.",
+  "manufacturing_route": "Integral ribbed bracket from certified6061-T6/T651 plate; sawn blank82x180x38.1mm. Finish width36 and outer profile79x176, R6 front root. Mill rear pocket30wide mouth (24flat between R3 fillets) x8deep leaving6web and two3wide returns; mill foot pocket30wide mouth (24flat between R3 fillets) leaving6floor and two3wide x8high edge ribs, continuous through heel/root toX65. R3 internal pocket corners and R6 front root. Orthogonal setups for web and foot holes. Finish critical datums in supported fixtures; no sheet metal forming or flat pattern. Retain two integral OD20 bolt seats with topZ10 atX20/55,Y0. Finish boss/floor blendR0.2-0.5 with small accessible tooling; nominal5mm wall gap/2mm flat-floor gap require tool-path/reach confirmation.",
+  "quantity_per_upright_mount": 2,
+  "rib_width": 3.0,
+  "rib_width_tolerance": 0.1,
+  "rear_return_depth": 8.0,
+  "foot_rib_height": 8.0,
+  "rib_height_tolerance": 0.1,
+  "pocket_corner_radius": 3.0
+}

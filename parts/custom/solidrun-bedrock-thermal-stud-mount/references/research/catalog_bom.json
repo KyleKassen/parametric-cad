@@ -1,0 +1,250 @@
+{
+  "revision": "T1 preliminary selected procurement BOM",
+  "source_date": "2026-09-08",
+  "currency": "USD",
+  "panel_stud_count": 4,
+  "selected_tim_route": "T01: McMaster 10405K83 Dow 340 in 0.05 +/- 0.01 mm recessed fields, both interfaces; actual gap below 0.10 mm",
+  "scope": "Purchased hardware and selected TIM for one preliminary six-hole Bedrock Tile-face adapter and four FPE panel studs. Custom adapter and final supporting panel require separate quotes.",
+  "items": [
+    {
+      "item_id": "H01",
+      "vendor": "McMaster-Carr",
+      "part_number": "91294A188",
+      "mcmaster_part_number": "91294A188",
+      "description": "M4 x 0.7 x 8 mm overall-length hex-drive flat-head screw; DIN 7991; 90 degree countersink; black-oxide alloy steel; catalog Class 10.9 and 120000 psi tensile",
+      "quantity": 6,
+      "qty": 6,
+      "head_diameter_mm": 8.0,
+      "head_height_catalog_mm": 2.3,
+      "head_angle_deg": 90,
+      "drive_hex_mm": 2.5,
+      "length_mm": 8.0,
+      "length_basis": "Overall from top of head",
+      "thread_pitch_mm": 0.7,
+      "thread_fit": "6g",
+      "threading": "Fully threaded",
+      "catalog_strength_class": "10.9",
+      "catalog_tensile_strength_psi": 120000,
+      "head_proof_capacity": null,
+      "pack_qty": 100,
+      "pack_price_usd": 6.25,
+      "cost_per_unit_exact_usd": "0.0625",
+      "initial_procurement_packs": 1,
+      "initial_procurement_cost_usd": 6.25,
+      "url": "https://www.mcmaster.com/91294A188/",
+      "source_date": "2026-09-08",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL",
+      "application_status": "CONDITIONAL: six actual Tile-face threads and safe screw penetration must be measured",
+      "notes": [
+        "No tightening torque or female-thread/head capacity inferred.",
+        "Ideal 90 degree cone is not the complete 2.3 mm catalog head profile. Gauge received head and finished seat.",
+        "No washer under the countersunk screw heads. Dry indoor finish only."
+      ]
+    },
+    {
+      "item_id": "H02",
+      "vendor": "McMaster-Carr",
+      "part_number": "98688A142",
+      "mcmaster_part_number": "98688A142",
+      "description": "M3 high-strength zinc-plated steel flat washer; ISO 7089, for Class 10.9; ID3.2 x OD7.0 x thickness0.5-0.6 mm; Rockwell C30",
+      "quantity": 4,
+      "qty": 4,
+      "id_mm": 3.2,
+      "od_mm": 7.0,
+      "thickness_min_mm": 0.5,
+      "thickness_max_mm": 0.6,
+      "pack_qty": 100,
+      "pack_price_usd": 9.38,
+      "cost_per_unit_exact_usd": "0.0938",
+      "initial_procurement_packs": 1,
+      "initial_procurement_cost_usd": 9.38,
+      "url": "https://www.mcmaster.com/98688A142/",
+      "source_date": "2026-09-08",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL_IN_SAME_SESSION_B210_RESEARCH",
+      "notes": [
+        "One per M3 panel stud, below locknut; four per assembly."
+      ]
+    },
+    {
+      "item_id": "H03",
+      "vendor": "McMaster-Carr",
+      "part_number": "90576A102",
+      "mcmaster_part_number": "90576A102",
+      "description": "M3 x 0.5 zinc-plated steel nylon-insert locknut; Class 8; DIN 985 / ISO 10511; 5.5 mm across flats x 4 mm overall height; 6H",
+      "quantity": 4,
+      "qty": 4,
+      "across_flats_mm": 5.5,
+      "overall_height_mm": 4.0,
+      "insert_max_temperature_c": 85.0,
+      "pack_qty": 100,
+      "pack_price_usd": 4.88,
+      "cost_per_unit_exact_usd": "0.0488",
+      "initial_procurement_packs": 1,
+      "initial_procurement_cost_usd": 4.88,
+      "url": "https://www.mcmaster.com/90576A102/",
+      "source_date": "2026-09-08",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL_IN_SAME_SESSION_B210_RESEARCH",
+      "notes": [
+        "One per M3 panel stud; prevailing torque must be compatible with unverified FPE anchor torque capacity.",
+        "85C nylon limit is not an ambient or assembly rating. Check actual heated panel/nut temperature."
+      ]
+    },
+    {
+      "item_id": "F01",
+      "vendor": "Front Panel Express",
+      "part_number": "WGU30 / 12 mm / reverse side / zero depth offset",
+      "mcmaster_part_number": null,
+      "description": "Factory-installed M3 load stud, 12 mm geometric length, native FPD catalog identifier WGU30; nominal flush base on proposed 6 mm panel",
+      "quantity": 4,
+      "qty": 4,
+      "selected_geometric_length_mm": 12.0,
+      "nominal_cavity_diameter_mm": 12.1,
+      "nominal_cavity_depth_mm": 2.3,
+      "nominal_base_diameter_from_drawpath_mm": 11.9,
+      "nominal_base_thickness_from_drawpath_mm": 2.2,
+      "depth_offset_mm": 0.0,
+      "pack_qty": null,
+      "pack_price_usd": null,
+      "cost_per_unit_exact_usd": null,
+      "url": "https://docs.frontpanelexpress.com/elements/studs_standoffs.html",
+      "catalog_source_url": "https://assets.frontpanelexpress.com/fpd/Version-6.5.1/FrontDesign-US-6.5.1-amd64.deb",
+      "source_date": "2026-09-08",
+      "evidence_status": "VERIFIED_PRIMARY_DISTRIBUTED_CATALOG_NOMINAL_GEOMETRY_IN_SAME_SESSION",
+      "catalog_load_temperature_torque_rating": null,
+      "notes": [
+        "Native load variant has short panel anchoring thread; exact anchor geometry and assembly process unknown.",
+        "M3 x12 is provisional until plate/washer/nut stack, actual projection and tool clearance are confirmed.",
+        "Additional studs do not establish an assembly rating without joint capacity and thermal qualification."
+      ],
+      "stud_coordinates_mm": {
+        "x": [
+          -76,
+          76
+        ],
+        "y": [
+          -82,
+          82
+        ],
+        "all_combinations": true
+      }
+    },
+    {
+      "item_id": "T01",
+      "selected": true,
+      "vendor": "McMaster-Carr",
+      "part_number": "10405K83",
+      "mcmaster_part_number": "10405K83",
+      "description": "Dow 340 heat sink compound, 5 fl oz tube; noncuring silicone/zinc-oxide thermal grease",
+      "pack_qty": 1,
+      "pack_price_usd": 69.83,
+      "cost_per_unit_exact_usd": "69.83",
+      "initial_procurement_packs": 1,
+      "thermal_conductivity_catalog_W_mK": 0.68,
+      "conductivity_temperature_F": 97,
+      "typical_manufacturer_conductivity_W_mK": 0.67,
+      "older_regional_tds_conductivity_W_mK": 0.4184,
+      "temperature_range_catalog_F": [
+        -40,
+        390
+      ],
+      "manufacturer_application_category": "Noncuring thin bond-line TIM below 100 micrometers; not the listed greater-than-100-micrometer gap-filler category",
+      "nominal_gap_mm": 0.05,
+      "full_area_compression_force_N": null,
+      "low_pressure_assembly_impedance": null,
+      "typical_impedance_at40psi_C_cm2_W": 0.16,
+      "url": "https://www.mcmaster.com/10405K83/",
+      "manufacturer_guidance_url": "https://www.dow.com/documents/11/11-3930-01-silicones-from-dow-for-appliances.pdf?iframe=true",
+      "source_date": "2026-09-08",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL; APPLICATION_CONDITIONAL",
+      "notes": [
+        "Low-force fixed-gap filling, pump-out, actual finished gap and repeated removal must be qualified.",
+        "Older Portuguese 2017 Dow TDS converts to 0.4184 W/mK, unlike the English 2020 TDS 0.67 W/mK and current catalog 0.68 W/mK. Confirm received-lot/current product data; engineering may use 0.42 W/mK sensitivity.",
+        "No structural retention, thread lubrication or electrical isolation credit.",
+        "No product applied or purchased."
+      ],
+      "quantity": 1,
+      "qty": 1,
+      "machined_recess_depth_tolerance_mm": 0.01,
+      "field_width_mm": 126,
+      "field_length_mm": 156,
+      "field_count": 2,
+      "escape_grooves_per_face": 2,
+      "escape_groove_width_mm": 1.0,
+      "escape_groove_y_mm": [-20.0, 20.0],
+      "actual_assembled_gap_max_exclusive_mm": 0.1,
+      "initial_procurement_cost_usd": 69.83
+    }
+  ],
+  "tim_candidates": [
+    {
+      "item_id": "T02",
+      "selected": false,
+      "vendor": "Laird / authorized distributor not yet selected",
+      "part_number": "Tgel 600; orderable package PN unresolved",
+      "description": "Filled silicone dispensable TIM for grease and constant-gap applications",
+      "pack_qty": null,
+      "pack_price_usd": null,
+      "thermal_conductivity_W_mK": 6.4,
+      "typical_constant_gap0_1mm_impedance_C_cm2_W": 0.25,
+      "typical_constant_gap1_0mm_impedance_C_cm2_W": 1.5,
+      "temperature_range_C": [
+        -40,
+        125
+      ],
+      "full_area_compression_force_N": null,
+      "url": "https://www.laird.com/sites/default/files/2025-11/THR-DS-Tgel%20600%20Data%20Sheet.pdf",
+      "source_date": "2026-09-08",
+      "evidence_status": "VERIFIED_PRIMARY_MANUFACTURER_DATASHEET; MCMASTER_AVAILABILITY_UNVERIFIED",
+      "notes": [
+        "Better supported for nominal0.10mm fixed-gap fields; supplier package and price unresolved.",
+        "Peak/residual force values lack coupon geometry and cannot be scaled into full-face preload."
+      ]
+    },
+    {
+      "item_id": "T03",
+      "selected": false,
+      "vendor": "McMaster-Carr",
+      "part_number": "7171A23",
+      "description": "Kapton polyimide thermal interface tape with silicone facing and acrylic adhesive; 2in x3ft x0.0045in overall",
+      "width_mm": 50.8,
+      "length_mm": 914.4,
+      "thickness_mm": 0.1143,
+      "thermal_conductivity_W_mK": 0.6,
+      "pack_price_usd": null,
+      "full_area_compression_force_N": null,
+      "thermal_impedance_with_contact": null,
+      "url": "https://www.mcmaster.com/7171A23/",
+      "source_url": "https://www.mcmaster.com/products/interface-pads/",
+      "source_date": "2026-09-08",
+      "evidence_status": "VERIFIED_PRIMARY_INDEXED_CATALOG_TABLE; DETAIL_PRICE_UNVERIFIED",
+      "notes": [
+        "Comparison only; not selected for the 0.05 mm recess / below-0.10 mm actual-gap hard-stop design. Seam coverage, thickness tolerance, pressure and service reuse unverified."
+      ]
+    }
+  ],
+  "known_mcmaster_hardware_pack_subtotal_usd": 20.51,
+  "full_procurement_total_usd": null,
+  "price_scope": "Observed public catalog prices on 2026-09-08; taxes, shipping, FPE installed studs/panel, custom machining/finish, tools, thermal tests, computer and cables excluded.",
+  "purchase_made": false,
+  "custom_fabrication_items": [
+    {
+      "item_id": "M01",
+      "quantity": 1,
+      "description": "166 x 184 x 5.10 mm adapter machined from 6.35 mm certified 6061-T651 stock; Sy >= 240 MPa per certificate; two 126 x 156 x 0.05 +/- 0.01 mm TIM fields with hard contact islands and two 1 mm escape grooves per face",
+      "price_usd": null
+    },
+    {
+      "item_id": "P01",
+      "quantity": 1,
+      "description": "200 x 220 x 6 mm reference supporting-panel coupon only; final TEC enclosure thermal coupling/supports unconfirmed",
+      "price_usd": null
+    }
+  ],
+  "known_mcmaster_selected_pack_subtotal_usd": 90.34,
+  "known_allocated_screw_washer_nut_cost_usd": "0.9454",
+  "notes": [
+    "Nominal M4 intrusion 8.00 + 0.05 - 5.10 = 2.95 mm. Actual accepted 2.85-3.00 mm and effective complete engagement >= 2 mm are proposed physical gauge criteria, not manufacturer allowables.",
+    "One grease tube covers both interfaces with prototype/rework allowance; actual consumption is not the entire tube.",
+    "TEC enclosure exists per user; no TEC model, rated cooling capacity at conditions, or panel-to-TEC thermal coupling verified."
+  ]
+}

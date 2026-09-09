@@ -1,0 +1,30 @@
+# NSP-1600 adapter N1 — engineering summary
+
+**Preliminary fit prototype, not a rated complete mounting system.** The selected machined 6061-T6/T651 adapter is 125×300.6×5.00±0.05 mm with two 0.50±0.05 mm fan-frame clearance pockets. It uses three authorized bottom M3 joints with flush McMaster 91294A128 M3×8 heads and four FPE WGU30 M3 panel studs. The existing case, covers, side screws and fan hardware are preserved. No TIM or panel-cooling function is selected.
+
+The full reproducible [engineering calculations](references/engineering/engineering_checks.md) give equations, evidence, assumptions, tolerance stacks and limitations. The [JSON record](references/engineering/engineering_results.json) and [Python source](references/engineering/engineering_calculations.py) are the numerical authority; run the source with `--write` to regenerate these notes.
+
+## Selection and completed analytical checks
+
+- A single machined bottom plate has fewer unique parts than side brackets or a formed tray and leaves the factory top and side service features exposed. The 3.5 and 4.5 mm candidates fail the selected factor-3 local strip screen after deducting the countersink and fan reliefs. The 5 mm plate retains a 4.40 mm minimum relief floor and no protrusions beneath its panel seating face.
+- Manufacturer supply mass 1.8 kg; package allowance 2.4 kg includes the 0.5073 kg uncut plate upper bound and hardware. The actual CAD plate is approximately 0.5021 kg, calculated from exported volume at 2700 kg/m³. Weigh the finished package.
+- 1 g gravity + 3 g incidental acceleration and a 50 N cable force give 125 N device and 145 N package resultant design forces after rounding. An independently applied 5 N·m cable couple corresponds to 50 N at 100 mm. Conservative force-position bounds cover the body plan and 41/46 mm load heights. These are preliminary stationary handling assumptions, not an acceleration-spectrum qualification.
+- Rigid-group demand: front M3 232.3 N tension/99.8 N shear; rear 154.6/149.7 N. Local plate screens use 240/100 N front and 160/150 N rear. FPE rigid-group maximum 135.5/84.9 N; 250/150 N per stud is a proposed qualification demand, not a verified allowable or prying bound.
+- Certified 6061 yield 240 MPa and approximate E = 70 GPa are used. The minimum calculated plate yield factor is **3.04**, controlled by the front strip. Front/rear free-strip deflections are 0.435/0.321 mm. Hole bearing, tearout, external countersink punching/bearing and longitudinal self-load screens also pass. Effective strips/stress allowances require prototype correlation; no FEA or physical test was performed.
+- Nominal screw projection is 3.05 mm. Assumed screw-length/plate/recess tolerances give 2.75–3.35 mm, below the published 4.00 mm maximum. Gauge all screws, verify actual boss engagement and obstruction clearance, and use received screws to finish flush seats. Straight cylindrical ligament≥3.30 mm, effective conical seat diameter≥5.7 mm and complete seating are required.
+
+## Manufacturing and physical release gates
+
+Machine from traceable nominal 6 mm or 1/4-inch 6061 stock using supported face/drill/countersink and shallow-pocket setups. Final drawing dimensions include finish. Preserve the 5.7 mm central contact land and shallow relief boundaries; do not apply the outside 0.4 mm chamfer to them. Clear conversion finish and a designated protective-earth connection require the enclosure's approved process; plate contact alone is not a protective-earth assurance.
+
+Measure the actual three-hole pattern and use the 1:1 template before final machining: the manufacturer's general ±0.5 mm tolerance exceeds what three fixed countersinks can accommodate. Confirm the received case/PCB/boss and fan profiles, ≥0.20 mm normal-service fan-frame clearance, no plastic contact during qualified handling, plate flatness and metal seating. Verify actual lugs, terminal covers, cable bends, compact sockets, airflow reservations and removal path. Revise the parametric pattern when measurements require it; do not force screws or use improvised slotted cones.
+
+Mean Well specifies 6–8 kgf·cm (0.5884–0.7845 N·m) for bottom mounting. That is not a tensile rating or a demonstrated torque for this specific countersunk head/finish/seat combination. Confirm or qualify the complete joint before production tightening. Short female bosses, countersunk-head reduced loadability, preload, locking method, washer/nut integrity, FPE bond/cure/temperature capacity and final panel support remain unqualified. No minimum 2 mm full engagement, case alloy or thread capacity is invented.
+
+The [prototype plan](PROTOTYPE_VALIDATION.md) separates surrogate plate checks from the unqualified actual joints. Proposed local 1.5× proof uses 360 N front and 240 N rear tension with corresponding shear increments, only on suitable surrogate attachments initially. Elastic criteria are 0.70 mm local / 0.85 mm with concurrent longitudinal self-load, residual≤0.10 mm; normal fan clearance remains a separate requirement. Only apply complete-assembly proof after its OEM and FPE joints are qualified. Include repeated removal, loosening checks and realistic cable strain relief.
+
+## Thermal limitation
+
+The provisional 12 V variant is 1500 W rated output at 89% typical efficiency, implying **185.4 W typical supply conversion heat** at rated load. The 24 V alternative gives 159.0 W at 1608 W/91%. These are calculated typical losses, not guaranteed worst-case values. Factory airflow, manufacturer derating, actual input/load/ambient and recirculation must be checked in the final enclosure. Other in-box loads and TEC hot-side capacity add to the budget. The adapter receives no cooling credit, and the TEC setpoint alone does not establish adequate heat removal.
+
+CAD solid validity, exported geometry, clearances and drawing checks are recorded separately by the CAD/geometry audit. This engineering summary claims only the calculations stated above; manufacture, load proof, joint qualification and powered thermal validation remain outstanding.

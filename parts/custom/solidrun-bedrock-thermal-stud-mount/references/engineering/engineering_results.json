@@ -1,0 +1,624 @@
+{
+  "status": "PRELIMINARY_ANALYTICAL_SCREEN_NO_ASSEMBLY_OR_COOLING_RATING",
+  "inputs": {
+    "plate_x_mm": 166.0,
+    "plate_y_mm": 184.0,
+    "plate_t_mm": 5.1,
+    "plate_t_tolerance_mm": 0.05,
+    "corner_radius_mm": 8.0,
+    "thermal_field_x_mm": 126.0,
+    "thermal_field_y_mm": 156.0,
+    "thermal_field_radius_mm": 5.0,
+    "pocket_depth_mm": 0.05,
+    "pocket_depth_tolerance_mm": 0.01,
+    "assembled_gap_limit_mm": 0.1,
+    "thermal_area_screen_mm2": 19000.0,
+    "top_land_OD_mm": 8.0,
+    "top_land_OD_min_mm": 7.9,
+    "bottom_land_OD_mm": 10.0,
+    "housing_points": [
+      [
+        -60,
+        -70
+      ],
+      [
+        60,
+        -70
+      ],
+      [
+        0,
+        -40
+      ],
+      [
+        0,
+        30
+      ],
+      [
+        -50,
+        70
+      ],
+      [
+        50,
+        70
+      ]
+    ],
+    "stud_points": [
+      [
+        -76,
+        -82
+      ],
+      [
+        76,
+        -82
+      ],
+      [
+        -76,
+        82
+      ],
+      [
+        76,
+        82
+      ]
+    ],
+    "housing_hole_min_mm": 4.4,
+    "housing_hole_max_mm": 4.6,
+    "stud_hole_max_mm": 3.9,
+    "countersink_mouth_max_mm": 8.2,
+    "countersink_angle_min_deg": 89.0,
+    "upper_bore_deburr_max_mm": 0.1,
+    "straight_throat_accept_min_mm": 3.0,
+    "effective_head_seat_OD_accept_min_mm": 7.6,
+    "screw_length_mm": 8.0,
+    "screw_length_assumed_tolerance_mm": 0.2,
+    "head_recess_min_mm": 0.0,
+    "head_recess_max_mm": 0.1,
+    "projection_accept_min_mm": 2.85,
+    "projection_accept_max_mm": 3.0,
+    "full_engagement_accept_min_mm": 2.0,
+    "source_entry_cone_mm": 0.584,
+    "source_full_diameter_end_mm": 3.5,
+    "source_drill_tip_mm": 4.501034,
+    "full_diameter_clearance_screen_mm": 0.5,
+    "thread_shear_diameter_surrogate_mm": 3.3,
+    "M4_tensile_area_mm2": 8.78,
+    "E_MPa": 70000.0,
+    "plate_yield_MPa": 240.0,
+    "yield_factor_target": 3.0,
+    "plate_k_assumption_W_mK": 150.0,
+    "panel_k_assumption_W_mK": 150.0,
+    "TIM_k_typical_W_mK": 0.67,
+    "TIM_k_sensitivity_W_mK": 0.42,
+    "TIM_density_typical_g_cc": 2.1,
+    "aluminum_density_kg_mm3": 2.7e-06,
+    "device_mass_allowance_kg": 1.5,
+    "package_mass_allowance_kg": 2.1,
+    "gravity_m_s2": 9.81,
+    "inertial_g": 3.0,
+    "cable_force_N": 20.0,
+    "device_handling_force_N": 80.0,
+    "package_handling_force_N": 110.0,
+    "free_couple_Nmm": 1000.0,
+    "device_load_height_mm": 51.0,
+    "package_load_height_mm": 60.0,
+    "load_plan_half_x_mm": 65.0,
+    "load_plan_half_y_mm": 80.0,
+    "local_housing_force_N": 75.0,
+    "local_surrogate_proof_force_N": 112.5,
+    "FPE_tension_qualification_demand_N": 200.0,
+    "FPE_shear_qualification_demand_N": 100.0,
+    "local_strip_net_width_mm": 28.0,
+    "global_strip_net_width_mm": 100.0,
+    "support_span_allowance_mm": 0.3,
+    "selected_bending_factor": 1.5,
+    "panel_reference_x_mm": 200.0,
+    "panel_reference_y_mm": 220.0,
+    "panel_reference_t_mm": 6.0,
+    "thermal_powers_W": [
+      10.0,
+      30.0,
+      60.0
+    ]
+  },
+  "loads": {
+    "derived_device_N": 78.86,
+    "derived_package_N": 102.40400000000001,
+    "housing": {
+      "points": [
+        {
+          "point_mm": [
+            -60,
+            -70
+          ],
+          "max_tension_N": 68.74465556592772,
+          "max_shear_N": 38.13450192746728,
+          "elastic_normal_wrench_coefficients": [
+            0.16150943396226414,
+            -0.0049180327868852455,
+            -0.003094339622641504
+          ]
+        },
+        {
+          "point_mm": [
+            60,
+            -70
+          ],
+          "max_tension_N": 68.74465556592772,
+          "max_shear_N": 38.13450192746728,
+          "elastic_normal_wrench_coefficients": [
+            0.16150943396226414,
+            0.0049180327868852455,
+            -0.003094339622641504
+          ]
+        },
+        {
+          "point_mm": [
+            0,
+            -40
+          ],
+          "max_tension_N": 26.961758716941592,
+          "max_shear_N": 23.78800897546789,
+          "elastic_normal_wrench_coefficients": [
+            0.16377358490566038,
+            0.0,
+            -0.001735849056603768
+          ]
+        },
+        {
+          "point_mm": [
+            0,
+            30
+          ],
+          "max_tension_N": 24.877613577443732,
+          "max_shear_N": 21.969804515966224,
+          "elastic_normal_wrench_coefficients": [
+            0.1690566037735849,
+            0.0,
+            0.0014339622641509498
+          ]
+        },
+        {
+          "point_mm": [
+            -50,
+            70
+          ],
+          "max_tension_N": 65.00929105301559,
+          "max_shear_N": 37.16586052578176,
+          "elastic_normal_wrench_coefficients": [
+            0.1720754716981132,
+            -0.004098360655737705,
+            0.0032452830188679314
+          ]
+        },
+        {
+          "point_mm": [
+            50,
+            70
+          ],
+          "max_tension_N": 65.00929105301559,
+          "max_shear_N": 37.16586052578176,
+          "elastic_normal_wrench_coefficients": [
+            0.1720754716981132,
+            0.004098360655737705,
+            0.0032452830188679314
+          ]
+        }
+      ],
+      "centroid_mm": [
+        0.0,
+        -1.6666666666666667
+      ],
+      "polar_sum_mm2": 34283.333333333336,
+      "max_tension_N": 68.74465556592772,
+      "max_shear_N": 38.13450192746728
+    },
+    "FPE": {
+      "points": [
+        {
+          "point_mm": [
+            -76,
+            -82
+          ],
+          "max_tension_N": 87.77195148251063,
+          "max_shear_N": 55.08981523505523,
+          "elastic_normal_wrench_coefficients": [
+            0.25,
+            -0.003289473684210526,
+            -0.003048780487804878
+          ]
+        },
+        {
+          "point_mm": [
+            76,
+            -82
+          ],
+          "max_tension_N": 87.77195148251063,
+          "max_shear_N": 55.08981523505523,
+          "elastic_normal_wrench_coefficients": [
+            0.25,
+            0.003289473684210526,
+            -0.003048780487804878
+          ]
+        },
+        {
+          "point_mm": [
+            -76,
+            82
+          ],
+          "max_tension_N": 87.77195148251063,
+          "max_shear_N": 55.08981523505523,
+          "elastic_normal_wrench_coefficients": [
+            0.25,
+            -0.003289473684210526,
+            0.003048780487804878
+          ]
+        },
+        {
+          "point_mm": [
+            76,
+            82
+          ],
+          "max_tension_N": 87.77195148251063,
+          "max_shear_N": 55.08981523505523,
+          "elastic_normal_wrench_coefficients": [
+            0.25,
+            0.003289473684210526,
+            0.003048780487804878
+          ]
+        }
+      ],
+      "centroid_mm": [
+        0.0,
+        0.0
+      ],
+      "polar_sum_mm2": 50000.0,
+      "max_tension_N": 87.77195148251063,
+      "max_shear_N": 55.08981523505523
+    },
+    "housing_2Nm_sensitivity": {
+      "points": [
+        {
+          "point_mm": [
+            -60,
+            -70
+          ],
+          "max_tension_N": 74.55516192881274,
+          "max_shear_N": 40.78700029707423,
+          "elastic_normal_wrench_coefficients": [
+            0.16150943396226414,
+            -0.0049180327868852455,
+            -0.003094339622641504
+          ]
+        },
+        {
+          "point_mm": [
+            60,
+            -70
+          ],
+          "max_tension_N": 74.55516192881274,
+          "max_shear_N": 40.78700029707423,
+          "elastic_normal_wrench_coefficients": [
+            0.16150943396226414,
+            0.0049180327868852455,
+            -0.003094339622641504
+          ]
+        },
+        {
+          "point_mm": [
+            0,
+            -40
+          ],
+          "max_tension_N": 28.697607773545357,
+          "max_shear_N": 24.906142179162586,
+          "elastic_normal_wrench_coefficients": [
+            0.16377358490566038,
+            0.0,
+            -0.001735849056603768
+          ]
+        },
+        {
+          "point_mm": [
+            0,
+            30
+          ],
+          "max_tension_N": 26.31157584159468,
+          "max_shear_N": 22.893479771192283,
+          "elastic_normal_wrench_coefficients": [
+            0.1690566037735849,
+            0.0,
+            0.0014339622641509498
+          ]
+        },
+        {
+          "point_mm": [
+            -50,
+            70
+          ],
+          "max_tension_N": 70.23695037024844,
+          "max_shear_N": 39.71476217457482,
+          "elastic_normal_wrench_coefficients": [
+            0.1720754716981132,
+            -0.004098360655737705,
+            0.0032452830188679314
+          ]
+        },
+        {
+          "point_mm": [
+            50,
+            70
+          ],
+          "max_tension_N": 70.23695037024844,
+          "max_shear_N": 39.71476217457482,
+          "elastic_normal_wrench_coefficients": [
+            0.1720754716981132,
+            0.004098360655737705,
+            0.0032452830188679314
+          ]
+        }
+      ],
+      "centroid_mm": [
+        0.0,
+        -1.6666666666666667
+      ],
+      "polar_sum_mm2": 34283.333333333336,
+      "max_tension_N": 74.55516192881274,
+      "max_shear_N": 40.78700029707423
+    },
+    "housing_local_demand_covers_group": true
+  },
+  "plate": {
+    "minimum_land_t_mm": 5.05,
+    "minimum_core_t_mm": 4.93,
+    "diagonal_span_mm": 223.90679774997898,
+    "local_beam_I_mm4": 279.58736633333325,
+    "local_free_bending_deflection_mm": 0.8962027648381454,
+    "local_proof_free_bending_deflection_mm": 1.3443041472572181,
+    "whole_plate_moment_bound_Nmm": 14678.483774511622,
+    "uncut_plate_mass_upper_bound_kg": 0.42059088
+  },
+  "countersink": {
+    "depth_screen_max_mm": 1.9334540466470378,
+    "straight_throat_stack_min_mm": 3.016545953352962,
+    "straight_throat_used_mm": 3.0,
+    "seat_projected_area_mm2": 28.74557278034661,
+    "punching_area_mm2": 41.469023027385276,
+    "hard_land_area_min_screen_mm2": 30.921125692957542,
+    "hard_land_bearing_MPa_per100N": 3.2340349116971363
+  },
+  "screw_fit": {
+    "nominal_projection_mm": 2.95,
+    "unscreened_tolerance_projection_min_mm": 2.6500000000000004,
+    "unscreened_tolerance_projection_max_mm": 3.2499999999999996,
+    "additional_entry_phase_plus_tip_allowance_min_projection_mm": 0.266,
+    "additional_entry_phase_plus_tip_allowance_max_projection_mm": 0.4159999999999999,
+    "full_diameter_axial_clearance_at_max_projection_mm": 0.5,
+    "drill_tip_axial_difference_at_max_projection_mm": 1.5010339999999998
+  },
+  "unrated_joints": {
+    "M4_external_shank_VM_MPa": 17.084282460136677,
+    "female_thread_shear_surrogate_area_mm2": 5.183627878423159,
+    "female_required_yield_at_factor3_zero_preload_MPa": 75.18121301206256,
+    "female_required_yield_addition_per100N_preload_MPa": 100.24161734941674
+  },
+  "plate_checks": {
+    "local_plate_strip": {
+      "VM_MPa": 56.13560177069987,
+      "yield_factor": 4.275361667633688
+    },
+    "whole_plate_strip": {
+      "VM_MPa": 54.36033428185883,
+      "yield_factor": 4.414983887987108
+    },
+    "countersink_punching": {
+      "shear_MPa": 1.8085788987715377,
+      "yield_factor": 76.61488514525337
+    },
+    "countersink_average_bearing_factor3": {
+      "VM_MPa": 7.827292283207967,
+      "yield_factor": 30.66194429903638
+    },
+    "plate_stud_bearing_factor2": {
+      "VM_MPa": 16.501650165016503,
+      "yield_factor": 14.543999999999999
+    },
+    "plate_stud_tearout": {
+      "shear_MPa": 2.020610224287735,
+      "yield_factor": 68.57535557326699
+    }
+  },
+  "minimum_plate_screen_yield_factor": 4.275361667633688,
+  "plate_target_met": true,
+  "thermal": {
+    "rounded_field_gross_area_mm2": 19634.539816339744,
+    "field_area_conservative_before_coverage_mm2": 19163.300918301276,
+    "screen_area_fraction_of_conservative_field": 0.9914784556691211,
+    "nominal_gap_volume_each_interface_cc": 0.9581650459150638,
+    "nominal_filled_volume_mass_each_interface_g": 2.012146596421634,
+    "bulk_only_cases": [
+      {
+        "area_mm2": 19000.0,
+        "gap_each_mm": 0.05,
+        "k_TIM_W_mK": 0.67,
+        "R_each_TIM_K_W": 0.003927729772191673,
+        "R_plate_K_W": 0.001789473684210526,
+        "R_panel_K_W": 0.002105263157894737,
+        "R_bulk_stack_K_W": 0.01175019638648861,
+        "delta_T_bulk_K": {
+          "10": 0.1175019638648861,
+          "30": 0.3525058915946583,
+          "60": 0.7050117831893166
+        }
+      },
+      {
+        "area_mm2": 19000.0,
+        "gap_each_mm": 0.1,
+        "k_TIM_W_mK": 0.67,
+        "R_each_TIM_K_W": 0.007855459544383346,
+        "R_plate_K_W": 0.001789473684210526,
+        "R_panel_K_W": 0.002105263157894737,
+        "R_bulk_stack_K_W": 0.019605655930871956,
+        "delta_T_bulk_K": {
+          "10": 0.19605655930871957,
+          "30": 0.5881696779261587,
+          "60": 1.1763393558523174
+        }
+      },
+      {
+        "area_mm2": 4750.0,
+        "gap_each_mm": 0.1,
+        "k_TIM_W_mK": 0.67,
+        "R_each_TIM_K_W": 0.031421838177533384,
+        "R_plate_K_W": 0.007157894736842104,
+        "R_panel_K_W": 0.008421052631578947,
+        "R_bulk_stack_K_W": 0.07842262372348782,
+        "delta_T_bulk_K": {
+          "10": 0.7842262372348783,
+          "30": 2.352678711704635,
+          "60": 4.70535742340927
+        }
+      },
+      {
+        "area_mm2": 950.0,
+        "gap_each_mm": 0.1,
+        "k_TIM_W_mK": 0.67,
+        "R_each_TIM_K_W": 0.15710919088766692,
+        "R_plate_K_W": 0.035789473684210524,
+        "R_panel_K_W": 0.04210526315789474,
+        "R_bulk_stack_K_W": 0.39211311861743914,
+        "delta_T_bulk_K": {
+          "10": 3.9211311861743914,
+          "30": 11.763393558523173,
+          "60": 23.526787117046347
+        }
+      },
+      {
+        "area_mm2": 19000.0,
+        "gap_each_mm": 0.1,
+        "k_TIM_W_mK": 0.42,
+        "R_each_TIM_K_W": 0.012531328320802006,
+        "R_plate_K_W": 0.001789473684210526,
+        "R_panel_K_W": 0.002105263157894737,
+        "R_bulk_stack_K_W": 0.028957393483709272,
+        "delta_T_bulk_K": {
+          "10": 0.2895739348370927,
+          "30": 0.8687218045112781,
+          "60": 1.7374436090225562
+        }
+      }
+    ],
+    "radial_spreading_sensitivity_K_W": 0.32237024984181184,
+    "radial_spreading_delta_T_at60W_K": 19.34221499050871,
+    "air_boundary_sensitivity": [
+      {
+        "h_assumed_W_m2K": 5,
+        "one_face_area_m2": 0.044,
+        "R_air_K_W": 4.545454545454546,
+        "delta_T_panel_air_K": {
+          "10": 45.45454545454546,
+          "30": 136.36363636363637,
+          "60": 272.72727272727275
+        }
+      },
+      {
+        "h_assumed_W_m2K": 10,
+        "one_face_area_m2": 0.044,
+        "R_air_K_W": 2.272727272727273,
+        "delta_T_panel_air_K": {
+          "10": 22.72727272727273,
+          "30": 68.18181818181819,
+          "60": 136.36363636363637
+        }
+      },
+      {
+        "h_assumed_W_m2K": 25,
+        "one_face_area_m2": 0.044,
+        "R_air_K_W": 0.9090909090909092,
+        "delta_T_panel_air_K": {
+          "10": 9.090909090909092,
+          "30": 27.272727272727277,
+          "60": 54.545454545454554
+        }
+      },
+      {
+        "h_assumed_W_m2K": 50,
+        "one_face_area_m2": 0.044,
+        "R_air_K_W": 0.4545454545454546,
+        "delta_T_panel_air_K": {
+          "10": 4.545454545454546,
+          "30": 13.636363636363638,
+          "60": 27.272727272727277
+        }
+      }
+    ],
+    "h_needed_for_20K_panel_air_budget_W_m2K": {
+      "10": 11.363636363636365,
+      "30": 34.09090909090909,
+      "60": 68.18181818181819
+    },
+    "full_130x160_face_force_at10psi_N": 1434.10951632,
+    "full_130x160_face_force_at40psi_N": 5736.43806528,
+    "CTE_10ppm_per_K_50K_160mm_free_movement_mm": 0.08
+  },
+  "CAD_parameter_audit": {
+    "status": "matched",
+    "mismatches": [],
+    "checked": {
+      "plate_width": 166,
+      "plate_length": 184,
+      "plate_thickness": 5.1,
+      "plate_thickness_tolerance": 0.05,
+      "housing_points": [
+        [
+          -60,
+          -70
+        ],
+        [
+          60,
+          -70
+        ],
+        [
+          0,
+          -40
+        ],
+        [
+          0,
+          30
+        ],
+        [
+          -50,
+          70
+        ],
+        [
+          50,
+          70
+        ]
+      ],
+      "housing_clearance_diameter": 4.5,
+      "countersink_diameter_reference": 8.1,
+      "bore_deburr": 0.1,
+      "screw_length_overall": 8,
+      "screw_pitch": 0.7,
+      "screw_projection_accept_min": 2.85,
+      "screw_projection_accept_max": 3.0,
+      "full_thread_engagement_accept_min": 2,
+      "thread_entry_depth_source": 0.584,
+      "full_diameter_blind_limit_source": 3.5,
+      "thermal_field_width": 126,
+      "thermal_field_length": 156,
+      "thermal_field_corner_radius": 5,
+      "thermal_pocket_depth": 0.05,
+      "thermal_pocket_depth_tolerance": 0.01,
+      "thermal_gap_accept_max": 0.1,
+      "tile_contact_land_diameter": 8,
+      "underside_countersink_land_diameter": 10,
+      "stud_pitch_x": 152,
+      "stud_pitch_y": 164,
+      "stud_pattern_rotation_deg": 0,
+      "stud_pattern_center_x": 0,
+      "stud_pattern_center_y": 0,
+      "stud_clearance_diameter": 3.8,
+      "panel_reference_thickness": 6
+    },
+    "sha256": "a46019a96b438b19c79a8865ffe0f5e7e8a3ee22b2cb5215bc2c7a90d410e8f5"
+  },
+  "arithmetic_self_checks": "passed; no physical validation"
+}

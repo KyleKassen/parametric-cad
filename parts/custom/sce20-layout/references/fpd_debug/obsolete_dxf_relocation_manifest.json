@@ -1,0 +1,20 @@
+[
+  {
+    "file": "MeanWell_R1_outline.dxf",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\MeanWell_R1_outline.dxf",
+    "destination": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\fpd_debug\\MeanWell_R1_outline.dxf",
+    "sha256": "A4380055CDECC30DFCF08A9C5DE0DBE9073025D96FF203FAC885070718ADB0DD"
+  },
+  {
+    "file": "Bedrock_R1_top_pocket.dxf",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\Bedrock_R1_top_pocket.dxf",
+    "destination": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\fpd_debug\\Bedrock_R1_top_pocket.dxf",
+    "sha256": "AF6025D79FE0295C5891708296E59A84587FDF6175FB0FABBA88CABB9E89C469"
+  },
+  {
+    "file": "Bedrock_R1_bottom_pocket.dxf",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\Bedrock_R1_bottom_pocket.dxf",
+    "destination": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\fpd_debug\\Bedrock_R1_bottom_pocket.dxf",
+    "sha256": "78463163907C709685826E269D928941303C7E32199D2E040F5C187F3175B7D1"
+  }
+]

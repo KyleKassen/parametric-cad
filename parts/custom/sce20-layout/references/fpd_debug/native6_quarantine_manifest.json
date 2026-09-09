@@ -1,0 +1,23 @@
+[
+  {
+    "file": "Bedrock_R1.fpd",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\Bedrock_R1.fpd",
+    "destination": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\fpd_debug\\Bedrock_R1.fpd",
+    "sha256": "67DCD50CBFF700C1B4636D811DD0B7C20207F5BD991FD05CAEF0E3CDA3D53ED6",
+    "reason": "Unqualified NATIVE6: diagonal pocket bridges and native STEP export crashed Front Panel Designer"
+  },
+  {
+    "file": "SCE20_BEDROCK_NATIVE6.fpjs",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\SCE20_BEDROCK_NATIVE6.fpjs",
+    "destination": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\fpd_debug\\SCE20_BEDROCK_NATIVE6.fpjs",
+    "sha256": "05D7187D3C4D15392C9E472A8013054CA58C728371CEC43C8BDDFCD72CF11D3E",
+    "reason": "Unqualified NATIVE6: diagonal pocket bridges and native STEP export crashed Front Panel Designer"
+  },
+  {
+    "file": "SCE20_BEDROCK_NATIVE6_inputs.json",
+    "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\FPE\\SCE20_BEDROCK_NATIVE6_inputs.json",
+    "destination": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\fpd_debug\\SCE20_BEDROCK_NATIVE6_inputs.json",
+    "sha256": "32F7D8E4693B47C590FF8CFB0B03278888427575D8F4C0A69B1A96E944E34A92",
+    "reason": "Unqualified NATIVE6: diagonal pocket bridges and native STEP export crashed Front Panel Designer"
+  }
+]

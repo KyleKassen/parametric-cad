@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "native_versions": [
+    "B210_R2",
+    "MeanWell_R2",
+    "Bedrock_R3"
+  ],
+  "native_geometry_checks_passed": 110,
+  "reports": [
+    "B210_R2_native_geometry_audit.json",
+    "MeanWell_R2_native_geometry_audit.json",
+    "Bedrock_R3_native_geometry_audit.json",
+    "native_bedrock_R3_step_audit.json"
+  ],
+  "native_files": [
+    {
+      "file": "B210_R2.fpd",
+      "sha256": "f377e884647dbda4a2ebb4c13ee9cc911e701d52f11b4af63cb4c98f360bbef7",
+      "bytes": 1113
+    },
+    {
+      "file": "B210_R2_native.step",
+      "sha256": "fe4bb818abc939060c440b59c6febefd5e8a1d12ecf418710a926ba6a97c954f",
+      "bytes": 122031
+    },
+    {
+      "file": "MeanWell_R2.fpd",
+      "sha256": "0f140305d7007147dad72e2867f7c907cab408cdfe8a721c3437156dcec6df7b",
+      "bytes": 1638
+    },
+    {
+      "file": "MeanWell_R2_native.step",
+      "sha256": "cd893b67f6f0df06b254fd76dfc98c6e0354279bf2e0b773ca20a3180effaeaf",
+      "bytes": 356215
+    },
+    {
+      "file": "Bedrock_R3.fpd",
+      "sha256": "86749ed2db93bd72cd32606f7123600c23d89ff7f3788c63efaa19026e9834bd",
+      "bytes": 2213
+    },
+    {
+      "file": "Bedrock_R3_native.step",
+      "sha256": "2f0e03811eff6c72d4c75d9d2128e929a931659fe3d079773482f396441332cf",
+      "bytes": 443950
+    }
+  ],
+  "scope": "Independent comparison of actual native FPD STEP exports with current reference CAD. Supplier machining/process acceptance and received screw/thread measurements remain required by source mechanical design; not physical/load/thermal qualification."
+}

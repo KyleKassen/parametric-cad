@@ -1,0 +1,131 @@
+{
+  "revision": "Bedrock_FPE_R1 preliminary standard-stock fit variant",
+  "units": "mm",
+  "plate_width": 166.0,
+  "plate_length": 184.0,
+  "plate_thickness": 6.0,
+  "plate_thickness_tolerance": 0.05,
+  "corner_radius": 8.0,
+  "edge_break": 0.4,
+  "bore_deburr": 0.1,
+  "housing_points": [
+    [
+      -60,
+      -70
+    ],
+    [
+      60,
+      -70
+    ],
+    [
+      0,
+      -40
+    ],
+    [
+      0,
+      30
+    ],
+    [
+      -50,
+      70
+    ],
+    [
+      50,
+      70
+    ]
+  ],
+  "housing_clearance_diameter": 4.5,
+  "countersink_diameter_reference": 9.9,
+  "countersink_angle_deg": 90.0,
+  "screw_diameter": 4.0,
+  "screw_pitch": 0.7,
+  "screw_length_overall": 8.0,
+  "screw_head_diameter": 8.0,
+  "screw_head_height_catalog": 2.3,
+  "screw_head_recess_nominal": 0.95,
+  "screw_hex_drive": 2.5,
+  "screw_projection_accept_min": 2.85,
+  "screw_projection_accept_max": 3.0,
+  "full_thread_engagement_accept_min": 2.0,
+  "full_diameter_blind_limit_source": 3.5,
+  "thread_entry_depth_source": 0.584,
+  "thermal_field_width": 126.0,
+  "thermal_field_length": 156.0,
+  "thermal_field_corner_radius": 5.0,
+  "thermal_pocket_depth": 0.05,
+  "thermal_pocket_depth_tolerance": 0.01,
+  "thermal_gap_accept_max": 0.1,
+  "tile_contact_land_diameter": 8.0,
+  "underside_countersink_land_diameter": 12.0,
+  "thermal_conductivity_compound_W_mK": 0.68,
+  "thermal_material_mcmaster": "10405K83",
+  "stud_pitch_x": 152.0,
+  "stud_pitch_y": 164.0,
+  "stud_pattern_rotation_deg": 0.0,
+  "stud_pattern_center_x": 0.0,
+  "stud_pattern_center_y": 0.0,
+  "stud_clearance_diameter": 3.8,
+  "stud_diameter": 3.0,
+  "stud_projection": 12.0,
+  "stud_base_diameter_reference": 11.9,
+  "stud_base_thickness_reference": 2.2,
+  "stud_cavity_diameter_reference": 12.1,
+  "stud_cavity_depth_reference": 2.3,
+  "washer_id": 3.2,
+  "washer_od": 7.0,
+  "washer_thickness_nominal": 0.55,
+  "nut_across_flats": 5.5,
+  "nut_height_nominal": 4.0,
+  "panel_reference_width": 200.0,
+  "panel_reference_length": 220.0,
+  "panel_reference_thickness": 6.0,
+  "tool_socket_envelope_diameter": 10.0,
+  "tool_socket_envelope_height": 60.0,
+  "tool_socket_internal_depth_min": 8.0,
+  "service_lift_min": 20.0,
+  "device_tile_index_zero_based": 19,
+  "device_60w_index_zero_based": 20,
+  "device_30w_index_zero_based": 21,
+  "device_auxiliary_indices_zero_based": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "device_rotate_axis": [
+    1,
+    1,
+    1
+  ],
+  "device_rotate_angle_deg": -120.0,
+  "device_translate": [
+    0,
+    -80,
+    14.5
+  ],
+  "device_fin_split_normalized_z": 29.0,
+  "device_fin_bank_top_normalized_z": 51.0,
+  "input_step_sha256": "80714a02ccf0ba999e2d004db3d40b22f86bf4f631081086a0ba262754f6b8b2",
+  "thermal_vent_width": 1.0,
+  "thermal_vent_y_positions": [
+    -20.0,
+    20.0
+  ],
+  "thermal_vent_start_x": 62.0,
+  "thermal_vent_end_x": 84.0
+}

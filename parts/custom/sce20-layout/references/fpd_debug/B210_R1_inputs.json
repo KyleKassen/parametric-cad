@@ -1,0 +1,96 @@
+[
+  {
+    "name": "B210_R1",
+    "width": 150.0,
+    "height": 148.0,
+    "thickness": 4.0,
+    "material_id": 5,
+    "color_id": 1,
+    "radius": 8.0,
+    "bevel": 0.4,
+    "remark": "R1 FIT DESIGN. Bare aluminum; finished thickness +/-0.05 mm; deburr bores <=0.1 mm. Front=device; reverse=backplate seating face. M3x6 device screws seat 0.55 mm recessed; nominal penetration 2.55 mm.",
+    "elements": [
+      {
+        "id": "P1",
+        "kind": "hole",
+        "x": 7.0,
+        "y": 13.9925,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P2",
+        "kind": "hole",
+        "x": 7.0,
+        "y": 134.0075,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P3",
+        "kind": "hole",
+        "x": 143.0,
+        "y": 13.9925,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P4",
+        "kind": "hole",
+        "x": 143.0,
+        "y": 134.0075,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "D1",
+        "kind": "hole",
+        "x": 28.200499999999998,
+        "y": 13.9925,
+        "diameter": 3.4,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 7.1,
+          "depth": 1.8499999999999999
+        }
+      },
+      {
+        "id": "D2",
+        "kind": "hole",
+        "x": 28.200499999999998,
+        "y": 134.0075,
+        "diameter": 3.4,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 7.1,
+          "depth": 1.8499999999999999
+        }
+      },
+      {
+        "id": "D3",
+        "kind": "hole",
+        "x": 121.7995,
+        "y": 13.9925,
+        "diameter": 3.4,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 7.1,
+          "depth": 1.8499999999999999
+        }
+      },
+      {
+        "id": "D4",
+        "kind": "hole",
+        "x": 121.7995,
+        "y": 134.0075,
+        "diameter": 3.4,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 7.1,
+          "depth": 1.8499999999999999
+        }
+      }
+    ],
+    "save": "C:/Users/KyleKassen/Documents/FPE_SCE20_20260908_R1/B210_R1.fpd"
+  }
+]

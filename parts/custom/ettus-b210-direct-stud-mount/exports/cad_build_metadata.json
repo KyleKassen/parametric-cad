@@ -1,0 +1,4227 @@
+{
+  "revision": "D1 preliminary fit prototype",
+  "units": "mm",
+  "plate_volume_mm3": 77078.85991781038,
+  "plate_mass_kg_at_2700_kg_m3": 0.20811292177808802,
+  "component_count": 210,
+  "source_device_solids": 196,
+  "installed_device_solids": 192,
+  "assembly_bbox_mm": {
+    "x": [
+      -90.0,
+      90.0
+    ],
+    "y": [
+      -100.0,
+      100.0
+    ],
+    "z": [
+      -6.0,
+      37.2000001
+    ]
+  },
+  "components": [
+    {
+      "name": "adapter_D1",
+      "kind": "plate",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -75.0054416,
+          75.0054416
+        ],
+        "y": [
+          -74.0054416,
+          74.0054416
+        ],
+        "z": [
+          -0.0089863,
+          3.5054416
+        ]
+      }
+    },
+    {
+      "name": "FPE_PANEL_REFERENCE_ONLY",
+      "kind": "panel",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -90.0,
+          90.0
+        ],
+        "y": [
+          -100.0,
+          100.0
+        ],
+        "z": [
+          -6.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_000",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -60.9195001,
+          60.9205001
+        ],
+        "y": [
+          -74.9105001,
+          80.6355001
+        ],
+        "z": [
+          3.4999999,
+          27.0523968
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_001",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          50.8555,
+          56.3555
+        ],
+        "y": [
+          70.5855,
+          80.6355
+        ],
+        "z": [
+          5.96,
+          11.46
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_002",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -56.3545,
+          -50.8545
+        ],
+        "y": [
+          70.5855,
+          80.6355
+        ],
+        "z": [
+          5.96,
+          11.46
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_003",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -56.3545,
+          -50.8545
+        ],
+        "y": [
+          -74.9105,
+          -64.8605
+        ],
+        "z": [
+          5.96,
+          11.46
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_004",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          50.8555,
+          56.3555
+        ],
+        "y": [
+          -74.9105,
+          -64.8605
+        ],
+        "z": [
+          5.96,
+          11.46
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_005",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          44.3995,
+          49.1995
+        ],
+        "y": [
+          57.2365,
+          62.7785
+        ],
+        "z": [
+          3.5,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_006",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          44.3995,
+          49.1995
+        ],
+        "y": [
+          -62.7785,
+          -57.2365
+        ],
+        "z": [
+          3.5,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_007",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -49.1995,
+          -44.3995
+        ],
+        "y": [
+          57.2365,
+          62.7785
+        ],
+        "z": [
+          3.5,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_008",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -49.1995,
+          -44.3995
+        ],
+        "y": [
+          -62.7785,
+          -57.2365
+        ],
+        "z": [
+          3.5,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_009",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -49.9745,
+          49.9745
+        ],
+        "y": [
+          -74.4855,
+          80.2005
+        ],
+        "z": [
+          13.5,
+          15.0748
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_010",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -44.372,
+          -40.972
+        ],
+        "y": [
+          -0.6665,
+          3.3335
+        ],
+        "z": [
+          15.0748,
+          16.3748
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_011",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -43.504612,
+          -41.077388
+        ],
+        "y": [
+          5.373878,
+          10.501122
+        ],
+        "z": [
+          15.0748,
+          16.82486
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_012",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          28.602178,
+          33.729422
+        ],
+        "y": [
+          14.394688,
+          16.821912
+        ],
+        "z": [
+          15.0748,
+          16.82486
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_013",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          24.4475,
+          30.2895
+        ],
+        "y": [
+          -56.769,
+          -53.467
+        ],
+        "z": [
+          15.0748,
+          15.2018
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_014",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          43.053,
+          44.5389
+        ],
+        "y": [
+          -38.0619,
+          -36.7411
+        ],
+        "z": [
+          15.0748,
+          15.2018
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_015",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          21.8567,
+          23.3426
+        ],
+        "y": [
+          -36.8427,
+          -35.5219
+        ],
+        "z": [
+          15.0748,
+          15.2018
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_016",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          28.2194,
+          30.226
+        ],
+        "y": [
+          -39.4335,
+          -38.1635
+        ],
+        "z": [
+          15.0748,
+          15.532
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_017",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          27.3177,
+          29.3243
+        ],
+        "y": [
+          -30.7975,
+          -29.5275
+        ],
+        "z": [
+          15.0748,
+          15.532
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_018",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          39.2557,
+          41.2623
+        ],
+        "y": [
+          -30.7975,
+          -29.5275
+        ],
+        "z": [
+          15.0748,
+          15.532
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_019",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          37.5793,
+          38.8493
+        ],
+        "y": [
+          -38.8112,
+          -36.8046
+        ],
+        "z": [
+          15.0748,
+          15.532
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_020",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          30.1117,
+          32.1183
+        ],
+        "y": [
+          -56.5785,
+          -55.3085
+        ],
+        "z": [
+          15.0748,
+          15.532
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_021",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          22.7203,
+          24.2062
+        ],
+        "y": [
+          -55.4101,
+          -54.0893
+        ],
+        "z": [
+          15.0748,
+          15.2018
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_022",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          27.3177,
+          29.3243
+        ],
+        "y": [
+          -47.9425,
+          -46.6725
+        ],
+        "z": [
+          15.0748,
+          15.532
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_023",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          39.2557,
+          41.2623
+        ],
+        "y": [
+          -47.9425,
+          -46.6725
+        ],
+        "z": [
+          15.0748,
+          15.532
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_024",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          36.4617,
+          38.4683
+        ],
+        "y": [
+          -56.4515,
+          -55.1815
+        ],
+        "z": [
+          15.0748,
+          15.532
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_025",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          44.196,
+          45.6819
+        ],
+        "y": [
+          -54.3179,
+          -52.9971
+        ],
+        "z": [
+          15.0748,
+          15.2018
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_026",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          38.9509,
+          40.9575
+        ],
+        "y": [
+          -18.8087,
+          -17.5387
+        ],
+        "z": [
+          15.0748,
+          15.532
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_027",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          31.5849,
+          33.5915
+        ],
+        "y": [
+          -12.4587,
+          -11.1887
+        ],
+        "z": [
+          15.0748,
+          15.532
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_028",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          41.280588,
+          43.707812
+        ],
+        "y": [
+          -21.245322,
+          -16.118078
+        ],
+        "z": [
+          15.0748,
+          16.82486
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_029",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          31.6357,
+          39.054278
+        ],
+        "y": [
+          -24.9682,
+          -15.9512
+        ],
+        "z": [
+          15.0748,
+          15.2018
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_030",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          29.6545,
+          32.9565
+        ],
+        "y": [
+          6.604,
+          12.446
+        ],
+        "z": [
+          15.0748,
+          15.2018
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_031",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          27.178,
+          36.957
+        ],
+        "y": [
+          -68.072,
+          -64.897
+        ],
+        "z": [
+          13.373,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_032",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          7.9375,
+          8.5725
+        ],
+        "y": [
+          34.1757,
+          35.0393
+        ],
+        "z": [
+          15.0748,
+          15.2018
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_033",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          7.9375,
+          8.5725
+        ],
+        "y": [
+          30.8737,
+          31.7373
+        ],
+        "z": [
+          15.0748,
+          15.2018
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_034",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -8.5725,
+          -7.9375
+        ],
+        "y": [
+          30.8737,
+          31.7373
+        ],
+        "z": [
+          15.0748,
+          15.2018
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_035",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -8.5725,
+          -7.9375
+        ],
+        "y": [
+          34.1757,
+          35.0393
+        ],
+        "z": [
+          15.0748,
+          15.2018
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_036",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          24.8285,
+          26.0985
+        ],
+        "y": [
+          28.9052,
+          30.9118
+        ],
+        "z": [
+          13.0428,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_037",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          5.7023,
+          7.7089
+        ],
+        "y": [
+          35.8902,
+          37.2872
+        ],
+        "z": [
+          15.0748,
+          15.088262
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_038",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          16.655288,
+          18.955512
+        ],
+        "y": [
+          34.481516,
+          36.358322
+        ],
+        "z": [
+          15.0748,
+          15.8368
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_039",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          31.9405,
+          32.8041
+        ],
+        "y": [
+          57.6072,
+          58.2422
+        ],
+        "z": [
+          15.0748,
+          15.2018
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_040",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          26.6319,
+          31.9659
+        ],
+        "y": [
+          51.7017,
+          56.2737
+        ],
+        "z": [
+          15.0748,
+          16.5988
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_041",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          11.9634,
+          13.1826
+        ],
+        "y": [
+          37.4015,
+          38.1635
+        ],
+        "z": [
+          15.0748,
+          15.3288
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_042",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          8.636,
+          13.721588
+        ],
+        "y": [
+          30.893004,
+          35.019996
+        ],
+        "z": [
+          15.0748,
+          17.8688
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_043",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -42.4053,
+          -40.3987
+        ],
+        "y": [
+          47.6885,
+          48.9585
+        ],
+        "z": [
+          13.0428,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_044",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          39.878,
+          43.18
+        ],
+        "y": [
+          33.5915,
+          36.6395
+        ],
+        "z": [
+          11.7474,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_045",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          39.878,
+          43.18
+        ],
+        "y": [
+          37.2745,
+          40.3225
+        ],
+        "z": [
+          11.7474,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_046",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          39.878,
+          43.18
+        ],
+        "y": [
+          44.6405,
+          47.6885
+        ],
+        "z": [
+          11.7474,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_047",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          39.878,
+          43.18
+        ],
+        "y": [
+          29.9085,
+          32.9565
+        ],
+        "z": [
+          11.7474,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_048",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          39.878,
+          43.18
+        ],
+        "y": [
+          40.9575,
+          44.0055
+        ],
+        "z": [
+          11.7474,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_049",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          39.878,
+          43.18
+        ],
+        "y": [
+          26.2255,
+          29.2735
+        ],
+        "z": [
+          11.7474,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_050",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -7.6581,
+          -5.6515
+        ],
+        "y": [
+          36.068,
+          37.465
+        ],
+        "z": [
+          15.0748,
+          15.088262
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_051",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          7.366,
+          9.3726
+        ],
+        "y": [
+          40.7035,
+          42.1005
+        ],
+        "z": [
+          15.0748,
+          15.088262
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_052",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -9.3726,
+          -7.366
+        ],
+        "y": [
+          40.7035,
+          42.1005
+        ],
+        "z": [
+          15.0748,
+          15.088262
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_053",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -16.644112,
+          -14.343888
+        ],
+        "y": [
+          35.930078,
+          37.806884
+        ],
+        "z": [
+          15.0748,
+          15.8368
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_054",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -33.8963,
+          -33.0327
+        ],
+        "y": [
+          54.3814,
+          55.0164
+        ],
+        "z": [
+          15.0748,
+          15.2018
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_055",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          14.123416,
+          16.000222
+        ],
+        "y": [
+          66.934588,
+          69.234812
+        ],
+        "z": [
+          15.0748,
+          15.8368
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_056",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          32.361378,
+          34.238184
+        ],
+        "y": [
+          65.258188,
+          67.558412
+        ],
+        "z": [
+          15.0748,
+          15.8368
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_057",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -12.605512,
+          -10.305288
+        ],
+        "y": [
+          64.148716,
+          66.025522
+        ],
+        "z": [
+          15.0748,
+          15.8368
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_058",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -31.138622,
+          -29.261816
+        ],
+        "y": [
+          59.619388,
+          61.919612
+        ],
+        "z": [
+          15.0748,
+          15.8368
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_059",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -44.518,
+          -40.318
+        ],
+        "y": [
+          51.8305,
+          55.2305
+        ],
+        "z": [
+          12.05,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_060",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -38.3413,
+          -33.0073
+        ],
+        "y": [
+          48.0949,
+          52.6669
+        ],
+        "z": [
+          15.0748,
+          16.5988
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_061",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -8.382,
+          -7.62
+        ],
+        "y": [
+          36.5379,
+          37.7571
+        ],
+        "z": [
+          15.0748,
+          15.3288
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_062",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -13.721588,
+          -8.636
+        ],
+        "y": [
+          30.918404,
+          35.045396
+        ],
+        "z": [
+          15.0748,
+          17.8688
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_063",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          7.588504,
+          11.715496
+        ],
+        "y": [
+          47.8155,
+          52.901088
+        ],
+        "z": [
+          15.0748,
+          17.8688
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_064",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          2.381504,
+          6.508496
+        ],
+        "y": [
+          47.8155,
+          52.901088
+        ],
+        "z": [
+          15.0748,
+          17.8688
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_065",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -12.350496,
+          -8.223504
+        ],
+        "y": [
+          47.8155,
+          52.901088
+        ],
+        "z": [
+          15.0748,
+          17.8688
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_066",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -6.762496,
+          -2.635504
+        ],
+        "y": [
+          47.8155,
+          52.901088
+        ],
+        "z": [
+          15.0748,
+          17.8688
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_067",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -11.881612,
+          -9.454388
+        ],
+        "y": [
+          -14.692122,
+          -9.564878
+        ],
+        "z": [
+          15.0748,
+          16.82486
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_068",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          16.566388,
+          18.993612
+        ],
+        "y": [
+          -16.152622,
+          -11.025378
+        ],
+        "z": [
+          15.0748,
+          16.82486
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_069",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          0.1905,
+          3.2385
+        ],
+        "y": [
+          -58.0136,
+          -55.934356
+        ],
+        "z": [
+          15.0748,
+          15.088262
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_070",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -4.8387,
+          -4.0513
+        ],
+        "y": [
+          -46.8376,
+          -45.2374
+        ],
+        "z": [
+          13.0428,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_071",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -12.2047,
+          -4.8133
+        ],
+        "y": [
+          -44.4119,
+          -39.0779
+        ],
+        "z": [
+          15.0748,
+          16.8274
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_072",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -1.88849,
+          8.348472
+        ],
+        "y": [
+          -49.06899,
+          -38.94201
+        ],
+        "z": [
+          15.0748,
+          16.174874
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_073",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -11.881612,
+          -9.454388
+        ],
+        "y": [
+          -4.405122,
+          0.722122
+        ],
+        "z": [
+          15.0748,
+          16.82486
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_074",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          16.566388,
+          18.993612
+        ],
+        "y": [
+          -7.961122,
+          -2.833878
+        ],
+        "z": [
+          15.0748,
+          16.82486
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_075",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          16.566388,
+          18.993612
+        ],
+        "y": [
+          -21.550122,
+          -16.422878
+        ],
+        "z": [
+          15.0748,
+          16.82486
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_076",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -28.624,
+          -25.224
+        ],
+        "y": [
+          -6.7625,
+          -2.7625
+        ],
+        "z": [
+          15.0748,
+          16.3748
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_077",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          4.548378,
+          9.675622
+        ],
+        "y": [
+          32.758888,
+          35.186112
+        ],
+        "z": [
+          11.74994,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_078",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          16.566388,
+          18.993612
+        ],
+        "y": [
+          0.039878,
+          5.167122
+        ],
+        "z": [
+          15.0748,
+          16.82486
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_079",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -5.263388,
+          5.263388
+        ],
+        "y": [
+          32.138112,
+          43.188636
+        ],
+        "z": [
+          15.0748,
+          16.774822
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_080",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -35.757612,
+          -33.330388
+        ],
+        "y": [
+          -1.230122,
+          3.897122
+        ],
+        "z": [
+          11.74994,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_081",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -29.464,
+          -26.416
+        ],
+        "y": [
+          -37.0205,
+          -33.7185
+        ],
+        "z": [
+          11.7474,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_082",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -35.6997,
+          -34.9123
+        ],
+        "y": [
+          -0.2286,
+          1.3716
+        ],
+        "z": [
+          15.0748,
+          15.532
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_083",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          18.8232,
+          22.2232
+        ],
+        "y": [
+          -66.5525,
+          -62.3525
+        ],
+        "z": [
+          12.05,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_084",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          39.9923,
+          41.9989
+        ],
+        "y": [
+          61.1505,
+          62.4205
+        ],
+        "z": [
+          13.0428,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_085",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -8.213852,
+          16.913352
+        ],
+        "y": [
+          -18.500852,
+          6.626352
+        ],
+        "z": [
+          15.0748,
+          18.57492
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_086",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          38.1526,
+          41.5526
+        ],
+        "y": [
+          54.8595,
+          59.0595
+        ],
+        "z": [
+          12.05,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_087",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          8.8392,
+          9.8552
+        ],
+        "y": [
+          -6.7183,
+          -6.2103
+        ],
+        "z": [
+          13.1444,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_088",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          38.4175,
+          44.2595
+        ],
+        "y": [
+          -57.404,
+          -54.102
+        ],
+        "z": [
+          15.0748,
+          15.2018
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_089",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          29.2735,
+          35.1155
+        ],
+        "y": [
+          27.94,
+          31.242
+        ],
+        "z": [
+          15.0748,
+          15.2018
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_090",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          24.0665,
+          27.3685
+        ],
+        "y": [
+          -42.291,
+          -36.449
+        ],
+        "z": [
+          15.0748,
+          15.2018
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_091",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -11.328908,
+          -8.102092
+        ],
+        "y": [
+          -50.234342,
+          -45.443902
+        ],
+        "z": [
+          15.0748,
+          16.874898
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_092",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          24.794464,
+          27.342338
+        ],
+        "y": [
+          -49.189894,
+          -44.663106
+        ],
+        "z": [
+          15.0748,
+          15.088262
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_093",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          41.558464,
+          44.106338
+        ],
+        "y": [
+          -49.189894,
+          -44.663106
+        ],
+        "z": [
+          15.0748,
+          15.088262
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_094",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          24.794464,
+          27.342338
+        ],
+        "y": [
+          -32.044894,
+          -27.518106
+        ],
+        "z": [
+          15.0748,
+          15.088262
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_095",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          41.558464,
+          44.106338
+        ],
+        "y": [
+          -32.171894,
+          -27.645106
+        ],
+        "z": [
+          15.0748,
+          15.088262
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_096",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          34.2519,
+          36.7411
+        ],
+        "y": [
+          -72.5297,
+          -69.3293
+        ],
+        "z": [
+          12.9412,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_097",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -29.845,
+          -28.829
+        ],
+        "y": [
+          -0.8255,
+          -0.3175
+        ],
+        "z": [
+          15.0748,
+          15.4304
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_098",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          10.6807,
+          12.6873
+        ],
+        "y": [
+          25.4635,
+          26.7335
+        ],
+        "z": [
+          13.0428,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_099",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          4.3307,
+          6.3373
+        ],
+        "y": [
+          25.3365,
+          26.6065
+        ],
+        "z": [
+          13.0428,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_100",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -1.674622,
+          3.452622
+        ],
+        "y": [
+          26.916888,
+          29.344112
+        ],
+        "z": [
+          15.0748,
+          16.82486
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_101",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -4.699,
+          -3.683
+        ],
+        "y": [
+          17.8435,
+          18.3515
+        ],
+        "z": [
+          13.1444,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_102",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -5.254244,
+          -4.990084
+        ],
+        "y": [
+          28.912312,
+          29.176472
+        ],
+        "z": [
+          15.0748,
+          16.874898
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_103",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -31.1531,
+          -29.5529
+        ],
+        "y": [
+          -3.5052,
+          -2.7178
+        ],
+        "z": [
+          13.0428,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_104",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          14.5923,
+          15.3797
+        ],
+        "y": [
+          -49.5046,
+          -47.9044
+        ],
+        "z": [
+          13.0428,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_105",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -27.4701,
+          -25.8699
+        ],
+        "y": [
+          42.2148,
+          43.0022
+        ],
+        "z": [
+          13.0428,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_106",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -20.4851,
+          -18.8849
+        ],
+        "y": [
+          42.0878,
+          42.8752
+        ],
+        "z": [
+          13.0428,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_107",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          38.757606,
+          43.284394
+        ],
+        "y": [
+          -36.743894,
+          -32.217106
+        ],
+        "z": [
+          15.0748,
+          19.174868
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_108",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          25.295606,
+          29.822394
+        ],
+        "y": [
+          -53.888894,
+          -49.362106
+        ],
+        "z": [
+          15.0748,
+          19.174868
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_109",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          25.295606,
+          29.822394
+        ],
+        "y": [
+          -36.743894,
+          -32.217106
+        ],
+        "z": [
+          15.0748,
+          19.174868
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_110",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -38.022,
+          -34.622
+        ],
+        "y": [
+          -6.3815,
+          -2.3815
+        ],
+        "z": [
+          15.0748,
+          16.3748
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_111",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -0.5588,
+          0.4572
+        ],
+        "y": [
+          36.8935,
+          37.4015
+        ],
+        "z": [
+          13.1444,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_112",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          44.1325,
+          45.1485
+        ],
+        "y": [
+          -64.9605,
+          -64.4525
+        ],
+        "z": [
+          13.1444,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_113",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          37.719,
+          38.735
+        ],
+        "y": [
+          -59.1185,
+          -58.6105
+        ],
+        "z": [
+          15.0748,
+          15.4304
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_114",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          38.4429,
+          38.9509
+        ],
+        "y": [
+          -59.8805,
+          -58.8645
+        ],
+        "z": [
+          13.1444,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_115",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -43.4467,
+          -42.6593
+        ],
+        "y": [
+          3.5814,
+          5.1816
+        ],
+        "z": [
+          15.0748,
+          15.532
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_116",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -43.1927,
+          -42.4053
+        ],
+        "y": [
+          -2.2606,
+          -0.6604
+        ],
+        "z": [
+          15.0748,
+          15.532
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_117",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          10.6553,
+          11.4427
+        ],
+        "y": [
+          -56.2356,
+          -54.6354
+        ],
+        "z": [
+          13.0428,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_118",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          40.7416,
+          42.3418
+        ],
+        "y": [
+          -69.9262,
+          -69.1388
+        ],
+        "z": [
+          13.0428,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_119",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          30.2514,
+          32.258
+        ],
+        "y": [
+          -39.4335,
+          -38.1635
+        ],
+        "z": [
+          15.0748,
+          15.532
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_120",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          43.6245,
+          46.1137
+        ],
+        "y": [
+          -72.0217,
+          -68.8213
+        ],
+        "z": [
+          12.9412,
+          13.5
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_121",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          39.8399,
+          42.8879
+        ],
+        "y": [
+          -61.1759,
+          -57.8739
+        ],
+        "z": [
+          15.0748,
+          16.8274
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_122",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          38.757606,
+          43.284394
+        ],
+        "y": [
+          -53.888894,
+          -49.362106
+        ],
+        "z": [
+          15.0748,
+          19.174868
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_123",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -32.347408,
+          -29.120592
+        ],
+        "y": [
+          -9.973056,
+          -2.345944
+        ],
+        "z": [
+          15.0748,
+          16.3448
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_124",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          33.1216,
+          36.4236
+        ],
+        "y": [
+          -61.1505,
+          -58.1025
+        ],
+        "z": [
+          15.0748,
+          16.8274
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_125",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          28.575,
+          38.1
+        ],
+        "y": [
+          74.3077,
+          91.6813
+        ],
+        "z": [
+          11.4934,
+          19.4182
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_126",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          8.255,
+          17.78
+        ],
+        "y": [
+          74.3077,
+          91.6813
+        ],
+        "z": [
+          11.4934,
+          19.4182
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_127",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          16.1544,
+          25.6794
+        ],
+        "y": [
+          -85.9663,
+          -68.5927
+        ],
+        "z": [
+          11.4934,
+          19.4182
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_128",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -20.574,
+          -11.049
+        ],
+        "y": [
+          -85.9663,
+          -68.5927
+        ],
+        "z": [
+          11.4934,
+          19.4182
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_129",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -17.2212,
+          -7.6962
+        ],
+        "y": [
+          74.3077,
+          91.6813
+        ],
+        "z": [
+          11.4934,
+          19.4182
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_130",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -37.465,
+          -27.94
+        ],
+        "y": [
+          74.3077,
+          91.6813
+        ],
+        "z": [
+          11.4934,
+          19.4182
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_131",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -3.939118,
+          7.360882
+        ],
+        "y": [
+          -76.8720071,
+          -60.662007
+        ],
+        "z": [
+          12.2748,
+          27.6248
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_132",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -3.939118,
+          7.360882
+        ],
+        "y": [
+          -66.102007,
+          -59.752007
+        ],
+        "z": [
+          15.7098,
+          21.0098
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_133",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -3.939118,
+          7.360882
+        ],
+        "y": [
+          -77.372007,
+          -59.722007
+        ],
+        "z": [
+          15.0748,
+          27.6248
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_134",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          2.160882,
+          3.760882
+        ],
+        "y": [
+          -76.172007,
+          -62.587007
+        ],
+        "z": [
+          12.2848,
+          22.9648
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_135",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -0.339118,
+          1.260882
+        ],
+        "y": [
+          -76.172007,
+          -62.587007
+        ],
+        "z": [
+          12.2848,
+          22.9648
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_136",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          2.160882,
+          3.760882
+        ],
+        "y": [
+          -76.172007,
+          -64.587007
+        ],
+        "z": [
+          12.2848,
+          19.689896
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_137",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -0.339118,
+          1.260882
+        ],
+        "y": [
+          -76.172007,
+          -64.587007
+        ],
+        "z": [
+          12.2848,
+          19.689896
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_138",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          34.9589,
+          43.9589
+        ],
+        "y": [
+          -65.735618,
+          -62.835618
+        ],
+        "z": [
+          15.2748,
+          25.7748
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_139",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          33.1589,
+          34.9589
+        ],
+        "y": [
+          -67.285618,
+          -65.785618
+        ],
+        "z": [
+          15.0748,
+          15.4748
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_140",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          34.4589,
+          34.9589
+        ],
+        "y": [
+          -73.985618,
+          -72.685618
+        ],
+        "z": [
+          16.6748,
+          17.3748
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_141",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          34.9588999,
+          45.7589
+        ],
+        "y": [
+          -77.6356181,
+          -65.7356179
+        ],
+        "z": [
+          14.0748,
+          26.2748001
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_142",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          34.7589,
+          41.9589
+        ],
+        "y": [
+          -73.385618,
+          -63.835618
+        ],
+        "z": [
+          15.4748,
+          24.2748
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_143",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          33.1589,
+          34.9589
+        ],
+        "y": [
+          -73.385618,
+          -71.885618
+        ],
+        "z": [
+          15.0748,
+          15.4748
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_144",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          34.4589,
+          34.9589
+        ],
+        "y": [
+          -73.985618,
+          -72.685618
+        ],
+        "z": [
+          18.3748,
+          19.0748
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_145",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          36.0934,
+          44.8056
+        ],
+        "y": [
+          -9.7155001,
+          15.6845001
+        ],
+        "z": [
+          9.0803999,
+          17.7926
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_146",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          23.393,
+          29.6930001
+        ],
+        "y": [
+          -21.9775,
+          -5.3275
+        ],
+        "z": [
+          12.5748,
+          21.4748001
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_147",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          23.495,
+          28.575
+        ],
+        "y": [
+          -1.2065,
+          11.4935
+        ],
+        "z": [
+          12.357,
+          23.4568
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_148",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          13.248056,
+          18.248056
+        ],
+        "y": [
+          -61.889208,
+          -56.889208
+        ],
+        "z": [
+          15.0748,
+          19.2648
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_149",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -40.513,
+          -30.988
+        ],
+        "y": [
+          -85.9663,
+          -68.5927
+        ],
+        "z": [
+          11.4934,
+          19.4182
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_150",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -49.5494996,
+          -44.0495004
+        ],
+        "y": [
+          57.2575003,
+          62.7574997
+        ],
+        "z": [
+          7.0738,
+          16.674746
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_151",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          44.0495004,
+          49.5494996
+        ],
+        "y": [
+          57.2575003,
+          62.7574997
+        ],
+        "z": [
+          7.0738,
+          16.674746
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_152",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          44.0495004,
+          49.5494996
+        ],
+        "y": [
+          -62.7574997,
+          -57.2575003
+        ],
+        "z": [
+          7.0738,
+          16.674746
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_153",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -49.5494996,
+          -44.0495004
+        ],
+        "y": [
+          -62.7574997,
+          -57.2575003
+        ],
+        "z": [
+          7.0738,
+          16.674746
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_154",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          20.884502,
+          30.511102
+        ],
+        "y": [
+          63.9732,
+          82.8708
+        ],
+        "z": [
+          11.7855,
+          21.5772001
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_155",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          0.564502,
+          10.191102
+        ],
+        "y": [
+          63.9732,
+          82.8708
+        ],
+        "z": [
+          11.7855,
+          21.5772001
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_156",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -24.911698,
+          -15.285098
+        ],
+        "y": [
+          63.9732,
+          82.8708
+        ],
+        "z": [
+          11.7855,
+          21.5772001
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_157",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -45.155498,
+          -35.528898
+        ],
+        "y": [
+          63.9732,
+          82.8708
+        ],
+        "z": [
+          11.7855,
+          21.5772001
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_158",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          23.743348,
+          33.369948
+        ],
+        "y": [
+          -77.1558,
+          -58.2582
+        ],
+        "z": [
+          11.7855,
+          21.5772001
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_159",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -61.1735001,
+          61.1745001
+        ],
+        "y": [
+          -74.9105001,
+          80.6355001
+        ],
+        "z": [
+          13.0,
+          37.2000001
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_160",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -56.3545,
+          -50.8545
+        ],
+        "y": [
+          70.5855,
+          80.6355
+        ],
+        "z": [
+          29.24,
+          34.74
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_161",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          50.8555,
+          56.3555
+        ],
+        "y": [
+          70.5855,
+          80.6355
+        ],
+        "z": [
+          29.24,
+          34.74
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_162",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -56.3545,
+          -50.8545
+        ],
+        "y": [
+          -74.9105,
+          -64.8605
+        ],
+        "z": [
+          29.24,
+          34.74
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_163",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          50.8555,
+          56.3555
+        ],
+        "y": [
+          -74.9105,
+          -64.8605
+        ],
+        "z": [
+          29.24,
+          34.74
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_164",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -58.4995,
+          58.5005
+        ],
+        "y": [
+          -75.8245,
+          -74.9105
+        ],
+        "z": [
+          5.92,
+          34.78
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_165",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -58.4995,
+          58.5005
+        ],
+        "y": [
+          80.6355,
+          81.5495
+        ],
+        "z": [
+          5.92,
+          34.78
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_166",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -56.3544996,
+          -50.8545004
+        ],
+        "y": [
+          73.5485,
+          83.149446
+        ],
+        "z": [
+          29.2400003,
+          34.7399997
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_167",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          50.8555004,
+          56.3554996
+        ],
+        "y": [
+          73.5485,
+          83.149446
+        ],
+        "z": [
+          29.2400003,
+          34.7399997
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_168",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          50.8555004,
+          56.3554996
+        ],
+        "y": [
+          73.5485,
+          83.149446
+        ],
+        "z": [
+          5.9600003,
+          11.4599997
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_169",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -56.3544996,
+          -50.8545004
+        ],
+        "y": [
+          73.5485,
+          83.149446
+        ],
+        "z": [
+          5.9600004,
+          11.4599997
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_170",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          50.8555004,
+          56.3554996
+        ],
+        "y": [
+          -77.424446,
+          -67.8235
+        ],
+        "z": [
+          29.2400003,
+          34.7399997
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_171",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -56.3544996,
+          -50.8545004
+        ],
+        "y": [
+          -77.424446,
+          -67.8235
+        ],
+        "z": [
+          29.2400003,
+          34.7399997
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_172",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -56.3544996,
+          -50.8545004
+        ],
+        "y": [
+          -77.424446,
+          -67.8235
+        ],
+        "z": [
+          5.9600003,
+          11.4599997
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_173",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          50.8555004,
+          56.3554996
+        ],
+        "y": [
+          -77.424446,
+          -67.8235
+        ],
+        "z": [
+          5.9600003,
+          11.4599997
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_178",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -57.9775519,
+          57.9741459
+        ],
+        "y": [
+          81.5495,
+          81.9305
+        ],
+        "z": [
+          6.0375541,
+          34.642292
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_179",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          28.2321,
+          38.4429
+        ],
+        "y": [
+          81.5495,
+          82.5401
+        ],
+        "z": [
+          10.3504,
+          20.5612
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_180",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          28.7181204,
+          37.9568796
+        ],
+        "y": [
+          82.5400999,
+          84.1276001
+        ],
+        "z": [
+          11.4552999,
+          19.4563001
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_181",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          7.9121,
+          18.1229
+        ],
+        "y": [
+          81.5495,
+          82.5401
+        ],
+        "z": [
+          10.3504,
+          20.5612
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_182",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          8.3981204,
+          17.6368796
+        ],
+        "y": [
+          82.5400999,
+          84.1276001
+        ],
+        "z": [
+          11.4552999,
+          19.4563001
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_183",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -17.5641,
+          -7.3533
+        ],
+        "y": [
+          81.5495,
+          82.5401
+        ],
+        "z": [
+          10.3504,
+          20.5612
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_184",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -17.0780796,
+          -7.8393204
+        ],
+        "y": [
+          82.5400999,
+          84.1276001
+        ],
+        "z": [
+          11.4552999,
+          19.4563001
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_185",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -37.8079,
+          -27.5971
+        ],
+        "y": [
+          81.5495,
+          82.5401
+        ],
+        "z": [
+          10.3504,
+          20.5612
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_186",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -37.3218796,
+          -28.0831204
+        ],
+        "y": [
+          82.5400999,
+          84.1276001
+        ],
+        "z": [
+          11.4552999,
+          19.4563001
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_187",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -20.9169,
+          -10.7061
+        ],
+        "y": [
+          -76.8151,
+          -75.8245
+        ],
+        "z": [
+          10.3504,
+          20.5612
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_188",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -20.4308796,
+          -11.1921204
+        ],
+        "y": [
+          -78.4026001,
+          -76.8150999
+        ],
+        "z": [
+          11.4552999,
+          19.4563001
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_189",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          15.8115,
+          26.0223
+        ],
+        "y": [
+          -76.8151,
+          -75.8245
+        ],
+        "z": [
+          10.3504,
+          20.5612
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_190",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          16.2975204,
+          25.5362796
+        ],
+        "y": [
+          -78.4026001,
+          -76.8150999
+        ],
+        "z": [
+          11.4552999,
+          19.4563001
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_191",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -32.911402,
+          -23.284802
+        ],
+        "y": [
+          -77.1558,
+          -58.2582
+        ],
+        "z": [
+          11.7855,
+          21.5772001
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_192",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -57.9756964,
+          57.977314
+        ],
+        "y": [
+          -76.2055,
+          -75.8245
+        ],
+        "z": [
+          6.03129,
+          34.6441923
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_193",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -40.8049,
+          -30.5941
+        ],
+        "y": [
+          -76.8151,
+          -75.8245
+        ],
+        "z": [
+          10.3346,
+          20.5454
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_194",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -40.3188796,
+          -31.0801204
+        ],
+        "y": [
+          -78.4026001,
+          -76.8150999
+        ],
+        "z": [
+          11.4394999,
+          19.4405001
+        ]
+      }
+    },
+    {
+      "name": "device_original_solid_195",
+      "kind": "device",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -57.9755,
+          57.9755
+        ],
+        "y": [
+          81.9305,
+          82.3115
+        ],
+        "z": [
+          6.0578,
+          34.6582
+        ]
+      }
+    },
+    {
+      "name": "McMaster_91294A126_M3x6_1",
+      "kind": "screw",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -49.7995,
+          -43.7995
+        ],
+        "y": [
+          -63.0075,
+          -57.0075
+        ],
+        "z": [
+          0.05,
+          6.05
+        ]
+      }
+    },
+    {
+      "name": "McMaster_91294A126_M3x6_2",
+      "kind": "screw",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -49.7995,
+          -43.7995
+        ],
+        "y": [
+          57.0075,
+          63.0075
+        ],
+        "z": [
+          0.05,
+          6.05
+        ]
+      }
+    },
+    {
+      "name": "McMaster_91294A126_M3x6_3",
+      "kind": "screw",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          43.7995,
+          49.7995
+        ],
+        "y": [
+          -63.0075,
+          -57.0075
+        ],
+        "z": [
+          0.05,
+          6.05
+        ]
+      }
+    },
+    {
+      "name": "McMaster_91294A126_M3x6_4",
+      "kind": "screw",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          43.7995,
+          49.7995
+        ],
+        "y": [
+          57.0075,
+          63.0075
+        ],
+        "z": [
+          0.05,
+          6.05
+        ]
+      }
+    },
+    {
+      "name": "FPE_WGU30_M3_L12_REFERENCE_1",
+      "kind": "stud",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -73.95,
+          -62.05
+        ],
+        "y": [
+          -65.9575,
+          -54.0575
+        ],
+        "z": [
+          -2.2,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "McMaster_98688A142_washer_1",
+      "kind": "washer",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -71.5,
+          -64.5
+        ],
+        "y": [
+          -63.5075,
+          -56.5075
+        ],
+        "z": [
+          3.5,
+          4.05
+        ]
+      }
+    },
+    {
+      "name": "McMaster_90576A102_locknut_1",
+      "kind": "nut",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -71.1754265,
+          -64.8245735
+        ],
+        "y": [
+          -62.7575,
+          -57.2575
+        ],
+        "z": [
+          4.05,
+          8.05
+        ]
+      }
+    },
+    {
+      "name": "FPE_WGU30_M3_L12_REFERENCE_2",
+      "kind": "stud",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -73.95,
+          -62.05
+        ],
+        "y": [
+          54.0575,
+          65.9575
+        ],
+        "z": [
+          -2.2,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "McMaster_98688A142_washer_2",
+      "kind": "washer",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -71.5,
+          -64.5
+        ],
+        "y": [
+          56.5075,
+          63.5075
+        ],
+        "z": [
+          3.5,
+          4.05
+        ]
+      }
+    },
+    {
+      "name": "McMaster_90576A102_locknut_2",
+      "kind": "nut",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          -71.1754265,
+          -64.8245735
+        ],
+        "y": [
+          57.2575,
+          62.7575
+        ],
+        "z": [
+          4.05,
+          8.05
+        ]
+      }
+    },
+    {
+      "name": "FPE_WGU30_M3_L12_REFERENCE_3",
+      "kind": "stud",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          62.05,
+          73.95
+        ],
+        "y": [
+          -65.9575,
+          -54.0575
+        ],
+        "z": [
+          -2.2,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "McMaster_98688A142_washer_3",
+      "kind": "washer",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          64.5,
+          71.5
+        ],
+        "y": [
+          -63.5075,
+          -56.5075
+        ],
+        "z": [
+          3.5,
+          4.05
+        ]
+      }
+    },
+    {
+      "name": "McMaster_90576A102_locknut_3",
+      "kind": "nut",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          64.8245735,
+          71.1754265
+        ],
+        "y": [
+          -62.7575,
+          -57.2575
+        ],
+        "z": [
+          4.05,
+          8.05
+        ]
+      }
+    },
+    {
+      "name": "FPE_WGU30_M3_L12_REFERENCE_4",
+      "kind": "stud",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          62.05,
+          73.95
+        ],
+        "y": [
+          54.0575,
+          65.9575
+        ],
+        "z": [
+          -2.2,
+          12.0
+        ]
+      }
+    },
+    {
+      "name": "McMaster_98688A142_washer_4",
+      "kind": "washer",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          64.5,
+          71.5
+        ],
+        "y": [
+          56.5075,
+          63.5075
+        ],
+        "z": [
+          3.5,
+          4.05
+        ]
+      }
+    },
+    {
+      "name": "McMaster_90576A102_locknut_4",
+      "kind": "nut",
+      "valid": true,
+      "solids": 1,
+      "bbox_mm": {
+        "x": [
+          64.8245735,
+          71.1754265
+        ],
+        "y": [
+          57.2575,
+          62.7575
+        ],
+        "z": [
+          4.05,
+          8.05
+        ]
+      }
+    }
+  ],
+  "hardware_geometry": "Simplified catalog envelopes, ideal conical head; not supplier CAD or a helical thread fit test.",
+  "datum": "Plate undersideZ0; radio panZ3.5; original input preserved."
+}

@@ -1,0 +1,735 @@
+{
+  "status": "PASS",
+  "scope": "Independent nominal STEP/DXF manufacturing geometry inspection",
+  "limitations": "Does not certify actual machining, screw compatibility, preload, thread/stud capacity, thermal performance or physical flatness.",
+  "params_sha256": "a46019a96b438b19c79a8865ffe0f5e7e8a3ee22b2cb5215bc2c7a90d410e8f5",
+  "checks": [
+    {
+      "check": "STEP is one valid solid",
+      "pass": true,
+      "measured": null
+    },
+    {
+      "check": "STEP declares millimeter length units",
+      "pass": true,
+      "measured": null
+    },
+    {
+      "check": "STEP scale and datum bounds",
+      "pass": true,
+      "measured": [
+        -83.0,
+        83.0,
+        -92.0,
+        92.0,
+        -3.247402347028583e-15,
+        5.100000000000003
+      ]
+    },
+    {
+      "check": "Second STEP roundtrip validity",
+      "pass": true,
+      "measured": null
+    },
+    {
+      "check": "Second STEP roundtrip solid equality",
+      "pass": true,
+      "measured": 0
+    },
+    {
+      "check": "Six housing parameters match fresh vendor axes",
+      "pass": true,
+      "measured": [
+        [
+          -60.0,
+          -70.0
+        ],
+        [
+          60.0,
+          -70.0
+        ],
+        [
+          0.0,
+          -40.0
+        ],
+        [
+          0.0,
+          30.0
+        ],
+        [
+          -50.0,
+          70.0
+        ],
+        [
+          50.0,
+          70.0
+        ]
+      ]
+    },
+    {
+      "check": "Fresh vendor audit has the intended source hash",
+      "pass": true,
+      "measured": null
+    },
+    {
+      "check": "Housing bore count",
+      "pass": true,
+      "measured": 6
+    },
+    {
+      "check": "Housing bore 1 axis",
+      "pass": true,
+      "measured": [
+        {
+          "zmin": 1.7999999999999998,
+          "zmax": 5.0,
+          "area": 45.238934211690044,
+          "x": -60.0,
+          "y": -70.0,
+          "diameter": 4.5
+        }
+      ]
+    },
+    {
+      "check": "Housing bore 1 straight throat",
+      "pass": true,
+      "measured": {
+        "measured": [
+          1.7999999999999998,
+          5.0
+        ],
+        "expected": [
+          1.8,
+          5.0
+        ]
+      }
+    },
+    {
+      "check": "Housing bore 2 axis",
+      "pass": true,
+      "measured": [
+        {
+          "zmin": 1.7999999999999998,
+          "zmax": 5.0,
+          "area": 45.238934211690044,
+          "x": 60.0,
+          "y": -70.0,
+          "diameter": 4.5
+        }
+      ]
+    },
+    {
+      "check": "Housing bore 2 straight throat",
+      "pass": true,
+      "measured": {
+        "measured": [
+          1.7999999999999998,
+          5.0
+        ],
+        "expected": [
+          1.8,
+          5.0
+        ]
+      }
+    },
+    {
+      "check": "Housing bore 3 axis",
+      "pass": true,
+      "measured": [
+        {
+          "zmin": 1.7999999999999998,
+          "zmax": 5.0,
+          "area": 45.238934211690044,
+          "x": 0.0,
+          "y": -40.0,
+          "diameter": 4.5
+        }
+      ]
+    },
+    {
+      "check": "Housing bore 3 straight throat",
+      "pass": true,
+      "measured": {
+        "measured": [
+          1.7999999999999998,
+          5.0
+        ],
+        "expected": [
+          1.8,
+          5.0
+        ]
+      }
+    },
+    {
+      "check": "Housing bore 4 axis",
+      "pass": true,
+      "measured": [
+        {
+          "zmin": 1.7999999999999998,
+          "zmax": 5.0,
+          "area": 45.238934211690044,
+          "x": 0.0,
+          "y": 30.0,
+          "diameter": 4.5
+        }
+      ]
+    },
+    {
+      "check": "Housing bore 4 straight throat",
+      "pass": true,
+      "measured": {
+        "measured": [
+          1.7999999999999998,
+          5.0
+        ],
+        "expected": [
+          1.8,
+          5.0
+        ]
+      }
+    },
+    {
+      "check": "Housing bore 5 axis",
+      "pass": true,
+      "measured": [
+        {
+          "zmin": 1.7999999999999998,
+          "zmax": 5.0,
+          "area": 45.238934211690044,
+          "x": -50.0,
+          "y": 70.0,
+          "diameter": 4.5
+        }
+      ]
+    },
+    {
+      "check": "Housing bore 5 straight throat",
+      "pass": true,
+      "measured": {
+        "measured": [
+          1.7999999999999998,
+          5.0
+        ],
+        "expected": [
+          1.8,
+          5.0
+        ]
+      }
+    },
+    {
+      "check": "Housing bore 6 axis",
+      "pass": true,
+      "measured": [
+        {
+          "zmin": 1.7999999999999998,
+          "zmax": 5.0,
+          "area": 45.238934211690044,
+          "x": 50.0,
+          "y": 70.0,
+          "diameter": 4.5
+        }
+      ]
+    },
+    {
+      "check": "Housing bore 6 straight throat",
+      "pass": true,
+      "measured": {
+        "measured": [
+          1.7999999999999998,
+          5.0
+        ],
+        "expected": [
+          1.8,
+          5.0
+        ]
+      }
+    },
+    {
+      "check": "Stud bore count",
+      "pass": true,
+      "measured": 4
+    },
+    {
+      "check": "Stud bore 1 axis",
+      "pass": true,
+      "measured": [
+        {
+          "zmin": 0.1,
+          "zmax": 5.0,
+          "area": 58.4964552098381,
+          "x": -76.0,
+          "y": -82.0,
+          "diameter": 3.8
+        }
+      ]
+    },
+    {
+      "check": "Stud bore 1 straight throat",
+      "pass": true,
+      "measured": {
+        "measured": [
+          0.1,
+          5.0
+        ],
+        "expected": [
+          0.1,
+          5.0
+        ]
+      }
+    },
+    {
+      "check": "Stud bore 2 axis",
+      "pass": true,
+      "measured": [
+        {
+          "zmin": 0.1,
+          "zmax": 5.0,
+          "area": 58.4964552098381,
+          "x": -76.0,
+          "y": 82.0,
+          "diameter": 3.8
+        }
+      ]
+    },
+    {
+      "check": "Stud bore 2 straight throat",
+      "pass": true,
+      "measured": {
+        "measured": [
+          0.1,
+          5.0
+        ],
+        "expected": [
+          0.1,
+          5.0
+        ]
+      }
+    },
+    {
+      "check": "Stud bore 3 axis",
+      "pass": true,
+      "measured": [
+        {
+          "zmin": 0.1,
+          "zmax": 5.0,
+          "area": 58.4964552098381,
+          "x": 76.0,
+          "y": -82.0,
+          "diameter": 3.8
+        }
+      ]
+    },
+    {
+      "check": "Stud bore 3 straight throat",
+      "pass": true,
+      "measured": {
+        "measured": [
+          0.1,
+          5.0
+        ],
+        "expected": [
+          0.1,
+          5.0
+        ]
+      }
+    },
+    {
+      "check": "Stud bore 4 axis",
+      "pass": true,
+      "measured": [
+        {
+          "zmin": 0.1,
+          "zmax": 5.0,
+          "area": 58.4964552098381,
+          "x": 76.0,
+          "y": 82.0,
+          "diameter": 3.8
+        }
+      ]
+    },
+    {
+      "check": "Stud bore 4 straight throat",
+      "pass": true,
+      "measured": {
+        "measured": [
+          0.1,
+          5.0
+        ],
+        "expected": [
+          0.1,
+          5.0
+        ]
+      }
+    },
+    {
+      "check": "Countersink 1 angle, opening and depth",
+      "pass": true,
+      "measured": [
+        {
+          "zmin": 0.0,
+          "zmax": 1.8,
+          "area": 50.38229251872562,
+          "x": -60.0,
+          "y": -70.0,
+          "half_angle_deg": 44.999999999974314,
+          "bbox_diameter": 8.099999999999994
+        }
+      ]
+    },
+    {
+      "check": "Countersink 2 angle, opening and depth",
+      "pass": true,
+      "measured": [
+        {
+          "zmin": 0.0,
+          "zmax": 1.8,
+          "area": 50.38229251872562,
+          "x": 60.0,
+          "y": -70.0,
+          "half_angle_deg": 44.999999999974314,
+          "bbox_diameter": 8.099999999999994
+        }
+      ]
+    },
+    {
+      "check": "Countersink 3 angle, opening and depth",
+      "pass": true,
+      "measured": [
+        {
+          "zmin": 0.0,
+          "zmax": 1.8000000000000003,
+          "area": 50.38229251872565,
+          "x": 0.0,
+          "y": -40.0,
+          "half_angle_deg": 44.999999999974314,
+          "bbox_diameter": 8.1
+        }
+      ]
+    },
+    {
+      "check": "Countersink 4 angle, opening and depth",
+      "pass": true,
+      "measured": [
+        {
+          "zmin": 0.0,
+          "zmax": 1.8000000000000003,
+          "area": 50.38229251872565,
+          "x": 0.0,
+          "y": 30.0,
+          "half_angle_deg": 44.999999999974314,
+          "bbox_diameter": 8.1
+        }
+      ]
+    },
+    {
+      "check": "Countersink 5 angle, opening and depth",
+      "pass": true,
+      "measured": [
+        {
+          "zmin": 0.0,
+          "zmax": 1.8,
+          "area": 50.38229251872562,
+          "x": -50.0,
+          "y": 70.0,
+          "half_angle_deg": 44.999999999974314,
+          "bbox_diameter": 8.099999999999994
+        }
+      ]
+    },
+    {
+      "check": "Countersink 6 angle, opening and depth",
+      "pass": true,
+      "measured": [
+        {
+          "zmin": 0.0,
+          "zmax": 1.8,
+          "area": 50.38229251872562,
+          "x": 50.0,
+          "y": 70.0,
+          "half_angle_deg": 44.999999999974314,
+          "bbox_diameter": 8.099999999999994
+        }
+      ]
+    },
+    {
+      "check": "Lower seating datum is a planar face",
+      "pass": true,
+      "measured": {
+        "z_mm": 0,
+        "area_mm2": 10630.6714485269
+      }
+    },
+    {
+      "check": "Lower pocket floor is a planar face",
+      "pass": true,
+      "measured": {
+        "z_mm": 0.05,
+        "area_mm2": 19225.041619684038
+      }
+    },
+    {
+      "check": "Upper pocket floor is a planar face",
+      "pass": true,
+      "measured": {
+        "z_mm": 5.05,
+        "area_mm2": 19379.49990965871
+      }
+    },
+    {
+      "check": "Upper contact datum is a planar face",
+      "pass": true,
+      "measured": {
+        "z_mm": 5.1,
+        "area_mm2": 10681.296326978532
+      }
+    },
+    {
+      "check": "Two escape grooves per thermal face",
+      "pass": true,
+      "measured": [
+        -20.0,
+        20.0
+      ]
+    },
+    {
+      "check": "Lower recessed field is fully removed",
+      "pass": true,
+      "measured": 0
+    },
+    {
+      "check": "Lower contact land pattern equals nominal CAD section",
+      "pass": true,
+      "measured": 0
+    },
+    {
+      "check": "Upper recessed field is fully removed",
+      "pass": true,
+      "measured": 0
+    },
+    {
+      "check": "Upper contact land pattern equals nominal CAD section",
+      "pass": true,
+      "measured": 0
+    },
+    {
+      "check": "profile DXF declares millimeters",
+      "pass": true,
+      "measured": 4
+    },
+    {
+      "check": "underside DXF declares millimeters",
+      "pass": true,
+      "measured": 4
+    },
+    {
+      "check": "top pocket DXF declares millimeters",
+      "pass": true,
+      "measured": 4
+    },
+    {
+      "check": "bottom pocket DXF declares millimeters",
+      "pass": true,
+      "measured": 4
+    },
+    {
+      "check": "FPE pattern DXF declares millimeters",
+      "pass": true,
+      "measured": 4
+    },
+    {
+      "check": "Profile DXF has explicit PROFILE layer",
+      "pass": true,
+      "measured": [
+        "PROFILE"
+      ]
+    },
+    {
+      "check": "Profile DXF has ten through-drill circles only",
+      "pass": true,
+      "measured": null
+    },
+    {
+      "check": "Profile DXF housing drill axes",
+      "pass": true,
+      "measured": [
+        [
+          -60.0,
+          -70.0
+        ],
+        [
+          60.0,
+          -70.0
+        ],
+        [
+          0.0,
+          -40.0
+        ],
+        [
+          0.0,
+          30.0
+        ],
+        [
+          -50.0,
+          70.0
+        ],
+        [
+          50.0,
+          70.0
+        ]
+      ]
+    },
+    {
+      "check": "Profile DXF stud drill axes",
+      "pass": true,
+      "measured": [
+        [
+          -76.0,
+          -82.0
+        ],
+        [
+          -76.0,
+          82.0
+        ],
+        [
+          76.0,
+          -82.0
+        ],
+        [
+          76.0,
+          82.0
+        ]
+      ]
+    },
+    {
+      "check": "Profile DXF outline and all ten holes equal STEP midsection",
+      "pass": true,
+      "measured": 0
+    },
+    {
+      "check": "underside DXF CSK_REF markers",
+      "pass": true,
+      "measured": [
+        [
+          -60.0,
+          -70.0
+        ],
+        [
+          60.0,
+          -70.0
+        ],
+        [
+          0.0,
+          -40.0
+        ],
+        [
+          0.0,
+          30.0
+        ],
+        [
+          -50.0,
+          70.0
+        ],
+        [
+          50.0,
+          70.0
+        ]
+      ]
+    },
+    {
+      "check": "FPE pattern DXF PANEL_STUD_CENTERS markers",
+      "pass": true,
+      "measured": [
+        [
+          -76.0,
+          -82.0
+        ],
+        [
+          -76.0,
+          82.0
+        ],
+        [
+          76.0,
+          -82.0
+        ],
+        [
+          76.0,
+          82.0
+        ]
+      ]
+    },
+    {
+      "check": "top pocket DXF imports one valid closed cut region",
+      "pass": true,
+      "measured": null
+    },
+    {
+      "check": "top pocket DXF complete contour equals STEP-verified nominal pocket",
+      "pass": true,
+      "measured": 0
+    },
+    {
+      "check": "bottom pocket DXF imports one valid closed cut region",
+      "pass": true,
+      "measured": null
+    },
+    {
+      "check": "bottom pocket DXF complete contour equals STEP-verified nominal pocket",
+      "pass": true,
+      "measured": 0
+    }
+  ],
+  "count": 60,
+  "evidence": {
+    "inputs": {
+      "plate STEP": {
+        "file": "plate_T1.step",
+        "sha256": "8099a2595e537cbe29916f2a7b514b83210c59866befc3a373306239403ece1b"
+      },
+      "profile DXF": {
+        "file": "plate_profile_mm.dxf",
+        "sha256": "2d28a64ee361c25a4f9ef4a5b4087677ad3f923774b5cdb6cd2ae57f23c7a5b3"
+      },
+      "underside DXF": {
+        "file": "plate_underside_machining_mm.dxf",
+        "sha256": "980146a4e6feedf94813b1ffd864016871a8d09c40bdc68edf1dc417bee5bcf6"
+      },
+      "top pocket DXF": {
+        "file": "thermal_top_pocket_contour_mm.dxf",
+        "sha256": "db4a0c49c0410bbcdd68104a3ce1ae8f58ff3647362a51c87b09bff2be3b5d82"
+      },
+      "bottom pocket DXF": {
+        "file": "thermal_bottom_pocket_contour_mm.dxf",
+        "sha256": "530d3e72781fa0e279dfed9b82e8777f0d02cf5516f77b86918970176ee9a37d"
+      },
+      "FPE pattern DXF": {
+        "file": "FPE_stud_pattern_mm.dxf",
+        "sha256": "3593b8fc53f4465bac8dad9b1d959fd449127055e1b373cc4831760bdfc8f4d7"
+      }
+    },
+    "plate_volume_mm3": 152561.32081119204,
+    "dxf_layers": {
+      "profile DXF": [
+        "HOUSING_DRILL",
+        "PROFILE",
+        "STUD_DRILL"
+      ],
+      "underside DXF": [
+        "CSK_REF",
+        "HOUSING_DRILL",
+        "PROFILE",
+        "STUD_DRILL"
+      ],
+      "top pocket DXF": [
+        "0"
+      ],
+      "bottom pocket DXF": [
+        "0"
+      ],
+      "FPE pattern DXF": [
+        "PANEL_STUD_CENTERS"
+      ]
+    },
+    "escape_groove_interpretation": "Pocket DXFs describe the maximum planar floor contour, including two escape grooves at each face. STEP controls groove intersection with the outer 0.4 mm chamfer; that final wedge is not an extruded DXF prism."
+  },
+  "missing": []
+}

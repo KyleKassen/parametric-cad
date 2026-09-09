@@ -1,0 +1,15 @@
+﻿Item,Description,Flat qty,Upright qty,Complete specification
+M01,Cradle base,1,1,6061-T6/T651; machined; B210_M01_base_P1.step
+M02,Top retainer bar,2,2,6061-T6/T651; 160 x 20 x 8; two DIA5.5 THRU at X +/-70
+M03,Precision spacer,4,4,6061-T6; OD12 +/-0.10; ID5.5 +0.10/0; L30 +/-0.05; square ends
+M04,Anti-mar film patch,8,8,"Polyester PET, 0.20 +/-0.03 total adhesive-backed thickness; 16 x 20 R1; supplier-rated >=60 C"
+M05,Upright angle support,0,2,6061-T6; 73 x 36 x 176 envelope; 8 mm webs; R6 root; adapter_machined.step
+H01,Retainer screw,4,4,ISO4762 M5 x 0.8 x 50; A2-70; standard socket cap head; 4 mm hex
+H02,Flat plate / upright web screw,4,4,ISO4762 M5 x 0.8 x 30; A2-70; 4 mm hex
+H03,Upright foot screw,0,4,ISO4762 M5 x 0.8 x 25; A2-70; 4 mm hex
+H04,Flat washer,12,20,ISO7089 M5; 5.3 ID x 10 OD x 1 thick; A2 stainless; compatible hardness
+H05,Prevailing torque locknut,4,8,ISO10511 M5 x 0.8; A2-70 compatible; nylon insert; nominal 5 mm high; replace on service
+H06,Retainer thread locking,1,1,LOCTITE243 removable medium-strength; follow Henkel TDS for actual anodized Al/stainless joint
+H07,Fit adjustment shims,AR,AR,Precision stainless ID5.5; OD<=12 at spacer or <=10 under head; 0.05/0.10/0.50 increments
+I01,Supporting plate (assumed),1,1,Rigid 6 mm metal plate with underside access; installation item; integrator approves material/stiffness
+I02,Cable restraint hardware,AR,AR,Support-plate cable clamps selected for actual cables; strain-relieve without loading radio connectors

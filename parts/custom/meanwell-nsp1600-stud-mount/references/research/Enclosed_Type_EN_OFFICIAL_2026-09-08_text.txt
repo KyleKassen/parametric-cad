@@ -1,0 +1,465 @@
+PAGE 1
+                             Installation Manual 
+ 
+ 
+ Type：Enclosed Type Switching Power Supply  
+(Families: C S P,  DPU, ENP , ERP , G3, HDP , HEP , HRP, HRP-N, HRP-N3, HRPG, HSP , LRS, 
+M S P,  NED, NEL, NES, NSP , PSP , PSPA, Q P, RS, RSP , RST, SE, S P, SPV, T P,  U H P,  
+USP) 
+ 
+ Introduction 
+Enclosed type switching power suppli es possess a metal or plastic case for covering their internal PCB and will be 
+installed inside the case of the end system. Mean Well’s enclosed type power supplies include 2 different groups of 
+power supplies, with built-in fan and without built-in fan, depending on their rated power or design concept. 
+ 
+ Installation 
+（1）Before any installation or maintenance work, please disconnect your system from the utility.  
+Ensure that it can’t be re-connected inadvertently! 
+（2）Keep enough insulation distance between mounting screws and internal components of power supplies. Please 
+refer to case drawing on specifications to receive the maximum length of mounting screw. 
+（3）Mounting orientations other than standard orientation or operate under high ambient temperature may 
+increase the internal component temperature and will require a  de-rating in output current. Please refer to 
+the specification sheets to receive the optimum mounting position and information about the de-rating curve. 
+（4）Fans and ventilation holes must be kept free from any obstructions. Also a 10 -15 cm clearance must  be kept 
+when the adjacent device is a heat source. 
+（5）Input and Output terminal 
+                                       Terminal Screw 
+Series Screw Size Suggested 
+Torque 
+ENP-120 / 180 / 240 / 360 M2.6 4-5 
+NSP-75 / 100 M3 4-5 
+NES-015 
+QP-100 / 150 
+RD-035 
+RQ-050 / 065 / 085 / 125 
+RS-015 / 025 
+RT-050 / 065 / 085 / 125 
+TP-075 / 100 / 150 
+USP-150 
+M3 6-8 
+DPU-3200 
+HRP-075 / 100 / 150/ 150N / 150N3 / 200 
+HRPG-150 / 200 
+HSP-250 
+LRS-035 / 050 / 075 / 100 / 150 / 150F / 200 / 350 / 450 / 600 
+MSP-100 / 200 
+NED-035 / 050 / 075 / 100，NET-035 / 050 / 075 
+NES-025 / 035 / 050 / 075 / 100 / 150 / 200 / 350 
+NSP-150 / 200 / 320(7.5V~60V) / 1600 / 3200 
+QP-200 / 320 / 375 
+RD-050 / 065 / 085 / 125，RID-050 / 065 / 085 / 125 
+RS-035 / 050 / 075 / 100 / 150 
+RSP-075 / 100 / 150 / 200 / 320 / 600 / 1600 
+SE-100 / 200 / 350 
+M3.5 8-10 
+
+PAGE 2
+                             Installation Manual 
+ 
+SP-075 / 100 / 150 / 200 / 240 / 320 
+SPV-150 / 300 
+HEP-600 
+HRP-300 / 300N / 300N3 / HRPG-300 
+MSP-300 
+RSP-750 / 1000 / 1500 / 2000 / 2400 / 3000 
+RST-5000 / 10000 / 7K5 / 15K 
+SE-450 / 1000 / 1500 
+SP-480 / 750 
+SPV-1500 
+USP-500 
+M4 10-12 
+ERP-350 
+HDP-190 / 240 
+NEL-200 / 300 
+#6 8-10 
+ 
+                                 
+Terminal Screw 
+Series 
+Input Output 
+Screw Size Suggested 
+Torque Screw Size Suggested 
+Torque 
+UHP-200(R) / 350(R) M3 5kgf-cm M3.5 8 kgf-cm 
+UHP-500(R) / 750 / 1000 M3 5kgf-cm M4 10-12kgf-cm 
+HSP-150 / 200 / 300 
+HSN-200 / 300 M3 6-8kgf-cm M3.5 8-10 kgf-cm 
+HRP-450 / 600 / 600N / 600N3 
+HRPG-450 / 600 
+MSP-450 / 600 / 1000 
+SE-600 
+M3.5 6-8kgf-cm M4 10-12 kgf-cm 
+NSP-320(5V) / RSP-500 M3.5 8-10kgf-cm M4 10-12 kgf-cm 
+NSP-500(5~15V) M3.5 8-10kgf-cm M5 10-12 kgf-cm 
+NSP-500(24V~60V) M3.5 8-10kgf-cm M4 10-12 kgf-cm 
+NSP-750 M3.5 8-10kgf-cm M5 10-12 kgf-cm 
+LRS-1200 M3.5 8-10kgf-cm M5 10-12 kgf-cm 
+UHP-200A M3.5 13kgf-cm M3.5 8 kgf-cm 
+HEP-600 / 1000 M4 10-12kgf-cm M4 10-12kgf-cm 
+RST-7K5-L M4 10-12kgf-cm M5 10-12 kgf-cm 
+CSP-3000 M4 10-12kgf-cm M6 13kgf-cm 
+NEL-400 #6 8-10kgf-cm M3 8-10 kgf-cm 
+ 
+ 
+ 
+
+PAGE 3
+                             Installation Manual 
+ 
+ 
+（6）Torque can be various due to different enclosure materials , please refer to the following chart. 
+A Recommend torque for aluminium material： 
+Size of screw (Imperial units) Recommend torque (kgf-cm) 
+3-56 
+4-40 
+4-48 
+5-40 
+5-44 
+6-32 
+6-40 
+8-32 
+8-36 
+2.3±20% 
+3.0±20% 
+3.3±20% 
+4.5±20% 
+4.7±20% 
+5.6±20% 
+6.3±20% 
+10.4±20% 
+   10.8 ±20% 
+ 
+Size of screw (Metric Units) Recommend torque (kgf-cm) 
+M2.5 
+M3 
+M3.5 
+M4 
+M5 
+M6 
+M7 
+M8 
+2.2±20% 
+4.1±20% 
+6.5±20% 
+9.7±20% 
+19.5±10% 
+33.1±10% 
+55.3±10% 
+   80.6 ±10% 
+ 
+B Recommend torque for iron material： 
+Size of screw (Imperial units) Recommend torque (kgf-cm) 
+3-56 
+4-40 
+4-48 
+5-40 
+5-44 
+6-32 
+6-40 
+8-32 
+8-36 
+5.0±20% 
+6.9±20% 
+7.0±20% 
+9.4±20% 
+9.9±20% 
+12.0±20% 
+13.4±20% 
+21.8±20% 
+   23.0 ±20% 
+ 
+Size of screw (Metric Units) Recommend torque (kgf-cm) 
+M2.5 
+M3 
+M3.5 
+M4 
+M5 
+M6 
+M7 
+M8 
+4.6±20% 
+8.8±20% 
+13.7±20% 
+20.4±20% 
+41.1±10% 
+69.1±10% 
+117.5±10% 
+   169.4 ±10% 
+If above mentioned is not enough due to special application，Nylok Blue Patch screw is recommend, and extra 
+torque can be added if needed. 
+ 
+ 
+ 
+
+PAGE 4
+                             Installation Manual 
+ 
+ 
+（7）Recommended wires are shown as below. 
+AWG 18 16 14 12 10 8 
+Rated Current of 
+Equipment (Amp) 6A 6-10A 10-16A 16-25A 25-32A 32-40A 
+Cross-section of 
+Lead(mm2 ) 0.75 1.00 1.5 2.5 4 6 
+Note: Current each wire carries should be de-rated to 80% of the current 
+suggested above when using 5 or more wires connected to the unit. 
+Make sure that all strands of each stranded w ire enter the terminal connection and the screw terminals are 
+securely fixed to prevent poor contact. 
+（8）Wiring configuration 
+(8-1) Wiring in a single-phase electricity system 
+Wiring: The wire color will vary by country, please refer to the table below. 
+ North America European Harmonized 
+Live and ACL Black Brown 
+Neutral and ACN white Blue 
+PE and FG (Class I only) Green Green/yellow 
+（a）Connect the FG wire (green or green/yellow) of the power supply to PE (green or green/yellow), 
+this step can be skipped when the unit is marked class II, ungrounded. 
+（b）Connect the ACL wire (black or brown) of the power supply to Live (black or brown). 
+（c）Connect the ACN wire (white or blue) of the power supply to Neutral (white or blue). 
+（d）Make sure all wires are secured to prevent poor contact. 
+ 
+ 
+ 
+(8-2) Wiring in a three phase electricity system 
+(a) 3Φ 3-wire/∆ 230VAC 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+PSU 
+PSU 
+
+PAGE 5
+                             Installation Manual 
+ 
+ 
+(b) 3Φ 4-wire/Y 400VAC 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+（9）For other information about the products, please refer to www.meanwell.com for details. 
+ 
+ Warning / Caution !! 
+（1）Risk of electrical shock and energy hazard. All failure  should be examined by a qualified technician. Please do 
+not remove the case of the power supply by yourself! 
+（2）Please do not install power supplies in places with high moisture or near the water. 
+（3）Please do not install power supplies in places with high ambien t temperature or near fire source. The 
+maximum ambient temperature please refer to their specifications. 
+（4）Output current and output wattage must not exceed the rated values on specifications. 
+（5）The ground(FG) must be connected to earth ground. 
+（6）All MW’s PSUs are designed in accordance with EMC regulations and the related test reports are available by 
+request. Since they are belong to component power supplies and will be installed inside system enclosure, 
+when they are integrated into a system, the EMC characteristics of the end system must be re-verified again. 
+（7）This device complies with Part 15 of the FCC Rules. Operation is subject to the following two conditions: 
+(a) This device may not cause harmful interference, and  
+(b) this device must accept a ny interference received, including interference that may cause undesired 
+operation.operation. 
+（8）For BSMI-certified models, should comply with the requirement of CNS15936 (EMI): 
+(a) flammability of V1 or above is required for surrounding equipment; 
+(b) for models certified as Class A equipment, should not be installed or used in a residential environment to 
+avoid electromagnetic interference. 
+（9）For RST-7K5 /15K series that might generate high leakage current in delta connection (Δ), please specify the 
+leakage current value and add the warning signs below on the final system and its instruction manual. 
+ 
+     High Touch Current 
+ 
+ 
+ 
+ 
+ 
+“WARNING-HIGH LEAKAGE CURRENT-Earth connection essential connecting supply” 
+ 
+ 
+ 
+ 
+ 
+PE
+
+PAGE 6
+                             Installation Manual 
+ 
+ 
+（10）"This equipment complies with IEC 61000 -3-12 provided that the short -circuit power Ssc is  greater than or 
+equal to 1.1MW at the interface point between the user's supply and the public  system. It is the 
+responsibility of the installer or user of the equipment to ensure, by  consultation with the distribution 
+network operator if necessary, that the equipment is connected only to a supply with a short -circuit power 
+Ssc greater than or equal to 1.1MW." 
+ 
+ 
+Manufacturer： 
+MEAN WELL ENTERPRISES Co., LTD. 
+No.28, Wuquan 3rd Rd., Wugu Dist.,  
+New Taipei City 24891, Taiwan 
+Tel: +886-2-2299-6100 
+Web: www.meanwell.com 
+ 
+Branch Office： 
+China 
+MEAN WELL (GUANGZHOU) 
+ENTERPRISES Co., LTD. 
+No.11, Jingu South Road, Huadong 
+Town, Huadu Distric, Guangzhou, 
+Gungzhou, China 
+Tel: +86-20-3773-7100 
+Web: www.meanwell.com.cn 
+China 
+SUZHOU MEAN WELL 
+TECHNOLOGY Co., LTD. 
+No.269 Changping Rd. , Huangdai 
+Town, Xiangcheng District 
+Suzhou, Jiangsu Province, China 
+Post Code: 215152 
+Tel: +86-512-6508-8600 
+Web: www.meanwell.cc 
+ 
+ 
+U.S.A. 
+MEAN WELL USA, INC. 
+44030 Fremont Blvd., Fremont, 
+CA 94538, U.S.A. 
+Tel: +1-510-683-8886 
+Web: www.meanwellusa.com 
+Europe 
+MEAN WELL EUROPE B.V. 
+Langs de Werf 8, 1185XT Amstelveen, The 
+Netherlands 
+Tel: +31-20-758-6000 
+Web: www.meanwell.eu 
+2025.12.17 
+ 
+
+PAGE 7
+ 
+ 
+ 
+ 
+ 
+Declaration of China RoHS Conformity 
+ 
+ 
+In order to reduce the impacts on the environment and take the more responsibility for protecting the earth, MEAN WELL is 
+confirming and announcing the conformity to China RoHS, an Administrative Measures for the Restriction of the Use of 
+Hazardous Substances in Electrical and Electronic Products.  
+ 
+ 
+Environment Friendly Use Period Label 
+ 
+ Observing SJT 11364-2024, Marking for the Restricted Use of Hazardous 
+Substances in Electronic and Electrical Products 
+ 
+Observing SJ/Z 11388-2009, General Guidelines of Environment-friendly 
+Use Period of Electronic Information Products Appendix B, adopting 
+table look-up to verify the Environment Friendly Use Period 
+ 
+ 
+Names and Contents of Hazardous Substances Lists 
+ 
+Part Name 
+Hazardous Substances 
+Lead 
+ 
+(Pb) 
+Mercury 
+ 
+(Hg) 
+Cadmium 
+ 
+(Cd) 
+Hexavalent 
+chromium 
+(Cr6+) 
+Polybrominated 
+biphenyls 
+(PBB) 
+Polybrominated 
+diphenyl ethers 
+(PBDEs) 
+Bis(2-ethylhexyl) 
+phthalate 
+ (DEHP) 
+Dibutyl 
+ phthalate  
+(DBP) 
+Dibutyl 
+phthalate 
+(DBP) 
+Diisobutyl 
+phthalate 
+(DIBP) 
+PCB and its 
+components 
+X O O O O O O O O O 
+Metal 
+structure 
+parts 
+X O O O O O O O O O 
+Plastic 
+structure 
+parts 
+O O O O O O O O O O 
+Accessories O O O O O O O O O O 
+Cables X O O O O O O O O O 
+O: The concentration of the hazardous substances within the homogeneous material of that product is less than the concentrati on limits set 
+by GB/T 26572-2011. 
+X: The concentration of the hazardous substances within the homogeneous material of that product is over  the concentration limits set by 
+GB/T 26572-2011; however, it follows the standard advised by 2011/65/EU. 
+ 
+
+PAGE 8
+ 
+ 
+ 
+ 
+Declaration of China VOC Conformity 
+ 
+In order to reduce the impacts on the environment and take the more responsibility 
+for protecting the earth, MEAN WELL is confirming and announcing the conformity to 
+China’s Standardization Administration Releases VOC Standards 
+ 
+ 
+Standard No. Name of the Standard 
+GB 30981-2020 Limit of harmful substances of industrial protective coatings 
+GB 33372-2020 Limits for volatile organic compounds content in adhesive 
+GB 38507-2020 Limits for volatile organic compounds (VOCs) In printing ink 
+GB 38508-2020 Limits for volatile organic compounds content in cleaning agents 
+ 
+ 
+ 
+
+PAGE 9
+ 
+ 
+ 
+ 
+Declaration of Five PBT TSCA Conformity 
+ 
+In order to reduce the impacts on the environment and take the more responsibility 
+for protecting the earth, MEAN WELL hereby confirms that MEAN WELL product 
+series comply with Use and Risk Management for Five PBT Chemicals under TSCA 
+section 6(h) 
+ 
+ 
+CAS No. Substance Name 
+1163-19-5 Decabromodiphenyl ether (DecaBDE) 
+68937-41-7 
+Phenol, isopropylated, phosphate (3:1)  
+PIP (3:1) 
+732-26-3 2,4,6-Tris (tert-butyl) phenol (2,4,6-TTBP) 
+133-49-3 Pentachlorothiophenol (PCTP) 
+87-68-3 Hexachlorobutadiene (HCBD) 
+ 
+ 
+ 

@@ -1,0 +1,661 @@
+{
+  "source_url": "https://assets.frontpanelexpress.com/fpd/Version-6.5.1/FrontDesign-US-6.5.1-amd64.deb",
+  "date": "2026-09-08",
+  "sha256": "a9969415df52668fd9b0d85ff47d838c34b109c0b650978006e9e482d184bb1a",
+  "package_bytes": 48695372,
+  "members": [
+    {
+      "name": "./opt/FrontDesign/bin/FrontDesign",
+      "size": 37371072
+    },
+    {
+      "name": "./opt/FrontDesign/etc/FrontDesign/Bolt.d/10-Base.ini",
+      "size": 5293
+    },
+    {
+      "name": "./opt/FrontDesign/etc/FrontDesign/Gravur.ini",
+      "size": 1846
+    },
+    {
+      "name": "./opt/FrontDesign/etc/FrontDesign/Material.d/10-Base.ini",
+      "size": 12505
+    },
+    {
+      "name": "./opt/FrontDesign/etc/FrontDesign/Preise.d/10-Base.ini",
+      "size": 2145
+    },
+    {
+      "name": "./opt/FrontDesign/etc/FrontDesign/Preise.d/20-US.ini",
+      "size": 235
+    },
+    {
+      "name": "./opt/FrontDesign/etc/FrontDesign/Schrift.ini",
+      "size": 2675
+    },
+    {
+      "name": "./opt/FrontDesign/etc/FrontDesign/Skripte.ini",
+      "size": 311
+    },
+    {
+      "name": "./opt/FrontDesign/etc/FrontDesign/SpecialProcessing.ini",
+      "size": 2113
+    },
+    {
+      "name": "./opt/FrontDesign/etc/FrontDesign/Stoff.ini",
+      "size": 689
+    },
+    {
+      "name": "./opt/FrontDesign/etc/FrontDesign/UvPrintStyle.ini",
+      "size": 1774
+    },
+    {
+      "name": "./opt/FrontDesign/etc/FrontDesign/Werkzeug.d/10-Base.ini",
+      "size": 5727
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKBO.so.7",
+      "size": 3066712
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKBRep.so.7",
+      "size": 1265288
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKBin.so.7",
+      "size": 203112
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKBinL.so.7",
+      "size": 472920
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKBinTObj.so.7",
+      "size": 111776
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKBinXCAF.so.7",
+      "size": 210432
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKBool.so.7",
+      "size": 4872216
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKCAF.so.7",
+      "size": 764888
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKCDF.so.7",
+      "size": 426024
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKFeat.so.7",
+      "size": 1350424
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKFillet.so.7",
+      "size": 3359968
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKG2d.so.7",
+      "size": 497656
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKG3d.so.7",
+      "size": 1482160
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKGeomAlgo.so.7",
+      "size": 6653408
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKGeomBase.so.7",
+      "size": 5901656
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKHLR.so.7",
+      "size": 1491536
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKIGES.so.7",
+      "size": 4975552
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKLCAF.so.7",
+      "size": 1158968
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKMath.so.7",
+      "size": 3093408
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKMesh.so.7",
+      "size": 1333432
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKMeshVS.so.7",
+      "size": 546568
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKOffset.so.7",
+      "size": 1960024
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKOpenGl.so.7",
+      "size": 1781552
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKPrim.so.7",
+      "size": 526424
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKRWMesh.so.7",
+      "size": 444008
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKSTEP.so.7",
+      "size": 4211488
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKSTEP209.so.7",
+      "size": 894096
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKSTEPAttr.so.7",
+      "size": 1425976
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKSTEPBase.so.7",
+      "size": 3424520
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKSTL.so.7",
+      "size": 140688
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKService.so.7",
+      "size": 1421000
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKShHealing.so.7",
+      "size": 3148624
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKStd.so.7",
+      "size": 1690048
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKStdL.so.7",
+      "size": 633368
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKTObj.so.7",
+      "size": 345312
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKTopAlgo.so.7",
+      "size": 3550016
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKV3d.so.7",
+      "size": 4099856
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKVCAF.so.7",
+      "size": 311776
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKVRML.so.7",
+      "size": 697048
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKXCAF.so.7",
+      "size": 1068024
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKXDEIGES.so.7",
+      "size": 130328
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKXDESTEP.so.7",
+      "size": 981208
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKXMesh.so.7",
+      "size": 20136
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKXSBase.so.7",
+      "size": 3279552
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKXml.so.7",
+      "size": 254688
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKXmlL.so.7",
+      "size": 541328
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKXmlTObj.so.7",
+      "size": 104960
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKXmlXCAF.so.7",
+      "size": 233024
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libTKernel.so.7",
+      "size": 2081888
+    },
+    {
+      "name": "./opt/FrontDesign/lib/libdynapdf.so",
+      "size": 12111424
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/FDLib/LibMacros.fdm",
+      "size": 10407
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/Arch1.shx",
+      "size": 5161
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/Asiatisch.fpf",
+      "size": 14220487
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/BlockO.shx",
+      "size": 9022
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/Bold7.shx",
+      "size": 22986
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/Cent3.shx",
+      "size": 13841
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/CentO.shx",
+      "size": 11844
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/DIN1451.shx",
+      "size": 4626
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/DIN17I.shx",
+      "size": 8591
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/Euro5.shx",
+      "size": 20480
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/EuroO.shx",
+      "size": 10520
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/FuturO.shx",
+      "size": 7647
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/Gothic3.shx",
+      "size": 21641
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/Griech1.shx",
+      "size": 5587
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/Helv1.shx",
+      "size": 5979
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/Helv4.shx",
+      "size": 14987
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/HelvO.shx",
+      "size": 9725
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/Kyrill2.shx",
+      "size": 9702
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/Monospace.fpf",
+      "size": 64501
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/Schreib1.shx",
+      "size": 3861
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/Schreib2.shx",
+      "size": 6956
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/Schreib4.shx",
+      "size": 11363
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/Script3.shx",
+      "size": 13721
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/Stencil1.shx",
+      "size": 5214
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/Univ1.shx",
+      "size": 8670
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Font/UnivO.shx",
+      "size": 10482
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/License/Licence_FR.html",
+      "size": 9681
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/License/License_EN.html",
+      "size": 7800
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/License/License_US.html",
+      "size": 7838
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/License/Lizenz_DE.html",
+      "size": 8449
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/License/ThirdPartyLicenses.html",
+      "size": 64329
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Macros.fml",
+      "size": 89088
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/Demo/AcrylicDisplay.fpjs",
+      "size": 6130
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/Demo/RaspberryPiCase.fpjs",
+      "size": 70190
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/Demo/demo1.fpjs",
+      "size": 2206
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/Demo/printgraphic.fpjs",
+      "size": 1251
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/FPD/ScaleGenerator.fpjs",
+      "size": 10411
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/FPD/SchaefferHousings.fpjs",
+      "size": 74529
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/Office/AcrylDisplay.fpjs",
+      "size": 3327
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/Office/Bolzen.fpjs",
+      "size": 2935
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/Office/printgraphicCheck.fpjs",
+      "size": 1938
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/Tests/Cavity.fpjs",
+      "size": 1042
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/Tests/CurvedSlot.fpjs",
+      "size": 984
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/Tests/DHole.fpjs",
+      "size": 864
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/Tests/DrillHole.fpjs",
+      "size": 1106
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/Tests/DxfContour.fpjs",
+      "size": 315
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/Tests/Ellipse.fpjs",
+      "size": 168
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/Tests/Line.fpjs",
+      "size": 1071
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/Tests/RectHole.fpjs",
+      "size": 1141
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/Tests/Rectangle.fpjs",
+      "size": 980
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/Tests/all.fpjs",
+      "size": 1183
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/Scripts/init.fpjs",
+      "size": 9939
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/System/Fischer01.ini",
+      "size": 19311
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/System/Fischer02.ini",
+      "size": 1870
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/System/Schroff01.ini",
+      "size": 19338
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/System/Schroff03.ini",
+      "size": 1870
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/System/Schroff06.ini",
+      "size": 1358
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/mattexture/brush100.png",
+      "size": 246989
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/mattexture/brush200.png",
+      "size": 276401
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/mattexture/brush25.png",
+      "size": 133863
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/mattexture/brush50.png",
+      "size": 172344
+    },
+    {
+      "name": "./opt/FrontDesign/share/FrontDesign/rsc.bin",
+      "size": 547079
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/de/LC_MESSAGES/FPLib.mo",
+      "size": 543
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/de/LC_MESSAGES/FrontDesign-Scripts.mo",
+      "size": 9020
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/de/LC_MESSAGES/FrontDesign.mo",
+      "size": 845
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/de/LC_MESSAGES/OdinEngine.mo",
+      "size": 507
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/de/LC_MESSAGES/SchaefferLib.mo",
+      "size": 1048
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/de/LC_MESSAGES/wxstd-3.2.mo",
+      "size": 151514
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/en/LC_MESSAGES/FPLib.mo",
+      "size": 61244
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/en/LC_MESSAGES/FrontDesign-Scripts.mo",
+      "size": 8602
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/en/LC_MESSAGES/FrontDesign.mo",
+      "size": 72951
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/en/LC_MESSAGES/OdinEngine.mo",
+      "size": 691
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/en/LC_MESSAGES/SchaefferLib.mo",
+      "size": 1353
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/es/LC_MESSAGES/FPLib.mo",
+      "size": 64316
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/es/LC_MESSAGES/FrontDesign-Scripts.mo",
+      "size": 9240
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/es/LC_MESSAGES/FrontDesign.mo",
+      "size": 78429
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/es/LC_MESSAGES/OdinEngine.mo",
+      "size": 687
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/es/LC_MESSAGES/SchaefferLib.mo",
+      "size": 982
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/es/LC_MESSAGES/wxstd-3.2.mo",
+      "size": 152354
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/es_MX/LC_MESSAGES/FPLib.mo",
+      "size": 64375
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/es_MX/LC_MESSAGES/FrontDesign-Scripts.mo",
+      "size": 9227
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/es_MX/LC_MESSAGES/FrontDesign.mo",
+      "size": 78526
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/es_MX/LC_MESSAGES/OdinEngine.mo",
+      "size": 687
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/es_MX/LC_MESSAGES/SchaefferLib.mo",
+      "size": 957
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/fr/LC_MESSAGES/FPLib.mo",
+      "size": 64885
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/fr/LC_MESSAGES/FrontDesign-Scripts.mo",
+      "size": 9495
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/fr/LC_MESSAGES/FrontDesign.mo",
+      "size": 79780
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/fr/LC_MESSAGES/OdinEngine.mo",
+      "size": 694
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/fr/LC_MESSAGES/SchaefferLib.mo",
+      "size": 966
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/fr/LC_MESSAGES/wxstd-3.2.mo",
+      "size": 153997
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/zh_CN/LC_MESSAGES/FPLib.mo",
+      "size": 57873
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/zh_CN/LC_MESSAGES/FrontDesign-Scripts.mo",
+      "size": 1521
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/zh_CN/LC_MESSAGES/FrontDesign.mo",
+      "size": 69640
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/zh_CN/LC_MESSAGES/SchaefferLib.mo",
+      "size": 891
+    },
+    {
+      "name": "./opt/FrontDesign/share/locale/zh_CN/LC_MESSAGES/wxstd-3.2.mo",
+      "size": 139993
+    },
+    {
+      "name": "./usr/share/applications/FrontDesign-Order.desktop",
+      "size": 591
+    },
+    {
+      "name": "./usr/share/applications/FrontDesign.desktop",
+      "size": 576
+    },
+    {
+      "name": "./usr/share/mime/packages/frontdesign-basket.xml",
+      "size": 491
+    },
+    {
+      "name": "./usr/share/mime/packages/frontdesign.xml",
+      "size": 422
+    },
+    {
+      "name": "./usr/share/pixmaps/FrontDesign-Order.png",
+      "size": 3369
+    },
+    {
+      "name": "./usr/share/pixmaps/FrontDesign.png",
+      "size": 3215
+    }
+  ],
+  "installed_or_executed": false
+}

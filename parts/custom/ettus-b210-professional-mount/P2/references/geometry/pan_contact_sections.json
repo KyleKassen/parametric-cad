@@ -1,0 +1,197 @@
+{
+  "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\02 Component Library\\Software-Defined Radios\\Ettus Research\\Ettus - USRP B210 Full Unit 3D Model.step",
+  "datum": "same as inspection.py",
+  "pan_solid_index": 0,
+  "sections": [
+    {
+      "z_mm": 0.01,
+      "slab_thickness_mm": 0.002,
+      "pan_bbox_mm": {
+        "x": [
+          -58.730106,
+          58.731106
+        ],
+        "y": [
+          -72.721106,
+          78.446106
+        ],
+        "z": [
+          0.009,
+          0.011
+        ]
+      },
+      "valid": true
+    },
+    {
+      "z_mm": 0.5,
+      "slab_thickness_mm": 0.002,
+      "pan_bbox_mm": {
+        "x": [
+          -59.973907,
+          59.974907
+        ],
+        "y": [
+          -73.964907,
+          79.689907
+        ],
+        "z": [
+          0.499,
+          0.501
+        ]
+      },
+      "valid": true
+    },
+    {
+      "z_mm": 1.0,
+      "slab_thickness_mm": 0.002,
+      "pan_bbox_mm": {
+        "x": [
+          -60.459833,
+          60.460833
+        ],
+        "y": [
+          -74.450833,
+          80.175833
+        ],
+        "z": [
+          0.999,
+          1.001
+        ]
+      },
+      "valid": true
+    },
+    {
+      "z_mm": 1.5,
+      "slab_thickness_mm": 0.002,
+      "pan_bbox_mm": {
+        "x": [
+          -60.738214,
+          60.739214
+        ],
+        "y": [
+          -74.729214,
+          80.454214
+        ],
+        "z": [
+          1.499,
+          1.501
+        ]
+      },
+      "valid": true
+    },
+    {
+      "z_mm": 1.8,
+      "slab_thickness_mm": 0.002,
+      "pan_bbox_mm": {
+        "x": [
+          -60.838996,
+          60.839996
+        ],
+        "y": [
+          -74.829996,
+          80.554996
+        ],
+        "z": [
+          1.799,
+          1.801
+        ]
+      },
+      "valid": true
+    },
+    {
+      "z_mm": 2.0,
+      "slab_thickness_mm": 0.002,
+      "pan_bbox_mm": {
+        "x": [
+          -60.882951,
+          60.883951
+        ],
+        "y": [
+          -74.873951,
+          80.598951
+        ],
+        "z": [
+          1.999,
+          2.001
+        ]
+      },
+      "valid": true
+    },
+    {
+      "z_mm": 2.3,
+      "slab_thickness_mm": 0.002,
+      "pan_bbox_mm": {
+        "x": [
+          -60.916573,
+          60.917573
+        ],
+        "y": [
+          -74.907573,
+          80.632573
+        ],
+        "z": [
+          2.299,
+          2.301
+        ]
+      },
+      "valid": true
+    },
+    {
+      "z_mm": 2.419,
+      "slab_thickness_mm": 0.002,
+      "pan_bbox_mm": {
+        "x": [
+          -60.919513,
+          60.920513
+        ],
+        "y": [
+          -74.910513,
+          80.635513
+        ],
+        "z": [
+          2.418,
+          2.420331
+        ]
+      },
+      "valid": true
+    },
+    {
+      "z_mm": 2.5,
+      "slab_thickness_mm": 0.002,
+      "pan_bbox_mm": {
+        "x": [
+          -60.9195,
+          60.9205
+        ],
+        "y": [
+          -74.9105,
+          80.6355
+        ],
+        "z": [
+          2.499,
+          2.501
+        ]
+      },
+      "valid": true
+    },
+    {
+      "z_mm": 5.0,
+      "slab_thickness_mm": 0.002,
+      "pan_bbox_mm": {
+        "x": [
+          -60.9195,
+          60.9205
+        ],
+        "y": [
+          -74.9105,
+          80.6355
+        ],
+        "z": [
+          4.999,
+          5.001
+        ]
+      },
+      "valid": true
+    }
+  ]
+}

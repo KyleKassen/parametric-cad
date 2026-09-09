@@ -1,0 +1,743 @@
+{
+  "flat": {
+    "parts": [
+      {
+        "name": "B210_M01_base",
+        "kind": "base",
+        "volume_mm3": 117213.14969981155,
+        "assumed_density_kg_mm3": 2.7e-06,
+        "mass_kg": 0.31647550418949116
+      },
+      {
+        "name": "B210_M02_bar_1",
+        "kind": "bar",
+        "volume_mm3": 15635.338135391225,
+        "assumed_density_kg_mm3": 2.7e-06,
+        "mass_kg": 0.04221541296555631
+      },
+      {
+        "name": "shim_98055A098_1_1",
+        "kind": "hardware",
+        "volume_mm3": 27.779179610194202,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0002222334368815536
+      },
+      {
+        "name": "shim_98055A095_1_1",
+        "kind": "hardware",
+        "volume_mm3": 5.555835922038835,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 4.444668737631068e-05
+      },
+      {
+        "name": "shim_98126A161_1_1",
+        "kind": "hardware",
+        "volume_mm3": 2.010995307668206,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 1.6087962461345648e-05
+      },
+      {
+        "name": "B210_M03_spacer_1_1",
+        "kind": "spacer",
+        "volume_mm3": 1694.3394578973143,
+        "assumed_density_kg_mm3": 2.7e-06,
+        "mass_kg": 0.004574716536322749
+      },
+      {
+        "name": "M5_washer_1_1",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991048,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0004518238554392838
+      },
+      {
+        "name": "M5x45_retainer_1_1",
+        "kind": "hardware",
+        "volume_mm3": 1125.728800969298,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.009005830407754383
+      },
+      {
+        "name": "shim_98055A098_1_2",
+        "kind": "hardware",
+        "volume_mm3": 27.77917961019425,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.000222233436881554
+      },
+      {
+        "name": "shim_98055A095_1_2",
+        "kind": "hardware",
+        "volume_mm3": 5.555835922038844,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 4.4446687376310745e-05
+      },
+      {
+        "name": "shim_98126A161_1_2",
+        "kind": "hardware",
+        "volume_mm3": 2.010995307668206,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 1.6087962461345648e-05
+      },
+      {
+        "name": "B210_M03_spacer_1_2",
+        "kind": "spacer",
+        "volume_mm3": 1694.3394578973143,
+        "assumed_density_kg_mm3": 2.7e-06,
+        "mass_kg": 0.004574716536322749
+      },
+      {
+        "name": "M5_washer_1_2",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991049,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00045182385543928393
+      },
+      {
+        "name": "M5x45_retainer_1_2",
+        "kind": "hardware",
+        "volume_mm3": 1125.728800969298,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.009005830407754383
+      },
+      {
+        "name": "B210_M02_bar_2",
+        "kind": "bar",
+        "volume_mm3": 15635.338135391225,
+        "assumed_density_kg_mm3": 2.7e-06,
+        "mass_kg": 0.04221541296555631
+      },
+      {
+        "name": "shim_98055A098_2_1",
+        "kind": "hardware",
+        "volume_mm3": 27.779179610194202,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0002222334368815536
+      },
+      {
+        "name": "shim_98055A095_2_1",
+        "kind": "hardware",
+        "volume_mm3": 5.555835922038835,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 4.444668737631068e-05
+      },
+      {
+        "name": "shim_98126A161_2_1",
+        "kind": "hardware",
+        "volume_mm3": 2.010995307668206,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 1.6087962461345648e-05
+      },
+      {
+        "name": "B210_M03_spacer_2_1",
+        "kind": "spacer",
+        "volume_mm3": 1694.3394578973143,
+        "assumed_density_kg_mm3": 2.7e-06,
+        "mass_kg": 0.004574716536322749
+      },
+      {
+        "name": "M5_washer_2_1",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991048,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0004518238554392838
+      },
+      {
+        "name": "M5x45_retainer_2_1",
+        "kind": "hardware",
+        "volume_mm3": 1125.728800969298,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.009005830407754383
+      },
+      {
+        "name": "shim_98055A098_2_2",
+        "kind": "hardware",
+        "volume_mm3": 27.77917961019425,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.000222233436881554
+      },
+      {
+        "name": "shim_98055A095_2_2",
+        "kind": "hardware",
+        "volume_mm3": 5.555835922038844,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 4.4446687376310745e-05
+      },
+      {
+        "name": "shim_98126A161_2_2",
+        "kind": "hardware",
+        "volume_mm3": 2.010995307668206,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 1.6087962461345648e-05
+      },
+      {
+        "name": "B210_M03_spacer_2_2",
+        "kind": "spacer",
+        "volume_mm3": 1694.3394578973143,
+        "assumed_density_kg_mm3": 2.7e-06,
+        "mass_kg": 0.004574716536322749
+      },
+      {
+        "name": "M5_washer_2_2",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991049,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00045182385543928393
+      },
+      {
+        "name": "M5x45_retainer_2_2",
+        "kind": "hardware",
+        "volume_mm3": 1125.728800969298,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.009005830407754383
+      },
+      {
+        "name": "flat_panel_M5x25_1_1",
+        "kind": "hardware",
+        "volume_mm3": 733.0297192705741,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.005864237754164592
+      },
+      {
+        "name": "flat_panel_upper_washer_1_1",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991049,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00045182385543928393
+      },
+      {
+        "name": "flat_panel_lower_washer_1_1",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991049,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00045182385543928393
+      },
+      {
+        "name": "flat_panel_locknut_1_1",
+        "kind": "hardware",
+        "volume_mm3": 207.85601118940644,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0016628480895152515
+      },
+      {
+        "name": "flat_panel_M5x25_1_2",
+        "kind": "hardware",
+        "volume_mm3": 733.0297192705741,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.005864237754164592
+      },
+      {
+        "name": "flat_panel_upper_washer_1_2",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991049,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00045182385543928393
+      },
+      {
+        "name": "flat_panel_lower_washer_1_2",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991049,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00045182385543928393
+      },
+      {
+        "name": "flat_panel_locknut_1_2",
+        "kind": "hardware",
+        "volume_mm3": 207.85601118940647,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0016628480895152517
+      },
+      {
+        "name": "flat_panel_M5x25_2_1",
+        "kind": "hardware",
+        "volume_mm3": 733.0297192705741,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.005864237754164592
+      },
+      {
+        "name": "flat_panel_upper_washer_2_1",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991049,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00045182385543928393
+      },
+      {
+        "name": "flat_panel_lower_washer_2_1",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991049,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00045182385543928393
+      },
+      {
+        "name": "flat_panel_locknut_2_1",
+        "kind": "hardware",
+        "volume_mm3": 207.85601118940644,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0016628480895152515
+      },
+      {
+        "name": "flat_panel_M5x25_2_2",
+        "kind": "hardware",
+        "volume_mm3": 733.0297192705741,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.005864237754164592
+      },
+      {
+        "name": "flat_panel_upper_washer_2_2",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991049,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00045182385543928393
+      },
+      {
+        "name": "flat_panel_lower_washer_2_2",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991049,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00045182385543928393
+      },
+      {
+        "name": "flat_panel_locknut_2_2",
+        "kind": "hardware",
+        "volume_mm3": 207.85601118940644,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0016628480895152515
+      }
+    ],
+    "estimated_mount_mass_kg": 0.49188981988378006
+  },
+  "upright": {
+    "parts": [
+      {
+        "name": "B210_M01_base",
+        "kind": "base",
+        "volume_mm3": 117213.14969981155,
+        "assumed_density_kg_mm3": 2.7e-06,
+        "mass_kg": 0.31647550418949116
+      },
+      {
+        "name": "B210_M02_bar_1",
+        "kind": "bar",
+        "volume_mm3": 15635.338135391221,
+        "assumed_density_kg_mm3": 2.7e-06,
+        "mass_kg": 0.042215412965556295
+      },
+      {
+        "name": "shim_98055A098_1_1",
+        "kind": "hardware",
+        "volume_mm3": 27.779179610194262,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00022223343688155408
+      },
+      {
+        "name": "shim_98055A095_1_1",
+        "kind": "hardware",
+        "volume_mm3": 5.555835922038847,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 4.444668737631077e-05
+      },
+      {
+        "name": "shim_98126A161_1_1",
+        "kind": "hardware",
+        "volume_mm3": 2.0109953076681926,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 1.608796246134554e-05
+      },
+      {
+        "name": "B210_M03_spacer_1_1",
+        "kind": "spacer",
+        "volume_mm3": 1694.3394578973139,
+        "assumed_density_kg_mm3": 2.7e-06,
+        "mass_kg": 0.004574716536322748
+      },
+      {
+        "name": "M5_washer_1_1",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991047,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00045182385543928377
+      },
+      {
+        "name": "M5x45_retainer_1_1",
+        "kind": "hardware",
+        "volume_mm3": 1125.7288009692986,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.009005830407754389
+      },
+      {
+        "name": "shim_98055A098_1_2",
+        "kind": "hardware",
+        "volume_mm3": 27.779179610194213,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00022223343688155368
+      },
+      {
+        "name": "shim_98055A095_1_2",
+        "kind": "hardware",
+        "volume_mm3": 5.555835922038836,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 4.4446687376310684e-05
+      },
+      {
+        "name": "shim_98126A161_1_2",
+        "kind": "hardware",
+        "volume_mm3": 2.0109953076682023,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 1.6087962461345617e-05
+      },
+      {
+        "name": "B210_M03_spacer_1_2",
+        "kind": "spacer",
+        "volume_mm3": 1694.339457897315,
+        "assumed_density_kg_mm3": 2.7e-06,
+        "mass_kg": 0.0045747165363227505
+      },
+      {
+        "name": "M5_washer_1_2",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991051,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0004518238554392841
+      },
+      {
+        "name": "M5x45_retainer_1_2",
+        "kind": "hardware",
+        "volume_mm3": 1125.7288009692984,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.009005830407754387
+      },
+      {
+        "name": "B210_M02_bar_2",
+        "kind": "bar",
+        "volume_mm3": 15635.338135391221,
+        "assumed_density_kg_mm3": 2.7e-06,
+        "mass_kg": 0.042215412965556295
+      },
+      {
+        "name": "shim_98055A098_2_1",
+        "kind": "hardware",
+        "volume_mm3": 27.779179610194262,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00022223343688155408
+      },
+      {
+        "name": "shim_98055A095_2_1",
+        "kind": "hardware",
+        "volume_mm3": 5.555835922038847,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 4.444668737631077e-05
+      },
+      {
+        "name": "shim_98126A161_2_1",
+        "kind": "hardware",
+        "volume_mm3": 2.0109953076681926,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 1.608796246134554e-05
+      },
+      {
+        "name": "B210_M03_spacer_2_1",
+        "kind": "spacer",
+        "volume_mm3": 1694.3394578973139,
+        "assumed_density_kg_mm3": 2.7e-06,
+        "mass_kg": 0.004574716536322748
+      },
+      {
+        "name": "M5_washer_2_1",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991047,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00045182385543928377
+      },
+      {
+        "name": "M5x45_retainer_2_1",
+        "kind": "hardware",
+        "volume_mm3": 1125.7288009692988,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00900583040775439
+      },
+      {
+        "name": "shim_98055A098_2_2",
+        "kind": "hardware",
+        "volume_mm3": 27.779179610194213,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00022223343688155368
+      },
+      {
+        "name": "shim_98055A095_2_2",
+        "kind": "hardware",
+        "volume_mm3": 5.555835922038836,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 4.4446687376310684e-05
+      },
+      {
+        "name": "shim_98126A161_2_2",
+        "kind": "hardware",
+        "volume_mm3": 2.0109953076682023,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 1.6087962461345617e-05
+      },
+      {
+        "name": "B210_M03_spacer_2_2",
+        "kind": "spacer",
+        "volume_mm3": 1694.339457897315,
+        "assumed_density_kg_mm3": 2.7e-06,
+        "mass_kg": 0.0045747165363227505
+      },
+      {
+        "name": "M5_washer_2_2",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991051,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0004518238554392841
+      },
+      {
+        "name": "M5x45_retainer_2_2",
+        "kind": "hardware",
+        "volume_mm3": 1125.7288009692984,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.009005830407754387
+      },
+      {
+        "name": "upright_adapter_1",
+        "kind": "adapter",
+        "volume_mm3": 67973.43345970799,
+        "assumed_density_kg_mm3": 2.7e-06,
+        "mass_kg": 0.18352827034121155
+      },
+      {
+        "name": "upright_adapter_2",
+        "kind": "adapter",
+        "volume_mm3": 67973.43345970799,
+        "assumed_density_kg_mm3": 2.7e-06,
+        "mass_kg": 0.18352827034121155
+      },
+      {
+        "name": "upright_web_M5x25_1_1",
+        "kind": "hardware",
+        "volume_mm3": 733.0297192705741,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.005864237754164592
+      },
+      {
+        "name": "upright_web_rear_washer_1_1",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991053,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0004518238554392842
+      },
+      {
+        "name": "upright_web_front_washer_1_1",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991053,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0004518238554392842
+      },
+      {
+        "name": "upright_web_locknut_1_1",
+        "kind": "hardware",
+        "volume_mm3": 207.85601118940588,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.001662848089515247
+      },
+      {
+        "name": "upright_web_M5x25_1_2",
+        "kind": "hardware",
+        "volume_mm3": 733.0297192705742,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.005864237754164593
+      },
+      {
+        "name": "upright_web_rear_washer_1_2",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991048,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0004518238554392838
+      },
+      {
+        "name": "upright_web_front_washer_1_2",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991048,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0004518238554392838
+      },
+      {
+        "name": "upright_web_locknut_1_2",
+        "kind": "hardware",
+        "volume_mm3": 207.85601118940608,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0016628480895152485
+      },
+      {
+        "name": "upright_foot_M5x30_1_1",
+        "kind": "hardware",
+        "volume_mm3": 831.2044896952552,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.006649635917562041
+      },
+      {
+        "name": "upright_foot_upper_washer_1_1",
+        "kind": "hardware",
+        "volume_mm3": 185.58330282550983,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0014846664226040786
+      },
+      {
+        "name": "upright_foot_lower_washer_1_1",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991051,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0004518238554392841
+      },
+      {
+        "name": "upright_foot_locknut_1_1",
+        "kind": "hardware",
+        "volume_mm3": 207.85601118940585,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0016628480895152468
+      },
+      {
+        "name": "upright_foot_M5x30_1_2",
+        "kind": "hardware",
+        "volume_mm3": 831.2044896952552,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.006649635917562041
+      },
+      {
+        "name": "upright_foot_upper_washer_1_2",
+        "kind": "hardware",
+        "volume_mm3": 185.5833028255099,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.001484666422604079
+      },
+      {
+        "name": "upright_foot_lower_washer_1_2",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991052,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00045182385543928415
+      },
+      {
+        "name": "upright_foot_locknut_1_2",
+        "kind": "hardware",
+        "volume_mm3": 207.8560111894058,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0016628480895152463
+      },
+      {
+        "name": "upright_web_M5x25_2_1",
+        "kind": "hardware",
+        "volume_mm3": 733.0297192705741,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.005864237754164592
+      },
+      {
+        "name": "upright_web_rear_washer_2_1",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991053,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0004518238554392842
+      },
+      {
+        "name": "upright_web_front_washer_2_1",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991053,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0004518238554392842
+      },
+      {
+        "name": "upright_web_locknut_2_1",
+        "kind": "hardware",
+        "volume_mm3": 207.85601118940588,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.001662848089515247
+      },
+      {
+        "name": "upright_web_M5x25_2_2",
+        "kind": "hardware",
+        "volume_mm3": 733.0297192705743,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.005864237754164594
+      },
+      {
+        "name": "upright_web_rear_washer_2_2",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991048,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0004518238554392838
+      },
+      {
+        "name": "upright_web_front_washer_2_2",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991048,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0004518238554392838
+      },
+      {
+        "name": "upright_web_locknut_2_2",
+        "kind": "hardware",
+        "volume_mm3": 207.85601118940608,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0016628480895152485
+      },
+      {
+        "name": "upright_foot_M5x30_2_1",
+        "kind": "hardware",
+        "volume_mm3": 831.2044896952553,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.006649635917562042
+      },
+      {
+        "name": "upright_foot_upper_washer_2_1",
+        "kind": "hardware",
+        "volume_mm3": 185.58330282550986,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0014846664226040788
+      },
+      {
+        "name": "upright_foot_lower_washer_2_1",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991051,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0004518238554392841
+      },
+      {
+        "name": "upright_foot_locknut_2_1",
+        "kind": "hardware",
+        "volume_mm3": 207.85601118940585,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0016628480895152468
+      },
+      {
+        "name": "upright_foot_M5x30_2_2",
+        "kind": "hardware",
+        "volume_mm3": 831.2044896952553,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.006649635917562042
+      },
+      {
+        "name": "upright_foot_upper_washer_2_2",
+        "kind": "hardware",
+        "volume_mm3": 185.5833028255099,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.001484666422604079
+      },
+      {
+        "name": "upright_foot_lower_washer_2_2",
+        "kind": "hardware",
+        "volume_mm3": 56.47798192991052,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.00045182385543928415
+      },
+      {
+        "name": "upright_foot_locknut_2_2",
+        "kind": "hardware",
+        "volume_mm3": 207.8560111894058,
+        "assumed_density_kg_mm3": 8e-06,
+        "mass_kg": 0.0016628480895152463
+      }
+    ],
+    "estimated_mount_mass_kg": 0.8999422577066851
+  },
+  "P1_upright_baseline_mass_kg": 1.1151635338671697,
+  "upright_mass_reduction_percent": 19.299525999934662,
+  "limitation": "CAD volume with aluminum2700 and hardware8000kg/m3 assumptions; films/coatings omitted, threads simplified. Purchased aluminum spacer alloy unknown. Actual weighing required."
+}

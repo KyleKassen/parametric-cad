@@ -1,0 +1,195 @@
+{
+  "date": "2026-09-08",
+  "native_status": "All four native files verified: Backpanel_R1, B210_R2, MeanWell_R2, Bedrock_R3. Adapter native STEP audits pass 110 checks in total; geometry and manufacturing qualification are distinguished in ordering notes.",
+  "copies": [
+    {
+      "file": "Backpanel_R1.step",
+      "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\Backpanel_R1.step",
+      "sha256": "7DB2C3BCC3738EFA4AA6E66948ED4C3891415004154FBA94C2A126E3CF915A3D",
+      "bytes": 180361,
+      "verified": true
+    },
+    {
+      "file": "B210_R2.step",
+      "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\B210_FPE_R1_plate.step",
+      "sha256": "2881E4088EEB24D1830222469C65D48B1A04F7A067FD15CB2EA6023CC5C4601B",
+      "bytes": 148753,
+      "verified": true
+    },
+    {
+      "file": "Bedrock_R3.step",
+      "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\Bedrock_FPE_R1_plate.step",
+      "sha256": "A20491E6BB0A150CFC6B69DFADDB1596B0F71C82680B6839FA71A8D79E2CFF2B",
+      "bytes": 338851,
+      "verified": true
+    },
+    {
+      "file": "MeanWell_R2.step",
+      "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\meanwell-nsp1600-side-tab-mount\\exports\\plate_N2.step",
+      "sha256": "7826936AF5D489426CD39502CC6F1F2DBD2BC2D703A5C1BDC4594EC76509BCB3",
+      "bytes": 354854,
+      "verified": true
+    },
+    {
+      "file": "Installed_R1.step",
+      "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\Installed_R1.step",
+      "sha256": "F0678883469CCBD356E5BD8ED24A058ABEA6B9B804FF6BDCDE6C3ADF1BA7CF8B",
+      "bytes": 196244089,
+      "verified": true
+    },
+    {
+      "file": "Enclosure_Installed_R1.step",
+      "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\exports\\Enclosure_Installed_R1.step",
+      "sha256": "77FF55AA7F1A0D4A35374AF7811D0095AAD94146A2B0E0425BA59B2E831A5554",
+      "bytes": 237879777,
+      "verified": true
+    },
+    {
+      "file": "Installed_R1_top.png",
+      "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\renders\\Installed_R1_top.png",
+      "sha256": "89F725E4A65C2B6E8EB7C460131383E55FDDC76150826FEBF0E6F0F9FCC5F648",
+      "bytes": 92045,
+      "verified": true
+    },
+    {
+      "file": "Installed_R1_iso.png",
+      "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\renders\\Installed_R1_iso.png",
+      "sha256": "04F2B75C0B370C12A8D756B5668F7D0BCC3FBB910391F75B2F9C124B71A2DDD5",
+      "bytes": 204379,
+      "verified": true
+    },
+    {
+      "file": "Backpanel_R1.fpd",
+      "source": "C:\\Users\\KyleKassen\\Documents\\FPE_SCE20_20260908_R1\\Backpanel_R1.fpd",
+      "sha256": "04D230AEEC5120B6BAEAB85F95F5CBE339D5CA52725DD8765E175669D490D9AB",
+      "bytes": 1605,
+      "verified": true
+    },
+    {
+      "file": "MeanWell_R2.fpd",
+      "source": "C:\\Users\\KyleKassen\\Documents\\FPE_SCE20_20260908_R1\\MeanWell_R2.fpd",
+      "sha256": "0F140305D7007147DAD72E2867F7C907CAB408CDFE8A721C3437156DCEC6DF7B",
+      "bytes": 1638,
+      "verified": true
+    },
+    {
+      "file": "Bedrock_R3.fpd",
+      "source": "C:\\Users\\KyleKassen\\Documents\\FPE_SCE20_20260908_R1\\Bedrock_R3.fpd",
+      "sha256": "86749ED2DB93BD72CD32606F7123600C23D89FF7F3788C63EFAA19026E9834BD",
+      "bytes": 2213,
+      "verified": true
+    },
+    {
+      "file": "verification/MeanWell_R2_native.step",
+      "source": "C:\\Users\\KyleKassen\\Documents\\FPE_SCE20_20260908_R1\\MeanWell_R2_native.step",
+      "sha256": "CD893B67F6F0DF06B254FD76DFC98C6E0354279BF2E0B773CA20A3180EFFAEAF",
+      "bytes": 356215,
+      "verified": true
+    },
+    {
+      "file": "verification/Bedrock_R3_native.step",
+      "source": "C:\\Users\\KyleKassen\\Documents\\FPE_SCE20_20260908_R1\\Bedrock_R3_native.step",
+      "sha256": "2F0E03811EFF6C72D4C75D9D2128E929A931659FE3D079773482F396441332CF",
+      "bytes": 443950,
+      "verified": true
+    },
+    {
+      "file": "verification/MeanWell_R2_native_geometry_audit.json",
+      "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\interfaces\\MeanWell_R2_native_geometry_audit.json",
+      "sha256": "7D56F2C897E7EBB819603493B43CF29EC8F30E5B5DB8148DC94AC3AA38D0B1D4",
+      "bytes": 35411,
+      "verified": true
+    },
+    {
+      "file": "verification/Bedrock_R3_native_geometry_audit.json",
+      "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\interfaces\\Bedrock_R3_native_geometry_audit.json",
+      "sha256": "5896CE525C508804459F7C5D5A47DAE8C5F1348605E200BD46638C1A1418475E",
+      "bytes": 42839,
+      "verified": true
+    },
+    {
+      "file": "verification/native_bedrock_R3_step_audit.json",
+      "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\interfaces\\native_bedrock_R3_step_audit.json",
+      "sha256": "1E01C81C4969725863503268C10712B0DC6DE4C628E80F1004787CA95E94F7DA",
+      "bytes": 29536,
+      "verified": true
+    },
+    {
+      "file": "B210_R2.fpd",
+      "source": "C:\\Users\\KyleKassen\\Documents\\FPE_SCE20_20260908_R1\\B210_R2.fpd",
+      "sha256": "F377E884647DBDA4A2EBB4C13EE9CC911E701D52F11B4AF63CB4C98F360BBEF7",
+      "bytes": 1113,
+      "verified": true
+    },
+    {
+      "file": "verification/B210_R2_native.step",
+      "source": "C:\\Users\\KyleKassen\\Documents\\FPE_SCE20_20260908_R1\\B210_R2_native.step",
+      "sha256": "FE4BB818ABC939060C440B59C6FEBEFD5E8A1D12ECF418710A926BA6A97C954F",
+      "bytes": 122031,
+      "verified": true
+    },
+    {
+      "file": "verification/B210_R2_native_geometry_audit.json",
+      "source": "C:\\Users\\KyleKassen\\OneDrive - Ataero\\Shared Documents - Ataero San Antonio\\06 R&D Products\\NEW R&D\\04 Shared Engineering\\03 Tools & Methods\\Parametric CAD - CadQuery Models\\parts\\custom\\sce20-layout\\references\\interfaces\\B210_R2_native_geometry_audit.json",
+      "sha256": "7732169D0818E9602D8DA1FF06906717159A2BB9C3BECA3A1932085336C873AB",
+      "bytes": 26117,
+      "verified": true
+    },
+    {
+      "file": "verification/native_geometry/audit_native_adapter.py",
+      "source": "C:\\Users\\KyleKassen\\Documents\\FPE_SCE20_20260908_R1\\Native_Geometry_Verification\\audit_native_adapter.py",
+      "sha256": "55BE95FB0E6A3C1892E87FC1C2B4E5A4E3799887B6FD750F6B80F715AA3D4B50",
+      "bytes": 7743,
+      "verified": true
+    },
+    {
+      "file": "verification/native_geometry/audit_native_bedrock_step.py",
+      "source": "C:\\Users\\KyleKassen\\Documents\\FPE_SCE20_20260908_R1\\Native_Geometry_Verification\\audit_native_bedrock_step.py",
+      "sha256": "4F331AB4A686D54A7FE2B6B1AB7244138B3ACDCB23809C0EBE06B440CD34BFE6",
+      "bytes": 7662,
+      "verified": true
+    },
+    {
+      "file": "verification/native_geometry/B210_R2_native_geometry_audit.json",
+      "source": "C:\\Users\\KyleKassen\\Documents\\FPE_SCE20_20260908_R1\\Native_Geometry_Verification\\B210_R2_native_geometry_audit.json",
+      "sha256": "7732169D0818E9602D8DA1FF06906717159A2BB9C3BECA3A1932085336C873AB",
+      "bytes": 26117,
+      "verified": true
+    },
+    {
+      "file": "verification/native_geometry/Bedrock_R3_native_geometry_audit.json",
+      "source": "C:\\Users\\KyleKassen\\Documents\\FPE_SCE20_20260908_R1\\Native_Geometry_Verification\\Bedrock_R3_native_geometry_audit.json",
+      "sha256": "5896CE525C508804459F7C5D5A47DAE8C5F1348605E200BD46638C1A1418475E",
+      "bytes": 42839,
+      "verified": true
+    },
+    {
+      "file": "verification/native_geometry/MeanWell_R2_native_geometry_audit.json",
+      "source": "C:\\Users\\KyleKassen\\Documents\\FPE_SCE20_20260908_R1\\Native_Geometry_Verification\\MeanWell_R2_native_geometry_audit.json",
+      "sha256": "7D56F2C897E7EBB819603493B43CF29EC8F30E5B5DB8148DC94AC3AA38D0B1D4",
+      "bytes": 35411,
+      "verified": true
+    },
+    {
+      "file": "verification/native_geometry/native_adapter_geometry_summary.json",
+      "source": "C:\\Users\\KyleKassen\\Documents\\FPE_SCE20_20260908_R1\\Native_Geometry_Verification\\native_adapter_geometry_summary.json",
+      "sha256": "B2AA7213868E2A7EB6E7FDB42120ABE5A8F8A3CB4175D3E8B6CDA6C07455FEED",
+      "bytes": 1587,
+      "verified": true
+    },
+    {
+      "file": "verification/native_geometry/native_bedrock_R3_step_audit.json",
+      "source": "C:\\Users\\KyleKassen\\Documents\\FPE_SCE20_20260908_R1\\Native_Geometry_Verification\\native_bedrock_R3_step_audit.json",
+      "sha256": "1E01C81C4969725863503268C10712B0DC6DE4C628E80F1004787CA95E94F7DA",
+      "bytes": 29536,
+      "verified": true
+    },
+    {
+      "file": "verification/native_geometry/README.md",
+      "source": "C:\\Users\\KyleKassen\\Documents\\FPE_SCE20_20260908_R1\\Native_Geometry_Verification\\README.md",
+      "sha256": "D983CF00E6A14506B2E8357B4CE76F85D76E0900F6FF57D3FA48AD63FF433D82",
+      "bytes": 3158,
+      "verified": true
+    }
+  ]
+}

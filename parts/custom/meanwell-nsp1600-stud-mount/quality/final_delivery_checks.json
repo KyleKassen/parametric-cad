@@ -1,0 +1,254 @@
+{
+  "status": "PASS",
+  "revision": "N1",
+  "scope": "Digital integrity only; PRELIMINARY physical fit and joint qualification",
+  "checks": [
+    {
+      "check": "Original STEP preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "User PDF preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "cad_verification.json",
+      "passed": true,
+      "detail": 81
+    },
+    {
+      "check": "cad_verification.json current parameters",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "manufacturing_verification.json",
+      "passed": true,
+      "detail": 48
+    },
+    {
+      "check": "manufacturing_verification.json current parameters",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Plate analytical target met",
+      "passed": true,
+      "detail": 3.035450642746084
+    },
+    {
+      "check": "Engineering self checks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Engineering input: params.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Engineering input: datasheets/NSP-1600-spec_USER.pdf",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Engineering input: references/geometry/mounting_interface.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Engineering input: references/geometry/fan_bottom_contact_geometry.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Engineering input: exports/cad_build_metadata.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Repository gate passed",
+      "passed": true,
+      "detail": 79.1
+    },
+    {
+      "check": "No design metric floors failed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PDF matches generation manifest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing input: make_documents.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing input: params.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing input: references\\research\\catalog_bom.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing input: DESIGN.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing input: ENGINEERING_NOTE.md",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing input: references\\engineering\\engineering_results.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing input: quality\\cad_verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing input: quality\\manufacturing_verification.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing input: references\\product\\assembled_hero.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing input: references\\product\\exploded_iso.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing input: references\\product\\plate_bottom_hero.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing input: references\\product\\plate_top_hero.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing input: references\\views\\section_front_mount_front.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Drawing input: references\\views\\section_fan_mount_front.png",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Six A3 PDF pages",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PDF contains 91294A128",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PDF contains 98688A142",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PDF contains 90576A102",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PDF contains 264.7",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PDF contains 300.6",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PDF contains 5.00",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PDF contains 2.75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PDF contains 3.35",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "PDF catalog links",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Current PDF root visual review",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "CAD views reviewed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "All essential deliverables present",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "Earlier design preserved: ettus-b210-professional-mount",
+      "passed": true,
+      "detail": {
+        "files_checked": 89,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "Earlier design preserved: ettus-b210-professional-mount/P2",
+      "passed": true,
+      "detail": {
+        "files_checked": 96,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "Earlier design preserved: ettus-b210-direct-stud-mount",
+      "passed": true,
+      "detail": {
+        "files_checked": 86,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "Earlier design preserved: solidrun-bedrock-thermal-stud-mount",
+      "passed": true,
+      "detail": {
+        "files_checked": 110,
+        "mismatches": []
+      }
+    }
+  ]
+}

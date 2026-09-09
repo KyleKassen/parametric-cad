@@ -1,0 +1,14 @@
+[
+  {
+    "axis": "Y",
+    "station": -31.947,
+    "maximum_remaining_coordinate_before_display_mesh": -31.9469999,
+    "status": "PASS"
+  },
+  {
+    "axis": "X",
+    "station": 0,
+    "maximum_remaining_coordinate_before_display_mesh": 1.0000000710542735e-07,
+    "status": "PASS"
+  }
+]

@@ -1,0 +1,197 @@
+{
+  "revision": "N1 preliminary Mean Well bottom adapter",
+  "source_date": "2026-09-08",
+  "currency": "USD",
+  "scope": "One adapter installation: three PSU bottom screws and four FPE panel studs.",
+  "items": [
+    {
+      "item_id": "H01",
+      "vendor": "McMaster-Carr",
+      "mcmaster_part_number": "91294A128",
+      "part_number": "91294A128",
+      "description": "M3 x 0.5 x 8 mm hex-drive flat-head screw, 90 degree countersink; DIN 7991; black-oxide alloy steel; catalog Class 10.9 / 120000 psi tensile",
+      "quantity": 3,
+      "qty": 3,
+      "quantity_unit": "screw",
+      "head_diameter_mm": 6.0,
+      "head_height_mm": 1.7,
+      "head_angle_deg": 90,
+      "drive_hex_mm": 2.0,
+      "thread_pitch_mm": 0.5,
+      "length_mm": 8.0,
+      "length_basis": "Overall, from top of countersunk head",
+      "threading": "Fully threaded",
+      "thread_fit": "6g",
+      "catalog_strength_class": "10.9",
+      "catalog_tensile_strength_psi": 120000,
+      "head_loadability_or_proof_capacity": null,
+      "pack_qty": 100,
+      "pack_price_usd": 5.82,
+      "cost_per_unit_exact_usd": "0.0582",
+      "initial_procurement_packs": 1,
+      "initial_procurement_cost_usd": 5.82,
+      "url": "https://www.mcmaster.com/91294A128/",
+      "source_date": "2026-09-08",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL_2026_09_08",
+      "notes": [
+        "Selected for the three official NSP-1600 bottom M3 mounting holes.",
+        "Manufacturer maximum external penetration is 4 mm from the PSU mounting face.",
+        "Overall 8 mm length minus 5.0 mm plate plus 0.05 mm nominal head recession gives 3.05 mm nominal penetration. The assumed 2.75-3.35 mm tolerance range needs actual finished seat/screw, engagement and internal-clearance checks.",
+        "NSP-1600 recommended chassis mounting torque is 6-8 kgf cm (0.5884-0.7845 Nm). It does not independently qualify the reduced-loadability countersunk head, custom seat or FPE studs.",
+        "No washer under the countersunk heads. Keep heads recessed within the finished plate envelope. Dry indoor finish."
+      ],
+      "verification_context": "Exact M3 x 8 product selected from McMaster search table, then full product detail read live during this Mean Well task on 2026-09-08. Displayed delivers tomorrow; no order placed."
+    },
+    {
+      "item_id": "H02",
+      "vendor": "McMaster-Carr",
+      "mcmaster_part_number": "98688A142",
+      "part_number": "98688A142",
+      "description": "M3 high-strength zinc-plated steel flat washer, ISO 7089, for Class 10.9; ID3.2 x OD7.0 x thickness0.5\u20130.6 mm; Rockwell C30",
+      "quantity": 4,
+      "qty": 4,
+      "quantity_unit": "washer",
+      "id_mm": 3.2,
+      "od_mm": 7.0,
+      "thickness_min_mm": 0.5,
+      "thickness_max_mm": 0.6,
+      "pack_qty": 100,
+      "pack_price_usd": 9.38,
+      "cost_per_unit_exact_usd": "0.0938",
+      "initial_procurement_packs": 1,
+      "initial_procurement_cost_usd": 9.38,
+      "url": "https://www.mcmaster.com/98688A142/",
+      "source_date": "2026-09-08",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL",
+      "notes": [
+        "One below each FPE stud locknut. No washer under the three housing countersunk screws.",
+        "Use received washer thickness in the assembled stack; no diameter tolerance invented."
+      ],
+      "verification_context": "Exact primary product page/catalog was independently read on 2026-09-08 in this same workspace session for the B210 direct-stud task. Specifications and observed prices are carried into the new Mean Well BOM; no new quote, purchase or same-page reread is claimed."
+    },
+    {
+      "item_id": "H03",
+      "vendor": "McMaster-Carr",
+      "mcmaster_part_number": "90576A102",
+      "part_number": "90576A102",
+      "description": "M3 x 0.5 zinc-plated steel nylon-insert locknut, Class 8; DIN 985 / ISO 10511; 5.5 mm across flats x 4 mm overall height; 6H",
+      "quantity": 4,
+      "qty": 4,
+      "quantity_unit": "nut",
+      "across_flats_mm": 5.5,
+      "overall_height_mm": 4.0,
+      "thread_pitch_mm": 0.5,
+      "catalog_strength_class": "8",
+      "insert_max_temperature_c": 85.0,
+      "pack_qty": 100,
+      "pack_price_usd": 4.88,
+      "cost_per_unit_exact_usd": "0.0488",
+      "initial_procurement_packs": 1,
+      "initial_procurement_cost_usd": 4.88,
+      "url": "https://www.mcmaster.com/90576A102/",
+      "source_date": "2026-09-08",
+      "evidence_status": "VERIFIED_PRIMARY_LIVE_PRODUCT_DETAIL",
+      "notes": [
+        "Four FPE panel studs only. Confirm complete nylon engagement and protruding full threads.",
+        "Prevailing and installation torque must remain compatible with unqualified FPE anchors.",
+        "Catalog 85 C nylon limit applies to the actual nut temperature, not an assembly ambient rating."
+      ],
+      "verification_context": "Exact primary product page/catalog was independently read on 2026-09-08 in this same workspace session for the B210 direct-stud task. Specifications and observed prices are carried into the new Mean Well BOM; no new quote, purchase or same-page reread is claimed."
+    },
+    {
+      "item_id": "F01",
+      "vendor": "Front Panel Express",
+      "mcmaster_part_number": null,
+      "part_number": "WGU30 / 12 mm / reverse side / zero depth offset",
+      "description": "Factory-installed M3 load stud, 12 mm geometric length, Front Panel Designer WGU30; proposed 6 mm panel; nominal flush base",
+      "quantity": 4,
+      "qty": 4,
+      "quantity_unit": "installed stud",
+      "catalog_identifier": "WGU30",
+      "catalog_type": "WGLSU",
+      "thread_nominal_mm": 3.0,
+      "thread_pitch_mm": 0.5,
+      "selected_geometric_length_mm": 12.0,
+      "depth_offset_mm": 0.0,
+      "nominal_cavity_diameter_mm": 12.1,
+      "nominal_cavity_depth_mm": 2.3,
+      "base_diameter_from_catalog_drawpath_mm": 11.9,
+      "base_thickness_from_catalog_drawpath_mm": 2.2,
+      "base_projection_from_catalog_drawpath_mm": 0.0,
+      "catalog_geometry_tolerances": null,
+      "catalog_load_or_temperature_rating": null,
+      "pack_qty": null,
+      "pack_price_usd": null,
+      "cost_per_unit_exact_usd": null,
+      "initial_procurement_packs": null,
+      "initial_procurement_cost_usd": null,
+      "url": "https://docs.frontpanelexpress.com/elements/studs_standoffs.html",
+      "catalog_source_url": "https://assets.frontpanelexpress.com/fpd/Version-6.5.1/FrontDesign-US-6.5.1-amd64.deb",
+      "source_date": "2026-09-08",
+      "evidence_status": "VERIFIED_PRIMARY_DISTRIBUTED_CATALOG_NOMINAL_GEOMETRY; CAPACITY_PRICE_UNCONFIRMED",
+      "notes": [
+        "Selected WGU30 M3 load stud is internally consistent in the official FPD 6.5.1 catalog. M4 WGU40 is unselected because of conflicting ThreadSize data.",
+        "Four axes X +/-55 mm, Y -16.1 and -280.8 mm in the adapter datum; panel reference is 145 x 340 x 6 mm centered Y -150.3 mm.",
+        "Nominal 12 mm geometric projection minus 5.0 mm adapter, 0.55 mm washer and 4 mm nut leaves 2.45 mm tail. Confirm actual projection/thread runout and socket depth >=10 mm, outside diameter <=10 mm.",
+        "FPE base/cavity values are nominal catalog geometry. Installed load, torque and temperature capacity remain unverified; qualify actual panel anchors."
+      ],
+      "verification_context": "Exact primary product page/catalog was independently read on 2026-09-08 in this same workspace session for the B210 direct-stud task. Specifications and observed prices are carried into the new Mean Well BOM; no new quote, purchase or same-page reread is claimed.",
+      "stud_coordinates_mm": {
+        "x": [
+          -55.0,
+          55.0
+        ],
+        "y": [
+          -16.1,
+          -280.8
+        ],
+        "all_combinations": true
+      }
+    }
+  ],
+  "custom_fabrication_items": [
+    {
+      "item_id": "M01",
+      "quantity": 1,
+      "description": "125 x 300.6 x 5.00 +/-0.05 mm CNC adapter, certified 6061-T6/T651 with minimum room-temperature yield 240 MPa; clear MIL-DTL-5541 Type II Class 3 conversion after machining; two 0.50 +/-0.05 mm fan-frame relief pockets per final model/drawings.",
+      "fan_reliefs": {
+        "depth_mm": 0.5,
+        "depth_tolerance_mm": 0.05,
+        "x_intervals_mm": [
+          [
+            -40,
+            -2.85
+          ],
+          [
+            2.85,
+            40
+          ]
+        ],
+        "y_interval_mm": [
+          -299.1,
+          -269.5
+        ],
+        "corner_radius_mm": 0.5
+      },
+      "price_usd": null
+    },
+    {
+      "item_id": "P01",
+      "quantity": 1,
+      "description": "145 x 340 x 6 mm reference main-panel coupon centered Y -150.3 mm. Final installation panel, supports and FPE installed-stud acceptance require confirmation.",
+      "price_usd": null
+    }
+  ],
+  "selected_tim": null,
+  "known_mcmaster_initial_pack_subtotal_usd": 20.08,
+  "known_installed_fastener_allocated_cost_usd": "0.7450",
+  "full_procurement_total_usd": null,
+  "price_scope": "Observed on 2026-09-08: screw exact page in this Mean Well task; washers and nuts in the same-session B210 exact-product verification. Tax, freight, custom machining/finish, FPE panel/studs, PSU, cables, lugs, guards, strain relief, fixtures and validation excluded.",
+  "purchased_or_ordered": false,
+  "notes": [
+    "12 V model is a provisional electrical selection; 24 V remains possible. Load, ambient, input voltage and installed wiring are unconfirmed.",
+    "No thermal pad or grease is selected. Preserve manufacturer forced-air cooling and qualify the enclosure heat-removal boundary.",
+    "At the 12 V model's 1500 W output and 89 percent typical efficiency, calculated PSU loss is about 185 W. This is a planning calculation, not a measured enclosure load or guaranteed efficiency.",
+    "Provide the designated PSU FG protective-earth connection. Adapter/stud metal contact and conversion coating do not establish protective-earth compliance."
+  ]
+}

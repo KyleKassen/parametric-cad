@@ -1,0 +1,163 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "pan_only_positive_end_capture",
+      "status": "PASS",
+      "measured": {
+        "up": 1.056,
+        "down": -0.2,
+        "tilt_deg": 0.9468019553439477,
+        "escape_y_mm": 3,
+        "rows": [
+          {
+            "sign": -1,
+            "pan_only_obstruction_mm3": 31.880841360072026,
+            "contact_bbox_mm": [
+              -40.0,
+              -76.80861435272212,
+              7.375455894736825,
+              40.0,
+              -75.43,
+              7.8
+            ]
+          },
+          {
+            "sign": 1,
+            "pan_only_obstruction_mm3": 32.579282907927706,
+            "contact_bbox_mm": [
+              -40.0,
+              81.155,
+              7.369159368421052,
+              40.0,
+              82.5428041577993,
+              7.8
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "flat_nondevice_component_clashes",
+      "status": "PASS",
+      "measured": {
+        "unintended": [],
+        "intended_thread_regions": [
+          [
+            "B210_M01_base",
+            "M5x45_retainer_1_1",
+            48.262805105367335
+          ],
+          [
+            "B210_M01_base",
+            "M5x45_retainer_1_2",
+            48.262805105367335
+          ],
+          [
+            "B210_M01_base",
+            "M5x45_retainer_2_1",
+            48.262805105367335
+          ],
+          [
+            "B210_M01_base",
+            "M5x45_retainer_2_2",
+            48.262805105367335
+          ],
+          [
+            "flat_panel_M5x25_1_1",
+            "flat_panel_locknut_1_1",
+            28.902652413026154
+          ],
+          [
+            "flat_panel_M5x25_1_2",
+            "flat_panel_locknut_1_2",
+            28.902652413026154
+          ],
+          [
+            "flat_panel_M5x25_2_1",
+            "flat_panel_locknut_2_1",
+            28.902652413026154
+          ],
+          [
+            "flat_panel_M5x25_2_2",
+            "flat_panel_locknut_2_2",
+            28.902652413026154
+          ]
+        ]
+      }
+    },
+    {
+      "id": "upright_nondevice_component_clashes",
+      "status": "PASS",
+      "measured": {
+        "unintended": [],
+        "intended_thread_regions": [
+          [
+            "B210_M01_base",
+            "M5x45_retainer_1_1",
+            48.2628051053677
+          ],
+          [
+            "B210_M01_base",
+            "M5x45_retainer_1_2",
+            48.26280510536741
+          ],
+          [
+            "B210_M01_base",
+            "M5x45_retainer_2_1",
+            48.2628051053677
+          ],
+          [
+            "B210_M01_base",
+            "M5x45_retainer_2_2",
+            48.26280510536741
+          ],
+          [
+            "upright_web_M5x25_1_1",
+            "upright_web_locknut_1_1",
+            28.902652413026033
+          ],
+          [
+            "upright_web_M5x25_1_2",
+            "upright_web_locknut_1_2",
+            28.902652413026274
+          ],
+          [
+            "upright_foot_M5x30_1_1",
+            "upright_foot_locknut_1_1",
+            28.902652413026033
+          ],
+          [
+            "upright_foot_M5x30_1_2",
+            "upright_foot_locknut_1_2",
+            28.90265241302607
+          ],
+          [
+            "upright_web_M5x25_2_1",
+            "upright_web_locknut_2_1",
+            28.902652413026033
+          ],
+          [
+            "upright_web_M5x25_2_2",
+            "upright_web_locknut_2_2",
+            28.902652413026274
+          ],
+          [
+            "upright_foot_M5x30_2_1",
+            "upright_foot_locknut_2_1",
+            28.902652413026033
+          ],
+          [
+            "upright_foot_M5x30_2_2",
+            "upright_foot_locknut_2_2",
+            28.90265241302607
+          ]
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Pan obstruction is a quasistatic witness, not contact capacity, impact or continuous6DOF escape validation.",
+    "Helical threads not modeled; intended male/female engagement excluded explicitly."
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "revision": "N1",
+  "status": "ROOT_AND_VISUAL_REVIEW_APPROVED_FOR_PRELIMINARY_FIT_PROTOTYPE_ONLY",
+  "pdf": "MeanWell_N1_drawing_package.pdf",
+  "pages": 6,
+  "pdf_sha256": "541023f6bdb816acade1c824dbb9a9eaa9f2c81e62c42cd7f46e2cc15e7f52cb",
+  "sources": [
+    {
+      "path": "make_documents.py",
+      "sha256": "44cab6c1b5c5e0801de55fd3cd1495c5cbd1ba3177fd638a89004788a0ba09fd"
+    },
+    {
+      "path": "params.json",
+      "sha256": "d9aad1e3d1bacae227c72cfc882f552ddf619c8aee45bf24df1f340dafe3e301"
+    },
+    {
+      "path": "references\\research\\catalog_bom.json",
+      "sha256": "2671966fcc7c867bd784f22839231749b0b3c82981d93b0a1c236c97a57a6b70"
+    },
+    {
+      "path": "DESIGN.md",
+      "sha256": "95249744938adfa342de17df2e187af872b1d6539c42422b106aea5a7a97074c"
+    },
+    {
+      "path": "ENGINEERING_NOTE.md",
+      "sha256": "c171ffaf7494fe77509bc6bab498d4a259a967b46b37dea1294bde7e347eae8a"
+    },
+    {
+      "path": "references\\engineering\\engineering_results.json",
+      "sha256": "e0b80a3e933ebd18bb2b71218d7293ff3fa41a8aa0b794a4de90ea789deb49bb"
+    },
+    {
+      "path": "quality\\cad_verification.json",
+      "sha256": "4ac341088f762cfa1b8d48e298731de801a1c3c2eb52f0c1135c82eab6a36f95"
+    },
+    {
+      "path": "quality\\manufacturing_verification.json",
+      "sha256": "f00d7152579ea50aab3e19c585770c5207b4518c874d948284e7218228bc8b2f"
+    },
+    {
+      "path": "references\\product\\assembled_hero.png",
+      "sha256": "7920c0e9fe7771f224e914b07fb4b47fbde448d4ae2b438d8cbce4a8a4986254"
+    },
+    {
+      "path": "references\\product\\exploded_iso.png",
+      "sha256": "f9ca65476dad21805c29afa9bec2ea58b9464c739a147500cadc72496808223d"
+    },
+    {
+      "path": "references\\product\\plate_bottom_hero.png",
+      "sha256": "e236bb0fa0e64113b47d002645899f10723aea26b13e4275f0d2ec2b6aad4642"
+    },
+    {
+      "path": "references\\product\\plate_top_hero.png",
+      "sha256": "2bc735a0207a5c58445851b3e962bafe711c5e8cd072c8c2383de20d598a1f5b"
+    },
+    {
+      "path": "references\\views\\section_front_mount_front.png",
+      "sha256": "e36f6758fc1cd357983689caa48cc4efc01d84251fe20fc9d3db962a707aa829"
+    },
+    {
+      "path": "references\\views\\section_fan_mount_front.png",
+      "sha256": "62dbff0eb068918f1b35c549b04cb34a4f779c3723b88cdcd944abee057bb367"
+    }
+  ],
+  "template_scale": "1 mm =72/25.4 PDF points. Rotated+90degrees; two orthogonal100mm calibration bars. Print actual size.",
+  "root_review": {
+    "date": "2026-09-08",
+    "all_six_pages_reviewed": true,
+    "final_change": "Page 4 explicit 110 x264.7 mm pitch reviewed; other five page rasters unchanged by SHA256",
+    "scope": "Drawing clarity and consistency; not production release or physical validation"
+  }
+}

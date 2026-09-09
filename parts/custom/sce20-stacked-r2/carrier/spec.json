@@ -1,0 +1,15 @@
+{
+  "schema":"part-spec/1",
+  "part_name":"Peplink removable open-frame carrier",
+  "units":"mm",
+  "solid_count":1,
+  "dimensions":[
+    {"id":"frame_width","kind":"bbox","axis":"x","expected":180,"tol":0.001},
+    {"id":"frame_height","kind":"bbox","axis":"y","expected":210,"tol":0.001},
+    {"id":"stock_thickness","kind":"bbox","axis":"z","expected":4,"tol":0.001},
+    {"id":"four_support_holes","kind":"cylinder","diameter":3.8,"tol":0.001,"axis":"Z","type":"hole","count_min":4}
+  ],
+  "design":{"role":"plate","min_score":70,"severity":"hard","metric_severity":"hard"},
+  "assumptions":["The frame STEP excludes native FPD-owned hardware machining; actual native FPD must contain fourWGO40 L6."],
+  "unresolved":["Supplier alloy/tolerance and tall-column/anchor load and torque qualification.","Actual native FPD geometry and cable/thermal validation are managed by the enclosing layout task."]
+}

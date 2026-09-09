@@ -1,0 +1,108 @@
+{
+  "name": "Peplink_Carrier_R2",
+  "width": 180.0,
+  "height": 210.0,
+  "thickness": 4.0,
+  "radius": 8.0,
+  "bevel": 0.4,
+  "material_id": 5,
+  "color_id": 1,
+  "elements": [
+    {
+      "id": "AIR_WINDOW",
+      "kind": "rect_hole",
+      "x": 90.0,
+      "y": 105.0,
+      "width": 146.0,
+      "height": 160.0,
+      "radius": 5.0,
+      "bevel_front": 0.4,
+      "bevel_reverse": 0.4,
+      "side": "front"
+    },
+    {
+      "id": "SUPPORT_1",
+      "kind": "hole",
+      "x": 20.0,
+      "y": 8.0,
+      "diameter": 3.8,
+      "side": "front"
+    },
+    {
+      "id": "SUPPORT_2",
+      "kind": "hole",
+      "x": 20.0,
+      "y": 202.0,
+      "diameter": 3.8,
+      "side": "front"
+    },
+    {
+      "id": "SUPPORT_3",
+      "kind": "hole",
+      "x": 160.0,
+      "y": 8.0,
+      "diameter": 3.8,
+      "side": "front"
+    },
+    {
+      "id": "SUPPORT_4",
+      "kind": "hole",
+      "x": 160.0,
+      "y": 202.0,
+      "diameter": 3.8,
+      "side": "front"
+    },
+    {
+      "id": "ROUTER_1",
+      "kind": "bolt",
+      "x": 9.099999999999994,
+      "y": 46.65,
+      "catalog": "WGO40",
+      "length": 6.0,
+      "depth_offset": 0.0,
+      "side": "front"
+    },
+    {
+      "id": "ROUTER_2",
+      "kind": "bolt",
+      "x": 9.099999999999994,
+      "y": 129.35,
+      "catalog": "WGO40",
+      "length": 6.0,
+      "depth_offset": 0.0,
+      "side": "front"
+    },
+    {
+      "id": "ROUTER_3",
+      "kind": "bolt",
+      "x": 170.9,
+      "y": 46.65,
+      "catalog": "WGO40",
+      "length": 6.0,
+      "depth_offset": 0.0,
+      "side": "front"
+    },
+    {
+      "id": "ROUTER_4",
+      "kind": "bolt",
+      "x": 170.9,
+      "y": 129.35,
+      "catalog": "WGO40",
+      "length": 6.0,
+      "depth_offset": 0.0,
+      "side": "front"
+    }
+  ],
+  "remark": "Removable Peplink carrier: upper router shifted17mm toward negativeY. Four WGO40 M4 female LOAD standoffs,6mm,front,zero offset. Four plainD3.8 support holes. Central146x160R5 through-window;0.4mm45deg edge breaks on both faces of window and outer rim; bore deburr<=0.1mm. Fit design requires final alloy/tolerance, hardware/anchor and operating-temperature acceptance.",
+  "datum": {
+    "local_to_fpd": [
+      90.0,
+      105.0
+    ],
+    "installed_underside_z": 70.0
+  },
+  "native_notes": [
+    "Use new RectHole(id,width,height,radius), then SetEdgeMachining(bevel_45,0.4,bevel_45,0.4).",
+    "Native hardware objects define their own machining; do not add duplicate ordinary holes or cavities."
+  ]
+}

@@ -1,0 +1,73 @@
+[
+  {
+    "name": "MeanWell_R1",
+    "width": 72.0,
+    "height": 316.8,
+    "thickness": 6.0,
+    "material_id": 5,
+    "color_id": 1,
+    "radius": 4.0,
+    "bevel": 0.4,
+    "remark": "R1 FIT DESIGN. Bare aluminum; finished thickness +/-0.05 mm; deburr bores <=0.1 mm. Front=device; reverse=backplate seating face. M4x10 device screws; nominal penetration4.05 mm, maximum5 mm. Source N2 side-tab geometry.",
+    "elements": [
+      {
+        "id": "P1",
+        "kind": "hole",
+        "x": 7.5,
+        "y": 42.80000000000001,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P2",
+        "kind": "hole",
+        "x": 7.5,
+        "y": 294.8,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P3",
+        "kind": "hole",
+        "x": 64.5,
+        "y": 42.80000000000001,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "P4",
+        "kind": "hole",
+        "x": 64.5,
+        "y": 294.8,
+        "diameter": 3.8,
+        "side": "front"
+      },
+      {
+        "id": "D1",
+        "kind": "hole",
+        "x": 38.3,
+        "y": 294.8,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 8.1,
+          "depth": 1.7999999999999998
+        }
+      },
+      {
+        "id": "D2",
+        "kind": "hole",
+        "x": 38.3,
+        "y": 42.80000000000001,
+        "diameter": 4.5,
+        "side": "reverse",
+        "countersink": {
+          "diameter": 8.1,
+          "depth": 1.7999999999999998
+        }
+      }
+    ],
+    "save": "C:/Users/KyleKassen/Documents/FPE_SCE20_20260908_R1/MeanWell_R1.fpd",
+    "outline_dxf": "C:/Users/KyleKassen/Documents/FPE_SCE20_20260908_R1/MeanWell_R1_outline.dxf"
+  }
+]
